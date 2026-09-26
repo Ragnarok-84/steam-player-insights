@@ -1,0 +1,64 @@
+apiVersion: elasticsearch.k8s.elastic.co/v1
+kind: Elasticsearch
+metadata:
+  name: steam-elasticsearch
+  namespace: elastic-system
+spec:
+  version: 8.12.1
+  nodeSets:
+  - name: default
+    count: 3
+    config:
+      node.store.allow_mmap: false
+      indices.memory.index_buffer_size: "20%"
+    podTemplate:
+      spec:
+        affinity:
+          podAntiAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              - labelSelector:
+                  matchExpressions:
+                    - key: elasticsearch.k8s.elastic.co/cluster-name
+                      operator: In
+                      values: ["steam-elasticsearch"]
+                topologyKey: "kubernetes.io/hostname"
+        containers:
+        - name: elasticsearch
+          resources:
+            requests:
+              memory: 2Gi
+              cpu: 500m
+            limits:
+              memory: 3Gi
+              cpu: 1000m
+    volumeClaimTemplates:
+    - metadata:
+        name: elasticsearch-data
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: 20Gi
+---
+apiVersion: kibana.k8s.elastic.co/v1
+kind: Kibana
+metadata:
+  name: steam-kibana
+  namespace: elastic-system
+spec:
+  version: 8.12.1
+  count: 1
+  elasticsearchRef:
+    name: steam-elasticsearch
+  podTemplate:
+    spec:
+      containers:
+      - name: kibana
+        resources:
+          requests:
+            memory: 1Gi
+            cpu: 300m
+          limits:
+            memory: 1Gi
+            cpu: 500m

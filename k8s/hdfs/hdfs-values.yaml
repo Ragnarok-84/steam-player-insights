@@ -1,0 +1,43 @@
+# Helm Values cho Apache HDFS trên Kubernetes
+# Triển khai 1 NameNode và 3 DataNodes với replication factor = 3
+
+global:
+  defaultStorageClass: "local-path"
+
+hdfs:
+  nameNode:
+    replicas: 1
+    resources:
+      requests:
+        memory: "2Gi"
+        cpu: "500m"
+      limits:
+        memory: "2Gi"
+        cpu: "1000m"
+    dataDir:
+      size: "20Gi"
+
+  dataNode:
+    replicas: 3
+    resources:
+      requests:
+        memory: "2Gi"
+        cpu: "500m"
+      limits:
+        memory: "2Gi"
+        cpu: "1000m"
+    dataDir:
+      size: "40Gi"
+    affinity:
+      podAntiAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+                - key: app
+                  operator: In
+                  values: ["hdfs-datanode"]
+            topologyKey: "kubernetes.io/hostname"
+
+  config:
+    dfsReplication: 3
+    dfsBlockSize: 134217728 # 128MB

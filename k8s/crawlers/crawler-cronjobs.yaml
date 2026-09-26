@@ -1,0 +1,66 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: steam-ccu-crawler
+  namespace: default
+spec:
+  schedule: "*/5 * * * *" # Chạy mỗi 5 phút
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+          - name: ccu-crawler
+            image: steam-crawler:latest
+            imagePullPolicy: IfNotPresent
+            command: ["python", "-m", "crawlers.steam_ccu_crawler"]
+            env:
+            - name: KAFKA_BOOTSTRAP_SERVERS
+              value: "steam-kafka-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092"
+            resources:
+              requests:
+                cpu: 100m
+                memory: 128Mi
+              limits:
+                cpu: 250m
+                memory: 256Mi
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: steam-reviews-crawler
+  namespace: default
+spec:
+  schedule: "*/15 * * * *" # Chạy mỗi 15 phút
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+          - name: reviews-crawler
+            image: steam-crawler:latest
+            imagePullPolicy: IfNotPresent
+            command: ["python", "-m", "crawlers.steam_reviews_crawler"]
+            env:
+            - name: KAFKA_BOOTSTRAP_SERVERS
+              value: "steam-kafka-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092"
+            - name: CURSOR_STATE_DIR
+              value: "/data/state"
+            resources:
+              requests:
+                cpu: 200m
+                memory: 256Mi
+              limits:
+                cpu: 500m
+                memory: 512Mi
+            volumeMounts:
+            - name: crawler-state
+              mountPath: /data/state
+          volumes:
+          - name: crawler-state
+            persistentVolumeClaim:
+              claimName: crawler-state-pvc

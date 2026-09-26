@@ -1,0 +1,98 @@
+{
+  "batch_game_daily": {
+    "settings": {
+      "number_of_shards": 3,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "properties": {
+        "appid": { "type": "integer" },
+        "dt": { "type": "date", "format": "yyyy-MM-dd" },
+        "total_reviews": { "type": "long" },
+        "positive_reviews": { "type": "long" },
+        "negative_reviews": { "type": "long" },
+        "positive_ratio_percent": { "type": "float" },
+        "avg_votes_up": { "type": "float" },
+        "avg_playtime_hours_at_review": { "type": "float" },
+        "avg_ccu": { "type": "float" },
+        "peak_ccu": { "type": "integer" }
+      }
+    }
+  },
+  "batch_aspect_stats": {
+    "settings": {
+      "number_of_shards": 3,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "properties": {
+        "appid": { "type": "integer" },
+        "month": { "type": "keyword" },
+        "aspect": { "type": "keyword" },
+        "mention_count": { "type": "long" },
+        "negative_count": { "type": "long" },
+        "positive_count": { "type": "long" },
+        "avg_sentiment": { "type": "float" },
+        "negative_ratio_percent": { "type": "float" }
+      }
+    }
+  },
+  "realtime_game_metrics": {
+    "settings": {
+      "number_of_shards": 3,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "properties": {
+        "appid": { "type": "integer" },
+        "window_start": { "type": "date" },
+        "window_end": { "type": "date" },
+        "review_count_window": { "type": "long" },
+        "positive_count_window": { "type": "long" },
+        "negative_count_window": { "type": "long" },
+        "positive_ratio_percent": { "type": "float" },
+        "current_ccu": { "type": "integer" }
+      }
+    }
+  },
+  "reviews_search": {
+    "settings": {
+      "number_of_shards": 3,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "properties": {
+        "recommendationid": { "type": "keyword" },
+        "appid": { "type": "integer" },
+        "cleaned_review": { 
+          "type": "text", 
+          "analyzer": "english",
+          "fields": {
+            "keyword": { "type": "keyword", "ignore_above": 256 }
+          }
+        },
+        "voted_up": { "type": "boolean" },
+        "sentiment_score": { "type": "float" },
+        "aspects": { "type": "keyword" },
+        "dt": { "type": "date", "format": "yyyy-MM-dd" }
+      }
+    }
+  },
+  "alerts": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "properties": {
+        "alert_id": { "type": "keyword" },
+        "alert_type": { "type": "keyword" },
+        "appid": { "type": "integer" },
+        "timestamp": { "type": "date" },
+        "severity": { "type": "keyword" },
+        "message": { "type": "text" },
+        "details": { "type": "object" }
+      }
+    }
+  }
+}

@@ -4,6 +4,8 @@ Hệ thống phân tích trải nghiệm người chơi đối với game trên 
 
 Thành viên mới bắt đầu từ [mục 4](#4-chạy-local-cho-thành-viên-mới). Sơ đồ dưới đây mô tả kiến trúc mục tiêu; xem [giới hạn hiện tại](#47-giới-hạn-hiện-tại-cần-biết) trước khi chạy toàn bộ pipeline.
 
+Để thu thập dữ liệu từ danh sách 1.000 game đã có, mở rộng lên 2.000 game và nhập review lịch sử vào file JSONL nén trên Windows, xem [hướng dẫn thu thập local](docs/collection_guide.md).
+
 ---
 
 ## 1. Tổng quan kiến trúc hệ thống

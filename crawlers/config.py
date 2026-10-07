@@ -17,3 +17,7 @@ CRAWLER_RATE_LIMIT_DELAY = float(os.getenv("CRAWLER_RATE_LIMIT_DELAY", "1.5"))
 
 STATE_DIR = os.getenv("CURSOR_STATE_DIR", "./data/crawler_state")
 TARGET_APP_LIST_PATH = os.getenv("TARGET_APP_LIST_PATH", "./data/target_apps.json")
+CRAWLER_OUTPUT = os.getenv("CRAWLER_OUTPUT", "kafka")
+OUTPUT_DIR = os.getenv("CRAWLER_OUTPUT_DIR", "./data/raw")
+CRAWLER_TARGET_LIMIT = int(os.getenv("CRAWLER_TARGET_LIMIT", "1000"))
+CRAWLER_REVIEW_BATCHES = int(os.getenv("CRAWLER_REVIEW_BATCHES", "1"))

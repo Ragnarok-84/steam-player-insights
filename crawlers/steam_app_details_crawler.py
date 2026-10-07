@@ -6,17 +6,18 @@ from crawlers.config import (
     CRAWLER_WORKER_ID,
     CRAWLER_TOTAL_WORKERS,
     CRAWLER_RATE_LIMIT_DELAY,
+    TARGET_APP_LIST_PATH,
+    CRAWLER_TARGET_LIMIT,
 )
 from crawlers.common.kafka_producer import SteamKafkaProducer
 from crawlers.common.rate_limiter import RateLimiter
+from crawlers.common.targets import load_target_apps, is_assigned_to_worker
+from crawlers.common.jsonl_producer import create_producer
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 logger = logging.getLogger("SteamAppDetailsCrawler")
 
 BASE_APPDETAILS_URL = "https://store.steampowered.com/api/appdetails"
-
-def is_assigned_to_worker(appid: int, worker_id: int, total_workers: int) -> bool:
-    return (hash(str(appid)) % total_workers) == worker_id
 
 def crawl_app_details(appid: int, producer: SteamKafkaProducer, rate_limiter: RateLimiter):
     rate_limiter.wait()
@@ -73,9 +74,9 @@ def crawl_app_details(appid: int, producer: SteamKafkaProducer, rate_limiter: Ra
         return False
 
 def main():
-    producer = SteamKafkaProducer()
+    producer = create_producer()
     rate_limiter = RateLimiter(default_interval=CRAWLER_RATE_LIMIT_DELAY)
-    target_apps = [730, 570, 1086940, 1091500, 271590, 1172470, 252490, 359550]
+    target_apps = load_target_apps(TARGET_APP_LIST_PATH, CRAWLER_TARGET_LIMIT)
 
     assigned_apps = [
         app for app in target_apps 

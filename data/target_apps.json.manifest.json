@@ -1,0 +1,27 @@
+{
+  "dataset": "FronkonGames/steam-games-dataset",
+  "revision": "78273195a4ffcb60c142b55f7cae52c1e65e28b0",
+  "files": [
+    {
+      "dataset": "FronkonGames/steam-games-dataset",
+      "config": "default",
+      "split": "train",
+      "url": "https://huggingface.co/datasets/FronkonGames/steam-games-dataset/resolve/78273195a4ffcb60c142b55f7cae52c1e65e28b0/default/train/0000.parquet",
+      "filename": "0000.parquet",
+      "size": 191983414
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "data\\cache\\catalog\\4b3af91a2290f90d-0000.parquet",
+      "sha256": "775b17f2a5a52b96a8441739cd0dd4939916335b6edeebbfc4a1b238388c5a77",
+      "rows": 124146
+    }
+  ],
+  "retrieved_at": 1791348560,
+  "catalog_rows": 124146,
+  "selected_games": 1000,
+  "ranking": "0.7/(60+review_rank) + 0.3/(60+catalog_peak_ccu_rank)",
+  "excluded": "Software genres (utilities, creative tools, software training and development tools)",
+  "note": "Catalog snapshot popularity, not a live CCU ranking or a historical CCU time series."
+}

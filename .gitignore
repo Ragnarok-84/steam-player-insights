@@ -29,6 +29,7 @@ data/raw/
 data/clean/
 data/curated/
 data/cache/
+data/crawler_state/
 *.parquet
 *.gz
 *.tar.gz

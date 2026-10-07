@@ -6,17 +6,18 @@ from crawlers.config import (
     CRAWLER_WORKER_ID,
     CRAWLER_TOTAL_WORKERS,
     CRAWLER_RATE_LIMIT_DELAY,
+    TARGET_APP_LIST_PATH,
+    CRAWLER_TARGET_LIMIT,
 )
 from crawlers.common.kafka_producer import SteamKafkaProducer
 from crawlers.common.rate_limiter import RateLimiter
+from crawlers.common.targets import load_target_apps, is_assigned_to_worker
+from crawlers.common.jsonl_producer import create_producer
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 logger = logging.getLogger("SteamCCUCrawler")
 
 CCU_API_URL = "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/"
-
-def is_assigned_to_worker(appid: int, worker_id: int, total_workers: int) -> bool:
-    return (hash(str(appid)) % total_workers) == worker_id
 
 def crawl_ccu(appid: int, producer: SteamKafkaProducer, rate_limiter: RateLimiter):
     rate_limiter.wait()
@@ -25,10 +26,10 @@ def crawl_ccu(appid: int, producer: SteamKafkaProducer, rate_limiter: RateLimite
         resp = requests.get(CCU_API_URL, params=params, timeout=10)
         if resp.status_code == 429:
             rate_limiter.record_rate_limit(cooldown_seconds=30)
-            return
+            return False
         elif resp.status_code != 200:
             logger.warning(f"[AppID {appid}] CCU API returned status {resp.status_code}")
-            return
+            return False
 
         data = resp.json().get("response", {})
         result = data.get("result")
@@ -41,17 +42,21 @@ def crawl_ccu(appid: int, producer: SteamKafkaProducer, rate_limiter: RateLimite
                 "player_count": player_count,
             }
             producer.send(topic=KAFKA_TOPIC_CCU, key=str(appid), value=record)
+            rate_limiter.record_success()
             logger.info(f"[AppID {appid}] CCU: {player_count}")
+            return True
         else:
             logger.warning(f"[AppID {appid}] Unable to fetch CCU (result != 1)")
+            return False
 
     except Exception as e:
         logger.error(f"[AppID {appid}] Error fetching CCU: {e}")
+        return False
 
 def main():
-    producer = SteamKafkaProducer()
+    producer = create_producer()
     rate_limiter = RateLimiter(default_interval=0.5) # CCU API nhẹ hơn
-    target_apps = [730, 570, 1086940, 1091500, 271590, 1172470, 252490, 359550]
+    target_apps = load_target_apps(TARGET_APP_LIST_PATH, CRAWLER_TARGET_LIMIT)
 
     assigned_apps = [
         app for app in target_apps 

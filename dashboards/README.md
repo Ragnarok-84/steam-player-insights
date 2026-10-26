@@ -1,6 +1,19 @@
 # Thiết Kế Dashboard - Steam Player Insights
 
-Hệ thống cung cấp 5 bộ dashboard chính theo yêu cầu đề bài:
+Hệ thống cung cấp 5 bộ dashboard chính theo yêu cầu đề bài.
+
+**Cài đặt:**
+- Kibana D1–D4: chạy `python pipeline.py kibana-setup` (cần `KIBANA_HOST`; trên cụm, `deploy_all.sh` đã tự chạy).
+  - Panel là Vega, định nghĩa trong `dashboards/setup_kibana.py`.
+  - Bản export nằm ở `dashboards/kibana/steam_dashboards.ndjson`; có thể import tay qua Stack Management → Saved Objects.
+- Grafana D5: `dashboards/grafana/d5_system.json`.
+  - Trên cụm được nạp qua ConfigMap có label `grafana_dashboard`.
+  - Ở nơi khác, import tay qua Dashboards → Import.
+
+**Khác biệt so với thiết kế:**
+- D2 hiện từ khoá TF-IDF bằng word cloud (Vega).
+- Mốc cập nhật/giảm giá xem ở panel "tác động giảm giá" của D4.
+- D2 lọc theo game bằng ô tìm kiếm: `appid:<id>`.
 
 ---
 

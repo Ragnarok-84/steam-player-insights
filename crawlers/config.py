@@ -18,6 +18,8 @@ KAFKA_TOPIC_ALERTS = os.getenv("KAFKA_TOPIC_ALERTS", "steam.alerts")
 CRAWLER_WORKER_ID = int(os.getenv("CRAWLER_WORKER_ID", "0"))
 CRAWLER_TOTAL_WORKERS = int(os.getenv("CRAWLER_TOTAL_WORKERS", "1"))
 CRAWLER_RATE_LIMIT_DELAY = float(os.getenv("CRAWLER_RATE_LIMIT_DELAY", "1.5"))
+# Thời gian nghỉ (giây) khi API trả 429 trước khi gọi tiếp (FT6 đặt nhỏ để test nhanh)
+CRAWLER_RATE_LIMIT_COOLDOWN = float(os.getenv("CRAWLER_RATE_LIMIT_COOLDOWN", "30"))
 
 STATE_DIR = os.getenv("CURSOR_STATE_DIR", "./data/crawler_state")
 TARGET_APP_LIST_PATH = os.getenv("TARGET_APP_LIST_PATH", "./data/target_apps.json")

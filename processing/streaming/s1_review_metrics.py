@@ -2,7 +2,7 @@ import argparse
 from pyspark.sql.functions import (
     col, from_json, window, count, when, avg, round as spark_round, to_timestamp, lit
 )
-from processing.common.spark_utils import get_spark_session, read_stream, add_stream_args, CHECKPOINT_PATH
+from processing.common.spark_utils import get_spark_session, read_stream, add_stream_args, attach_progress_logger, CHECKPOINT_PATH
 from processing.common.es_writer import es_enabled, write_es
 from processing.batch.b2_clean_raw import REVIEW_SCHEMA
 
@@ -37,6 +37,7 @@ def run(args):
     watermark 10 phút. Ghi ES realtime_game_metrics (upsert theo cửa sổ) hoặc console.
     """
     spark = get_spark_session("S1_Realtime_Review_Metrics")
+    attach_progress_logger(spark, args.metrics_file)
     raw = read_stream(spark, "steam.reviews.raw", args.source, args.brokers, args.raw, args.max_files, args.starting_offsets)
     events = (
         raw.select(from_json(col("value"), REVIEW_SCHEMA).alias("d")).select("d.*")
@@ -49,6 +50,7 @@ def run(args):
     for duration, slide, label in (("60 minutes", "5 minutes", "60m"), ("5 minutes", "5 minutes", "5m")):
         queries.append(
             window_agg(events, duration, slide, label).writeStream
+            .queryName(f"s1_{label}")
             .outputMode("update")
             .foreachBatch(sink(es))
             .option("checkpointLocation", f"{args.checkpoint}/{label}")

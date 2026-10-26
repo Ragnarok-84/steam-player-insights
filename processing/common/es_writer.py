@@ -53,6 +53,8 @@ def bulk_rows(rows, index: str, id_cols=None, chunk_size: int = 1000):
 def write_es(df, index: str, id_cols=None):
     """Upsert theo id (id_cols ghép bằng '_'); không có id_cols thì ES tự sinh id."""
     df.foreachPartition(lambda rows: bulk_rows(rows, index, id_cols))
+    # refresh để dashboard / bước merge thấy ngay dữ liệu vừa ghi
+    es_client().indices.refresh(index=index)
 
 
 def es_enabled(es_nodes: str = None) -> bool:

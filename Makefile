@@ -1,49 +1,45 @@
 .DEFAULT_GOAL := help
 
-# Activate your venv first, or override: make b1 PYTHON=venv/Scripts/python.exe
+# Mọi target gọi pipeline.py (chạy được cả khi không có make: python pipeline.py <lệnh>).
+# Ví dụ: make batch RAW=data/raw ES=1        make s2 ARGS="--source file"
 PYTHON ?= python
-B1_ARGS ?=
-B2_ARGS ?=
-B3_ARGS ?=
-B4_ARGS ?=
-B5_ARGS ?=
-B6_ARGS ?=
+PROFILE ?= local
+RAW ?= data/raw
+ARGS ?=
+ES ?=
+IMAGE ?= steam-spark:dev
 
-.PHONY: help batch b1 b2 b3 b4 b5 b6
+ES_FLAG := $(if $(ES),--es,)
+RUN = "$(PYTHON)" pipeline.py --profile $(PROFILE) --raw $(RAW) $(ES_FLAG)
+DOCKER = docker run --rm -it -v "$(CURDIR):/opt/spark/work-dir" $(IMAGE) python3 pipeline.py --profile $(PROFILE) --raw $(RAW) $(ES_FLAG)
+
+JOBS := b1 b2 b3 b4 b5 b6 b7 b8 s1 s2 s3 merge es-setup kibana-setup replay feedback applist crawl
+.PHONY: help batch sample image docker-batch test $(JOBS)
 
 help:
-	@echo "make batch  - Run B1 through B6 sequentially; stop on failure"
-	@echo "make b1     - Ingest Kafka into raw storage"
-	@echo "make b2     - Clean raw reviews"
-	@echo "make b3     - Compute daily game statistics"
-	@echo "make b4     - Analyze playtime buckets"
-	@echo "make b5     - Analyze aspects and sentiment"
-	@echo "make b6     - Rank trending games"
-	@echo "Options: PYTHON=python, B1_ARGS=..., through B6_ARGS=..."
+	@echo "make batch          - B2 > B5 > B3 > B4 > B6 > B7 > B8 (ES=1: ghi ES + merge view)"
+	@echo "make b1..b8         - Một job batch; s1 s2 s3 - streaming (ARGS=\"--source file\")"
+	@echo "make sample         - Sinh dữ liệu mẫu vào data/sample_raw"
+	@echo "make image          - Build image Spark ($(IMAGE))"
+	@echo "make docker-batch   - Chạy batch trong Docker (dùng trên Windows)"
+	@echo "make es-setup | merge | kibana-setup | replay | feedback | applist | crawl"
+	@echo "make test           - Unit test (pytest)"
+	@echo "Biến: PYTHON, PROFILE=local|cluster, RAW=data/raw, ES=1, ARGS=..."
 
-# Separate recursive calls preserve ordering even with make -j.
 batch:
-	$(MAKE) b1
-	$(MAKE) b2
-	$(MAKE) b3
-	$(MAKE) b4
-	$(MAKE) b5
-	$(MAKE) b6
+	$(RUN) batch $(ARGS)
 
-b1:
-	"$(PYTHON)" -m processing.batch.b1_ingest_raw $(B1_ARGS)
+$(JOBS):
+	$(RUN) $@ $(ARGS)
 
-b2:
-	"$(PYTHON)" -m processing.batch.b2_clean_raw $(B2_ARGS)
+sample:
+	"$(PYTHON)" tests/make_sample_data.py --out data/sample_raw
 
-b3:
-	"$(PYTHON)" -m processing.batch.b3_game_daily_stats $(B3_ARGS)
+image:
+	docker build -t $(IMAGE) -f containers/Dockerfile.spark .
 
-b4:
-	"$(PYTHON)" -m processing.batch.b4_playtime_buckets $(B4_ARGS)
+docker-batch:
+	$(DOCKER) batch $(ARGS)
 
-b5:
-	"$(PYTHON)" -m processing.batch.b5_aspect_sentiment $(B5_ARGS)
-
-b6:
-	"$(PYTHON)" -m processing.batch.b6_trending_games $(B6_ARGS)
+test:
+	"$(PYTHON)" -m pytest -q tests/unit

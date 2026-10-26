@@ -1,0 +1,16 @@
+# prometheus-community/prometheus-elasticsearch-exporter -> trạng thái cluster ES, shard, heap (Grafana D5, FT4/SC4)
+es:
+  uri: https://steam-elasticsearch-es-http.elastic-system.svc.cluster.local:9200
+  sslSkipVerify: true
+  all: true
+  indices: true
+extraEnvSecrets:
+  ES_USERNAME:
+    secret: steam-es-credentials
+    key: username
+  ES_PASSWORD:
+    secret: steam-es-credentials
+    key: elastic
+serviceMonitor:
+  enabled: true
+  interval: 30s

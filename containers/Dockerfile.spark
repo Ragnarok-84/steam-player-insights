@@ -16,6 +16,10 @@ RUN pip install --no-cache-dir -r requirements-spark.txt
 
 COPY processing/ processing/
 COPY storage/ storage/
+COPY crawlers/ crawlers/
+COPY dashboards/ dashboards/
+COPY tests/ tests/
+COPY data/target_apps.json data/target_apps.json
 COPY pipeline.py .
 
 ENV PYTHONPATH=/opt/spark/work-dir:/opt/spark/python:/opt/spark/python/lib/py4j-0.10.9.7-src.zip PYSPARK_PYTHON=python3 PYSPARK_DRIVER_PYTHON=python3

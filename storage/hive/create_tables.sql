@@ -1,3 +1,8 @@
+-- LƯU Ý: DDL này viết theo schema cũ (trước bản merge 26/10) và không còn khớp output của B2-B8.
+-- Khi đặt HIVE_METASTORE_URI, các job tự đăng ký bảng external steam_analytics.<tên bảng> trỏ tới Parquet
+-- qua write_table() trong processing/common/spark_utils.py, nên không cần chạy file này.
+-- Giữ lại làm tham khảo; cập nhật hoặc xoá khi nhóm chốt phương án Hive.
+
 -- DDL Khởi tạo cơ sở dữ liệu và bảng trên Hive Metastore (Spark SQL)
 -- Cho phép truy vấn SQL ad-hoc trên các bảng Parquet ở HDFS
 

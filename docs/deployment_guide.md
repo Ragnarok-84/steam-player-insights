@@ -97,33 +97,31 @@ kubectl apply -f k8s/crawlers/crawler-cronjobs.yaml
 ## 5. Bước 4: Chạy các Job Xử Lý Dữ Liệu (Spark)
 
 ### 5.1. Khởi chạy Speed Layer (Streaming)
+
+Các job đọc Kafka cần connector `spark-sql-kafka-0-10_2.12:3.5.7` (có sẵn trong `containers/Dockerfile.spark`, hoặc đặt `SPARK_PACKAGES`). Đặt `WRITE_ES=1` để ghi `realtime_game_metrics` và `alerts`:
+
 ```bash
-spark-submit \
-  --master k8s://https://kubernetes.default.svc \
-  --deploy-mode cluster \
-  --name realtime-review-metrics \
-  processing/streaming/s1_review_metrics.py
+python -m processing.streaming.s1_review_metrics   # chỉ số review cửa sổ 5/60 phút
+python -m processing.streaming.s2_review_bombing_detector
+python -m processing.streaming.s3_ccu_spike_detector
 ```
 
+Repo chưa có manifest SparkApplication/Deployment cho S1–S3; cần bổ sung khi triển khai bằng Spark Operator.
+
 ### 5.2. Chạy Batch Layer
+
+Thứ tự: B1 → B2 → B5 → B3 → B4 → B6 → B7 → B8 (B3 dùng cảm xúc từ B5; B7 tạo baseline cho S2/S3). Tương đương `make batch` hoặc `python pipeline.py --profile cluster batch` (pipeline bỏ B1 vì đọc thẳng raw).
+
 ```bash
-# B1: Đọc Kafka -> HDFS Raw
-python processing/batch/b1_ingest_raw.py
-
-# B2: Làm sạch Raw -> Parquet Clean
-python processing/batch/b2_clean_raw.py
-
-# B3: Thống kê Game Daily Stats
-python processing/batch/b3_game_daily_stats.py
-
-# B4: Phân tích tương quan giờ chơi
-python processing/batch/b4_playtime_buckets.py
-
-# B5: Phân tích khía cạnh & cảm xúc
-python processing/batch/b5_aspect_sentiment.py
-
-# B6: Xếp hạng game trending
-python processing/batch/b6_trending_games.py
+python -m processing.batch.b1_ingest_raw          # Kafka -> /steam/raw/steam_*/dt=
+python -m processing.batch.b2_clean_raw           # raw -> /steam/clean/{reviews,ccu,games,games_history}
+python -m processing.batch.b5_aspect_sentiment    # khía cạnh, VADER, TF-IDF
+python -m processing.batch.b3_game_daily_stats    # thống kê ngày/tuần/tháng, phân khúc
+python -m processing.batch.b4_playtime_buckets    # giờ chơi, early_negative_ratio
+python -m processing.batch.b6_trending_games      # trending, tác động giảm giá
+python -m processing.batch.b7_baselines           # baseline cho S2/S3
+python -m processing.batch.b8_game_clusters       # K-Means
+python -m processing.serving.merge_views          # xoá realtime view đã được batch bao phủ (khi ghi ES)
 ```
 
 ---

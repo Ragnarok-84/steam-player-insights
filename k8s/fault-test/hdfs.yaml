@@ -1,0 +1,236 @@
+# Separate fault-test cluster; never reuse demo PVCs.
+apiVersion: v1
+kind: Service
+metadata:
+  name: namenode
+  namespace: steam-ft
+spec:
+  selector:
+    app: namenode
+  ports:
+  - name: rpc
+    port: 8020
+    targetPort: 8020
+  - name: http
+    port: 9870
+    targetPort: 9870
+  clusterIP: None
+  publishNotReadyAddresses: true
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: datanode
+  namespace: steam-ft
+spec:
+  selector:
+    app: datanode
+  ports:
+  - name: transfer
+    port: 9866
+    targetPort: 9866
+  - name: http
+    port: 9864
+    targetPort: 9864
+  - name: ipc
+    port: 9867
+    targetPort: 9867
+  clusterIP: None
+  publishNotReadyAddresses: true
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: namenode
+  namespace: steam-ft
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: namenode
+  template:
+    metadata:
+      labels:
+        app: namenode
+    spec:
+      nodeSelector:
+        steam.insights/role: storage
+      automountServiceAccountToken: false
+      containers:
+      - name: namenode
+        image: apache/hadoop:3.4.1
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: CORE-SITE.XML_fs.defaultFS
+          value: hdfs://namenode:8020
+        - name: HDFS-SITE.XML_dfs.replication
+          value: '2'
+        - name: HDFS-SITE.XML_dfs.namenode.name.dir
+          value: file:///data/name
+        - name: HDFS-SITE.XML_dfs.datanode.data.dir
+          value: file:///data/blocks
+        - name: HDFS-SITE.XML_dfs.client.use.datanode.hostname
+          value: 'true'
+        - name: HDFS-SITE.XML_dfs.permissions.enabled
+          value: 'false'
+        - name: HADOOP_HEAPSIZE_MAX
+          value: '512'
+        - name: ENSURE_NAMENODE_DIR
+          value: /data/name
+        ports:
+        - name: rpc
+          containerPort: 8020
+        - name: http
+          containerPort: 9870
+        resources:
+          requests:
+            cpu: 250m
+            memory: 512Mi
+          limits:
+            cpu: '1'
+            memory: 1Gi
+        args:
+        - hdfs
+        - namenode
+        startupProbe:
+          exec:
+            command:
+            - bash
+            - -c
+            - hdfs dfs -ls / >/dev/null
+          periodSeconds: 10
+          timeoutSeconds: 10
+          failureThreshold: 30
+        readinessProbe:
+          exec:
+            command:
+            - bash
+            - -c
+            - hdfs dfs -ls / >/dev/null
+          periodSeconds: 10
+          timeoutSeconds: 10
+          failureThreshold: 3
+        volumeMounts:
+        - name: data
+          mountPath: /data
+      securityContext:
+        runAsUser: 0
+        runAsGroup: 0
+  serviceName: namenode
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      storageClassName: local-path
+      resources:
+        requests:
+          storage: 10Gi
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: datanode
+  namespace: steam-ft
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: datanode
+  template:
+    metadata:
+      labels:
+        app: datanode
+    spec:
+      nodeSelector:
+        steam.insights/ft-hdfs: 'true'
+      automountServiceAccountToken: false
+      containers:
+      - name: datanode
+        image: apache/hadoop:3.4.1
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: CORE-SITE.XML_fs.defaultFS
+          value: hdfs://namenode:8020
+        - name: HDFS-SITE.XML_dfs.replication
+          value: '2'
+        - name: HDFS-SITE.XML_dfs.namenode.name.dir
+          value: file:///data/name
+        - name: HDFS-SITE.XML_dfs.datanode.data.dir
+          value: file:///data/blocks
+        - name: HDFS-SITE.XML_dfs.client.use.datanode.hostname
+          value: 'true'
+        - name: HDFS-SITE.XML_dfs.permissions.enabled
+          value: 'false'
+        - name: HADOOP_HEAPSIZE_MAX
+          value: '512'
+        - name: POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        ports:
+        - name: transfer
+          containerPort: 9866
+        - name: http
+          containerPort: 9864
+        - name: ipc
+          containerPort: 9867
+        resources:
+          requests:
+            cpu: 250m
+            memory: 512Mi
+          limits:
+            cpu: '1'
+            memory: 1Gi
+        args:
+        - 'exec env "HDFS-SITE.XML_dfs.datanode.hostname=${HOSTNAME}.datanode.${POD_NAMESPACE}.svc.cluster.local"
+          /opt/starter.sh hdfs datanode
+
+          '
+        startupProbe:
+          exec:
+            command:
+            - bash
+            - -ec
+            - curl -fsS http://localhost:9864/ >/dev/null
+          periodSeconds: 10
+          timeoutSeconds: 10
+          failureThreshold: 30
+        readinessProbe:
+          exec:
+            command:
+            - bash
+            - -ec
+            - curl -fsS http://localhost:9864/ >/dev/null
+          periodSeconds: 10
+          timeoutSeconds: 10
+          failureThreshold: 3
+        volumeMounts:
+        - name: data
+          mountPath: /data
+        command:
+        - bash
+        - -ec
+      securityContext:
+        runAsUser: 0
+        runAsGroup: 0
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchLabels:
+                app: datanode
+            topologyKey: kubernetes.io/hostname
+  serviceName: datanode
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      storageClassName: local-path
+      resources:
+        requests:
+          storage: 10Gi
+  podManagementPolicy: Parallel

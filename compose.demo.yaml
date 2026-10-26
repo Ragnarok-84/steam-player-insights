@@ -1,0 +1,157 @@
+name: steam-insights-demo
+
+x-hadoop-env: &hadoop-env
+  CORE-SITE.XML_fs.defaultFS: hdfs://namenode:8020
+  HDFS-SITE.XML_dfs.replication: "1"
+  HDFS-SITE.XML_dfs.namenode.name.dir: file:///data/name
+  HDFS-SITE.XML_dfs.datanode.data.dir: file:///data/blocks
+  HDFS-SITE.XML_dfs.datanode.hostname: datanode
+  HDFS-SITE.XML_dfs.client.use.datanode.hostname: "true"
+  HDFS-SITE.XML_dfs.permissions.enabled: "false"
+  HADOOP_HEAPSIZE_MAX: "512"
+
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  namenode:
+    image: apache/hadoop:3.4.1
+    hostname: namenode
+    user: "0:0"
+    profiles: [batch]
+    command: [hdfs, namenode]
+    environment:
+      <<: *hadoop-env
+      ENSURE_NAMENODE_DIR: /data/name
+    ports:
+      - "127.0.0.1:8020:8020"
+      - "127.0.0.1:9870:9870"
+    volumes:
+      - namenode-data:/data
+      - ./data/raw:/input:ro
+    mem_limit: 1g
+    cpus: 1.0
+    healthcheck:
+      test: [CMD-SHELL, "hdfs dfs -ls / >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 10s
+      retries: 12
+      start_period: 30s
+    logging: *logging
+
+  datanode:
+    image: apache/hadoop:3.4.1
+    hostname: datanode
+    user: "0:0"
+    profiles: [batch]
+    command: [hdfs, datanode]
+    environment: *hadoop-env
+    depends_on:
+      namenode:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:9866:9866"
+      - "127.0.0.1:9864:9864"
+    volumes:
+      - datanode-data:/data
+    mem_limit: 1g
+    cpus: 1.0
+    healthcheck:
+      test: [CMD-SHELL, "hdfs dfsadmin -report | grep -q 'Live datanodes (1)'"]
+      interval: 10s
+      timeout: 10s
+      retries: 12
+      start_period: 30s
+    logging: *logging
+
+  kafka:
+    image: apache/kafka:3.9.1
+    hostname: kafka
+    profiles: [streaming]
+    environment:
+      CLUSTER_ID: MkU3OEVBNTcwNTJENDM2Qk
+      KAFKA_NODE_ID: "1"
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: HOST://:9092,INTERNAL://:19092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: HOST://localhost:9092,INTERNAL://kafka:19092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: HOST:PLAINTEXT,INTERNAL:PLAINTEXT,CONTROLLER:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: "1"
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: "1"
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: "1"
+      KAFKA_DEFAULT_REPLICATION_FACTOR: "1"
+      KAFKA_MIN_INSYNC_REPLICAS: "1"
+      KAFKA_NUM_PARTITIONS: "1"
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+      KAFKA_LOG_DIRS: /tmp/kraft-combined-logs
+      KAFKA_LOG_RETENTION_HOURS: "24"
+      KAFKA_HEAP_OPTS: -Xms256m -Xmx512m
+    ports:
+      - "127.0.0.1:9092:9092"
+    volumes:
+      - kafka-data:/tmp/kraft-combined-logs
+    mem_limit: 1g
+    cpus: 1.0
+    healthcheck:
+      test: [CMD-SHELL, "/opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:19092 --list >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 10s
+      retries: 12
+      start_period: 30s
+    logging: *logging
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.19.3
+    profiles: [dashboard]
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      xpack.security.enrollment.enabled: "false"
+      node.store.allow_mmap: "false"
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+    ports:
+      - "127.0.0.1:9200:9200"
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    mem_limit: 1g
+    cpus: 1.0
+    healthcheck:
+      test: [CMD-SHELL, "curl -fsS 'http://localhost:9200/_cluster/health?wait_for_status=yellow&timeout=5s' >/dev/null"]
+      interval: 10s
+      timeout: 10s
+      retries: 18
+      start_period: 30s
+    logging: *logging
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.19.3
+    profiles: [dashboard]
+    environment:
+      ELASTICSEARCH_HOSTS: '["http://elasticsearch:9200"]'
+      NODE_OPTIONS: --max-old-space-size=512
+      TELEMETRY_ENABLED: "false"
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:5601:5601"
+    mem_limit: 1g
+    cpus: 1.0
+    healthcheck:
+      test: [CMD-SHELL, "curl -fsS http://localhost:5601/api/status >/dev/null"]
+      interval: 10s
+      timeout: 10s
+      retries: 24
+      start_period: 60s
+    logging: *logging
+
+volumes:
+  namenode-data:
+  datanode-data:
+  kafka-data:
+  elasticsearch-data:

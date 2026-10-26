@@ -1,0 +1,145 @@
+# Demo one instance per service; managed by scripts/k3s-demo.sh.
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka
+  namespace: steam-demo
+spec:
+  selector:
+    app: kafka
+  ports:
+  - name: broker
+    port: 9092
+    targetPort: 9092
+  - name: controller
+    port: 9093
+    targetPort: 9093
+  clusterIP: None
+  publishNotReadyAddresses: true
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: kafka
+  namespace: steam-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafka
+  template:
+    metadata:
+      labels:
+        app: kafka
+    spec:
+      nodeSelector:
+        steam.insights/role: ingest
+      automountServiceAccountToken: false
+      containers:
+      - name: kafka
+        image: apache/kafka:3.9.1
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: CLUSTER_ID
+          value: MkU3OEVBNTcwNTJENDM2Qk
+        - name: KAFKA_NODE_ID
+          value: '1'
+        - name: KAFKA_PROCESS_ROLES
+          value: broker,controller
+        - name: KAFKA_LISTENERS
+          value: INTERNAL://:9092,CONTROLLER://:9093
+        - name: KAFKA_ADVERTISED_LISTENERS
+          value: INTERNAL://kafka.steam-demo.svc.cluster.local:9092
+        - name: KAFKA_LISTENER_SECURITY_PROTOCOL_MAP
+          value: INTERNAL:PLAINTEXT,CONTROLLER:PLAINTEXT
+        - name: KAFKA_INTER_BROKER_LISTENER_NAME
+          value: INTERNAL
+        - name: KAFKA_CONTROLLER_LISTENER_NAMES
+          value: CONTROLLER
+        - name: KAFKA_CONTROLLER_QUORUM_VOTERS
+          value: 1@kafka-0.kafka.steam-demo.svc.cluster.local:9093
+        - name: KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR
+          value: '1'
+        - name: KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR
+          value: '1'
+        - name: KAFKA_TRANSACTION_STATE_LOG_MIN_ISR
+          value: '1'
+        - name: KAFKA_DEFAULT_REPLICATION_FACTOR
+          value: '1'
+        - name: KAFKA_MIN_INSYNC_REPLICAS
+          value: '1'
+        - name: KAFKA_NUM_PARTITIONS
+          value: '1'
+        - name: KAFKA_AUTO_CREATE_TOPICS_ENABLE
+          value: 'false'
+        - name: KAFKA_LOG_DIRS
+          value: /var/lib/kafka/data/logs
+        - name: KAFKA_LOG_RETENTION_HOURS
+          value: '24'
+        - name: KAFKA_HEAP_OPTS
+          value: -Xms256m -Xmx512m
+        ports:
+        - name: broker
+          containerPort: 9092
+        - name: controller
+          containerPort: 9093
+        resources:
+          requests:
+            cpu: 250m
+            memory: 512Mi
+          limits:
+            cpu: '1'
+            memory: 1Gi
+        startupProbe:
+          exec:
+            command:
+            - bash
+            - -c
+            - /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --list
+              >/dev/null
+          periodSeconds: 10
+          timeoutSeconds: 10
+          failureThreshold: 30
+        readinessProbe:
+          exec:
+            command:
+            - bash
+            - -c
+            - /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --list
+              >/dev/null
+          periodSeconds: 10
+          timeoutSeconds: 10
+          failureThreshold: 3
+        volumeMounts:
+        - name: data
+          mountPath: /var/lib/kafka/data
+      initContainers:
+      - name: volume-permissions
+        image: busybox:1.37.0
+        command:
+        - sh
+        - -c
+        - chown 1000:1000 /var/lib/kafka/data
+        securityContext:
+          runAsUser: 0
+        resources:
+          requests:
+            cpu: 50m
+            memory: 32Mi
+          limits:
+            cpu: 100m
+            memory: 64Mi
+        volumeMounts:
+        - name: data
+          mountPath: /var/lib/kafka/data
+  serviceName: kafka
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      storageClassName: local-path
+      resources:
+        requests:
+          storage: 10Gi

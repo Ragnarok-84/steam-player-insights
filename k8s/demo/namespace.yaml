@@ -1,0 +1,20 @@
+# Demo one instance per service; managed by scripts/k3s-demo.sh.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: steam-demo
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: demo-budget
+  namespace: steam-demo
+spec:
+  hard:
+    requests.cpu: '10'
+    requests.memory: 12Gi
+    limits.cpu: '16'
+    limits.memory: 18Gi
+    requests.storage: 60Gi
+    persistentvolumeclaims: '8'
+    pods: '16'

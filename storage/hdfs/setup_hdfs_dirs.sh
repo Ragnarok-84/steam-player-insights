@@ -4,9 +4,10 @@
 echo "=== Initializing HDFS Directories for Steam Player Insights ==="
 
 # 1. Thư mục Raw Layer (bất biến, JSON gzip)
-hdfs dfs -mkdir -p /steam/raw/reviews
-hdfs dfs -mkdir -p /steam/raw/ccu
-hdfs dfs -mkdir -p /steam/raw/meta
+# Tên thư mục trùng TOPIC_DIRS trong processing/common/spark_utils.py (B1 ghi, B2 đọc)
+hdfs dfs -mkdir -p /steam/raw/steam_reviews_raw
+hdfs dfs -mkdir -p /steam/raw/steam_players_ccu
+hdfs dfs -mkdir -p /steam/raw/steam_games_meta
 
 # 2. Thư mục Clean Layer (Parquet Snappy)
 hdfs dfs -mkdir -p /steam/clean/reviews

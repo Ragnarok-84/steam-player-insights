@@ -4,6 +4,8 @@ Hệ thống phân tích trải nghiệm người chơi đối với game trên 
 
 Thành viên mới bắt đầu từ [mục 4](#4-chạy-local-cho-thành-viên-mới). Sơ đồ dưới đây mô tả kiến trúc mục tiêu; xem [giới hạn hiện tại](#47-giới-hạn-hiện-tại-cần-biết) trước khi chạy toàn bộ pipeline.
 
+Các lựa chọn nhóm đã chốt (làm local hay trên cloud, cấu hình thu gọn so với thiết kế, quy ước code, thứ tự công việc) được ghi ở [docs/decisions.md](docs/decisions.md).
+
 Để thu thập dữ liệu từ danh sách 1.000 game đã có, mở rộng lên 2.000 game và nhập review lịch sử vào file JSONL nén trên Windows, xem [hướng dẫn thu thập local](docs/collection_guide.md).
 
 ---
@@ -581,6 +583,8 @@ hdfs --daemon stop namenode
 Chỉ dừng các dịch vụ do mình quản lý; không dùng lệnh này để dừng cụm chung của nhóm.
 
 ## 5. Triển khai Kubernetes và các dịch vụ mở rộng
+
+**Nơi chạy cụm:** nhóm chốt dựng k3s trên 4 VM Google Cloud Compute Engine (`e2-standard-2`) nối bằng Tailscale, chỉ bật trong buổi làm việc; lý do và phương án dự phòng xem [docs/decisions.md](docs/decisions.md#12-cụm-phân-tán-trên-google-cloud-chạy-theo-buổi). Các bước cài đặt dưới đây giống nhau dù VM chạy trên cloud hay máy cá nhân.
 
 **Nhóm dùng máy cá nhân:** bắt đầu từ [hướng dẫn k3s ba máy và demo một instance](infra/k3s/README.md). Bộ `k8s/demo/` dùng một server + hai worker qua Tailscale, chia dịch vụ giữa ba máy, có bài smoke cross-node và Job B2 đọc raw từ Drive qua HDFS. Đây là mốc tích hợp Kubernetes; hướng dẫn Compose ở mục 4 chỉ dành cho thử local.
 

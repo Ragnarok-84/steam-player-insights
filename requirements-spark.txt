@@ -1,0 +1,11 @@
+# Thư viện Python cho image Spark (driver + executor). PySpark có sẵn trong image apache/spark:3.5.7-python3 (Python 3.8),
+# nên không ghim bản tối thiểu mới hơn mức Python 3.8 hỗ trợ.
+python-dotenv
+vaderSentiment
+numpy
+pandas
+pyarrow
+elasticsearch>=8.12,<9
+kafka-python
+requests
+pytest

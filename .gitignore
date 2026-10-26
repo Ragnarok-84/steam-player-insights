@@ -61,3 +61,6 @@ Thumbs.db
 # Jupyter Notebook
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+data/lake/
+data/lake*/
+data/sample_raw/

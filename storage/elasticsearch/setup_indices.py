@@ -12,7 +12,7 @@ ES_HOST = os.getenv("ELASTICSEARCH_HOSTS", "http://localhost:9200")
 ES_USER = os.getenv("ELASTICSEARCH_USER")
 ES_PASSWORD = os.getenv("ELASTICSEARCH_PASSWORD")
 
-def init_indices(mapping_file: str = "storage/elasticsearch/indices_mapping.json"):
+def init_indices(mapping_file: str = "storage/elasticsearch/indices_mapping.json", recreate: bool = False):
     auth = (ES_USER, ES_PASSWORD) if ES_USER and ES_PASSWORD else None
     es = Elasticsearch(hosts=[ES_HOST], basic_auth=auth, verify_certs=False)
 
@@ -26,6 +26,9 @@ def init_indices(mapping_file: str = "storage/elasticsearch/indices_mapping.json
         indices_config = json.load(f)
 
     for index_name, config in indices_config.items():
+        if recreate and es.indices.exists(index=index_name):
+            logger.info(f"Deleting index '{index_name}' (--recreate)...")
+            es.indices.delete(index=index_name)
         if es.indices.exists(index=index_name):
             logger.info(f"Index '{index_name}' already exists. Skipping.")
         else:
@@ -40,4 +43,8 @@ def init_indices(mapping_file: str = "storage/elasticsearch/indices_mapping.json
     return True
 
 if __name__ == "__main__":
-    init_indices()
+    import argparse
+    import sys
+    parser = argparse.ArgumentParser(description="Create Elasticsearch indices")
+    parser.add_argument("--recreate", action="store_true", help="Xoá và tạo lại index (mất dữ liệu trong index)")
+    sys.exit(0 if init_indices(recreate=parser.parse_args().recreate) else 1)

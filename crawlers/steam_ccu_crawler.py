@@ -8,6 +8,8 @@ from crawlers.config import (
     CRAWLER_RATE_LIMIT_DELAY,
     TARGET_APP_LIST_PATH,
     CRAWLER_TARGET_LIMIT,
+    STEAM_API_KEY,
+    STEAM_WEB_API_BASE,
 )
 from crawlers.common.kafka_producer import SteamKafkaProducer
 from crawlers.common.rate_limiter import RateLimiter
@@ -17,11 +19,13 @@ from crawlers.common.jsonl_producer import create_producer
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 logger = logging.getLogger("SteamCCUCrawler")
 
-CCU_API_URL = "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/"
+CCU_API_URL = f"{STEAM_WEB_API_BASE}/ISteamUserStats/GetNumberOfCurrentPlayers/v1/"
 
 def crawl_ccu(appid: int, producer: SteamKafkaProducer, rate_limiter: RateLimiter):
     rate_limiter.wait()
     params = {"appid": appid}
+    if STEAM_API_KEY:
+        params["key"] = STEAM_API_KEY
     try:
         resp = requests.get(CCU_API_URL, params=params, timeout=10)
         if resp.status_code == 429:

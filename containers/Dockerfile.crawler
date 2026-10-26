@@ -1,17 +1,12 @@
 FROM python:3.11-slim
 
 WORKDIR /app
-
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
-
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements-crawler.txt .
+RUN pip install --no-cache-dir -r requirements-crawler.txt
 
 COPY crawlers/ crawlers/
-COPY data/ data/
+# Chỉ danh sách game mục tiêu; không đưa dữ liệu raw (data/raw có thể nặng hàng GB) vào image
+COPY data/target_apps.json data/target_apps.json
 
 ENV PYTHONUNBUFFERED=1
-
 CMD ["python", "-m", "crawlers.steam_reviews_crawler"]

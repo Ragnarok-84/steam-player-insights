@@ -2,6 +2,20 @@
 
 Cập nhật: 2026-10-09. Đối chiếu code hiện có với tài liệu thiết kế `BigData.md` (mục 1–10).
 
+## Trạng thái (2026-10-26)
+
+| Giai đoạn | Trạng thái | Đã kiểm chứng |
+| --- | --- | --- |
+| 1 Batch | Xong (B1–B8) | Docker, dữ liệu mẫu; B1 qua Kafka không ghi trùng |
+| 2 Speed + hợp nhất | Xong (S1–S3, `merge_views`) | Nguồn file và Kafka; cảnh báo ghi ES + Kafka |
+| 3 Truy vấn / phân tích bổ sung | Xong (Hive, K-Means, review đáng ngờ, vòng phản hồi) | HMS 3.1.3 + PostgreSQL + Spark SQL |
+| 4 Dashboard | Xong (Kibana D1–D4, Grafana D5) | Render trên Kibana 8.15, import Grafana 11 |
+| 5 K8s | Xong (manifest + script) | kubeconform 32/32; **chưa chạy trên cụm thật** |
+| 6 Kiểm thử | Xong (SC1–SC4, FT1–FT6, unit) | Unit 11/11, SC1–SC4 rút gọn, FT6; FT1–FT5 cần cụm |
+| 7 Bàn giao | Code + tài liệu + notebook xong | Còn: chạy trên dữ liệu thật và cụm, báo cáo, slide, video |
+
+Phần dưới là kế hoạch gốc, giữ để tham chiếu.
+
 ## 0. Đối chiếu thiết kế và code
 
 | Mục thiết kế | Code hiện tại | Khoảng trống |

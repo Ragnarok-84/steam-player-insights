@@ -7,7 +7,7 @@ pydantic>=2.6.4
 tenacity>=8.2.3
 
 # Data processing (Spark & PySpark)
-pyspark>=3.5.0
+pyspark==3.5.7
 pyarrow>=15.0.0
 pandas>=2.2.1
 numpy>=1.26.4
@@ -17,7 +17,7 @@ nltk>=3.8.1
 vaderSentiment>=3.3.2
 
 # Storage & Serving
-elasticsearch>=8.12.1
+elasticsearch>=8.12.1,<9
 hdfs>=2.7.3
 
 # Testing & Monitoring

@@ -1,58 +1,76 @@
-import os
 import argparse
-from pyspark.sql.functions import col, when, count, avg, round as spark_round
-from processing.common.spark_utils import get_spark_session
+from pyspark.sql.functions import col, when, count, avg, round as spark_round, percentile_approx, lit, coalesce
+from processing.common.spark_utils import get_spark_session, path_exists, write_table, CLEAN_PATH, CURATED_PATH
+from processing.common.es_writer import es_enabled, write_es
 
-def analyze_playtime_buckets(spark, clean_reviews_path: str, curated_path: str):
+BUCKETS = [(2, "<2h"), (10, "2-10h"), (50, "10-50h"), (200, "50-200h")]
+
+
+def bucket_expr(hours):
+    expr = None
+    for limit, label in BUCKETS:
+        expr = when(hours < limit, label) if expr is None else expr.when(hours < limit, label)
+    return expr.otherwise(">200h")
+
+
+def analyze_playtime_buckets(spark, clean_root: str, curated_root: str, es: bool):
     """
-    Job B4: Phân tích tương quan giữa số giờ chơi và mức độ đánh giá:
-    - Nhóm giờ chơi:
-      * < 2h: nhóm trải nghiệm ban đầu / có thể hoàn tiền (refund)
-      * 2 - 10h: nhóm làm quen
-      * 10 - 50h: người chơi thông thường
-      * 50 - 200h: người chơi trung thành
-      * > 200h: hardcore gamer
-    - % đánh giá tích cực của từng nhóm
-    - Tỷ lệ phàn nàn/bỏ game sớm (<2h)
+    Job B4: giờ chơi khi review <-> đánh giá.
+    - playtime_buckets: % tích cực theo (appid, nhóm giờ chơi)
+    - game_retention: early_negative_ratio (review tiêu cực khi chơi <2h / tổng review) = chỉ báo bỏ game;
+      giờ chơi trung vị; value_score = giờ chơi trung vị / giá ("đáng tiền")
     """
-    print(f"Reading clean reviews from {clean_reviews_path}...")
-    df = spark.read.parquet(clean_reviews_path)
+    df = spark.read.parquet(f"{clean_root}/reviews").withColumn("playtime_hours", col("playtime_at_review") / 60.0)
+    bucketed = df.withColumn("playtime_bucket", bucket_expr(col("playtime_hours")))
 
-    # Chuyển playtime_forever và playtime_at_review sang giờ (dữ liệu Steam tính bằng phút)
-    df_hours = df.withColumn("playtime_hours", col("playtime_at_review") / 60.0)
-
-    # Phân nhóm giờ chơi
-    bucketed_df = df_hours.withColumn(
-        "playtime_bucket",
-        when(col("playtime_hours") < 2.0, "<2h")
-        .when((col("playtime_hours") >= 2.0) & (col("playtime_hours") < 10.0), "2-10h")
-        .when((col("playtime_hours") >= 10.0) & (col("playtime_hours") < 50.0), "10-50h")
-        .when((col("playtime_hours") >= 50.0) & (col("playtime_hours") < 200.0), "50-200h")
-        .otherwise(">200h")
-    )
-
-    stats_df = (
-        bucketed_df.groupBy("appid", "playtime_bucket")
+    buckets = (
+        bucketed.groupBy("appid", "playtime_bucket")
         .agg(
-            count("recommendationid").alias("total_reviews"),
-            count(when(col("voted_up") == True, 1)).alias("positive_reviews"),
-            count(when(col("voted_up") == False, 1)).alias("negative_reviews"),
-            spark_round(avg(when(col("voted_up") == True, 1.0).otherwise(0.0)) * 100, 2).alias("positive_ratio_percent"),
-            spark_round(avg("playtime_hours"), 2).alias("avg_playtime_in_bucket")
+            count("*").alias("total_reviews"),
+            count(when(col("voted_up"), 1)).alias("positive_reviews"),
+            count(when(~col("voted_up"), 1)).alias("negative_reviews"),
+            spark_round(avg(when(col("voted_up"), 1.0).otherwise(0.0)) * 100, 2).alias("positive_ratio_percent"),
+            spark_round(avg("playtime_hours"), 2).alias("avg_playtime_in_bucket"),
         )
     )
+    write_table(spark, buckets, f"{curated_root}/playtime_buckets", "playtime_buckets")
 
-    out_path = os.path.join(curated_path, "playtime_buckets")
-    print(f"Writing playtime buckets analysis to {out_path}...")
-    stats_df.write.mode("overwrite").parquet(out_path)
-    print("Job B4 completed successfully.")
+    retention = (
+        df.groupBy("appid")
+        .agg(
+            count("*").alias("total_reviews"),
+            spark_round(avg(when(col("voted_up"), 1.0).otherwise(0.0)) * 100, 2).alias("positive_ratio_percent"),
+            spark_round(count(when((col("playtime_hours") < 2) & ~col("voted_up"), 1)) * 100.0 / count("*"), 2)
+            .alias("early_negative_ratio"),
+            spark_round(percentile_approx("playtime_hours", 0.5), 2).alias("median_playtime_hours"),
+            spark_round(percentile_approx(col("playtime_forever") / 60.0, 0.5), 2).alias("median_playtime_forever_hours"),
+        )
+    )
+    games_path = f"{clean_root}/games"
+    if path_exists(spark, games_path):
+        retention = retention.join(spark.read.parquet(games_path).select("appid", "name", "price", "price_bucket"), "appid", "left")
+    else:
+        retention = retention.withColumn("name", lit(None).cast("string")).withColumn("price", lit(None).cast("double")) \
+            .withColumn("price_bucket", lit(None).cast("string"))
+    retention = retention.withColumn(
+        "value_score",
+        when(coalesce(col("price"), lit(0.0)) > 0, spark_round(col("median_playtime_forever_hours") / col("price"), 3))
+    )
+    write_table(spark, retention, f"{curated_root}/game_retention", "game_retention")
+
+    if es:
+        write_es(spark.read.parquet(f"{curated_root}/playtime_buckets"), "batch_playtime_buckets", ["appid", "playtime_bucket"])
+        write_es(spark.read.parquet(f"{curated_root}/game_retention"), "batch_game_retention", ["appid"])
+    print("Job B4 finished successfully.")
+
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="B4: Playtime Buckets Analysis")
-    parser.add_argument("--clean-reviews", default="/steam/clean/reviews", help="Clean reviews path")
-    parser.add_argument("--curated", default="/steam/curated", help="Curated output path")
+    parser = argparse.ArgumentParser(description="B4: Playtime buckets & retention")
+    parser.add_argument("--clean", default=CLEAN_PATH)
+    parser.add_argument("--curated", default=CURATED_PATH)
+    parser.add_argument("--es-nodes", default=None)
     args = parser.parse_args()
 
     spark = get_spark_session("B4_Playtime_Buckets")
-    analyze_playtime_buckets(spark, args.clean_reviews, args.curated)
+    analyze_playtime_buckets(spark, args.clean, args.curated, es_enabled(args.es_nodes))
     spark.stop()

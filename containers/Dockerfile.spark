@@ -1,12 +1,22 @@
-FROM apache/spark:3.5.0-python3
+FROM apache/spark:3.5.7-python3
 
 USER root
 
-WORKDIR /opt/spark/work-dir
+# Kafka connector cho B1 và speed layer (khớp Spark 3.5.7 / Scala 2.12)
+ARG MAVEN=https://repo1.maven.org/maven2
+RUN cd /opt/spark/jars \
+    && curl -fsSLO ${MAVEN}/org/apache/spark/spark-sql-kafka-0-10_2.12/3.5.7/spark-sql-kafka-0-10_2.12-3.5.7.jar \
+    && curl -fsSLO ${MAVEN}/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.5.7/spark-token-provider-kafka-0-10_2.12-3.5.7.jar \
+    && curl -fsSLO ${MAVEN}/org/apache/kafka/kafka-clients/3.4.1/kafka-clients-3.4.1.jar \
+    && curl -fsSLO ${MAVEN}/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /opt/spark/work-dir
+COPY requirements-spark.txt .
+RUN pip install --no-cache-dir -r requirements-spark.txt
 
 COPY processing/ processing/
+COPY storage/ storage/
+COPY pipeline.py .
 
+ENV PYTHONPATH=/opt/spark/work-dir:/opt/spark/python:/opt/spark/python/lib/py4j-0.10.9.7-src.zip PYSPARK_PYTHON=python3 PYSPARK_DRIVER_PYTHON=python3
 USER 185

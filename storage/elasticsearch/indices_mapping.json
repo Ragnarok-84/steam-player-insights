@@ -1,57 +1,521 @@
 {
   "batch_game_daily": {
     "settings": {
-      "number_of_shards": 3,
+      "number_of_shards": 1,
       "number_of_replicas": 1
     },
     "mappings": {
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      ],
       "properties": {
-        "appid": { "type": "integer" },
-        "dt": { "type": "date", "format": "yyyy-MM-dd" },
-        "total_reviews": { "type": "long" },
-        "positive_reviews": { "type": "long" },
-        "negative_reviews": { "type": "long" },
-        "positive_ratio_percent": { "type": "float" },
-        "avg_votes_up": { "type": "float" },
-        "avg_playtime_hours_at_review": { "type": "float" },
-        "avg_ccu": { "type": "float" },
-        "peak_ccu": { "type": "integer" }
+        "appid": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "keyword"
+        },
+        "genres": {
+          "type": "keyword"
+        },
+        "developer": {
+          "type": "keyword"
+        },
+        "price": {
+          "type": "float"
+        },
+        "price_bucket": {
+          "type": "keyword"
+        },
+        "dt": {
+          "type": "date",
+          "format": "strict_date_optional_time||yyyy-MM-dd||yyyy-MM||epoch_second"
+        },
+        "total_reviews": {
+          "type": "long"
+        },
+        "positive_reviews": {
+          "type": "long"
+        },
+        "negative_reviews": {
+          "type": "long"
+        },
+        "positive_ratio_percent": {
+          "type": "float"
+        },
+        "avg_votes_up": {
+          "type": "float"
+        },
+        "median_playtime_hours": {
+          "type": "float"
+        },
+        "avg_sentiment": {
+          "type": "float"
+        },
+        "suspicious_reviews": {
+          "type": "long"
+        },
+        "avg_ccu": {
+          "type": "float"
+        },
+        "peak_ccu": {
+          "type": "long"
+        }
+      }
+    }
+  },
+  "batch_game_period": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      ],
+      "properties": {
+        "appid": {
+          "type": "integer"
+        },
+        "period": {
+          "type": "keyword"
+        },
+        "period_start": {
+          "type": "date",
+          "format": "strict_date_optional_time||yyyy-MM-dd||yyyy-MM||epoch_second"
+        },
+        "total_reviews": {
+          "type": "long"
+        },
+        "positive_reviews": {
+          "type": "long"
+        },
+        "negative_reviews": {
+          "type": "long"
+        },
+        "positive_ratio_percent": {
+          "type": "float"
+        },
+        "avg_votes_up": {
+          "type": "float"
+        },
+        "median_playtime_hours": {
+          "type": "float"
+        },
+        "avg_sentiment": {
+          "type": "float"
+        },
+        "suspicious_reviews": {
+          "type": "long"
+        }
+      }
+    }
+  },
+  "batch_segment_stats": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      ],
+      "properties": {
+        "dimension": {
+          "type": "keyword"
+        },
+        "segment": {
+          "type": "keyword"
+        },
+        "month": {
+          "type": "date",
+          "format": "strict_date_optional_time||yyyy-MM-dd||yyyy-MM||epoch_second"
+        },
+        "total_reviews": {
+          "type": "long"
+        },
+        "positive_reviews": {
+          "type": "long"
+        },
+        "negative_reviews": {
+          "type": "long"
+        },
+        "positive_ratio_percent": {
+          "type": "float"
+        },
+        "avg_votes_up": {
+          "type": "float"
+        },
+        "median_playtime_hours": {
+          "type": "float"
+        },
+        "avg_sentiment": {
+          "type": "float"
+        },
+        "suspicious_reviews": {
+          "type": "long"
+        }
+      }
+    }
+  },
+  "batch_language_stats": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      ],
+      "properties": {
+        "language": {
+          "type": "keyword"
+        },
+        "dt": {
+          "type": "date",
+          "format": "strict_date_optional_time||yyyy-MM-dd||yyyy-MM||epoch_second"
+        },
+        "total_reviews": {
+          "type": "long"
+        }
       }
     }
   },
   "batch_aspect_stats": {
     "settings": {
-      "number_of_shards": 3,
+      "number_of_shards": 1,
       "number_of_replicas": 1
     },
     "mappings": {
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      ],
       "properties": {
-        "appid": { "type": "integer" },
-        "month": { "type": "keyword" },
-        "aspect": { "type": "keyword" },
-        "mention_count": { "type": "long" },
-        "negative_count": { "type": "long" },
-        "positive_count": { "type": "long" },
-        "avg_sentiment": { "type": "float" },
-        "negative_ratio_percent": { "type": "float" }
+        "appid": {
+          "type": "integer"
+        },
+        "month": {
+          "type": "date",
+          "format": "strict_date_optional_time||yyyy-MM-dd||yyyy-MM||epoch_second"
+        },
+        "aspect": {
+          "type": "keyword"
+        },
+        "mention_count": {
+          "type": "long"
+        },
+        "negative_count": {
+          "type": "long"
+        },
+        "positive_count": {
+          "type": "long"
+        },
+        "avg_sentiment": {
+          "type": "float"
+        },
+        "negative_ratio_percent": {
+          "type": "float"
+        }
       }
     }
   },
-  "realtime_game_metrics": {
+  "batch_playtime_buckets": {
     "settings": {
-      "number_of_shards": 3,
+      "number_of_shards": 1,
       "number_of_replicas": 1
     },
     "mappings": {
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      ],
       "properties": {
-        "appid": { "type": "integer" },
-        "window_start": { "type": "date" },
-        "window_end": { "type": "date" },
-        "review_count_window": { "type": "long" },
-        "positive_count_window": { "type": "long" },
-        "negative_count_window": { "type": "long" },
-        "positive_ratio_percent": { "type": "float" },
-        "current_ccu": { "type": "integer" }
+        "appid": {
+          "type": "integer"
+        },
+        "playtime_bucket": {
+          "type": "keyword"
+        },
+        "total_reviews": {
+          "type": "long"
+        },
+        "positive_ratio_percent": {
+          "type": "float"
+        },
+        "avg_playtime_in_bucket": {
+          "type": "float"
+        }
+      }
+    }
+  },
+  "batch_game_retention": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      ],
+      "properties": {
+        "appid": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "keyword"
+        },
+        "genres": {
+          "type": "keyword"
+        },
+        "developer": {
+          "type": "keyword"
+        },
+        "price": {
+          "type": "float"
+        },
+        "price_bucket": {
+          "type": "keyword"
+        },
+        "total_reviews": {
+          "type": "long"
+        },
+        "positive_ratio_percent": {
+          "type": "float"
+        },
+        "early_negative_ratio": {
+          "type": "float"
+        },
+        "median_playtime_hours": {
+          "type": "float"
+        },
+        "median_playtime_forever_hours": {
+          "type": "float"
+        },
+        "value_score": {
+          "type": "float"
+        }
+      }
+    }
+  },
+  "batch_trending": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      ],
+      "properties": {
+        "appid": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "keyword"
+        },
+        "dt": {
+          "type": "date",
+          "format": "strict_date_optional_time||yyyy-MM-dd||yyyy-MM||epoch_second"
+        },
+        "reviews_7d": {
+          "type": "long"
+        },
+        "reviews_prev_7d": {
+          "type": "long"
+        },
+        "avg_ccu_7d": {
+          "type": "float"
+        },
+        "review_growth_rate": {
+          "type": "float"
+        },
+        "ccu_growth_rate": {
+          "type": "float"
+        },
+        "positive_ratio_7d": {
+          "type": "float"
+        },
+        "trending_score": {
+          "type": "float"
+        },
+        "trending_rank": {
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "batch_event_impact": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      ],
+      "properties": {
+        "appid": {
+          "type": "integer"
+        },
+        "event_dt": {
+          "type": "date",
+          "format": "strict_date_optional_time||yyyy-MM-dd||yyyy-MM||epoch_second"
+        },
+        "event_type": {
+          "type": "keyword"
+        },
+        "discount_percent": {
+          "type": "integer"
+        },
+        "reviews_before": {
+          "type": "long"
+        },
+        "reviews_after": {
+          "type": "long"
+        },
+        "positive_before": {
+          "type": "float"
+        },
+        "positive_after": {
+          "type": "float"
+        },
+        "positive_delta": {
+          "type": "float"
+        }
+      }
+    }
+  },
+  "batch_game_clusters": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      ],
+      "properties": {
+        "appid": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "keyword"
+        },
+        "cluster": {
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "game_keywords": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      ],
+      "properties": {
+        "appid": {
+          "type": "integer"
+        },
+        "rank": {
+          "type": "integer"
+        },
+        "keyword": {
+          "type": "keyword"
+        },
+        "score": {
+          "type": "float"
+        }
       }
     }
   },
@@ -61,20 +525,115 @@
       "number_of_replicas": 1
     },
     "mappings": {
-      "properties": {
-        "recommendationid": { "type": "keyword" },
-        "appid": { "type": "integer" },
-        "cleaned_review": { 
-          "type": "text", 
-          "analyzer": "english",
-          "fields": {
-            "keyword": { "type": "keyword", "ignore_above": 256 }
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
           }
+        }
+      ],
+      "properties": {
+        "recommendationid": {
+          "type": "keyword"
         },
-        "voted_up": { "type": "boolean" },
-        "sentiment_score": { "type": "float" },
-        "aspects": { "type": "keyword" },
-        "dt": { "type": "date", "format": "yyyy-MM-dd" }
+        "appid": {
+          "type": "integer"
+        },
+        "language": {
+          "type": "keyword"
+        },
+        "cleaned_review": {
+          "type": "text",
+          "analyzer": "english"
+        },
+        "voted_up": {
+          "type": "boolean"
+        },
+        "sentiment_score": {
+          "type": "float"
+        },
+        "sentiment_label": {
+          "type": "keyword"
+        },
+        "aspects": {
+          "type": "keyword"
+        },
+        "playtime_at_review": {
+          "type": "float"
+        },
+        "votes_up": {
+          "type": "long"
+        },
+        "is_suspicious": {
+          "type": "boolean"
+        },
+        "dt": {
+          "type": "date",
+          "format": "strict_date_optional_time||yyyy-MM-dd||yyyy-MM||epoch_second"
+        }
+      }
+    }
+  },
+  "realtime_game_metrics": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      ],
+      "properties": {
+        "metric_type": {
+          "type": "keyword"
+        },
+        "appid": {
+          "type": "integer"
+        },
+        "window_size": {
+          "type": "keyword"
+        },
+        "window_start": {
+          "type": "date",
+          "format": "strict_date_optional_time||yyyy-MM-dd||yyyy-MM||epoch_second"
+        },
+        "window_end": {
+          "type": "date",
+          "format": "strict_date_optional_time||yyyy-MM-dd||yyyy-MM||epoch_second"
+        },
+        "review_count_window": {
+          "type": "long"
+        },
+        "positive_count_window": {
+          "type": "long"
+        },
+        "negative_count_window": {
+          "type": "long"
+        },
+        "positive_ratio_percent": {
+          "type": "float"
+        },
+        "current_ccu": {
+          "type": "float"
+        },
+        "avg_players_window": {
+          "type": "float"
+        },
+        "max_players_window": {
+          "type": "long"
+        }
       }
     }
   },
@@ -84,14 +643,98 @@
       "number_of_replicas": 1
     },
     "mappings": {
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      ],
       "properties": {
-        "alert_id": { "type": "keyword" },
-        "alert_type": { "type": "keyword" },
-        "appid": { "type": "integer" },
-        "timestamp": { "type": "date" },
-        "severity": { "type": "keyword" },
-        "message": { "type": "text" },
-        "details": { "type": "object" }
+        "alert_type": {
+          "type": "keyword"
+        },
+        "rule": {
+          "type": "keyword"
+        },
+        "appid": {
+          "type": "integer"
+        },
+        "window_start": {
+          "type": "date",
+          "format": "strict_date_optional_time||yyyy-MM-dd||yyyy-MM||epoch_second"
+        },
+        "window_end": {
+          "type": "date",
+          "format": "strict_date_optional_time||yyyy-MM-dd||yyyy-MM||epoch_second"
+        },
+        "detected_at": {
+          "type": "date",
+          "format": "strict_date_optional_time||yyyy-MM-dd||yyyy-MM||epoch_second"
+        },
+        "total_reviews": {
+          "type": "long"
+        },
+        "negative_reviews": {
+          "type": "long"
+        },
+        "positive_ratio": {
+          "type": "float"
+        },
+        "negative_threshold": {
+          "type": "float"
+        },
+        "baseline_positive_ratio": {
+          "type": "float"
+        },
+        "positive_drop_points": {
+          "type": "float"
+        },
+        "avg_players_window": {
+          "type": "float"
+        },
+        "baseline_ccu": {
+          "type": "float"
+        },
+        "change_ratio": {
+          "type": "float"
+        }
+      }
+    }
+  },
+  "serving_state": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1
+    },
+    "mappings": {
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      ],
+      "properties": {
+        "batch_cutoff": {
+          "type": "date",
+          "format": "strict_date_optional_time||yyyy-MM-dd||yyyy-MM||epoch_second"
+        },
+        "updated_at": {
+          "type": "date",
+          "format": "strict_date_optional_time||yyyy-MM-dd||yyyy-MM||epoch_second"
+        },
+        "deleted_realtime_docs": {
+          "type": "long"
+        }
       }
     }
   }

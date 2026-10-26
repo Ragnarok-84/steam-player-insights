@@ -4,6 +4,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 STEAM_API_KEY = os.getenv("STEAM_API_KEY", "")
+if STEAM_API_KEY == "your_steam_api_key_here":
+    STEAM_API_KEY = ""
+# Ghi đè để trỏ tới mock server khi test FT6 (lỗi 429)
+STEAM_WEB_API_BASE = os.getenv("STEAM_WEB_API_BASE", "https://api.steampowered.com").rstrip("/")
 
 KAFKA_BOOTSTRAP_SERVERS = os.getenv("KAFKA_BOOTSTRAP_SERVERS", "localhost:9092").split(",")
 KAFKA_TOPIC_REVIEWS = os.getenv("KAFKA_TOPIC_REVIEWS", "steam.reviews.raw")

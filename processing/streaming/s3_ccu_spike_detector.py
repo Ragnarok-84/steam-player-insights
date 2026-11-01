@@ -5,11 +5,12 @@ from pyspark.sql.functions import (
     round as spark_round, current_timestamp
 )
 from processing.common.spark_utils import (
-    get_spark_session, read_stream, add_stream_args, path_exists, CHECKPOINT_PATH
+    get_spark_session, read_stream, add_stream_args, attach_progress_logger, path_exists, CHECKPOINT_PATH
 )
 from processing.common.es_writer import es_enabled, write_es
 from processing.batch.b2_clean_raw import CCU_SCHEMA
 
+QUERY_NAME = "s3_ccu"
 CHANGE_THRESHOLD = float(os.getenv("S3_CHANGE_THRESHOLD", "0.5"))
 MIN_BASELINE_CCU = float(os.getenv("S3_MIN_BASELINE_CCU", "100"))
 
@@ -37,6 +38,7 @@ def run(args):
     cảnh báo CCU_SPIKE / CCU_DROP khi lệch > ±50% so với cùng khung giờ các ngày trước.
     """
     spark = get_spark_session("S3_CCU_Spike_Detector")
+    attach_progress_logger(spark, args.metrics_file)
     raw = read_stream(spark, "steam.players.ccu", args.source, args.brokers, args.raw, args.max_files, args.starting_offsets)
     windowed = (
         raw.select(from_json(col("value"), CCU_SCHEMA).alias("d")).select("d.*")
@@ -74,7 +76,7 @@ def run(args):
             alerts.unpersist()
         batch_df.unpersist()
 
-    (windowed.writeStream.outputMode("update").foreachBatch(handle)
+    (windowed.writeStream.queryName(QUERY_NAME).outputMode("update").foreachBatch(handle)
      .option("checkpointLocation", args.checkpoint).trigger(processingTime=args.trigger).start()
      .awaitTermination())
 

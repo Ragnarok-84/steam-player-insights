@@ -1,83 +1,45 @@
 .DEFAULT_GOAL := help
 
-# Activate your venv first, or override: make b1 PYTHON=venv/Scripts/python.exe
-# Hoặc dùng `python pipeline.py ...` (tự đặt đường dẫn local data/raw -> data/lake).
+# Mọi target gọi pipeline.py (chạy được cả khi không có make: python pipeline.py <lệnh>).
+# Ví dụ: make batch RAW=data/raw ES=1        make s2 ARGS="--source file"
 PYTHON ?= python
-B1_ARGS ?=
-B2_ARGS ?=
-B3_ARGS ?=
-B4_ARGS ?=
-B5_ARGS ?=
-B6_ARGS ?=
-B7_ARGS ?=
-B8_ARGS ?=
-S1_ARGS ?=
-S2_ARGS ?=
-S3_ARGS ?=
-MERGE_ARGS ?=
+PROFILE ?= local
+RAW ?= data/raw
+ARGS ?=
+ES ?=
+IMAGE ?= steam-spark:dev
 
-.PHONY: help batch b1 b2 b3 b4 b5 b6 b7 b8 s1 s2 s3 merge
+ES_FLAG := $(if $(ES),--es,)
+RUN = "$(PYTHON)" pipeline.py --profile $(PROFILE) --raw $(RAW) $(ES_FLAG)
+DOCKER = docker run --rm -it -v "$(CURDIR):/opt/spark/work-dir" $(IMAGE) python3 pipeline.py --profile $(PROFILE) --raw $(RAW) $(ES_FLAG)
+
+JOBS := b1 b2 b3 b4 b5 b6 b7 b8 s1 s2 s3 merge es-setup kibana-setup replay feedback applist crawl
+.PHONY: help batch sample image docker-batch test $(JOBS)
 
 help:
-	@echo "make batch  - Run B1, B2, B5, B3, B4, B6, B7, B8 sequentially; stop on failure"
-	@echo "make b1     - Ingest Kafka into raw storage"
-	@echo "make b2     - Clean raw reviews, CCU and game metadata"
-	@echo "make b3     - Compute daily/period/segment statistics (after B5)"
-	@echo "make b4     - Analyze playtime buckets and retention"
-	@echo "make b5     - Analyze aspects, sentiment and TF-IDF keywords"
-	@echo "make b6     - Rank trending games and event impact"
-	@echo "make b7     - Compute baselines for S2/S3"
-	@echo "make b8     - Cluster games with K-Means"
-	@echo "make s1     - Stream review metrics"
-	@echo "make s2     - Stream review bombing alerts"
-	@echo "make s3     - Stream CCU metrics and spike alerts"
-	@echo "make merge  - Drop realtime docs covered by the latest batch view"
-	@echo "Options: PYTHON=python, B1_ARGS=... through B8_ARGS=..., S1_ARGS=... through S3_ARGS=..., MERGE_ARGS=..."
+	@echo "make batch          - B2 > B5 > B3 > B4 > B6 > B7 > B8 (ES=1: ghi ES + merge view)"
+	@echo "make b1..b8         - Một job batch; s1 s2 s3 - streaming (ARGS=\"--source file\")"
+	@echo "make sample         - Sinh dữ liệu mẫu vào data/sample_raw"
+	@echo "make image          - Build image Spark ($(IMAGE))"
+	@echo "make docker-batch   - Chạy batch trong Docker (dùng trên Windows)"
+	@echo "make es-setup | merge | kibana-setup | replay | feedback | applist | crawl"
+	@echo "make test           - Unit test (pytest)"
+	@echo "Biến: PYTHON, PROFILE=local|cluster, RAW=data/raw, ES=1, ARGS=..."
 
-# Separate recursive calls preserve ordering even with make -j.
-# B5 trước B3 (B3 dùng cảm xúc từ B5); B7 sau B3 (baseline cho S2/S3).
 batch:
-	$(MAKE) b1
-	$(MAKE) b2
-	$(MAKE) b5
-	$(MAKE) b3
-	$(MAKE) b4
-	$(MAKE) b6
-	$(MAKE) b7
-	$(MAKE) b8
+	$(RUN) batch $(ARGS)
 
-b1:
-	"$(PYTHON)" -m processing.batch.b1_ingest_raw $(B1_ARGS)
+$(JOBS):
+	$(RUN) $@ $(ARGS) $($(shell echo $@ | tr a-z A-Z)_ARGS)
 
-b2:
-	"$(PYTHON)" -m processing.batch.b2_clean_raw $(B2_ARGS)
+sample:
+	"$(PYTHON)" tests/make_sample_data.py --out data/sample_raw
 
-b3:
-	"$(PYTHON)" -m processing.batch.b3_game_daily_stats $(B3_ARGS)
+image:
+	docker build -t $(IMAGE) -f containers/Dockerfile.spark .
 
-b4:
-	"$(PYTHON)" -m processing.batch.b4_playtime_buckets $(B4_ARGS)
+docker-batch:
+	$(DOCKER) batch $(ARGS)
 
-b5:
-	"$(PYTHON)" -m processing.batch.b5_aspect_sentiment $(B5_ARGS)
-
-b6:
-	"$(PYTHON)" -m processing.batch.b6_trending_games $(B6_ARGS)
-
-b7:
-	"$(PYTHON)" -m processing.batch.b7_baselines $(B7_ARGS)
-
-b8:
-	"$(PYTHON)" -m processing.batch.b8_game_clusters $(B8_ARGS)
-
-s1:
-	"$(PYTHON)" -m processing.streaming.s1_review_metrics $(S1_ARGS)
-
-s2:
-	"$(PYTHON)" -m processing.streaming.s2_review_bombing_detector $(S2_ARGS)
-
-s3:
-	"$(PYTHON)" -m processing.streaming.s3_ccu_spike_detector $(S3_ARGS)
-
-merge:
-	"$(PYTHON)" -m processing.serving.merge_views $(MERGE_ARGS)
+test:
+	"$(PYTHON)" -m pytest -q tests/unit

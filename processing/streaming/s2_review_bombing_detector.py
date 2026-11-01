@@ -5,11 +5,12 @@ from pyspark.sql.functions import (
     round as spark_round, current_timestamp
 )
 from processing.common.spark_utils import (
-    get_spark_session, read_stream, add_stream_args, path_exists, CHECKPOINT_PATH
+    get_spark_session, read_stream, add_stream_args, attach_progress_logger, path_exists, CHECKPOINT_PATH
 )
 from processing.common.es_writer import es_enabled, write_es
 from processing.batch.b2_clean_raw import REVIEW_SCHEMA
 
+QUERY_NAME = "s2_bombing"
 SIGMA = float(os.getenv("S2_SIGMA", "3"))
 DROP_POINTS = float(os.getenv("S2_POSITIVE_DROP_POINTS", "20"))
 MIN_NEGATIVE = int(os.getenv("S2_MIN_NEGATIVE", "10"))
@@ -55,6 +56,7 @@ def run(args):
     Ghi Kafka steam.alerts (khi nguồn là Kafka) và ES alerts.
     """
     spark = get_spark_session("S2_Review_Bombing_Detector")
+    attach_progress_logger(spark, args.metrics_file)
     raw = read_stream(spark, "steam.reviews.raw", args.source, args.brokers, args.raw, args.max_files, args.starting_offsets)
     windowed = (
         raw.select(from_json(col("value"), REVIEW_SCHEMA).alias("d")).select("d.*")
@@ -89,7 +91,7 @@ def run(args):
             alerts.show(truncate=False)
         alerts.unpersist()
 
-    (windowed.writeStream.outputMode("update").foreachBatch(handle)
+    (windowed.writeStream.queryName(QUERY_NAME).outputMode("update").foreachBatch(handle)
      .option("checkpointLocation", args.checkpoint).trigger(processingTime=args.trigger).start()
      .awaitTermination())
 

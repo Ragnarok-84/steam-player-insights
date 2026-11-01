@@ -10,6 +10,7 @@ from crawlers.config import (
     CRAWLER_TARGET_LIMIT,
     STEAM_API_KEY,
     STEAM_WEB_API_BASE,
+    CRAWLER_RATE_LIMIT_COOLDOWN,
 )
 from crawlers.common.kafka_producer import SteamKafkaProducer
 from crawlers.common.rate_limiter import RateLimiter
@@ -29,7 +30,7 @@ def crawl_ccu(appid: int, producer: SteamKafkaProducer, rate_limiter: RateLimite
     try:
         resp = requests.get(CCU_API_URL, params=params, timeout=10)
         if resp.status_code == 429:
-            rate_limiter.record_rate_limit(cooldown_seconds=30)
+            rate_limiter.record_rate_limit(cooldown_seconds=CRAWLER_RATE_LIMIT_COOLDOWN)
             return False
         elif resp.status_code != 200:
             logger.warning(f"[AppID {appid}] CCU API returned status {resp.status_code}")

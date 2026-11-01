@@ -1,0 +1,76 @@
+# Cấu hình dùng chung cho Spark jobs (namespace spark-jobs) và crawler (namespace default).
+# Mật khẩu ES (secret steam-es-credentials) được scripts/deploy_all.sh sao chép từ secret ECK.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: spark-jobs
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: steam-pipeline-config
+  namespace: spark-jobs
+data:
+  PIPELINE_PROFILE: cluster
+  HDFS_NAMENODE_URL: hdfs://hdfs-namenode.hdfs.svc.cluster.local:8020
+  HDFS_RAW_PATH: /steam/raw
+  HDFS_CLEAN_PATH: /steam/clean
+  HDFS_CURATED_PATH: /steam/curated
+  HDFS_CHECKPOINT_PATH: /steam/checkpoints
+  HADOOP_USER_NAME: hdfs
+  KAFKA_BOOTSTRAP_SERVERS: steam-kafka-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092
+  ELASTICSEARCH_HOSTS: https://steam-elasticsearch-es-http.elastic-system.svc.cluster.local:9200
+  ELASTICSEARCH_USER: elastic
+  HIVE_METASTORE_URI: thrift://hive-metastore.hive.svc.cluster.local:9083
+  STREAM_SOURCE: kafka
+  SPARK_SHUFFLE_PARTITIONS: "24"
+  # Ngưỡng cảnh báo speed layer (sửa ở đây rồi restart Deployment S2/S3)
+  S2_SIGMA: "3"
+  S2_POSITIVE_DROP_POINTS: "20"
+  S3_CHANGE_THRESHOLD: "0.5"
+---
+# spark-submit client mode: driver chạy trong pod CronJob/Deployment, executor là pod do Spark tạo trên K8s.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spark-defaults
+  namespace: spark-jobs
+data:
+  spark-defaults.conf: |
+    spark.master                                         k8s://https://kubernetes.default.svc:443
+    spark.submit.deployMode                              client
+    spark.kubernetes.namespace                           spark-jobs
+    spark.kubernetes.container.image                     steam-spark:1.0.0
+    spark.kubernetes.container.image.pullPolicy          IfNotPresent
+    spark.kubernetes.authenticate.driver.serviceAccountName spark-operator-sa
+    spark.kubernetes.executor.podTemplateFile            /opt/spark/conf/executor-template.yaml
+    spark.driver.bindAddress                             0.0.0.0
+    spark.driver.port                                    7078
+    spark.blockManager.port                              7079
+    spark.executor.cores                                 1
+    spark.executor.memory                                2g
+    spark.executor.memoryOverhead                        512m
+    spark.dynamicAllocation.enabled                      true
+    spark.dynamicAllocation.shuffleTracking.enabled      true
+    spark.dynamicAllocation.minExecutors                 2
+    spark.dynamicAllocation.maxExecutors                 6
+    spark.dynamicAllocation.executorIdleTimeout          120s
+  executor-template.yaml: |
+    apiVersion: v1
+    kind: Pod
+    spec:
+      containers:
+        - name: executor
+          envFrom:
+            - configMapRef: {name: steam-pipeline-config}
+          env:
+            - name: ELASTICSEARCH_PASSWORD
+              valueFrom: {secretKeyRef: {name: steam-es-credentials, key: elastic}}
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 50
+              podAffinityTerm:
+                topologyKey: kubernetes.io/hostname
+                labelSelector:
+                  matchLabels: {spark-role: executor}

@@ -1,12 +1,53 @@
+# Kafka 3 node chạy KRaft (broker + controller cùng node), RF=3, min.insync.replicas=2.
+# Cần Strimzi operator >= 0.45 (scripts/setup_cluster.sh).
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaNodePool
+metadata:
+  name: dual-role
+  namespace: kafka
+  labels:
+    strimzi.io/cluster: steam-kafka-cluster
+spec:
+  replicas: 3
+  roles: [controller, broker]
+  storage:
+    type: jbod
+    volumes:
+      - id: 0
+        type: persistent-claim
+        size: 20Gi
+        deleteClaim: false
+        kraftMetadata: shared
+  resources:
+    requests: {memory: 2Gi, cpu: 500m}
+    limits: {memory: 2Gi, cpu: 1000m}
+  jvmOptions:
+    -Xms: 1g
+    -Xmx: 1g
+  template:
+    pod:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: strimzi.io/pool-name
+                    operator: In
+                    values: ["dual-role"]
+              topologyKey: "kubernetes.io/hostname"
+---
 apiVersion: kafka.strimzi.io/v1beta2
 kind: Kafka
 metadata:
   name: steam-kafka-cluster
   namespace: kafka
+  annotations:
+    strimzi.io/node-pools: enabled
+    strimzi.io/kraft: enabled
 spec:
   kafka:
-    version: 3.6.0
-    replicas: 3
+    version: 3.9.0
+    metadataVersion: "3.9"
     listeners:
       - name: plain
         port: 9092
@@ -22,44 +63,10 @@ spec:
       transaction.state.log.min.isr: 2
       default.replication.factor: 3
       min.insync.replicas: 2
-    storage:
-      type: jbod
-      volumes:
-      - id: 0
-        type: persistent-claim
-        size: 20Gi
-        deleteClaim: false
-    resources:
-      requests:
-        memory: 2Gi
-        cpu: 500m
-      limits:
-        memory: 2Gi
-        cpu: 1000m
-    template:
-      pod:
-        affinity:
-          podAntiAffinity:
-            requiredDuringSchedulingIgnoredDuringExecution:
-              - labelSelector:
-                  matchExpressions:
-                    - key: app.kubernetes.io/name
-                      operator: In
-                      values: ["kafka"]
-                topologyKey: "kubernetes.io/hostname"
-  zookeeper:
-    replicas: 3
-    storage:
-      type: persistent-claim
-      size: 10Gi
-      deleteClaim: false
-    resources:
-      requests:
-        memory: 1Gi
-        cpu: 300m
-      limits:
-        memory: 1Gi
-        cpu: 500m
   entityOperator:
     topicOperator: {}
     userOperator: {}
+  # Xuất consumer lag / thông lượng topic cho Prometheus (Grafana D5)
+  kafkaExporter:
+    topicRegex: 'steam\..*'
+    groupRegex: ".*"

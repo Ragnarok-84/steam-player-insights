@@ -31,6 +31,11 @@ def get_spark_session(app_name: str = "SteamDataPipeline", master: str = None) -
     if master:
         builder = builder.master(master)
 
+    # client mode trên K8s: executor kết nối ngược về driver qua IP pod (Downward API -> SPARK_DRIVER_HOST)
+    driver_host = os.getenv("SPARK_DRIVER_HOST")
+    if driver_host:
+        builder = builder.config("spark.driver.host", driver_host)
+
     namenode = os.getenv("HDFS_NAMENODE_URL")
     if namenode:
         builder = builder.config("spark.hadoop.fs.defaultFS", namenode)
@@ -53,10 +58,15 @@ def get_spark_session(app_name: str = "SteamDataPipeline", master: str = None) -
         .config("spark.driver.memory", os.getenv("SPARK_DRIVER_MEMORY", "2g"))
     )
 
+    # Cấu hình thêm dạng "k=v;k=v" (vd. benchmark SC1: spark.executor.instances=4)
+    for item in filter(None, os.getenv("SPARK_EXTRA_CONF", "").split(";")):
+        key, _, value = item.partition("=")
+        builder = builder.config(key.strip(), value.strip())
+
     hive_uri = os.getenv("HIVE_METASTORE_URI")
     if hive_uri:
         builder = (
-            builder.config("hive.metastore.uris", hive_uri)
+            builder.config("spark.hadoop.hive.metastore.uris", hive_uri)
             .config("spark.sql.catalogImplementation", "hive")
         )
 
@@ -149,4 +159,40 @@ def add_stream_args(parser):
     parser.add_argument("--trigger", default="30 seconds")
     parser.add_argument("--es-nodes", default=None)
     parser.add_argument("--curated", default=CURATED_PATH)
+    parser.add_argument("--metrics-file", default=None, help="Ghi tiến độ micro-batch (JSON Lines) cho SC3")
     return parser
+
+
+def attach_progress_logger(spark, path: str = None):
+    """Ghi tiến độ mỗi micro-batch (JSON Lines) để đo thông lượng / độ trễ / offset tụt hậu (SC3).
+    Bật bằng tham số --metrics-file hoặc biến STREAM_METRICS_FILE; file nằm trên máy chạy driver."""
+    path = path or os.getenv("STREAM_METRICS_FILE")
+    if not path:
+        return
+    import json
+    import time
+    from pyspark.sql.streaming import StreamingQueryListener
+
+    class _Logger(StreamingQueryListener):
+        def onQueryStarted(self, event):
+            pass
+
+        def onQueryProgress(self, event):
+            p = json.loads(event.progress.json)
+            behind = [float(src.get("metrics", {}).get("maxOffsetsBehindLatest", 0) or 0) for src in p.get("sources", [])]
+            row = {"ts": time.time(), "name": p.get("name"), "batch_id": p.get("batchId"),
+                   "num_input_rows": p.get("numInputRows"),
+                   "input_rows_per_sec": p.get("inputRowsPerSecond"),
+                   "processed_rows_per_sec": p.get("processedRowsPerSecond"),
+                   "batch_duration_ms": p.get("durationMs", {}).get("triggerExecution"),
+                   "max_offsets_behind_latest": max(behind) if behind else None}
+            with open(path, "a", encoding="utf-8") as f:
+                f.write(json.dumps(row) + "\n")
+
+        def onQueryIdle(self, event):
+            pass
+
+        def onQueryTerminated(self, event):
+            pass
+
+    spark.streams.addListener(_Logger())

@@ -32,6 +32,7 @@ JOBS = {
     "s3": "processing.streaming.s3_ccu_spike_detector",
     "merge": "processing.serving.merge_views",
     "es-setup": "storage.elasticsearch.setup_indices",
+    "kibana-setup": "dashboards.setup_kibana",
     "replay": "crawlers.replay_jsonl_to_kafka",
     "feedback": "crawlers.update_targets_from_trending",
     "applist": "crawlers.steam_applist_crawler",

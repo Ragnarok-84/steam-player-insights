@@ -1,0 +1,21 @@
+# kube-prometheus-stack: Prometheus + Grafana + node-exporter + kube-state-metrics.
+prometheus:
+  prometheusSpec:
+    # Nhận mọi PodMonitor/ServiceMonitor trong cụm (không chỉ của release này)
+    podMonitorSelectorNilUsesHelmValues: false
+    serviceMonitorSelectorNilUsesHelmValues: false
+    retention: 15d
+    resources:
+      requests: {cpu: 250m, memory: 1Gi}
+      limits: {cpu: "1", memory: 2Gi}
+grafana:
+  adminPassword: change-me-grafana   # đổi trước khi triển khai
+  sidecar:
+    dashboards:
+      enabled: true
+      label: grafana_dashboard      # ConfigMap có label này được nạp thành dashboard (xem dashboards/grafana)
+      searchNamespace: ALL
+  service:
+    type: NodePort
+alertmanager:
+  enabled: false

@@ -30,7 +30,6 @@ data/clean/
 data/curated/
 data/cache/
 data/crawler_state/
-data/checkpoints/
 *.parquet
 *.gz
 *.tar.gz
@@ -65,4 +64,6 @@ Thumbs.db
 data/lake/
 data/lake*/
 data/sample_raw/
+data/bench/
+
 data/sample_lake/

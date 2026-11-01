@@ -1,17 +1,15 @@
-# Jupyter Notebooks - Steam Player Insights
+# Notebooks
 
-Thư mục chứa các sổ tay Jupyter phục vụ phân tích khám phá dữ liệu (EDA), thử nghiệm mô hình và trực quan hóa kết quả kiểm thử:
+Các notebook đọc kết quả của pipeline (profile local: `data/lake`; đổi bằng biến `LAKE_DIR`) và `tests/results/`.
 
-1. **`01_eda_raw_reviews.ipynb`**:
-   - Khám phá tập dữ liệu raw reviews và phân bố độ dài, ngôn ngữ, nhãn đánh giá.
-   - Phát hiện các mẫu review spam, meme, ký tự ASCII art cần xử lý trong Job B2.
+| Notebook | Nội dung | Cần chạy trước |
+| --- | --- | --- |
+| `01_eda_raw_reviews.ipynb` | Khối lượng, ngôn ngữ, giờ chơi, review đáng ngờ, lệch dữ liệu | `python pipeline.py batch` |
+| `02_sentiment_aspect_exploration.ipynb` | Khía cạnh bị phàn nàn, VADER vs nhãn, giờ chơi, game bỏ sớm / đáng tiền, TF-IDF, cụm K-Means | `python pipeline.py batch` |
+| `03_scalability_fault_tolerance_analysis.ipynb` | Biểu đồ SC1–SC4, bảng FT1–FT6 | Các script trong `tests/scalability`, `tests/fault_tolerance` |
 
-2. **`02_sentiment_aspect_exploration.ipynb`**:
-   - Thử nghiệm và tinh chỉnh từ điển từ khóa khía cạnh (aspect dictionary: bug, performance, price, server, story...).
-   - Đánh giá phân bố điểm cảm xúc VADER so với nhãn `voted_up` của Steam.
-   - Thử nghiệm TF-IDF trích xuất từ khóa nổi bật theo từng tựa game cụ thể.
+Cần `pandas`, `pyarrow`, `matplotlib` và `jupyterlab` (có trong `requirements.txt`). Khởi động Jupyter tại gốc repo:
 
-3. **`03_scalability_fault_tolerance_analysis.ipynb`**:
-   - Đọc dữ liệu log và kết quả benchmark từ `tests/scalability/` và Grafana Prometheus metrics.
-   - Vẽ đồ thị Scalability (Speedup vs Số executor, Throughput vs Data Volume).
-   - Vẽ biểu đồ thời gian phục hồi dịch vụ (Recovery Time) sau khi gây lỗi pod (Kafka broker, DataNode, ES node).
+```bash
+jupyter lab notebooks/
+```

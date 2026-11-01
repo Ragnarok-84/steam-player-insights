@@ -1,0 +1,11 @@
+data/raw/
+data/lake*/
+data/sample_raw/
+data/cache/
+data/crawler_state/
+.venv/
+venv/
+.git/
+**/__pycache__/
+*.pdf
+.env

@@ -1,0 +1,46 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ft-b2
+  namespace: steam-ft
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 1800
+  template:
+    metadata:
+      labels:
+        app: demo-b2
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      nodeSelector:
+        steam.insights/role: compute
+      containers:
+      - name: spark
+        image: localhost/steam-spark-demo:k3s-20261026
+        imagePullPolicy: Never
+        command:
+        - python
+        - -m
+        - processing.batch.b2_clean_raw
+        args:
+        - --raw
+        - hdfs://namenode:8020/steam/raw
+        - --clean
+        - hdfs://namenode:8020/steam/clean
+        env:
+        - name: PYSPARK_SUBMIT_ARGS
+          value: --master local[2] --driver-memory 2g --conf spark.sql.shuffle.partitions=4
+            --conf spark.hadoop.dfs.client.use.datanode.hostname=true --conf spark.hadoop.dfs.replication=2
+            pyspark-shell
+        - name: SMOKE_REPLICATION_FACTOR
+          value: '3'
+        - name: HDFS_REPLICATION
+          value: '2'
+        resources:
+          requests:
+            cpu: '1'
+            memory: 3Gi
+          limits:
+            cpu: '2'
+            memory: 4Gi

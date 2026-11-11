@@ -65,3 +65,5 @@ data/lake/
 data/lake*/
 data/sample_raw/
 data/bench/
+
+data/sample_lake/

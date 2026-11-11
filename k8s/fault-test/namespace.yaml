@@ -1,0 +1,20 @@
+# Separate fault-test cluster; never reuse demo PVCs.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: steam-ft
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: demo-budget
+  namespace: steam-ft
+spec:
+  hard:
+    requests.cpu: '16'
+    requests.memory: 20Gi
+    limits.cpu: '24'
+    limits.memory: 28Gi
+    requests.storage: 100Gi
+    persistentvolumeclaims: '8'
+    pods: '30'

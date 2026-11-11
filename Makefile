@@ -30,7 +30,7 @@ batch:
 	$(RUN) batch $(ARGS)
 
 $(JOBS):
-	$(RUN) $@ $(ARGS)
+	$(RUN) $@ $(ARGS) $($(shell echo $@ | tr a-z A-Z)_ARGS)
 
 sample:
 	"$(PYTHON)" tests/make_sample_data.py --out data/sample_raw

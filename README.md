@@ -2,7 +2,9 @@
 
 Hệ thống phân tích trải nghiệm người chơi game trên Steam theo **kiến trúc Lambda**. Chạy được trên một máy (Docker, dữ liệu file) và triển khai phân tán trên **Kubernetes**.
 
-- Chạy thử nhanh: [mục 4](#4-chạy-thử-trên-một-máy-docker).
+- Nhận dữ liệu từ Drive, chạy batch, streaming và dashboard: [quy trình tại mục 4](#4-quy-trình-xử-lý-và-chạy-code).
+- Linux/WSL2, Conda/venv và HDFS local: [hướng dẫn chi tiết](docs/local_setup_guide.md).
+- Quyết định của nhóm: [docs/decisions.md](docs/decisions.md).
 - Thu thập dữ liệu: [docs/collection_guide.md](docs/collection_guide.md).
 - Kiến trúc chi tiết: [docs/architecture.md](docs/architecture.md).
 - Triển khai cụm: [docs/deployment_guide.md](docs/deployment_guide.md).
@@ -89,95 +91,331 @@ Raw dùng chung layout với output của crawler local, nên dữ liệu đã t
 
 ---
 
-## 4. Chạy thử trên một máy (Docker)
+## 4. Quy trình xử lý và chạy code
 
-Spark không ghi file được trực tiếp trên Windows (thiếu `winutils`), vì vậy dùng image Spark của repo. Trên Linux/WSL có PySpark 3.5.7 và JDK 17 thì có thể bỏ phần `docker run ...` và chạy thẳng `python pipeline.py ...`.
+**Luồng phù hợp với cách nhóm đang làm:** một người thu thập dữ liệu, nén gửi qua Google Drive → các thành viên tải về `data/raw` → chạy batch local → kiểm tra kết quả → làm notebook/dashboard → tích hợp lên cụm k3s/HDFS.
 
-Các lệnh dưới chạy trong PowerShell, tại gốc repo.
+Các lệnh Bash bên dưới chạy tại **gốc repo**, trên Linux hoặc WSL2, trong cùng môi trường Python. Windows nên dùng terminal WSL2; phương án Docker/PowerShell nằm ở mục 4.9. Cấu hình local dùng để phát triển và kiểm tra logic; kiểm thử phân tán vẫn cần cụm nhiều node.
 
-### 4.1. Build image
+### 4.1. Chọn phần cần chạy
+
+| Mục tiêu | Cần bật | Lệnh chính / hướng dẫn |
+| --- | --- | --- |
+| Xử lý raw đã nhận từ Drive | Python + Java + PySpark | `python pipeline.py --profile local batch` |
+| Xem kết quả, làm báo cáo | Kết quả batch + Jupyter | Mục 4.5 |
+| Thử streaming từ file | Python + Java + PySpark; chạy batch trước để có baseline | Mục 4.6 |
+| Xem dashboard | Spark + Elasticsearch + Kibana | Mục 4.7 |
+| Thử luồng Kafka | Kafka + Spark + Kafka connector | Mục 4.8 |
+| Tích hợp phân tán | Cụm k3s, HDFS và các dịch vụ | Mục 5 |
+
+**Nhận raw từ Drive thì chưa cần HDFS, Kafka hay B1.** HDFS là kho dùng chung khi chạy trên cụm; Kafka phục vụ luồng dữ liệu; B1 lấy dữ liệu từ Kafka xuống raw. Đã có file raw thì bắt đầu từ B2.
+
+### 4.2. Chuẩn bị môi trường
+
+Nếu đã có môi trường Conda của dự án:
+
+```bash
+conda activate steam-insights
+```
+
+Nếu chưa có, tạo môi trường Python 3.11 theo [hướng dẫn Conda/venv](docs/local_setup_guide.md#41-công-cụ-và-môi-trường-python), rồi cài thư viện tại gốc repo:
+
+```bash
+python -m pip install -r requirements.txt
+python -m pip check
+```
+
+Kiểm tra trước khi xử lý:
+
+```bash
+python --version
+java -version
+python -c "import pyspark; print(pyspark.__version__)"
+```
+
+Dùng Python 3.11, JDK 17, PySpark 3.5.7 theo môi trường của repo. Không cần cài Hadoop để xử lý file local. Nếu chưa có `.env`, sao chép mẫu; giữ nguyên file cá nhân đã có:
+
+```bash
+if [ ! -f .env ]; then cp .env.example .env; fi
+```
+
+Đặt cấu hình local trong terminal đang dùng:
+
+```bash
+export SPARK_MASTER='local[2]'
+export SPARK_DRIVER_MEMORY=2g
+export SPARK_SHUFFLE_PARTITIONS=4
+export PYSPARK_PYTHON="$(command -v python)"
+export PYSPARK_DRIVER_PYTHON="$PYSPARK_PYTHON"
+export WRITE_ES=0
+export HIVE_METASTORE_URI_LOCAL=''
+```
+
+`local[2]` dùng hai luồng xử lý trên máy hiện tại; chưa phải Spark phân tán. Đây là cấu hình khởi đầu; nếu dữ liệu thật làm hết bộ nhớ, tăng bộ nhớ driver phù hợp RAM còn trống (ví dụ `export SPARK_DRIVER_MEMORY=4g`) rồi chạy lại. Xem log lỗi trước khi điều chỉnh.
+
+`pipeline.py --profile local` đặt đường dẫn raw/clean/curated thành URI file local và tắt kết nối HDFS. Các module xử lý có nạp `.env`, nhưng biến đã `export` được ưu tiên. Lệnh `batch` không tự bật dịch vụ. Nếu mở terminal khác, kích hoạt lại môi trường và đặt lại các biến cần dùng.
+
+### 4.3. Nhận và kiểm tra dữ liệu từ Google Drive
+
+Giải nén **gói ZIP bên ngoài** vào repo, giữ nguyên các file `.jsonl.gz` bên trong:
+
+```text
+data/
+├── target_apps.json
+└── raw/
+    ├── steam_reviews_raw/
+    │   └── dt=YYYY-MM-DD/part-*.jsonl.gz
+    ├── steam_players_ccu/
+    │   └── dt=YYYY-MM-DD/part-*.jsonl.gz
+    └── steam_games_meta/
+        └── dt=YYYY-MM-DD/part-*.jsonl.gz
+```
+
+Không để lồng thành `data/raw/raw/...`. Người gửi nên gửi kèm target list, manifest và số file/dung lượng để mọi người dùng cùng một bộ dữ liệu. Không cần checkpoint crawler nếu chỉ phân tích bộ raw đã nhận.
+
+```bash
+du -sh data/raw
+find data/raw -type f -name '*.jsonl.gz' | head
+find data/raw -type f -name '*.jsonl.gz' -exec gzip -t {} +
+```
+
+`gzip -t` không in gì khi file hợp lệ; bước này không xác nhận bộ dữ liệu đã được gửi đầy đủ. Spark đọc trực tiếp gzip, không cần giải nén tiếp. Thư mục `dt` của raw là ngày nhập; ngày review lấy từ `timestamp_created`.
+
+### 4.4. Chạy batch: raw → clean → curated
+
+Nên thử trên dữ liệu mẫu trước, dùng đầu ra riêng với dữ liệu thật:
+
+```bash
+python tests/make_sample_data.py --out data/sample_raw
+python pipeline.py --profile local batch --raw data/sample_raw --lake data/sample_lake
+```
+
+Sau khi mẫu chạy thành công, xử lý bộ dữ liệu thật đã nhận:
+
+```bash
+python pipeline.py --profile local batch --raw data/raw --lake data/lake
+```
+
+Lệnh lần lượt gọi các module sau; một job lỗi thì pipeline dừng:
+
+| Thứ tự | Module trong `processing/batch/` | Chức năng | Đầu ra tiêu biểu |
+| --- | --- | --- | --- |
+| B2 | `b2_clean_raw.py` | Làm sạch, khử trùng review/CCU, chuẩn hóa metadata, gắn cờ review đáng ngờ | `clean/reviews`, `ccu`, `games`, `games_history` |
+| B5 | `b5_aspect_sentiment.py` | Cảm xúc VADER, khía cạnh, từ khóa TF-IDF | `curated/review_sentiment`, `aspect_stats`, `keywords` |
+| B3 | `b3_game_daily_stats.py` | Thống kê game theo ngày/tuần/tháng và nhóm game | `curated/game_daily_stats`, `game_period_stats`, `segment_stats`, `language_stats` |
+| B4 | `b4_playtime_buckets.py` | Nhóm giờ chơi, review tiêu cực sớm, chỉ số đáng tiền | `curated/playtime_buckets`, `game_retention` |
+| B6 | `b6_trending_games.py` | Tăng trưởng, xếp hạng trending, tác động giảm giá | `curated/trending`, `trending_top`, `event_impact` |
+| B7 | `b7_baselines.py` | Mức bình thường để S2/S3 so sánh | `curated/review_baseline`, `ccu_baseline` |
+| B8 | `b8_game_clusters.py` | Phân cụm K-Means các game có hồ sơ tương tự | `curated/game_clusters`, `cluster_profiles` |
+
+B5 chạy trước B3 vì B3 dùng điểm cảm xúc. **`batch` không chạy B1.** Có thể chỉ chạy bước làm sạch hoặc bỏ phân cụm:
+
+```bash
+python pipeline.py --profile local b2 --raw data/raw --lake data/lake
+python pipeline.py --profile local batch --raw data/raw --lake data/lake --skip b8
+```
+
+Các job sau cần đầu ra của các job trước; không chạy từng job theo thứ tự tùy ý. B2–B8 tính lại từ nguồn và ghi đè/upsert đầu ra; dùng `--lake` khác nếu cần giữ kết quả một lần chạy để so sánh. Không chạy hai pipeline cùng ghi vào một thư mục lake.
+
+### 4.5. Kiểm tra và đọc kết quả
+
+Sau khi batch dữ liệu thật chạy thành công:
+
+```text
+data/lake/
+├── clean/          # Dữ liệu đã chuẩn hóa, khử trùng (Parquet)
+└── curated/        # Các bảng kết quả phân tích (Parquet)
+```
+
+Thư mục `checkpoints/` được dùng khi chạy B1 hoặc streaming. Chỉ có `data/sample_lake` chưa chứng minh bộ dữ liệu thật đã được xử lý.
+
+Đọc thử một bảng tổng hợp nhỏ bằng pandas:
+
+```bash
+python - <<'PY'
+import pandas as pd
+stats = pd.read_parquet('data/lake/curated/game_daily_stats')
+print('Số dòng thống kê game/ngày:', len(stats))
+print(stats[['appid', 'dt', 'total_reviews', 'positive_ratio_percent']].head(10).to_string(index=False))
+PY
+```
+
+Mỗi dòng ở đây là một game/ngày, không phải một review. Để khám phá dữ liệu và làm báo cáo:
+
+```bash
+export LAKE_DIR="$PWD/data/lake"
+jupyter lab notebooks/
+```
+
+- `01_eda_raw_reviews.ipynb`: khối lượng, độ phủ game/ngôn ngữ, giờ chơi, review đáng ngờ.
+- `02_sentiment_aspect_exploration.ipynb`: cảm xúc, khía cạnh, từ khóa, phân cụm.
+- `03_scalability_fault_tolerance_analysis.ipynb`: đọc kết quả kiểm thử trong `tests/results/`; cần chạy kiểm thử trước.
+
+Muốn xem kết quả mẫu thì đặt `LAKE_DIR="$PWD/data/sample_lake"` trước khi khởi động Jupyter. Notebook có thể nạp nhiều dữ liệu vào RAM; bắt đầu từ bảng tổng hợp nếu máy ít bộ nhớ.
+
+Review lịch sử giúp tăng chiều thời gian nhưng không bổ sung lịch sử CCU. CCU chỉ có một vài snapshot/game thì chưa đủ để kết luận xu hướng hay bất thường nhiều ngày; cần thu tiếp theo lịch trong [hướng dẫn thu thập](docs/collection_guide.md).
+
+### 4.6. Thử streaming từ file, chưa cần Kafka
+
+Sau batch mẫu ở mục 4.4, thử S2 trên cùng raw và lake để dùng baseline từ B7:
+
+```bash
+python pipeline.py --profile local s2 --raw data/sample_raw --lake data/sample_lake -- --source file --max-files 100 --trigger '5 seconds'
+```
+
+- S1: thống kê số review và tỷ lệ tích cực theo cửa sổ thời gian.
+- S2: cảnh báo nghi vấn review bombing.
+- S3: cảnh báo CCU tăng/giảm bất thường.
+
+Thay `s2` bằng `s1` hoặc `s3` để thử từng job, mỗi lần một job nếu máy ít RAM. Job chạy liên tục, dừng bằng `Ctrl+C`. Với `WRITE_ES=0`, không truyền `--es`, kết quả được in ra console; không có cảnh báo ở một micro-batch có thể chỉ là chưa đủ điều kiện phát hiện.
+
+Checkpoint lưu tiến độ trong lake, nên chạy lại mặc định là tiếp tục. Muốn đọc lại từ đầu, dừng job và dùng một đường dẫn checkpoint mới, ví dụ thêm sau `--`: `--checkpoint "file://$PWD/data/sample_lake/checkpoints/s2_trial_02"`. Giữ nguyên lake để tiếp tục dùng baseline; không cần xóa toàn bộ checkpoints. Dữ liệu cũ có thể bị watermark loại bỏ khi thời gian sự kiện lệch nhau nhiều; nguồn file là cách thử logic, không phải luồng Steam đang phát sinh trực tiếp.
+
+### 4.7. Bật Elasticsearch + Kibana để xem dashboard
+
+Cần Docker Engine/Docker Desktop và Compose v2 đang hoạt động; Spark vẫn chạy trong môi trường Python ở host. Chỉ bật nhóm dashboard:
+
+```bash
+bash scripts/demo.sh up dashboard
+```
+
+Trong terminal Python đã cấu hình ở mục 4.2, đặt kết nối cho demo một máy không bật xác thực:
+
+```bash
+export ELASTICSEARCH_HOSTS='http://localhost:9200'
+export ELASTICSEARCH_USER=''
+export ELASTICSEARCH_PASSWORD=''
+export KIBANA_HOST='http://localhost:5601'
+
+bash scripts/demo.sh init-es
+python pipeline.py kibana-setup
+python pipeline.py --profile local batch --raw data/raw --lake data/lake --es
+```
+
+`init-es` tạo 15 index theo mapping demo (1 shard, 0 replica). `kibana-setup` tạo dashboard; `batch --es` chạy lại batch, ghi kết quả vào ES và hợp nhất view. Chỉ tạo index/dashboard thì chưa có dữ liệu. Có thể đổi raw/lake sang bộ mẫu để thử nhẹ trước. Lệnh `pipeline.py es-setup` dùng mapping chuẩn cho cụm; với Compose một ES node, dùng `init-es` như trên.
+
+Mở <http://localhost:5601> → Dashboards:
+
+| Dashboard | Nội dung |
+| --- | --- |
+| D1 | Tổng quan thị trường |
+| D2 | Chi tiết game; lọc bằng `appid:<id>` |
+| D3 | Thời gian thực; cần chạy S1/S3 có ghi ES |
+| D4 | Cảnh báo và trending; cảnh báo cần S2/S3 có ghi ES |
+
+Để job streaming ghi ES, thêm `--es` trước dấu `--`, ví dụ:
+
+```bash
+python pipeline.py --profile local s2 --raw data/sample_raw --lake data/sample_lake --es -- --source file
+```
+
+Nếu dashboard trống, kiểm tra job đã ghi ES chưa, filter game và khoảng thời gian trên Kibana có chứa ngày dữ liệu không. Dừng dịch vụ sau buổi làm việc, giữ volume:
+
+```bash
+bash scripts/demo.sh stop dashboard
+```
+
+Grafana D5 theo dõi sức khỏe hạ tầng, không được bật trong nhóm Compose này; xem mục 5 khi triển khai monitoring trên cụm.
+
+### 4.8. Tích hợp Kafka và B1 (sau khi luồng file đã chạy ổn)
+
+Kafka nhận dữ liệu từ crawler/replay để B1 và các job streaming đọc độc lập. Để thử local:
+
+```bash
+bash scripts/demo.sh up streaming
+export KAFKA_BOOTSTRAP_SERVERS='localhost:9092'
+export SPARK_PACKAGES='org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.7'
+```
+
+Kafka connector cần mạng để tải JAR lần đầu. Trong terminal này, khởi động S2 (dùng lake riêng cho checkpoint Kafka, đọc baseline đã tạo từ batch mẫu):
+
+```bash
+python pipeline.py --profile local s2 --lake data/kafka_demo_lake -- --source kafka --brokers localhost:9092 --starting-offsets earliest --curated "file://$PWD/data/sample_lake/curated"
+```
+
+Ở **terminal thứ hai**, kích hoạt cùng môi trường Python rồi replay một lượng nhỏ review mẫu:
+
+```bash
+export KAFKA_BOOTSTRAP_SERVERS='localhost:9092'
+python pipeline.py replay -- --raw data/sample_raw --topics steam_reviews_raw --limit 2000 --rate 200 --retime
+```
+
+`--retime` đổi timestamp trên bản ghi gửi Kafka để mô phỏng sự kiện mới, không sửa file raw. Đây là dữ liệu replay phục vụ thử nghiệm. Có thể thêm `--es` cho S2 sau khi thiết lập kết nối ES như mục 4.7.
+
+Nếu muốn kiểm tra B1 lấy dữ liệu Kafka xuống file local, chạy trong terminal có cấu hình Spark/Kafka ở trên (dừng S2 trước nếu cần nhường RAM):
+
+```bash
+python pipeline.py --profile local b1 --raw data/kafka_demo_raw --lake data/kafka_demo_lake -- --topic all --brokers localhost:9092
+```
+
+B1 ghi vào raw riêng và lưu offset để lần sau đọc tiếp. Không ghi replay vào `data/raw` gốc vì timestamp replay đã thay đổi. B1 không tự chạy batch; dữ liệu nhập từ Kafka có thể xử lý tiếp bằng `batch --raw data/kafka_demo_raw --lake data/kafka_demo_lake` khi đã có đủ các nguồn cần thiết.
+
+Dừng job bằng `Ctrl+C`, rồi dừng Kafka khi không dùng:
+
+```bash
+bash scripts/demo.sh stop streaming
+```
+
+### 4.9. Phương án Docker cho Windows/PowerShell
+
+Nếu không dùng môi trường Python trong WSL, có thể chạy Spark trong image của repo. Các lệnh sau là **PowerShell**, không trộn cú pháp với Bash ở trên:
 
 ```powershell
 docker build -t steam-spark:dev -f containers/Dockerfile.spark .
-```
-
-### 4.2. Batch
-
-Sinh dữ liệu mẫu rồi chạy batch:
-
-```powershell
 docker run --rm -v "${PWD}:/opt/spark/work-dir" steam-spark:dev python3 tests/make_sample_data.py --out data/sample_raw
-docker run --rm -v "${PWD}:/opt/spark/work-dir" steam-spark:dev python3 pipeline.py batch --raw data/sample_raw
+docker run --rm -v "${PWD}:/opt/spark/work-dir" steam-spark:dev python3 pipeline.py --profile local batch --raw data/sample_raw --lake data/sample_lake
 ```
 
-**Dữ liệu thật:**
-- Giải nén vào `data/raw`, sao cho bên trong có `steam_reviews_raw/`, `steam_players_ccu/`, `steam_games_meta/`.
-- Chạy lệnh batch ở trên, bỏ `--raw`.
-- Khoảng 1 triệu review: cấp ≥ 8 GB RAM cho Docker và thêm `-e SPARK_DRIVER_MEMORY=6g`.
-- Chạy lại an toàn: kết quả được tính lại toàn bộ và ghi đè, không trùng.
+Đổi thành `--raw data/raw --lake data/lake` để xử lý dữ liệu thật. Cấp đủ RAM cho Docker và driver; với khoảng một triệu review, hướng dẫn trước dùng Docker ≥ 8 GB và `-e SPARK_DRIVER_MEMORY=6g` (đặt trước tên image). Nhu cầu thực tế cần đo khi chạy. Container kết thúc nhưng kết quả vẫn nằm trong repo nhờ volume mount. Đây là phương án chạy local; cấu hình container gọi dịch vụ cần địa chỉ mạng phù hợp, không dùng `localhost` của host từ trong container.
 
-Kết quả nằm ở `data/lake/curated/*` (Parquet). Có thể xem bằng các notebook trong `notebooks/`.
+### 4.10. Tra lệnh và xử lý lỗi thường gặp
 
-### 4.3. Streaming đọc file (không cần Kafka)
-
-Mỗi lần chạy lại, xoá `data\lake\checkpoints` trước. Dừng bằng `Ctrl+C`.
-
-```powershell
-docker run --rm -it -v "${PWD}:/opt/spark/work-dir" steam-spark:dev python3 pipeline.py s2 --raw data/sample_raw -- --source file --max-files 100 --trigger "5 seconds"
-```
-
-Với dữ liệu mẫu, S2 báo `REVIEW_BOMBING` cho appid 1001. S1 và S3 chạy giống vậy.
-
-### 4.4. Kafka, Elasticsearch, Kibana local
-
-Bật các dịch vụ:
-
-```powershell
-docker network create steamnet
-docker run -d --name steam-kafka --network steamnet -e KAFKA_NODE_ID=1 -e KAFKA_PROCESS_ROLES=broker,controller -e KAFKA_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://steam-kafka:9092 -e KAFKA_CONTROLLER_LISTENER_NAMES=CONTROLLER -e KAFKA_CONTROLLER_QUORUM_VOTERS=1@steam-kafka:9093 -e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 -e KAFKA_NUM_PARTITIONS=3 apache/kafka:3.8.1
-docker run -d --name steam-es --network steamnet -e discovery.type=single-node -e xpack.security.enabled=false -e ES_JAVA_OPTS="-Xms1g -Xmx1g" docker.elastic.co/elasticsearch/elasticsearch:8.15.3
-docker run -d --name steam-kibana --network steamnet -p 5601:5601 -e ELASTICSEARCH_HOSTS=http://steam-es:9200 docker.elastic.co/kibana/kibana:8.15.3
-```
-
-Tạo index và dashboard, rồi chạy batch có ghi ES:
-
-```powershell
-docker run --rm --network steamnet -e ELASTICSEARCH_HOSTS=http://steam-es:9200 -e KIBANA_HOST=http://steam-kibana:5601 -v "${PWD}:/opt/spark/work-dir" steam-spark:dev sh -c "python3 pipeline.py es-setup && python3 pipeline.py kibana-setup && python3 pipeline.py --es batch --raw data/sample_raw"
-```
-
-Đẩy dữ liệu vào Kafka (thời gian được dời về hiện tại), rồi chạy S2 đọc từ Kafka:
-
-```powershell
-docker run --rm --network steamnet -e KAFKA_BOOTSTRAP_SERVERS=steam-kafka:9092 -v "${PWD}:/opt/spark/work-dir" steam-spark:dev python3 pipeline.py replay -- --raw data/sample_raw --rate 2000 --retime
-docker run --rm -it --network steamnet -e ELASTICSEARCH_HOSTS=http://steam-es:9200 -v "${PWD}:/opt/spark/work-dir" steam-spark:dev python3 pipeline.py --es s2 -- --source kafka --brokers steam-kafka:9092 --starting-offsets earliest
-```
-
-Mở Kibana tại http://localhost:5601 → Dashboards. Có 4 dashboard:
-- D1 Tổng quan.
-- D2 Chi tiết game: gõ `appid:<id>` vào ô tìm kiếm để lọc.
-- D3 Thời gian thực.
-- D4 Cảnh báo & xu hướng.
-
-### 4.5. Lệnh của `pipeline.py`
-
-| Lệnh | Việc |
+| Lệnh | Công việc |
 | --- | --- |
-| `batch` | B2 → B5 → B3 → B4 → B6 → B7 → B8. Thêm `--es` để ghi ES và hợp nhất view; `--skip b8` để bỏ một job |
-| `b1` … `b8`, `s1` `s2` `s3` | Chạy từng job; tham số riêng đặt sau `--` |
-| `es-setup`, `kibana-setup`, `merge` | Tạo index; tạo dashboard; hợp nhất batch/realtime view |
-| `replay`, `crawl`, `applist`, `feedback` | Đẩy JSONL vào Kafka; crawl local; lấy danh sách app (cần `STEAM_API_KEY`); thêm game trending vào danh sách theo dõi |
+| `batch` | B2 → B5 → B3 → B4 → B6 → B7 → B8; `--es` ghi ES và merge; `--skip b8` bỏ phân cụm |
+| `b1` … `b8`, `s1`, `s2`, `s3` | Chạy từng job; tham số riêng đặt sau `--` |
+| `es-setup`, `kibana-setup`, `merge` | Tạo index chuẩn, tạo dashboard, hợp nhất batch/realtime |
+| `replay`, `crawl`, `applist`, `feedback` | Replay vào Kafka, crawl local, lấy danh sách app, cập nhật game theo dõi từ trending |
 
-Tuỳ chọn chung: `--profile local|cluster`, `--raw`, `--lake`.
-- `local`: đọc raw từ `data/raw`, ghi kết quả vào `data/lake`.
-- `cluster`: lấy đường dẫn HDFS/ES/Hive từ biến môi trường (xem `.env.example`).
+Tuỳ chọn chung: `--profile local|cluster`, `--raw`, `--lake`. Với profile `cluster`, đường dẫn kho lấy từ các biến `HDFS_*`; `--raw`/`--lake` của pipeline không thay thế cấu hình cụm. Muốn xem tham số một job, ví dụ: `python -m processing.batch.b2_clean_raw --help`. Makefile là lối tắt gọi pipeline, ví dụ `make batch`, `make s2 ARGS="--source file"`.
 
-### 4.6. Crawl dữ liệu với API key
+| Hiện tượng | Kiểm tra / cách xử lý |
+| --- | --- |
+| `No module named ...` | Đúng Conda/venv chưa; đã cài `requirements.txt` bằng Python của môi trường đó chưa |
+| `JAVA_GATEWAY_EXITED` | Xem lỗi Java đầu tiên trong log, kiểm tra `java -version`, `JAVA_HOME` và biến Spark; đây là lỗi khởi tạo Spark, chưa xác định được lỗi xử lý dữ liệu |
+| Không thấy raw / sai filesystem | Kiểm tra cấu trúc mục 4.3, chạy rõ `--profile local`, truyền thư mục gốc `--raw data/raw` |
+| Job lỗi vì thiếu bảng đầu vào | Chạy đúng thứ tự batch; đọc log job đầu tiên thất bại |
+| Spark bị hết bộ nhớ | Giảm tải dịch vụ đang bật, kiểm tra RAM và tăng driver memory trong khả năng máy |
+| Lỗi kết nối ES khi chỉ muốn tạo Parquet | Đặt `export WRITE_ES=0`, không truyền `--es` |
+| Streaming không đọc lại file/message | Job nhớ tiến độ trong checkpoint; dùng checkpoint mới cho lượt thử mới, Kafka `starting-offsets` chỉ áp dụng khi chưa có checkpoint |
 
-Tạo `.env` từ `.env.example`, điền `STEAM_API_KEY=...` (không commit `.env`), rồi làm theo [docs/collection_guide.md](docs/collection_guide.md).
+Muốn thu thêm dữ liệu/API key: làm theo [docs/collection_guide.md](docs/collection_guide.md). Không cần API key để xử lý bộ raw đã nhận.
 
 ---
 
 ## 5. Triển khai Kubernetes
+
+Demo k3s thu gọn: [infra/k3s/README.md](infra/k3s/README.md). Kiểm thử chịu lỗi và benchmark nhiều máy: [infra/k3s/FAULT_TEST.md](infra/k3s/FAULT_TEST.md). Các cấu hình này nằm trong `k8s/demo/` và `k8s/fault-test/`, dùng riêng với bộ triển khai đầy đủ dưới đây.
+
+### 5.1. Khi nào đưa dữ liệu lên HDFS?
+
+Khi làm local theo mục 4, mỗi thành viên đọc raw trên máy mình. Khi chạy trên cụm, upload bộ raw **một lần** lên HDFS để Spark trên các node cùng truy cập; không cần mỗi thành viên upload một bản. Luồng xử lý là `raw trên HDFS → Spark → clean/curated trên HDFS + kết quả ES`. HDFS lưu dữ liệu; Spark thực hiện tính toán.
+
+Với bộ demo `steam-demo`, trước tiên dựng cụm, triển khai dịch vụ, build/import image và chạy smoke theo [hướng dẫn k3s](infra/k3s/README.md). Sau đó, trên VM server đã cấu hình `kubectl`, giải nén dữ liệu từ Drive vào `data/raw` trong repo rồi chạy:
+
+```bash
+bash scripts/k3s-demo.sh upload-raw
+bash scripts/k3s-demo.sh b2
+kubectl -n steam-demo exec namenode-0 -- hdfs dfs -ls /steam/raw /steam/clean
+```
+
+Upload từ chối nếu thư mục nguồn tương ứng đã tồn tại trên HDFS để tránh nhập trùng. Lệnh `b2` tạo Job và đợi hoàn thành; nếu Job cũ còn tồn tại, script yêu cầu kiểm tra log trước khi chủ động xóa riêng Job đó để chạy lại.
+
+**Bộ demo hiện cung cấp smoke và B2, chưa tự chạy toàn bộ B1–B8/S1–S3.** B2 demo chạy Spark local trong pod, chưa chứng minh driver/executor phân tán. Hướng dẫn benchmark Spark phân tán nằm trong `infra/k3s/FAULT_TEST.md`; bộ triển khai đầy đủ có phạm vi riêng ở mục 5.2. Các cấu hình cụm hiện mới được kiểm tra tĩnh, chưa có kết quả chạy trên cụm thật.
+
+### 5.2. Bộ triển khai đầy đủ
+
+Chỉ dùng các lệnh dưới sau khi đã chuẩn bị cụm và cấu hình theo [deployment guide](docs/deployment_guide.md); không dùng chúng để bật Compose local hoặc thay cho script `steam-demo`.
 
 Cài operator và monitoring (chỉ làm 1 lần):
 
@@ -188,13 +426,13 @@ Cài operator và monitoring (chỉ làm 1 lần):
 Dựng hạ tầng, pipeline và dashboard:
 
 ```bash
-REGISTRY=<registry> ./scripts/deploy_all.sh
+REGISTRY='YOUR_REGISTRY' ./scripts/deploy_all.sh
 ```
 
 Tạo secret chứa API key Steam:
 
 ```bash
-kubectl create secret generic steam-api --from-literal=STEAM_API_KEY=<key>
+kubectl create secret generic steam-api --from-literal=STEAM_API_KEY='YOUR_STEAM_API_KEY'
 ```
 
 Chi tiết, cách nạp dữ liệu đã thu thập vào cụm, và cách truy cập Kibana/Grafana/Spark SQL: [docs/deployment_guide.md](docs/deployment_guide.md).
@@ -202,6 +440,8 @@ Chi tiết, cách nạp dữ liệu đã thu thập vào cụm, và cách truy c
 ---
 
 ## 6. Kiểm thử
+
+Kiểm thử offline observer/benchmark k3s: `python -m pytest tests/infrastructure`.
 
 | Loại | Lệnh | Ghi chú |
 | --- | --- | --- |

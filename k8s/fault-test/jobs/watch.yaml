@@ -1,0 +1,35 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ft-watch
+  namespace: steam-ft
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 600
+  template:
+    metadata:
+      labels:
+        app: ft-watch
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      nodeSelector:
+        steam.insights/role: compute
+      containers:
+      - name: observer
+        image: localhost/steam-spark-demo:k3s-20261026
+        imagePullPolicy: Never
+        command:
+        - python
+        - -m
+        - infra.k3s.fault_watch
+        args:
+        - --seconds
+        - '300'
+        resources:
+          requests:
+            cpu: 100m
+            memory: 256Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi

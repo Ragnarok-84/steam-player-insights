@@ -1,0 +1,11 @@
+.git
+.env
+.env.*
+.venv
+venv
+data
+__pycache__
+**/__pycache__
+*.tar
+*.zip
+*.gz

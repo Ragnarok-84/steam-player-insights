@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    spark-role: executor
+spec:
+  topologySpreadConstraints:
+    - maxSkew: 1
+      topologyKey: kubernetes.io/hostname
+      whenUnsatisfiable: DoNotSchedule
+      nodeAffinityPolicy: Honor
+      labelSelector:
+        matchLabels:
+          spark-role: executor
+  containers:
+    - name: spark-kubernetes-executor
+      image: localhost/steam-spark-demo:k3s-20261026

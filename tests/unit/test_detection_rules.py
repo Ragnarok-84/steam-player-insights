@@ -4,7 +4,8 @@ import pytest
 
 from processing.batch.b4_playtime_buckets import bucket_expr
 
-W = dt.datetime(2026, 1, 1, 10, 0)
+# Spark uses UTC; keep fixtures independent of the host timezone.
+W = dt.datetime(2026, 1, 1, 10, 0, tzinfo=dt.timezone.utc)
 
 
 def windows(spark, rows):

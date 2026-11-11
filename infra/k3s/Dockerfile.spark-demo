@@ -1,0 +1,19 @@
+# OCI image built with Podman; k3s runs it with containerd.
+FROM python:3.11.16-slim-bookworm
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    openjdk-17-jre-headless procps tini \
+    && rm -rf /var/lib/apt/lists/*
+WORKDIR /app
+COPY requirements.txt .
+RUN python -m pip install --no-cache-dir -r requirements.txt && python -m pip check
+COPY processing/ processing/
+COPY storage/ storage/
+COPY infra/k3s/*.py infra/k3s/
+COPY infra/k3s/spark-entrypoint.sh infra/k3s/spark-entrypoint.sh
+COPY infra/k3s/executor-template.yaml infra/k3s/executor-template.yaml
+COPY infra/demo/elasticsearch-indices.json infra/demo/elasticsearch-indices.json
+RUN ln -s "$(python -c 'import pyspark, pathlib; print(pathlib.Path(pyspark.__file__).parent)')" /opt/spark
+ENV PYTHONUNBUFFERED=1
+ENV SPARK_HOME=/opt/spark PYSPARK_PYTHON=/usr/local/bin/python
+ENTRYPOINT ["bash", "/app/infra/k3s/spark-entrypoint.sh"]
+CMD ["python", "-m", "infra.k3s.smoke"]

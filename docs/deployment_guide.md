@@ -4,6 +4,8 @@ Triển khai toàn bộ kiến trúc Lambda lên cụm Kubernetes (k3s / kubeadm
 
 > Phần K8s đã được kiểm tra schema (kubeconform, kể cả CRD Strimzi/ECK/Prometheus). Các thành phần (Spark job, Kafka, ES, Kibana, Hive Metastore 3.1.3 + PostgreSQL) đã chạy thử trong Docker với cùng cấu hình. Chưa chạy thử trên một cụm K8s thật, nên lần triển khai đầu cần theo dõi log từng bước.
 
+Nếu dùng bộ demo k3s thu gọn, xem [hướng dẫn k3s](../infra/k3s/README.md) và [kiểm thử chịu lỗi](../infra/k3s/FAULT_TEST.md). Các bước dưới dành cho bộ triển khai đầy đủ.
+
 ## 1. Chuẩn bị
 
 | Hạng mục | Yêu cầu |

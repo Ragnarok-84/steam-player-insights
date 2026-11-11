@@ -10,6 +10,7 @@ import os
 from pathlib import Path
 
 import requests
+from dashboards.overview_style import LAYOUT as OVERVIEW_LAYOUT, apply_overview
 
 KIBANA = os.getenv("KIBANA_HOST", "http://localhost:5601").rstrip("/")
 AUTH = (os.getenv("ELASTICSEARCH_USER"), os.getenv("ELASTICSEARCH_PASSWORD")) \
@@ -165,6 +166,8 @@ PANELS["d2_wordcloud"] = {
                               "fontSize": {"field": "datum.w"}, "fontSizeRange": [10, 48], "padding": 2}]}],
 }
 
+apply_overview(PANELS, ctx_query, time_range)
+
 SEARCHES = {
     "s_alerts": ("Danh sách cảnh báo", "alerts", ["appid", "alert_type", "rule", "window_start", "negative_reviews",
                                                   "positive_ratio", "change_ratio"], [["detected_at", "desc"]]),
@@ -175,7 +178,7 @@ SEARCHES = {
 }
 
 DASHBOARDS = {
-    "steam-d1-overview": ("D1. Tổng quan", "now-5y", ["d1_reviews_time", "d1_genre_positive", "d1_top_ccu", "d1_language", "d1_price_heatmap"]),
+    "steam-d1-overview": ("D1. Tổng quan", "now-5y", list(OVERVIEW_LAYOUT)),
     "steam-d2-game": ("D2. Chi tiết game (lọc: appid:<id>)", "now-5y",
                       ["d2_weekly_positive", "d2_ccu", "d2_playtime", "d2_aspects", "d2_wordcloud", "s_reviews"]),
     "steam-d3-realtime": ("D3. Giám sát thời gian thực", "now-24h", ["d3_reviews_5m", "d3_positive_60m", "d3_top_ccu_now"]),
@@ -209,8 +212,9 @@ def saved_objects():
         for i, pid in enumerate(panels):
             kind = "search" if pid in SEARCHES else "visualization"
             w = 48 if kind == "search" else 24
-            panel_json.append({"panelIndex": str(i), "gridData": {"x": (i % 2) * 24 if w == 24 else 0, "y": (i // 2) * 15,
-                                                                 "w": w, "h": 15, "i": str(i)},
+            x, y, w, h = OVERVIEW_LAYOUT[pid] if did == "steam-d1-overview" else ((i % 2) * 24 if w == 24 else 0, (i // 2) * 15, w, 15)
+            panel_json.append({"panelIndex": str(i), "gridData": {"x": x, "y": y,
+                                                                 "w": w, "h": h, "i": str(i)},
                                "embeddableConfig": {}, "panelRefName": f"panel_{i}", "version": "8.12.1"})
             refs.append({"name": f"panel_{i}", "type": kind, "id": pid})
         objs.append({"type": "dashboard", "id": did, "references": refs, "attributes": {
@@ -221,13 +225,20 @@ def saved_objects():
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--overview-only", action="store_true", help="Chỉ cập nhật D1; giữ các dashboard khác")
+    args = parser.parse_args()
     objs = saved_objects()
+    if args.overview_only:
+        objs = [o for o in objs if o["id"] == "steam-d1-overview" or o["id"] in OVERVIEW_LAYOUT]
+    output = OUT.with_name("steam_overview.ndjson") if args.overview_only else OUT
     ndjson = "\n".join(json.dumps(o, ensure_ascii=False) for o in objs) + "\n"
     try:  # bản export để import tay; trong container chỉ đọc thì bỏ qua
-        OUT.parent.mkdir(parents=True, exist_ok=True)
-        OUT.write_text(ndjson, encoding="utf-8")
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(ndjson, encoding="utf-8")
     except OSError as err:
-        print(f"Skip writing {OUT}: {err}")
+        print(f"Skip writing {output}: {err}")
     resp = requests.post(f"{KIBANA}/api/saved_objects/_import?overwrite=true", headers={"kbn-xsrf": "true"},
                          files={"file": ("steam_dashboards.ndjson", ndjson.encode("utf-8"), "application/ndjson")},
                          auth=AUTH, verify=False, timeout=120)
@@ -235,7 +246,7 @@ def main():
     body = resp.json()
     if not body.get("success"):
         raise SystemExit(f"Kibana import errors: {json.dumps(body.get('errors'), ensure_ascii=False)[:2000]}")
-    print(f"Imported {body.get('successCount')} saved objects into {KIBANA}; NDJSON at {OUT}")
+    print(f"Imported {body.get('successCount')} saved objects into {KIBANA}; NDJSON at {output}")
 
 
 if __name__ == "__main__":

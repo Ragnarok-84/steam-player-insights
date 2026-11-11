@@ -15,6 +15,25 @@ Hệ thống cung cấp 5 bộ dashboard chính theo yêu cầu đề bài.
 - Mốc cập nhật/giảm giá xem ở panel "tác động giảm giá" của D4.
 - D2 lọc theo game bằng ô tìm kiếm: `appid:<id>`.
 
+### Cập nhật giao diện D1 cho demo
+
+D1 có banner, bốn thẻ chỉ số (review, tỷ lệ tích cực, số game, CCU đỉnh),
+biểu đồ xu hướng màu xanh, thanh thể loại màu teal và tooltip chi tiết.
+Các chỉ số nhận bộ lọc và khoảng thời gian của dashboard; số game dùng cardinality
+ước lượng của Elasticsearch. Biểu đồ giá bán dùng bảng tổng hợp toàn bộ kỳ dữ liệu.
+
+Trong môi trường Python của dự án, cập nhật riêng D1 trên Kibana local:
+
+```bash
+KIBANA_HOST=http://localhost:5601 ELASTICSEARCH_USER='' ELASTICSEARCH_PASSWORD='' \
+  python pipeline.py kibana-setup -- --overview-only
+```
+
+Lệnh này chỉ ghi đè giao diện D1, không chạy Spark và không nạp lại dữ liệu.
+Tải lại trang `http://localhost:5601/app/dashboards#/view/steam-d1-overview` sau khi import.
+Bản xuất `dashboards/kibana/steam_overview.ndjson` cũng có thể được import bằng
+Stack Management → Saved Objects → Import (cho phép ghi đè).
+
 ---
 
 ## 1. D1: Tổng quan thị trường (Kibana)

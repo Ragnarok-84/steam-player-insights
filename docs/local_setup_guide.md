@@ -11,12 +11,13 @@ Lộ trình: **Python + Java → HDFS → Spark ghi/đọc HDFS → Kafka + craw
 
 Nhóm có thể phân công một thành viên crawl, nén dữ liệu rồi gửi lên Google Drive để các thành viên còn lại tải về xử lý. Người nhận dữ liệu **không cần crawl lại hoặc chạy Kafka/B1 để nhập lại bộ file này**; có thể chạy B2 trực tiếp từ raw sau khi chuẩn bị Python, Java và Spark.
 
-Người gửi nên dừng crawler hoặc chờ lượt crawl hoàn tất trước khi đóng gói, gửi kèm `target_apps.json` và `target_apps.json.manifest.json` nếu có. Người nhận tải file nén từ Drive về máy, giải nén và sắp xếp tại gốc repo theo cấu trúc:
+Lệnh đóng gói, giải nén và kiểm tra số bản ghi nằm ở README mục 4.3 (A7 và cách B). Người gửi dừng vòng thu trước khi đóng gói. Gói `steam_data_YYYYMMDD.tar.gz` chứa sẵn đường dẫn `data/...`, nên giải nén **tại gốc repo**. Cấu trúc sau khi giải nén:
 
 ```text
 data/
 ├── target_apps.json
 ├── target_apps.json.manifest.json
+├── crawler_state/reviews_v2/    # chỉ cần nếu người nhận crawl tiếp
 └── raw/
     ├── steam_games_meta/
     │   └── dt=YYYY-MM-DD/part-*.jsonl.gz
@@ -62,7 +63,7 @@ hdfs dfs -ls /steam/raw/steam_reviews_raw
 python -m processing.batch.b2_clean_raw --raw /steam/raw --clean /steam/clean
 ```
 
-Lệnh upload trên dành cho lần nhập đầu tiên, khi ba thư mục đích chưa tồn tại trên HDFS. Với HDFS dùng chung, sử dụng đường dẫn riêng được quản trị viên cấp và thay cả đường dẫn upload lẫn tham số của B2. Bộ raw nhận từ Drive không cần checkpoint crawler để phân tích; nếu tiếp tục crawl từ lượt cũ thì cần người gửi bàn giao thêm state/cache theo [hướng dẫn thu thập local](collection_guide.md).
+Lệnh upload trên dành cho lần nhập đầu tiên, khi ba thư mục đích chưa tồn tại trên HDFS. Với HDFS dùng chung, sử dụng đường dẫn riêng được quản trị viên cấp và thay cả đường dẫn upload lẫn tham số của B2. Bộ raw nhận từ Drive không cần state crawler để phân tích. Gói đã kèm `crawler_state/reviews_v2`, nên người nhận có thể crawl tiếp mà không trùng ([hướng dẫn thu thập](collection_guide.md)), với điều kiện từ đó họ là nơi crawl duy nhất của nhóm.
 
 ### 4.1. Công cụ và môi trường Python
 
@@ -284,7 +285,9 @@ Chạy lại không cần đổi thư mục: các job ghi đè đầu ra. Xoá `
 
 ### 4.5. Kafka local và crawler
 
-Nếu dùng Docker Desktop trên Windows, bật tích hợp với distro WSL và kiểm tra `docker info` chạy được trong WSL. Ví dụ dưới dùng một broker, cho client chạy trực tiếp trên cùng máy; client ở container/máy khác cần cấu hình advertised listeners phù hợp.
+Nếu dùng Docker Desktop trên Windows, bật tích hợp với distro WSL và kiểm tra `docker info` chạy được trong WSL.
+
+**Cách khuyên dùng:** `bash scripts/demo.sh up streaming` (Kafka có volume, tạo sẵn 4 topic), rồi làm theo README mục 4.11. Ví dụ `docker run` dưới đây là cách thử nhanh không lưu dữ liệu, cho client chạy trên cùng máy; client ở container/máy khác cần cấu hình advertised listeners phù hợp.
 
 ```bash
 docker run -d --name steam-kafka -p 127.0.0.1:9092:9092 apache/kafka:3.9.1
@@ -318,7 +321,10 @@ Chỉnh broker, API key nếu API sử dụng cần key, và các địa chỉ d
 export KAFKA_BOOTSTRAP_SERVERS=localhost:9092
 export CRAWLER_WORKER_ID=0
 export CRAWLER_TOTAL_WORKERS=1
-python -m crawlers.steam_reviews_crawler
+# CRAWLER_OUTPUT=kafka: .env mẫu đặt jsonl, nếu không đổi crawler sẽ ghi file thay vì Kafka.
+# State riêng: review đã gửi Kafka không làm lệch tiến độ crawl vào data/raw.
+CRAWLER_OUTPUT=kafka CURSOR_STATE_DIR=data/crawler_state/stream CRAWLER_REVIEW_DAYS=1 CRAWLER_REVIEW_BATCHES=2 \
+  python -m crawlers.steam_reviews_crawler
 ```
 
 Crawler review đọc danh sách game từ `TARGET_APP_LIST_PATH` (mặc định `data/target_apps.json`, giới hạn `CRAWLER_TARGET_LIMIT`) và chỉ lấy các game thuộc worker hiện tại (`appid % CRAWLER_TOTAL_WORKERS`). Có thể dừng bằng `Ctrl+C`. Kiểm tra topic đã nhận review:
@@ -359,6 +365,6 @@ make s2 PROFILE=cluster S2_ARGS="--brokers localhost:9092"
 make s3 PROFILE=cluster S3_ARGS="--brokers localhost:9092"
 ```
 
-Job streaming chạy liên tục; dừng bằng `Ctrl+C`. Với checkpoint mới, job đọc offset `latest` (đổi bằng `--starting-offsets earliest`): bật job trước rồi chạy crawler hoặc `python pipeline.py replay` ở terminal thứ hai. Dữ liệu cũ có thể bị watermark loại bỏ; dùng event mới (replay có tùy chọn đổi thời gian) để kiểm tra thời gian thực. S2/S3 cần baseline từ B7 (`curated/review_baseline`, `curated/ccu_baseline`); S2 dùng ngưỡng tuyệt đối dự phòng khi chưa có baseline.
+Job streaming chạy liên tục; dừng bằng `Ctrl+C`. Với checkpoint mới, job đọc offset `latest` (đổi bằng `--starting-offsets earliest`): bật job trước rồi chạy crawler hoặc `python pipeline.py replay` ở terminal thứ hai. Dữ liệu cũ có thể bị watermark loại bỏ. Để kiểm tra thời gian thực, dùng crawler đẩy review/CCU mới vào Kafka (như trên) và `python pipeline.py inject` cho tình huống cảnh báo. `replay --retime` dồn review cũ vào thời điểm hiện tại, làm game nhỏ trông như bị bombing; chỉ dùng để thử tải (SC3). Cách bật/tắt cả ba job: `bash scripts/demo.sh stream-start|stream-stop`. S2/S3 cần baseline từ B7 (`curated/review_baseline`, `curated/ccu_baseline`); S2 dùng ngưỡng tuyệt đối dự phòng khi chưa có baseline.
 
 Khi ghi ES, chạy `make merge PROFILE=cluster` (hoặc `python pipeline.py batch --es`) sau batch để xoá realtime view đã được batch view bao phủ và cập nhật `serving_state`.

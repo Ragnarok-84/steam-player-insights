@@ -4,6 +4,7 @@ Hệ thống phân tích trải nghiệm người chơi game trên Steam theo **
 
 - Nhận dữ liệu từ Drive, chạy batch, streaming và dashboard: [quy trình tại mục 4](#4-quy-trình-xử-lý-và-chạy-code).
 - Linux/WSL2, Conda/venv và HDFS local: [hướng dẫn chi tiết](docs/local_setup_guide.md).
+- Mục lục toàn bộ tài liệu: [docs/README.md](docs/README.md). Tiến độ: [docs/BAO_CAO_TIEN_DO.md](docs/BAO_CAO_TIEN_DO.md), [docs/PLAN.md](docs/PLAN.md).
 - Quyết định của nhóm: [docs/decisions.md](docs/decisions.md).
 - Thu thập dữ liệu: [docs/collection_guide.md](docs/collection_guide.md).
 - Kiến trúc chi tiết: [docs/architecture.md](docs/architecture.md).
@@ -16,7 +17,7 @@ Hệ thống phân tích trải nghiệm người chơi game trên Steam theo **
 ```
 +---------------------------------------------------------------------------------------+
 |                                    DATA SOURCES                                       |
-|  Steam Store Reviews API | Steam Web API (CCU/AppList) | SteamSpy API | Kaggle Dataset |
+|  Steam Store Reviews API | Steam Web API (CCU/AppList) | Steam Store AppDetails API |
 +-------------------------------------------+-------------------------------------------+
                                             |
                                             v
@@ -57,7 +58,7 @@ Hệ thống phân tích trải nghiệm người chơi game trên Steam theo **
 steam-player-insights/
 ├── pipeline.py                  # Điểm chạy chung mọi job (local/cluster): python pipeline.py <lệnh>
 ├── Makefile                     # Lối tắt gọi pipeline.py (Linux/WSL)
-├── crawlers/                    # Steam reviews/appdetails/CCU/AppList, SteamSpy, backfill lịch sử,
+├── crawlers/                    # Steam reviews/appdetails/CCU/AppList, danh sách game từ Steam,
 │                                #   replay JSONL -> Kafka, vòng phản hồi trending
 ├── processing/
 │   ├── common/                  # SparkSession, đọc raw, ghi Parquet/Hive, ghi Elasticsearch, từ điển khía cạnh
@@ -72,7 +73,8 @@ steam-player-insights/
 ├── scripts/                     # setup_cluster.sh, deploy_all.sh, teardown.sh
 ├── tests/                       # unit/, scalability/ (SC1–SC4), fault_tolerance/ (FT1–FT6), make_sample_data.py
 ├── notebooks/                   # 01 EDA, 02 cảm xúc & khía cạnh, 03 scalability & fault tolerance
-└── docs/                        # architecture, deployment_guide, collection_guide
+└── docs/                        # tài liệu viết: mục lục docs/README.md, báo cáo tiến độ, kế hoạch, quyết định,
+                                 #   kiến trúc, thu thập, cài đặt, triển khai, reports/
 ```
 
 ---
@@ -83,17 +85,17 @@ steam-player-insights/
 | --- | --- | --- |
 | Kafka | `steam.reviews.raw` (6p), `steam.players.ccu` (3p), `steam.games.meta` (3p, compacted), `steam.alerts` (1p) | JSON |
 | Raw | `/steam/raw/steam_{reviews_raw,players_ccu,games_meta}/dt=` · `data/raw/...` | JSON Lines gzip |
-| Clean | `/steam/clean/{reviews,ccu,games,games_history}` · `data/lake/clean` | Parquet snappy |
+| Clean | `/steam/clean/{reviews,ccu,games,games_history,review_daily_counts}` · `data/lake/clean` | Parquet snappy |
 | Curated | `/steam/curated/*` (bảng Hive `steam_analytics.*`) · `data/lake/curated` | Parquet |
 | Serving | Elasticsearch, 15 index (xem `storage/elasticsearch/indices_mapping.json`) | |
 
-Raw dùng chung layout với output của crawler local, nên dữ liệu đã thu thập (giải nén vào `data/raw`) chạy được ngay, không cần Kafka.
+Raw dùng chung layout với output của crawler local, nên dữ liệu đã thu thập (giải nén vào `data/raw`) chạy được ngay, không cần Kafka. Cách lấy dữ liệu (tự crawl hoặc tải từ Drive): [mục 4.3](#43-lấy-dữ-liệu-tự-crawl-hoặc-tải-từ-google-drive).
 
 ---
 
 ## 4. Quy trình xử lý và chạy code
 
-**Luồng phù hợp với cách nhóm đang làm:** một người thu thập dữ liệu, nén gửi qua Google Drive → các thành viên tải về `data/raw` → chạy batch local → kiểm tra kết quả → làm notebook/dashboard → tích hợp lên cụm k3s/HDFS.
+**Luồng phù hợp với cách nhóm đang làm:** một người crawl dữ liệu từ Steam (mục 4.3, cách A), nén gửi qua Google Drive → các thành viên tải về (mục 4.3, cách B) → chạy batch local → kiểm tra kết quả → làm notebook/dashboard → tích hợp lên cụm k3s/HDFS.
 
 Các lệnh Bash bên dưới chạy tại **gốc repo**, trên Linux hoặc WSL2, trong cùng môi trường Python. Windows nên dùng terminal WSL2; phương án Docker/PowerShell nằm ở mục 4.9. Cấu hình local dùng để phát triển và kiểm tra logic; kiểm thử phân tán vẫn cần cụm nhiều node.
 
@@ -101,7 +103,9 @@ Các lệnh Bash bên dưới chạy tại **gốc repo**, trên Linux hoặc WS
 
 | Mục tiêu | Cần bật | Lệnh chính / hướng dẫn |
 | --- | --- | --- |
-| Xử lý raw đã nhận từ Drive | Python + Java + PySpark | `python pipeline.py --profile local batch` |
+| Tự crawl dữ liệu từ Steam | Python + `STEAM_API_KEY` | Mục 4.3, cách A |
+| Tải dữ liệu từ Drive | Python | Mục 4.3, cách B |
+| Xử lý raw | Python + Java + PySpark | `python pipeline.py --profile local batch` |
 | Xem kết quả, làm báo cáo | Kết quả batch + Jupyter | Mục 4.5 |
 | Thử streaming từ file | Python + Java + PySpark; chạy batch trước để có baseline | Mục 4.6 |
 | Xem dashboard | Spark + Elasticsearch + Kibana | Mục 4.7 |
@@ -155,31 +159,144 @@ export HIVE_METASTORE_URI_LOCAL=''
 
 `pipeline.py --profile local` đặt đường dẫn raw/clean/curated thành URI file local và tắt kết nối HDFS. Các module xử lý có nạp `.env`, nhưng biến đã `export` được ưu tiên. Lệnh `batch` không tự bật dịch vụ. Nếu mở terminal khác, kích hoạt lại môi trường và đặt lại các biến cần dùng.
 
-### 4.3. Nhận và kiểm tra dữ liệu từ Google Drive
+### 4.3. Lấy dữ liệu: tự crawl hoặc tải từ Google Drive
 
-Giải nén **gói ZIP bên ngoài** vào repo, giữ nguyên các file `.jsonl.gz` bên trong:
+Bộ dữ liệu hiện tại của nhóm (crawl ngày 12/11/2026): **100 game, 92.019 review, 100 snapshot CCU, metadata + tag + số review theo ngày cho cả 100 game; file nén khoảng 19 MB.** Chỉ dùng API chính thức của Steam (xem [docs/decisions.md](docs/decisions.md)).
+
+| Bạn cần | Làm theo |
+| --- | --- |
+| Chỉ phân tích / chạy batch / làm dashboard | **Cách B**: tải từ Drive, không cần API key |
+| Crawl thêm dữ liệu, chạy CCU định kỳ, thêm game | **Cách A**: tự crawl |
+
+Sau khi có dữ liệu, cấu trúc thư mục phải là:
 
 ```text
 data/
-├── target_apps.json
+├── target_apps.json                  # 100 game: appid, nhóm (top_ccu/stratified), tầng số review
+├── target_apps.json.manifest.json    # cách chọn, seed, thời điểm
+├── crawler_state/reviews_v2/         # vị trí crawl review từng game (chỉ cần nếu crawl tiếp)
 └── raw/
-    ├── steam_reviews_raw/
-    │   └── dt=YYYY-MM-DD/part-*.jsonl.gz
-    ├── steam_players_ccu/
-    │   └── dt=YYYY-MM-DD/part-*.jsonl.gz
-    └── steam_games_meta/
-        └── dt=YYYY-MM-DD/part-*.jsonl.gz
+    ├── steam_reviews_raw/dt=YYYY-MM-DD/part-*.jsonl.gz
+    ├── steam_players_ccu/dt=YYYY-MM-DD/part-*.jsonl.gz
+    └── steam_games_meta/dt=YYYY-MM-DD/part-*.jsonl.gz   # appdetails + tag (store) + review theo ngày (histogram)
 ```
 
-Không để lồng thành `data/raw/raw/...`. Người gửi nên gửi kèm target list, manifest và số file/dung lượng để mọi người dùng cùng một bộ dữ liệu. Không cần checkpoint crawler nếu chỉ phân tích bộ raw đã nhận.
+#### Cách A: tự crawl từ Steam
+
+**A1. Cấu hình.** Cần môi trường Python ở mục 4.2 (chỉ crawl thì `python -m pip install -r requirements-crawler.txt` là đủ). Lấy Steam Web API key tại <https://steamcommunity.com/dev/apikey>; key chỉ dùng khi tạo danh sách game. Trong `.env`:
+
+```dotenv
+STEAM_API_KEY=<key của bạn>          # không commit, không gửi lên nhóm chat
+TARGET_APP_LIST_PATH=data/target_apps.json
+CURSOR_STATE_DIR=data/crawler_state
+CRAWLER_OUTPUT_DIR=data/raw
+CRAWLER_RATE_LIMIT_DELAY=1.5
+CRAWLER_REVIEW_BATCHES=10             # tối đa 10 trang x 100 review mỗi game mỗi lượt
+CRAWLER_REVIEW_DAYS=0                 # 0 = lấy toàn bộ lịch sử review
+```
+
+**A2. Danh sách game.** Để có số liệu khớp với cả nhóm, dùng `data/target_apps.json` có sẵn trong repo và bỏ qua bước này. Muốn tạo danh sách mới:
+
+```bash
+python -B -m crawlers.build_targets --limit 100 --top-ccu 20 --seed 42 --fresh
+```
+
+- 20 game top CCU lấy từ bảng most-played của Steam, dùng cho phần realtime và CCU.
+- 80 game lấy mẫu ngẫu nhiên có seed, chia đều 4 tầng số review: 20–99, 100–999, 1k–9,9k, 10k+.
+- Game chưa phát hành và game dưới 20 review bị loại. Lệnh chạy khoảng 30 giây.
+
+Dùng `--fresh` cho danh sách mới đồng nghĩa với dùng `data/raw` và `data/crawler_state` mới. Không trộn với dữ liệu của danh sách cũ.
+
+**A3. Crawl lượt đầu**, khoảng 20–35 phút cho 100 game:
+
+```bash
+python -u -B -m crawlers.collect_local --max-requests 2000
+```
+
+Mỗi game lấy: store (tag, tổng review) → metadata (giá, thể loại, …) → histogram (review theo ngày) → CCU → review. Tiến độ in ra màn hình. `Ctrl+C` dừng an toàn.
+
+**A4. Kiểm tra kết quả:**
+
+```bash
+python -c "import json; r=json.load(open('data/raw/collection-worker-0.json')); print(r['status'], 'records', r['records'], 'failures', r['failures']); print(r['failed_sources'])"
+```
+
+`status` phải là `finished`. Nếu có `failures`, chạy lại đúng lệnh A3. Review không bị trùng; metadata/CCU chỉ có thêm một snapshot.
+
+**A5. Crawl thêm, không trùng.** Luôn dùng cùng `data/crawler_state`. Mỗi lượt review chỉ lấy review mới kể từ lượt trước, rồi lấy tiếp review cũ từ chỗ đã dừng:
+
+```bash
+# Thêm review (game lớn có rất nhiều review, mỗi lượt lấy thêm tối đa 1.000 review/game)
+python -u -B -m crawlers.collect_local --sources reviews --max-requests 1500
+
+# Thêm game: mở rộng danh sách lên 300. 100 game cũ giữ nguyên, game mới không trùng
+python -B -m crawlers.build_targets --limit 300 --top-ccu 30 --seed 43
+python -u -B -m crawlers.collect_local --max-requests 5000
+```
+
+**A6. Thu định kỳ.** Steam không có API lịch sử CCU, nên cần chạy liên tục ít nhất 14 ngày mới tính được xu hướng CCU. Để một terminal chạy vòng lặp sau (WSL/Linux; máy phải bật):
+
+```bash
+i=0
+while true; do
+  src="ccu"                                                   # mỗi ~10 phút
+  (( i % 3 == 0 ))   && src="$src reviews"                    # review mới mỗi ~30 phút
+  # Vòng phản hồi: thêm tối đa 5 game đang lên mỗi ngày. Tắt khi cần giữ danh sách cố định (demo);
+  # bật (bỏ dấu # ở dòng dưới) ở giai đoạn cuối trước bảo vệ.
+  # (( i % 144 == 0 )) && python -B -m crawlers.update_targets_from_trending --top 5
+  (( i % 144 == 0 )) && src="$src store metadata histogram"   # giá, tag, review theo ngày: hằng ngày
+  python -u -B -m crawlers.collect_local --sources $src --review-pages 3 --max-requests 2000
+  i=$((i+1)); sleep 600
+done
+```
+
+Chỉ chạy **một** tiến trình crawl tại một thời điểm, trên **một** máy. Hai người cùng crawl và ghép dữ liệu sẽ làm lệch state. Trên cụm, dùng CronJob ở `k8s/crawlers/`.
+
+**A7. Đóng gói gửi nhóm:**
+
+```bash
+tar -czf steam_data_$(date +%Y%m%d).tar.gz data/raw data/crawler_state/reviews_v2 data/target_apps.json data/target_apps.json.manifest.json
+du -h steam_data_*.tar.gz
+```
+
+Tải file lên thư mục Drive của nhóm, kèm ngày crawl và số liệu ở A4. **Không** đưa `.env` vào gói.
+
+Chi tiết từng endpoint, trường dữ liệu và cơ chế chống trùng: [docs/collection_guide.md](docs/collection_guide.md).
+
+#### Cách B: tải từ Google Drive
+
+**B1.** Tải file `steam_data_YYYYMMDD.tar.gz` mới nhất từ thư mục Drive của nhóm, đặt vào gốc repo.
+
+**B2.** Nếu đã có `data/raw` cũ, đổi tên thư mục đó trước để không trộn hai bộ dữ liệu. Sau đó giải nén tại gốc repo:
+
+```bash
+[ -d data/raw ] && mv data/raw "data/raw_old_$(date +%Y%m%d%H%M)"
+[ -d data/crawler_state/reviews_v2 ] && mv data/crawler_state/reviews_v2 "data/crawler_state/reviews_v2_old_$(date +%Y%m%d%H%M)"
+tar -xzf steam_data_YYYYMMDD.tar.gz
+```
+
+File nén chứa sẵn đường dẫn `data/...`, nên giải nén **tại gốc repo**. Không giải nén bên trong `data/`, vì như vậy sẽ thành `data/data/raw`.
+
+**B3. Kiểm tra:**
 
 ```bash
 du -sh data/raw
-find data/raw -type f -name '*.jsonl.gz' | head
-find data/raw -type f -name '*.jsonl.gz' -exec gzip -t {} +
+find data/raw -type f -name '*.jsonl.gz' | wc -l
+find data/raw -type f -name '*.jsonl.gz' -exec gzip -t {} +    # không in gì = file hợp lệ
+python - <<'PY'
+import gzip, glob, json
+for topic in ("steam_reviews_raw", "steam_players_ccu", "steam_games_meta"):
+    n = sum(1 for p in glob.glob(f"data/raw/{topic}/*/*.gz") for _ in gzip.open(p, "rt"))
+    print(f"{topic:20s} {n:>8,} bản ghi")
+print("game:", len(json.load(open("data/target_apps.json"))))
+PY
 ```
 
-`gzip -t` không in gì khi file hợp lệ; bước này không xác nhận bộ dữ liệu đã được gửi đầy đủ. Spark đọc trực tiếp gzip, không cần giải nén tiếp. Thư mục `dt` của raw là ngày nhập; ngày review lấy từ `timestamp_created`.
+Với bộ ngày 12/11/2026, kết quả phải là: 92.019 review, 100 CCU, 300 metadata (mỗi game 3 bản ghi: appdetails, store, histogram) và 100 game. Số khác đi nghĩa là tải hoặc giải nén chưa đủ.
+
+**B4.** Chạy batch ở mục 4.4. Không cần API key.
+
+Gói đã có `crawler_state`, nên người nhận cũng có thể crawl tiếp theo cách A5 mà không trùng. Điều kiện là từ thời điểm đó người này trở thành người crawl duy nhất của nhóm.
 
 ### 4.4. Chạy batch: raw → clean → curated
 
@@ -253,7 +370,7 @@ jupyter lab notebooks/
 
 Muốn xem kết quả mẫu thì đặt `LAKE_DIR="$PWD/data/sample_lake"` trước khi khởi động Jupyter. Notebook có thể nạp nhiều dữ liệu vào RAM; bắt đầu từ bảng tổng hợp nếu máy ít bộ nhớ.
 
-Review lịch sử giúp tăng chiều thời gian nhưng không bổ sung lịch sử CCU. CCU chỉ có một vài snapshot/game thì chưa đủ để kết luận xu hướng hay bất thường nhiều ngày; cần thu tiếp theo lịch trong [hướng dẫn thu thập](docs/collection_guide.md).
+Review lịch sử được crawl phân trang trực tiếp từ Steam; không nhập dataset bên ngoài và không bổ sung được lịch sử CCU. CCU chỉ có một vài snapshot/game thì chưa đủ để kết luận xu hướng hay bất thường nhiều ngày; cần thu tiếp theo lịch trong [hướng dẫn thu thập](docs/collection_guide.md).
 
 ### 4.6. Thử streaming từ file, chưa cần Kafka
 
@@ -294,7 +411,7 @@ python pipeline.py --profile local batch --raw data/raw --lake data/lake --es
 
 `init-es` tạo 15 index theo mapping demo (1 shard, 0 replica). `kibana-setup` tạo dashboard; `batch --es` chạy lại batch, ghi kết quả vào ES và hợp nhất view. Chỉ tạo index/dashboard thì chưa có dữ liệu. Có thể đổi raw/lake sang bộ mẫu để thử nhẹ trước. Lệnh `pipeline.py es-setup` dùng mapping chuẩn cho cụm; với Compose một ES node, dùng `init-es` như trên.
 
-Mở <http://localhost:5601> → Dashboards:
+Mở <http://localhost:5601/app/dashboards> → Dashboards:
 
 | Dashboard | Nội dung |
 | --- | --- |
@@ -375,7 +492,8 @@ docker run --rm -v "${PWD}:/opt/spark/work-dir" steam-spark:dev python3 pipeline
 | `batch` | B2 → B5 → B3 → B4 → B6 → B7 → B8; `--es` ghi ES và merge; `--skip b8` bỏ phân cụm |
 | `b1` … `b8`, `s1`, `s2`, `s3` | Chạy từng job; tham số riêng đặt sau `--` |
 | `es-setup`, `kibana-setup`, `merge` | Tạo index chuẩn, tạo dashboard, hợp nhất batch/realtime |
-| `replay`, `crawl`, `applist`, `feedback` | Replay vào Kafka, crawl local, lấy danh sách app, cập nhật game theo dõi từ trending |
+| `inject` | Bơm tình huống demo có nhãn (`bombing`, `ccu-spike`) vào Kafka; batch tự loại các bản ghi này |
+| `replay`, `crawl`, `applist`, `feedback` | Replay vào Kafka, crawl local, lấy danh sách app, thêm game đang lên trên bảng most-played của Steam vào danh sách theo dõi (chỉ thêm, không xoá) |
 
 Tuỳ chọn chung: `--profile local|cluster`, `--raw`, `--lake`. Với profile `cluster`, đường dẫn kho lấy từ các biến `HDFS_*`; `--raw`/`--lake` của pipeline không thay thế cấu hình cụm. Muốn xem tham số một job, ví dụ: `python -m processing.batch.b2_clean_raw --help`. Makefile là lối tắt gọi pipeline, ví dụ `make batch`, `make s2 ARGS="--source file"`.
 
@@ -390,6 +508,94 @@ Tuỳ chọn chung: `--profile local|cluster`, `--raw`, `--lake`. Với profile 
 | Streaming không đọc lại file/message | Job nhớ tiến độ trong checkpoint; dùng checkpoint mới cho lượt thử mới, Kafka `starting-offsets` chỉ áp dụng khi chưa có checkpoint |
 
 Muốn thu thêm dữ liệu/API key: làm theo [docs/collection_guide.md](docs/collection_guide.md). Không cần API key để xử lý bộ raw đã nhận.
+
+### 4.11. Demo toàn hệ thống trên một máy (dữ liệu thật 100 game)
+
+Toàn bộ luồng dưới đây đã chạy thử ngày 12/11/2026 trên WSL2 với 8 GB RAM: Steam → Kafka → Spark (batch + streaming) → Elasticsearch → Kibana. Cần Docker Desktop bật WSL Integration (mục 4.7) và dữ liệu ở `data/raw` (mục 4.3). Mở **một terminal**, kích hoạt môi trường Python, đứng ở gốc repo.
+
+**Bước 1. Dịch vụ và biến môi trường** (lần đầu tải image khoảng 4 GB):
+
+```bash
+bash scripts/demo.sh up streaming      # Kafka + 4 topic
+bash scripts/demo.sh up dashboard      # Elasticsearch + Kibana
+bash scripts/demo.sh init-es           # 15 index
+
+export SPARK_MASTER='local[4]' SPARK_DRIVER_MEMORY=2g SPARK_SHUFFLE_PARTITIONS=8 WRITE_ES=0 HIVE_METASTORE_URI_LOCAL=''
+export PYSPARK_PYTHON="$(command -v python)" PYSPARK_DRIVER_PYTHON="$(command -v python)"
+export KAFKA_BOOTSTRAP_SERVERS=localhost:9092
+export ELASTICSEARCH_HOSTS=http://localhost:9200 ELASTICSEARCH_USER='' ELASTICSEARCH_PASSWORD='' KIBANA_HOST=http://localhost:5601
+```
+
+**Bước 2. Batch layer → ES + dashboard** (khoảng 12 phút; B5 phân tích cảm xúc chậm nhất):
+
+```bash
+python pipeline.py kibana-setup
+python pipeline.py --profile local batch --raw data/raw --lake data/lake --es
+```
+
+Mở <http://localhost:5601/app/dashboards>: **D1** tổng quan, **D2** chi tiết game (gõ `appid:730` vào ô tìm kiếm), **D4** trending. Lệnh `batch --es` tự chạy bước hợp nhất (merge) ở cuối.
+
+**Bước 3. Speed layer S1–S3** (chạy nền, log ở `data/logs/`):
+
+```bash
+bash scripts/demo.sh stream-start --reset   # --reset: đọc lại Kafka từ đầu, xoá view realtime/cảnh báo cũ
+bash scripts/demo.sh stream-status
+```
+
+**Bước 4. Đưa dữ liệu thật vào Kafka** (D3 sẽ có số liệu sau khoảng 1 phút):
+
+```bash
+# CCU hiện tại của 100 game, gọi thẳng Steam (khoảng 3 phút)
+CRAWLER_OUTPUT=kafka python -m crawlers.steam_ccu_crawler
+# Review mới nhất trong 24 giờ qua; state riêng để không ảnh hưởng crawl vào data/raw (khoảng 5 phút)
+CRAWLER_OUTPUT=kafka CURSOR_STATE_DIR=data/crawler_state/stream CRAWLER_REVIEW_DAYS=1 CRAWLER_REVIEW_BATCHES=2 \
+  python -m crawlers.steam_reviews_crawler
+```
+
+**Bước 5. Bơm tình huống để demo cảnh báo** (D4, sau khoảng 1 phút):
+
+```bash
+python pipeline.py inject -- bombing --appid 730 --count 80          # S2 → REVIEW_BOMBING
+python pipeline.py inject -- ccu-spike --appid 730 --factor 3        # S3 → CCU_SPIKE
+```
+
+Sự kiện bơm vào có `source=demo_injection`; B2 loại chúng nên batch và dashboard batch không bị ảnh hưởng. S3 so CCU với baseline **cùng khung giờ UTC**. Nếu lệnh `ccu-spike` báo chưa có baseline cho giờ hiện tại, thu một lượt CCU rồi tính lại baseline (khoảng 5 phút). Khi vòng lặp CCU (mục 4.3, A6) đã chạy ít nhất 24 giờ thì không cần bước này:
+
+```bash
+python -u -B -m crawlers.collect_local --sources ccu --max-requests 300
+python pipeline.py --profile local b2 --raw data/raw --lake data/lake -- --only ccu
+python pipeline.py --profile local b7 --raw data/raw --lake data/lake
+```
+
+**Bước 6 (tùy chọn). B1 và hợp nhất Lambda:**
+
+```bash
+python pipeline.py --profile local b1 --raw data/kafka_demo_raw --lake data/kafka_demo_lake -- --topic all
+python pipeline.py merge
+```
+
+B1 chép Kafka xuống raw riêng (`data/kafka_demo_raw`). Không ghi vào `data/raw`, vì Kafka có thể chứa dữ liệu replay đã đổi timestamp. `merge` xoá các số liệu realtime mà batch đã bao phủ (trước 00:00 UTC của ngày mới nhất trong batch), giữ realtime của hôm nay.
+
+**Kết thúc / trước buổi demo sau:**
+
+```bash
+bash scripts/demo.sh stream-stop
+bash scripts/demo.sh stop dashboard; bash scripts/demo.sh stop streaming   # giữ volume
+bash scripts/demo.sh reset-kafka     # trước demo: bỏ dữ liệu thử tải (SC3) / replay còn trong Kafka
+```
+
+**Kết quả lần chạy thử 12/11/2026:**
+
+| Hạng mục | Kết quả |
+| --- | --- |
+| Batch B2→B8 + ghi ES | Xong; 19.861 dòng game/ngày, 34.725 review tìm kiếm, 100 game phân cụm |
+| Trending (B6) | Dùng số review/ngày của Steam (histogram); ví dụ ROB RUN: 21.899 review/7 ngày so với 637 tuần trước |
+| Kibana | 18/19 panel có dữ liệu. Panel "tác động giảm giá" trống đúng: cần ít nhất 2 snapshot giá liên tiếp quan sát được lúc bắt đầu sale |
+| Streaming | 3.501 review thật + 100 CCU thật; không có cảnh báo giả. Hai tình huống bơm vào đều được phát hiện |
+| Cảnh báo trên dữ liệu thật | Overwatch: 10 review tiêu cực/giờ so với mức thường 2,4 ± 1,6. Luật 3σ trên số đếm nhỏ thỉnh thoảng bắt những cụm như vậy; ngưỡng chỉnh qua `S2_SIGMA`, `S2_MIN_NEGATIVE` |
+| Kiểm thử chạy thử 1 máy | FT6 PASS; SC1, SC3, SC4 chạy được (kết quả trong `tests/results/`). Số đo chính thức cần cụm (mục 5) |
+
+**RAM:** Kafka 1 GB + ES/Kibana 2 GB + ba job streaming khoảng 1 GB mỗi job. Khi chạy batch, dừng streaming (`stream-stop`) nếu máy dưới 12 GB. `replay --retime` dồn review cũ vào thời điểm hiện tại, nên chỉ dùng cho thử tải (SC3); nó sẽ làm game nhỏ trông như bị bombing. Grafana D5 theo dõi hạ tầng cụm qua Prometheus, nên chỉ có trên Kubernetes.
 
 ---
 

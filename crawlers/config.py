@@ -1,7 +1,8 @@
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(Path(__file__).resolve().parents[1] / ".env")
 
 STEAM_API_KEY = os.getenv("STEAM_API_KEY", "")
 if STEAM_API_KEY == "your_steam_api_key_here":
@@ -26,4 +27,9 @@ TARGET_APP_LIST_PATH = os.getenv("TARGET_APP_LIST_PATH", "./data/target_apps.jso
 CRAWLER_OUTPUT = os.getenv("CRAWLER_OUTPUT", "kafka")
 OUTPUT_DIR = os.getenv("CRAWLER_OUTPUT_DIR", "./data/raw")
 CRAWLER_TARGET_LIMIT = int(os.getenv("CRAWLER_TARGET_LIMIT", "1000"))
-CRAWLER_REVIEW_BATCHES = int(os.getenv("CRAWLER_REVIEW_BATCHES", "1"))
+# Số trang review (100 review/trang) tối đa cho mỗi game trong một lượt chạy
+CRAWLER_REVIEW_BATCHES = int(os.getenv("CRAWLER_REVIEW_BATCHES", "10"))
+# Backfill review cũ tới bao nhiêu ngày trước (0 = không giới hạn, lấy hết lịch sử)
+CRAWLER_REVIEW_DAYS = int(os.getenv("CRAWLER_REVIEW_DAYS", "90"))
+
+STEAM_STORE_API_BASE = os.getenv("STEAM_STORE_API_BASE", "https://store.steampowered.com").rstrip("/")

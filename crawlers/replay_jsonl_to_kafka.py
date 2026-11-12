@@ -22,6 +22,17 @@ TOPICS = {
 }
 
 
+# steam.games.meta bị compact theo key: mỗi loại bản ghi metadata cần key riêng (giống crawler)
+META_KEY_SUFFIX = {"steam_store_browse": ":store", "steam_review_histogram": ":histogram"}
+
+
+def record_key(folder, rec):
+    key = str(rec.get("appid"))
+    if folder == "steam_games_meta":
+        key += META_KEY_SUFFIX.get(rec.get("source"), "")
+    return key
+
+
 def iter_files(raw_root: Path, folder: str):
     # cả data/raw/<folder> và data/raw/<sub>/<folder> (retry-*); bỏ file ẩn/.tmp
     for base in [raw_root / folder, *raw_root.glob(f"*/{folder}")]:
@@ -51,7 +62,7 @@ def replay(producer, raw_root: Path, folders, rate: int, limit: int, retime: boo
                         rec["timestamp_updated"] = now
                     rec[ts_field] = now
                     rec["is_replay"] = True
-                producer.send(topic, key=str(rec.get("appid")), value=rec)
+                producer.send(topic, key=record_key(folder, rec), value=rec)
                 sent += 1
                 if rate > 0 and sent % rate == 0:
                     producer.flush()

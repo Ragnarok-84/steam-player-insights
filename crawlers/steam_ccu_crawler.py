@@ -44,6 +44,7 @@ def crawl_ccu(appid: int, producer: SteamKafkaProducer, rate_limiter: RateLimite
             record = {
                 "appid": appid,
                 "timestamp": int(time.time()),
+                "source": "steam_live",
                 "player_count": player_count,
             }
             producer.send(topic=KAFKA_TOPIC_CCU, key=str(appid), value=record)
@@ -55,12 +56,12 @@ def crawl_ccu(appid: int, producer: SteamKafkaProducer, rate_limiter: RateLimite
             return False
 
     except Exception as e:
-        logger.error(f"[AppID {appid}] Error fetching CCU: {e}")
+        logger.error("[AppID %s] CCU request failed (%s)", appid, type(e).__name__)
         return False
 
 def main():
     producer = create_producer()
-    rate_limiter = RateLimiter(default_interval=0.5) # CCU API nhẹ hơn
+    rate_limiter = RateLimiter(default_interval=CRAWLER_RATE_LIMIT_DELAY)
     target_apps = load_target_apps(TARGET_APP_LIST_PATH, CRAWLER_TARGET_LIMIT)
 
     assigned_apps = [

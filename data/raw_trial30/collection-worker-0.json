@@ -1,0 +1,65 @@
+{
+  "started_at": 1794452331,
+  "selected_games": 30,
+  "assigned_games": 30,
+  "start_index": 0,
+  "next_game_index": 30,
+  "sources": [
+    "metadata",
+    "ccu",
+    "reviews"
+  ],
+  "completed_games": 30,
+  "requests": 127,
+  "records": 2768,
+  "failures": 11,
+  "failed_sources": [
+    {
+      "appid": 964150,
+      "source": "ccu"
+    },
+    {
+      "appid": 1585920,
+      "source": "ccu"
+    },
+    {
+      "appid": 2099570,
+      "source": "ccu"
+    },
+    {
+      "appid": 3069460,
+      "source": "ccu"
+    },
+    {
+      "appid": 3635540,
+      "source": "ccu"
+    },
+    {
+      "appid": 4302590,
+      "source": "ccu"
+    },
+    {
+      "appid": 5036760,
+      "source": "ccu"
+    },
+    {
+      "appid": 5140780,
+      "source": "ccu"
+    },
+    {
+      "appid": 5313430,
+      "source": "ccu"
+    },
+    {
+      "appid": 5350290,
+      "source": "ccu"
+    },
+    {
+      "appid": 5358080,
+      "source": "ccu"
+    }
+  ],
+  "status": "finished",
+  "ended_at": 1794452585,
+  "elapsed_seconds": 253.9
+}

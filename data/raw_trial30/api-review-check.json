@@ -1,0 +1,283 @@
+[
+  {
+    "appid": 964150,
+    "http_status": 200,
+    "elapsed_seconds": 0.428,
+    "response_keys": [
+      "query_summary",
+      "cursor",
+      "total_matching"
+    ],
+    "returned_reviews": 0,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "appid": 1585920,
+    "http_status": 200,
+    "elapsed_seconds": 0.36,
+    "response_keys": [
+      "query_summary",
+      "cursor",
+      "total_matching"
+    ],
+    "returned_reviews": 0,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "appid": 1806480,
+    "http_status": 200,
+    "elapsed_seconds": 0.325,
+    "response_keys": [
+      "query_summary",
+      "cursor",
+      "total_matching"
+    ],
+    "returned_reviews": 0,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "appid": 2099570,
+    "http_status": 200,
+    "elapsed_seconds": 0.39,
+    "response_keys": [
+      "query_summary",
+      "cursor",
+      "total_matching"
+    ],
+    "returned_reviews": 0,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "appid": 3069460,
+    "http_status": 200,
+    "elapsed_seconds": 0.388,
+    "response_keys": [
+      "query_summary",
+      "cursor",
+      "total_matching"
+    ],
+    "returned_reviews": 0,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "appid": 3635540,
+    "http_status": 200,
+    "elapsed_seconds": 0.338,
+    "response_keys": [
+      "query_summary",
+      "cursor",
+      "total_matching"
+    ],
+    "returned_reviews": 0,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "appid": 4302590,
+    "http_status": 200,
+    "elapsed_seconds": 0.458,
+    "response_keys": [
+      "query_summary",
+      "cursor",
+      "total_matching"
+    ],
+    "returned_reviews": 0,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "appid": 4659260,
+    "http_status": 200,
+    "elapsed_seconds": 0.592,
+    "response_keys": [
+      "query_summary",
+      "cursor",
+      "total_matching"
+    ],
+    "returned_reviews": 0,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "appid": 5036760,
+    "http_status": 200,
+    "elapsed_seconds": 0.752,
+    "response_keys": [
+      "query_summary",
+      "cursor",
+      "total_matching"
+    ],
+    "returned_reviews": 0,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "appid": 5140780,
+    "http_status": 200,
+    "elapsed_seconds": 0.4,
+    "response_keys": [
+      "query_summary",
+      "cursor",
+      "total_matching"
+    ],
+    "returned_reviews": 0,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "appid": 5313430,
+    "http_status": 200,
+    "elapsed_seconds": 0.396,
+    "response_keys": [
+      "query_summary",
+      "cursor",
+      "total_matching"
+    ],
+    "returned_reviews": 0,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "appid": 5350290,
+    "http_status": 200,
+    "elapsed_seconds": 0.444,
+    "response_keys": [
+      "query_summary",
+      "cursor",
+      "total_matching"
+    ],
+    "returned_reviews": 0,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "appid": 5358080,
+    "http_status": 200,
+    "elapsed_seconds": 0.409,
+    "response_keys": [
+      "query_summary",
+      "cursor",
+      "total_matching"
+    ],
+    "returned_reviews": 0,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "appid": 1205900,
+    "http_status": 200,
+    "elapsed_seconds": 0.408,
+    "response_keys": [
+      "query_summary",
+      "reviews",
+      "cursor",
+      "total_matching"
+    ],
+    "returned_reviews": 1,
+    "total_matching": 655,
+    "query_summary": {
+      "num_reviews": 1,
+      "review_score": 8,
+      "review_score_desc": "Very Positive",
+      "total_positive": 572,
+      "total_negative": 83,
+      "total_reviews": 655
+    }
+  }
+]

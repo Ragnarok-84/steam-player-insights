@@ -70,6 +70,8 @@ services:
   kafka:
     image: apache/kafka:3.9.1
     hostname: kafka
+    # Named volume mới được tạo với quyền root; user mặc định của image (appuser) không ghi được log dir
+    user: "0:0"
     profiles: [streaming]
     environment:
       CLUSTER_ID: MkU3OEVBNTcwNTJENDM2Qk

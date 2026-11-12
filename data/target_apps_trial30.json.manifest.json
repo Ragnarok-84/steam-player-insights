@@ -1,0 +1,11 @@
+{
+  "source": "steam_api",
+  "endpoint": "https://api.steampowered.com/IStoreService/GetAppList/v1/",
+  "retrieved_at": 1794452294,
+  "catalog_games": 200004,
+  "selected_games": 30,
+  "selection": "uniform sample of named games, sorted by appid",
+  "seed": 42,
+  "sha256": "7bc75468dd53dabab47a662b99f6bad2336091f572c16cfd2f17675e9b5bbfcc",
+  "note": "Not a popularity ranking; games may have few or no reviews."
+}

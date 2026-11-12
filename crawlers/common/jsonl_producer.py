@@ -4,7 +4,7 @@ import json
 import os
 import re
 import uuid
-from crawlers.common.public_datasets import replace_file
+from crawlers.common.files import replace_file
 from datetime import datetime, timezone
 from pathlib import Path
 

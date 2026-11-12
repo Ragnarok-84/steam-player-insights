@@ -2,7 +2,13 @@
 
 Triển khai toàn bộ kiến trúc Lambda lên cụm Kubernetes (k3s / kubeadm / GKE / AKS) có ít nhất 3 worker node.
 
-> Phần K8s đã được kiểm tra schema (kubeconform, kể cả CRD Strimzi/ECK/Prometheus). Các thành phần (Spark job, Kafka, ES, Kibana, Hive Metastore 3.1.3 + PostgreSQL) đã chạy thử trong Docker với cùng cấu hình. Chưa chạy thử trên một cụm K8s thật, nên lần triển khai đầu cần theo dõi log từng bước.
+> Phần K8s đã được kiểm tra schema (kubeconform, kể cả CRD Strimzi/ECK/Prometheus). Ngày 12/11/2026, toàn bộ pipeline (crawler → Kafka → B1–B8, S1–S3 → ES → Kibana) đã chạy trên một máy với dữ liệu thật (README mục 4.11). **Chưa chạy trên cụm K8s thật**, nên lần triển khai đầu cần theo dõi log từng bước.
+
+**Trước khi triển khai (code đã đổi ngày 12/11):**
+
+1. Build lại image Spark và crawler, tăng tag, sửa tag trong mọi manifest. Tag `k3s-20261026` chưa có thay đổi ngày 12/11: crawler mới, histogram, B6/B7 mới, ghi ES theo UTC, cutoff hợp nhất.
+2. Thêm CronJob cho `python -m crawlers.collect_local --sources store metadata histogram` (hằng ngày) và `python -m crawlers.update_targets_from_trending` (khi bật vòng phản hồi). `k8s/crawlers/crawler-cronjobs.yaml` mới có CCU, review, appdetails, AppList.
+3. Đưa `data/target_apps.json` (kèm manifest) và `data/crawler_state/reviews_v2/` lên PVC của crawler, để crawl tiếp không trùng (mục 5).
 
 Nếu dùng bộ demo k3s thu gọn, xem [hướng dẫn k3s](../infra/k3s/README.md) và [kiểm thử chịu lỗi](../infra/k3s/FAULT_TEST.md). Các bước dưới dành cho bộ triển khai đầy đủ.
 
@@ -81,7 +87,9 @@ kubectl create secret generic steam-api -n default --from-literal=STEAM_API_KEY=
 
 ## 5. Nạp dữ liệu đã thu thập (JSONL) vào cụm
 
-Chọn một trong hai cách:
+Lấy gói dữ liệu theo README mục 4.3 (cách B). Ngoài raw, chép `data/target_apps.json`, manifest và `data/crawler_state/reviews_v2/` vào PVC `crawler-state-pvc`. Từ đó **chỉ crawler trên cụm được crawl**; dừng vòng thu trên máy cá nhân.
+
+Nạp raw, chọn một trong hai cách:
 
 ```bash
 # Cách 1: chép thẳng vào HDFS raw (batch đọc được ngay)
@@ -95,6 +103,8 @@ kubectl exec -n spark-jobs replay -- env KAFKA_BOOTSTRAP_SERVERS=steam-kafka-clu
   python3 -m crawlers.replay_jsonl_to_kafka --raw /tmp/raw --rate 2000
 kubectl delete pod replay -n spark-jobs
 ```
+
+Cách 2 (replay) giữ timestamp gốc, nên phù hợp nạp vào batch qua B1. Không thêm `--retime` khi nạp dữ liệu thật: tuỳ chọn này đổi thời gian thành hiện tại, chỉ dùng để thử tải (SC3). Demo cảnh báo dùng `pipeline.py inject`.
 
 ## 6. Truy cập giao diện
 

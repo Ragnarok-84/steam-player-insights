@@ -1,27 +1,40 @@
 {
-  "dataset": "FronkonGames/steam-games-dataset",
-  "revision": "78273195a4ffcb60c142b55f7cae52c1e65e28b0",
-  "files": [
+  "source": "steam_api",
+  "endpoints": [
+    "https://api.steampowered.com/IStoreService/GetAppList/v1/",
+    "https://api.steampowered.com/IStoreBrowseService/GetItems/v1/",
+    "https://api.steampowered.com/ISteamChartsService/GetMostPlayedGames/v1/"
+  ],
+  "selected_games": 100,
+  "selection": "group=top_ccu: highest-ranked released games on the Steam most-played chart; group=stratified: seeded random sample of released catalog games with >= min_reviews, equal quota per review-count stratum. Earlier batches are kept unchanged and first.",
+  "batches": [
     {
-      "dataset": "FronkonGames/steam-games-dataset",
-      "config": "default",
-      "split": "train",
-      "url": "https://huggingface.co/datasets/FronkonGames/steam-games-dataset/resolve/78273195a4ffcb60c142b55f7cae52c1e65e28b0/default/train/0000.parquet",
-      "filename": "0000.parquet",
-      "size": 191983414
+      "batch": 1,
+      "retrieved_at": 1794454490,
+      "seed": 42,
+      "min_reviews": 20,
+      "catalog_games": 200009,
+      "added": 100,
+      "top_ccu": 20,
+      "top_ccu_rollup_date": 1794355200,
+      "stratified": {
+        "quota": {
+          "20-99": 20,
+          "100-999": 20,
+          "1k-9.9k": 20,
+          "10k+": 20
+        },
+        "filled": {
+          "20-99": 20,
+          "100-999": 20,
+          "1k-9.9k": 20,
+          "10k+": 20
+        },
+        "topped_up": 0,
+        "probed": 2400
+      }
     }
   ],
-  "artifacts": [
-    {
-      "file": "data\\cache\\catalog\\4b3af91a2290f90d-0000.parquet",
-      "sha256": "775b17f2a5a52b96a8441739cd0dd4939916335b6edeebbfc4a1b238388c5a77",
-      "rows": 124146
-    }
-  ],
-  "retrieved_at": 1791348560,
-  "catalog_rows": 124146,
-  "selected_games": 1000,
-  "ranking": "0.7/(60+review_rank) + 0.3/(60+catalog_peak_ccu_rank)",
-  "excluded": "Software genres (utilities, creative tools, software training and development tools)",
-  "note": "Catalog snapshot popularity, not a live CCU ranking or a historical CCU time series."
+  "sha256": "195d1ea29c31b35c145a7826a29eed7d4dcf466c7b865991140cf8147e748863",
+  "note": "Not representative of the whole catalog: games under min_reviews and unreleased games are excluded."
 }

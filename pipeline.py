@@ -34,6 +34,7 @@ JOBS = {
     "es-setup": "storage.elasticsearch.setup_indices",
     "kibana-setup": "dashboards.setup_kibana",
     "replay": "crawlers.replay_jsonl_to_kafka",
+    "inject": "crawlers.demo_inject",
     "feedback": "crawlers.update_targets_from_trending",
     "applist": "crawlers.steam_applist_crawler",
     "crawl": "crawlers.collect_local",

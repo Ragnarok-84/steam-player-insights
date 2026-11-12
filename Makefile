@@ -13,7 +13,7 @@ ES_FLAG := $(if $(ES),--es,)
 RUN = "$(PYTHON)" pipeline.py --profile $(PROFILE) --raw $(RAW) $(ES_FLAG)
 DOCKER = docker run --rm -it -v "$(CURDIR):/opt/spark/work-dir" $(IMAGE) python3 pipeline.py --profile $(PROFILE) --raw $(RAW) $(ES_FLAG)
 
-JOBS := b1 b2 b3 b4 b5 b6 b7 b8 s1 s2 s3 merge es-setup kibana-setup replay feedback applist crawl
+JOBS := b1 b2 b3 b4 b5 b6 b7 b8 s1 s2 s3 merge es-setup kibana-setup replay inject feedback applist crawl
 .PHONY: help batch sample image docker-batch test $(JOBS)
 
 help:

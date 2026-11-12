@@ -17,7 +17,13 @@ def es_client():
 
 
 def _jsonable(value):
-    if isinstance(value, (datetime.datetime, datetime.date)):
+    if isinstance(value, datetime.datetime):
+        # PySpark trả TimestampType thành datetime không múi giờ theo giờ máy driver/executor; ES coi chuỗi không
+        # múi giờ là UTC, nên phải đổi rõ sang UTC (máy UTC+7 sẽ lệch 7 giờ nếu không đổi).
+        if value.tzinfo is None:
+            value = value.astimezone()
+        return value.astimezone(datetime.timezone.utc).isoformat()
+    if isinstance(value, datetime.date):
         return value.isoformat()
     if isinstance(value, decimal.Decimal):
         return float(value)

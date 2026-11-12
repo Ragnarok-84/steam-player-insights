@@ -23,7 +23,7 @@ CRAWLER_OUTPUT=jsonl
 CRAWLER_OUTPUT_DIR=data/raw
 CRAWLER_TARGET_LIMIT=1000
 CRAWLER_REVIEW_BATCHES=10   # trang review (100 review/trang) tối đa mỗi game mỗi lượt
-CRAWLER_REVIEW_DAYS=90      # backfill review tới N ngày trước; 0 = toàn bộ lịch sử
+CRAWLER_REVIEW_DAYS=0       # backfill review tới N ngày trước; 0 = toàn bộ lịch sử (mặc định trong code: 90)
 ```
 
 `collect_local` luôn ghi JSONL local. Các crawler chạy riêng dùng `CRAWLER_OUTPUT=jsonl|kafka`. Tuỳ chọn CLI ghi đè mặc định từ `.env`. Chạy một worker trên máy cá nhân; nhiều tiến trình sẽ cộng dồn tốc độ request và không được dùng chung state.
@@ -129,7 +129,7 @@ python pipeline.py --profile local batch --raw data/raw --lake data/lake
 
 ## 6. Thu định kỳ
 
-Dùng **cùng** `--state-dir` cho mọi lượt. Chạy tuần tự, tránh chồng tiến trình:
+Dùng **cùng** `--state-dir` cho mọi lượt. Chạy tuần tự, tránh chồng tiến trình. Vòng lặp chạy sẵn cả ba lịch dưới đây nằm ở README mục 4.3 (A6). Vòng lặp chỉ chạy khi máy bật: máy tắt hoặc ngủ thì CCU của khoảng đó bị mất, không lấy lại được, nên cần một máy bật 24/7, VM hoặc CronJob trên cụm.
 
 ```bash
 # CCU: 10–15 phút/lượt, liên tục ≥ 14 ngày để có xu hướng CCU (Steam không có API lịch sử CCU).
@@ -139,6 +139,8 @@ python -u -B -m crawlers.collect_local --sources reviews --max-requests 1500
 # Store, metadata (giá), histogram: hằng ngày.
 python -u -B -m crawlers.collect_local --sources store metadata histogram --max-requests 500
 ```
+
+**Đưa crawler vào Kafka (demo streaming):** đặt `CRAWLER_OUTPUT=kafka` ngay trong lệnh và dùng state riêng (`CURSOR_STATE_DIR=data/crawler_state/stream`), để review đã gửi Kafka không làm lệch tiến độ crawl vào `data/raw`. Xem README mục 4.11.
 
 ```bash
 python -m pytest -q tests/unit/test_steam_collection.py tests/unit/test_review_incremental.py tests/unit/test_text_and_targets.py tests/unit/test_feedback.py

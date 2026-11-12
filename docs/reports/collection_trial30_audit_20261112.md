@@ -1,5 +1,7 @@
 # Kiểm tra dữ liệu crawl thử 30 game — 12/11/2026
 
+> **Cập nhật cùng ngày:** báo cáo này là cơ sở để đổi cách chọn game. Bộ 30 game được thay bằng 100 game: 20 `top_ccu` + 80 lấy mẫu phân tầng, chỉ game đã phát hành và có ≥ 20 review. Kết quả: 100/100 game có review, 92.019 review, 0 trùng; 5 game lớn nhất chiếm 10,6% thay vì 89,7%. Chi tiết ở [collection_guide.md](../collection_guide.md) và [BAO_CAO_TIEN_DO.md](../BAO_CAO_TIEN_DO.md) mục 5. Dữ liệu trial vẫn nằm ở `data/raw_trial30/` để đối chiếu.
+
 Kết luận: dữ liệu raw đủ tốt để kiểm thử xử lý batch trên bộ nhỏ. Các trường hợp không có review đã được đối chiếu trực tiếp với API Steam; không có bằng chứng crawler gọi sai bộ lọc hay làm mất review ở 13 game này. Tuy nhiên, danh sách lấy mẫu từ toàn catalog bao gồm game chưa phát hành và game ít hoạt động, nên bộ này không phù hợp để trình diễn đầy đủ trending/realtime hoặc suy rộng về thị trường Steam.
 
 Lượt crawl: 2026-11-12T09:58:51+07:00 → 2026-11-12T10:03:05+07:00 (giờ Việt Nam); 253.9 giây, 127 request. Dừng vì đã đi hết 30 game, không phải hết hạn 25 phút. Báo cáo chỉ kiểm tra raw và áp dụng thử hàm lọc văn bản Python; chưa chạy toàn bộ B1–B8/S1–S3 trên bộ này.

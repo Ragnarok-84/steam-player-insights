@@ -1,6 +1,6 @@
 # Các quyết định xây dựng và triển khai
 
-Ghi lại các lựa chọn nhóm đã chốt, kèm lý do, để thành viên mới không phải hỏi lại. Khi đổi một quyết định, sửa mục tương ứng và ghi ngày đổi. Bản thiết kế gốc: `BigData.pdf`. Phân tích tài nguyên: `van_de_va_giai_phap_ha_tang.md`.
+Ghi lại các lựa chọn nhóm đã chốt, kèm lý do, để thành viên mới không phải hỏi lại. Khi đổi một quyết định, sửa mục tương ứng và ghi ngày đổi. Bản thiết kế gốc: `BigData.pdf`. Phân tích tài nguyên: [van_de_va_giai_phap_ha_tang.md](van_de_va_giai_phap_ha_tang.md). Tiến độ: [BAO_CAO_TIEN_DO.md](BAO_CAO_TIEN_DO.md), [PLAN.md](PLAN.md).
 
 Cập nhật lần cuối: 2026-11-12.
 
@@ -14,13 +14,13 @@ Cập nhật lần cuối: 2026-11-12.
 - Khi cần dịch vụ, dùng `scripts/demo.sh` với `compose.demo.yaml` và **bật từng nhóm một**: `batch` (HDFS), `streaming` (Kafka), `dashboard` (ES + Kibana). Mỗi container giới hạn 1 GB RAM.
 - Thử logic trên dữ liệu mẫu trước: `python tests/make_sample_data.py` (có sẵn review bombing, CCU spike, đợt giảm giá).
 
-**Lý do:** đã kiểm chứng ngày 2026-10-26 trên WSL 7,6 GB RAM: B2→B8 và S2 (`--source file`) chạy thành công trên 30 game × 21 ngày. Chỉ bật toàn bộ hệ thống trên K8s mới cần nhiều RAM.
+**Lý do:** đã kiểm chứng ngày 2026-10-26 trên WSL 7,6 GB RAM (B2→B8 và S2 trên dữ liệu mẫu), và ngày 2026-11-12 trên WSL 8 GB với dữ liệu thật 100 game: batch B2→B8 ghi ES, Kafka → S1–S3 → ES, Kibana D1–D4 (README mục 4.11). Chỉ bật toàn bộ hệ thống trên K8s mới cần nhiều RAM.
 
 | Việc | Cần bật | RAM ước tính |
 | --- | --- | --- |
 | Batch layer trên dữ liệu thật | Spark local | 2–3 GB |
-| Dashboard Kibana (`pipeline.py batch --es`) | ES + Kibana | 4–5 GB |
-| Streaming với Kafka (`replay`, `s1`–`s3`) | Kafka 1 broker + Spark | 3–4 GB |
+| Dashboard Kibana (`pipeline.py batch --es`) | ES + Kibana | 4–5 GB (đo 12/11: ES khoảng 0,8 GB, Kibana khoảng 0,5 GB, cộng Spark) |
+| Streaming với Kafka (`s1`–`s3`) | Kafka 1 broker + Spark | 3–4 GB (đo 12/11: Kafka khoảng 0,3 GB, mỗi job khoảng 1 GB) |
 | Crawl, backfill | Python | < 0,5 GB |
 
 ### 1.2. Cụm phân tán trên Google Cloud, chạy theo buổi
@@ -41,7 +41,7 @@ Cập nhật lần cuối: 2026-11-12.
 
 ## 2. Cấu hình thu gọn so với thiết kế gốc
 
-Theo `van_de_va_giai_phap_ha_tang.md`. Đây là cấu hình đang dùng trong `k8s/fault-test`; báo cáo phải ghi rõ các điểm khác thiết kế.
+Theo [van_de_va_giai_phap_ha_tang.md](van_de_va_giai_phap_ha_tang.md). Đây là cấu hình đang dùng trong `k8s/fault-test`; báo cáo phải ghi rõ các điểm khác thiết kế.
 
 | Thành phần | Thiết kế gốc | Đang dùng | Ghi chú |
 | --- | --- | --- | --- |
@@ -50,7 +50,7 @@ Theo `van_de_va_giai_phap_ha_tang.md`. Đây là cấu hình đang dùng trong `
 | Elasticsearch | 3 node, 1 replica | 1 node, 0 replica | Chưa kiểm thử FT4/SC4 |
 | Hive Metastore | Có | Chưa triển khai | Truy vấn ad-hoc bằng Spark SQL trên Parquet (`createOrReplaceTempView`); job tự đăng ký bảng nếu sau này có Metastore |
 | Prometheus/Grafana | Có | Chưa triển khai | Tạm dùng `kubectl top` và Kafka consumer lag |
-| Quy mô | 1.000–2.000 game, 20–30 GB | 1.000 game (tối đa 2.000), mục tiêu 10–20 GB | Cần ≥ 14 ngày dữ liệu cho B6/B7 |
+| Quy mô | 1.000–2.000 game, 20–30 GB | Demo: 100 game (từ 12/11). Sau buổi báo cáo tiến độ mở rộng khoảng 1.000 game (tối đa 2.000) | Danh sách chỉ mở rộng, crawl tăng dần; cần ≥ 14 ngày dữ liệu cho B6/B7 |
 
 ## 3. Quy ước code và vận hành
 
@@ -59,28 +59,39 @@ Theo `van_de_va_giai_phap_ha_tang.md`. Đây là cấu hình đang dùng trong `
 - **Tham số job:** `--raw`, `--clean`, `--curated` là **thư mục gốc**, không trỏ tới thư mục con của từng nguồn.
 - **Chạy lại an toàn:** B1 lưu offset; B2–B8 tính lại từ dữ liệu nguồn và ghi đè. Không cần đổi thư mục đầu ra khi chạy lại.
 - **Ghi Elasticsearch:** dùng Python client (`processing/common/es_writer.py`), không dùng connector JVM. Bật bằng `WRITE_ES=1` hoặc `--es-nodes`. Mapping chuẩn ở `storage/elasticsearch/indices_mapping.json`; mapping demo (`infra/demo/elasticsearch-indices.json`) sinh từ mapping chuẩn với 1 shard / 0 replica.
-- **Image Spark cho k3s:** image chứa bản sao code tại thời điểm build. **Mỗi khi `processing/` thay đổi phải build lại và tăng tag** (dạng `k3s-YYYYMMDD`), sửa tag ở mọi manifest. Tag hiện tại: `localhost/steam-spark-demo:k3s-20261026`.
+- **Image Spark cho k3s:** image chứa bản sao code tại thời điểm build. **Mỗi khi `processing/` hoặc `crawlers/` thay đổi phải build lại và tăng tag** (dạng `k3s-YYYYMMDD`), sửa tag ở mọi manifest. Tag hiện tại: `localhost/steam-spark-demo:k3s-20261026` — **cũ hơn code ngày 12/11, phải build lại trước khi lên cụm**.
+- **Thời gian:** mọi mốc lưu trữ và ghi ES theo UTC. Baseline CCU theo khung giờ UTC.
+- **Sự kiện demo:** chỉ bơm qua `pipeline.py inject` (`source=demo_injection`). B2 loại các bản ghi này. Không dùng `replay --retime` để demo realtime, vì nó dồn review cũ vào hiện tại và làm game nhỏ trông như bị bombing; chỉ dùng để thử tải (SC3).
 - **Phân tích văn bản:** chỉ phân tích nội dung review tiếng Anh (VADER, từ điển khía cạnh, TF-IDF); ngôn ngữ khác chỉ dùng nhãn `voted_up`.
 
 ## 4. Thứ tự công việc đã thống nhất
 
-1. **Máy cá nhân:** chạy pipeline trên dữ liệu thật và sửa lỗi; dựng dashboard Kibana D1–D4 và export saved objects (ndjson); cho crawler chạy hằng ngày, backfill dữ liệu lịch sử.
+1. **Máy cá nhân:** chạy pipeline trên dữ liệu thật và sửa lỗi; dựng dashboard Kibana D1–D4 (xong 12/11); cho vòng thu chạy liên tục trên một máy bật 24/7 (đang làm).
 2. **Trước khi bật cloud:** viết manifest Job/Deployment trên k3s cho B1–B8 và S1–S3 (hiện mới có B2 và smoke), để thời gian trên cloud chỉ dùng để chạy.
 3. **Trên cloud, theo buổi:** dựng cụm 4 VM, chạy trọn pipeline, chạy FT/SC theo `infra/k3s/FAULT_TEST.md`, lưu kết quả vào `tests/results/`, chụp màn hình và quay video. Tắt VM sau mỗi buổi.
 4. **Bàn giao:** notebook, `docs/architecture.md`, trả lời 5 câu hỏi §1.3 bằng số liệu, báo cáo, slide, video.
 
 ## 5. Chưa chốt, cần hỏi giảng viên
 
-Theo mục 6 của `van_de_va_giai_phap_ha_tang.md`:
+Theo mục 6 của [van_de_va_giai_phap_ha_tang.md](van_de_va_giai_phap_ha_tang.md):
 
 1. Bỏ Hive Metastore, dùng Spark SQL đọc trực tiếp Parquet có được chấp nhận không?
 2. Cụm k3s trên VM cloud và máy cá nhân nối qua VPN có được xem là "mô phỏng môi trường phân tán" không?
 3. "Không dùng Docker" có cấm cả container runtime trong K8s (containerd của k3s) và Compose dùng để thử local không?
-4. Quy mô 1.000–2.000 game và 10–20 GB dữ liệu có đủ không?
+4. Bộ demo 100 game và mục tiêu khoảng 1.000 game, chỉ lấy từ API Steam (không dùng dataset ngoài), có đủ không?
 5. Giảm HDFS replication 3 → 2 và Elasticsearch 3 → 1 node có ảnh hưởng điểm phần kiểm thử chịu lỗi không?
 
 ## 6. Nguồn thu thập dữ liệu (2026-11-12)
 
 **Chốt:** chỉ thu thập trực tiếp qua API Steam, dùng cấu hình `.env`. Không dùng Hugging Face, Kaggle hay SteamSpy, kể cả để chọn danh sách game. Review lịch sử lấy bằng phân trang API Steam. Mỗi game có cùng hạn mức số trang trong một lượt; không bù số lượng bằng dataset ngoài.
 
-**Cập nhật cách chọn game:** lấy mẫu đều trên toàn catalog cho ~70% game có dưới 20 review và ~29% game chưa phát hành (lần thử 30 game: 13 game không có review, 11 game lỗi CCU). Danh sách mới gồm nhóm `top_ccu` (bảng most-played chính thức của Steam) và nhóm `stratified` (mẫu có seed, đã lọc game đã phát hành và ≥ 20 review, chia đều 4 tầng số review). Ghi rõ trong báo cáo: nhóm `top_ccu` là game phổ biến, nhóm `stratified` không đại diện cho game dưới ngưỡng. Danh sách chỉ được mở rộng, không xáo lại; review crawl tăng dần nên lần thu lớn sau dùng lại toàn bộ dữ liệu đã có. Tag lấy từ `IStoreBrowseService/GetItems`, số review theo ngày từ `appreviewhistogram` thay cho SteamSpy. Raw/lake cũ trộn nguồn được lưu riêng trong `data/legacy_nonsteam/`, không dùng cho kết quả mới.
+**Cập nhật cách chọn game:** lấy mẫu đều trên toàn catalog cho ~70% game có dưới 20 review và ~29% game chưa phát hành (lần thử 30 game: 13 game không có review, 11 game lỗi CCU). Danh sách mới gồm nhóm `top_ccu` (bảng most-played chính thức của Steam) và nhóm `stratified` (mẫu có seed, đã lọc game đã phát hành và ≥ 20 review, chia đều 4 tầng số review). Ghi rõ trong báo cáo: nhóm `top_ccu` là game phổ biến, nhóm `stratified` không đại diện cho game dưới ngưỡng. Danh sách chỉ được mở rộng, không xáo lại; review crawl tăng dần nên lần thu lớn sau dùng lại toàn bộ dữ liệu đã có. Tag lấy từ `IStoreBrowseService/GetItems`, số review theo ngày từ `appreviewhistogram` thay cho SteamSpy. Raw/lake cũ trộn nguồn không dùng cho kết quả mới; nếu máy nào còn, chuyển vào `data/legacy_nonsteam/`.
+
+## 7. Giai đoạn dữ liệu (2026-11-12)
+
+**Chốt:**
+1. **Báo cáo tiến độ:** demo với 100 game cố định; vòng phản hồi tắt.
+2. **Sau báo cáo:** thu liên tục và mở rộng danh sách (khoảng 1.000 game).
+3. **Gần ngày bảo vệ:** bật vòng phản hồi, mỗi ngày thêm tối đa 5 game đang lên trên bảng most-played.
+
+Chỉ một nơi crawl tại một thời điểm; chuyển nơi crawl thì mang theo `data/crawler_state`.

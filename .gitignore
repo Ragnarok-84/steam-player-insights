@@ -30,6 +30,9 @@ data/clean/
 data/curated/
 data/cache/
 data/crawler_state/
+data/logs/
+data/kafka_demo_raw/
+data/kafka_demo_lake/
 *.parquet
 *.gz
 *.tar.gz

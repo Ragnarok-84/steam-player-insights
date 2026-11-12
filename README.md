@@ -4,6 +4,7 @@ Hệ thống phân tích trải nghiệm người chơi game trên Steam theo **
 
 - Nhận dữ liệu từ Drive, chạy batch, streaming và dashboard: [quy trình tại mục 4](#4-quy-trình-xử-lý-và-chạy-code).
 - Linux/WSL2, Conda/venv và HDFS local: [hướng dẫn chi tiết](docs/local_setup_guide.md).
+- Mục lục toàn bộ tài liệu: [docs/README.md](docs/README.md). Tiến độ: [docs/BAO_CAO_TIEN_DO.md](docs/BAO_CAO_TIEN_DO.md), [docs/PLAN.md](docs/PLAN.md).
 - Quyết định của nhóm: [docs/decisions.md](docs/decisions.md).
 - Thu thập dữ liệu: [docs/collection_guide.md](docs/collection_guide.md).
 - Kiến trúc chi tiết: [docs/architecture.md](docs/architecture.md).
@@ -72,7 +73,8 @@ steam-player-insights/
 ├── scripts/                     # setup_cluster.sh, deploy_all.sh, teardown.sh
 ├── tests/                       # unit/, scalability/ (SC1–SC4), fault_tolerance/ (FT1–FT6), make_sample_data.py
 ├── notebooks/                   # 01 EDA, 02 cảm xúc & khía cạnh, 03 scalability & fault tolerance
-└── docs/                        # architecture, deployment_guide, collection_guide
+└── docs/                        # tài liệu viết: mục lục docs/README.md, báo cáo tiến độ, kế hoạch, quyết định,
+                                 #   kiến trúc, thu thập, cài đặt, triển khai, reports/
 ```
 
 ---
@@ -409,7 +411,7 @@ python pipeline.py --profile local batch --raw data/raw --lake data/lake --es
 
 `init-es` tạo 15 index theo mapping demo (1 shard, 0 replica). `kibana-setup` tạo dashboard; `batch --es` chạy lại batch, ghi kết quả vào ES và hợp nhất view. Chỉ tạo index/dashboard thì chưa có dữ liệu. Có thể đổi raw/lake sang bộ mẫu để thử nhẹ trước. Lệnh `pipeline.py es-setup` dùng mapping chuẩn cho cụm; với Compose một ES node, dùng `init-es` như trên.
 
-Mở <http://localhost:5601> → Dashboards:
+Mở <http://localhost:5601/app/dashboards> → Dashboards:
 
 | Dashboard | Nội dung |
 | --- | --- |
@@ -490,6 +492,7 @@ docker run --rm -v "${PWD}:/opt/spark/work-dir" steam-spark:dev python3 pipeline
 | `batch` | B2 → B5 → B3 → B4 → B6 → B7 → B8; `--es` ghi ES và merge; `--skip b8` bỏ phân cụm |
 | `b1` … `b8`, `s1`, `s2`, `s3` | Chạy từng job; tham số riêng đặt sau `--` |
 | `es-setup`, `kibana-setup`, `merge` | Tạo index chuẩn, tạo dashboard, hợp nhất batch/realtime |
+| `inject` | Bơm tình huống demo có nhãn (`bombing`, `ccu-spike`) vào Kafka; batch tự loại các bản ghi này |
 | `replay`, `crawl`, `applist`, `feedback` | Replay vào Kafka, crawl local, lấy danh sách app, thêm game đang lên trên bảng most-played của Steam vào danh sách theo dõi (chỉ thêm, không xoá) |
 
 Tuỳ chọn chung: `--profile local|cluster`, `--raw`, `--lake`. Với profile `cluster`, đường dẫn kho lấy từ các biến `HDFS_*`; `--raw`/`--lake` của pipeline không thay thế cấu hình cụm. Muốn xem tham số một job, ví dụ: `python -m processing.batch.b2_clean_raw --help`. Makefile là lối tắt gọi pipeline, ví dụ `make batch`, `make s2 ARGS="--source file"`.
@@ -505,6 +508,94 @@ Tuỳ chọn chung: `--profile local|cluster`, `--raw`, `--lake`. Với profile 
 | Streaming không đọc lại file/message | Job nhớ tiến độ trong checkpoint; dùng checkpoint mới cho lượt thử mới, Kafka `starting-offsets` chỉ áp dụng khi chưa có checkpoint |
 
 Muốn thu thêm dữ liệu/API key: làm theo [docs/collection_guide.md](docs/collection_guide.md). Không cần API key để xử lý bộ raw đã nhận.
+
+### 4.11. Demo toàn hệ thống trên một máy (dữ liệu thật 100 game)
+
+Toàn bộ luồng dưới đây đã chạy thử ngày 12/11/2026 trên WSL2 với 8 GB RAM: Steam → Kafka → Spark (batch + streaming) → Elasticsearch → Kibana. Cần Docker Desktop bật WSL Integration (mục 4.7) và dữ liệu ở `data/raw` (mục 4.3). Mở **một terminal**, kích hoạt môi trường Python, đứng ở gốc repo.
+
+**Bước 1. Dịch vụ và biến môi trường** (lần đầu tải image khoảng 4 GB):
+
+```bash
+bash scripts/demo.sh up streaming      # Kafka + 4 topic
+bash scripts/demo.sh up dashboard      # Elasticsearch + Kibana
+bash scripts/demo.sh init-es           # 15 index
+
+export SPARK_MASTER='local[4]' SPARK_DRIVER_MEMORY=2g SPARK_SHUFFLE_PARTITIONS=8 WRITE_ES=0 HIVE_METASTORE_URI_LOCAL=''
+export PYSPARK_PYTHON="$(command -v python)" PYSPARK_DRIVER_PYTHON="$(command -v python)"
+export KAFKA_BOOTSTRAP_SERVERS=localhost:9092
+export ELASTICSEARCH_HOSTS=http://localhost:9200 ELASTICSEARCH_USER='' ELASTICSEARCH_PASSWORD='' KIBANA_HOST=http://localhost:5601
+```
+
+**Bước 2. Batch layer → ES + dashboard** (khoảng 12 phút; B5 phân tích cảm xúc chậm nhất):
+
+```bash
+python pipeline.py kibana-setup
+python pipeline.py --profile local batch --raw data/raw --lake data/lake --es
+```
+
+Mở <http://localhost:5601/app/dashboards>: **D1** tổng quan, **D2** chi tiết game (gõ `appid:730` vào ô tìm kiếm), **D4** trending. Lệnh `batch --es` tự chạy bước hợp nhất (merge) ở cuối.
+
+**Bước 3. Speed layer S1–S3** (chạy nền, log ở `data/logs/`):
+
+```bash
+bash scripts/demo.sh stream-start --reset   # --reset: đọc lại Kafka từ đầu, xoá view realtime/cảnh báo cũ
+bash scripts/demo.sh stream-status
+```
+
+**Bước 4. Đưa dữ liệu thật vào Kafka** (D3 sẽ có số liệu sau khoảng 1 phút):
+
+```bash
+# CCU hiện tại của 100 game, gọi thẳng Steam (khoảng 3 phút)
+CRAWLER_OUTPUT=kafka python -m crawlers.steam_ccu_crawler
+# Review mới nhất trong 24 giờ qua; state riêng để không ảnh hưởng crawl vào data/raw (khoảng 5 phút)
+CRAWLER_OUTPUT=kafka CURSOR_STATE_DIR=data/crawler_state/stream CRAWLER_REVIEW_DAYS=1 CRAWLER_REVIEW_BATCHES=2 \
+  python -m crawlers.steam_reviews_crawler
+```
+
+**Bước 5. Bơm tình huống để demo cảnh báo** (D4, sau khoảng 1 phút):
+
+```bash
+python pipeline.py inject -- bombing --appid 730 --count 80          # S2 → REVIEW_BOMBING
+python pipeline.py inject -- ccu-spike --appid 730 --factor 3        # S3 → CCU_SPIKE
+```
+
+Sự kiện bơm vào có `source=demo_injection`; B2 loại chúng nên batch và dashboard batch không bị ảnh hưởng. S3 so CCU với baseline **cùng khung giờ UTC**. Nếu lệnh `ccu-spike` báo chưa có baseline cho giờ hiện tại, thu một lượt CCU rồi tính lại baseline (khoảng 5 phút). Khi vòng lặp CCU (mục 4.3, A6) đã chạy ít nhất 24 giờ thì không cần bước này:
+
+```bash
+python -u -B -m crawlers.collect_local --sources ccu --max-requests 300
+python pipeline.py --profile local b2 --raw data/raw --lake data/lake -- --only ccu
+python pipeline.py --profile local b7 --raw data/raw --lake data/lake
+```
+
+**Bước 6 (tùy chọn). B1 và hợp nhất Lambda:**
+
+```bash
+python pipeline.py --profile local b1 --raw data/kafka_demo_raw --lake data/kafka_demo_lake -- --topic all
+python pipeline.py merge
+```
+
+B1 chép Kafka xuống raw riêng (`data/kafka_demo_raw`). Không ghi vào `data/raw`, vì Kafka có thể chứa dữ liệu replay đã đổi timestamp. `merge` xoá các số liệu realtime mà batch đã bao phủ (trước 00:00 UTC của ngày mới nhất trong batch), giữ realtime của hôm nay.
+
+**Kết thúc / trước buổi demo sau:**
+
+```bash
+bash scripts/demo.sh stream-stop
+bash scripts/demo.sh stop dashboard; bash scripts/demo.sh stop streaming   # giữ volume
+bash scripts/demo.sh reset-kafka     # trước demo: bỏ dữ liệu thử tải (SC3) / replay còn trong Kafka
+```
+
+**Kết quả lần chạy thử 12/11/2026:**
+
+| Hạng mục | Kết quả |
+| --- | --- |
+| Batch B2→B8 + ghi ES | Xong; 19.861 dòng game/ngày, 34.725 review tìm kiếm, 100 game phân cụm |
+| Trending (B6) | Dùng số review/ngày của Steam (histogram); ví dụ ROB RUN: 21.899 review/7 ngày so với 637 tuần trước |
+| Kibana | 18/19 panel có dữ liệu. Panel "tác động giảm giá" trống đúng: cần ít nhất 2 snapshot giá liên tiếp quan sát được lúc bắt đầu sale |
+| Streaming | 3.501 review thật + 100 CCU thật; không có cảnh báo giả. Hai tình huống bơm vào đều được phát hiện |
+| Cảnh báo trên dữ liệu thật | Overwatch: 10 review tiêu cực/giờ so với mức thường 2,4 ± 1,6. Luật 3σ trên số đếm nhỏ thỉnh thoảng bắt những cụm như vậy; ngưỡng chỉnh qua `S2_SIGMA`, `S2_MIN_NEGATIVE` |
+| Kiểm thử chạy thử 1 máy | FT6 PASS; SC1, SC3, SC4 chạy được (kết quả trong `tests/results/`). Số đo chính thức cần cụm (mục 5) |
+
+**RAM:** Kafka 1 GB + ES/Kibana 2 GB + ba job streaming khoảng 1 GB mỗi job. Khi chạy batch, dừng streaming (`stream-stop`) nếu máy dưới 12 GB. `replay --retime` dồn review cũ vào thời điểm hiện tại, nên chỉ dùng cho thử tải (SC3); nó sẽ làm game nhỏ trông như bị bombing. Grafana D5 theo dõi hạ tầng cụm qua Prometheus, nên chỉ có trên Kubernetes.
 
 ---
 

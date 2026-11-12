@@ -47,7 +47,11 @@ CCU_SCHEMA = StructType([
     StructField("appid", IntegerType(), True),
     StructField("timestamp", LongType(), True),
     StructField("player_count", IntegerType(), True),
+    StructField("source", StringType(), True),
 ])
+
+# Sự kiện bơm vào Kafka để demo cảnh báo (crawlers/demo_inject.py): chỉ cho speed layer, không vào batch
+DEMO_SOURCE = "demo_injection"
 
 APPDETAILS_SCHEMA = StructType([
     StructField("appid", IntegerType(), True),
@@ -125,6 +129,7 @@ def clean_reviews(spark, raw_root: str, clean_root: str):
         .filter(col("recommendationid").isNotNull() & col("appid").isNotNull() & col("timestamp_created").isNotNull())
         .withColumn("timestamp_updated", coalesce(col("timestamp_updated"), col("timestamp_created")))
         .withColumn("source", coalesce(col("source"), lit("steam_live")))
+        .filter(col("source") != DEMO_SOURCE)
     )
     # Upsert: giữ bản sửa mới nhất, hoà thì giữ bản nhập sau
     dedup = latest_per_key(parsed, ["recommendationid"], ["timestamp_updated", "ingest_timestamp"])
@@ -176,6 +181,8 @@ def clean_ccu(spark, raw_root: str, clean_root: str):
     ccu = (
         raw.select(from_json(col("value"), CCU_SCHEMA).alias("d")).select("d.*")
         .filter(col("appid").isNotNull() & col("timestamp").isNotNull() & col("player_count").isNotNull())
+        .filter(coalesce(col("source"), lit("steam_live")) != DEMO_SOURCE)
+        .drop("source")
         .dropDuplicates(["appid", "timestamp"])
         .withColumn("ts", from_unixtime(col("timestamp")).cast("timestamp"))
         .withColumn("dt", to_date(col("ts")))
@@ -243,6 +250,8 @@ def clean_games(spark, raw_root: str, clean_root: str):
         daily = (latest_per_key(daily, ["appid", "day_ts"], ["snapshot_ts"])
                  .withColumn("dt", to_date(from_unixtime(col("day_ts"))))
                  .withColumn("reviews_total", col("reviews_up") + col("reviews_down"))
+                 # Ngày chứa thời điểm lấy snapshot mới đếm được một phần
+                 .withColumn("is_partial", col("dt") >= to_date(from_unixtime(col("snapshot_ts"))))
                  .drop("day_ts"))
         write_table(spark, daily, f"{clean_root}/review_daily_counts", "clean_review_daily_counts")
 

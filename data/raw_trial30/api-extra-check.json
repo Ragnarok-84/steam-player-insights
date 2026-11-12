@@ -1,0 +1,67 @@
+[
+  {
+    "kind": "reviews_include_offtopic",
+    "appid": 1806480,
+    "http_status": 200,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "kind": "reviews_include_offtopic",
+    "appid": 4659260,
+    "http_status": 200,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "kind": "reviews_include_offtopic",
+    "appid": 964150,
+    "http_status": 200,
+    "total_matching": 0,
+    "query_summary": {
+      "num_reviews": 0,
+      "review_score": 0,
+      "review_score_desc": "No user reviews",
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_reviews": 0
+    }
+  },
+  {
+    "kind": "ccu_public_no_key",
+    "appid": 964150,
+    "http_status": 404,
+    "response": null
+  },
+  {
+    "kind": "ccu_public_no_key",
+    "appid": 1585920,
+    "http_status": 404,
+    "response": null
+  },
+  {
+    "kind": "ccu_public_no_key",
+    "appid": 1806480,
+    "http_status": 200,
+    "response": {
+      "response": {
+        "player_count": 0,
+        "result": 1
+      }
+    }
+  }
+]

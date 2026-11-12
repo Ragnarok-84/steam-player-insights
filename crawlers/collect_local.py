@@ -1,4 +1,13 @@
-"""A bounded local collection pass over the selected games; no Kafka required."""
+"""A bounded local collection pass over the selected games; no Kafka required.
+
+Sources (default all):
+  store      GetItems in batches of 200: tags+weights, review summary, release/early access (1 + n/200 requests)
+  metadata   appdetails: price, genres, categories, developers, platforms, DLC, achievements ...
+  histogram  daily up/down review counts for the last ~30 days
+  ccu        current players (one snapshot per run; schedule runs to build a time series)
+  reviews    incremental: new reviews since the last run, then history backfill to --review-days
+Re-running never re-emits a review already collected under the same --state-dir.
+"""
 import argparse
 import logging
 import time
@@ -6,33 +15,56 @@ from pathlib import Path
 
 from crawlers import steam_app_details_crawler as metadata
 from crawlers import steam_ccu_crawler as ccu
+from crawlers import steam_review_histogram_crawler as histogram
 from crawlers import steam_reviews_crawler as reviews
-from crawlers import steamspy_crawler as steamspy
-from crawlers.common.cursor_manager import CursorManager
+from crawlers.config import (TARGET_APP_LIST_PATH, CRAWLER_TARGET_LIMIT, OUTPUT_DIR, STATE_DIR,
+                             CRAWLER_RATE_LIMIT_DELAY, CRAWLER_REVIEW_BATCHES, CRAWLER_REVIEW_DAYS,
+                             CRAWLER_WORKER_ID, CRAWLER_TOTAL_WORKERS, KAFKA_TOPIC_META)
+from crawlers.common import steam_store
 from crawlers.common.jsonl_producer import JsonlProducer
-from crawlers.common.public_datasets import write_json
+from crawlers.common.files import write_json
 from crawlers.common.rate_limiter import RateLimiter, RequestBudgetExceeded
+from crawlers.common.review_state import ReviewStateStore
 from crawlers.common.targets import load_target_apps, is_assigned_to_worker
+
+SOURCES = ['store', 'metadata', 'histogram', 'ccu', 'reviews']
+PER_GAME = ['metadata', 'histogram', 'ccu', 'reviews']
+
+
+def collect_store(apps, producer, limiter):
+    """Batched store snapshot for all assigned games. Returns the appids Steam did not return."""
+    tag_names = steam_store.fetch_tag_names(limiter)
+    items = steam_store.fetch_store_items(apps, limiter)
+    now = time.time()
+    for appid in apps:
+        if appid in items and items[appid].get('success') == 1:
+            # Distinct key per record type: steam.games.meta is log-compacted by key
+            producer.send(KAFKA_TOPIC_META, f'{appid}:store', steam_store.parse_store_item(items[appid], tag_names, now))
+    producer.flush()
+    return [a for a in apps if a not in items or items[a].get('success') != 1]
 
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--targets', default='data/target_apps.json')
-    parser.add_argument('--limit', type=int, default=1000)
-    parser.add_argument('--sources', nargs='+', choices=['metadata', 'ccu', 'reviews', 'steamspy'], default=['metadata', 'ccu', 'reviews'])
-    parser.add_argument('--output-dir', default='data/raw')
-    parser.add_argument('--state-dir', default='data/crawler_state')
-    parser.add_argument('--interval', type=float, default=1.5)
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument('--targets', default=TARGET_APP_LIST_PATH)
+    parser.add_argument('--limit', type=int, default=CRAWLER_TARGET_LIMIT)
+    parser.add_argument('--sources', nargs='+', choices=SOURCES, default=SOURCES)
+    parser.add_argument('--output-dir', default=OUTPUT_DIR)
+    parser.add_argument('--state-dir', default=STATE_DIR)
+    parser.add_argument('--interval', type=float, default=CRAWLER_RATE_LIMIT_DELAY)
     parser.add_argument('--max-requests', type=int, default=3000)
-    parser.add_argument('--review-batches', type=int, default=1)
+    parser.add_argument('--review-pages', dest='review_batches', type=int,
+                        default=CRAWLER_REVIEW_BATCHES, help='Review pages (100 reviews) per game per run')
+    parser.add_argument('--review-days', type=int, default=CRAWLER_REVIEW_DAYS,
+                        help='Backfill reviews created within this many days (0 = full history)')
     parser.add_argument('--max-consecutive-errors', type=int, default=5)
-    parser.add_argument('--worker-id', type=int, default=0)
-    parser.add_argument('--workers', type=int, default=1)
+    parser.add_argument('--worker-id', type=int, default=CRAWLER_WORKER_ID)
+    parser.add_argument('--workers', type=int, default=CRAWLER_TOTAL_WORKERS)
     parser.add_argument('--start-index', type=int, default=0,
                         help='Skip this many games assigned to the worker; use next_game_index from an interrupted pass')
     args = parser.parse_args()
-    if args.review_batches < 1 or args.max_consecutive_errors < 1:
-        parser.error('Review batches and consecutive error limit must be positive')
+    if args.review_batches < 1 or args.max_consecutive_errors < 1 or args.review_days < 0:
+        parser.error('Review pages and consecutive error limit must be positive; review days >= 0')
     all_apps = load_target_apps(args.targets, args.limit)
     apps = [a for a in all_apps if is_assigned_to_worker(a, args.worker_id, args.workers)]
     assigned_count = len(apps)
@@ -41,20 +73,32 @@ def main():
     apps = apps[args.start_index:]
     limiter = RateLimiter(args.interval, max_requests=args.max_requests)
     producer = JsonlProducer(args.output_dir)
-    state = CursorManager(str(Path(args.state_dir) / 'reviews_v1'))
+    state = ReviewStateStore(str(Path(args.state_dir) / reviews.REVIEW_STATE_SUBDIR))
+    since = reviews.since_from_days(args.review_days)
     started = time.time()
     stats = {'started_at': int(started), 'selected_games': len(all_apps), 'assigned_games': assigned_count,
              'start_index': args.start_index, 'next_game_index': args.start_index, 'sources': args.sources,
+             'review_pages': args.review_batches, 'review_since_ts': since,
              'completed_games': 0, 'requests': 0, 'records': 0, 'failures': 0, 'failed_sources': [], 'status': 'running'}
     path = Path(args.output_dir) / f'collection-worker-{args.worker_id}.json'
     errors = 0
-    functions = {'metadata': metadata.crawl_app_details, 'ccu': ccu.crawl_ccu, 'steamspy': steamspy.crawl_steamspy}
+    functions = {'metadata': metadata.crawl_app_details, 'ccu': ccu.crawl_ccu,
+                 'histogram': histogram.crawl_review_histogram}
     write_json(path, stats)
     try:
+        if 'store' in args.sources and apps:
+            try:
+                missing = collect_store(apps, producer, limiter)
+            except RuntimeError as exc:
+                logging.error('Store snapshot failed: %s', exc)
+                missing = list(apps)
+            stats['failures'] += len(missing)
+            stats['failed_sources'] += [{'appid': a, 'source': 'store'} for a in missing]
         for appid in apps:
-            for source in args.sources:
+            for source in [s for s in PER_GAME if s in args.sources]:
                 if source == 'reviews':
-                    ok = reviews.crawl_reviews_for_app(appid, producer, limiter, state, max_batches=args.review_batches)
+                    ok = reviews.crawl_reviews_for_app(appid, producer, limiter, state,
+                                                       max_pages=args.review_batches, since_ts=since)
                 else:
                     ok = functions[source](appid, producer, limiter)
                 producer.flush()

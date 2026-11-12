@@ -67,3 +67,6 @@ data/sample_raw/
 data/bench/
 
 data/sample_lake/
+
+# Old mixed-source collection retained only for recovery
+data/legacy_nonsteam/

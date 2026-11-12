@@ -1,4 +1,4 @@
-# Crawler CronJob (namespace default). CCU 10 phút, review 30 phút, appdetails/SteamSpy hằng ngày, AppList hằng tuần.
+# Crawler CronJob (namespace default). CCU 10 phút, review 30 phút, appdetails hằng ngày, AppList hằng tuần.
 # CCU/review/appdetails chạy 2 worker song song (Indexed Job, chia game theo appid % 2).
 # API key: kubectl create secret generic steam-api --from-literal=STEAM_API_KEY=<key>
 # PVC ReadWriteMany cần storage class hỗ trợ (vd. NFS / Longhorn); với local-path đặt WORKERS=1.
@@ -178,51 +178,6 @@ spec:
       completionMode: Indexed
       completions: 2
       parallelism: 2
----
-apiVersion: batch/v1
-kind: CronJob
-metadata:
-  name: steam-steamspy-crawler
-  namespace: default
-spec:
-  schedule: 0 3 * * *
-  concurrencyPolicy: Forbid
-  jobTemplate:
-    spec:
-      backoffLimit: 2
-      template:
-        spec:
-          restartPolicy: OnFailure
-          containers:
-          - name: steam-steamspy-crawler
-            image: steam-crawler:1.0.0
-            imagePullPolicy: IfNotPresent
-            command:
-            - python
-            - -m
-            - crawlers.steamspy_crawler
-            env:
-            - name: KAFKA_BOOTSTRAP_SERVERS
-              value: steam-kafka-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092
-            - name: CRAWLER_OUTPUT
-              value: kafka
-            - name: CRAWLER_TOTAL_WORKERS
-              value: '1'
-            - name: CRAWLER_TARGET_LIMIT
-              value: '2000'
-            - name: STEAM_API_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: steam-api
-                  key: STEAM_API_KEY
-                  optional: true
-            resources:
-              requests:
-                cpu: 250m
-                memory: 256Mi
-              limits:
-                cpu: 250m
-                memory: 256Mi
 ---
 apiVersion: batch/v1
 kind: CronJob

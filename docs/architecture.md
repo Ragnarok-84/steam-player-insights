@@ -5,7 +5,7 @@ Hệ thống theo kiến trúc Lambda: dữ liệu đi qua Kafka, chia hai nhán
 ## 1. Luồng dữ liệu
 
 ```
-Steam Reviews / AppDetails / CCU / SteamSpy / AppList      Dữ liệu lịch sử (backfill)
+Reviews / AppDetails / Store / Histogram / CCU / AppList   Dữ liệu lịch sử (backfill)
             │ crawlers/* (CronJob, chia worker theo appid % N)      │ crawlers/replay_jsonl_to_kafka.py
             ▼                                                       ▼
    Kafka: steam.reviews.raw (6p) · steam.players.ccu (3p) · steam.games.meta (3p, compacted) · steam.alerts (1p)
@@ -28,7 +28,7 @@ Steam Reviews / AppDetails / CCU / SteamSpy / AppList      Dữ liệu lịch s�
             Kibana D1–D4 · Grafana D5 · Spark SQL ad-hoc · Jupyter
 ```
 
-Vòng phản hồi: `crawlers/update_targets_from_trending.py` thêm top trending vào `data/target_apps.json`. Ngưỡng cảnh báo đọc từ biến môi trường hoặc ConfigMap.
+Vòng phản hồi: `crawlers/update_targets_from_trending.py` (`pipeline.py feedback`) thêm game **đang lên** trên bảng most-played của Steam (mới vào top hoặc tăng hạng so với tuần trước) vào `data/target_apps.json`, nhóm `feedback`. Tín hiệu lấy từ Steam vì B6 chỉ xếp hạng game đã theo dõi. Chỉ thêm, không xoá; lượt crawl sau tự lấy dữ liệu game mới. Ngưỡng cảnh báo đọc từ biến môi trường hoặc ConfigMap.
 
 ## 2. Thứ tự job batch và lý do
 
@@ -47,7 +47,8 @@ Vòng phản hồi: `crawlers/update_targets_from_trending.py` thêm top trendin
 | Raw | `/steam/raw/steam_{reviews_raw,players_ccu,games_meta}/dt=` | — | JSON Lines gzip. Trùng layout với `crawlers.collect_local`, nên dữ liệu crawl local dùng thẳng được |
 | Clean | `clean/reviews/dt=` | `recommendationid` | Giữ bản `timestamp_updated` mới nhất. Có `is_english`, `is_suspicious` và `suspicious_reason` |
 | Clean | `clean/ccu/dt=` | `(appid, timestamp)` | Thêm `ts`, `hour` |
-| Clean | `clean/games`, `clean/games_history` | `appid` / `(appid, timestamp)` | Gộp appdetails với SteamSpy (tags, owners). Có `price_bucket` |
+| Clean | `clean/games`, `clean/games_history` | `appid` / `(appid, timestamp)` | Gộp appdetails với snapshot store của Steam (tag + trọng số, tổng review, early access). Có `price_bucket` |
+| Clean | `clean/review_daily_counts` | `(appid, dt)` | Số review up/down theo ngày từ histogram Steam, giữ snapshot mới nhất mỗi ngày |
 | Curated | `game_daily_stats` | `(appid, dt)` | review, % tích cực, giờ chơi trung vị, cảm xúc TB, CCU TB/đỉnh, tên/thể loại/giá |
 | Curated | `game_period_stats`, `segment_stats`, `language_stats` | — | rollup tuần/tháng; thể loại / nhà phát triển / khoảng giá |
 | Curated | `aspect_stats`, `review_sentiment`, `keywords` | — | B5 |

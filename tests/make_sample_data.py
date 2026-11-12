@@ -83,10 +83,19 @@ def main():
                          "price": round(19.99 * (1 - discount / 100), 2), "initial_price": 19.99,
                          "discount_percent": discount, "currency": "USD", "release_date": "Jan 1, 2020",
                          "platforms": {"windows": True}, "metacritic_score": None, "required_age": 0,
-                         "timestamp": day_start + 3600})
-            meta.append({"appid": appid, "name": f"Sample Game {appid}", "developer": f"Studio {appid % 4}",
-                         "owners_range": "100,000 .. 200,000", "average_forever": 600, "median_forever": 300,
-                         "tags": {"Action": 100, "Multiplayer": 50}, "source": "steamspy", "timestamp": day_start + 7200})
+                         "dlc_count": appid % 3, "achievements_total": 20, "supported_languages_count": 5,
+                         "source": "steam_live", "timestamp": day_start + 3600})
+            tags = [["Action", "RPG", "Indie", "Strategy"][appid % 4], "Multiplayer"]
+            meta.append({"appid": appid, "name": f"Sample Game {appid}", "review_count": 1000 + appid,
+                         "percent_positive": 80, "review_score": 8, "review_score_label": "Very Positive",
+                         "steam_release_ts": 1577836800, "is_coming_soon": False, "is_early_access": False,
+                         "tags": tags, "tag_weights": {t: 100 - 50 * i for i, t in enumerate(tags)},
+                         "steam_deck_compat": 2, "source": "steam_store_browse", "timestamp": day_start + 7200})
+            day_reviews = [r for r in reviews if r["appid"] == appid and day_start <= r["timestamp_created"] < day_start + 86400]
+            up = sum(1 for r in day_reviews if r["voted_up"])
+            meta.append({"appid": appid, "daily": [{"date": day_start, "up": up, "down": len(day_reviews) - up}],
+                         "rollups": [], "rollup_type": "month", "count_all_reviews": False,
+                         "source": "steam_review_histogram", "timestamp": day_start + 7200})
         write(root, "steam_reviews_raw", dt, reviews)
         write(root, "steam_players_ccu", dt, ccu)
         write(root, "steam_games_meta", dt, meta)

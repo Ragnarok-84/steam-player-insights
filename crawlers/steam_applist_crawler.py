@@ -1,59 +1,69 @@
-"""Tải danh sách toàn bộ app Steam (hằng tuần) qua IStoreService/GetAppList — cần STEAM_API_KEY.
-
-Ghi data/applist.json: [{"appid": ..., "name": ..., "last_modified": ...}, ...]
-"""
+"""Fetch the game catalog directly from Steam using STEAM_API_KEY from .env."""
 import argparse
 import json
 import logging
 import time
-from pathlib import Path
 
 import requests
 
-from crawlers.config import STEAM_API_KEY, STEAM_WEB_API_BASE
-from crawlers.common.public_datasets import replace_file
+from crawlers.config import STEAM_API_KEY, STEAM_WEB_API_BASE, CRAWLER_RATE_LIMIT_DELAY
+from crawlers.common.files import write_json
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
-logger = logging.getLogger("SteamAppListCrawler")
+logger = logging.getLogger(__name__)
 URL = f"{STEAM_WEB_API_BASE}/IStoreService/GetAppList/v1/"
 
 
-def fetch_all(max_pages: int = 100, page_size: int = 50000, interval: float = 1.0):
+def fetch_all(max_pages=100, page_size=50000, interval=CRAWLER_RATE_LIMIT_DELAY):
     if not STEAM_API_KEY:
-        raise SystemExit("STEAM_API_KEY chưa được đặt trong .env")
-    apps, last_appid = [], 0
+        raise ValueError("STEAM_API_KEY chưa được đặt trong .env")
+    if max_pages < 1 or not 1 <= page_size <= 50000 or interval < 0:
+        raise ValueError("Invalid catalog page limit, page size or interval")
+    apps, last_appid = {}, 0
     for _ in range(max_pages):
-        params = {"key": STEAM_API_KEY, "max_results": page_size, "last_appid": last_appid,
-                  "include_games": "true", "include_dlc": "false", "include_software": "false"}
+        params = {"key": STEAM_API_KEY, "input_json": json.dumps({
+            "max_results": page_size, "last_appid": last_appid,
+            "include_games": True, "include_dlc": False, "include_software": False,
+            "include_videos": False, "include_hardware": False})}
         for attempt in range(5):
-            resp = requests.get(URL, params=params, timeout=60)
+            try:
+                resp = requests.get(URL, params=params, timeout=60)
+            except requests.RequestException:
+                raise RuntimeError("Steam catalog request failed; check network configuration") from None
             if resp.status_code == 429 or resp.status_code >= 500:
-                wait = 30 * (2 ** attempt)
-                logger.warning("HTTP %s, retry in %ss", resp.status_code, wait)
-                time.sleep(wait)
+                if attempt < 4:
+                    time.sleep(30 * 2**attempt)
                 continue
-            resp.raise_for_status()
+            if resp.status_code != 200:
+                # Requests exceptions include the URL and key. Never expose them.
+                raise RuntimeError(f"Steam catalog returned HTTP {resp.status_code}")
             break
         else:
-            raise RuntimeError("GetAppList failed after retries")
-        body = resp.json().get("response", {})
-        apps.extend(body.get("apps", []))
-        logger.info("Fetched %s apps so far", len(apps))
+            raise RuntimeError("Steam catalog failed after retries")
+        body = resp.json().get("response")
+        if not isinstance(body, dict) or not isinstance(body.get("apps"), list) or not body['apps']:
+            raise ValueError("Invalid or empty Steam catalog response")
+        for app in body['apps']:
+            appid = int(app['appid'])
+            if appid <= 0:
+                raise ValueError("Steam catalog returned invalid appid")
+            apps[appid] = {**app, 'appid': appid}
+        logger.info("Fetched %s Steam games", len(apps))
         if not body.get("have_more_results"):
-            break
-        last_appid = body["last_appid"]
+            return sorted(apps.values(), key=lambda a: a['appid'])
+        next_appid = int(body['last_appid'])
+        if next_appid <= last_appid:
+            raise ValueError("Steam catalog pagination did not advance")
+        last_appid = next_appid
         time.sleep(interval)
-    return apps
+    raise RuntimeError("Steam catalog is incomplete: max_pages reached; no targets written")
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", default="data/applist.json")
+    parser.add_argument('--output', default='data/applist.json')
     args = parser.parse_args()
-    apps = fetch_all()
-    out = Path(args.output)
-    out.parent.mkdir(parents=True, exist_ok=True)
-    tmp = out.with_name("." + out.name + ".tmp")
-    tmp.write_text(json.dumps(apps, ensure_ascii=False), encoding="utf-8")
-    replace_file(tmp, out)
-    logger.info("Saved %s apps to %s", len(apps), out)
+    write_json(args.output, fetch_all())
+
+
+if __name__ == '__main__':
+    main()

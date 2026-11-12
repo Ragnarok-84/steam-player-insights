@@ -1,7 +1,9 @@
+import re
 import time
 import requests
 import logging
 from crawlers.config import (
+    STEAM_STORE_API_BASE,
     KAFKA_TOPIC_META,
     CRAWLER_WORKER_ID,
     CRAWLER_TOTAL_WORKERS,
@@ -17,7 +19,23 @@ from crawlers.common.jsonl_producer import create_producer
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 logger = logging.getLogger("SteamAppDetailsCrawler")
 
-BASE_APPDETAILS_URL = "https://store.steampowered.com/api/appdetails"
+BASE_APPDETAILS_URL = f"{STEAM_STORE_API_BASE}/api/appdetails"
+
+
+def _int(value):
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return 0
+
+
+def _language_count(html):
+    # "English<strong>*</strong>, French, German<br>..." -> 3
+    if not html:
+        return 0
+    text = re.sub(r"<br>.*$", "", html, flags=re.S)
+    text = re.sub(r"<[^>]+>|\*", "", text)
+    return len([p for p in text.split(",") if p.strip()])
 
 def crawl_app_details(appid: int, producer: SteamKafkaProducer, rate_limiter: RateLimiter):
     rate_limiter.wait()
@@ -58,10 +76,19 @@ def crawl_app_details(appid: int, producer: SteamKafkaProducer, rate_limiter: Ra
             "discount_percent": price_overview.get("discount_percent", 0) if price_overview else 0,
             "currency": price_overview.get("currency", "USD") if price_overview else "USD",
             "release_date": release_date.get("date"),
+            "coming_soon": release_date.get("coming_soon", False),
             "platforms": details.get("platforms", {}),
             "metacritic_score": metacritic.get("score"),
-            "required_age": details.get("required_age", 0),
+            "required_age": _int(details.get("required_age")),
+            "controller_support": details.get("controller_support"),
+            "dlc_count": len(details.get("dlc") or []),
+            "achievements_total": (details.get("achievements") or {}).get("total", 0),
+            "recommendations_total": (details.get("recommendations") or {}).get("total"),
+            "supported_languages_count": _language_count(details.get("supported_languages")),
+            "content_descriptor_ids": (details.get("content_descriptors") or {}).get("ids") or [],
+            "short_description": details.get("short_description"),
             "timestamp": int(time.time()),
+            "source": "steam_live",
         }
 
         producer.send(topic=KAFKA_TOPIC_META, key=str(appid), value=record)

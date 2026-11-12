@@ -2,7 +2,7 @@
 
 Ghi lại các lựa chọn nhóm đã chốt, kèm lý do, để thành viên mới không phải hỏi lại. Khi đổi một quyết định, sửa mục tương ứng và ghi ngày đổi. Bản thiết kế gốc: `BigData.pdf`. Phân tích tài nguyên: `van_de_va_giai_phap_ha_tang.md`.
 
-Cập nhật lần cuối: 2026-10-26.
+Cập nhật lần cuối: 2026-11-12.
 
 ## 1. Môi trường làm việc
 
@@ -78,3 +78,9 @@ Theo mục 6 của `van_de_va_giai_phap_ha_tang.md`:
 3. "Không dùng Docker" có cấm cả container runtime trong K8s (containerd của k3s) và Compose dùng để thử local không?
 4. Quy mô 1.000–2.000 game và 10–20 GB dữ liệu có đủ không?
 5. Giảm HDFS replication 3 → 2 và Elasticsearch 3 → 1 node có ảnh hưởng điểm phần kiểm thử chịu lỗi không?
+
+## 6. Nguồn thu thập dữ liệu (2026-11-12)
+
+**Chốt:** chỉ thu thập trực tiếp qua API Steam, dùng cấu hình `.env`. Không dùng Hugging Face, Kaggle hay SteamSpy, kể cả để chọn danh sách game. Review lịch sử lấy bằng phân trang API Steam. Mỗi game có cùng hạn mức số trang trong một lượt; không bù số lượng bằng dataset ngoài.
+
+**Cập nhật cách chọn game:** lấy mẫu đều trên toàn catalog cho ~70% game có dưới 20 review và ~29% game chưa phát hành (lần thử 30 game: 13 game không có review, 11 game lỗi CCU). Danh sách mới gồm nhóm `top_ccu` (bảng most-played chính thức của Steam) và nhóm `stratified` (mẫu có seed, đã lọc game đã phát hành và ≥ 20 review, chia đều 4 tầng số review). Ghi rõ trong báo cáo: nhóm `top_ccu` là game phổ biến, nhóm `stratified` không đại diện cho game dưới ngưỡng. Danh sách chỉ được mở rộng, không xáo lại; review crawl tăng dần nên lần thu lớn sau dùng lại toàn bộ dữ liệu đã có. Tag lấy từ `IStoreBrowseService/GetItems`, số review theo ngày từ `appreviewhistogram` thay cho SteamSpy. Raw/lake cũ trộn nguồn được lưu riêng trong `data/legacy_nonsteam/`, không dùng cho kết quả mới.

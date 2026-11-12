@@ -5,7 +5,7 @@ from pyspark.sql.types import (
 )
 from pyspark.sql.functions import (
     col, from_json, row_number, udf, to_date, from_unixtime, hour, lit, coalesce,
-    get_json_object, count, when, length, lower, sha2, concat_ws
+    get_json_object, count, when, length, lower, sha2, concat_ws, explode
 )
 from pyspark.sql.window import Window
 from processing.common.spark_utils import (
@@ -24,15 +24,21 @@ REVIEW_SCHEMA = StructType([
     StructField("votes_up", IntegerType(), True),
     StructField("votes_funny", IntegerType(), True),
     StructField("weighted_vote_score", DoubleType(), True),
+    StructField("comment_count", IntegerType(), True),
     StructField("steam_purchase", BooleanType(), True),
     StructField("received_for_free", BooleanType(), True),
+    StructField("refunded", BooleanType(), True),
     StructField("written_during_early_access", BooleanType(), True),
+    StructField("primarily_steam_deck", BooleanType(), True),
+    StructField("timestamp_dev_responded", LongType(), True),
     StructField("author_steamid", StringType(), True),
     StructField("num_games_owned", IntegerType(), True),
     StructField("num_reviews", IntegerType(), True),
     StructField("playtime_forever", DoubleType(), True),
     StructField("playtime_at_review", DoubleType(), True),
     StructField("playtime_last_two_weeks", DoubleType(), True),
+    StructField("deck_playtime_at_review", DoubleType(), True),
+    StructField("last_played", LongType(), True),
     StructField("ingest_timestamp", LongType(), True),
     StructField("source", StringType(), True),
 ])
@@ -57,19 +63,41 @@ APPDETAILS_SCHEMA = StructType([
     StructField("discount_percent", IntegerType(), True),
     StructField("currency", StringType(), True),
     StructField("release_date", StringType(), True),
+    StructField("coming_soon", BooleanType(), True),
     StructField("platforms", MapType(StringType(), BooleanType()), True),
     StructField("metacritic_score", IntegerType(), True),
+    StructField("required_age", IntegerType(), True),
+    StructField("controller_support", StringType(), True),
+    StructField("dlc_count", IntegerType(), True),
+    StructField("achievements_total", IntegerType(), True),
+    StructField("recommendations_total", LongType(), True),
+    StructField("supported_languages_count", IntegerType(), True),
+    StructField("content_descriptor_ids", ArrayType(IntegerType()), True),
+    StructField("short_description", StringType(), True),
     StructField("timestamp", LongType(), True),
 ])
 
-STEAMSPY_SCHEMA = StructType([
+# Snapshot IStoreBrowseService/GetItems (source=steam_store_browse): tag chính thức của Steam, tổng review
+STORE_SCHEMA = StructType([
     StructField("appid", IntegerType(), True),
-    StructField("owners_range", StringType(), True),
-    StructField("average_forever", IntegerType(), True),
-    StructField("median_forever", IntegerType(), True),
-    StructField("positive_reviews_total", LongType(), True),
-    StructField("negative_reviews_total", LongType(), True),
-    StructField("tags", MapType(StringType(), LongType()), True),
+    StructField("review_count", LongType(), True),
+    StructField("percent_positive", IntegerType(), True),
+    StructField("review_score", IntegerType(), True),
+    StructField("review_score_label", StringType(), True),
+    StructField("steam_release_ts", LongType(), True),
+    StructField("is_early_access", BooleanType(), True),
+    StructField("tags", ArrayType(StringType()), True),
+    StructField("tag_weights", MapType(StringType(), LongType()), True),
+    StructField("steam_deck_compat", IntegerType(), True),
+    StructField("timestamp", LongType(), True),
+])
+
+# Histogram review theo ngày (source=steam_review_histogram)
+_POINT = StructType([StructField("date", LongType(), True), StructField("up", LongType(), True),
+                     StructField("down", LongType(), True)])
+HISTOGRAM_SCHEMA = StructType([
+    StructField("appid", IntegerType(), True),
+    StructField("daily", ArrayType(_POINT), True),
     StructField("timestamp", LongType(), True),
 ])
 
@@ -160,18 +188,20 @@ def clean_ccu(spark, raw_root: str, clean_root: str):
 
 def clean_games(spark, raw_root: str, clean_root: str):
     """
-    B2c: metadata. Topic meta chứa 2 loại bản ghi (appdetails và SteamSpy, source=steamspy).
-    - games_history: mọi snapshot appdetails (giá/giảm giá theo thời gian, dùng cho B6)
-    - games: snapshot mới nhất mỗi appid, gộp tags/owners từ SteamSpy
+    B2c: metadata. Topic meta chứa 3 loại bản ghi theo trường source:
+    - steam_live (appdetails) -> games_history: mọi snapshot (giá/giảm giá theo thời gian, dùng cho B6)
+    - steam_store_browse      -> tag + trọng số, tổng review, early access (snapshot mới nhất gộp vào games)
+    - steam_review_histogram  -> review_daily_counts: số review up/down theo ngày, giữ snapshot mới nhất mỗi (appid, ngày)
+    games = snapshot appdetails mới nhất mỗi appid + snapshot store mới nhất.
     """
     raw = read_raw_json_lines(spark, raw_root, "steam.games.meta")
     if raw is None:
         print(f"No raw metadata under {raw_root}; skip.")
         return
-    tagged = raw.withColumn("_source", coalesce(get_json_object(col("value"), "$.source"), lit("appdetails")))
+    tagged = raw.withColumn("_source", coalesce(get_json_object(col("value"), "$.source"), lit("steam_live")))
 
     details = (
-        tagged.filter(col("_source") == "appdetails")
+        tagged.filter(col("_source") == "steam_live")
         .select(from_json(col("value"), APPDETAILS_SCHEMA).alias("d")).select("d.*")
         .filter(col("appid").isNotNull() & col("timestamp").isNotNull())
         .dropDuplicates(["appid", "timestamp"])
@@ -179,16 +209,16 @@ def clean_games(spark, raw_root: str, clean_root: str):
     )
     write_table(spark, details, f"{clean_root}/games_history", "clean_games_history")
 
-    spy = (
-        tagged.filter(col("_source") == "steamspy")
-        .select(from_json(col("value"), STEAMSPY_SCHEMA).alias("d")).select("d.*")
-        .filter(col("appid").isNotNull())
+    store = (
+        tagged.filter(col("_source") == "steam_store_browse")
+        .select(from_json(col("value"), STORE_SCHEMA).alias("d")).select("d.*")
+        .filter(col("appid").isNotNull() & col("timestamp").isNotNull())
     )
-    spy_latest = latest_per_key(spy, ["appid"], ["timestamp"]).drop("timestamp")
+    store_latest = latest_per_key(store, ["appid"], ["timestamp"]).drop("timestamp")
     latest = latest_per_key(details, ["appid"], ["timestamp"])
 
     games = (
-        latest.join(spy_latest, "appid", "full_outer")
+        latest.join(store_latest, "appid", "full_outer")
         .withColumn("price_bucket",
                     when(coalesce(col("is_free"), lit(False)) | (coalesce(col("price"), lit(0.0)) == 0), "free")
                     .when(col("price") < 10, "<10$")
@@ -199,6 +229,22 @@ def clean_games(spark, raw_root: str, clean_root: str):
     out = f"{clean_root}/games"
     print(f"Writing clean games to {out}...")
     write_table(spark, games, out, "clean_games")
+
+    hist = tagged.filter(col("_source") == "steam_review_histogram")
+    if hist.limit(1).count():
+        daily = (
+            hist.select(from_json(col("value"), HISTOGRAM_SCHEMA).alias("d")).select("d.*")
+            .filter(col("appid").isNotNull() & col("timestamp").isNotNull())
+            .select("appid", "timestamp", explode("daily").alias("p"))
+            .select("appid", col("timestamp").alias("snapshot_ts"), col("p.date").alias("day_ts"),
+                    col("p.up").alias("reviews_up"), col("p.down").alias("reviews_down"))
+        )
+        # Ngày cuối trong snapshot cũ còn đang chạy; snapshot mới nhất của mỗi ngày là số đầy đủ nhất
+        daily = (latest_per_key(daily, ["appid", "day_ts"], ["snapshot_ts"])
+                 .withColumn("dt", to_date(from_unixtime(col("day_ts"))))
+                 .withColumn("reviews_total", col("reviews_up") + col("reviews_down"))
+                 .drop("day_ts"))
+        write_table(spark, daily, f"{clean_root}/review_daily_counts", "clean_review_daily_counts")
 
 
 if __name__ == "__main__":

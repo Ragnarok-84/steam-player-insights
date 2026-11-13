@@ -1,0 +1,13 @@
+label,es_nodes,concurrency,query,count,qps,p50_ms,p95_ms,p99_ms,errors,green_wait_s
+local1node_smoke,1,4,ALL,4552,303.5,5.3,64.4,76.2,0,
+local1node_smoke,1,4,alerts,878,58.5,5.1,64.4,74.2,,
+local1node_smoke,1,4,aspects,951,63.4,5.1,62.3,77.6,,
+local1node_smoke,1,4,daily_by_game,891,59.4,5.8,63.3,75.1,,
+local1node_smoke,1,4,fulltext,932,62.1,5.8,66.6,81.2,,
+local1node_smoke,1,4,top_ccu,900,60.0,5.1,64.4,74.0,,
+local1node_smoke,1,16,ALL,7117,474.5,12.9,65.5,87.4,0,
+local1node_smoke,1,16,alerts,1405,93.7,12.4,64.7,81.5,,
+local1node_smoke,1,16,aspects,1486,99.1,11.9,63.4,94.5,,
+local1node_smoke,1,16,daily_by_game,1426,95.1,14.4,67.5,84.2,,
+local1node_smoke,1,16,fulltext,1389,92.6,13.3,67.7,89.4,,
+local1node_smoke,1,16,top_ccu,1411,94.1,12.5,64.3,93.1,,

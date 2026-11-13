@@ -38,6 +38,8 @@ data/kafka_demo_lake/
 *.tar.gz
 *.zip
 *.csv
+# Kết quả đo dùng chung (tests/results/README.md) được commit
+!tests/results/**/*.csv
 *.jsonl
 *.log
 

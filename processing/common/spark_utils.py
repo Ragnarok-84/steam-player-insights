@@ -44,9 +44,16 @@ def get_spark_session(app_name: str = "SteamDataPipeline", master: str = None) -
     if packages:
         builder = builder.config("spark.jars.packages", packages)
 
+    if os.name == "nt" and not os.getenv("HADOOP_HOME"):
+        from pathlib import Path
+        local_hadoop = Path(__file__).resolve().parents[2] / ".hadoop"
+        if (local_hadoop / "bin" / "winutils.exe").exists():
+            os.environ["HADOOP_HOME"] = str(local_hadoop)
+
     builder = (
         builder.config("spark.sql.streaming.checkpointLocation", CHECKPOINT_PATH)
         .config("spark.sql.sources.partitionOverwriteMode", "dynamic")
+        .config("spark.hadoop.io.native.lib.available", "false")
         .config("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
         .config("spark.sql.adaptive.enabled", "true")
         .config("spark.sql.adaptive.coalescePartitions.enabled", "true")
@@ -82,10 +89,22 @@ def _fs_for(spark, path: str):
 
 
 def path_exists(spark, path: str) -> bool:
-    """Kiểm tra đường dẫn (hỗ trợ glob) qua Hadoop FileSystem, đúng với mọi scheme: hdfs://, file://, không scheme."""
-    fs, hpath = _fs_for(spark, path)
-    matches = fs.globStatus(hpath)
-    return matches is not None and len(matches) > 0
+    """Kiểm tra đường dẫn (hỗ trợ glob) qua Hadoop FileSystem hoặc Python glob cho local file."""
+    # Trên local filesystem (file:// hoặc không có scheme), dùng glob/exists của Python
+    # để tránh UnsatisfiedLinkError: NativeIO$Windows.access0 trên môi trường Windows.
+    if path.startswith("file:") or ("://" not in path and not path.startswith("hdfs:")):
+        from urllib.parse import urlparse, unquote
+        import glob
+        local_path = unquote(urlparse(path).path) if path.startswith("file:") else path
+        if len(local_path) >= 3 and local_path[0] in ("/", "\\") and local_path[2] == ":":
+            local_path = local_path[1:]
+        return len(glob.glob(local_path)) > 0 or os.path.exists(local_path)
+    try:
+        fs, hpath = _fs_for(spark, path)
+        matches = fs.globStatus(hpath)
+        return matches is not None and len(matches) > 0
+    except Exception:
+        return False
 
 
 def existing_paths(spark, patterns):

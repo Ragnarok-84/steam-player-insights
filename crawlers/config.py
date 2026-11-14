@@ -32,4 +32,8 @@ CRAWLER_REVIEW_BATCHES = int(os.getenv("CRAWLER_REVIEW_BATCHES", "10"))
 # Backfill review cũ tới bao nhiêu ngày trước (0 = không giới hạn, lấy hết lịch sử)
 CRAWLER_REVIEW_DAYS = int(os.getenv("CRAWLER_REVIEW_DAYS", "90"))
 
+# Cấu hình buffer và flush batch cho crawler local JSONL
+CRAWLER_FLUSH_MAX_RECORDS = int(os.getenv("CRAWLER_FLUSH_MAX_RECORDS", "500"))
+CRAWLER_FLUSH_INTERVAL_SEC = float(os.getenv("CRAWLER_FLUSH_INTERVAL_SEC", "60"))
+
 STEAM_STORE_API_BASE = os.getenv("STEAM_STORE_API_BASE", "https://store.steampowered.com").rstrip("/")

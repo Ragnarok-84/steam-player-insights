@@ -92,7 +92,6 @@ def crawl_app_details(appid: int, producer: SteamKafkaProducer, rate_limiter: Ra
         }
 
         producer.send(topic=KAFKA_TOPIC_META, key=str(appid), value=record)
-        producer.flush()
         logger.info(f"[AppID {appid}] Successfully fetched metadata: {record['name']}")
         return True
 
@@ -114,6 +113,8 @@ def main():
     for appid in assigned_apps:
         crawl_app_details(appid, producer, rate_limiter)
 
+    if hasattr(producer, "flush_all"):
+        producer.flush_all()
     producer.close()
 
 if __name__ == "__main__":

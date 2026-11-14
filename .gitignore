@@ -45,6 +45,7 @@ data/kafka_demo_lake/
 
 # Checkpoints
 .checkpoint/
+.hadoop/
 spark-warehouse/
 metastore_db/
 derby.log

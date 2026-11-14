@@ -1,0 +1,21 @@
+{
+  "started_at": 1794670617,
+  "selected_games": 100,
+  "assigned_games": 100,
+  "start_index": 0,
+  "next_game_index": 0,
+  "sources": [
+    "ccu",
+    "reviews"
+  ],
+  "review_pages": 10,
+  "review_since_ts": 1786894617,
+  "completed_games": 0,
+  "requests": 115,
+  "records": 1599,
+  "failures": 0,
+  "failed_sources": [],
+  "status": "request_budget_reached",
+  "ended_at": 1794670806,
+  "elapsed_seconds": 189.7
+}

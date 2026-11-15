@@ -652,7 +652,7 @@ Kiểm thử offline observer/benchmark k3s: `python -m pytest tests/infrastruct
 | Loại | Lệnh | Ghi chú |
 | --- | --- | --- |
 | Unit | `python -m pytest tests/unit` (hoặc chạy trong image) | Luật S2/S3, B4, crawler, vòng phản hồi |
-| SC1/SC2 batch | `python tests/scalability/sc1_sc2_batch_benchmark.py --mode local` (hoặc `k8s`) | Executor 1/2/4/6; dữ liệu 1/2/5/10x |
+| SC1/SC2 batch | `python tests/scalability/sc1_sc2_batch_benchmark.py --scales 100 500 1000 --executors 1 2 4 --runs 3` (`--profile k3s` trên cụm) | B2→B8, tách `spark_startup`; raw `data/scale/raw_{scale}`; CSV thô + summary (trung vị, speedup) |
 | SC3 streaming | `python tests/scalability/sc3_streaming_load_test.py --brokers <kafka> --label p6_e4` | Thông lượng, consumer lag, thời gian micro-batch |
 | SC4 serving | `python tests/scalability/sc4_es_query_load.py --label es3 --wait-green` | p50/p95/p99 khi ES tăng từ 2 lên 3 node |
 | FT1–FT5 | `./tests/fault_tolerance/chaos_test_scenarios.sh ft1` … `ft5 <node>` | **Xoá pod / drain node thật**; chỉ chạy trên cụm thử nghiệm |

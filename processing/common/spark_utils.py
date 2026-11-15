@@ -44,16 +44,9 @@ def get_spark_session(app_name: str = "SteamDataPipeline", master: str = None) -
     if packages:
         builder = builder.config("spark.jars.packages", packages)
 
-    if os.name == "nt" and not os.getenv("HADOOP_HOME"):
-        from pathlib import Path
-        local_hadoop = Path(__file__).resolve().parents[2] / ".hadoop"
-        if (local_hadoop / "bin" / "winutils.exe").exists():
-            os.environ["HADOOP_HOME"] = str(local_hadoop)
-
     builder = (
         builder.config("spark.sql.streaming.checkpointLocation", CHECKPOINT_PATH)
         .config("spark.sql.sources.partitionOverwriteMode", "dynamic")
-        .config("spark.hadoop.io.native.lib.available", "false")
         .config("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
         .config("spark.sql.adaptive.enabled", "true")
         .config("spark.sql.adaptive.coalescePartitions.enabled", "true")

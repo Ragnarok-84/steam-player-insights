@@ -1,8 +1,10 @@
 import argparse
 from pyspark.sql.functions import (
-    col, from_json, window, count, when, avg, round as spark_round, to_timestamp, lit
+    col, from_json, window, count, when, avg, round as spark_round, to_timestamp, lit, max as spark_max
 )
-from processing.common.spark_utils import get_spark_session, read_stream, add_stream_args, attach_progress_logger, CHECKPOINT_PATH
+from processing.common.spark_utils import (
+    get_spark_session, read_stream, add_stream_args, attach_progress_logger, with_e2e_latency, CHECKPOINT_PATH
+)
 from processing.common.es_writer import es_enabled, write_es
 from processing.batch.b2_clean_raw import REVIEW_SCHEMA
 
@@ -15,6 +17,7 @@ def window_agg(events, duration: str, slide: str, label: str):
             count(when(col("voted_up"), 1)).alias("positive_count_window"),
             count(when(~col("voted_up"), 1)).alias("negative_count_window"),
             spark_round(avg(when(col("voted_up"), 1.0).otherwise(0.0)) * 100, 2).alias("positive_ratio_percent"),
+            spark_max("kafka_ts").alias("ingest_ts_max"),
         )
         .select(col("window.start").alias("window_start"), col("window.end").alias("window_end"),
                 lit(label).alias("window_size"), lit("reviews").alias("metric_type"), "*")
@@ -40,7 +43,7 @@ def run(args):
     attach_progress_logger(spark, args.metrics_file)
     raw = read_stream(spark, "steam.reviews.raw", args.source, args.brokers, args.raw, args.max_files, args.starting_offsets)
     events = (
-        raw.select(from_json(col("value"), REVIEW_SCHEMA).alias("d")).select("d.*")
+        raw.select(from_json(col("value"), REVIEW_SCHEMA).alias("d"), "kafka_ts").select("d.*", "kafka_ts")
         .filter(col("appid").isNotNull() & col("timestamp_created").isNotNull())
         .withColumn("event_time", to_timestamp(col("timestamp_created")))
         .withWatermark("event_time", "10 minutes")
@@ -52,7 +55,7 @@ def run(args):
             window_agg(events, duration, slide, label).writeStream
             .queryName(f"s1_{label}")
             .outputMode("update")
-            .foreachBatch(sink(es))
+            .foreachBatch(with_e2e_latency(sink(es), f"s1_{label}", args.latency_file))
             .option("checkpointLocation", f"{args.checkpoint}/{label}")
             .trigger(processingTime=args.trigger)
             .start()

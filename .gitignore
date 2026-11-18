@@ -26,6 +26,8 @@ wheels/
 
 # Data & Large Files
 data/raw/
+data/raw_backup*/
+data/raw_old*/
 data/clean/
 data/curated/
 data/cache/
@@ -77,5 +79,7 @@ data/sample_lake/
 # Old mixed-source collection retained only for recovery
 data/legacy_nonsteam/
 
+# File tạm khi thử nghiệm
+tmp_test/
 # Gói dữ liệu nhận từ thành viên, giải nén để kiểm tra
 data/incoming/

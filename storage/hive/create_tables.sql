@@ -30,9 +30,11 @@ CREATE EXTERNAL TABLE IF NOT EXISTS clean_reviews (
     num_reviews INT,
     playtime_forever FLOAT,
     playtime_at_review FLOAT,
-    playtime_last_two_weeks FLOAT
+    playtime_last_two_weeks FLOAT,
+    dt DATE  -- ngày tạo review (UTC), vẫn là cột dữ liệu, không còn là phân vùng
 )
-PARTITIONED BY (dt STRING)
+-- B2 phân vùng clean/reviews theo tháng (ym=YYYY-MM) để giảm số file, xem docs/decisions.md
+PARTITIONED BY (ym STRING)
 STORED AS PARQUET
 LOCATION '/steam/clean/reviews';
 

@@ -383,6 +383,10 @@ def print_summary_table(
 
 
 def main():
+    # Console Windows mặc định cp1252 không in được tiếng Việt -> UnicodeEncodeError
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
     args = parse_args()
     raw_dir = Path(args.raw_dir).resolve()
 

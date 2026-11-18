@@ -121,9 +121,16 @@ def read_raw_json_lines(spark, raw_root: str, topic: str):
     return spark.read.option("recursiveFileLookup", "true").text(paths)
 
 
-def write_table(spark, df, path: str, table: str = None, partition_by=None, mode: str = "overwrite"):
-    """Ghi Parquet; nếu có Hive Metastore thì đăng ký bảng external trỏ tới path."""
+def write_table(spark, df, path: str, table: str = None, partition_by=None, mode: str = "overwrite",
+                partition_overwrite_mode: str = None):
+    """Ghi Parquet; nếu có Hive Metastore thì đăng ký bảng external trỏ tới path.
+
+    partition_overwrite_mode="static" ghi đè cả thư mục (bỏ qua chế độ dynamic mặc định của session),
+    dùng khi job tính lại toàn bộ bảng hoặc khi đổi cột phân vùng.
+    """
     writer = df.write.mode(mode).option("compression", "snappy")
+    if partition_overwrite_mode:
+        writer = writer.option("partitionOverwriteMode", partition_overwrite_mode)
     if partition_by:
         writer = writer.partitionBy(*partition_by)
     writer.parquet(path)

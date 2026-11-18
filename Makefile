@@ -14,10 +14,11 @@ RUN = "$(PYTHON)" pipeline.py --profile $(PROFILE) --raw $(RAW) $(ES_FLAG)
 DOCKER = docker run --rm -it -v "$(CURDIR):/opt/spark/work-dir" $(IMAGE) python3 pipeline.py --profile $(PROFILE) --raw $(RAW) $(ES_FLAG)
 
 JOBS := b1 b2 b3 b4 b5 b6 b7 b8 s1 s2 s3 merge es-setup kibana-setup replay inject feedback applist crawl
-.PHONY: help batch sample image docker-batch test $(JOBS)
+.PHONY: help batch compact sample image docker-batch test $(JOBS)
 
 help:
 	@echo "make batch          - B2 > B5 > B3 > B4 > B6 > B7 > B8 (ES=1: ghi ES + merge view)"
+	@echo "make compact        - Gộp file raw nhỏ: 1 file / <nguồn>/dt= (chạy trước B2; ARGS=\"--dry-run\")"
 	@echo "make b1..b8         - Một job batch; s1 s2 s3 - streaming (ARGS=\"--source file\")"
 	@echo "make sample         - Sinh dữ liệu mẫu vào data/sample_raw"
 	@echo "make image          - Build image Spark ($(IMAGE))"
@@ -28,6 +29,9 @@ help:
 
 batch:
 	$(RUN) batch $(ARGS)
+
+compact:
+	$(RUN) compact $(ARGS)
 
 $(JOBS):
 	$(RUN) $@ $(ARGS) $($(shell echo $@ | tr a-z A-Z)_ARGS)

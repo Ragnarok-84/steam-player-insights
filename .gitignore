@@ -76,3 +76,6 @@ data/sample_lake/
 
 # Old mixed-source collection retained only for recovery
 data/legacy_nonsteam/
+
+# Gói dữ liệu nhận từ thành viên, giải nén để kiểm tra
+data/incoming/

@@ -938,5 +938,8225 @@
     "review_count": 31866,
     "batch": 1,
     "added_at": 1794454490
+  },
+  {
+    "appid": 227300,
+    "name": "Euro Truck Simulator 2",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 768483,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 14,
+    "last_week_rank": 36,
+    "peak_ccu": 76768
+  },
+  {
+    "appid": 1867240,
+    "name": "WARDOGS",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 176880,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 16,
+    "last_week_rank": 25,
+    "peak_ccu": 100267
+  },
+  {
+    "appid": 2767030,
+    "name": "Marvel Rivals",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 426299,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 19,
+    "last_week_rank": 30,
+    "peak_ccu": 71037
+  },
+  {
+    "appid": 3240220,
+    "name": "Grand Theft Auto V Enhanced",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 226020,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 24,
+    "last_week_rank": 26,
+    "peak_ccu": 66446
+  },
+  {
+    "appid": 413150,
+    "name": "Stardew Valley",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 905384,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 26,
+    "last_week_rank": 24,
+    "peak_ccu": 73858
+  },
+  {
+    "appid": 440,
+    "name": "Team Fortress 2",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 1257999,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 28,
+    "last_week_rank": 28,
+    "peak_ccu": 104779
+  },
+  {
+    "appid": 2507950,
+    "name": "Delta Force",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 201068,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 29,
+    "last_week_rank": 29,
+    "peak_ccu": 107172
+  },
+  {
+    "appid": 3241660,
+    "name": "R.E.P.O.",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 351420,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 30,
+    "last_week_rank": 23,
+    "peak_ccu": 35467
+  },
+  {
+    "appid": 2807960,
+    "name": "Battlefield™ 6",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 303601,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 31,
+    "last_week_rank": 31,
+    "peak_ccu": 31030
+  },
+  {
+    "appid": 271590,
+    "name": "Grand Theft Auto V Legacy",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 1901640,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 32,
+    "last_week_rank": 37,
+    "peak_ccu": 62606
+  },
+  {
+    "appid": 553850,
+    "name": "HELLDIVERS™ 2",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 856594,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 33,
+    "last_week_rank": 27,
+    "peak_ccu": 27342
+  },
+  {
+    "appid": 550,
+    "name": "Left 4 Dead 2",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 826131,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 34,
+    "last_week_rank": 35,
+    "peak_ccu": 32044
+  },
+  {
+    "appid": 105600,
+    "name": "Terraria",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 1251233,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 35,
+    "last_week_rank": 33,
+    "peak_ccu": 32336
+  },
+  {
+    "appid": 438100,
+    "name": "VRChat",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 275756,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 36,
+    "last_week_rank": 34,
+    "peak_ccu": 55310
+  },
+  {
+    "appid": 238960,
+    "name": "Path of Exile",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 250841,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 37,
+    "last_week_rank": 184,
+    "peak_ccu": 98848
+  },
+  {
+    "appid": 284160,
+    "name": "BeamNG.drive",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 399890,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 38,
+    "last_week_rank": 40,
+    "peak_ccu": 29526
+  },
+  {
+    "appid": 108600,
+    "name": "Project Zomboid",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 374689,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 39,
+    "last_week_rank": 39,
+    "peak_ccu": 41605
+  },
+  {
+    "appid": 2406770,
+    "name": "Bodycam",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 72371,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 40,
+    "last_week_rank": 137,
+    "peak_ccu": 22091
+  },
+  {
+    "appid": 322330,
+    "name": "Don't Starve Together",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 378937,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 41,
+    "last_week_rank": 42,
+    "peak_ccu": 49487
+  },
+  {
+    "appid": 1808500,
+    "name": "ARC Raiders",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 310315,
+    "batch": 2,
+    "added_at": 1794930349,
+    "ccu_rank": 42,
+    "last_week_rank": 32,
+    "peak_ccu": 47382
+  },
+  {
+    "appid": 348340,
+    "name": "Siege Wars",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 98,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 603120,
+    "name": "Happy Campers",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 67,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2704100,
+    "name": "Little Heroes",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 37,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3107530,
+    "name": "Danchi Days",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 68,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3557790,
+    "name": "Vendetta Forever",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 35,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3441240,
+    "name": "Gridiron Masters '98",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 27,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2778600,
+    "name": "FLASH OF THE BLADE X",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 75,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 291330,
+    "name": "Final Slam 2",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 26,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 745830,
+    "name": "Dragon Sinker",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 22,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 904160,
+    "name": "Ashes",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 20,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4218620,
+    "name": "Double Dealers",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 72,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4111210,
+    "name": "Temple of the Green Moon: Prologue",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 34,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3132770,
+    "name": "シシテナオ-Even in Death-",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 75,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1994450,
+    "name": "Omni Magic!",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 20,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2855820,
+    "name": "Lethal Women: World of Femdom and Espionage",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 40,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 392610,
+    "name": "Tricone Lab",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 27,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4344000,
+    "name": "Complete Horror",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 63,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2001110,
+    "name": "Roguematch : The Extraplanar Invasion",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 33,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1873540,
+    "name": "World Empire 2027",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 80,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4838360,
+    "name": "Construction Company",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 73,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1898670,
+    "name": "All the Words She Wrote",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 49,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 391740,
+    "name": "Blaster Shooter GunGuy!",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 85,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 809530,
+    "name": "Hypergate",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 37,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 809900,
+    "name": "Calvin Tucker's Farm Animal Racing",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 72,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2319920,
+    "name": "Cantirium: God Slayer",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 20,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3106490,
+    "name": "Katagiri-san is very cold",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 69,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2184380,
+    "name": "Halod's adventure times",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 22,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1018640,
+    "name": "Pixel Happy Game Girls",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 34,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3847180,
+    "name": "SHIATH",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 61,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1915910,
+    "name": "Hidden Build Top-Down 3D",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 29,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 968310,
+    "name": "Breathe Peace World",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 26,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3282210,
+    "name": "The Fire Nobody Started",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 63,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2012910,
+    "name": "嗜憶 Swallow",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 41,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2753570,
+    "name": "Foot Serve",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 23,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1181610,
+    "name": "Roto Force",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 96,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2691050,
+    "name": "Neongarten - Prologue",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 28,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1803310,
+    "name": "Incubus - A ghost-hunters tale",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 53,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1668880,
+    "name": "Spring and Girls",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 30,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2027560,
+    "name": "Valkyrie Champions",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 26,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3652620,
+    "name": "Wild West : The Last Cowboy",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 81,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1810050,
+    "name": "Fortune Avenue",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 71,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 596090,
+    "name": "Gray Destiny",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 34,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3295220,
+    "name": "GeoJet",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 27,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4289030,
+    "name": "Edgar Allan Poe's Interactive Horror: 1995 Edition",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 26,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1470280,
+    "name": "The Last Of Anime",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 35,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2241190,
+    "name": "Christmas Luge",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 87,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 774331,
+    "name": "ASH OF WAR™",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 51,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2350430,
+    "name": "Dirty Streamer Puzzle",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 20,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3582430,
+    "name": "Uh Oh Airlines",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 26,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2988400,
+    "name": "Temple of Shadows",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 72,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1492150,
+    "name": "Primal Survivors",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 49,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2126980,
+    "name": "Kleebuu Craves Fruit Salad",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 38,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1194940,
+    "name": "Tower of Shades",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 39,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 303340,
+    "name": "Concursion",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 32,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1362040,
+    "name": "Dungeon Swappers",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 26,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3083660,
+    "name": "Backrooms: The Labyrinth",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 26,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1344810,
+    "name": "Homeland: Lay to Rest",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 43,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2131050,
+    "name": "Handyman",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 29,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 421610,
+    "name": "XBlaze Code: Embryo",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 69,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4566700,
+    "name": "how to kill a fly [ H2KAF ]",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 85,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4305790,
+    "name": "Huglings",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 22,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4805240,
+    "name": "Zombie Wasteland Together",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 23,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2875910,
+    "name": "Honker",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 24,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1870490,
+    "name": "Prop Hunt 2.0",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 53,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1268250,
+    "name": "GAG",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 57,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 629110,
+    "name": "Dark Parables: Ballad of Rapunzel Collector's Edition",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 54,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1962980,
+    "name": "Aierlon",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 89,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2672170,
+    "name": "Alien Tag",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 57,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2757030,
+    "name": "Muse War",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 67,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 676910,
+    "name": "Magic Potion Destroyer",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 38,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1551650,
+    "name": "Sword Princess Sistina",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 31,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1148700,
+    "name": "Deadtime Defenders",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 48,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2679660,
+    "name": "Traveler's Refrain",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 39,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3859180,
+    "name": "The Electorate",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 85,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2186580,
+    "name": "Shuffle Tactics",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 97,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1491790,
+    "name": "Atom",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 33,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1077740,
+    "name": "Anomaly Hunter - Prologue",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 30,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3875890,
+    "name": "Darkway: Murder of King Mere",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 81,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1963900,
+    "name": "Knotwords",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 54,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2960870,
+    "name": "War Sniper",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 81,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3357380,
+    "name": "NEDRA",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 77,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3692360,
+    "name": "Akuma's Bloodrain",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 20,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 562160,
+    "name": "The Inner Darkness",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 61,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3513000,
+    "name": "Comfy Girl",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 56,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1133210,
+    "name": "Inner",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 28,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 441060,
+    "name": "Silver Creek Falls - Chapter 3",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 37,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1845050,
+    "name": "Mirrorama",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 23,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 414160,
+    "name": "Nubarron: The adventure of an unlucky gnome",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 40,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3955230,
+    "name": "Hunter's Seal",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 20,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1084870,
+    "name": "OSK - The End of Time",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 73,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1142020,
+    "name": "Parcel Mania: Free Multiplayer Madness",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 55,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 973390,
+    "name": "Empires:The Rise",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 63,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 731940,
+    "name": "Bars and Balance",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 62,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3337840,
+    "name": "No Need for Flowers",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 48,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 680690,
+    "name": "Kama Bullet Heritage",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 73,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2827810,
+    "name": "Ark of Charon",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 392,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 579940,
+    "name": "Race for the Galaxy",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 437,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 904320,
+    "name": "My Holiday",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 179,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1801660,
+    "name": "未来战士",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 111,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3043710,
+    "name": "Diplomacy is Not an Option: Shareware",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 874,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3555700,
+    "name": "Liar Game",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 113,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 566560,
+    "name": "Fighters Unleashed",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 104,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1233710,
+    "name": "Elf Breeding Farm",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 174,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 654260,
+    "name": "旧手表 - Old Watch",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 569,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3401490,
+    "name": "Replicube",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 721,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 754620,
+    "name": "High School Simulator",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 357,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 970600,
+    "name": "Paranoia: Deliver Me",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 136,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 972740,
+    "name": "KOBOLD: Chapter I",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 270,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 699080,
+    "name": "Jake's Love Story",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 116,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1473260,
+    "name": "Black Gold: Oil Drilling Simulator",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 176,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1139870,
+    "name": "The Dark Eye : Book of Heroes",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 188,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 986020,
+    "name": "Kunoichi Botan",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 531,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2380240,
+    "name": "Sparky Marky: Episode 1",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 264,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1824960,
+    "name": "Propagation: Paradise Hotel",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 695,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4783540,
+    "name": "Intertwined - Season 1",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 231,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 460850,
+    "name": "Allumette",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 621,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1768470,
+    "name": "The Heroes Around Me",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 699,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3593780,
+    "name": "Lumberjacked",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 661,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 655790,
+    "name": "Fly Simulator",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 629,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 735580,
+    "name": "11-11 Memories Retold",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 672,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1490130,
+    "name": "CrashMetal - Cyberpunk",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 658,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 770410,
+    "name": "Path to Mnemosyne",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 185,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2904890,
+    "name": "The Game of Sisyphus",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 755,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1999940,
+    "name": "Hyperhell",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 179,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1259380,
+    "name": "Submarine Titans",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 353,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1063580,
+    "name": "Aeon's End",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 445,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1667730,
+    "name": "Forgotten Journey",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 109,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 342450,
+    "name": "Sword Daughter",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 143,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2758290,
+    "name": "PROJECT 13",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 155,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1098510,
+    "name": "LOST EGG",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 151,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 985080,
+    "name": "食用系少女 Food Girls",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 366,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 592030,
+    "name": "Just In Time Incorporated",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 241,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 299160,
+    "name": "Empress Of The Deep 2: Song Of The Blue Whale",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 109,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1791910,
+    "name": "Silent Rain",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 174,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1830040,
+    "name": "False Skies",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 108,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 809720,
+    "name": "Rescue HQ - The Tycoon",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 740,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3201010,
+    "name": "Starlight Revolver",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 403,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 382330,
+    "name": "Killers and Thieves",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 137,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2529510,
+    "name": "Fish on the desktop",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 150,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4230120,
+    "name": "Mute",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 102,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2679790,
+    "name": "Baron",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 117,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1884540,
+    "name": "AfterHours",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 624,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1822240,
+    "name": "Stars In The Trash",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 290,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2206240,
+    "name": "Footgun: Underground",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 103,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4636370,
+    "name": "Heroes of Lust and Magic",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 306,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1098190,
+    "name": "VersaillesVR | the Palace is yours",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 150,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 446310,
+    "name": "Sabres of Infinity",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 187,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2055540,
+    "name": "Graveyard Girls",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 169,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 873490,
+    "name": "不落城-Unconquered Castle",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 111,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3403720,
+    "name": "Miami Paradise",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 163,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2288210,
+    "name": "三国真龙传",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 574,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 834390,
+    "name": "King's Heir: Rise to the Throne",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 118,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 27050,
+    "name": "Fatale",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 127,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 447700,
+    "name": "Crystal Crisis",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 138,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 335100,
+    "name": "Dwarf Tower",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 195,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1844130,
+    "name": "Stellar Orphans",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 144,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 210950,
+    "name": "Rune Classic",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 614,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1429670,
+    "name": "Dungeon Lord",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 140,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2900,
+    "name": "688(I) Hunter/Killer",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 216,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1418760,
+    "name": "Claire's Quest: GOLD",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 576,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4438540,
+    "name": "Limitless Survivor",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 172,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1213220,
+    "name": "IRON GUARD",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 145,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2932150,
+    "name": "Life Below",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 169,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1373950,
+    "name": "The Divine Speaker",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 412,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 474890,
+    "name": "Uncrewed",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 148,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2673490,
+    "name": "Seifuku Kanojo",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 374,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 433380,
+    "name": "Back in 1995",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 133,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3751210,
+    "name": "Infinite Lives",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 224,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3326660,
+    "name": "Sofia in Exchange for Lies",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 169,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1167320,
+    "name": "Artificial Extinction",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 240,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1546090,
+    "name": "RAIDBORN",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 439,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 408120,
+    "name": "Cibele",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 332,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 576940,
+    "name": "Hunt For Gods",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 106,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2917350,
+    "name": "Spin Hero",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 579,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1095260,
+    "name": "Airtight City 密闭之城1.0",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 394,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1508400,
+    "name": "Kaiju Wars",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 231,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 340810,
+    "name": "Deepworld",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 726,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2842600,
+    "name": "ASTROLANCER",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 141,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2109640,
+    "name": "Cross Concerto",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 145,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 343930,
+    "name": "Fort Defense",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 231,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 873270,
+    "name": "Rolled Out!",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 291,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1825460,
+    "name": "PC Virtual LAB",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 119,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4813190,
+    "name": "Camp Whittlewood",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 106,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 754540,
+    "name": "Gauntlet of IRE",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 202,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2094750,
+    "name": "Timeloop: Sink Again Beach",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 351,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2766540,
+    "name": "ELECTROBASIS",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 111,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4022090,
+    "name": "Monk Took Book",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 166,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 22130,
+    "name": "Hearts of Iron 2 Complete",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 639,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 5455340,
+    "name": "Punch The Walls",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 401,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 291030,
+    "name": "Always Remember Me",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 142,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 236690,
+    "name": "Blood Bowl 2: Legendary Edition (Classic)",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 7101,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 695920,
+    "name": "Super Seducer : How to Talk to Girls",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1609,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 98300,
+    "name": "Toy Soldiers",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1365,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1376070,
+    "name": "Rushdown Revolt",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1498,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 940710,
+    "name": "Colt Canyon",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1568,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 258970,
+    "name": "Gauntlet™ Slayer Edition",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 6721,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1548520,
+    "name": "DARKEST DAYS",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 5294,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1340990,
+    "name": "Rise of the Ronin",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 6664,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3219030,
+    "name": "Planet Zoo 2",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 6535,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 662960,
+    "name": "Mysteria ~Occult Shadows~",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3199,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1227280,
+    "name": "Despot's Game: Dystopian Battle Simulator",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2889,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2863160,
+    "name": "Projekt: Passion - Season 2",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1029,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1975360,
+    "name": "DRAINUS",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1129,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 578850,
+    "name": "64.0",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1329,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 898750,
+    "name": "Super Robot Wars 30",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 5666,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 370360,
+    "name": "TIS-100",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3398,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 754530,
+    "name": "IL-2 Sturmovik: Cliffs of Dover Blitz Edition",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1124,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1768280,
+    "name": "Ozymandias: Bronze Age Empire Sim",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1324,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 250620,
+    "name": "Among the Sleep - Enhanced Edition",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 6425,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2124420,
+    "name": "Fate Seeker: Journey",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1105,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 356520,
+    "name": "Port of Call",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1281,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 773790,
+    "name": "Ostriv",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 6954,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1820000,
+    "name": "Homura Hime",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2467,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1218210,
+    "name": "Coromon",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 6390,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 992910,
+    "name": "The Black Masses",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1149,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1593350,
+    "name": "Increlution",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1246,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 341500,
+    "name": "Camera Obscura",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1335,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1823930,
+    "name": "Wavetale",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2655,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3772810,
+    "name": "Desktop Defender",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1788,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 39160,
+    "name": "Dungeon Siege III",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1994,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 216890,
+    "name": "Blood Bowl: Chaos Edition (Classic)",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1392,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1261040,
+    "name": "Streamer Life Simulator",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 7100,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 774241,
+    "name": "Warhammer: Chaosbane",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3321,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1267470,
+    "name": "Warriors of the Nile",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2415,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1260820,
+    "name": "Third Crisis",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1832,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1927720,
+    "name": "Monument Valley",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 7790,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 226620,
+    "name": "Desktop Dungeons",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1135,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3606480,
+    "name": "Call of Duty®: Black Ops 7",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 4513,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1970580,
+    "name": "Backpack Hero",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 7457,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1546990,
+    "name": "Grand Theft Auto: Vice City – The Definitive Edition",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 9693,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 277430,
+    "name": "Halo: Spartan Assault",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 4419,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 265330,
+    "name": "Gomo",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1609,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 203630,
+    "name": "Warlock - Master of the Arcane",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1010,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2450700,
+    "name": "Drug Lord Tycoon",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1675,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1299120,
+    "name": "Mosaique Neko Waifus 2",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2560,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1668520,
+    "name": "The Legend of Heroes: Trails to Azure",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1011,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 359840,
+    "name": "Shift Happens",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3310,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1250870,
+    "name": "Cyrano Story",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1053,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2111170,
+    "name": "STORY OF SEASONS: A Wonderful Life",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1210,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 502800,
+    "name": "SENRAN KAGURA ESTIVAL VERSUS",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 5014,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1570330,
+    "name": "West Hunt",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1526,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2527390,
+    "name": "Dead Rising Deluxe Remaster",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3005,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1891700,
+    "name": "Tap Ninja - Idle game",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 9899,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 312610,
+    "name": "METAL SLUG X",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3214,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 361550,
+    "name": "Cradle",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1869,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3985950,
+    "name": "R.I.P. - Reincarnation Insurance Program",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3415,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1726190,
+    "name": "No Straight Roads: Encore Edition",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1827,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 233610,
+    "name": "Distance",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 5862,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2230280,
+    "name": "Tiny Civilization",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2150,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1080750,
+    "name": "Mutazione",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1136,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 609940,
+    "name": "KROSMAGA",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1066,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 630060,
+    "name": "寇莎梅特：困世迷情 Consummate:Missing World",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1004,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2570390,
+    "name": "Dave's Fun Algebra Class: Remastered",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1132,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1559600,
+    "name": "The Ranch of Rivershine",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2093,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1389160,
+    "name": "Dark Fracture: Prologue",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1380,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2876550,
+    "name": "Bloons Card Storm",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1600,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 846030,
+    "name": "ΔV: Rings of Saturn",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2906,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1426450,
+    "name": "Age of Darkness: Final Stand",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 9550,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2217580,
+    "name": "New Star™ GP",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1157,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2067920,
+    "name": "Rogue: Genesia",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 8250,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1187510,
+    "name": "Rock Simulator",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1659,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1388590,
+    "name": "Yakuza 6: The Song of Life",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 7086,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3601800,
+    "name": "Meltopia",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1815,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1475380,
+    "name": "TheDawn",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 8590,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1437400,
+    "name": "Salt and Sacrifice",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1780,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1135300,
+    "name": "King's Bounty II",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 4514,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 268400,
+    "name": "Panzer Corps Gold",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2241,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 34830,
+    "name": "Sniper: Ghost Warrior",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 5784,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2203070,
+    "name": "Dragonheir: Silent Gods",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3584,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 231200,
+    "name": "Kentucky Route Zero: PC Edition",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3278,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1668540,
+    "name": "The Legend of Heroes: Trails into Reverie",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1164,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 996770,
+    "name": "Moving Out",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1693,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1107790,
+    "name": "The Complex",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3344,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1286880,
+    "name": "Ship Graveyard Simulator",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2168,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 250180,
+    "name": "METAL SLUG 3",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 7015,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1449070,
+    "name": "Journey to the West",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1472,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4510830,
+    "name": "Myth of Empires: Throne",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1406,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2948190,
+    "name": "World of Sea Battle",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 9674,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 568770,
+    "name": "Cinderella Phenomenon - Otome/Visual Novel",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 4164,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1314000,
+    "name": "Achilles: Legends Untold",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2222,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 427940,
+    "name": "Industries of Titan",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1557,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 20540,
+    "name": "Company of Heroes: Tales of Valor",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1649,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1699230,
+    "name": "Hail to the Rainbow",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2644,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3226450,
+    "name": "iRacing Arcade",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1273,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3861430,
+    "name": "Bongo Waifu",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1350,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 867210,
+    "name": "Songs of Conquest",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 12232,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1158310,
+    "name": "Crusader Kings III",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 94308,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2161700,
+    "name": "Persona 3 Reload",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 45983,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1325200,
+    "name": "Nioh 2 – The Complete Edition",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 34082,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3293260,
+    "name": "Waterpark Simulator",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 14157,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1237950,
+    "name": "STAR WARS™ Battlefront™ II",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 88302,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3059520,
+    "name": "F1® 25",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 26951,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 287390,
+    "name": "METRO Last Light Redux",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 72916,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1017180,
+    "name": "The Long Drive",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 50756,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 71340,
+    "name": "Sonic Generations Collection",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 20313,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 635260,
+    "name": "CarX Drift Racing Online",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 83050,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1594940,
+    "name": "Little Witch in the Woods",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11932,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1113560,
+    "name": "NieR Replicant™ ver.1.22474487139...",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 21770,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 237930,
+    "name": "Transistor",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 28051,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 238430,
+    "name": "Contagion",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10060,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2990,
+    "name": "FlatOut 2",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 19739,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 718670,
+    "name": "Cultist Simulator",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10650,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2121360,
+    "name": "东北之夏",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 12166,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1868140,
+    "name": "DAVE THE DIVER",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 144784,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 848450,
+    "name": "Subnautica: Below Zero",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 99832,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 603850,
+    "name": "Age of History II",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 48389,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2075800,
+    "name": "STAR WARS Zero Company™",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 23612,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 582010,
+    "name": "Monster Hunter: World",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 319625,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1222700,
+    "name": "A Way Out",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 78966,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 223470,
+    "name": "POSTAL 2",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 119194,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1943950,
+    "name": "Escape the Backrooms",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 141432,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 236090,
+    "name": "Dust: An Elysian Tail",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 14291,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 247080,
+    "name": "Crypt of the NecroDancer",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 23667,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2407270,
+    "name": "AI LIMIT",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 23223,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3932890,
+    "name": "Escape from Tarkov",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 59733,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 924970,
+    "name": "Back 4 Blood",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 55420,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 40700,
+    "name": "Machinarium",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 18227,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 513710,
+    "name": "SCUM",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 99243,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 589290,
+    "name": "Holdfast: Nations At War",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 26831,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 292120,
+    "name": "FINAL FANTASY® XIII",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 16468,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2384580,
+    "name": "DYNASTY WARRIORS: ORIGINS",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 19870,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 287290,
+    "name": "Resident Evil Revelations 2",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 25736,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 475550,
+    "name": "Beholder",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 23445,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 682990,
+    "name": "Drug Dealer Simulator",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 18337,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 934700,
+    "name": "Dead Island 2",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 24292,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 365450,
+    "name": "Hacknet",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 16983,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 20920,
+    "name": "The Witcher 2: Assassins of Kings Enhanced Edition",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 81429,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 637650,
+    "name": "FINAL FANTASY XV WINDOWS EDITION",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 45363,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1817190,
+    "name": "Marvel’s Spider-Man: Miles Morales",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 40094,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2456740,
+    "name": "inZOI",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 30761,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1361210,
+    "name": "Warhammer 40,000: Darktide",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 110023,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3751260,
+    "name": "The Blood of Dawnwalker",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 21795,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 333420,
+    "name": "Cossacks 3",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 12509,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1331550,
+    "name": "Big Ambitions",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 14578,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 434650,
+    "name": "Lost Castle / 失落城堡",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 18481,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1671210,
+    "name": "DELTARUNE",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 130138,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 690830,
+    "name": "Foundation",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 23483,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1475810,
+    "name": "Ghostwire: Tokyo",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 13185,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 743450,
+    "name": "Monster Prom",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 12302,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1687950,
+    "name": "Persona 5 Royal",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 94240,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4570720,
+    "name": "DragonSword : Awakening",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11519,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2162800,
+    "name": "shapez 2 - Factory",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 14139,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 248820,
+    "name": "Risk of Rain (2013)",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 20781,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1097840,
+    "name": "Gears 5",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 21467,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 641990,
+    "name": "The Escapists 2",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 26582,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3527290,
+    "name": "PEAK",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 313912,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1277400,
+    "name": "Monster Hunter Stories 2: Wings of Ruin",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11922,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 253230,
+    "name": "A Hat in Time",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 43042,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1506830,
+    "name": "FIFA 22",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 119807,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 846770,
+    "name": "DYSMANTLE",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11100,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1158160,
+    "name": "Coral Island",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 22110,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3079210,
+    "name": "Hell Let Loose: Vietnam",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11642,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1282100,
+    "name": "REMNANT II®",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 47197,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 42910,
+    "name": "Magicka",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 19219,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 460950,
+    "name": "Katana ZERO",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 66709,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1229380,
+    "name": "Everhood",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11470,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 388090,
+    "name": "Five Nights at Freddy's 4",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 15634,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 8870,
+    "name": "BioShock Infinite",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 110061,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1222730,
+    "name": "STAR WARS™: Squadrons",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 25193,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3716600,
+    "name": "Mage Arena",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 17866,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2186680,
+    "name": "Warhammer 40,000: Rogue Trader",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 34782,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 701160,
+    "name": "Kingdom Two Crowns",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 33219,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 581320,
+    "name": "Insurgency: Sandstorm",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 104601,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 4704690,
+    "name": "MECCHA CHAMELEON",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 81946,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2679460,
+    "name": "Metaphor: ReFantazio",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 25861,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 349040,
+    "name": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 72615,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 823500,
+    "name": "BONEWORKS",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 34189,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 3167020,
+    "name": "Escape From Duckov",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 84635,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 251570,
+    "name": "7 Days to Die",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 275412,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 739630,
+    "name": "Phasmophobia",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 687114,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2124120,
+    "name": "SULFUR",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11095,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 228300,
+    "name": "Remember Me",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11197,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 2651280,
+    "name": "Marvel's Spider-Man 2",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 35324,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 388410,
+    "name": "Darksiders II Deathinitive Edition",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 16529,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 892970,
+    "name": "Valheim",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 477738,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 269950,
+    "name": "X-Plane 11",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 19363,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 424030,
+    "name": "War of Rights",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 13598,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 355180,
+    "name": "Codename CURE",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 16545,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 960990,
+    "name": "Beyond: Two Souls",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 38380,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 775500,
+    "name": "SCARLET NEXUS",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 13819,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1203220,
+    "name": "NARAKA: BLADEPOINT",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 303661,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 44,
+    "last_week_rank": 41,
+    "peak_ccu": 58747
+  },
+  {
+    "appid": 394360,
+    "name": "Hearts of Iron IV",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 264170,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 45,
+    "last_week_rank": 49,
+    "peak_ccu": 41245
+  },
+  {
+    "appid": 489830,
+    "name": "The Elder Scrolls V: Skyrim Special Edition",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 224324,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 46,
+    "last_week_rank": 51,
+    "peak_ccu": 37204
+  },
+  {
+    "appid": 1174180,
+    "name": "Red Dead Redemption 2",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 862607,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 47,
+    "last_week_rank": 48,
+    "peak_ccu": 32890
+  },
+  {
+    "appid": 4080220,
+    "name": "EA SPORTS FC™ 27",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 12919,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 48,
+    "last_week_rank": 44,
+    "peak_ccu": 44988
+  },
+  {
+    "appid": 1086940,
+    "name": "Baldur's Gate 3",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 761745,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 49,
+    "last_week_rank": 45,
+    "peak_ccu": 39888
+  },
+  {
+    "appid": 252950,
+    "name": "Rocket League®",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 431885,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 50,
+    "last_week_rank": 46,
+    "peak_ccu": 26970
+  },
+  {
+    "appid": 4126040,
+    "name": "Aniimo",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 30147,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 51,
+    "last_week_rank": 43,
+    "peak_ccu": 30953
+  },
+  {
+    "appid": 4530370,
+    "name": "Football Manager 27",
+    "group": "top_ccu",
+    "stratum": "1k-9.9k",
+    "review_count": 2060,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 52,
+    "last_week_rank": 82,
+    "peak_ccu": 73875
+  },
+  {
+    "appid": 3405690,
+    "name": "EA SPORTS FC™ 26",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 104067,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 53,
+    "last_week_rank": 52,
+    "peak_ccu": 23235
+  },
+  {
+    "appid": 292030,
+    "name": "The Witcher 3: Wild Hunt — Remastered",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 843726,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 54,
+    "last_week_rank": 50,
+    "peak_ccu": 31545
+  },
+  {
+    "appid": 4000,
+    "name": "Garry's Mod",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 1101632,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 55,
+    "last_week_rank": 55,
+    "peak_ccu": 27287
+  },
+  {
+    "appid": 1665460,
+    "name": "eFootball™",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 121113,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 56,
+    "last_week_rank": 56,
+    "peak_ccu": 19213
+  },
+  {
+    "appid": 1449850,
+    "name": "Yu-Gi-Oh! Master Duel",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 103128,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 57,
+    "last_week_rank": 53,
+    "peak_ccu": 19825
+  },
+  {
+    "appid": 1203620,
+    "name": "Enshrouded",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 100902,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 58,
+    "last_week_rank": 47,
+    "peak_ccu": 44279
+  },
+  {
+    "appid": 3419430,
+    "name": "Bongo Cat",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 115261,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 59,
+    "last_week_rank": 54,
+    "peak_ccu": 207640
+  },
+  {
+    "appid": 1222670,
+    "name": "The Sims™ 4",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 202731,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 62,
+    "last_week_rank": 64,
+    "peak_ccu": 26969
+  },
+  {
+    "appid": 1245620,
+    "name": "ELDEN RING",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 836246,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 64,
+    "last_week_rank": 67,
+    "peak_ccu": 25388
+  },
+  {
+    "appid": 2300320,
+    "name": "Farming Simulator 25",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 42052,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 65,
+    "last_week_rank": 63,
+    "peak_ccu": 44790
+  },
+  {
+    "appid": 1364780,
+    "name": "Street Fighter™ 6",
+    "group": "top_ccu",
+    "stratum": "10k+",
+    "review_count": 51741,
+    "batch": 3,
+    "added_at": 1794938512,
+    "ccu_rank": 66,
+    "last_week_rank": 68,
+    "peak_ccu": 29289
+  },
+  {
+    "appid": 588890,
+    "name": "Heroes of Arca",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 84,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 906770,
+    "name": "TITAN SLAYER Ⅱ",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 31,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1522630,
+    "name": "Dark Treasury",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 52,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 307900,
+    "name": "Wildlife Park 2 - Marine World",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 39,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1588190,
+    "name": "Shatter Keep",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 64,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1406270,
+    "name": "Gothic Girls",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 93,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2067970,
+    "name": "LoveTalks",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 31,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 736200,
+    "name": "Nana in the Dark",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 39,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3252310,
+    "name": "Comet Rogue",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 28,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2112150,
+    "name": "Fishing Game",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 39,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 785100,
+    "name": "Cosmic Top Secret",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 20,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1207230,
+    "name": "Seduce Me: The Complete Story",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 47,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 945280,
+    "name": "Harem Girl: Samantha",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 24,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 381220,
+    "name": "Hydraulic Empire",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 45,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 328670,
+    "name": "Deer Hunt Legends",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 25,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1317950,
+    "name": "Eternal Dreamers",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 91,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 4255640,
+    "name": "MyDear.exe",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 67,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3367420,
+    "name": "Voice of the Ocean",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 47,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1656310,
+    "name": "TETRAGUN",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 36,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3014070,
+    "name": "Would You Call Him a Bad Man?",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 28,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1468380,
+    "name": "The Sundew",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 91,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1193790,
+    "name": "UNHERD",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 22,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1327390,
+    "name": "Sogo Vego",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 43,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2161430,
+    "name": "FAKE SIGNALS",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 38,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2731830,
+    "name": "Coin Pusher Live",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 34,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2781720,
+    "name": "Demoniac TV",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 24,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1297800,
+    "name": "ChronoBreach Ultra",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 28,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 606950,
+    "name": "Army General",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 42,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1825350,
+    "name": "Haunted Hotel: Silent Waters Collector's Edition",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 23,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2811860,
+    "name": "Sovereign Elect",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 71,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3860430,
+    "name": "DayDream Mosaics Juliette's Collection",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 22,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 362920,
+    "name": "Atlantis 2: Beyond Atlantis",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 93,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1513310,
+    "name": "Blockee - Sliding Puzzle",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 47,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 451670,
+    "name": "War Birds: WW2 Air strike 1942",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 29,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2220280,
+    "name": "Code Wizard: Java Edition",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 41,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 5283650,
+    "name": "Postpartum | 산후조리원",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 36,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2012070,
+    "name": "Watch Your Back",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 78,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 523170,
+    "name": "ShotForge",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 82,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1159450,
+    "name": "Hayfever",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 71,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 4791730,
+    "name": "Market Simulator: Miami Beach",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 84,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 528010,
+    "name": "Eternal Return",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 27,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1005210,
+    "name": "Pixel Puzzles Trivia",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 35,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1222640,
+    "name": "Cumming Hotel - A Gay Furry Slice of Life",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 24,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2943040,
+    "name": "Memory Girl +",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 48,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3985330,
+    "name": "BURNED HORIZONS",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 35,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1927250,
+    "name": "Happy Mining",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 33,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1965060,
+    "name": "Quest room",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 43,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1954020,
+    "name": "Cupid Kiss",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 24,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3756190,
+    "name": "放学后",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 28,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 5070190,
+    "name": "Refund This Game",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 65,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 872060,
+    "name": "Quiet as a Stone",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 27,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2201150,
+    "name": "Eve of Calamity",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 54,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2548950,
+    "name": "武林立志傳",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 63,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 562050,
+    "name": "Liquid Pinball",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 79,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2575110,
+    "name": "Riot of Willy",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 39,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1433030,
+    "name": "MOAI 7: Mystery Coast",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 22,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2064320,
+    "name": "Vermis Orbita",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 60,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1600870,
+    "name": "King Bullseye: Headshot Training",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 23,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3107090,
+    "name": "Outbreak: Shades of Horror Chromatic Split",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 24,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2637210,
+    "name": "Flow Of War",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 40,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1863560,
+    "name": "η κλοπή του ΚΡΑΣΙΟΥ",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 61,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2050530,
+    "name": "Age of Solitaire : Build Civilization",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 29,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 661230,
+    "name": "Progress Bar Simulator",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 91,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1502520,
+    "name": "The Mermaid of Zennor",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 72,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 4242040,
+    "name": "Koikata: How Our Love Grows",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 42,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1252210,
+    "name": "Guile & Glory: Firstborn",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 29,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1014110,
+    "name": "Fish Simulator: Aquarium Manager",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 24,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3558310,
+    "name": "Bring the Book back",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 20,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1489600,
+    "name": "Nix Umbra",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 78,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 886360,
+    "name": "Casino Mega Collection",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 43,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1863920,
+    "name": "モールス信号で愛を伝えよ。",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 45,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1874680,
+    "name": "Tower Words",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 22,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 4469120,
+    "name": "Martha's Dolls 2",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 27,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2326210,
+    "name": "Innkeeper's Basement",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 22,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2089590,
+    "name": "QuantumVR",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 31,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2786840,
+    "name": "The Bridge to Yesterday",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 24,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3403860,
+    "name": "Samurai Brothers",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 23,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3192330,
+    "name": "You Can't Corrupt Me! ~Tale of a Naive Elven Swordswoman~ SS",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 61,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1629600,
+    "name": "Hidden Shapes Lovely Cats - Jigsaw Puzzle Game",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 46,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2707500,
+    "name": "ROKO'S BASILISK",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 39,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2420640,
+    "name": "Angel Tear: Goddess Betrayed",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 98,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2062920,
+    "name": "TTV4",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 94,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3197550,
+    "name": "Demonophobia Company",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 34,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2874660,
+    "name": "Exit: Left or Right",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 30,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 5261400,
+    "name": "龙之传奇",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 70,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 5100030,
+    "name": "Center Ice Hockey",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 42,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3673050,
+    "name": "TAMAGORUDO - FLOOR O",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 43,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2390520,
+    "name": "Trans Neuronica",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 53,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2752750,
+    "name": "One Lie",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 52,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2794860,
+    "name": "Grow a Carrot",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 40,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2574270,
+    "name": "Alien Investigator",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 21,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1462730,
+    "name": "Atomic Girls",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 87,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1065570,
+    "name": "Cyber Gun",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 63,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1506680,
+    "name": "Horror Tycoon",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 92,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3309380,
+    "name": "Love In Tiny Spaces",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 35,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2772660,
+    "name": "I got BLACKMAILED by a FUTANARI!",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 20,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2997920,
+    "name": "Croak Crusader: Spawn of the Spore Spectre",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 71,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3113530,
+    "name": "Haunted Elevator - 闹鬼电梯",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 35,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1561380,
+    "name": "RE:CALL",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 52,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1431420,
+    "name": "10mg: Cover Me In Leaves",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 29,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2836740,
+    "name": "Olga - Episode 1",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 95,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2657560,
+    "name": "Sponge Break",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 30,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2017540,
+    "name": "Energy Collector",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 26,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3558720,
+    "name": "Out of Sight VR",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 50,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1048560,
+    "name": "Voidrun",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 25,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 661740,
+    "name": "Morphite",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 76,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3074240,
+    "name": "Void Collector",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 31,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2012440,
+    "name": "Gachi-Natsu/ガチムチでドスケベな家庭教師のお兄さんと過ごす夏",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 97,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1132080,
+    "name": "Hentai Dgirls",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 33,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2220480,
+    "name": "Burst Hero",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 77,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 563120,
+    "name": "Desolate Wastes: Vendor Chronicles",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 96,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3992440,
+    "name": "ExoTrain",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 26,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1392780,
+    "name": "The Companion",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 94,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 527740,
+    "name": "YANKAI'S TRIANGLE",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 65,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1767580,
+    "name": "Twin Mind: Power of Love Collector's Edition",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 24,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 581840,
+    "name": "Caliper",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 78,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 31300,
+    "name": "Tunnel Rats",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 42,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 307170,
+    "name": "Borealis",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 39,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 665620,
+    "name": "Zombie Hobby VR",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 30,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1561660,
+    "name": "The Lightbringer",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 57,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2274110,
+    "name": "The Elephant Collection",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 736,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 672150,
+    "name": "LOGistICAL 3: Earth",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 156,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1154120,
+    "name": "Ilysia",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 299,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 540880,
+    "name": "Rose of Winter",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 211,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3456720,
+    "name": "The Maid",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 168,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3623670,
+    "name": "I See Me",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 157,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3759320,
+    "name": "Drugged-up Sex with a Self Destructive Girl! ~Fucking her sugar daddy to support the guys she worships! Overdosing on pills during sex~",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 128,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 828960,
+    "name": "Blonde Driver",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 288,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2458480,
+    "name": "The Naughty Vampire and the Moaning Forest",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 161,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2224120,
+    "name": "Zombie Rollerz: The Last Ship",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 140,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3062500,
+    "name": "The Adventurers",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 170,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 292390,
+    "name": "Realms of the Haunting",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 194,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1538730,
+    "name": "Pirates: Golden tits: Chapter 1",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 162,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 368710,
+    "name": "Power of Love",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 124,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2644590,
+    "name": "Global Magnates: Shipping Tycoon",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 117,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 978270,
+    "name": "Sam & Dan: Floaty Flatmates",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 728,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 4342570,
+    "name": "Gospodar's Tales",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 188,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 843430,
+    "name": "Righty Tighty XL",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 168,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2635350,
+    "name": "United Penguin Kingdom",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 370,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2417580,
+    "name": "Bonnie's Bakery",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 128,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 551550,
+    "name": "ASSASSINATION BOX",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 171,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1102980,
+    "name": "英雄群侠传",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 557,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2328740,
+    "name": "LustyVerse: Passion on Display",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 187,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 356000,
+    "name": "The Hero of Kendrickstone",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 102,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1421490,
+    "name": "Rise of the Triad: Ludicrous Edition",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 687,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1345470,
+    "name": "Lockheart Indigo",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 143,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 351910,
+    "name": "Valhalla Hills",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 678,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3320410,
+    "name": "Thot on Trial",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 231,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 234900,
+    "name": "Anodyne",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 996,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1086160,
+    "name": "Space War: Infinity",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 117,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1188720,
+    "name": "Drunken Wrestlers",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 640,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1066400,
+    "name": "Doctor Who: The Runaway",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 178,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 373240,
+    "name": "Black Sails - The Ghost Ship",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 225,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2807210,
+    "name": "Robo Cats",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 344,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 252370,
+    "name": "The Shivah",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 600,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 427680,
+    "name": "Zwei: The Arges Adventure",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 378,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2506580,
+    "name": "Gearbits",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 448,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 544710,
+    "name": "Delicious - Emily's New Beginning",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 114,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3306990,
+    "name": "Corner Shop: NightShift",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 217,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1217100,
+    "name": "Mega Hasan",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 412,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3486280,
+    "name": "Long Knives",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 675,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 658150,
+    "name": "Skeleton Boomerang",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 162,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1953970,
+    "name": "MATH EXPRESSions",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 245,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3553750,
+    "name": "Deep Blue: Devour and Evolve",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 103,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2191670,
+    "name": "Nyanco Impact",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 102,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 859700,
+    "name": "USA 2020",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 248,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 758320,
+    "name": "Cursed Lands",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 124,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 80360,
+    "name": "Blackwell Deception",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 520,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3067950,
+    "name": "皇帝游戏：天下-皇游天下",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 216,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3955660,
+    "name": "Dangerous Mountain Together",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 175,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1226160,
+    "name": "College Bowl",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 267,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1267310,
+    "name": "[Chilla's Art] Onryo | 怨霊",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 174,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3211690,
+    "name": "Tobacco Shop Simulator: Prologue",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 806,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1882280,
+    "name": "Forgotten Realms: The Archives - Collection Two",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 273,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3580340,
+    "name": "Ash & Adam's Existential Treads",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 352,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1995590,
+    "name": "The Block",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 173,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 402060,
+    "name": "Californium",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 269,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 909190,
+    "name": "Escape Lala - Retro Point and Click Adventure",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 341,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 688140,
+    "name": "Tempest 4000",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 170,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1471040,
+    "name": "Base One",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 458,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2203590,
+    "name": "Tune in to the show Part 1",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 163,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1859490,
+    "name": "Planet TD",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 123,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1419290,
+    "name": "Out of Line",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 134,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1330250,
+    "name": "Taimanin Collection: Battle Arena",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 842,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 420550,
+    "name": "Super Arcade Football",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 164,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2050510,
+    "name": "Oriental Dynasty - Silk Road defense war",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 620,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 252430,
+    "name": "Dusty Revenge:Co-Op Edition",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 100,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 4428790,
+    "name": "Rest Area Simulator: Prologue",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 132,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 418300,
+    "name": "Wick",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 508,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 4773840,
+    "name": "City Lights Love Bites Season 1 - The Reset",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 969,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1113680,
+    "name": "Hentai Girl Division",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 894,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 345460,
+    "name": "War of Omens Card Game",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 716,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1116210,
+    "name": "Our world has not decayed",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 373,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1442450,
+    "name": "Monsters Domain",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 275,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 798280,
+    "name": "CrocoMars",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 282,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3642180,
+    "name": "Cultivation Magic World",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 279,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 703940,
+    "name": "Ball 2D: Soccer Online",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 203,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1518430,
+    "name": "Eiyu*Senki Gold – A New Conquest",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 402,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2700780,
+    "name": "my eyes deceive",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 995,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 724000,
+    "name": "Uragun",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 215,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2213500,
+    "name": "Sven - Completely Screwed",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 182,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 629090,
+    "name": "Horace",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 350,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3074440,
+    "name": "Blade of God X: Orisols",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 516,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1001800,
+    "name": "KUNAI",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 447,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1423600,
+    "name": "BLUE REFLECTION: Second Light",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 950,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 435490,
+    "name": "Pierhead Arcade",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 265,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3835980,
+    "name": "Lythia: Sigil of Lust",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 113,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1504110,
+    "name": "Grandiose",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 162,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1028350,
+    "name": "Pupperazzi: The Dog Photography Game",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 444,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3412620,
+    "name": "Her Love, Like Poison",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 279,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3287230,
+    "name": "Helen Keller Simulator",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 131,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1120370,
+    "name": "場外人生",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 316,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 328270,
+    "name": "Leviathan: The Last Day of the Decade",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 527,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2414110,
+    "name": "Builderment",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 126,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2451320,
+    "name": "Bulletstorm VR",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 152,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1148400,
+    "name": "Blooming Nightshade",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 232,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 35300,
+    "name": "Warfare",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 183,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 513720,
+    "name": "Archipelago",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 127,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 363620,
+    "name": "Tea Party Simulator 2015™",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 101,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 461730,
+    "name": "Blaite",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 320,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2103480,
+    "name": "Summer Trip Cruise",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 104,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 4693550,
+    "name": "Дорога Жизни",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 257,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3626910,
+    "name": "Sync Or Sink",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 179,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2607320,
+    "name": "Illegal Mahjong",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 149,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1190160,
+    "name": "LIT: Bend the Light",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 260,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 454180,
+    "name": "CrazyCars3D",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 149,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 823600,
+    "name": "Battle Brawlers",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 201,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1913980,
+    "name": "GHARP",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 100,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2386870,
+    "name": "Furry Femboys",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 148,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2119940,
+    "name": "Her World",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 467,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3226210,
+    "name": "Skeleseller",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 428,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3030250,
+    "name": "Aunt Fatima - خالة فاطمة",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 197,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1572040,
+    "name": "Through The Fragmentation",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 220,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 4149040,
+    "name": "Drillbound",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 267,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2314650,
+    "name": "Gray Haven : Witch's Garden",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 324,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 227560,
+    "name": "Scourge: Outbreak",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 229,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 384570,
+    "name": "Zanzarah: The Hidden Portal",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 993,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1490840,
+    "name": "Bloodshore",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 836,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 4580600,
+    "name": "Animaly Bar: NO HUMANITY!",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 251,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1066290,
+    "name": "猎魔者战纪",
+    "group": "stratified",
+    "stratum": "100-999",
+    "review_count": 121,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 313730,
+    "name": "Sunrider: Mask of Arcadius",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2807,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 4030150,
+    "name": "The Legend of Fancy Realm Remake",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1516,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2492660,
+    "name": "METAL GEAR SOLID: Peace Walker - Master Collection Version",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1240,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 342580,
+    "name": "12 Labours of Hercules",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2313,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2106840,
+    "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 6289,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 365160,
+    "name": "Kona",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2827,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 278970,
+    "name": "Digger Online",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1290,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3639650,
+    "name": "Kotama and Academy Citadel",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2628,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1018010,
+    "name": "Castlevania Anniversary Collection",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1892,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1555710,
+    "name": "OMFG: One Million Fatal Guns",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2374,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 394760,
+    "name": "Dead Effect 2",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1916,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1764530,
+    "name": "Sailwind",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2365,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2367820,
+    "name": "despelote",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1066,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1334000,
+    "name": "Wordle",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1156,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1126290,
+    "name": "Lost",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 7411,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3855540,
+    "name": "BLACK SOULS II",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 5861,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3472550,
+    "name": "The Mr. Rabbit Magic Show",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 6378,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2916430,
+    "name": "Fast Food Simulator",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 8857,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1534980,
+    "name": "Terminus: Zombie Survivors",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 4363,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1403370,
+    "name": "Zenith: Nexus",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 4507,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1212830,
+    "name": "Seek Girl Ⅳ",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1851,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2067780,
+    "name": "Your Turn To Die -Death Game By Majority-",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 4242,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 571260,
+    "name": "THE KING OF FIGHTERS XIV STEAM EDITION",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3372,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1220840,
+    "name": "Retirement Simulator",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3755,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 473950,
+    "name": "Manifold Garden",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 7839,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 359510,
+    "name": "Tangle Tower",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 6702,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3527760,
+    "name": "RoboCop: Rogue City - Unfinished Business",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 4138,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1929870,
+    "name": "Nomad Survival",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1518,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 274500,
+    "name": "Brigador: Up-Armored Edition",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 4609,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 503620,
+    "name": "Fictorum",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1033,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2336720,
+    "name": "Greed of Man",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3390,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2403320,
+    "name": "冬日树下的回忆",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1338,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 251730,
+    "name": "Legend of Grimrock 2",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3097,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1735950,
+    "name": "Paper Bride",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2046,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1482860,
+    "name": "Idle Research",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1918,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1009290,
+    "name": "SWORD ART ONLINE Alicization Lycoris",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 5013,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2126190,
+    "name": "Rue Valley",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1951,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 405290,
+    "name": "Charlie Murder",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2668,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 937170,
+    "name": "Otaku's Adventure",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 8364,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1592110,
+    "name": "Spirit of the Island",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1199,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1420350,
+    "name": "Fraymakers",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1296,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1073440,
+    "name": "コイカツ！ / Koikatsu Party",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 5297,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 648580,
+    "name": "428: Shibuya Scramble",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3860,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3020,
+    "name": "Call of Juarez",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3798,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2259310,
+    "name": "ORDER 13",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1278,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1358700,
+    "name": "STRANGER OF PARADISE FINAL FANTASY ORIGIN",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3851,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2853730,
+    "name": "Skull and Bones",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 4744,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 745880,
+    "name": "Touhou Tenkuushou ~ Hidden Star in Four Seasons.",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 4312,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 513450,
+    "name": "Drop Alive",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1575,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1420770,
+    "name": "Winter Resort Simulator 2",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1363,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2061440,
+    "name": "Oxygen: First Breath",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1665,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 941460,
+    "name": "Death Trash",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3473,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 343710,
+    "name": "Kholat",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2046,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2135150,
+    "name": "Elin",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 8610,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 416210,
+    "name": "Block'hood",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1172,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1110050,
+    "name": "Evan's Remains",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1108,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 80330,
+    "name": "The Blackwell Legacy",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1354,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 299970,
+    "name": "Project Motor Racing",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1246,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 535520,
+    "name": "Nidhogg 2",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1034,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 990050,
+    "name": "Death end re;Quest",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1040,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 343860,
+    "name": "Tacoma",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3124,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1864000,
+    "name": "Artis Impact",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2389,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1811990,
+    "name": "Wildfrost",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 8217,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 598330,
+    "name": "SimAirport",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3913,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 842100,
+    "name": "Daymare: 1998",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3479,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1638220,
+    "name": "Xuan-Yuan Sword: The Scar of Sky",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2466,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1623070,
+    "name": "Master of Magic",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1034,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1568940,
+    "name": "花妖物语/Flower girl",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2641,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1072920,
+    "name": "HomeWork Is Crazy / 作业疯了",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1025,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 439190,
+    "name": "Stories: The Path of Destinies",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1949,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1566060,
+    "name": "Miss Furry",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1913,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1456820,
+    "name": "Marfusha:Sentinel Girls ",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3143,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1178050,
+    "name": "狐の旅路",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1477,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2788040,
+    "name": "Another Try 2",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1009,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 654880,
+    "name": "Dream Daddy: A Dad Dating Simulator",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 5423,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 950460,
+    "name": "Paradise Cleaning!",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1321,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2559270,
+    "name": "Gym Simulator 24",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2550,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 253510,
+    "name": "WARMACHINE: Tactics",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1164,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1441840,
+    "name": "FALL IN LABYRINTH",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1087,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3375780,
+    "name": "Trails in the Sky 1st Chapter",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 5176,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 829660,
+    "name": "No Time to Relax",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2511,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 220660,
+    "name": "StarDrive",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1255,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 248610,
+    "name": "Door Kickers",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 8062,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3979330,
+    "name": "nophenia",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1902,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1041840,
+    "name": "Fight Angel Special Edition",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1799,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 723390,
+    "name": "Hunt Down The Freeman",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3798,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 436670,
+    "name": "The Legend of Heroes: Trails in the Sky the 3rd",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2232,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 493200,
+    "name": "RiME",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3234,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 741510,
+    "name": "The Hong Kong Massacre",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1724,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1603640,
+    "name": "The House of Da Vinci 3",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1318,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1639790,
+    "name": "Northern Journey",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3547,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 975680,
+    "name": "METAL SLUG XX",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1153,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 695330,
+    "name": "SEASON: A letter to the future",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1852,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3947480,
+    "name": "Soul Touch",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1007,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 427100,
+    "name": "Fernbus Simulator",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 8149,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 431590,
+    "name": "Earn to Die 2",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2281,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 765410,
+    "name": "Bean Battles",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 6793,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 380840,
+    "name": "Teeworlds",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 4350,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2319640,
+    "name": "Rise of Gun",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1101,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1115780,
+    "name": "The Almost Gone",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1027,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2000890,
+    "name": "MechWarrior 5: Clans",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 5671,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3270680,
+    "name": "Kota`s New Journey",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3646,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1622900,
+    "name": "Star Trek: Infinite",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3046,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1722860,
+    "name": "Munchkin Digital",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1372,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3515380,
+    "name": "YKMET: Strade",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1232,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 99300,
+    "name": "Renegade Ops",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1019,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1245430,
+    "name": "Golden Light",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1962,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 41050,
+    "name": "Serious Sam Classic: The First Encounter",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 3116,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 466860,
+    "name": "上帝之城 I：监狱帝国 [City of God I - Prison Empire]",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1545,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3693650,
+    "name": "Thrifty Business",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1370,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 215280,
+    "name": "Secret World Legends",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 9274,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1058020,
+    "name": "STAR WARS™ Battlefront (Classic, 2004)",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 4271,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 656350,
+    "name": "UnderMine",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 9320,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 568090,
+    "name": "Tattletail",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 4705,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 4028600,
+    "name": "TERPENIE",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 1069,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1955830,
+    "name": "Touhou Hero of Ice Fairy",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 7893,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1094030,
+    "name": "Lurk in the Dark : Prologue",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2189,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1944570,
+    "name": "Boneraiser Minions",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 4994,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1930,
+    "name": "Two Worlds Epic Edition",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 2640,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2966320,
+    "name": "Starsand Island",
+    "group": "stratified",
+    "stratum": "1k-9.9k",
+    "review_count": 5971,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 433340,
+    "name": "Slime Rancher",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 141011,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1782120,
+    "name": "ZERO Sievert",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 14602,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 516750,
+    "name": "My Summer Car",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 110129,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 239160,
+    "name": "Thief",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 17473,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2552430,
+    "name": "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11359,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 824270,
+    "name": "KovaaK's",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 38495,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 218230,
+    "name": "PlanetSide 2",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 74996,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 22320,
+    "name": "The Elder Scrolls III: Morrowind® Game of the Year Edition",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 22499,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 206420,
+    "name": "Saints Row IV: Re-Elected",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 57589,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 582500,
+    "name": "We Were Here",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 33671,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 814540,
+    "name": "Changed",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 16157,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2993780,
+    "name": "FANTASY LIFE i: The Girl Who Steals Time",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11817,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 204360,
+    "name": "Castle Crashers®",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 110385,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1677740,
+    "name": "Stumble Guys",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 139666,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2479810,
+    "name": "Gray Zone Warfare",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 71652,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 224260,
+    "name": "No More Room in Hell",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 77001,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 313160,
+    "name": "Farming Simulator 15",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 13358,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 773951,
+    "name": "Freeman: Guerrilla Warfare",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11512,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3862670,
+    "name": "Shelldiver",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 17817,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 463530,
+    "name": "Empires of the Undergrowth",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 18118,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2608050,
+    "name": "Travellin Cats in Jingle Jam",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10515,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2747330,
+    "name": "Species: Unknown",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10977,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 313340,
+    "name": "Mountain",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 12931,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 332950,
+    "name": "Dark Deception",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 24633,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 675010,
+    "name": "MudRunner",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 38257,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 233720,
+    "name": "Surgeon Simulator",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 13916,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 916440,
+    "name": "Anno 1800",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 30332,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2417610,
+    "name": "METAL GEAR SOLID Δ: SNAKE EATER",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 13973,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1318690,
+    "name": "shapez",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 14428,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1284190,
+    "name": "The Planet Crafter",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 70147,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2625420,
+    "name": "Drive Beyond Horizons",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 18443,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3164330,
+    "name": "Infinity Nikki",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10741,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 567640,
+    "name": "Danganronpa V3: Killing Harmony",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 22430,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2378900,
+    "name": "The Coffin of Andy and Leyley",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 37408,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 707030,
+    "name": "POSTAL 4: No Regerts",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10979,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 329430,
+    "name": "State of Decay: YOSE",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10587,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 955900,
+    "name": "Amazing Cultivation Simulator",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 19146,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1145360,
+    "name": "Hades",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 288031,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2427700,
+    "name": "Backpack Battles",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 19140,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 246900,
+    "name": "Viscera Cleanup Detail",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 18122,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 333600,
+    "name": "NEKOPARA Vol. 1",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 23495,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1288310,
+    "name": "Firework",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 41352,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 792300,
+    "name": "The Beast Inside",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10597,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 799600,
+    "name": "Cosmoteer: Starship Architect & Commander",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 12160,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1066890,
+    "name": "Automobilista 2",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 12334,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2386720,
+    "name": "STRAFTAT",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 24643,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2064650,
+    "name": "Tower of Fantasy",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 12073,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 250400,
+    "name": "How to Survive",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 14002,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 361280,
+    "name": "Turmoil",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 13224,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 704850,
+    "name": "Thief Simulator",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 37692,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 812810,
+    "name": "missed messages.",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 15577,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1144400,
+    "name": "Senren＊Banka",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 34125,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2695940,
+    "name": "PANICORE",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10849,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 391720,
+    "name": "Layers of Fear (2016)",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 13275,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1388770,
+    "name": "Cruelty Squad",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 23537,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 383080,
+    "name": "Sakura Clicker",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 14294,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2653790,
+    "name": "The Exit 8",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11219,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3528450,
+    "name": "Sweet Home",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10590,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 327030,
+    "name": "Worms W.M.D",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10542,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 300380,
+    "name": "Road Redemption",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10920,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2784470,
+    "name": "9 Kings",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 22259,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 207610,
+    "name": "The Walking Dead",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 54192,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1201240,
+    "name": "BLEACH Brave Souls",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 12890,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 764790,
+    "name": "The Messenger",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10816,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1180380,
+    "name": "Stay Out",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 31872,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1962700,
+    "name": "Subnautica 2",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 119683,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 362490,
+    "name": "Exanima",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 12818,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 447040,
+    "name": "Watch_Dogs® 2",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 99422,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1147560,
+    "name": "Skul: The Hero Slayer",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 50983,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1845910,
+    "name": "Dragon Age™: The Veilguard",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 41659,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 394510,
+    "name": "HELLDIVERS™ Dive Harder Edition",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 25766,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 394690,
+    "name": "Tower Unite",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 16288,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 699130,
+    "name": "World War Z",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 25550,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 268050,
+    "name": "The Evil Within",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 21783,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 427290,
+    "name": "Vampyr",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 20395,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 233270,
+    "name": "Far Cry 3 - Blood Dragon",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 18626,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1392860,
+    "name": "Little Nightmares III",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10412,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 15100,
+    "name": "Assassin's Creed™: Director's Cut Edition",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 24157,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3556750,
+    "name": "Warhammer 40,000: Dawn of War - Definitive Edition",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 12686,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1258080,
+    "name": "Shop Titans",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 18075,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3472040,
+    "name": "NBA 2K26",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 26338,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 521890,
+    "name": "Hello Neighbor",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 27648,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 365590,
+    "name": "Tom Clancy’s The Division™",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 77472,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1030830,
+    "name": "Mafia II: Definitive Edition",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 29473,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3228590,
+    "name": "Deadzone: Rogue",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 15379,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1778820,
+    "name": "TEKKEN 8",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 46825,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 285920,
+    "name": "TerraTech",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 20696,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 492720,
+    "name": "Tropico 6",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 20030,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1118520,
+    "name": "Paralives",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 20893,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 872410,
+    "name": "ROMANCE OF THE THREE KINGDOMS XIV",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 13287,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 283640,
+    "name": "Salt and Sanctuary",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 20191,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1217060,
+    "name": "Gunfire Reborn",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 88684,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1462040,
+    "name": "FINAL FANTASY VII REMAKE INTERGRADE",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 45868,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1259420,
+    "name": "Days Gone",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 83601,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 787480,
+    "name": "Phoenix Wright: Ace Attorney Trilogy",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 36180,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2171440,
+    "name": "Fear & Hunger 2: Termina",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 14524,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 903950,
+    "name": "Last Oasis",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 20442,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 657200,
+    "name": "Hand Simulator",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 28360,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2426960,
+    "name": "Summoners War",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10925,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 42680,
+    "name": "Call of Duty®: Modern Warfare® 3 (2011)",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 15745,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1544020,
+    "name": "The Callisto Protocol™",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 35262,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2504480,
+    "name": "Indigo Park: Chapter 1",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 23591,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 409720,
+    "name": "BioShock™ 2 Remastered",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 24632,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 237990,
+    "name": "The Banner Saga",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 13505,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 714010,
+    "name": "Aimlabs",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 139148,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 779340,
+    "name": "Total War: THREE KINGDOMS",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 63467,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 99900,
+    "name": "Spiral Knights",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 24275,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 636480,
+    "name": "Ravenfield",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 76952,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 569480,
+    "name": "Kingdoms and Castles",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 30530,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 274190,
+    "name": "Broforce",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 49646,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 2072560,
+    "name": "DRAGON BALL GEKISHIN SQUADRA",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11539,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 48720,
+    "name": "Mount & Blade: With Fire & Sword",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11260,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 304240,
+    "name": "Resident Evil",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 28279,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1367550,
+    "name": "Kingdom Rush Vengeance - Tower Defense",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 10082,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1604000,
+    "name": "Milk outside a bag of milk outside a bag of milk",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 21035,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 3812600,
+    "name": "ReStory: Chill Electronics Repairs",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11743,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 209650,
+    "name": "Call of Duty®: Advanced Warfare - Gold Edition",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 11179,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 1172620,
+    "name": "Sea of Thieves: 2026 Edition",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 323345,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 319510,
+    "name": "Five Nights at Freddy's",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 54168,
+    "batch": 3,
+    "added_at": 1794938512
+  },
+  {
+    "appid": 368070,
+    "name": "Sniper Ghost Warrior 3",
+    "group": "stratified",
+    "stratum": "10k+",
+    "review_count": 15237,
+    "batch": 3,
+    "added_at": 1794938512
   }
 ]

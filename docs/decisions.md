@@ -108,6 +108,8 @@ Chỉ một nơi crawl tại một thời điểm; chuyển nơi crawl thì mang
    - `clean/ccu` vẫn phân vùng theo `dt` (dữ liệu CCU chỉ có từ lúc bắt đầu crawl, số ngày ít).
    - B2 ghi `clean/reviews` với `partitionOverwriteMode=static`, tức xoá cả thư mục rồi ghi lại. Nếu không, thư mục cũ có `dt=` sẽ nằm lẫn với `ym=` mới và Spark không đọc được.
    - Hive: bảng do `write_table()` tự đăng ký đã nhận `ym`; `storage/hive/create_tables.sql` cũng đã sửa thành `PARTITIONED BY (ym STRING)`.
+3. **`curated/review_sentiment` (B5) cũng phân vùng theo `ym`**, `repartition("ym")` và ghi `static`, cùng lý do như mục 2. Cột `dt` vẫn giữ; B3 và notebook 02 chỉ join theo `recommendationid` nên không phải sửa. B9 đọc bảng này.
+   - Số đo (2026-11-18, bộ 100 game, `local[4]`): **7.089 → 154 file Parquet**, 68 MB → 2,2 MB; vẫn đủ 34.725 dòng, không trùng `recommendationid`, `ym` khớp `dt` ở mọi dòng; B3 sau đó cho cùng 19.861 dòng `game_daily_stats`.
 
 **Số đo trước/sau (2026-11-18, bộ 100 game, 92.519 bản ghi raw, 87.407 review sau khử trùng):** WSL2 Ubuntu, PySpark 3.5.7, `SPARK_MASTER=local[4]`. "Trước" = B2 ở commit `18bcad1` (phân vùng `dt`), "sau" = B2 hiện tại (`ym`), cùng bộ raw.
 

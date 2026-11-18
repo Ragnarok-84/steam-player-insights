@@ -75,8 +75,11 @@ def analyze_aspects_and_sentiment(spark, clean_root: str, curated_root: str, es:
         .cache()
     )
 
-    sentiment = enriched.select("recommendationid", "appid", "dt", "sentiment_score", "sentiment_label", "aspects")
-    write_table(spark, sentiment, f"{curated_root}/review_sentiment", "review_sentiment", partition_by=["dt"])
+    # Phân vùng theo tháng như clean/reviews (docs/decisions.md mục 8): chia theo dt sinh vài nghìn file nhỏ.
+    # Giữ cột dt trong dữ liệu; static để xoá thư mục dt= cũ, tránh lẫn với ym= mới.
+    sentiment = enriched.select("recommendationid", "appid", "dt", "ym", "sentiment_score", "sentiment_label", "aspects")
+    write_table(spark, sentiment.repartition("ym"), f"{curated_root}/review_sentiment", "review_sentiment",
+                partition_by=["ym"], partition_overwrite_mode="static")
 
     aspect_stats = (
         enriched.withColumn("aspect", explode(col("aspects")))

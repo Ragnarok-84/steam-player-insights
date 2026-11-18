@@ -3,10 +3,7 @@
 # REGISTRY=registry.example.com/steam ./scripts/deploy_all.sh   -> build + push image lên registry
 # Không đặt REGISTRY: image build local; với k3s chạy thêm: K3S_IMPORT=1 (import vào containerd của node hiện tại).
 set -euo pipefail
-TAG=${TAG:-1.0.0}
-REGISTRY=${REGISTRY:-}
-SPARK_IMAGE=${REGISTRY:+$REGISTRY/}steam-spark:$TAG
-CRAWLER_IMAGE=${REGISTRY:+$REGISTRY/}steam-crawler:$TAG
+source scripts/k3s-images.sh
 
 echo "=== 1. Kafka (KRaft, 3 node) & topics ==="
 kubectl apply -f k8s/kafka/strimzi-kafka-cluster.yaml
@@ -22,7 +19,7 @@ kubectl apply -f k8s/elasticsearch/eck-elasticsearch.yaml
 kubectl wait elasticsearch/steam-elasticsearch -n elastic-system --for=jsonpath='{.status.health}'=green --timeout=900s
 
 echo "=== 4. Secret mật khẩu ES cho spark-jobs và monitoring ==="
-kubectl apply -f k8s/common/pipeline-config.yaml
+render_steam_images k8s/common/pipeline-config.yaml | kubectl apply -f -
 ES_PASS=$(kubectl get secret steam-elasticsearch-es-elastic-user -n elastic-system -o jsonpath='{.data.elastic}' | base64 -d)
 for ns in spark-jobs monitoring; do
   kubectl create namespace "$ns" --dry-run=client -o yaml | kubectl apply -f -
@@ -38,7 +35,7 @@ kubectl rollout status deployment/hive-metastore -n hive --timeout=600s
 echo "=== 6. Container images ($SPARK_IMAGE, $CRAWLER_IMAGE) ==="
 docker build -t "$SPARK_IMAGE" -f containers/Dockerfile.spark .
 docker build -t "$CRAWLER_IMAGE" -f containers/Dockerfile.crawler .
-if [ -n "$REGISTRY" ]; then
+if [ "$REGISTRY" != localhost ]; then
   docker push "$SPARK_IMAGE"; docker push "$CRAWLER_IMAGE"
 elif [ "${K3S_IMPORT:-0}" = "1" ]; then
   docker save "$SPARK_IMAGE" "$CRAWLER_IMAGE" | sudo k3s ctr images import -
@@ -46,9 +43,9 @@ fi
 
 echo "=== 7. Spark RBAC, batch CronJob, streaming Deployments, crawler CronJobs ==="
 kubectl apply -f k8s/spark/spark-operator-rbac.yaml
-sed "s#steam-spark:1.0.0#$SPARK_IMAGE#g" k8s/common/pipeline-config.yaml | kubectl apply -f -
-sed "s#steam-spark:1.0.0#$SPARK_IMAGE#g" k8s/spark/steam-jobs.yaml | kubectl apply -f -
-sed "s#steam-crawler:1.0.0#$CRAWLER_IMAGE#g" k8s/crawlers/crawler-cronjobs.yaml | kubectl apply -f -
+render_steam_images k8s/spark/steam-jobs.yaml | kubectl apply -f -
+kubectl kustomize k8s/crawlers | render_steam_images | kubectl apply -f -
+seed_crawler_targets default
 
 echo "=== 8. ES indices + Kibana data views/dashboards (job một lần) ==="
 kubectl delete pod steam-es-setup -n spark-jobs --ignore-not-found

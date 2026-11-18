@@ -6,7 +6,7 @@ RUN pip install --no-cache-dir -r requirements-crawler.txt
 
 COPY crawlers/ crawlers/
 # Chỉ danh sách game mục tiêu; không đưa dữ liệu raw (data/raw có thể nặng hàng GB) vào image
-COPY data/target_apps.json data/target_apps.json
+COPY data/target_apps.json data/target_apps.json.manifest.json data/
 
 ENV PYTHONUNBUFFERED=1
 CMD ["python", "-m", "crawlers.steam_reviews_crawler"]

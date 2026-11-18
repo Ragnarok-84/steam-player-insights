@@ -21,9 +21,9 @@ from crawlers import steam_review_histogram_crawler as histogram
 from crawlers import steam_reviews_crawler as reviews
 from crawlers.config import (TARGET_APP_LIST_PATH, CRAWLER_TARGET_LIMIT, OUTPUT_DIR, STATE_DIR,
                              CRAWLER_RATE_LIMIT_DELAY, CRAWLER_REVIEW_BATCHES, CRAWLER_REVIEW_DAYS,
-                             CRAWLER_WORKER_ID, CRAWLER_TOTAL_WORKERS, KAFKA_TOPIC_META,
+                             CRAWLER_WORKER_ID, CRAWLER_TOTAL_WORKERS,
                              CRAWLER_FLUSH_MAX_RECORDS, CRAWLER_FLUSH_INTERVAL_SEC)
-from crawlers.common import steam_store
+from crawlers.steam_store_crawler import collect_store
 from crawlers.common.jsonl_producer import JsonlProducer
 from crawlers.common.files import write_json
 from crawlers.common.rate_limiter import RateLimiter, RequestBudgetExceeded
@@ -32,22 +32,6 @@ from crawlers.common.targets import load_target_apps, is_assigned_to_worker
 
 SOURCES = ['store', 'metadata', 'histogram', 'ccu', 'reviews']
 PER_GAME = ['metadata', 'histogram', 'ccu', 'reviews']
-
-
-def collect_store(apps, producer, limiter):
-    """Batched store snapshot for all assigned games. Returns the appids Steam did not return."""
-    tag_names = steam_store.fetch_tag_names(limiter)
-    items = steam_store.fetch_store_items(apps, limiter)
-    now = time.time()
-    for appid in apps:
-        if appid in items and items[appid].get('success') == 1:
-            # Distinct key per record type: steam.games.meta is log-compacted by key
-            producer.send(KAFKA_TOPIC_META, f'{appid}:store', steam_store.parse_store_item(items[appid], tag_names, now))
-    if hasattr(producer, 'flush_all'):
-        producer.flush_all()
-    else:
-        producer.flush()
-    return [a for a in apps if a not in items or items[a].get('success') != 1]
 
 
 def main():

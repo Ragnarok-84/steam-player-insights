@@ -1,20 +1,21 @@
 """Render a native Spark-on-Kubernetes client-mode Job without a Spark operator."""
 import argparse
 import json
+import shlex
 import uuid
 
 
-def render(executors, rows):
+def render(executors, rows, image="localhost/steam-spark-demo:local", pull_policy="Never"):
     run_id = uuid.uuid4().hex[:12]
     name = f"ft-bench-{executors}-{run_id}"
-    command = """exec spark-submit \
+    command = f"""exec spark-submit \
   --master k8s://https://kubernetes.default.svc:443 \
   --deploy-mode client \
   --conf spark.kubernetes.namespace=steam-ft \
   --conf spark.kubernetes.authenticate.oauthTokenFile=/var/run/secrets/kubernetes.io/serviceaccount/token \
   --conf spark.kubernetes.authenticate.caCertFile=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt \
-  --conf spark.kubernetes.container.image=localhost/steam-spark-demo:k3s-20261026 \
-  --conf spark.kubernetes.container.image.pullPolicy=Never \
+  --conf spark.kubernetes.container.image={shlex.quote(image)} \
+  --conf spark.kubernetes.container.image.pullPolicy={shlex.quote(pull_policy)} \
   --conf spark.kubernetes.driver.pod.name="$POD_NAME" \
   --conf spark.driver.host="$POD_IP" \
   --conf spark.driver.bindAddress=0.0.0.0 \
@@ -36,8 +37,8 @@ def render(executors, rows):
   /app/infra/k3s/benchmark.py --executors "$EXECUTORS" --rows "$ROWS" \
   --output "hdfs://namenode:8020/steam/bench/$POD_NAME"
 """
-    container = {"name": "driver", "image": "localhost/steam-spark-demo:k3s-20261026",
-                 "imagePullPolicy": "Never", "command": ["bash", "-ec", command],
+    container = {"name": "driver", "image": image,
+                 "imagePullPolicy": pull_policy, "command": ["bash", "-ec", command],
                  "env": [{"name": "POD_NAME", "valueFrom": {"fieldRef": {"fieldPath": "metadata.name"}}},
                          {"name": "POD_IP", "valueFrom": {"fieldRef": {"fieldPath": "status.podIP"}}},
                          {"name": "EXECUTORS", "value": str(executors)}, {"name": "ROWS", "value": str(rows)}],
@@ -55,7 +56,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--executors", type=int, choices=[1, 2, 4], required=True)
     parser.add_argument("--rows", type=int, default=1000000)
+    parser.add_argument("--image", default="localhost/steam-spark-demo:local")
+    parser.add_argument("--pull-policy", choices=["Never", "IfNotPresent", "Always"], default="Never")
     args = parser.parse_args()
     if args.rows < 1:
         parser.error("rows must be positive")
-    print(json.dumps(render(args.executors, args.rows), indent=2))
+    print(json.dumps(render(args.executors, args.rows, args.image, args.pull_policy), indent=2))

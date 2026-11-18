@@ -1,8 +1,8 @@
-# Cụm k3s ba máy và demo một instance
+# Cụm k3s và demo một instance
 
 Bộ cấu hình để nhóm thống nhất trước khi cài: ba máy cá nhân, mỗi máy một VM Ubuntu 24.04 LTS, một server và hai agent. Các dịch vụ chạy trên Kubernetes/containerd, không dùng Docker Compose. Cấu hình đã kiểm tra tĩnh; chưa được chạy trên ba VM thực tế.
 
-Sau mốc demo một instance, dùng [hướng dẫn kiểm thử chịu lỗi và mở rộng](FAULT_TEST.md): môi trường riêng Kafka ba broker/HDFS hai DataNode, thêm worker compute thứ tư/thứ năm và benchmark Spark 1/2/4 executor.
+Để nghiệm thu giai đoạn 1 trên GCP, dùng một server và ba agent. Ba node đầu chạy các dịch vụ demo. Agent thứ ba (`steam-worker-3`) làm compute bổ sung và chạy một lượt smoke riêng. Sau mốc này, dùng [hướng dẫn kiểm thử chịu lỗi và mở rộng](FAULT_TEST.md) cho môi trường Kafka ba broker/HDFS hai DataNode và benchmark Spark 1/2/4 executor.
 
 ## 1. Thống nhất ba máy
 
@@ -58,6 +58,9 @@ sudo bash infra/k3s/install-node.sh agent steam-worker-1 100.X.Y.Z
 
 # Chạy trên worker 2:
 sudo bash infra/k3s/install-node.sh agent steam-worker-2 100.X.Y.Z
+
+# Trên worker 3 nếu nghiệm thu cụm 4 VM:
+sudo bash infra/k3s/install-node.sh agent steam-worker-3 100.X.Y.Z
 ```
 
 Trên server, tạo bản kubeconfig riêng cho người quản lý cụm:
@@ -72,7 +75,7 @@ kubectl wait --for=condition=Ready nodes --all --timeout=180s
 kubectl get pods -n kube-system
 ```
 
-Phải có đúng ba node mong đợi ở trạng thái Ready, InternalIP là IP Tailscale, CoreDNS/local-path/metrics-server hoạt động. Bản kubeconfig trên dùng API localhost nên dùng ngay trên VM server; chưa bàn giao kubeconfig admin cho cả nhóm. Kubeconfig và token chứa quyền truy cập cụm, giữ ngoài repo.
+Xác nhận các node mong đợi ở trạng thái Ready, InternalIP là IP Tailscale, CoreDNS/local-path/metrics-server hoạt động. Bản kubeconfig trên dùng API localhost nên dùng ngay trên VM server. Giữ kubeconfig và token ngoài repo.
 
 ## 4. Triển khai mỗi dịch vụ một instance
 
@@ -101,32 +104,31 @@ Kafka dùng KRaft, một broker kiêm controller, RF=1/min ISR=1. HDFS replicati
 
 `deploy` đợi từng dịch vụ sẵn sàng, tạo thư mục HDFS và bốn topic Kafka. Readiness chỉ là bước đầu; chạy bài smoke ở dưới để xác nhận cross-node đọc/ghi. Bộ này chưa triển khai Hive, monitoring stack, crawler định kỳ hoặc streaming dài hạn.
 
-## 5. Image Spark và bài kiểm tra luồng dữ liệu
+## 5. Image và nghiệm thu giai đoạn 1
 
-Build image OCI bằng Podman trên VM compute. Image cài Python 3.11.16, Java 17 và `requirements.txt` đã khóa của nhóm, không dùng Docker daemon. Image gồm cả thư viện notebook/test để khớp môi trường nguồn nên build lần đầu có thể lâu; raw không được đóng vào image.
+Build từ cùng một commit trên máy có Podman. Script đóng gói Spark demo, Spark pipeline và crawler, in image ID và tag suy ra từ ngày commit và Git SHA. Crawler chỉ mang danh sách game và manifest. Raw và cursor nằm ngoài image.
 
 ```bash
-sudo apt install -y podman
-podman build -t localhost/steam-spark-demo:k3s-20261026 \
-  --ignorefile infra/k3s/containerignore \
-  -f infra/k3s/Dockerfile.spark-demo .
-podman save --format docker-archive \
-  -o /tmp/steam-spark-demo.tar localhost/steam-spark-demo:k3s-20261026
-sudo k3s ctr images import /tmp/steam-spark-demo.tar
+bash scripts/build-k3s-images.sh
+# Chép archive đến từng node cần chạy image rồi import chính archive đó.
+sudo k3s ctr images import /path/to/steam-k3s-TAG.tar
 sudo k3s ctr images list
 ```
 
-Tên `Dockerfile` và định dạng `docker-archive` là định dạng build/image, không phải triển khai bằng Docker. k3s chạy containerd. Nếu quy định môn học yêu cầu cách build khác, dùng công cụ OCI tương đương. Job dùng `imagePullPolicy: Never` và nhãn `compute`, nên phải import đúng tag trên VM compute trước khi chạy; khi chuyển nhãn compute sang máy khác, import image lên máy đó.
+Với archive local, import lên worker ingest và hai worker compute. Với registry, đặt cùng `REGISTRY` khi build và khi chạy script k3s, rồi kiểm tra quyền pull trên các node. Nếu đặt `TAG` riêng lúc build, dùng cùng giá trị lúc chạy script. k3s chạy các container bằng containerd.
 
-Trên server:
+Trên server của cụm 4 VM, chạy lệnh sau sau khi import/pull image. Script đợi đủ bốn node, kiểm tra manifest trên API server, cài các CronJob ở trạng thái suspend, seed danh sách vào PVC và chạy smoke lần lượt trên hai worker compute.
 
 ```bash
-bash scripts/k3s-demo.sh smoke
+set -o pipefail
+bash scripts/k3s-demo.sh phase1 steam-server steam-worker-1 steam-worker-2 steam-worker-3 2>&1 | tee phase1-k3s.log
 ```
 
-Job tạo topic tạm, gửi/nhận một bản ghi qua Kafka trên worker 1, dùng Spark trên worker 2 ghi/đọc Parquet qua NameNode server và DataNode worker 1, rồi ghi/đọc document ES trên server. Đồng thời tạo các index demo theo mapping của repo. Mỗi bước phải in `PASS`; Job phải `Complete`. Topic tạm được xóa sau bài thử, Parquet/document đánh dấu lượt chạy được giữ để đối chiếu.
+Với cụm 3 node đã deploy, chạy riêng `bash scripts/k3s-demo.sh deploy-crawlers` và `bash scripts/k3s-demo.sh smoke`. Có thể xem manifest crawler đã render bằng `bash scripts/k3s-demo.sh render-crawlers`.
 
-Đây là bài kiểm tra tích hợp hạ tầng với dữ liệu mẫu, không chứng minh các job batch/streaming của đề tài đã hoàn thiện. Spark đang chạy `local[2]` trong một pod; các dịch vụ đã phân bố ba máy, nhưng chưa phải Spark driver/executor phân tán. Bước scalability sau cần Spark Operator hoặc cấu hình Spark cluster phù hợp.
+Mỗi Job smoke tự tạo bản ghi Kafka, ghi/đọc Parquet qua NameNode và DataNode, rồi ghi/đọc document ES. Kiểm tra log `PASS`, trạng thái `Complete` và cột NODE của hai Job. Spark chạy `local[2]` trong từng pod. Lưu log, Git SHA, tag và ID image trước khi dừng các VM.
+
+PVC crawler trong demo dùng `local-path` trên worker ingest và cấu hình một worker cho mỗi Job. Mọi crawler đọc `/data/state/targets/target_apps.json`. Job seed giữ lại danh sách đã được feedback cập nhật. Giữ lịch suspend trong thời gian kiểm thử. Khi thử Job thủ công, dùng manifest/volume thử nghiệm và fixture hoặc giới hạn danh sách nhỏ. Trước khi chuyển crawl thật lên cụm, phối hợp chuyển `reviews_v2/` và đặt Secret `steam-api` trong namespace `steam-demo` cho AppList.
 
 ## 6. Chạy B2 trên raw từ Drive
 

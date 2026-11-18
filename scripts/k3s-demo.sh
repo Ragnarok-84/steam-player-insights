@@ -3,6 +3,7 @@ set -euo pipefail
 REPO_ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
 command -v kubectl >/dev/null || { echo "Configure kubectl on the server VM first."; exit 1; }
+source scripts/k3s-images.sh
 ns=steam-demo
 
 init_kafka() {
@@ -15,16 +16,33 @@ init_kafka() {
   done
 }
 
+run_demo_job() {
+  local job
+  job="$(kubectl -n "$ns" create -f - -o name)"
+  if ! kubectl -n "$ns" wait --for=condition=complete "$job" --timeout=1830s; then
+    kubectl -n "$ns" describe "$job"
+    kubectl -n "$ns" logs "$job" --all-containers=true || true
+    return 1
+  fi
+  kubectl -n "$ns" get pods -l "batch.kubernetes.io/job-name=${job##*/}" -o wide
+  kubectl -n "$ns" logs "$job"
+}
+
 case "${1:-}" in
   label-nodes)
-    [[ $# == 4 ]] || { echo "Usage: bash scripts/k3s-demo.sh label-nodes SERVER WORKER1 WORKER2"; exit 2; }
-    [[ "$2" != "$3" && "$2" != "$4" && "$3" != "$4" ]] || { echo "Use three different nodes."; exit 2; }
-    for node in "$2" "$3" "$4"; do kubectl get node "$node" >/dev/null; done
+    [[ $# == 4 || $# == 5 ]] || { echo "Usage: bash scripts/k3s-demo.sh label-nodes SERVER WORKER1 WORKER2 [WORKER3]"; exit 2; }
+    count="$(printf '%s\n' "${@:2}" | sort -u | wc -l)"
+    [[ "$count" == "$(($# - 1))" ]] || { echo "Use different names for every node."; exit 2; }
+    for node in "${@:2}"; do kubectl get node "$node" >/dev/null; done
     kubectl label node "$2" steam.insights/role=storage --overwrite
     kubectl label node "$3" steam.insights/role=ingest --overwrite
     kubectl label node "$4" steam.insights/role=compute --overwrite
+    if [[ $# == 5 ]]; then
+      kubectl label node "$5" steam.insights/compute=true --overwrite
+    fi
     ;;
   render) kubectl kustomize k8s/demo ;;
+  render-crawlers) kubectl kustomize k8s/demo/crawlers | render_steam_images ;;
   deploy)
     for role in storage ingest compute; do
       count="$(kubectl get nodes -l "steam.insights/role=$role" -o name | wc -l)"
@@ -32,6 +50,8 @@ case "${1:-}" in
       kubectl wait --for=condition=Ready node -l "steam.insights/role=$role" --timeout=60s
     done
     kubectl get storageclass local-path >/dev/null
+    kubectl apply -f k8s/demo/namespace.yaml
+    kubectl apply --dry-run=server -k k8s/demo
     kubectl apply -k k8s/demo
     for app in namenode datanode kafka elasticsearch; do
       kubectl -n "$ns" rollout status "statefulset/$app" --timeout=600s
@@ -41,6 +61,24 @@ case "${1:-}" in
       /steam/raw /steam/clean /steam/curated /steam/checkpoints /steam/demo
     init_kafka
     kubectl -n "$ns" get pods,pvc -o wide
+    ;;
+  deploy-crawlers)
+    # Bind the crawler's local-path PVC on the ingest node where its image is imported.
+    kubectl kustomize k8s/demo/crawlers | render_steam_images | kubectl apply --dry-run=server -f -
+    kubectl kustomize k8s/demo/crawlers | render_steam_images | kubectl apply -f -
+    seed_crawler_targets "$ns"
+    kubectl -n "$ns" get cronjobs,pvc
+    ;;
+  phase1)
+    [[ $# == 5 ]] || { echo "Usage: bash scripts/k3s-demo.sh phase1 SERVER WORKER1 WORKER2 WORKER3"; exit 2; }
+    bash scripts/k3s-demo.sh label-nodes "${@:2}"
+    for node in "${@:2}"; do kubectl wait --for=condition=Ready "node/$node" --timeout=180s; done
+    bash scripts/k3s-demo.sh deploy
+    bash scripts/k3s-demo.sh deploy-crawlers
+    bash scripts/k3s-demo.sh smoke
+    bash scripts/k3s-demo.sh smoke-extra "$5"
+    kubectl get nodes -o wide
+    kubectl -n "$ns" get pods,pvc,cronjobs -o wide
     ;;
   status)
     kubectl get nodes -o wide
@@ -61,24 +99,27 @@ case "${1:-}" in
     done
     kubectl -n "$ns" exec namenode-0 -- hdfs dfs -ls /steam/raw
     ;;
-  smoke|b2)
-    job="demo-$1"
+  smoke)
+    render_demo_job k8s/demo/jobs/smoke.yaml | run_demo_job
+    ;;
+  smoke-extra)
+    [[ $# == 2 ]] || { echo "Usage: bash scripts/k3s-demo.sh smoke-extra NODE"; exit 2; }
+    hostname="$(kubectl get node "$2" -o 'jsonpath={.metadata.labels.kubernetes\.io/hostname}')"
+    [[ "$hostname" =~ ^[a-zA-Z0-9][a-zA-Z0-9_.-]*$ ]] || { echo "Node $2 needs a Kubernetes hostname label."; exit 1; }
+    patch='{"metadata":{"generateName":"demo-smoke-extra-"},"spec":{"template":{"spec":{"nodeSelector":{"steam.insights/role":null,"kubernetes.io/hostname":"'"$hostname"'"}}}}}'
+    render_demo_job k8s/demo/jobs/smoke.yaml |
+      kubectl patch --local -f - --type=merge -p "$patch" -o yaml |
+      run_demo_job
+    ;;
+  b2)
+    job=demo-b2
     if kubectl -n "$ns" get job "$job" >/dev/null 2>&1; then
       echo "Job $job already exists. Inspect logs and delete that Job explicitly before rerunning."; exit 1
     fi
-    if [[ "$1" == b2 ]]; then
-      # B2 tính lại toàn bộ từ raw và ghi đè clean (reviews/ccu/games), chạy lại không sinh trùng
-      kubectl -n "$ns" exec namenode-0 -- hdfs dfs -test -e /steam/raw/steam_reviews_raw
-    fi
-    kubectl apply -f "k8s/demo/jobs/$1.yaml"
-    if ! kubectl -n "$ns" wait --for=condition=complete "job/$job" --timeout=1800s; then
-      kubectl -n "$ns" describe "job/$job"
-      kubectl -n "$ns" logs "job/$job" --all-containers=true || true
-      exit 1
-    fi
-    kubectl -n "$ns" logs "job/$job"
+    kubectl -n "$ns" exec namenode-0 -- hdfs dfs -test -e /steam/raw/steam_reviews_raw
+    render_demo_job k8s/demo/jobs/b2.yaml | run_demo_job
     ;;
   kibana) kubectl -n "$ns" port-forward --address 127.0.0.1 svc/kibana 5601:5601 ;;
   es) kubectl -n "$ns" port-forward --address 127.0.0.1 svc/elasticsearch 9200:9200 ;;
-  *) echo "Usage: bash scripts/k3s-demo.sh {label-nodes|render|deploy|status|upload-raw|smoke|b2|kibana|es}"; exit 2 ;;
+  *) echo "Usage: bash scripts/k3s-demo.sh {phase1|label-nodes|render|render-crawlers|deploy|deploy-crawlers|status|upload-raw|smoke|smoke-extra|b2|kibana|es}"; exit 2 ;;
 esac

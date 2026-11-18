@@ -4,6 +4,7 @@ set -euo pipefail
 REPO_ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
 command -v kubectl >/dev/null
+source scripts/k3s-images.sh
 ns=steam-ft
 python_cmd="${PYTHON:-python}"
 
@@ -19,7 +20,7 @@ case "${1:-}" in
     [[ $# == 2 ]] || { echo "Supply the new worker node name."; exit 2; }
     kubectl wait --for=condition=Ready "node/$2" --timeout=120s
     kubectl label node "$2" steam.insights/compute=true --overwrite
-    echo "Import localhost/steam-spark-demo:k3s-20261026 on this worker before benchmarking."
+    echo "Make $SPARK_DEMO_IMAGE available on this worker before benchmarking."
     ;;
   render) kubectl kustomize k8s/fault-test ;;
   deploy)
@@ -62,7 +63,7 @@ case "${1:-}" in
   smoke|watch)
     job="ft-$1"
     if kubectl -n "$ns" get job "$job" >/dev/null 2>&1; then echo "Inspect and delete existing Job $job explicitly before rerunning."; exit 1; fi
-    kubectl apply -f "k8s/fault-test/jobs/$1.yaml"
+    render_demo_job "k8s/fault-test/jobs/$1.yaml" | kubectl apply -f -
     echo "Follow logs: kubectl -n $ns logs -f job/$job"
     ;;
   benchmark)
@@ -78,7 +79,8 @@ case "${1:-}" in
     fi
     job_file="$(mktemp)"
     trap 'rm -f "$job_file"' EXIT
-    "$python_cmd" infra/k3s/render_benchmark.py --executors "$executors" --rows "$rows" > "$job_file"
+    "$python_cmd" infra/k3s/render_benchmark.py --executors "$executors" --rows "$rows" \
+      --image "$SPARK_DEMO_IMAGE" --pull-policy "$DEMO_PULL_POLICY" > "$job_file"
     kubectl apply -f "$job_file"
     ;;
   *) echo "Usage: bash scripts/k3s-fault-test.sh {label-nodes|add-compute|render|deploy|status|prepare-probe|smoke|watch|benchmark}"; exit 2 ;;

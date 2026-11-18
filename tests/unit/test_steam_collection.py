@@ -1,12 +1,16 @@
 """Steam-only collection: provenance, pagination, configuration and source isolation."""
+import hashlib
 import json
 import sys
+from unittest.mock import Mock
 
 import pytest
 
-from crawlers import build_targets, collect_local, steam_applist_crawler as catalog
+from crawlers import build_targets, collect_local, seed_targets, steam_applist_crawler as catalog
 from crawlers import steam_app_details_crawler as metadata, steam_ccu_crawler as ccu
 from crawlers import steam_reviews_crawler as reviews
+from crawlers import steam_store_crawler as store
+from crawlers import update_targets_from_trending as feedback
 from crawlers.common.targets import load_target_apps
 from crawlers.common.review_state import ReviewStateStore
 from crawlers.common.rate_limiter import RateLimiter
@@ -21,6 +25,38 @@ class Response:
 
     def json(self):
         return self.body
+
+
+def test_store_publishes_to_compacted_topic_and_waits_for_kafka_ack(monkeypatch):
+    monkeypatch.setattr(store.steam_store, "fetch_tag_names", lambda limiter: {5: "Action"})
+    monkeypatch.setattr(
+        store.steam_store, "fetch_store_items",
+        lambda apps, limiter: {10: {"appid": 10, "success": 1, "tags": [{"tagid": 5, "weight": 2}]}},
+    )
+    producer = Mock(spec=["send", "flush"])
+
+    assert store.collect_store([10, 20], producer, None) == [20]
+    topic, key, value = producer.send.call_args.args
+    assert (topic, key) == (store.KAFKA_TOPIC_META, "10:store")
+    assert value["source"] == "steam_store_browse"
+    assert value["tags"] == ["Action"]
+    producer.send.return_value.get.assert_called_once_with(timeout=30)
+
+
+def test_seed_targets_keeps_feedback_changes_on_redeploy(tmp_path):
+    source = tmp_path / "bundled" / "target_apps.json"
+    target = tmp_path / "state" / "targets" / "target_apps.json"
+    build_targets.save_targets(source, [], [{"appid": 10}], {}, {"batch": 1})
+
+    assert seed_targets.seed(source, target)
+    manifest = target.with_suffix(".json.manifest.json")
+    assert json.loads(manifest.read_text(encoding="utf-8"))["sha256"] == hashlib.sha256(target.read_bytes()).hexdigest()
+
+    now = 1_700_000_000
+    ranks = [{"appid": 20, "rank": 1, "last_week_rank": 0, "peak_ccu": 123}]
+    assert len(feedback.update(target, 5, 20, ranks=ranks, items={20: store_item(20, 500)}, now=now)) == 1
+    assert not seed_targets.seed(source, target)
+    assert load_target_apps(target) == [10, 20]
 
 
 def test_catalog_uses_key_and_game_only_pagination(monkeypatch):

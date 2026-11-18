@@ -17,7 +17,7 @@ spec:
         steam.insights/role: compute
       containers:
       - name: observer
-        image: localhost/steam-spark-demo:k3s-20261026
+        image: localhost/steam-spark-demo:local
         imagePullPolicy: Never
         command:
         - python

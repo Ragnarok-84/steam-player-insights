@@ -83,3 +83,4 @@ data/legacy_nonsteam/
 tmp_test/
 # Gói dữ liệu nhận từ thành viên, giải nén để kiểm tra
 data/incoming/
+data/_backup/

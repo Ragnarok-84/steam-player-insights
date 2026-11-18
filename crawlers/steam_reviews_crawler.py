@@ -146,7 +146,6 @@ def crawl_reviews_for_app(appid, producer, rate_limiter, store, max_pages=10, si
                 now = int(time.time())
                 for rev in emit:
                     producer.send(topic=KAFKA_TOPIC_REVIEWS, key=str(appid), value=to_record(appid, rev, now))
-                producer.flush()
                 for rev in emit:  # pruned to boundary seconds on save
                     seen.setdefault(int(rev["timestamp_created"]), set()).add(str(rev["recommendationid"]))
                 lower_bound(seg, covered)
@@ -183,7 +182,10 @@ def crawl_reviews_for_app(appid, producer, rate_limiter, store, max_pages=10, si
         st["boundary_ids"] = {str(ts): sorted(ids) for ts, ids in seen.items() if ts in keep}
         st["reviews_emitted"] += emitted_total
         st["updated_at"] = int(time.time())
-        store.save(appid, st)
+        if hasattr(store, "defer_save"):
+            store.defer_save(appid, st, producer=producer, topic=KAFKA_TOPIC_REVIEWS)
+        else:
+            store.save(appid, st)
     logger.info("[AppID %s] %s new reviews in %s pages (gaps=%s, backfill_done=%s)", appid, emitted_total,
                 pages, len(st["gaps"]), st["history_exhausted"] or st["backfill_reached_ts"] is not None)
     return ok
@@ -203,6 +205,8 @@ def main():
     since = since_from_days(CRAWLER_REVIEW_DAYS)
     for appid in assigned_apps:
         crawl_reviews_for_app(appid, producer, rate_limiter, store, max_pages=CRAWLER_REVIEW_BATCHES, since_ts=since)
+    if hasattr(producer, "flush_all"):
+        producer.flush_all()
     producer.close()
 
 

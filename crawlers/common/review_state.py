@@ -27,6 +27,7 @@ class ReviewStateStore:
     def __init__(self, state_dir):
         self.root = Path(state_dir)
         self.root.mkdir(parents=True, exist_ok=True)
+        self._deferred = {}
 
     def _path(self, appid):
         return self.root / f"reviews_{int(appid)}.json"
@@ -41,7 +42,37 @@ class ReviewStateStore:
         return {**new_state(appid), **state}
 
     def save(self, appid, state):
+        self._deferred.pop(int(appid), None)
         write_json(self._path(appid), state)
+
+    def defer_save(self, appid, state, producer=None, topic=None):
+        """Queue review state to be saved only after producer flushes to disk.
+
+        If producer is None, lacks add_on_flush, or has no pending records for the topic,
+        the state is saved immediately.
+        """
+        appid = int(appid)
+        self._deferred[appid] = state
+        if producer is not None and hasattr(producer, 'add_on_flush') and producer.has_pending(topic):
+            def callback():
+                st = self._deferred.pop(appid, None)
+                if st is not None:
+                    self.save(appid, st)
+            producer.add_on_flush(topic, callback)
+        else:
+            st = self._deferred.pop(appid, None)
+            self.save(appid, st or state)
+
+    def has_deferred(self, appid=None):
+        if appid is None:
+            return bool(self._deferred)
+        return int(appid) in self._deferred
+
+    def flush_deferred(self):
+        for appid in list(self._deferred.keys()):
+            st = self._deferred.pop(appid, None)
+            if st is not None:
+                self.save(appid, st)
 
 
 def segment(cursor="*", upper_ts=None, upper_ids=(), stop_ts=None, stop_ids=()):

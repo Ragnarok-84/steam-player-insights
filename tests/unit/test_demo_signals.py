@@ -113,3 +113,68 @@ def test_es_timestamps_are_written_in_utc(spark):
 def test_merge_query_uses_exact_instant():
     from processing.serving.merge_views import cutoff_query
     assert cutoff_query("2026-11-12") == {"range": {"window_end": {"lte": "2026-11-12T00:00:00Z"}}}
+
+
+def test_b2_partition_and_file_optimization(spark, tmp_path, monkeypatch):
+    """Kiểm chứng sau khi tối ưu:
+    - clean/reviews phân vùng theo 'ym', mỗi tháng 1 file Parquet, giữ nguyên cột dt và số dòng.
+    - clean/ccu phân vùng theo 'dt', mỗi ngày 1 file Parquet.
+    - clean/games, clean/games_history, clean/review_daily_counts được coalesce(1) tạo đúng 1 file Parquet.
+    """
+    monkeypatch.setenv("HIVE_METASTORE_URI", "")
+    from processing.batch.b2_clean_raw import clean_reviews, clean_ccu, clean_games
+
+    producer = JsonlProducer(tmp_path / "raw")
+    # 4 reviews trên 4 ngày khác nhau thuộc 2 tháng (2026-01 và 2026-02)
+    ts_jan1 = int(dt.datetime(2026, 1, 10, 12, 0, tzinfo=dt.timezone.utc).timestamp())
+    ts_jan2 = int(dt.datetime(2026, 1, 15, 12, 0, tzinfo=dt.timezone.utc).timestamp())
+    ts_feb1 = int(dt.datetime(2026, 2, 5, 12, 0, tzinfo=dt.timezone.utc).timestamp())
+    ts_feb2 = int(dt.datetime(2026, 2, 20, 12, 0, tzinfo=dt.timezone.utc).timestamp())
+
+    reviews = [
+        {"recommendationid": "r1", "appid": 730, "review": "great game 1", "voted_up": True, "timestamp_created": ts_jan1, "language": "english"},
+        {"recommendationid": "r2", "appid": 730, "review": "great game 2", "voted_up": True, "timestamp_created": ts_jan2, "language": "english"},
+        {"recommendationid": "r3", "appid": 730, "review": "bad game 1", "voted_up": False, "timestamp_created": ts_feb1, "language": "english"},
+        {"recommendationid": "r4", "appid": 730, "review": "bad game 2", "voted_up": False, "timestamp_created": ts_feb2, "language": "english"},
+    ]
+    for r in reviews:
+        producer.send("steam.reviews.raw", "730", r)
+
+    # CCU trên 2 ngày
+    for t, p in [(ts_jan1, 500), (ts_jan1 + 3600, 600), (ts_feb1, 700)]:
+        producer.send("steam.players.ccu", "730", {"appid": 730, "timestamp": t, "player_count": p, "source": "steam_live"})
+
+    # Metadata games & histogram
+    producer.send("steam.games.meta", "730", {"appid": 730, "name": "CS", "source": "steam_live", "timestamp": ts_jan1, "price": 14.99})
+    producer.send("steam.games.meta", "730", {"appid": 730, "source": "steam_review_histogram", "timestamp": ts_jan1, "daily": [{"date": 86400, "up": 10, "down": 2}]})
+    producer.close()
+
+    raw_uri, clean_uri = (tmp_path / "raw").as_uri(), (tmp_path / "clean").as_uri()
+    clean_reviews(spark, raw_uri, clean_uri)
+    clean_ccu(spark, raw_uri, clean_uri)
+    clean_games(spark, raw_uri, clean_uri)
+
+    clean_dir = tmp_path / "clean"
+    # 1. clean/reviews: phân vùng theo ym (2026-01, 2026-02), mỗi partition đúng 1 file Parquet
+    review_parts = list((clean_dir / "reviews").glob("ym=*"))
+    assert len(review_parts) == 2, f"Kỳ vọng 2 thư mục partition ym, thực tế: {[p.name for p in review_parts]}"
+    for part in review_parts:
+        part_files = list(part.glob("*.parquet"))
+        assert len(part_files) == 1, f"Partition {part.name} phải có đúng 1 file Parquet, thực tế có {len(part_files)}"
+
+    reviews_df = spark.read.parquet(str(clean_dir / "reviews"))
+    assert reviews_df.count() == 4, "Tổng số dòng clean reviews phải giữ nguyên chính xác"
+    assert "dt" in reviews_df.columns, "Cột dt phải được giữ nguyên trong schema"
+    assert "ym" in reviews_df.columns, "Cột ym phải có trong schema"
+
+    # 2. clean/ccu: phân vùng theo dt, mỗi partition đúng 1 file Parquet
+    ccu_parts = list((clean_dir / "ccu").glob("dt=*"))
+    assert len(ccu_parts) == 2, f"Kỳ vọng 2 thư mục partition dt cho CCU, thực tế: {[p.name for p in ccu_parts]}"
+    for part in ccu_parts:
+        part_files = list(part.glob("*.parquet"))
+        assert len(part_files) == 1, f"Partition {part.name} của CCU phải có đúng 1 file Parquet, thực tế có {len(part_files)}"
+
+    # 3. clean/games, clean/games_history, clean/review_daily_counts: coalesce(1) -> đúng 1 file Parquet mỗi bảng
+    for tbl in ["games", "games_history", "review_daily_counts"]:
+        tbl_files = list((clean_dir / tbl).glob("*.parquet"))
+        assert len(tbl_files) == 1, f"Bảng {tbl} phải có đúng 1 file Parquet do coalesce(1), thực tế có {len(tbl_files)}"

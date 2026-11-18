@@ -10,7 +10,7 @@ sys.path.insert(0, str(ROOT))
 
 @pytest.fixture(scope="session")
 def spark():
-    """SparkSession local nhỏ; chỉ tính toán trong bộ nhớ (không ghi file, chạy được cả trên Windows)."""
+    """SparkSession local nhỏ, đọc/ghi file local. Chạy trên Linux/WSL (Windows cần hadoop.dll thật)."""
     pyspark = pytest.importorskip("pyspark")  # noqa: F841
     os.environ.setdefault("PYSPARK_PYTHON", sys.executable)
     os.environ["HDFS_NAMENODE_URL"] = ""

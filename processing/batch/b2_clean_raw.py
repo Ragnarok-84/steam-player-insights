@@ -5,7 +5,7 @@ from pyspark.sql.types import (
 )
 from pyspark.sql.functions import (
     col, from_json, row_number, udf, to_date, from_unixtime, hour, lit, coalesce,
-    get_json_object, count, when, length, lower, sha2, concat_ws, explode
+    get_json_object, count, when, length, lower, sha2, concat_ws, explode, date_format
 )
 from pyspark.sql.window import Window
 from processing.common.spark_utils import (
@@ -118,7 +118,7 @@ def latest_per_key(df, keys, order_cols):
 
 def clean_reviews(spark, raw_root: str, clean_root: str):
     """
-    B2a: raw review JSON -> clean Parquet phân vùng theo dt (ngày tạo review).
+    B2a: raw review JSON -> clean Parquet phân vùng theo ym (tháng tạo review), giữ nguyên cột dt.
     Tính lại toàn bộ từ master dataset rồi ghi đè -> chạy lại không sinh trùng.
     """
     raw = read_raw_json_lines(spark, raw_root, "steam.reviews.raw")
@@ -166,10 +166,11 @@ def clean_reviews(spark, raw_root: str, clean_root: str):
         )
         .drop("text_hash")
         .withColumn("dt", to_date(from_unixtime(col("timestamp_created"))))
+        .withColumn("ym", date_format(col("dt"), "yyyy-MM"))
     )
     out = f"{clean_root}/reviews"
     print(f"Writing clean reviews to {out}...")
-    write_table(spark, flagged, out, "clean_reviews", partition_by=["dt"])
+    write_table(spark, flagged.repartition("ym"), out, "clean_reviews", partition_by=["ym"])
 
 
 def clean_ccu(spark, raw_root: str, clean_root: str):
@@ -190,7 +191,7 @@ def clean_ccu(spark, raw_root: str, clean_root: str):
     )
     out = f"{clean_root}/ccu"
     print(f"Writing clean CCU to {out}...")
-    write_table(spark, ccu, out, "clean_ccu", partition_by=["dt"])
+    write_table(spark, ccu.repartition("dt"), out, "clean_ccu", partition_by=["dt"])
 
 
 def clean_games(spark, raw_root: str, clean_root: str):
@@ -214,7 +215,7 @@ def clean_games(spark, raw_root: str, clean_root: str):
         .dropDuplicates(["appid", "timestamp"])
         .withColumn("snapshot_dt", to_date(from_unixtime(col("timestamp"))))
     )
-    write_table(spark, details, f"{clean_root}/games_history", "clean_games_history")
+    write_table(spark, details.coalesce(1), f"{clean_root}/games_history", "clean_games_history")
 
     store = (
         tagged.filter(col("_source") == "steam_store_browse")
@@ -235,7 +236,7 @@ def clean_games(spark, raw_root: str, clean_root: str):
     )
     out = f"{clean_root}/games"
     print(f"Writing clean games to {out}...")
-    write_table(spark, games, out, "clean_games")
+    write_table(spark, games.coalesce(1), out, "clean_games")
 
     hist = tagged.filter(col("_source") == "steam_review_histogram")
     if hist.limit(1).count():
@@ -253,7 +254,7 @@ def clean_games(spark, raw_root: str, clean_root: str):
                  # Ngày chứa thời điểm lấy snapshot mới đếm được một phần
                  .withColumn("is_partial", col("dt") >= to_date(from_unixtime(col("snapshot_ts"))))
                  .drop("day_ts"))
-        write_table(spark, daily, f"{clean_root}/review_daily_counts", "clean_review_daily_counts")
+        write_table(spark, daily.coalesce(1), f"{clean_root}/review_daily_counts", "clean_review_daily_counts")
 
 
 if __name__ == "__main__":

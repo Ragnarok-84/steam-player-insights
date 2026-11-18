@@ -2,10 +2,11 @@ import os
 import argparse
 from pyspark.sql.functions import (
     col, from_json, window, count, when, avg, to_timestamp, to_json, struct, lit, coalesce,
-    round as spark_round, current_timestamp
+    round as spark_round, current_timestamp, max as spark_max
 )
 from processing.common.spark_utils import (
-    get_spark_session, read_stream, add_stream_args, attach_progress_logger, path_exists, CHECKPOINT_PATH
+    get_spark_session, read_stream, add_stream_args, attach_progress_logger, path_exists, with_e2e_latency,
+    CHECKPOINT_PATH
 )
 from processing.common.es_writer import es_enabled, write_es
 from processing.batch.b2_clean_raw import REVIEW_SCHEMA
@@ -59,7 +60,7 @@ def run(args):
     attach_progress_logger(spark, args.metrics_file)
     raw = read_stream(spark, "steam.reviews.raw", args.source, args.brokers, args.raw, args.max_files, args.starting_offsets)
     windowed = (
-        raw.select(from_json(col("value"), REVIEW_SCHEMA).alias("d")).select("d.*")
+        raw.select(from_json(col("value"), REVIEW_SCHEMA).alias("d"), "kafka_ts").select("d.*", "kafka_ts")
         .filter(col("appid").isNotNull() & col("timestamp_created").isNotNull())
         .withColumn("event_time", to_timestamp(col("timestamp_created")))
         .withWatermark("event_time", "15 minutes")
@@ -68,6 +69,7 @@ def run(args):
             count("*").alias("total_reviews"),
             count(when(~col("voted_up"), 1)).alias("negative_reviews"),
             spark_round(avg(when(col("voted_up"), 1.0).otherwise(0.0)) * 100, 2).alias("positive_ratio"),
+            spark_max("kafka_ts").alias("ingest_ts_max"),
         )
         .select(col("window.start").alias("window_start"), col("window.end").alias("window_end"), "*")
         .drop("window")
@@ -91,7 +93,7 @@ def run(args):
             alerts.show(truncate=False)
         alerts.unpersist()
 
-    (windowed.writeStream.queryName(QUERY_NAME).outputMode("update").foreachBatch(handle)
+    (windowed.writeStream.queryName(QUERY_NAME).outputMode("update").foreachBatch(with_e2e_latency(handle, QUERY_NAME, args.latency_file))
      .option("checkpointLocation", args.checkpoint).trigger(processingTime=args.trigger).start()
      .awaitTermination())
 

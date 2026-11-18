@@ -2,6 +2,7 @@ data/raw/
 data/lake*/
 data/sample_raw/
 data/cache/
+data/bench/
 data/crawler_state/
 .venv/
 venv/

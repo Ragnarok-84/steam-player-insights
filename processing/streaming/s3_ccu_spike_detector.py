@@ -5,7 +5,8 @@ from pyspark.sql.functions import (
     round as spark_round, current_timestamp
 )
 from processing.common.spark_utils import (
-    get_spark_session, read_stream, add_stream_args, attach_progress_logger, path_exists, CHECKPOINT_PATH
+    get_spark_session, read_stream, add_stream_args, attach_progress_logger, path_exists, with_e2e_latency,
+    CHECKPOINT_PATH
 )
 from processing.common.es_writer import es_enabled, write_es
 from processing.batch.b2_clean_raw import CCU_SCHEMA
@@ -41,13 +42,14 @@ def run(args):
     attach_progress_logger(spark, args.metrics_file)
     raw = read_stream(spark, "steam.players.ccu", args.source, args.brokers, args.raw, args.max_files, args.starting_offsets)
     windowed = (
-        raw.select(from_json(col("value"), CCU_SCHEMA).alias("d")).select("d.*")
+        raw.select(from_json(col("value"), CCU_SCHEMA).alias("d"), "kafka_ts").select("d.*", "kafka_ts")
         .filter(col("appid").isNotNull() & col("timestamp").isNotNull())
         .withColumn("event_time", to_timestamp(col("timestamp")))
         .withWatermark("event_time", "10 minutes")
         .groupBy(window(col("event_time"), "10 minutes"), col("appid"))
         .agg(spark_round(avg("player_count"), 0).alias("avg_players_window"),
-             spark_max("player_count").alias("max_players_window"))
+             spark_max("player_count").alias("max_players_window"),
+             spark_max("kafka_ts").alias("ingest_ts_max"))
         .select(col("window.start").alias("window_start"), col("window.end").alias("window_end"), "*")
         .drop("window")
     )
@@ -76,7 +78,7 @@ def run(args):
             alerts.unpersist()
         batch_df.unpersist()
 
-    (windowed.writeStream.queryName(QUERY_NAME).outputMode("update").foreachBatch(handle)
+    (windowed.writeStream.queryName(QUERY_NAME).outputMode("update").foreachBatch(with_e2e_latency(handle, QUERY_NAME, args.latency_file))
      .option("checkpointLocation", args.checkpoint).trigger(processingTime=args.trigger).start()
      .awaitTermination())
 

@@ -40,7 +40,7 @@ data:
     spark.master                                         k8s://https://kubernetes.default.svc:443
     spark.submit.deployMode                              client
     spark.kubernetes.namespace                           spark-jobs
-    spark.kubernetes.container.image                     steam-spark:1.0.0
+    spark.kubernetes.container.image                     steam-spark:local
     spark.kubernetes.container.image.pullPolicy          IfNotPresent
     spark.kubernetes.authenticate.driver.serviceAccountName spark-operator-sa
     spark.kubernetes.executor.podTemplateFile            /opt/spark/conf/executor-template.yaml

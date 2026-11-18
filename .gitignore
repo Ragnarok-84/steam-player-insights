@@ -81,3 +81,5 @@ data/legacy_nonsteam/
 
 # File tạm khi thử nghiệm
 tmp_test/
+# Gói dữ liệu nhận từ thành viên, giải nén để kiểm tra
+data/incoming/

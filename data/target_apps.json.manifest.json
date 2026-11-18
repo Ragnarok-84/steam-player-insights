@@ -5,8 +5,8 @@
     "https://api.steampowered.com/IStoreBrowseService/GetItems/v1/",
     "https://api.steampowered.com/ISteamChartsService/GetMostPlayedGames/v1/"
   ],
-  "selected_games": 100,
-  "selection": "group=top_ccu: highest-ranked released games on the Steam most-played chart; group=stratified: seeded random sample of released catalog games with >= min_reviews, equal quota per review-count stratum. Earlier batches are kept unchanged and first.",
+  "selected_games": 1000,
+  "selection": "group=top_ccu: highest-ranked released games on the Steam most-played chart; group=stratified: seeded random sample of released catalog games with >= min_reviews, equal quota per review-count stratum; group=feedback: games rising on the most-played chart, added by crawlers.update_targets_from_trending. Earlier batches are kept unchanged and first; games are never removed.",
   "batches": [
     {
       "batch": 1,
@@ -33,8 +33,62 @@
         "topped_up": 0,
         "probed": 2400
       }
+    },
+    {
+      "batch": 2,
+      "kind": "build",
+      "retrieved_at": 1794930349,
+      "seed": 42,
+      "min_reviews": 20,
+      "catalog_games": 201128,
+      "added": 400,
+      "top_ccu": 20,
+      "top_ccu_rollup_date": 1794787200,
+      "stratified": {
+        "quota": {
+          "20-99": 95,
+          "100-999": 95,
+          "1k-9.9k": 95,
+          "10k+": 95
+        },
+        "filled": {
+          "20-99": 95,
+          "100-999": 95,
+          "1k-9.9k": 95,
+          "10k+": 95
+        },
+        "topped_up": 0,
+        "probed": 9600
+      }
+    },
+    {
+      "batch": 3,
+      "kind": "build",
+      "retrieved_at": 1794938512,
+      "seed": 42,
+      "min_reviews": 20,
+      "catalog_games": 201162,
+      "added": 500,
+      "top_ccu": 20,
+      "top_ccu_rollup_date": 1794787200,
+      "stratified": {
+        "quota": {
+          "20-99": 120,
+          "100-999": 120,
+          "1k-9.9k": 120,
+          "10k+": 120
+        },
+        "filled": {
+          "20-99": 120,
+          "100-999": 120,
+          "1k-9.9k": 120,
+          "10k+": 120
+        },
+        "topped_up": 0,
+        "probed": 13800
+      }
     }
   ],
-  "sha256": "195d1ea29c31b35c145a7826a29eed7d4dcf466c7b865991140cf8147e748863",
+  "sha256": "8931c461b3709e1fd38ecbcb1de6e986e35a6cccd5332aeb5df83a0c45e534a1",
   "note": "Not representative of the whole catalog: games under min_reviews and unreleased games are excluded."
 }

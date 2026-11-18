@@ -37,17 +37,14 @@ Elasticsearch vẫn một node và NameNode vẫn một instance: không kiểm 
 
 ## 2. Build image kiểm thử
 
-Môi trường kiểm thử dùng chung image với demo. Nếu đã build theo [README mục 5](README.md#5-image-spark-và-bài-kiểm-tra-luồng-dữ-liệu) thì chỉ cần import vào node mới; nếu chưa, build một lần trên compute rồi import vào **mọi node mang nhãn compute**:
+Môi trường kiểm thử dùng chung image với demo. Build một lần theo [README mục 5](README.md#5-image-và-nghiệm-thu-giai-đoạn-1), rồi import cùng archive vào **mọi node mang nhãn compute**.
 
 ```bash
-podman build -t localhost/steam-spark-demo:k3s-20261026 \
-  --ignorefile infra/k3s/containerignore -f infra/k3s/Dockerfile.spark-demo .
-podman save --format docker-archive -o /tmp/steam-spark-ft.tar \
-  localhost/steam-spark-demo:k3s-20261026
-sudo k3s ctr images import /tmp/steam-spark-ft.tar
+bash scripts/build-k3s-images.sh
+sudo k3s ctr images import /path/to/steam-k3s-TAG.tar
 ```
 
-Chép file tar sang worker mới và import ở đó, không build lại riêng từng máy. Image bổ sung entrypoint executor cho Spark 3.5.7, benchmark và observer; `imagePullPolicy: Never` sẽ báo lỗi rõ nếu máy chưa có image. Image cũ `conda-20261007`/`k3s-20261008` chứa code xử lý trước bản merge 26/10 (B2 nhận tham số kiểu cũ), không dùng lại.
+Khi dùng tag hoặc registry tùy chỉnh, dùng cùng `TAG` và `REGISTRY` khi gọi `scripts/k3s-fault-test.sh`. Driver, executor và các Job kiểm thử lấy chung reference. Với archive local, `imagePullPolicy: Never` sẽ báo lỗi nếu một node chưa có image.
 
 Trên server, chạy smoke cho môi trường mới:
 

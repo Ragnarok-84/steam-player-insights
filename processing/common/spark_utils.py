@@ -157,7 +157,8 @@ def read_stream(spark, topic: str, source: str, brokers: str = None, raw_root: s
             .option("startingOffsets", starting_offsets)
             .option("failOnDataLoss", "false")
             .load()
-            .selectExpr("CAST(value AS STRING) AS value")
+            # kafka_ts: thời điểm message vào Kafka (CreateTime do producer gắn), dùng đo độ trễ end-to-end
+            .selectExpr("CAST(value AS STRING) AS value", "timestamp AS kafka_ts")
         )
     path = f"{raw_root or RAW_PATH}/{TOPIC_DIRS[topic]}"
     return (
@@ -165,8 +166,40 @@ def read_stream(spark, topic: str, source: str, brokers: str = None, raw_root: s
         .option("maxFilesPerTrigger", max_files_per_trigger)
         .option("recursiveFileLookup", "true")
         .load(path)
-        .select("value")
+        .selectExpr("value", "CAST(NULL AS TIMESTAMP) AS kafka_ts")  # nguồn file: không có thời điểm nhập Kafka
     )
+
+
+def with_e2e_latency(handler, query: str, path: str = None):
+    """Bọc hàm foreachBatch để đo độ trễ end-to-end (Kafka -> ghi xong sink, thường là ES).
+
+    Lô đầu vào có cột ingest_ts_max = max(kafka_ts) của các sự kiện trong từng dòng cửa sổ (appid × cửa sổ).
+    Ở outputMode update, một dòng chỉ xuất hiện khi cửa sổ đó vừa nhận sự kiện mới, nên ingest_ts_max là sự kiện
+    mới nhất của appid đó trong lô. Sau khi handler chạy xong: độ trễ = thời điểm xong - ingest_ts_max, mỗi dòng
+    một mẫu. Appid nhận nhiều review cho mẫu gần thời gian xử lý batch; appid thưa cho mẫu gần trigger + batch,
+    nên phân bố trải từ thời gian batch tới trigger + batch. Cột ingest_ts_max luôn bị bỏ trước khi đưa cho handler.
+    Ghi một dòng JSON mỗi lô vào path (--latency-file hoặc STREAM_LATENCY_FILE); không có path thì chỉ bỏ cột.
+    Producer và driver phải cùng đồng hồ (cùng máy, hoặc NTP trên cụm)."""
+    path = path or os.getenv("STREAM_LATENCY_FILE")
+    if not path:
+        return lambda batch_df, batch_id: handler(batch_df.drop("ingest_ts_max"), batch_id)
+    import json
+    import time
+
+    def wrapped(batch_df, batch_id):
+        batch_df = batch_df.persist()
+        try:
+            handler(batch_df.drop("ingest_ts_max"), batch_id)
+            done = time.time()
+            ts = [r[0] for r in batch_df.selectExpr("CAST(ingest_ts_max AS DOUBLE)").collect() if r[0] is not None]
+            if ts:
+                row = {"ts": done, "name": query, "batch_id": batch_id,
+                       "latency_ms": [round((done - t) * 1000) for t in ts]}
+                with open(path, "a", encoding="utf-8") as f:
+                    f.write(json.dumps(row) + "\n")
+        finally:
+            batch_df.unpersist()
+    return wrapped
 
 
 def add_stream_args(parser):
@@ -179,6 +212,8 @@ def add_stream_args(parser):
     parser.add_argument("--es-nodes", default=None)
     parser.add_argument("--curated", default=CURATED_PATH)
     parser.add_argument("--metrics-file", default=None, help="Ghi tiến độ micro-batch (JSON Lines) cho SC3")
+    parser.add_argument("--latency-file", default=None,
+                        help="Ghi độ trễ end-to-end Kafka -> sink mỗi micro-batch (JSON Lines) cho SC3")
     return parser
 
 

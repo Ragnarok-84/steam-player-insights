@@ -3,6 +3,8 @@
 Ví dụ:
   python pipeline.py batch                       # B2 -> B5 -> B3 -> B4 -> B6 -> B7 -> B8 trên data/raw
   python pipeline.py batch --raw D:/steam_data/raw
+  python pipeline.py compact                     # gộp file raw nhỏ: 1 file / <nguồn>/dt= (scripts/compact_raw.py)
+  python pipeline.py batch --compact             # gộp raw rồi chạy batch
   python pipeline.py s1 --source file            # speed layer đọc file JSONL (không cần Kafka)
   python pipeline.py s2 -- --source kafka        # tham số sau `--` chuyển thẳng cho job
   python pipeline.py --profile cluster batch     # dùng đường dẫn HDFS/ES từ .env
@@ -41,11 +43,13 @@ JOBS = {
 }
 # B5 trước B3 (B3 dùng cảm xúc từ B5); B7 sau B3 (baseline cho S2/S3)
 BATCH_ORDER = ["b2", "b5", "b3", "b4", "b6", "b7", "b8"]
+COMPACT_SCRIPT = ROOT / "scripts" / "compact_raw.py"
 
 
 def configure(profile: str, raw: str, lake: str):
     env = os.environ.copy()
     env["PYTHONUNBUFFERED"] = "1"
+    env.setdefault("PYTHONIOENCODING", "utf-8")  # log tiếng Việt trên console Windows (cp1252)
     env["PYTHONPATH"] = os.pathsep.join(filter(None, [str(ROOT), env.get("PYTHONPATH")]))
     # Executor Python phải trùng driver (tránh lỗi khác phiên bản trên Windows/venv)
     env.setdefault("PYSPARK_PYTHON", sys.executable)
@@ -70,14 +74,22 @@ def run(module: str, args, env) -> int:
     return subprocess.call(cmd, cwd=ROOT, env=env)
 
 
+def compact(raw: str, args, env) -> int:
+    """Gộp file .jsonl.gz nhỏ trong raw local; chạy trước B2. Không áp dụng cho raw trên HDFS."""
+    cmd = [sys.executable, str(COMPACT_SCRIPT), "--raw-dir", str(Path(raw).resolve()), *args]
+    print("+", " ".join(cmd), flush=True)
+    return subprocess.call(cmd, cwd=ROOT, env=env)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["batch", *JOBS])
+    parser.add_argument("command", choices=["batch", "compact", *JOBS])
     parser.add_argument("--profile", choices=["local", "cluster"], default=os.getenv("PIPELINE_PROFILE", "local"))
     parser.add_argument("--raw", default=os.getenv("RAW_DIR", "data/raw"), help="Thư mục raw (profile local)")
     parser.add_argument("--lake", default=os.getenv("LAKE_DIR", "data/lake"), help="Thư mục clean/curated (profile local)")
     parser.add_argument("--es", action="store_true", help="Ghi Elasticsearch (WRITE_ES=1) và hợp nhất view sau batch")
     parser.add_argument("--skip", nargs="*", default=[], help="Bỏ qua job trong batch, vd. --skip b8")
+    parser.add_argument("--compact", action="store_true", help="batch: gộp file raw nhỏ (compact) trước B2")
     args, extra = parser.parse_known_args()
     extra = [x for x in extra if x != "--"]
 
@@ -85,7 +97,18 @@ def main():
     if args.es:
         env["WRITE_ES"] = "1"
 
+    if args.command == "compact":
+        if args.profile != "local":
+            sys.exit("compact chỉ chạy trên raw local (--profile local); gộp trước khi upload lên HDFS")
+        sys.exit(compact(args.raw, extra, env))
+
     if args.command == "batch":
+        if args.compact:
+            if args.profile != "local":
+                sys.exit("--compact chỉ dùng với --profile local")
+            code = compact(args.raw, [], env)
+            if code != 0:
+                sys.exit(f"compact failed with exit code {code}")
         for job in BATCH_ORDER:
             if job in args.skip:
                 continue

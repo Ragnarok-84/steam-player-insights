@@ -317,7 +317,7 @@ Lệnh lần lượt gọi các module sau; một job lỗi thì pipeline dừng
 
 | Thứ tự | Module trong `processing/batch/` | Chức năng | Đầu ra tiêu biểu |
 | --- | --- | --- | --- |
-| B2 | `b2_clean_raw.py` | Làm sạch, khử trùng review/CCU, chuẩn hóa metadata, gắn cờ review đáng ngờ | `clean/reviews`, `ccu`, `games`, `games_history` |
+| B2 | `b2_clean_raw.py` | Làm sạch, khử trùng review/CCU, chuẩn hóa metadata, gắn cờ review đáng ngờ | `clean/reviews` (phân vùng `ym=YYYY-MM`), `ccu` (`dt=`), `games`, `games_history` |
 | B5 | `b5_aspect_sentiment.py` | Cảm xúc VADER, khía cạnh, từ khóa TF-IDF | `curated/review_sentiment`, `aspect_stats`, `keywords` |
 | B3 | `b3_game_daily_stats.py` | Thống kê game theo ngày/tuần/tháng và nhóm game | `curated/game_daily_stats`, `game_period_stats`, `segment_stats`, `language_stats` |
 | B4 | `b4_playtime_buckets.py` | Nhóm giờ chơi, review tiêu cực sớm, chỉ số đáng tiền | `curated/playtime_buckets`, `game_retention` |
@@ -489,7 +489,8 @@ docker run --rm -v "${PWD}:/opt/spark/work-dir" steam-spark:dev python3 pipeline
 
 | Lệnh | Công việc |
 | --- | --- |
-| `batch` | B2 → B5 → B3 → B4 → B6 → B7 → B8; `--es` ghi ES và merge; `--skip b8` bỏ phân cụm |
+| `batch` | B2 → B5 → B3 → B4 → B6 → B7 → B8; `--es` ghi ES và merge; `--skip b8` bỏ phân cụm; `--compact` gộp raw trước B2 |
+| `compact` | Gộp file raw nhỏ thành 1 file mỗi `<nguồn>/dt=` (`scripts/compact_raw.py`, chỉ raw local). Chạy sau khi crawl, trước B2 và trước khi upload HDFS; thử trước bằng `-- --dry-run` |
 | `b1` … `b8`, `s1`, `s2`, `s3` | Chạy từng job; tham số riêng đặt sau `--` |
 | `es-setup`, `kibana-setup`, `merge` | Tạo index chuẩn, tạo dashboard, hợp nhất batch/realtime |
 | `inject` | Bơm tình huống demo có nhãn (`bombing`, `ccu-spike`) vào Kafka; batch tự loại các bản ghi này |

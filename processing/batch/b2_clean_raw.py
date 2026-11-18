@@ -170,7 +170,9 @@ def clean_reviews(spark, raw_root: str, clean_root: str):
     )
     out = f"{clean_root}/reviews"
     print(f"Writing clean reviews to {out}...")
-    write_table(spark, flagged.repartition("ym"), out, "clean_reviews", partition_by=["ym"])
+    # static: B2 tính lại toàn bộ nên xoá cả thư mục cũ; tránh để lại thư mục dt= cũ lẫn với ym= mới
+    write_table(spark, flagged.repartition("ym"), out, "clean_reviews", partition_by=["ym"],
+                partition_overwrite_mode="static")
 
 
 def clean_ccu(spark, raw_root: str, clean_root: str):

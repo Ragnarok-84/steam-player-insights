@@ -1,0 +1,24 @@
+{
+  "scale": 500,
+  "coverage": {
+    "histogram": 500,
+    "metadata": 499,
+    "store": 500,
+    "ccu": 500,
+    "reviews": 500
+  },
+  "records": {
+    "histogram": 600,
+    "metadata": 599,
+    "store": 600,
+    "ccu": 700,
+    "reviews": 398339
+  },
+  "raw_gzip_bytes": 91547300,
+  "raw_gzip_files": 6127,
+  "missing_metadata": [
+    355180
+  ],
+  "review_records_per_game_mean": 796.678,
+  "note": "Cumulative raw including baseline and expansion; not just this crawl pass."
+}

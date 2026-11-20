@@ -1,0 +1,27 @@
+{
+  "run_id": "20261118T022413Z-b9eb2b0ad761",
+  "interval": 1.5,
+  "targets": "data/retry_targets/ccu_1000_failed.json",
+  "state_dir": "data/crawler_state",
+  "started_at": 1794968653,
+  "selected_games": 2,
+  "assigned_games": 2,
+  "start_index": 0,
+  "next_game_index": 2,
+  "sources": [
+    "ccu"
+  ],
+  "review_pages": 10,
+  "review_since_ts": null,
+  "completed_games": 2,
+  "requests": 2,
+  "records": 2,
+  "failures": 0,
+  "failed_sources": [],
+  "status": "finished",
+  "ended_at": 1794968655,
+  "elapsed_seconds": 2.1,
+  "http_429": 0,
+  "request_errors": 0,
+  "request_error_rate": 0.0
+}

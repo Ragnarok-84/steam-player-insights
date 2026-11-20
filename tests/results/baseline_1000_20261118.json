@@ -1,0 +1,34 @@
+{
+  "scale": 1000,
+  "snapshot": "data\\backups\\snapshot_1000_20261118",
+  "coverage": {
+    "histogram": 1000,
+    "metadata": 1000,
+    "store": 1000,
+    "ccu": 1000,
+    "reviews": 1000
+  },
+  "records": {
+    "histogram": 1600,
+    "metadata": 1600,
+    "store": 1600,
+    "ccu": 1700,
+    "reviews": 932293
+  },
+  "raw_gzip_bytes": 216267743,
+  "raw_gzip_files": 14716,
+  "reviews_per_game": {
+    "mean": 932.293,
+    "min": 20,
+    "max": 3902
+  },
+  "duplicate_review_ids": 0,
+  "missing": {
+    "histogram": [],
+    "metadata": [],
+    "store": [],
+    "ccu": [],
+    "reviews": []
+  },
+  "note": "Accumulated snapshot; same source for all subsets. Games have different collection start dates; CCU retry for two games after main pass."
+}

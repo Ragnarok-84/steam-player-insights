@@ -1,0 +1,40 @@
+{
+  "run_id": "20261117T180539Z-d4cf84aa8f8d",
+  "interval": 1.5,
+  "targets": "data/target_apps.json",
+  "state_dir": "data/crawler_state",
+  "started_at": 1794938739,
+  "selected_games": 1000,
+  "assigned_games": 1000,
+  "start_index": 0,
+  "next_game_index": 1000,
+  "sources": [
+    "store",
+    "metadata",
+    "histogram",
+    "ccu",
+    "reviews"
+  ],
+  "review_pages": 10,
+  "review_since_ts": null,
+  "completed_games": 1000,
+  "requests": 9253,
+  "records": 537952,
+  "failures": 2,
+  "failed_sources": [
+    {
+      "appid": 1181610,
+      "source": "ccu"
+    },
+    {
+      "appid": 1551650,
+      "source": "ccu"
+    }
+  ],
+  "status": "finished",
+  "ended_at": 1794952784,
+  "elapsed_seconds": 14044.5,
+  "http_429": 0,
+  "request_errors": 6,
+  "request_error_rate": 0.0006484383443207608
+}

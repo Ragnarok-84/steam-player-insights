@@ -1,0 +1,20 @@
+[
+  {
+    "appid": 1181610,
+    "name": "Roto Force",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 96,
+    "batch": 2,
+    "added_at": 1794930349
+  },
+  {
+    "appid": 1551650,
+    "name": "Sword Princess Sistina",
+    "group": "stratified",
+    "stratum": "20-99",
+    "review_count": 31,
+    "batch": 2,
+    "added_at": 1794930349
+  }
+]

@@ -24,7 +24,7 @@ def get_json(url, params, limiter=None, retries=3, timeout=30):
         if limiter is not None:
             limiter.wait()
         try:
-            resp = requests.get(url, params=params, timeout=timeout)
+            resp = (limiter.request_get if limiter is not None else requests.get)(url, params=params, timeout=timeout)
         except requests.RequestException as exc:
             logger.warning("Request failed (%s)", type(exc).__name__)
             resp = None

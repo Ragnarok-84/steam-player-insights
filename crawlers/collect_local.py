@@ -13,6 +13,7 @@ import logging
 import os
 import signal
 import time
+import uuid
 from pathlib import Path
 
 from crawlers import steam_app_details_crawler as metadata
@@ -89,7 +90,9 @@ def main():
     state = ReviewStateStore(str(Path(args.state_dir) / reviews.REVIEW_STATE_SUBDIR))
     since = reviews.since_from_days(args.review_days)
     started = time.time()
-    stats = {'started_at': int(started), 'selected_games': len(all_apps), 'assigned_games': assigned_count,
+    run_id = time.strftime('%Y%m%dT%H%M%SZ', time.gmtime(started)) + '-' + uuid.uuid4().hex[:12]
+    stats = {'run_id': run_id, 'interval': args.interval, 'targets': str(args.targets),
+             'state_dir': str(args.state_dir), 'started_at': int(started), 'selected_games': len(all_apps), 'assigned_games': assigned_count,
              'start_index': args.start_index, 'next_game_index': args.start_index, 'sources': args.sources,
              'review_pages': args.review_batches, 'review_since_ts': since,
              'completed_games': 0, 'requests': 0, 'records': 0, 'failures': 0, 'failed_sources': [], 'status': 'running'}
@@ -145,7 +148,10 @@ def main():
         producer.close()
         stats.update(requests=limiter.request_count, records=producer.record_count,
                      ended_at=int(time.time()), elapsed_seconds=round(time.time() - started, 1))
+        stats.update(http_429=limiter.http_429, request_errors=limiter.request_errors,
+                     request_error_rate=limiter.request_errors / limiter.request_count if limiter.request_count else 0)
         write_json(path, stats)
+        write_json(Path(args.output_dir) / 'reports' / f'collection-worker-{args.worker_id}-{run_id}.json', stats)
         print(stats, flush=True)
 
 

@@ -1,0 +1,4 @@
+run_id,measured_at,member,experiment,scale,env,dataset,job,executors,repeat,metric,value,unit,status,git_commit,notes
+20261118-022808-A-storage-raw,2026-11-18T02:28:08+00:00,A,storage,1000,local,steam_snapshot_1000_20261118,raw,,1,bytes,216267743,bytes,ok,18bcad1,Accumulated frozen raw snapshot; gzip bytes; includes CCU retry
+20261118-022808-A-storage-raw,2026-11-18T02:28:08+00:00,A,storage,1000,local,steam_snapshot_1000_20261118,raw,,1,files,14716,count,ok,18bcad1,Accumulated frozen raw snapshot; gzip bytes; includes CCU retry
+20261118-022808-A-storage-raw,2026-11-18T02:28:08+00:00,A,storage,1000,local,steam_snapshot_1000_20261118,raw,,1,records,938793,count,ok,18bcad1,Accumulated frozen raw snapshot; gzip bytes; includes CCU retry

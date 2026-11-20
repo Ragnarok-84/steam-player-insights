@@ -76,7 +76,7 @@ def fetch_page(appid, cursor, rate_limiter, max_retries):
     for attempt in range(max_retries + 1):
         rate_limiter.wait()
         try:
-            resp = requests.get(BASE_REVIEW_URL, params=params, timeout=15)
+            resp = rate_limiter.request_get(BASE_REVIEW_URL, params=params, timeout=15)
         except requests.RequestException as exc:
             logger.warning("[AppID %s] Request failed (%s), attempt %s", appid, type(exc).__name__, attempt + 1)
             if attempt < max_retries:

@@ -125,3 +125,27 @@ Chỉ một nơi crawl tại một thời điểm; chuyển nơi crawl thì mang
 - `compact_raw.py` giữ đủ 92.519 bản ghi; mọi file gzip hợp lệ. Bản gốc lưu ở `data/raw_backup_precompact/` (đã `.gitignore`).
 - `clean/reviews` hai bản cùng 87.407 dòng, không lệch `recommendationid` nào; `ym` khớp `dt` ở mọi dòng.
 - Mốc 10.737 file trong PLAN.md đo trên máy khác; số file "trước" phụ thuộc số task Spark nên khác với 9.587 ở đây. Thời gian B2 "trước" còn gồm đọc 1.421 file raw, nên phần giảm là tác động chung của cả hai thay đổi.
+
+## 9. Mô hình phân loại cảm xúc B9 (2026-11-19)
+
+**Chốt:** thêm đúng một mô hình ML, `processing/batch/b9_sentiment_classifier.py` (đặc tả: `docs/BigData.md` mục 6 phần phân công). Logistic Regression trên Spark MLlib dự đoán `voted_up` từ nội dung review, so với VADER của B5 trên cùng tập test.
+
+- **Dữ liệu:** review tiếng Anh có nội dung, bỏ review B2 gắn cờ `is_suspicious`. Nhãn là `voted_up`.
+- **Đặc trưng:** RegexTokenizer → StopWordsRemover → CountVectorizer → IDF như B5, khác hai điểm: **giữ từ phủ định** (`not`, `no`, `don't`…) và token từ 2 ký tự. Lý do: B5 tìm từ khoá chủ đề nên bỏ được; với phân loại cảm xúc, "not good" và "no" mang nghĩa.
+- **Chia train/test 80/20 theo thời gian** (20% review mới nhất làm test); `--split random` (seed 42) để so sánh. Trọng số lớp `n / (2·n_lớp)` vì review tích cực chiếm đa số.
+- **Siêu tham số** `minDF=20`, `regParam=0.1`, chọn thô trong 3 cấu hình trên bộ 100 game. `minDF=5` cho top từ toàn từ hiếm và mảnh từ (`ter`, `william`, `temple`).
+- **Thứ tự:** chạy cuối batch (sau B8). B9 chỉ cần B5, và là việc bỏ đầu tiên nếu trễ, nên lỗi ở B9 không được chặn các bảng phục vụ dashboard. `--skip b9` để bỏ.
+- **Benchmark:** `sc1_sc2_batch_benchmark.py` đo B9 như một job nhưng **không cộng vào `total_pipeline`**, để tổng B2–B8 vẫn so được với các lần đo trước. Chỉ số mô hình ghi vào `batch_ml_scale{N}_{ngày}.csv` và, với `--log-common`, vào mẫu chung (`experiment=ml`, job `b9` và `vader`). `--no-b9` để bỏ.
+- **Không ghi Elasticsearch:** kết quả là vài dòng chỉ số, dùng trong notebook và báo cáo, không cần dashboard.
+
+**Kết quả đầu tiên** (2026-11-19, bộ 100 game ngày 12/11, WSL2 `local[4]`; 26.202 review đủ điều kiện, train 20.953 / test 5.249, mốc thời gian 2026-11-07):
+
+| Mô hình | Accuracy | F1 | F1 lớp tiêu cực | AUC | Train | Predict |
+| --- | --- | --- | --- | --- | --- | --- |
+| Logistic Regression | 0,806 | 0,806 | 0,709 | 0,859 | 12,8 s | 0,8 s |
+| VADER (compound ≥ 0,05) | 0,658 | 0,667 | 0,566 | 0,723 | — | — |
+
+- Chia ngẫu nhiên cho số cao hơn (LR AUC 0,887, VADER 0,750), vì test lẫn cùng giai đoạn với train. Báo cáo dùng số chia theo thời gian.
+- Đường cong học trong một quy mô (chia ngẫu nhiên, 10% → 100% tập train): AUC 0,810 → 0,862 → 0,875 → 0,887; tăng chậm dần sau khoảng 10 nghìn review.
+- Top từ âm: `boring`, `slop`, `worst`, `garbage`, `refund`, `crashing`, `unplayable`, khớp với nhóm từ khoá tiêu cực của B5.
+- Đây chưa phải số nộp: số so sánh 100/500/1000 game phải đo trên 3 tập con cắt từ cùng snapshot 1000 game.

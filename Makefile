@@ -13,13 +13,13 @@ ES_FLAG := $(if $(ES),--es,)
 RUN = "$(PYTHON)" pipeline.py --profile $(PROFILE) --raw $(RAW) $(ES_FLAG)
 DOCKER = docker run --rm -it -v "$(CURDIR):/opt/spark/work-dir" $(IMAGE) python3 pipeline.py --profile $(PROFILE) --raw $(RAW) $(ES_FLAG)
 
-JOBS := b1 b2 b3 b4 b5 b6 b7 b8 s1 s2 s3 merge es-setup kibana-setup replay inject feedback applist crawl
+JOBS := b1 b2 b3 b4 b5 b6 b7 b8 b9 s1 s2 s3 merge es-setup kibana-setup replay inject feedback applist crawl
 .PHONY: help batch compact sample image docker-batch test $(JOBS)
 
 help:
-	@echo "make batch          - B2 > B5 > B3 > B4 > B6 > B7 > B8 (ES=1: ghi ES + merge view)"
+	@echo "make batch          - B2 > B5 > B3 > B4 > B6 > B7 > B8 > B9 (ES=1: ghi ES + merge view)"
 	@echo "make compact        - Gộp file raw nhỏ: 1 file / <nguồn>/dt= (chạy trước B2; ARGS=\"--dry-run\")"
-	@echo "make b1..b8         - Một job batch; s1 s2 s3 - streaming (ARGS=\"--source file\")"
+	@echo "make b1..b9         - Một job batch (b9: Logistic Regression vs VADER); s1 s2 s3 - streaming (ARGS=\"--source file\")"
 	@echo "make sample         - Sinh dữ liệu mẫu vào data/sample_raw"
 	@echo "make image          - Build image Spark ($(IMAGE))"
 	@echo "make docker-batch   - Chạy batch trong Docker (dùng trên Windows)"

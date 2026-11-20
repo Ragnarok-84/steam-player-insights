@@ -9,10 +9,10 @@ Cập nhật: 2026-11-12. Đối chiếu với thiết kế gốc `BigData.pdf`.
 | 0 Thu thập | Xong, đã làm lại 12/11 | Crawl thật 100 game, 92.019 review, 0 trùng; FT6 đạt | Vòng thu liên tục; mở rộng danh sách; CronJob `store`/`histogram` |
 | 1 Batch (B1–B8) | Xong | B2–B8 trên dữ liệu thật, ghi ES; B1 Kafka → raw local | Chạy trên cụm, lịch hằng ngày |
 | 2 Speed + hợp nhất | Xong local | S1–S3 với Kafka, review/CCU thật và tình huống bơm; `merge_views` giữ realtime hôm nay | Đo độ trễ end-to-end; chạy trên cụm |
-| 3 Truy vấn / phân tích bổ sung | Xong code | K-Means, review đáng ngờ, vòng phản hồi mới | Hive Metastore chưa triển khai (cấu hình thu gọn) |
+| 3 Truy vấn / phân tích bổ sung | Xong code | K-Means, review đáng ngờ, vòng phản hồi mới; B9 Logistic Regression vs VADER trên 100 game (19/11, `decisions.md` mục 9) | Hive Metastore chưa triển khai (cấu hình thu gọn); B9 ở 3 quy mô và trên cụm |
 | 4 Dashboard | D1–D4 xong | 18/19 panel trả dữ liệu thật (panel còn lại trống đúng) | Ảnh chụp; Grafana D5 chỉ trên cụm |
 | 5 K8s | Có manifest + script | kubeconform 32/32 (26/10); **chưa chạy trên cụm thật** | Build image mới, CronJob crawler mới, dựng cụm 4 VM |
-| 6 Kiểm thử | Unit + chạy thử một máy | Unit 36/36; FT6 đạt; SC1/SC3/SC4 chạy thử một máy | SC1–SC4 và FT1–FT5 trên cụm |
+| 6 Kiểm thử | Unit + đo một máy | Unit 53/53; FT6 đạt; SC1/SC2 batch đủ ma trận 100/500/1000 game × {1,2,4} × 3 ở local (20/11, `reports/batch_benchmark_scale_20261120.md`); SC3/SC4 chạy thử một máy | SC1–SC4 và FT1–FT5 trên cụm |
 | 7 Bàn giao | Tài liệu cập nhật | README 4.3, 4.11; `collection_guide.md`; báo cáo tiến độ | Notebook trên dữ liệu mới, báo cáo cuối, slide, video |
 
 ## 2. Thay đổi từ 26/10 đến 12/11

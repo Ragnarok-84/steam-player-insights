@@ -1,7 +1,7 @@
 """Chạy pipeline Steam Player Insights (Windows/Linux/WSL, không cần make).
 
 Ví dụ:
-  python pipeline.py batch                       # B2 -> B5 -> B3 -> B4 -> B6 -> B7 -> B8 trên data/raw
+  python pipeline.py batch                       # B2 -> B5 -> B3 -> B4 -> B6 -> B7 -> B8 -> B9 trên data/raw
   python pipeline.py batch --raw D:/steam_data/raw
   python pipeline.py compact                     # gộp file raw nhỏ: 1 file / <nguồn>/dt= (scripts/compact_raw.py)
   python pipeline.py batch --compact             # gộp raw rồi chạy batch
@@ -29,6 +29,7 @@ JOBS = {
     "b6": "processing.batch.b6_trending_games",
     "b7": "processing.batch.b7_baselines",
     "b8": "processing.batch.b8_game_clusters",
+    "b9": "processing.batch.b9_sentiment_classifier",
     "s1": "processing.streaming.s1_review_metrics",
     "s2": "processing.streaming.s2_review_bombing_detector",
     "s3": "processing.streaming.s3_ccu_spike_detector",
@@ -41,8 +42,9 @@ JOBS = {
     "applist": "crawlers.steam_applist_crawler",
     "crawl": "crawlers.collect_local",
 }
-# B5 trước B3 (B3 dùng cảm xúc từ B5); B7 sau B3 (baseline cho S2/S3)
-BATCH_ORDER = ["b2", "b5", "b3", "b4", "b6", "b7", "b8"]
+# B5 trước B3 (B3 dùng cảm xúc từ B5); B7 sau B3 (baseline cho S2/S3); B9 cần B5 (VADER), để cuối vì là phần
+# phụ: lỗi ở B9 không chặn các bảng phục vụ dashboard. Bỏ qua bằng --skip b9.
+BATCH_ORDER = ["b2", "b5", "b3", "b4", "b6", "b7", "b8", "b9"]
 COMPACT_SCRIPT = ROOT / "scripts" / "compact_raw.py"
 
 

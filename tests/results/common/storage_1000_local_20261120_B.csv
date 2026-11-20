@@ -1,0 +1,7 @@
+run_id,measured_at,member,experiment,scale,env,dataset,job,executors,repeat,metric,value,unit,status,git_commit,notes
+20261120-072705-B-storage-raw,2026-11-20T07:27:05+00:00,B,storage,1000,local,steam_1000g_20261118,raw,,1,bytes,202371364,bytes,ok,c4be999,raw = tập con đã gộp (1 file/nguồn/dt)
+20261120-072705-B-storage-raw,2026-11-20T07:27:05+00:00,B,storage,1000,local,steam_1000g_20261118,raw,,1,files,7,count,ok,c4be999,raw = tập con đã gộp (1 file/nguồn/dt)
+20261120-072705-B-storage-clean,2026-11-20T07:27:05+00:00,B,storage,1000,local,steam_1000g_20261118,clean,,1,bytes,461052463,bytes,ok,c4be999,Parquet snappy
+20261120-072705-B-storage-clean,2026-11-20T07:27:05+00:00,B,storage,1000,local,steam_1000g_20261118,clean,,1,files,198,count,ok,c4be999,Parquet snappy
+20261120-072705-B-storage-curated,2026-11-20T07:27:05+00:00,B,storage,1000,local,steam_1000g_20261118,curated,,1,bytes,17996791,bytes,ok,c4be999,Parquet snappy
+20261120-072705-B-storage-curated,2026-11-20T07:27:05+00:00,B,storage,1000,local,steam_1000g_20261118,curated,,1,files,233,count,ok,c4be999,Parquet snappy

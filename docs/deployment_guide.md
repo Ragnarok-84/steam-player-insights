@@ -4,11 +4,7 @@ Triển khai toàn bộ kiến trúc Lambda lên cụm Kubernetes (k3s / kubeadm
 
 > Phần K8s đã được kiểm tra schema (kubeconform, kể cả CRD Strimzi/ECK/Prometheus). Ngày 12/11/2026, toàn bộ pipeline (crawler → Kafka → B1–B8, S1–S3 → ES → Kibana) đã chạy trên một máy với dữ liệu thật (README mục 4.11). **Chưa chạy trên cụm K8s thật**, nên lần triển khai đầu cần theo dõi log từng bước.
 
-**Trước khi triển khai (code đã đổi ngày 12/11):**
-
-1. Build lại image Spark và crawler, tăng tag, sửa tag trong mọi manifest. Tag `k3s-20261026` chưa có thay đổi ngày 12/11: crawler mới, histogram, B6/B7 mới, ghi ES theo UTC, cutoff hợp nhất.
-2. Thêm CronJob cho `python -m crawlers.collect_local --sources store metadata histogram` (hằng ngày) và `python -m crawlers.update_targets_from_trending` (khi bật vòng phản hồi). `k8s/crawlers/crawler-cronjobs.yaml` mới có CCU, review, appdetails, AppList.
-3. Đưa `data/target_apps.json` (kèm manifest) và `data/crawler_state/reviews_v2/` lên PVC của crawler, để crawl tiếp không trùng (mục 5).
+Script `deploy_all.sh` build và áp dụng cùng tag cho Spark, crawler và Spark executor. Bộ CronJob có CCU, reviews, appdetails, store, histogram, AppList và feedback. Script seed danh sách game và manifest vào PVC dùng chung. Các lịch crawler được khởi tạo ở trạng thái suspend. Khi bàn giao crawl thật, chuyển `data/crawler_state/reviews_v2/` vào PVC và kiểm tra PVC hỗ trợ hai worker Indexed (mục 5).
 
 Nếu dùng bộ demo k3s thu gọn, xem [hướng dẫn k3s](../infra/k3s/README.md) và [kiểm thử chịu lỗi](../infra/k3s/FAULT_TEST.md). Các bước dưới dành cho bộ triển khai đầy đủ.
 
@@ -87,7 +83,7 @@ kubectl create secret generic steam-api -n default --from-literal=STEAM_API_KEY=
 
 ## 5. Nạp dữ liệu đã thu thập (JSONL) vào cụm
 
-Lấy gói dữ liệu theo README mục 4.3 (cách B). Ngoài raw, chép `data/target_apps.json`, manifest và `data/crawler_state/reviews_v2/` vào PVC `crawler-state-pvc`. Từ đó **chỉ crawler trên cụm được crawl**; dừng vòng thu trên máy cá nhân.
+Lấy gói dữ liệu theo README mục 4.3 (cách B). Dừng vòng thu trên máy cá nhân trước khi chuyển lượt crawl. Trên PVC `crawler-state-pvc`, đặt danh sách và manifest cùng nhau ở `/data/state/targets/` và chép cursor vào `/data/state/reviews_v2/`.
 
 Nạp raw, chọn một trong hai cách:
 
@@ -97,7 +93,8 @@ kubectl cp data/raw hdfs/hdfs-namenode-0:/tmp/raw
 kubectl exec -n hdfs hdfs-namenode-0 -- bash -c "hdfs dfs -put -f /tmp/raw/steam_* /steam/raw/"
 
 # Cách 2: replay qua Kafka (đi qua cả B1 và speed layer), chạy trong một pod trong cụm
-kubectl run replay -n spark-jobs --image=steam-spark:1.0.0 --restart=Never --command -- sleep infinity
+source scripts/k3s-images.sh  # Dùng cùng TAG và REGISTRY với deploy_all.sh
+kubectl run replay -n spark-jobs --image="$SPARK_IMAGE" --restart=Never --command -- sleep infinity
 kubectl cp data/raw spark-jobs/replay:/tmp/raw
 kubectl exec -n spark-jobs replay -- env KAFKA_BOOTSTRAP_SERVERS=steam-kafka-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092 \
   python3 -m crawlers.replay_jsonl_to_kafka --raw /tmp/raw --rate 2000
@@ -115,7 +112,8 @@ kubectl port-forward -n elastic-system svc/steam-kibana-kb-http 5601
 # Grafana: http://localhost:3000 (admin / mật khẩu trong kube-prometheus-values.yaml)
 kubectl port-forward -n monitoring svc/monitoring-grafana 3000:80
 # Spark SQL ad-hoc qua Hive
-kubectl run sql -n spark-jobs -it --rm --image=steam-spark:1.0.0 --overrides='{"spec":{"serviceAccountName":"spark-operator-sa"}}' \
+source scripts/k3s-images.sh  # Dùng cùng TAG và REGISTRY với deploy_all.sh
+kubectl run sql -n spark-jobs -it --rm --image="$SPARK_IMAGE" --overrides='{"spec":{"serviceAccountName":"spark-operator-sa"}}' \
   -- /opt/spark/bin/spark-sql --conf spark.hadoop.hive.metastore.uris=thrift://hive-metastore.hive.svc.cluster.local:9083
 ```
 

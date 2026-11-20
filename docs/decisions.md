@@ -95,3 +95,33 @@ Theo mục 6 của [van_de_va_giai_phap_ha_tang.md](van_de_va_giai_phap_ha_tang.
 3. **Gần ngày bảo vệ:** bật vòng phản hồi, mỗi ngày thêm tối đa 5 game đang lên trên bảng most-played.
 
 Chỉ một nơi crawl tại một thời điểm; chuyển nơi crawl thì mang theo `data/crawler_state`.
+
+## 8. Xử lý file nhỏ ở tầng raw và clean (2026-11-18)
+
+**Vấn đề:** với 100 game, raw có 1.421 file và `clean/reviews` có 10.737 file Parquet, vì phân vùng theo ngày tạo review trải từ 2013 đến 2026 (PLAN.md mục 3.1.5).
+
+**Chốt:**
+1. **Raw:** gộp các file `.jsonl.gz` nhỏ thành một file mỗi `<nguồn>/dt=` bằng `scripts/compact_raw.py` (`make compact`, `python pipeline.py compact`, hoặc `python pipeline.py batch --compact` để gộp rồi chạy batch luôn). Script giữ nguyên layout `dt=YYYY-MM-DD` nên B1/B2 không phải sửa. Chạy sau khi crawl/upload và trước B2.
+2. **`clean/reviews` phân vùng theo tháng (`ym=YYYY-MM`) thay vì theo ngày (`dt`).** B2 `repartition("ym")` trước khi ghi nên mỗi tháng một file.
+   - **Lý do:** dù có `repartition`, chia theo `dt` vẫn tối thiểu một file mỗi ngày có review, tức vài nghìn file cho 13 năm. Phần lớn ngày cũ chỉ có vài review nên file rất nhỏ. Chia theo tháng còn khoảng 160 file.
+   - **Cột `dt` vẫn giữ trong dữ liệu**, nên B3–B7 (đọc cả thư mục rồi lọc/nhóm theo `dt`) không phải sửa. Lọc theo `dt` không còn được partition pruning; muốn cắt nhanh thì lọc thêm `ym`.
+   - `clean/ccu` vẫn phân vùng theo `dt` (dữ liệu CCU chỉ có từ lúc bắt đầu crawl, số ngày ít).
+   - B2 ghi `clean/reviews` với `partitionOverwriteMode=static`, tức xoá cả thư mục rồi ghi lại. Nếu không, thư mục cũ có `dt=` sẽ nằm lẫn với `ym=` mới và Spark không đọc được.
+   - Hive: bảng do `write_table()` tự đăng ký đã nhận `ym`; `storage/hive/create_tables.sql` cũng đã sửa thành `PARTITIONED BY (ym STRING)`.
+3. **`curated/review_sentiment` (B5) cũng phân vùng theo `ym`**, `repartition("ym")` và ghi `static`, cùng lý do như mục 2. Cột `dt` vẫn giữ; B3 và notebook 02 chỉ join theo `recommendationid` nên không phải sửa. B9 đọc bảng này.
+   - Số đo (2026-11-18, bộ 100 game, `local[4]`): **7.089 → 154 file Parquet**, 68 MB → 2,2 MB; vẫn đủ 34.725 dòng, không trùng `recommendationid`, `ym` khớp `dt` ở mọi dòng; B3 sau đó cho cùng 19.861 dòng `game_daily_stats`.
+
+**Số đo trước/sau (2026-11-18, bộ 100 game, 92.519 bản ghi raw, 87.407 review sau khử trùng):** WSL2 Ubuntu, PySpark 3.5.7, `SPARK_MASTER=local[4]`. "Trước" = B2 ở commit `18bcad1` (phân vùng `dt`), "sau" = B2 hiện tại (`ym`), cùng bộ raw.
+
+| | Trước | Sau | Thay đổi |
+| --- | --- | --- | --- |
+| Raw: số file `.jsonl.gz` | 1.421 (1.020 review, 200 CCU, 201 meta) | 3 (1 / nguồn / `dt`) | −99,8% |
+| Raw: dung lượng | 18,30 MiB | 17,41 MiB | −4,8% |
+| `clean/reviews`: số file Parquet | 9.587 | 156 | −98,4% |
+| `clean/reviews`: số thư mục phân vùng | 3.723 (`dt=`) | 156 (`ym=`, 2013-09 → 2026-11) | |
+| `clean/reviews`: dung lượng | 197 MB | 41 MB | −79% |
+| Thời gian B2 (gồm khởi động Spark) | 104 s | 34 s | −67% |
+
+- `compact_raw.py` giữ đủ 92.519 bản ghi; mọi file gzip hợp lệ. Bản gốc lưu ở `data/raw_backup_precompact/` (đã `.gitignore`).
+- `clean/reviews` hai bản cùng 87.407 dòng, không lệch `recommendationid` nào; `ym` khớp `dt` ở mọi dòng.
+- Mốc 10.737 file trong PLAN.md đo trên máy khác; số file "trước" phụ thuộc số task Spark nên khác với 9.587 ở đây. Thời gian B2 "trước" còn gồm đọc 1.421 file raw, nên phần giảm là tác động chung của cả hai thay đổi.

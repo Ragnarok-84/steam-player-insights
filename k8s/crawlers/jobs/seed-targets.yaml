@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: steam-crawler-seed-
+spec:
+  ttlSecondsAfterFinished: 86400
+  backoffLimit: 0
+  activeDeadlineSeconds: 300
+  template:
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      containers:
+      - name: seed
+        image: steam-crawler:local
+        imagePullPolicy: IfNotPresent
+        command: [python, -m, crawlers.seed_targets]
+        envFrom:
+        - configMapRef:
+            name: steam-crawler-config
+        resources:
+          requests: {cpu: 100m, memory: 64Mi}
+          limits: {cpu: 250m, memory: 128Mi}
+        volumeMounts:
+        - name: crawler-state
+          mountPath: /data/state
+      volumes:
+      - name: crawler-state
+        persistentVolumeClaim:
+          claimName: crawler-state-pvc

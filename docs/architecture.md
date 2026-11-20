@@ -46,7 +46,7 @@ Vòng phản hồi: `crawlers/update_targets_from_trending.py` (`pipeline.py fee
 | Tầng | Đường dẫn / index | Khoá | Ghi chú |
 | --- | --- | --- | --- |
 | Raw | `/steam/raw/steam_{reviews_raw,players_ccu,games_meta}/dt=` | — | JSON Lines gzip. Trùng layout với `crawlers.collect_local`, nên dữ liệu crawl local dùng thẳng được |
-| Clean | `clean/reviews/dt=` | `recommendationid` | Giữ bản `timestamp_updated` mới nhất. Có `is_english`, `is_suspicious` và `suspicious_reason` |
+| Clean | `clean/reviews/ym=` | `recommendationid` | Phân vùng theo tháng tạo review (`ym=YYYY-MM`), vẫn giữ cột `dt`. Giữ bản `timestamp_updated` mới nhất. Có `is_english`, `is_suspicious` và `suspicious_reason` |
 | Clean | `clean/ccu/dt=` | `(appid, timestamp)` | Thêm `ts`, `hour` |
 | Clean | `clean/games`, `clean/games_history` | `appid` / `(appid, timestamp)` | Gộp appdetails với snapshot store của Steam (tag + trọng số, tổng review, early access). Có `price_bucket` |
 | Clean | `clean/review_daily_counts` | `(appid, dt)` | Số review up/down theo ngày từ histogram Steam, giữ snapshot mới nhất mỗi ngày |

@@ -1,0 +1,36 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: steam-demo
+resources:
+  - ../../crawlers
+patches:
+  - target:
+      kind: PersistentVolumeClaim
+      name: crawler-state-pvc
+    patch: |-
+      - op: replace
+        path: /spec/accessModes
+        value: [ReadWriteOnce]
+      - op: add
+        path: /spec/storageClassName
+        value: local-path
+  - target:
+      kind: ConfigMap
+      name: steam-crawler-config
+    patch: |-
+      - op: replace
+        path: /data/KAFKA_BOOTSTRAP_SERVERS
+        value: kafka.steam-demo.svc.cluster.local:9092
+      - op: replace
+        path: /data/CRAWLER_TOTAL_WORKERS
+        value: "1"
+  - target:
+      kind: CronJob
+      labelSelector: steam.insights/sharded=true
+    patch: |-
+      - op: replace
+        path: /spec/jobTemplate/spec/parallelism
+        value: 1
+      - op: replace
+        path: /spec/jobTemplate/spec/completions
+        value: 1

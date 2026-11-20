@@ -1,10 +1,11 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: demo-smoke
+  generateName: demo-smoke-
   namespace: steam-demo
 spec:
   backoffLimit: 0
+  ttlSecondsAfterFinished: 86400
   activeDeadlineSeconds: 1800
   template:
     metadata:
@@ -17,7 +18,7 @@ spec:
         steam.insights/role: compute
       containers:
       - name: spark
-        image: localhost/steam-spark-demo:k3s-20261026
+        image: localhost/steam-spark-demo:local
         imagePullPolicy: Never
         command:
         - python

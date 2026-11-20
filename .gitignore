@@ -27,6 +27,8 @@ wheels/
 
 # Data & Large Files
 data/raw/
+data/raw_backup*/
+data/raw_old*/
 data/clean/
 data/curated/
 data/cache/
@@ -46,6 +48,7 @@ data/kafka_demo_lake/
 
 # Checkpoints
 .checkpoint/
+.hadoop/
 spark-warehouse/
 metastore_db/
 derby.log
@@ -77,6 +80,8 @@ data/sample_lake/
 # Old mixed-source collection retained only for recovery
 data/legacy_nonsteam/
 
-# Local baselines and scalability snapshots
-data/backups/
-data/scale/
+# File tạm khi thử nghiệm
+tmp_test/
+# Gói dữ liệu nhận từ thành viên, giải nén để kiểm tra
+data/incoming/
+data/_backup/

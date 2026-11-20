@@ -1,12 +1,17 @@
 import json
 import logging
-from kafka import KafkaProducer
+try:
+    from kafka import KafkaProducer
+except ImportError:
+    KafkaProducer = None
 from crawlers.config import KAFKA_BOOTSTRAP_SERVERS
 
 logger = logging.getLogger(__name__)
 
 class SteamKafkaProducer:
     def __init__(self, bootstrap_servers=None):
+        if KafkaProducer is None:
+            raise RuntimeError("kafka-python is required to use SteamKafkaProducer")
         servers = bootstrap_servers or KAFKA_BOOTSTRAP_SERVERS
         self.producer = KafkaProducer(
             bootstrap_servers=servers,

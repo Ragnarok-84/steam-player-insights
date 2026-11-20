@@ -1,6 +1,7 @@
 import datetime as dt
 
 import pytest
+pytest.importorskip("pyspark")
 
 from processing.batch.b4_playtime_buckets import bucket_expr
 

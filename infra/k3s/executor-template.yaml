@@ -14,4 +14,3 @@ spec:
           spark-role: executor
   containers:
     - name: spark-kubernetes-executor
-      image: localhost/steam-spark-demo:k3s-20261026

@@ -1,7 +1,4 @@
-# Crawler CronJob (namespace default). CCU 10 phút, review 30 phút, appdetails hằng ngày, AppList hằng tuần.
-# CCU/review/appdetails chạy 2 worker song song (Indexed Job, chia game theo appid % 2).
-# API key: kubectl create secret generic steam-api --from-literal=STEAM_API_KEY=<key>
-# PVC ReadWriteMany cần storage class hỗ trợ (vd. NFS / Longhorn); với local-path đặt WORKERS=1.
+# Schedules stay suspended until the live crawler and cursor are handed over.
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -14,37 +11,52 @@ spec:
     requests:
       storage: 1Gi
 ---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: steam-crawler-config
+  namespace: default
+data:
+  KAFKA_BOOTSTRAP_SERVERS: steam-kafka-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092
+  CRAWLER_OUTPUT: kafka
+  CRAWLER_TOTAL_WORKERS: "2"
+  CRAWLER_TARGET_LIMIT: "2000"
+  TARGET_APP_LIST_PATH: /data/state/targets/target_apps.json
+  CURSOR_STATE_DIR: /data/state
+---
 apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: steam-ccu-crawler
   namespace: default
+  labels:
+    steam.insights/sharded: "true"
 spec:
-  schedule: '*/10 * * * *'
+  schedule: "0 * * * *"
+  timeZone: Asia/Bangkok
+  suspend: true
   concurrencyPolicy: Forbid
+  startingDeadlineSeconds: 300
   jobTemplate:
     spec:
+      activeDeadlineSeconds: 3500
       backoffLimit: 2
+      completionMode: Indexed
+      completions: 2
+      parallelism: 2
       template:
         spec:
-          restartPolicy: OnFailure
+          restartPolicy: Never
+          automountServiceAccountToken: false
           containers:
-          - name: steam-ccu-crawler
-            image: steam-crawler:1.0.0
+          - name: crawler
+            image: steam-crawler:local
             imagePullPolicy: IfNotPresent
-            command:
-            - python
-            - -m
-            - crawlers.steam_ccu_crawler
+            command: [python, -m, crawlers.steam_ccu_crawler]
+            envFrom:
+            - configMapRef:
+                name: steam-crawler-config
             env:
-            - name: KAFKA_BOOTSTRAP_SERVERS
-              value: steam-kafka-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092
-            - name: CRAWLER_OUTPUT
-              value: kafka
-            - name: CRAWLER_TOTAL_WORKERS
-              value: '2'
-            - name: CRAWLER_TARGET_LIMIT
-              value: '2000'
             - name: STEAM_API_KEY
               valueFrom:
                 secretKeyRef:
@@ -62,41 +74,48 @@ spec:
               limits:
                 cpu: 250m
                 memory: 256Mi
-      completionMode: Indexed
-      completions: 2
-      parallelism: 2
+            volumeMounts:
+            - name: crawler-state
+              mountPath: /data/state
+              readOnly: true
+          volumes:
+          - name: crawler-state
+            persistentVolumeClaim:
+              claimName: crawler-state-pvc
 ---
 apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: steam-reviews-crawler
   namespace: default
+  labels:
+    steam.insights/sharded: "true"
 spec:
-  schedule: '*/30 * * * *'
+  schedule: "25 */4 * * *"
+  timeZone: Asia/Bangkok
+  suspend: true
   concurrencyPolicy: Forbid
+  startingDeadlineSeconds: 300
   jobTemplate:
     spec:
+      activeDeadlineSeconds: 32400
       backoffLimit: 2
+      completionMode: Indexed
+      completions: 2
+      parallelism: 2
       template:
         spec:
-          restartPolicy: OnFailure
+          restartPolicy: Never
+          automountServiceAccountToken: false
           containers:
-          - name: steam-reviews-crawler
-            image: steam-crawler:1.0.0
+          - name: crawler
+            image: steam-crawler:local
             imagePullPolicy: IfNotPresent
-            command:
-            - python
-            - -m
-            - crawlers.steam_reviews_crawler
+            command: [python, -m, crawlers.steam_reviews_crawler]
+            envFrom:
+            - configMapRef:
+                name: steam-crawler-config
             env:
-            - name: KAFKA_BOOTSTRAP_SERVERS
-              value: steam-kafka-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092
-            - name: CRAWLER_OUTPUT
-              value: kafka
-            - name: CRAWLER_TOTAL_WORKERS
-              value: '2'
-            - name: CRAWLER_TARGET_LIMIT
-              value: '2000'
             - name: STEAM_API_KEY
               valueFrom:
                 secretKeyRef:
@@ -107,8 +126,6 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.annotations['batch.kubernetes.io/job-completion-index']
-            - name: CURSOR_STATE_DIR
-              value: /data/state
             resources:
               requests:
                 cpu: 250m
@@ -123,41 +140,40 @@ spec:
           - name: crawler-state
             persistentVolumeClaim:
               claimName: crawler-state-pvc
-      completionMode: Indexed
-      completions: 2
-      parallelism: 2
 ---
 apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: steam-appdetails-crawler
   namespace: default
+  labels:
+    steam.insights/sharded: "true"
 spec:
-  schedule: 0 2 * * *
+  schedule: "15 2 * * *"
+  timeZone: Asia/Bangkok
+  suspend: true
   concurrencyPolicy: Forbid
+  startingDeadlineSeconds: 300
   jobTemplate:
     spec:
+      activeDeadlineSeconds: 10800
       backoffLimit: 2
+      completionMode: Indexed
+      completions: 2
+      parallelism: 2
       template:
         spec:
-          restartPolicy: OnFailure
+          restartPolicy: Never
+          automountServiceAccountToken: false
           containers:
-          - name: steam-appdetails-crawler
-            image: steam-crawler:1.0.0
+          - name: crawler
+            image: steam-crawler:local
             imagePullPolicy: IfNotPresent
-            command:
-            - python
-            - -m
-            - crawlers.steam_app_details_crawler
+            command: [python, -m, crawlers.steam_app_details_crawler]
+            envFrom:
+            - configMapRef:
+                name: steam-crawler-config
             env:
-            - name: KAFKA_BOOTSTRAP_SERVERS
-              value: steam-kafka-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092
-            - name: CRAWLER_OUTPUT
-              value: kafka
-            - name: CRAWLER_TOTAL_WORKERS
-              value: '2'
-            - name: CRAWLER_TARGET_LIMIT
-              value: '2000'
             - name: STEAM_API_KEY
               valueFrom:
                 secretKeyRef:
@@ -175,9 +191,127 @@ spec:
               limits:
                 cpu: 250m
                 memory: 256Mi
+            volumeMounts:
+            - name: crawler-state
+              mountPath: /data/state
+              readOnly: true
+          volumes:
+          - name: crawler-state
+            persistentVolumeClaim:
+              claimName: crawler-state-pvc
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: steam-store-crawler
+  namespace: default
+spec:
+  schedule: "40 1 * * *"
+  timeZone: Asia/Bangkok
+  suspend: true
+  concurrencyPolicy: Forbid
+  startingDeadlineSeconds: 300
+  jobTemplate:
+    spec:
+      activeDeadlineSeconds: 1800
+      backoffLimit: 2
+      template:
+        spec:
+          restartPolicy: Never
+          automountServiceAccountToken: false
+          containers:
+          - name: crawler
+            image: steam-crawler:local
+            imagePullPolicy: IfNotPresent
+            command: [python, -m, crawlers.steam_store_crawler]
+            envFrom:
+            - configMapRef:
+                name: steam-crawler-config
+            env:
+            - name: STEAM_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: steam-api
+                  key: STEAM_API_KEY
+                  optional: true
+            - name: CRAWLER_TOTAL_WORKERS
+              value: "1"
+            - name: CRAWLER_WORKER_ID
+              value: "0"
+            resources:
+              requests:
+                cpu: 250m
+                memory: 256Mi
+              limits:
+                cpu: 250m
+                memory: 256Mi
+            volumeMounts:
+            - name: crawler-state
+              mountPath: /data/state
+              readOnly: true
+          volumes:
+          - name: crawler-state
+            persistentVolumeClaim:
+              claimName: crawler-state-pvc
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: steam-histogram-crawler
+  namespace: default
+  labels:
+    steam.insights/sharded: "true"
+spec:
+  schedule: "15 4 * * *"
+  timeZone: Asia/Bangkok
+  suspend: true
+  concurrencyPolicy: Forbid
+  startingDeadlineSeconds: 300
+  jobTemplate:
+    spec:
+      activeDeadlineSeconds: 10800
+      backoffLimit: 2
       completionMode: Indexed
       completions: 2
       parallelism: 2
+      template:
+        spec:
+          restartPolicy: Never
+          automountServiceAccountToken: false
+          containers:
+          - name: crawler
+            image: steam-crawler:local
+            imagePullPolicy: IfNotPresent
+            command: [python, -m, crawlers.steam_review_histogram_crawler]
+            envFrom:
+            - configMapRef:
+                name: steam-crawler-config
+            env:
+            - name: STEAM_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: steam-api
+                  key: STEAM_API_KEY
+                  optional: true
+            - name: CRAWLER_WORKER_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.annotations['batch.kubernetes.io/job-completion-index']
+            resources:
+              requests:
+                cpu: 250m
+                memory: 256Mi
+              limits:
+                cpu: 250m
+                memory: 256Mi
+            volumeMounts:
+            - name: crawler-state
+              mountPath: /data/state
+              readOnly: true
+          volumes:
+          - name: crawler-state
+            persistentVolumeClaim:
+              claimName: crawler-state-pvc
 ---
 apiVersion: batch/v1
 kind: CronJob
@@ -185,48 +319,98 @@ metadata:
   name: steam-applist-crawler
   namespace: default
 spec:
-  schedule: 0 4 * * 0
+  schedule: "35 6 * * 0"
+  timeZone: Asia/Bangkok
+  suspend: true
   concurrencyPolicy: Forbid
+  startingDeadlineSeconds: 300
   jobTemplate:
     spec:
+      activeDeadlineSeconds: 3600
       backoffLimit: 2
       template:
         spec:
-          restartPolicy: OnFailure
+          restartPolicy: Never
+          automountServiceAccountToken: false
           containers:
-          - name: steam-applist-crawler
-            image: steam-crawler:1.0.0
+          - name: crawler
+            image: steam-crawler:local
             imagePullPolicy: IfNotPresent
-            command:
-            - python
-            - -m
-            - crawlers.steam_applist_crawler
-            - --output
-            - /data/state/applist.json
+            command: [python, -m, crawlers.steam_applist_crawler]
+            args: [--output, /data/state/applist.json]
+            envFrom:
+            - configMapRef:
+                name: steam-crawler-config
             env:
-            - name: KAFKA_BOOTSTRAP_SERVERS
-              value: steam-kafka-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092
-            - name: CRAWLER_OUTPUT
-              value: kafka
+            - name: STEAM_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: steam-api
+                  key: STEAM_API_KEY
             - name: CRAWLER_TOTAL_WORKERS
-              value: '1'
-            - name: CRAWLER_TARGET_LIMIT
-              value: '2000'
+              value: "1"
+            - name: CRAWLER_WORKER_ID
+              value: "0"
+            resources:
+              requests:
+                cpu: 250m
+                memory: 256Mi
+              limits:
+                cpu: 250m
+                memory: 512Mi
+            volumeMounts:
+            - name: crawler-state
+              mountPath: /data/state
+          volumes:
+          - name: crawler-state
+            persistentVolumeClaim:
+              claimName: crawler-state-pvc
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: steam-feedback-crawler
+  namespace: default
+spec:
+  schedule: "40 7 * * *"
+  timeZone: Asia/Bangkok
+  suspend: true
+  concurrencyPolicy: Forbid
+  startingDeadlineSeconds: 300
+  jobTemplate:
+    spec:
+      activeDeadlineSeconds: 1800
+      backoffLimit: 2
+      template:
+        spec:
+          restartPolicy: Never
+          automountServiceAccountToken: false
+          containers:
+          - name: crawler
+            image: steam-crawler:local
+            imagePullPolicy: IfNotPresent
+            command: [python, -m, crawlers.update_targets_from_trending]
+            envFrom:
+            - configMapRef:
+                name: steam-crawler-config
+            env:
             - name: STEAM_API_KEY
               valueFrom:
                 secretKeyRef:
                   name: steam-api
                   key: STEAM_API_KEY
                   optional: true
-            - name: CURSOR_STATE_DIR
-              value: /data/state
+            - name: CRAWLER_TOTAL_WORKERS
+              value: "1"
+            - name: CRAWLER_WORKER_ID
+              value: "0"
             resources:
               requests:
                 cpu: 250m
-                memory: 512Mi
+                memory: 256Mi
               limits:
                 cpu: 250m
-                memory: 512Mi
+                memory: 256Mi
             volumeMounts:
             - name: crawler-state
               mountPath: /data/state

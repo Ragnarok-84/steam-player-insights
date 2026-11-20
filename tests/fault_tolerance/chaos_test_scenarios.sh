@@ -4,6 +4,9 @@
 #   ./tests/fault_tolerance/chaos_test_scenarios.sh ft1|ft2|ft3|ft4|ft5 <node>|ft6|all
 # CẢNH BÁO: script xoá pod / drain node thật. Không chạy trên cụm dùng chung khi chưa thống nhất với nhóm.
 set -euo pipefail
+requested_spark_image="${SPARK_IMAGE:-}"
+source scripts/k3s-images.sh
+SPARK_IMAGE="${requested_spark_image:-$SPARK_IMAGE}"
 
 RESULTS=tests/results/ft_results.csv
 mkdir -p tests/results
@@ -31,7 +34,7 @@ ft1_kafka_broker() {
   # Producer liên tục (replay) trong lúc xoá 1 broker; RF=3, min.insync=2 -> không mất message
   echo "[FT1] Replay review vào Kafka nền, xoá 1 broker"
   local before; before=$(kafka_offsets)
-  kubectl run ft1-replay -n spark-jobs --image="${SPARK_IMAGE:-steam-spark:1.0.0}" --restart=Never \
+  kubectl run ft1-replay -n spark-jobs --image="$SPARK_IMAGE" --restart=Never \
     --env=KAFKA_BOOTSTRAP_SERVERS=steam-kafka-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092 \
     --command -- sh -c "python3 tests/make_sample_data.py --out /tmp/raw --games 20 --days 3 && python3 -m crawlers.replay_jsonl_to_kafka --raw /tmp/raw --topics steam_reviews_raw --rate 300" >/dev/null
   sleep 40

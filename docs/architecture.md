@@ -17,7 +17,7 @@ Reviews / AppDetails / Store / Histogram / CCU / AppList   Raw đã crawl (repla
    B3 thống kê ngày/tuần/tháng/thể loại/ngôn ngữ
    B4 giờ chơi, bỏ game sớm, "đáng tiền"
    B6 trending, tác động giảm giá
-   B7 baseline cho S2/S3      B8 K-Means
+   B7 baseline cho S2/S3      B8 K-Means      B9 Logistic Regression vs VADER
             │                                                       │
             ▼                                                       ▼
    /steam/curated/* (Parquet, bảng Hive steam_analytics)   Elasticsearch realtime_game_metrics, alerts
@@ -32,10 +32,11 @@ Vòng phản hồi: `crawlers/update_targets_from_trending.py` (`pipeline.py fee
 
 ## 2. Thứ tự job batch và lý do
 
-`B1 → B2 → B5 → B3 → B4 → B6 → B7 → B8 → merge`
+`B1 → B2 → B5 → B3 → B4 → B6 → B7 → B8 → B9 → merge`
 
 - B5 chạy trước B3, vì B3 lấy điểm cảm xúc trung bình từ `curated/review_sentiment`.
 - B6 cần `game_daily_stats` của B3.
+- B9 cần `review_sentiment` của B5 để so với VADER trên cùng tập test; đặt cuối vì là phần phụ: lỗi ở B9 không chặn các bảng phục vụ dashboard (`--skip b9` để bỏ).
 - B7 cần dữ liệu clean mới nhất để tính baseline, và S2/S3 đọc lại baseline ở mỗi micro-batch.
 - Demo cảnh báo: `crawlers/demo_inject.py` (`pipeline.py inject`) bơm sự kiện `source=demo_injection` vào Kafka; S2/S3 xử lý như thường, B2 loại các bản ghi này khỏi batch.
 - B2–B8 tính lại toàn bộ từ master dataset rồi ghi đè (dynamic overwrite theo `dt`). Chạy lại không sinh trùng.
@@ -57,6 +58,7 @@ Vòng phản hồi: `crawlers/update_targets_from_trending.py` (`pipeline.py fee
 | Curated | `trending`, `trending_top`, `event_impact` | `(appid, dt)` | B6: cửa sổ 7 ngày theo lịch (`rangeBetween`), z-score |
 | Curated | `review_baseline`, `ccu_baseline` | `appid` / `(appid, hour)` | B7. Review: 7 ngày đủ dữ liệu của histogram Steam; độ lệch chuẩn theo giờ = √(mean + Var(ngày)/24²); dưới 30 review thì % tích cực lấy theo tỷ lệ trọn đời của Steam. CCU: TB cùng khung giờ UTC |
 | Curated | `game_clusters`, `cluster_profiles` | `appid` | B8 |
+| Curated | `sentiment_model_metrics`, `sentiment_model_terms` | `model, train_fraction` / `direction, rank` | B9: accuracy, F1, F1 lớp tiêu cực, AUC, thời gian train/predict của Logistic Regression và VADER trên cùng tập test; top từ trọng số âm/dương, đối chiếu từ khoá B5 |
 | Serving | ES `batch_*`, `reviews_search`, `game_keywords` | id ghép từ khoá | upsert, nên chạy lại không trùng |
 | Serving | ES `realtime_game_metrics` | `metric_type_appid_window_size_window_start` | upsert theo cửa sổ (update mode) |
 | Serving | ES `alerts` + Kafka `steam.alerts` | `alert_type_appid_window_start` | |

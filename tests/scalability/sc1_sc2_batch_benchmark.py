@@ -1,4 +1,4 @@
-"""SC1 & SC2: benchmark hiệu năng batch layer B2 -> B5 -> B3 -> B4 -> B6 -> B7 -> B8.
+"""SC1 & SC2: benchmark hiệu năng batch layer B2 -> B5 -> B3 -> B4 -> B6 -> B7 -> B8 (+ B9).
 
 Ma trận đo: Quy mô (--scales) x Số executor (--executors) x Số lần lặp (--runs).
   SC1: cố định quy mô, tăng executor -> thời gian, speedup = median(e=1) / median(e=N).
@@ -7,7 +7,11 @@ Ma trận đo: Quy mô (--scales) x Số executor (--executors) x Số lần l�
 Mỗi lượt (scale, executors, run) chạy trong MỘT tiến trình con riêng với MỘT SparkSession:
   spark_startup  = thời gian tạo SparkSession (profile cluster: tính cả lúc chờ đủ executor đăng ký)
   b2 ... b8      = thời gian từng job, gọi trực tiếp hàm của processing/batch/* trên cùng session
-  total_pipeline = spark_startup + tổng các job (không tính thời gian đếm records/bytes sau mỗi job)
+  b9             = Logistic Regression vs VADER (mặc định có; --no-b9 để bỏ). Tính riêng, KHÔNG cộng vào
+                   total_pipeline để tổng B2–B8 so sánh được với các lần đo trước khi có B9.
+                   Chỉ số mô hình (accuracy/f1/auc, train_s/predict_s) ghi vào batch_ml_scale{scale}_{ngày}.csv
+                   và, với --log-common, vào mẫu chung experiment=ml (job b9 và vader).
+  total_pipeline = spark_startup + tổng B2–B8 (không tính thời gian đếm records/bytes sau mỗi job)
 Lưu ý: `python pipeline.py batch` chạy mỗi job một tiến trình nên trả phí khởi động Spark 7 lần;
 benchmark này tách phần đó ra để thấy riêng chi phí tính toán + ghi Parquet.
 B1 bị bỏ qua (B1 đọc Kafka; benchmark đọc thẳng thư mục snapshot raw). Mặc định KHÔNG ghi Elasticsearch
@@ -48,8 +52,17 @@ from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
 STAGE = "batch"
-JOBS = ["b2", "b5", "b3", "b4", "b6", "b7", "b8"]  # đúng thứ tự phụ thuộc dữ liệu của pipeline.BATCH_ORDER
+PIPELINE_JOBS = ["b2", "b5", "b3", "b4", "b6", "b7", "b8"]  # đúng thứ tự phụ thuộc dữ liệu của pipeline.BATCH_ORDER
+JOBS = [*PIPELINE_JOBS, "b9"]  # set_jobs() bỏ b9 khi --no-b9
 ALL_JOBS = ["spark_startup", *JOBS, "total_pipeline"]
+ML_COLUMNS = ["scale", "executors", "run", "model", "split", "train_fraction", "train_rows", "test_rows",
+              "test_positive_ratio", "accuracy", "f1", "f1_negative", "auc", "train_s", "predict_s"]
+
+
+def set_jobs(with_b9: bool):
+    global JOBS, ALL_JOBS
+    JOBS = [*PIPELINE_JOBS, "b9"] if with_b9 else list(PIPELINE_JOBS)
+    ALL_JOBS = ["spark_startup", *JOBS, "total_pipeline"]
 
 # Bảng Parquet mỗi job sinh ra (tầng, tên thư mục) — dùng để đếm records / bytes / số file .parquet
 JOB_OUTPUTS = {
@@ -60,6 +73,7 @@ JOB_OUTPUTS = {
     "b6": [("curated", t) for t in ("trending", "trending_top", "event_impact")],
     "b7": [("curated", t) for t in ("review_baseline", "ccu_baseline")],
     "b8": [("curated", t) for t in ("game_clusters", "cluster_profiles")],
+    "b9": [("curated", t) for t in ("sentiment_model_metrics", "sentiment_model_terms")],
 }
 
 RAW_COLUMNS = ["scale", "stage", "job", "executors", "run", "seconds", "records", "bytes", "peak_mem"]
@@ -311,7 +325,7 @@ def _output_stats(spark, path: str):
 def _job_fn(job, raw, clean, curated, es):
     from processing.batch import (b2_clean_raw as b2, b3_game_daily_stats as b3, b4_playtime_buckets as b4,
                                   b5_aspect_sentiment as b5, b6_trending_games as b6, b7_baselines as b7,
-                                  b8_game_clusters as b8)
+                                  b8_game_clusters as b8, b9_sentiment_classifier as b9)
 
     def run_b2(spark):
         b2.clean_reviews(spark, raw, clean)
@@ -326,6 +340,7 @@ def _job_fn(job, raw, clean, curated, es):
         "b6": lambda s: b6.compute_trending_games(s, clean, curated, es, 50),
         "b7": lambda s: b7.compute_baselines(s, clean, curated, 7),
         "b8": lambda s: b8.cluster_games(s, clean, curated, 6, es),
+        "b9": lambda s: b9.train_sentiment_classifier(s, clean, curated),
     }[job]
 
 
@@ -341,6 +356,7 @@ def _wait_executors(spark, n, timeout):
 
 def worker(cfg_path: str) -> int:
     cfg = json.loads(Path(cfg_path).read_text(encoding="utf-8"))
+    set_jobs(cfg.get("with_b9", True))
     sys.path.insert(0, str(ROOT))
     out = Path(cfg["result_file"])
     raw, lake, es = cfg["raw"], cfg["lake"], cfg["write_es"]
@@ -362,7 +378,7 @@ def worker(cfg_path: str) -> int:
 
     with sampler() as smp:
         t0 = time.perf_counter()
-        spark = get_spark_session(f"Bench_B2-B8_s{cfg['scale']}_e{cfg['executors']}_r{cfg['run']}")
+        spark = get_spark_session(f"Bench_batch_s{cfg['scale']}_e{cfg['executors']}_r{cfg['run']}")
         if cfg["profile"] == "cluster" and cfg.get("executor_wait", 0) > 0:
             _wait_executors(spark, cfg["executors"], cfg["executor_wait"])
         startup = time.perf_counter() - t0
@@ -389,7 +405,7 @@ def worker(cfg_path: str) -> int:
             with sampler() as smp:
                 t = time.perf_counter()
                 try:
-                    fn(spark)
+                    ret = fn(spark)
                 except BaseException as e:  # B2 dùng SystemExit khi thiếu dữ liệu
                     if isinstance(e, KeyboardInterrupt):
                         raise
@@ -408,6 +424,9 @@ def worker(cfg_path: str) -> int:
                 st = _output_stats(spark, f"{lake}/{layer}/{table}")
                 if st:
                     records, size, files = records + st[0], size + st[1], files + st[2]
+            if job == "b9":  # chỉ số mô hình đi kèm dòng b9
+                row["ml"] = [{k: (v.isoformat() if hasattr(v, "isoformat") else v) for k, v in m.items()}
+                             for m in (ret or [])]
             emit(**row, status="ok", records=records, bytes=size, parquet_files=files)
             print(f"[bench] {job} {secs:.2f}s records={records} bytes={size} files={files}", flush=True)
     finally:
@@ -450,7 +469,7 @@ def run_once(args, scale, executors, run, raw, lake, log_dir):
     cfg = dict(scale=scale, executors=executors, run=run, raw=raw, lake=lake, profile=args.profile,
                write_es=args.write_es, result_file=str(result_file), executor_wait=args.executor_wait,
                kubectl_top=args.kubectl_top, k8s_namespace=args.k8s_namespace, pod_selector=args.pod_selector,
-               sample_interval=args.sample_interval)
+               sample_interval=args.sample_interval, with_b9=not args.no_b9)
     cfg_file.write_text(json.dumps(cfg), encoding="utf-8")
     env = worker_env(args, raw, lake, executors)
     with log_file.open("w", encoding="utf-8") as log:
@@ -471,7 +490,7 @@ def run_once(args, scale, executors, run, raw, lake, log_dir):
 
 
 def total_row(rows):
-    parts = [rows[j] for j in ["spark_startup", *JOBS]]
+    parts = [rows[j] for j in ["spark_startup", *PIPELINE_JOBS]]
     ok = all(p["status"] == "ok" for p in parts)
 
     def agg(key, fn):
@@ -600,6 +619,24 @@ def log_common(args, scale, details):
                                              f"image={args.image_tag}" if args.image_tag else "", d["error"]])))
 
 
+def log_common_ml(args, scale, ml_rows):
+    """Chỉ số B9 vào mẫu chung: experiment=ml, job b9 (logreg) hoặc vader (tests/results/README.md, thành viên B)."""
+    sys.path.insert(0, str(ROOT))
+    from tests.results_log import record
+    env = "local" if args.profile == "local" else "k3s"
+    for m in ml_rows:
+        if m.get("train_fraction") not in (None, 1.0):
+            continue  # mẫu chung chỉ nhận mô hình train đủ dữ liệu
+        names = ["accuracy", "f1", "auc"] + (["train_s", "predict_s"] if m["model"] == "logreg" else [])
+        record(member=args.member, experiment="ml", scale=scale, env=env,
+               job="b9" if m["model"] == "logreg" else "vader", repeat=int(m["run"]), executors=int(m["executors"]),
+               dataset=args.dataset, metrics={k: m[k] for k in names if m.get(k) is not None},
+               notes="; ".join(filter(None, [f"split={m['split']}", f"f1_negative={m['f1_negative']:.4f}",
+                                             f"test_rows={m['test_rows']}",
+                                             f"topology={args.topology}" if args.topology else "",
+                                             f"image={args.image_tag}" if args.image_tag else ""])))
+
+
 def parse_args(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--raw-template", default="data/scale/raw_{scale}",
@@ -614,6 +651,7 @@ def parse_args(argv=None):
     p.add_argument("--mode", choices=["local", "k8s"], help=argparse.SUPPRESS)  # tên cũ, tương đương --profile
     p.add_argument("--image-tag", default="", help="Metadata: tag image Spark (vd. k3s-20261115)")
     p.add_argument("--topology", default="", help="Metadata: mô tả hạ tầng (vd. 4-vm-k3s, wsl2-8c16g)")
+    p.add_argument("--no-b9", action="store_true", help="Không đo B9 (Logistic Regression vs VADER)")
     p.add_argument("--write-es", action="store_true", help="Ghi Elasticsearch trong lúc đo (mặc định tắt)")
     p.add_argument("--shuffle-partitions", type=int, default=None, help="Mặc định max(4, executors*4)")
     p.add_argument("--executor-wait", type=int, default=180,
@@ -643,6 +681,7 @@ def parse_args(argv=None):
 
 def main(argv=None):
     args = parse_args(argv)
+    set_jobs(not args.no_b9)
     if args._worker:
         sys.exit(worker(args._worker))
 
@@ -656,7 +695,7 @@ def main(argv=None):
             print(f"[bench] WARN: scale={scale}: không có {raw}/steam_reviews_raw -> bỏ qua quy mô này", flush=True)
             skipped.append(scale)
             continue
-        details, raw_missing = [], False
+        details, ml_rows, raw_missing = [], [], False
         for executors in args.executors:
             for run in range(1, args.runs + 1):
                 lake = fill(args.lake_template, scale=scale, executors=executors, run=run, profile=args.profile_label)
@@ -669,6 +708,7 @@ def main(argv=None):
                     raw_missing = True
                     break
                 rows["total_pipeline"] = total_row(rows)
+                ml_rows += [dict(scale=scale, executors=executors, run=run, **m) for m in rows.get("b9", {}).get("ml", [])]
                 for job in ALL_JOBS:
                     details.append(detail_record(args, scale, executors, run, raw, lake, rows[job]))
                 status = " ".join(f"{j}={rows[j]['seconds']:.1f}s" if rows[j]["status"] == "ok" else f"{j}={rows[j]['status']}"
@@ -690,10 +730,15 @@ def main(argv=None):
         write_csv(det_csv, DETAIL_COLUMNS, details)
         write_csv(sum_csv, SUMMARY_COLUMNS, summary)
         written += [raw_csv, det_csv, sum_csv]
+        if ml_rows:
+            ml_csv = unique_path(results_dir / f"batch_ml_scale{scale}_{day}.csv")
+            write_csv(ml_csv, ML_COLUMNS, ml_rows)
+            written.append(ml_csv)
         print_table(scale, summary)
         if args.log_common:
             try:
                 log_common(args, scale, details)
+                log_common_ml(args, scale, ml_rows)
             except ValueError as e:
                 print(f"[bench] WARN: không ghi được mẫu chung: {e}", flush=True)
 

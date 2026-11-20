@@ -1,0 +1,26 @@
+{
+  "scale": 100,
+  "checked_at": "2026-11-17T15:33:32.236792+00:00",
+  "data_partition": "2026-11-12",
+  "target_seed": 42,
+  "unique_games": 100,
+  "review_records": 92019,
+  "unique_review_ids": 92019,
+  "reviews_per_game": {
+    "min": 25,
+    "max": 1945,
+    "mean": 920.19
+  },
+  "coverage": {
+    "reviews": 100,
+    "ccu": 100,
+    "metadata": 100,
+    "store": 100,
+    "histogram": 100
+  },
+  "ccu_records": 200,
+  "raw_gzip_bytes": 19183738,
+  "review_state_files": 100,
+  "http_429": null,
+  "note": "Historical reports do not record HTTP 429. Existing passes are different jobs, not 3 comparable repeats."
+}

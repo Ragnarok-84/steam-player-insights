@@ -1,0 +1,44 @@
+{
+  "100": {
+    "scale": 100,
+    "records": {
+      "steam_games_meta": 900,
+      "steam_players_ccu": 400,
+      "steam_reviews_raw": 192239
+    },
+    "coverage": {
+      "steam_games_meta": 100,
+      "steam_players_ccu": 100,
+      "steam_reviews_raw": 100
+    },
+    "bytes": 38514057
+  },
+  "500": {
+    "scale": 500,
+    "records": {
+      "steam_games_meta": 3300,
+      "steam_players_ccu": 1200,
+      "steam_reviews_raw": 619514
+    },
+    "coverage": {
+      "steam_games_meta": 500,
+      "steam_players_ccu": 500,
+      "steam_reviews_raw": 500
+    },
+    "bytes": 136965180
+  },
+  "1000": {
+    "scale": 1000,
+    "records": {
+      "steam_games_meta": 4800,
+      "steam_players_ccu": 1700,
+      "steam_reviews_raw": 932293
+    },
+    "coverage": {
+      "steam_games_meta": 1000,
+      "steam_players_ccu": 1000,
+      "steam_reviews_raw": 1000
+    },
+    "bytes": 209672094
+  }
+}

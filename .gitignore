@@ -1,5 +1,6 @@
 # Python
 __pycache__/
+.pytest_cache/
 *.py[cod]
 *$py.class
 *.so
@@ -75,3 +76,7 @@ data/sample_lake/
 
 # Old mixed-source collection retained only for recovery
 data/legacy_nonsteam/
+
+# Local baselines and scalability snapshots
+data/backups/
+data/scale/

@@ -28,7 +28,7 @@ def crawl_ccu(appid: int, producer: SteamKafkaProducer, rate_limiter: RateLimite
     if STEAM_API_KEY:
         params["key"] = STEAM_API_KEY
     try:
-        resp = requests.get(CCU_API_URL, params=params, timeout=10)
+        resp = rate_limiter.request_get(CCU_API_URL, params=params, timeout=10)
         if resp.status_code == 429:
             rate_limiter.record_rate_limit(cooldown_seconds=CRAWLER_RATE_LIMIT_COOLDOWN)
             return False

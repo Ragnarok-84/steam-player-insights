@@ -41,7 +41,7 @@ def crawl_app_details(appid: int, producer: SteamKafkaProducer, rate_limiter: Ra
     rate_limiter.wait()
     params = {"appids": appid, "cc": "us", "l": "en"}
     try:
-        resp = requests.get(BASE_APPDETAILS_URL, params=params, timeout=15)
+        resp = rate_limiter.request_get(BASE_APPDETAILS_URL, params=params, timeout=15)
         if resp.status_code == 429:
             rate_limiter.record_rate_limit(cooldown_seconds=60)
             return False

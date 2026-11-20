@@ -15,6 +15,8 @@ class RateLimiter:
             raise ValueError("Invalid request interval or budget")
         self.default_interval = default_interval
         self.max_requests = max_requests
+        self.request_errors = 0
+        self.http_429 = 0
         self.request_count = 0
         self.last_call = 0.0
         self.backoff_factor = 1.0
@@ -38,3 +40,17 @@ class RateLimiter:
         logger.warning(f"Rate limit hit! Sleeping for {cooldown_seconds}s and increasing backoff.")
         self.backoff_factor = min(self.backoff_factor * 2.0, 10.0)
         time.sleep(cooldown_seconds)
+
+    def request_get(self, url, **kwargs):
+        """Count transport/non-200 failures per HTTP attempt, including retries."""
+        import requests
+        try:
+            response = requests.get(url, **kwargs)
+        except requests.RequestException:
+            self.request_errors += 1
+            raise
+        if response.status_code != 200:
+            self.request_errors += 1
+        if response.status_code == 429:
+            self.http_429 += 1
+        return response

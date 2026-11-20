@@ -48,7 +48,7 @@ METRICS = {
     # độ trễ
     "latency_p50_ms": "ms", "latency_p95_ms": "ms", "latency_p99_ms": "ms",
     # lỗi
-    "errors": "count", "http_429": "count", "data_loss": "count", "consumer_lag": "messages",
+    "errors": "count", "http_429": "count", "request_errors": "count", "request_error_rate": "ratio", "data_loss": "count", "consumer_lag": "messages",
     # tài nguyên, chi phí
     "peak_mem_mb": "MB", "cpu_peak_pct": "%", "vm_hours": "h", "cost_usd": "USD",
     # chất lượng mô hình / phân tích
@@ -144,6 +144,9 @@ def import_crawl(member, scale, report_path, dataset="", repeat=1):
         "errors": d.get("failures", 0),
         "requests_per_s": round(d.get("requests", 0) / elapsed, 3) if elapsed else None,
     }
+    for metric in ("http_429", "request_errors", "request_error_rate"):
+        if metric in d:
+            metrics[metric] = d[metric]
     job = "+".join(d.get("sources") or ["all"])
     status = "ok" if d.get("status") == "finished" else "fail"
     return record(member, "crawl", scale, "local", job, metrics, repeat=repeat, dataset=dataset,

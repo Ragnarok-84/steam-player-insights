@@ -85,4 +85,6 @@ tmp_test/
 # Gói dữ liệu nhận từ thành viên, giải nén để kiểm tra
 data/incoming/
 data/_backup/
-data/scale
+
+# Tập con benchmark 100/500/1000 game (tests/scalability/make_scale_subsets.py)
+data/scale/

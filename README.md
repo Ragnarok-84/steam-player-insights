@@ -37,7 +37,7 @@ Hệ thống phân tích trải nghiệm người chơi game trên Steam theo **
 |  B3: Thống kê ngày/tuần/tháng/thể loại        | |  S3: Đột biến CCU (±50%)            |
 |  B4: Giờ chơi, bỏ game sớm, "đáng tiền"       | |                                     |
 |  B6: Trending + tác động giảm giá             | |                                     |
-|  B7: Baseline cho S2/S3, B8: K-Means          | |                                     |
+|  B7: Baseline S2/S3, B8: K-Means, B9: LogReg  | |                                     |
 |  Output: HDFS Curated (Hive) + ES batch views | |  Output: ES realtime views & alerts |
 +-----------------------------------------------+ +-------------------------------------+
                                      \   merge_views: batch thay realtime  /
@@ -63,7 +63,7 @@ steam-player-insights/
 ├── processing/
 │   ├── common/                  # SparkSession, đọc raw, ghi Parquet/Hive, ghi Elasticsearch, từ điển khía cạnh
 │   ├── batch/                   # B1 ingest, B2 clean, B3 thống kê, B4 giờ chơi, B5 cảm xúc/TF-IDF,
-│   │                            #   B6 trending, B7 baseline, B8 K-Means
+│   │                            #   B6 trending, B7 baseline, B8 K-Means, B9 Logistic Regression cảm xúc
 │   ├── streaming/               # S1 chỉ số review, S2 review bombing, S3 đột biến CCU
 │   └── serving/merge_views.py   # Hợp nhất batch view / realtime view
 ├── storage/                     # Mapping 15 index ES, script thư mục HDFS, truy vấn Hive mẫu
@@ -324,12 +324,13 @@ Lệnh lần lượt gọi các module sau; một job lỗi thì pipeline dừng
 | B6 | `b6_trending_games.py` | Tăng trưởng, xếp hạng trending, tác động giảm giá | `curated/trending`, `trending_top`, `event_impact` |
 | B7 | `b7_baselines.py` | Mức bình thường để S2/S3 so sánh | `curated/review_baseline`, `ccu_baseline` |
 | B8 | `b8_game_clusters.py` | Phân cụm K-Means các game có hồ sơ tương tự | `curated/game_clusters`, `cluster_profiles` |
+| B9 | `b9_sentiment_classifier.py` | Logistic Regression (MLlib) dự đoán `voted_up` từ nội dung review, so với VADER trên cùng tập test | `curated/sentiment_model_metrics`, `sentiment_model_terms` |
 
 B5 chạy trước B3 vì B3 dùng điểm cảm xúc. **`batch` không chạy B1.** Có thể chỉ chạy bước làm sạch hoặc bỏ phân cụm:
 
 ```bash
 python pipeline.py --profile local b2 --raw data/raw --lake data/lake
-python pipeline.py --profile local batch --raw data/raw --lake data/lake --skip b8
+python pipeline.py --profile local batch --raw data/raw --lake data/lake --skip b8 b9
 ```
 
 Các job sau cần đầu ra của các job trước; không chạy từng job theo thứ tự tùy ý. B2–B8 tính lại từ nguồn và ghi đè/upsert đầu ra; dùng `--lake` khác nếu cần giữ kết quả một lần chạy để so sánh. Không chạy hai pipeline cùng ghi vào một thư mục lake.
@@ -489,9 +490,9 @@ docker run --rm -v "${PWD}:/opt/spark/work-dir" steam-spark:dev python3 pipeline
 
 | Lệnh | Công việc |
 | --- | --- |
-| `batch` | B2 → B5 → B3 → B4 → B6 → B7 → B8; `--es` ghi ES và merge; `--skip b8` bỏ phân cụm; `--compact` gộp raw trước B2 |
+| `batch` | B2 → B5 → B3 → B4 → B6 → B7 → B8 → B9; `--es` ghi ES và merge; `--skip b8 b9` bỏ phân cụm và mô hình cảm xúc; `--compact` gộp raw trước B2 |
 | `compact` | Gộp file raw nhỏ thành 1 file mỗi `<nguồn>/dt=` (`scripts/compact_raw.py`, chỉ raw local). Chạy sau khi crawl, trước B2 và trước khi upload HDFS; thử trước bằng `-- --dry-run` |
-| `b1` … `b8`, `s1`, `s2`, `s3` | Chạy từng job; tham số riêng đặt sau `--` |
+| `b1` … `b9`, `s1`, `s2`, `s3` | Chạy từng job; tham số riêng đặt sau `--` |
 | `es-setup`, `kibana-setup`, `merge` | Tạo index chuẩn, tạo dashboard, hợp nhất batch/realtime |
 | `inject` | Bơm tình huống demo có nhãn (`bombing`, `ccu-spike`) vào Kafka; batch tự loại các bản ghi này |
 | `replay`, `crawl`, `applist`, `feedback` | Replay vào Kafka, crawl local, lấy danh sách app, thêm game đang lên trên bảng most-played của Steam vào danh sách theo dõi (chỉ thêm, không xoá) |
@@ -653,7 +654,7 @@ Kiểm thử offline observer/benchmark k3s: `python -m pytest tests/infrastruct
 | Loại | Lệnh | Ghi chú |
 | --- | --- | --- |
 | Unit | `python -m pytest tests/unit` (hoặc chạy trong image) | Luật S2/S3, B4, crawler, vòng phản hồi |
-| SC1/SC2 batch | `python tests/scalability/sc1_sc2_batch_benchmark.py --scales 100 500 1000 --executors 1 2 4 --runs 3` (`--profile k3s` trên cụm) | B2→B8, tách `spark_startup`; raw `data/scale/raw_{scale}`; CSV thô + summary (trung vị, speedup) |
+| SC1/SC2 batch | `python tests/scalability/sc1_sc2_batch_benchmark.py --scales 100 500 1000 --executors 1 2 4 --runs 3` (`--profile k3s` trên cụm) | B2→B8 (+ B9 đo riêng, `--no-b9` để bỏ), tách `spark_startup`; raw `data/scale/raw_{scale}`; CSV thô + summary (trung vị, speedup) |
 | SC3 streaming | `python tests/scalability/sc3_streaming_load_test.py --brokers <kafka> --label p6_e4` | Thông lượng, consumer lag, thời gian micro-batch |
 | SC4 serving | `python tests/scalability/sc4_es_query_load.py --label es3 --wait-green` | p50/p95/p99 khi ES tăng từ 2 lên 3 node |
 | FT1–FT5 | `./tests/fault_tolerance/chaos_test_scenarios.sh ft1` … `ft5 <node>` | **Xoá pod / drain node thật**; chỉ chạy trên cụm thử nghiệm |

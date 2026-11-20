@@ -13,7 +13,7 @@ Thư mục tập trung tài liệu viết của nhóm. Hướng dẫn chạy nha
 | [collection_guide.md](collection_guide.md) | Thu thập từ Steam: endpoint, chọn game, chống trùng, lịch thu | Người crawl |
 | [local_setup_guide.md](local_setup_guide.md) | Cài môi trường local, HDFS, Kafka trên Linux/WSL2 | Người chạy local |
 | [deployment_guide.md](deployment_guide.md) | Triển khai trên Kubernetes | Người phụ trách cụm |
-| [reports/](reports/) | Báo cáo kiểm tra theo từng lần (ví dụ crawl thử 30 game) | Tham khảo |
+| [reports/](reports/) | Báo cáo kiểm tra theo từng lần (ví dụ crawl thử 30 game; [benchmark batch 100/500/1000 game](reports/batch_benchmark_scale_20261120.md)) | Tham khảo |
 
 Tài liệu liên quan ngoài thư mục này: [infra/demo/README.md](../infra/demo/README.md) (Docker Compose một máy), [infra/k3s/README.md](../infra/k3s/README.md) và [infra/k3s/FAULT_TEST.md](../infra/k3s/FAULT_TEST.md) (cụm k3s, kiểm thử chịu lỗi), [dashboards/README.md](../dashboards/README.md).
 

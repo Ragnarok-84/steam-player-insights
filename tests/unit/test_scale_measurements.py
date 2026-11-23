@@ -66,3 +66,9 @@ def test_keeps_up_can_fail():
     assert not keeps_up(5000, 2000, 1000, 10)   # còn tồn đọng
     assert not keeps_up(0, 15000, 1000, 10)     # batch dài hơn trigger
     assert not keeps_up(None, 2000, 1000, 10)   # không đo được lag
+
+
+def test_split_rate_keeps_total():
+    from tests.scalability.sc3_streaming_load_test import split_rate
+    assert split_rate(5000, 3) == [1667, 1667, 1666]
+    assert sum(split_rate(1000, 4)) == 1000

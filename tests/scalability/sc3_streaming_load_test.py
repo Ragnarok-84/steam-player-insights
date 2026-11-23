@@ -10,6 +10,8 @@ mỗi bậc --step-seconds giây, timestamp dời về hiện tại) trong khi j
     (ES khi có --es), xem processing.common.spark_utils.with_e2e_latency
 Chi tiết ghi tests/results/sc3_<label>_<timestamp>.csv; số chính ghi thêm vào mẫu chung (tests/results/common/)
 qua tests/results_log.record, mỗi bậc tải một run (notes ghi target_rate). Chạy mỗi cấu hình 3 lần (--repeat 1..3).
+Một tiến trình Python chỉ đẩy được khoảng 3.300–3.900 review/s; muốn đạt 5.000 rec/s dùng --producers K
+(K tiến trình song song, mỗi tiến trình một KafkaProducer, chia đều tải mục tiêu).
 
 Ví dụ (máy local, Kafka + ES bằng scripts/demo.sh):
   python tests/scalability/sc3_streaming_load_test.py --job s1 --scale 100 --es --repeat 1 \
@@ -18,6 +20,7 @@ Ví dụ (máy local, Kafka + ES bằng scripts/demo.sh):
 import argparse
 import csv
 import json
+import multiprocessing
 import os
 import signal
 import statistics
@@ -63,7 +66,7 @@ def source(raw: Path, folder: str, cache_limit: int = 50_000):
                 yield from iter_records(path)
 
 
-def send_step(producer, records, job, rate, seconds, counter):
+def send_step(producer, records, job, rate, seconds, counter, tag=""):
     _, topic, ts_field = JOB_SOURCES[job]
     end = time.time() + seconds
     sent = 0
@@ -75,12 +78,26 @@ def send_step(producer, records, job, rate, seconds, counter):
             counter[0] += 1
             rec[ts_field] = now
             if topic == "steam.reviews.raw":
-                rec.update(timestamp_updated=now, recommendationid=f"sc3-{counter[0]}")
+                rec.update(timestamp_updated=now, recommendationid=f"sc3-{tag}{counter[0]}")
             producer.send(topic, key=str(rec.get("appid")).encode(), value=json.dumps(rec).encode())
             sent += 1
         producer.flush()
         time.sleep(max(0.0, 1.0 - (time.time() - tick)))
     return sent
+
+
+def split_rate(rate, k):
+    """Chia tải mục tiêu cho k producer, tổng đúng bằng rate."""
+    return [rate // k + (i < rate % k) for i in range(k)]
+
+
+def _produce_worker(brokers, raw, job, rate, seconds, tag):
+    """Một producer song song cho một bậc tải; trả về số bản ghi đã gửi."""
+    producer = KafkaProducer(bootstrap_servers=brokers, linger_ms=20, acks=1)
+    try:
+        return send_step(producer, source(raw, JOB_SOURCES[job][0]), job, rate, seconds, [0], tag)
+    finally:
+        producer.close()
 
 
 def read_jsonl(path: Path, since: float):
@@ -181,6 +198,8 @@ def main():
                    help="Job streaming đã chạy sẵn (vd. trên K8s) với --metrics-file/--latency-file trỏ tới cùng file")
     p.add_argument("--metrics-file", default="data/bench/sc3_metrics.jsonl")
     p.add_argument("--latency-file", default="data/bench/sc3_latency.jsonl")
+    p.add_argument("--producers", type=int, default=1,
+                   help="Số tiến trình producer song song (cần >1 để đạt 5.000 review/s)")
     p.add_argument("--no-record", action="store_true", help="Không ghi vào mẫu chung (chạy thử)")
     args = p.parse_args()
 
@@ -223,7 +242,14 @@ def main():
             w.writeheader()
             for rate in args.rates:
                 start = time.time()
-                sent = send_step(producer, records, args.job, rate, args.step_seconds, counter)
+                if args.producers > 1:
+                    # ponytail: mỗi worker đọc tập từ đầu ở mỗi bậc; id có tag worker-bậc nên không trùng trong lượt
+                    jobs = [(args.brokers.split(","), raw, args.job, r, args.step_seconds, f"{i}-{rate}-")
+                            for i, r in enumerate(split_rate(rate, args.producers))]
+                    with multiprocessing.Pool(args.producers) as pool:
+                        sent = sum(pool.starmap(_produce_worker, jobs))
+                else:
+                    sent = send_step(producer, records, args.job, rate, args.step_seconds, counter)
                 time.sleep(max(15.0, trigger_s * 1.5))  # để micro-batch cuối của bậc hoàn tất
                 rows = [r for r in read_jsonl(metrics, start) if (r.get("num_input_rows") or 0) > 0]
                 lat = sorted(x for r in read_jsonl(latency, start) for x in r["latency_ms"])
@@ -249,7 +275,7 @@ def main():
                            executors=args.executors, repeat=args.repeat, dataset=args.dataset,
                            status="ok" if ok else "fail",
                            notes=(f"target_rate={rate}; step_s={args.step_seconds}; trigger={args.trigger}; "
-                                  f"sink={'es' if args.es else 'console'}; keeps_up={row['keeps_up']}; final_lag={final_lag}"
+                                  f"sink={'es' if args.es else 'console'}; producers={args.producers}; keeps_up={row['keeps_up']}; final_lag={final_lag}"
                                   + ("" if ok else "; thiếu micro-batch/độ trễ/consumer lag trong bậc")),
                            metrics={"throughput_rps": row["avg_processed_rows_per_sec"],
                                     "latency_p50_ms": row["e2e_p50_ms"], "latency_p95_ms": row["e2e_p95_ms"],

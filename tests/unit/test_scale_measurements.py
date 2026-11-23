@@ -38,3 +38,31 @@ def test_sc4_panel_queries_have_no_kibana_placeholders():
     d2 = fill(copy.deepcopy(dashboard_queries("steam-d2-game")[0][2]), "now-5y", 730)
     assert d2["query"]["bool"]["filter"] == [{"term": {"appid": 730}}]
     assert d2["query"]["bool"]["must_not"] == []
+
+
+def test_committed_offsets_sums_partitions_and_ignores_files():
+    from processing.common.spark_utils import committed_offsets
+    assert committed_offsets({"sources": [{"endOffset": {"t": {"0": 5, "1": 7}}}]}) == {"t": 12}
+    assert committed_offsets({"sources": [{"endOffset": '{"t": {"0": 3}}'}]}) == {"t": 3}
+    assert committed_offsets({"sources": [{"endOffset": {"logOffset": 2}}, {"endOffset": None}]}) == {}
+
+
+def test_consumer_lag_detects_backlog_of_slowest_query():
+    from tests.scalability.sc3_streaming_load_test import consumer_lag
+    samples = [(5, 999), (11, 100), (15, 500), (20, 900)]  # mẫu ts=5 thuộc bậc trước
+    progress = [{"ts": 10, "name": "fast", "end_offsets": {"t": 100}},
+                {"ts": 10, "name": "slow", "end_offsets": {"t": 100}},
+                {"ts": 18, "name": "fast", "end_offsets": {"t": 900}},
+                {"ts": 18, "name": "slow", "end_offsets": {"t": 300}}]
+    assert consumer_lag(samples, progress, "t", 10) == (600, 600)
+    assert consumer_lag(samples, progress[::2], "t", 10) == (400, 0)
+    assert consumer_lag(samples, [], "t", 10) == (None, None)
+
+
+def test_keeps_up_can_fail():
+    from tests.scalability.sc3_streaming_load_test import keeps_up, trigger_seconds
+    assert trigger_seconds("10 seconds") == 10 and trigger_seconds("1 minute") == 60
+    assert keeps_up(0, 2000, 1000, 10)
+    assert not keeps_up(5000, 2000, 1000, 10)   # còn tồn đọng
+    assert not keeps_up(0, 15000, 1000, 10)     # batch dài hơn trigger
+    assert not keeps_up(None, 2000, 1000, 10)   # không đo được lag

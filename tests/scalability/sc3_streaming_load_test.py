@@ -3,7 +3,9 @@
 Đẩy bản ghi của một tập dữ liệu (mặc định data/scale/raw_<scale>) vào Kafka với tốc độ tăng dần (bậc --rates,
 mỗi bậc --step-seconds giây, timestamp dời về hiện tại) trong khi job streaming (S1, S2 hoặc S3) chạy với
 --metrics-file và --latency-file. Sau mỗi bậc đo:
-  - thông lượng xử lý (processedRowsPerSecond trung bình)  - offset tụt hậu lớn nhất (consumer lag)
+  - thông lượng xử lý (processedRowsPerSecond trung bình)
+  - consumer lag = offset cuối của topic Kafka (lấy mẫu mỗi giây) - offset query đã xử lý xong: lớn nhất trong bậc
+    (max_lag, bình thường cỡ tải x (trigger + thời gian batch)) và còn lại sau khi ngừng gửi (final_lag)
   - độ trễ end-to-end p50/p95/p99: từ lúc message vào Kafka tới lúc foreachBatch ghi xong sink
     (ES khi có --es), xem processing.common.spark_utils.with_e2e_latency
 Chi tiết ghi tests/results/sc3_<label>_<timestamp>.csv; số chính ghi thêm vào mẫu chung (tests/results/common/)
@@ -21,10 +23,11 @@ import signal
 import statistics
 import subprocess
 import sys
+import threading
 import time
 from pathlib import Path
 
-from kafka import KafkaProducer
+from kafka import KafkaConsumer, KafkaProducer, TopicPartition
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
@@ -87,6 +90,74 @@ def read_jsonl(path: Path, since: float):
     return [r for r in rows if r["ts"] >= since]
 
 
+class EndOffsetSampler(threading.Thread):
+    """Lấy mẫu tổng offset cuối của topic mỗi giây: samples = [(thời điểm, tổng offset)]."""
+
+    def __init__(self, brokers, topic):
+        super().__init__(daemon=True)
+        self.brokers, self.topic, self.samples = brokers, topic, []
+        self._halt = threading.Event()
+
+    def run(self):
+        consumer, warned = None, False
+        while not self._halt.is_set():
+            try:
+                if consumer is None:
+                    consumer = KafkaConsumer(bootstrap_servers=self.brokers)
+                parts = [TopicPartition(self.topic, i) for i in consumer.partitions_for_topic(self.topic) or ()]
+                if parts:
+                    ends = consumer.end_offsets(parts)
+                    self.samples.append((time.time(), sum(ends.values())))
+            except Exception as e:  # mất mẫu không được làm hỏng lượt đo
+                if not warned:
+                    print(f"WARN: không lấy được end offset: {e}", flush=True)
+                    warned = True
+            self._halt.wait(1.0)
+        if consumer is not None:
+            consumer.close()
+
+    def stop(self):
+        self._halt.set()
+        self.join(timeout=10)
+
+
+def consumer_lag(samples, progress, topic, start):
+    """(max_lag, final_lag) của query chậm nhất, trên các mẫu từ `start`; (None, None) nếu thiếu dữ liệu.
+
+    progress: dòng metrics của lượt chạy này (gồm cả bậc trước), không lấy dòng của lượt cũ trong cùng file.
+    Mỗi mẫu so với offset query đã xử lý xong gần nhất trước đó; mẫu trước batch đầu tiên của query bị bỏ.
+    """
+    queries = {}
+    for r in sorted(progress, key=lambda r: r["ts"]):
+        offset = (r.get("end_offsets") or {}).get(topic)
+        if offset is not None:
+            queries.setdefault(r.get("name"), []).append((r["ts"], offset))
+    samples = [s for s in samples if s[0] >= start]
+    peaks, finals = [], []
+    for done in queries.values():
+        lags = []
+        for ts, end in samples:
+            before = [offset for t, offset in done if t <= ts]
+            if before:
+                lags.append(max(0, end - before[-1]))
+        if lags:
+            peaks.append(max(lags))
+            finals.append(lags[-1])
+    return (max(peaks), max(finals)) if peaks else (None, None)
+
+
+def trigger_seconds(text: str) -> float:
+    value, unit = text.split()
+    return float(value) * {"second": 1, "minute": 60, "hour": 3600}[unit.rstrip("s")]
+
+
+def keeps_up(final_lag, p95_batch_ms, rate, trigger_s):
+    """Theo kịp: hết tải thì xử lý hết tồn đọng (còn < 1 s tải) và batch không dài hơn trigger."""
+    if final_lag is None or p95_batch_ms is None:
+        return False
+    return final_lag < rate and p95_batch_ms <= trigger_s * 1000
+
+
 def pct(values, q):
     return values[min(len(values) - 1, int(q * len(values)))] if values else None
 
@@ -113,6 +184,7 @@ def main():
     p.add_argument("--no-record", action="store_true", help="Không ghi vào mẫu chung (chạy thử)")
     args = p.parse_args()
 
+    trigger_s = trigger_seconds(args.trigger)
     raw = ROOT / (args.raw or f"data/scale/raw_{args.scale}")
     label = args.label or f"{args.job}_{args.scale}g_{args.env}"
     metrics, latency = ROOT / args.metrics_file, ROOT / args.latency_file
@@ -135,11 +207,15 @@ def main():
 
     producer = KafkaProducer(bootstrap_servers=args.brokers.split(","), linger_ms=20, acks=1)
     records = source(raw, JOB_SOURCES[args.job][0])
+    topic = JOB_SOURCES[args.job][1]
+    sampler = EndOffsetSampler(args.brokers.split(","), topic)
+    run_start = time.time()
+    sampler.start()
     counter = [0]
     out = ROOT / "tests" / "results" / f"sc3_{label}_{time.strftime('%Y%m%d_%H%M%S')}.csv"
     out.parent.mkdir(parents=True, exist_ok=True)
     fields = ["label", "job", "scale", "repeat", "target_rate", "sent", "batches", "avg_processed_rows_per_sec",
-              "max_processed_rows_per_sec", "avg_batch_ms", "p95_batch_ms", "max_offsets_behind",
+              "max_processed_rows_per_sec", "avg_batch_ms", "p95_batch_ms", "max_lag", "final_lag",
               "e2e_samples", "e2e_p50_ms", "e2e_p95_ms", "e2e_p99_ms", "keeps_up"]
     try:
         with out.open("w", newline="", encoding="utf-8") as f:
@@ -148,39 +224,39 @@ def main():
             for rate in args.rates:
                 start = time.time()
                 sent = send_step(producer, records, args.job, rate, args.step_seconds, counter)
-                time.sleep(15)  # để micro-batch cuối của bậc hoàn tất
+                time.sleep(max(15.0, trigger_s * 1.5))  # để micro-batch cuối của bậc hoàn tất
                 rows = [r for r in read_jsonl(metrics, start) if (r.get("num_input_rows") or 0) > 0]
                 lat = sorted(x for r in read_jsonl(latency, start) for x in r["latency_ms"])
                 durations = sorted(r["batch_duration_ms"] or 0 for r in rows)
                 processed = [r["processed_rows_per_sec"] or 0 for r in rows]
-                behind = max((r["max_offsets_behind_latest"] or 0) for r in rows) if rows else None
+                max_lag, final_lag = consumer_lag(list(sampler.samples), read_jsonl(metrics, run_start), topic, start)
                 row = dict(label=label, job=args.job, scale=args.scale, repeat=args.repeat, target_rate=rate,
                            sent=sent, batches=len(rows),
                            avg_processed_rows_per_sec=round(statistics.mean(processed), 1) if processed else None,
                            max_processed_rows_per_sec=round(max(processed), 1) if processed else None,
                            avg_batch_ms=round(statistics.mean(durations)) if durations else None,
                            p95_batch_ms=pct(durations, .95),
-                           max_offsets_behind=behind,
+                           max_lag=max_lag, final_lag=final_lag,
                            e2e_samples=len(lat), e2e_p50_ms=pct(lat, .5), e2e_p95_ms=pct(lat, .95),
                            e2e_p99_ms=pct(lat, .99),
-                           # theo kịp nếu không còn tụt hậu đáng kể sau bậc tải
-                           keeps_up=behind is not None and behind < rate * 2)
+                           keeps_up=keeps_up(final_lag, pct(durations, .95), rate, trigger_s))
                 w.writerow(row)
                 f.flush()
                 print(row, flush=True)
                 if not args.no_record:
-                    ok = bool(rows) and bool(lat)
+                    ok = bool(rows) and bool(lat) and max_lag is not None
                     record(member="C", experiment="streaming", scale=args.scale, env=args.env, job=args.job,
                            executors=args.executors, repeat=args.repeat, dataset=args.dataset,
                            status="ok" if ok else "fail",
                            notes=(f"target_rate={rate}; step_s={args.step_seconds}; trigger={args.trigger}; "
-                                  f"sink={'es' if args.es else 'console'}; keeps_up={row['keeps_up']}"
-                                  + ("" if ok else "; không có micro-batch/độ trễ trong bậc")),
+                                  f"sink={'es' if args.es else 'console'}; keeps_up={row['keeps_up']}; final_lag={final_lag}"
+                                  + ("" if ok else "; thiếu micro-batch/độ trễ/consumer lag trong bậc")),
                            metrics={"throughput_rps": row["avg_processed_rows_per_sec"],
                                     "latency_p50_ms": row["e2e_p50_ms"], "latency_p95_ms": row["e2e_p95_ms"],
-                                    "latency_p99_ms": row["e2e_p99_ms"], "consumer_lag": behind,
+                                    "latency_p99_ms": row["e2e_p99_ms"], "consumer_lag": max_lag,
                                     "records": sent})
     finally:
+        sampler.stop()
         producer.close()
         if job:
             if hasattr(os, "killpg"):

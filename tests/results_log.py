@@ -19,6 +19,7 @@ import argparse
 import csv
 import datetime as dt
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -60,8 +61,8 @@ METRICS = {
 def _git_commit():
     try:
         return subprocess.check_output(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, text=True).strip()
-    except Exception:
-        return ""
+    except Exception:  # container/pod không có git: truyền GIT_COMMIT từ máy chạy lệnh
+        return os.getenv("GIT_COMMIT", "")
 
 
 def _validate(row):

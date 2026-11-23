@@ -217,6 +217,25 @@ def add_stream_args(parser):
     return parser
 
 
+def committed_offsets(progress: dict):
+    """{topic: tổng offset mọi partition} mà micro-batch đã xử lý tới; {} nếu nguồn không phải Kafka."""
+    import json
+    out = {}
+    for src in progress.get("sources", []):
+        end = src.get("endOffset")
+        if isinstance(end, str):
+            try:
+                end = json.loads(end)
+            except ValueError:
+                continue
+        if not isinstance(end, dict):
+            continue
+        for topic, parts in end.items():
+            if isinstance(parts, dict):
+                out[topic] = out.get(topic, 0) + sum(int(v) for v in parts.values())
+    return out
+
+
 def attach_progress_logger(spark, path: str = None):
     """Ghi tiến độ mỗi micro-batch (JSON Lines) để đo thông lượng / độ trễ / offset tụt hậu (SC3).
     Bật bằng tham số --metrics-file hoặc biến STREAM_METRICS_FILE; file nằm trên máy chạy driver."""
@@ -233,13 +252,14 @@ def attach_progress_logger(spark, path: str = None):
 
         def onQueryProgress(self, event):
             p = json.loads(event.progress.json)
-            behind = [float(src.get("metrics", {}).get("maxOffsetsBehindLatest", 0) or 0) for src in p.get("sources", [])]
             row = {"ts": time.time(), "name": p.get("name"), "batch_id": p.get("batchId"),
                    "num_input_rows": p.get("numInputRows"),
                    "input_rows_per_sec": p.get("inputRowsPerSecond"),
                    "processed_rows_per_sec": p.get("processedRowsPerSecond"),
                    "batch_duration_ms": p.get("durationMs", {}).get("triggerExecution"),
-                   "max_offsets_behind_latest": max(behind) if behind else None}
+                   # Offset Kafka đã xử lý xong. Không dùng maxOffsetsBehindLatest: stream không đặt
+                   # maxOffsetsPerTrigger nên mỗi batch đọc tới offset mới nhất, chỉ số đó luôn bằng 0.
+                   "end_offsets": committed_offsets(p)}
             with open(path, "a", encoding="utf-8") as f:
                 f.write(json.dumps(row) + "\n")
 

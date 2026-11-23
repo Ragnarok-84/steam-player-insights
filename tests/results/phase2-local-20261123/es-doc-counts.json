@@ -1,0 +1,25 @@
+{
+  "pipeline_documents": 1288209,
+  "documents_by_index": {
+    "alerts": 8,
+    "batch_aspect_stats": 84976,
+    "batch_event_impact": 10,
+    "batch_game_clusters": 999,
+    "batch_game_daily": 278736,
+    "batch_game_period": 126470,
+    "batch_game_retention": 1000,
+    "batch_language_stats": 54922,
+    "batch_playtime_buckets": 4310,
+    "batch_segment_stats": 38269,
+    "batch_trending": 297133,
+    "demo_smoke": 2,
+    "game_keywords": 28262,
+    "realtime_game_metrics": 16,
+    "reviews_search": 373097,
+    "serving_state": 1
+  },
+  "alerts_by_type": {
+    "REVIEW_BOMBING": 7,
+    "CCU_SPIKE": 1
+  }
+}

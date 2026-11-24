@@ -1,0 +1,3 @@
+label,job,scale,repeat,target_rate,sent,batches,avg_processed_rows_per_sec,max_processed_rows_per_sec,avg_batch_ms,p95_batch_ms,max_lag,final_lag,e2e_samples,e2e_p50_ms,e2e_p95_ms,e2e_p99_ms,keeps_up
+s1_1000g_local_r3,s1,1000,3,1000,60000,14,7728.6,11778.6,1249,2361,12000,0,2405,6066,10839,11079,True
+s1_1000g_local_r3,s1,1000,3,5000,300000,14,23521.0,30048.1,1793,2432,61447,0,6539,5091,10386,11365,True

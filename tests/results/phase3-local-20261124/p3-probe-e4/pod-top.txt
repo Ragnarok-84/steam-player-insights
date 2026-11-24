@@ -1,0 +1,8 @@
+
+2026-11-24T10:23:28Z
+NAME                       CPU(cores)   MEMORY(bytes)   
+p3-probe-e4-twgbw          858m         439Mi           
+p3-probe-e4-twgbw-exec-1   634m         353Mi           
+p3-probe-e4-twgbw-exec-2   655m         370Mi           
+p3-probe-e4-twgbw-exec-3   520m         302Mi           
+p3-probe-e4-twgbw-exec-4   531m         308Mi           

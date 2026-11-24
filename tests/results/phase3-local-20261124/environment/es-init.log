@@ -1,0 +1,62 @@
+2026-11-24 10:35:43,743 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/ [status:200 duration:0.006s]
+2026-11-24 10:35:43,743 [INFO] ES_Setup: Connected to Elasticsearch cluster at http://elasticsearch:9200
+2026-11-24 10:35:43,747 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/batch_game_daily [status:404 duration:0.003s]
+2026-11-24 10:35:43,748 [INFO] ES_Setup: Creating index 'batch_game_daily'...
+2026-11-24 10:35:44,100 [INFO] elastic_transport.transport: PUT http://elasticsearch:9200/batch_game_daily [status:200 duration:0.352s]
+2026-11-24 10:35:44,100 [INFO] ES_Setup: Successfully created index 'batch_game_daily'.
+2026-11-24 10:35:44,103 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/batch_game_period [status:404 duration:0.003s]
+2026-11-24 10:35:44,103 [INFO] ES_Setup: Creating index 'batch_game_period'...
+2026-11-24 10:35:44,295 [INFO] elastic_transport.transport: PUT http://elasticsearch:9200/batch_game_period [status:200 duration:0.192s]
+2026-11-24 10:35:44,295 [INFO] ES_Setup: Successfully created index 'batch_game_period'.
+2026-11-24 10:35:44,298 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/batch_segment_stats [status:404 duration:0.003s]
+2026-11-24 10:35:44,298 [INFO] ES_Setup: Creating index 'batch_segment_stats'...
+2026-11-24 10:35:44,435 [INFO] elastic_transport.transport: PUT http://elasticsearch:9200/batch_segment_stats [status:200 duration:0.137s]
+2026-11-24 10:35:44,436 [INFO] ES_Setup: Successfully created index 'batch_segment_stats'.
+2026-11-24 10:35:44,439 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/batch_language_stats [status:404 duration:0.003s]
+2026-11-24 10:35:44,439 [INFO] ES_Setup: Creating index 'batch_language_stats'...
+2026-11-24 10:35:44,584 [INFO] elastic_transport.transport: PUT http://elasticsearch:9200/batch_language_stats [status:200 duration:0.145s]
+2026-11-24 10:35:44,584 [INFO] ES_Setup: Successfully created index 'batch_language_stats'.
+2026-11-24 10:35:44,587 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/batch_aspect_stats [status:404 duration:0.002s]
+2026-11-24 10:35:44,587 [INFO] ES_Setup: Creating index 'batch_aspect_stats'...
+2026-11-24 10:35:44,737 [INFO] elastic_transport.transport: PUT http://elasticsearch:9200/batch_aspect_stats [status:200 duration:0.150s]
+2026-11-24 10:35:44,737 [INFO] ES_Setup: Successfully created index 'batch_aspect_stats'.
+2026-11-24 10:35:44,742 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/batch_playtime_buckets [status:404 duration:0.005s]
+2026-11-24 10:35:44,742 [INFO] ES_Setup: Creating index 'batch_playtime_buckets'...
+2026-11-24 10:35:44,929 [INFO] elastic_transport.transport: PUT http://elasticsearch:9200/batch_playtime_buckets [status:200 duration:0.187s]
+2026-11-24 10:35:44,930 [INFO] ES_Setup: Successfully created index 'batch_playtime_buckets'.
+2026-11-24 10:35:44,935 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/batch_game_retention [status:404 duration:0.005s]
+2026-11-24 10:35:44,935 [INFO] ES_Setup: Creating index 'batch_game_retention'...
+2026-11-24 10:35:45,140 [INFO] elastic_transport.transport: PUT http://elasticsearch:9200/batch_game_retention [status:200 duration:0.205s]
+2026-11-24 10:35:45,141 [INFO] ES_Setup: Successfully created index 'batch_game_retention'.
+2026-11-24 10:35:45,143 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/batch_trending [status:404 duration:0.002s]
+2026-11-24 10:35:45,143 [INFO] ES_Setup: Creating index 'batch_trending'...
+2026-11-24 10:35:45,369 [INFO] elastic_transport.transport: PUT http://elasticsearch:9200/batch_trending [status:200 duration:0.225s]
+2026-11-24 10:35:45,369 [INFO] ES_Setup: Successfully created index 'batch_trending'.
+2026-11-24 10:35:45,377 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/batch_event_impact [status:404 duration:0.008s]
+2026-11-24 10:35:45,378 [INFO] ES_Setup: Creating index 'batch_event_impact'...
+2026-11-24 10:35:45,611 [INFO] elastic_transport.transport: PUT http://elasticsearch:9200/batch_event_impact [status:200 duration:0.233s]
+2026-11-24 10:35:45,611 [INFO] ES_Setup: Successfully created index 'batch_event_impact'.
+2026-11-24 10:35:45,614 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/batch_game_clusters [status:404 duration:0.003s]
+2026-11-24 10:35:45,615 [INFO] ES_Setup: Creating index 'batch_game_clusters'...
+2026-11-24 10:35:45,861 [INFO] elastic_transport.transport: PUT http://elasticsearch:9200/batch_game_clusters [status:200 duration:0.246s]
+2026-11-24 10:35:45,861 [INFO] ES_Setup: Successfully created index 'batch_game_clusters'.
+2026-11-24 10:35:45,864 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/game_keywords [status:404 duration:0.003s]
+2026-11-24 10:35:45,864 [INFO] ES_Setup: Creating index 'game_keywords'...
+2026-11-24 10:35:46,081 [INFO] elastic_transport.transport: PUT http://elasticsearch:9200/game_keywords [status:200 duration:0.216s]
+2026-11-24 10:35:46,081 [INFO] ES_Setup: Successfully created index 'game_keywords'.
+2026-11-24 10:35:46,084 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/reviews_search [status:404 duration:0.002s]
+2026-11-24 10:35:46,084 [INFO] ES_Setup: Creating index 'reviews_search'...
+2026-11-24 10:35:46,398 [INFO] elastic_transport.transport: PUT http://elasticsearch:9200/reviews_search [status:200 duration:0.314s]
+2026-11-24 10:35:46,398 [INFO] ES_Setup: Successfully created index 'reviews_search'.
+2026-11-24 10:35:46,405 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/realtime_game_metrics [status:404 duration:0.006s]
+2026-11-24 10:35:46,405 [INFO] ES_Setup: Creating index 'realtime_game_metrics'...
+2026-11-24 10:35:46,646 [INFO] elastic_transport.transport: PUT http://elasticsearch:9200/realtime_game_metrics [status:200 duration:0.241s]
+2026-11-24 10:35:46,646 [INFO] ES_Setup: Successfully created index 'realtime_game_metrics'.
+2026-11-24 10:35:46,654 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/alerts [status:404 duration:0.008s]
+2026-11-24 10:35:46,654 [INFO] ES_Setup: Creating index 'alerts'...
+2026-11-24 10:35:46,878 [INFO] elastic_transport.transport: PUT http://elasticsearch:9200/alerts [status:200 duration:0.224s]
+2026-11-24 10:35:46,878 [INFO] ES_Setup: Successfully created index 'alerts'.
+2026-11-24 10:35:46,883 [INFO] elastic_transport.transport: HEAD http://elasticsearch:9200/serving_state [status:404 duration:0.005s]
+2026-11-24 10:35:46,883 [INFO] ES_Setup: Creating index 'serving_state'...
+2026-11-24 10:35:47,088 [INFO] elastic_transport.transport: PUT http://elasticsearch:9200/serving_state [status:200 duration:0.205s]
+2026-11-24 10:35:47,088 [INFO] ES_Setup: Successfully created index 'serving_state'.

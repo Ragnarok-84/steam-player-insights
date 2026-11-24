@@ -1,0 +1,90 @@
+
+2026-11-24T10:35:00Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-s1-e1-r2-9dsg4          driver                      1339m        604Mi           
+p3-pilot-s1-e1-r2-9dsg4          producer                    1m           0Mi             
+p3-pilot-s1-e1-r2-9dsg4-exec-1   spark-kubernetes-executor   435m         310Mi           
+
+2026-11-24T10:35:09Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-s1-e1-r2-9dsg4          driver                      1339m        604Mi           
+p3-pilot-s1-e1-r2-9dsg4          producer                    1m           0Mi             
+p3-pilot-s1-e1-r2-9dsg4-exec-1   spark-kubernetes-executor   435m         310Mi           
+
+2026-11-24T10:35:17Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-s1-e1-r2-9dsg4          driver                      382m         651Mi           
+p3-pilot-s1-e1-r2-9dsg4          producer                    0m           0Mi             
+p3-pilot-s1-e1-r2-9dsg4-exec-1   spark-kubernetes-executor   522m         360Mi           
+
+2026-11-24T10:35:25Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-s1-e1-r2-9dsg4          driver                      382m         651Mi           
+p3-pilot-s1-e1-r2-9dsg4          producer                    0m           0Mi             
+p3-pilot-s1-e1-r2-9dsg4-exec-1   spark-kubernetes-executor   522m         360Mi           
+
+2026-11-24T10:35:34Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-s1-e1-r2-9dsg4          driver                      121m         660Mi           
+p3-pilot-s1-e1-r2-9dsg4          producer                    39m          29Mi            
+p3-pilot-s1-e1-r2-9dsg4-exec-1   spark-kubernetes-executor   437m         595Mi           
+
+2026-11-24T10:35:42Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-s1-e1-r2-9dsg4          driver                      121m         660Mi           
+p3-pilot-s1-e1-r2-9dsg4          producer                    39m          29Mi            
+p3-pilot-s1-e1-r2-9dsg4-exec-1   spark-kubernetes-executor   437m         595Mi           
+
+2026-11-24T10:35:50Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-s1-e1-r2-9dsg4          driver                      357m         675Mi           
+p3-pilot-s1-e1-r2-9dsg4          producer                    77m          39Mi            
+p3-pilot-s1-e1-r2-9dsg4-exec-1   spark-kubernetes-executor   544m         664Mi           
+
+2026-11-24T10:35:59Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-s1-e1-r2-9dsg4          driver                      331m         698Mi           
+p3-pilot-s1-e1-r2-9dsg4          producer                    74m          54Mi            
+p3-pilot-s1-e1-r2-9dsg4-exec-1   spark-kubernetes-executor   523m         727Mi           
+
+2026-11-24T10:36:07Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-s1-e1-r2-9dsg4          driver                      331m         698Mi           
+p3-pilot-s1-e1-r2-9dsg4          producer                    74m          54Mi            
+p3-pilot-s1-e1-r2-9dsg4-exec-1   spark-kubernetes-executor   523m         727Mi           
+
+2026-11-24T10:36:15Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-s1-e1-r2-9dsg4          driver                      288m         702Mi           
+p3-pilot-s1-e1-r2-9dsg4          producer                    68m          64Mi            
+p3-pilot-s1-e1-r2-9dsg4-exec-1   spark-kubernetes-executor   556m         770Mi           
+
+2026-11-24T10:36:24Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-s1-e1-r2-9dsg4          driver                      288m         702Mi           
+p3-pilot-s1-e1-r2-9dsg4          producer                    68m          64Mi            
+p3-pilot-s1-e1-r2-9dsg4-exec-1   spark-kubernetes-executor   556m         770Mi           
+
+2026-11-24T10:36:32Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-s1-e1-r2-9dsg4          driver                      225m         697Mi           
+p3-pilot-s1-e1-r2-9dsg4          producer                    69m          80Mi            
+p3-pilot-s1-e1-r2-9dsg4-exec-1   spark-kubernetes-executor   223m         774Mi           
+
+2026-11-24T10:36:40Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-s1-e1-r2-9dsg4          driver                      225m         697Mi           
+p3-pilot-s1-e1-r2-9dsg4          producer                    69m          80Mi            
+p3-pilot-s1-e1-r2-9dsg4-exec-1   spark-kubernetes-executor   223m         774Mi           
+
+2026-11-24T10:36:49Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-s1-e1-r2-9dsg4          driver                      225m         697Mi           
+p3-pilot-s1-e1-r2-9dsg4          producer                    71m          92Mi            
+p3-pilot-s1-e1-r2-9dsg4-exec-1   spark-kubernetes-executor   267m         782Mi           
+
+2026-11-24T10:36:57Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-s1-e1-r2-9dsg4          driver                      225m         697Mi           
+p3-pilot-s1-e1-r2-9dsg4          producer                    71m          92Mi            
+p3-pilot-s1-e1-r2-9dsg4-exec-1   spark-kubernetes-executor   267m         782Mi           

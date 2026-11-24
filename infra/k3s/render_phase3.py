@@ -68,6 +68,7 @@ def render(args):
     mode = args.mode
     mounts = [{"name": "results", "mountPath": RESULTS}]
     volumes = [{"name": "results", "hostPath": {"path": f"{OUTPUT}/{name}", "type": "Directory"}}]
+    streaming = mode in ("s1", "s2", "s3")
     if mode == "batch":
         command = [
             "python3", "tests/scalability/sc1_sc2_batch_benchmark.py",
@@ -101,7 +102,6 @@ def render(args):
             "--checkpoint", f"{lake}/checkpoints", "--metrics-file", f"{RESULTS}/progress.jsonl",
             "--latency-file", f"{RESULTS}/latency.jsonl",
         ]
-        mounts.append({"name": "raw", "mountPath": "/bench/raw", "readOnly": True})
         volumes.append({"name": "raw", "hostPath": {"path": f"{DATA}/raw_{args.scale}", "type": "Directory"}})
     container = {
         "name": "driver", "image": args.image, "imagePullPolicy": "Never",
@@ -115,17 +115,32 @@ def render(args):
             "limits": {"cpu": "2", "memory": "2432Mi"},
         },
     }
+    containers = [container]
+    if streaming:
+        containers.append({
+            "name": "producer", "image": args.image, "imagePullPolicy": "Never",
+            "workingDir": IMAGE_ROOT, "command": ["sleep", "infinity"],
+            "env": [{"name": "GIT_COMMIT", "value": args.revision}],
+            "volumeMounts": [*mounts, {"name": "raw", "mountPath": "/bench/raw", "readOnly": True}],
+            "resources": {
+                "requests": {"cpu": "500m", "memory": "128Mi"},
+                "limits": {"cpu": "2", "memory": "768Mi"},
+            },
+        })
     return {
         "apiVersion": "batch/v1", "kind": "Job",
         "metadata": {"name": name, "namespace": NAMESPACE},
         "spec": {
             "backoffLimit": 0, "activeDeadlineSeconds": args.deadline,
             "template": {
-                "metadata": {"labels": {"spark-role": "driver", "steam-benchmark": name}},
+                "metadata": {
+                    "labels": {"spark-role": "driver", "steam-benchmark": name},
+                    "annotations": {"kubectl.kubernetes.io/default-container": "driver"},
+                },
                 "spec": {
                     "serviceAccountName": "spark-driver", "restartPolicy": "Never",
                     "nodeSelector": {"kubernetes.io/hostname": args.driver_node},
-                    "containers": [container], "volumes": volumes,
+                    "containers": containers, "volumes": volumes,
                 },
             },
         },

@@ -1,0 +1,40 @@
+
+2026-11-24T10:23:11Z
+NAME                READY   STATUS              RESTARTS   AGE   IP       NODE             NOMINATED NODE   READINESS GATES
+p3-probe-e4-twgbw   0/1     ContainerCreating   0          0s    <none>   steam-worker-3   <none>           <none>
+
+2026-11-24T10:23:16Z
+NAME                READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-probe-e4-twgbw   1/1     Running   0          5s    10.42.2.13   steam-worker-3   <none>           <none>
+
+2026-11-24T10:23:21Z
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-probe-e4-twgbw          1/1     Running   0          10s   10.42.2.13   steam-worker-3   <none>           <none>
+p3-probe-e4-twgbw-exec-1   1/1     Running   0          4s    10.42.3.17   steam-worker-2   <none>           <none>
+p3-probe-e4-twgbw-exec-2   1/1     Running   0          4s    10.42.1.13   steam-worker-1   <none>           <none>
+p3-probe-e4-twgbw-exec-3   1/1     Running   0          4s    10.42.2.14   steam-worker-3   <none>           <none>
+p3-probe-e4-twgbw-exec-4   1/1     Running   0          4s    10.42.3.18   steam-worker-2   <none>           <none>
+
+2026-11-24T10:23:26Z
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-probe-e4-twgbw          1/1     Running   0          15s   10.42.2.13   steam-worker-3   <none>           <none>
+p3-probe-e4-twgbw-exec-1   1/1     Running   0          9s    10.42.3.17   steam-worker-2   <none>           <none>
+p3-probe-e4-twgbw-exec-2   1/1     Running   0          9s    10.42.1.13   steam-worker-1   <none>           <none>
+p3-probe-e4-twgbw-exec-3   1/1     Running   0          9s    10.42.2.14   steam-worker-3   <none>           <none>
+p3-probe-e4-twgbw-exec-4   1/1     Running   0          9s    10.42.3.18   steam-worker-2   <none>           <none>
+
+2026-11-24T10:23:31Z
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-probe-e4-twgbw          1/1     Running   0          20s   10.42.2.13   steam-worker-3   <none>           <none>
+p3-probe-e4-twgbw-exec-1   1/1     Running   0          14s   10.42.3.17   steam-worker-2   <none>           <none>
+p3-probe-e4-twgbw-exec-2   1/1     Running   0          14s   10.42.1.13   steam-worker-1   <none>           <none>
+p3-probe-e4-twgbw-exec-3   1/1     Running   0          14s   10.42.2.14   steam-worker-3   <none>           <none>
+p3-probe-e4-twgbw-exec-4   1/1     Running   0          14s   10.42.3.18   steam-worker-2   <none>           <none>
+
+2026-11-24T10:23:35Z
+NAME                       READY   STATUS      RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-probe-e4-twgbw          0/1     Completed   0          24s   10.42.2.13   steam-worker-3   <none>           <none>
+p3-probe-e4-twgbw-exec-1   0/1     Completed   0          18s   10.42.3.17   steam-worker-2   <none>           <none>
+p3-probe-e4-twgbw-exec-2   0/1     Completed   0          18s   10.42.1.13   steam-worker-1   <none>           <none>
+p3-probe-e4-twgbw-exec-3   0/1     Completed   0          18s   10.42.2.14   steam-worker-3   <none>           <none>
+p3-probe-e4-twgbw-exec-4   0/1     Completed   0          18s   10.42.3.18   steam-worker-2   <none>           <none>

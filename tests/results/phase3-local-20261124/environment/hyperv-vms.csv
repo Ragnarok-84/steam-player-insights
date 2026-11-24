@@ -1,0 +1,5 @@
+"name","state","processors","memoryGiB"
+"steam-server","Running","2","4"
+"steam-worker-1","Running","2","3"
+"steam-worker-2","Running","4","5"
+"steam-worker-3","Running","4","4"

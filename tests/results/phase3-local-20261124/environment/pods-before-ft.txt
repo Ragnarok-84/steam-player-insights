@@ -1,0 +1,19 @@
+NAMESPACE     NAME                                      READY   STATUS      RESTARTS        AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+kube-system   coredns-5688c889c9-nm8x6                  1/1     Running     2 (13h ago)     20h   10.42.0.4    steam-server     <none>           <none>
+kube-system   local-path-provisioner-67d6887d65-lgnkk   1/1     Running     3 (13h ago)     20h   10.42.0.6    steam-server     <none>           <none>
+kube-system   metrics-server-74c8c4d68b-k4xsn           1/1     Running     4 (3m55s ago)   20h   10.42.0.3    steam-server     <none>           <none>
+steam-demo    datanode-0                                1/1     Running     2 (99s ago)     20h   10.42.1.7    steam-worker-1   <none>           <none>
+steam-demo    demo-smoke-5zr5t-kc49k                    0/1     Completed   0               20h   <none>       steam-worker-2   <none>           <none>
+steam-demo    demo-smoke-extra-cv9r8-9g8z8              0/1     Completed   0               20h   <none>       steam-worker-3   <none>           <none>
+steam-demo    elasticsearch-0                           1/1     Running     1 (13h ago)     20h   10.42.0.2    steam-server     <none>           <none>
+steam-demo    kafka-0                                   1/1     Running     1 (99s ago)     20h   10.42.1.8    steam-worker-1   <none>           <none>
+steam-demo    kibana-75c7f6b7c9-wzwq6                   1/1     Running     3 (91s ago)     20h   10.42.3.14   steam-worker-2   <none>           <none>
+steam-demo    namenode-0                                1/1     Running     3 (13h ago)     20h   10.42.0.5    steam-server     <none>           <none>
+steam-demo    phase2-b1-fj8qz                           0/1     Completed   0               20h   <none>       steam-worker-2   <none>           <none>
+steam-demo    phase2-batch-jlj9r                        0/1     Completed   0               20h   <none>       steam-worker-2   <none>           <none>
+steam-demo    phase2-inject-qx7jm                       0/1     Completed   0               19h   <none>       steam-worker-2   <none>           <none>
+steam-demo    phase2-kibana-setup-2lprn                 0/1     Completed   0               19h   <none>       steam-worker-2   <none>           <none>
+steam-demo    phase2-replay-1000-7rzqw                  0/1     Completed   0               20h   <none>       steam-server     <none>           <none>
+steam-demo    phase2-s1-kclzc                           0/1     Completed   0               19h   <none>       steam-worker-2   <none>           <none>
+steam-demo    phase2-s2-hl97d                           0/1     Completed   0               19h   <none>       steam-worker-2   <none>           <none>
+steam-demo    phase2-s3-kr5q7                           0/1     Completed   0               19h   <none>       steam-worker-2   <none>           <none>

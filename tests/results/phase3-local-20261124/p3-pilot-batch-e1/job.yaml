@@ -1,0 +1,154 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  creationTimestamp: "2026-11-24T10:24:57Z"
+  generation: 1
+  labels:
+    batch.kubernetes.io/controller-uid: 6ee1b8b0-6491-4d04-81d7-22e16f86a8f6
+    batch.kubernetes.io/job-name: p3-pilot-batch-e1
+    controller-uid: 6ee1b8b0-6491-4d04-81d7-22e16f86a8f6
+    job-name: p3-pilot-batch-e1
+    spark-role: driver
+    steam-benchmark: p3-pilot-batch-e1
+  name: p3-pilot-batch-e1
+  namespace: steam-ft
+  resourceVersion: "19019"
+  uid: 6ee1b8b0-6491-4d04-81d7-22e16f86a8f6
+spec:
+  activeDeadlineSeconds: 14400
+  backoffLimit: 0
+  completionMode: NonIndexed
+  completions: 1
+  manualSelector: false
+  parallelism: 1
+  podReplacementPolicy: TerminatingOrFailed
+  selector:
+    matchLabels:
+      batch.kubernetes.io/controller-uid: 6ee1b8b0-6491-4d04-81d7-22e16f86a8f6
+  suspend: false
+  template:
+    metadata:
+      labels:
+        batch.kubernetes.io/controller-uid: 6ee1b8b0-6491-4d04-81d7-22e16f86a8f6
+        batch.kubernetes.io/job-name: p3-pilot-batch-e1
+        controller-uid: 6ee1b8b0-6491-4d04-81d7-22e16f86a8f6
+        job-name: p3-pilot-batch-e1
+        spark-role: driver
+        steam-benchmark: p3-pilot-batch-e1
+    spec:
+      containers:
+      - command:
+        - python3
+        - tests/scalability/sc1_sc2_batch_benchmark.py
+        - --profile
+        - k3s
+        - --scales
+        - "100"
+        - --executors
+        - "1"
+        - --runs
+        - "1"
+        - --raw-template
+        - hdfs://namenode:8020/steam/bench/raw_{scale}
+        - --lake-template
+        - hdfs://namenode:8020/steam/bench/runs/p3-pilot-batch-e1/r{run}
+        - --image-tag
+        - localhost/steam-spark:k3s-20261124-1d45953
+        - --topology
+        - Hyper-V 4 VMs 12 vCPU 16 GiB Windows host
+        - --shuffle-partitions
+        - "16"
+        - --log-dir
+        - /opt/spark/work-dir/tests/results/batch-logs
+        - --log-common
+        - --dataset
+        - steam_1000g_20261118
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        - name: SPARK_DRIVER_HOST
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: status.podIP
+        - name: SPARK_MASTER
+          value: k8s://https://kubernetes.default.svc:443
+        - name: SPARK_EXTRA_CONF
+          value: spark.kubernetes.namespace=steam-ft;spark.kubernetes.authenticate.oauthTokenFile=/var/run/secrets/kubernetes.io/serviceaccount/token;spark.kubernetes.authenticate.caCertFile=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt;spark.kubernetes.container.image=localhost/steam-spark:k3s-20261124-1d45953;spark.kubernetes.container.image.pullPolicy=Never;spark.kubernetes.driver.pod.name=$(POD_NAME);spark.driver.bindAddress=0.0.0.0;spark.driver.port=7078;spark.blockManager.port=7079;spark.kubernetes.executor.node.selector.steam.insights/compute=true;spark.kubernetes.executor.podTemplateFile=/opt/spark/work-dir/infra/k3s/executor-template.yaml;spark.kubernetes.executor.podNamePrefix=$(POD_NAME);spark.kubernetes.executor.label.steam-benchmark=p3-pilot-batch-e1;spark.kubernetes.executor.request.cores=750m;spark.kubernetes.executor.limit.cores=1;spark.executor.instances=1;spark.executor.cores=1;spark.executor.memory=1g;spark.executor.memoryOverhead=512m;spark.dynamicAllocation.enabled=false;spark.hadoop.dfs.client.use.datanode.hostname=true;spark.hadoop.dfs.replication=2;spark.executorEnv.ELASTICSEARCH_HOSTS=http://elasticsearch:9200;spark.executorEnv.HADOOP_USER_NAME=hdfs
+        - name: SPARK_DRIVER_MEMORY
+          value: 1536m
+        - name: SPARK_SHUFFLE_PARTITIONS
+          value: "16"
+        - name: PYTHONUNBUFFERED
+          value: "1"
+        - name: ELASTICSEARCH_HOSTS
+          value: http://elasticsearch:9200
+        - name: KAFKA_BOOTSTRAP_SERVERS
+          value: kafka:9092
+        - name: HDFS_NAMENODE_URL
+          value: hdfs://namenode:8020
+        - name: HADOOP_USER_NAME
+          value: hdfs
+        - name: HDFS_RAW_PATH
+          value: hdfs://namenode:8020/steam/bench/raw_100
+        - name: HDFS_CLEAN_PATH
+          value: hdfs://namenode:8020/steam/bench/runs/p3-pilot-batch-e1/clean
+        - name: HDFS_CURATED_PATH
+          value: hdfs://namenode:8020/steam/bench/runs/p3-pilot-batch-e1/curated
+        - name: HDFS_CHECKPOINT_PATH
+          value: hdfs://namenode:8020/steam/bench/runs/p3-pilot-batch-e1/checkpoints
+        - name: GIT_COMMIT
+          value: 1d459539f58f058a2698f02a6d8bcee5e1565c31
+        image: localhost/steam-spark:k3s-20261124-1d45953
+        imagePullPolicy: Never
+        name: driver
+        resources:
+          limits:
+            cpu: "2"
+            memory: 2432Mi
+          requests:
+            cpu: "1"
+            memory: 2Gi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /opt/spark/work-dir/tests/results
+          name: results
+        workingDir: /opt/spark/work-dir
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        kubernetes.io/hostname: steam-worker-3
+      restartPolicy: Never
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: spark-driver
+      serviceAccountName: spark-driver
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - hostPath:
+          path: /var/lib/steam-phase3/runs/p3-pilot-batch-e1
+          type: Directory
+        name: results
+status:
+  completionTime: "2026-11-24T10:30:16Z"
+  conditions:
+  - lastProbeTime: "2026-11-24T10:30:16Z"
+    lastTransitionTime: "2026-11-24T10:30:16Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: SuccessCriteriaMet
+  - lastProbeTime: "2026-11-24T10:30:16Z"
+    lastTransitionTime: "2026-11-24T10:30:16Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: Complete
+  ready: 0
+  startTime: "2026-11-24T10:24:57Z"
+  succeeded: 1
+  terminating: 0
+  uncountedTerminatedPods: {}

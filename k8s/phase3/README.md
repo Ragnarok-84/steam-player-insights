@@ -33,18 +33,25 @@ kubectl -n steam-ft top pods -l "steam-benchmark=$name"
 
 ## Streaming
 
+Khởi tạo mapping trên Elasticsearch của `steam-ft` trước khi khởi động stream. Job tạo các index còn thiếu và giữ dữ liệu đã có.
+
+```bash
+kubectl apply -f k8s/phase3/jobs/es-init.yaml
+kubectl -n steam-ft wait --for=condition=complete job/phase3-es-init --timeout=180s
+```
+
 Render với mode `s1`, `s2` hoặc `s3`. Với S2/S3, truyền `--curated hdfs://namenode:8020/steam/bench/runs/<batch-job>/r1/curated` trỏ đến baseline từ B7 cùng quy mô. Tạo thư mục kết quả bằng cùng lệnh phía trên. Khi driver đã tạo `progress.jsonl` và pod executor đã Ready, chạy bộ phát tải và đợi các micro-batch hoàn thành.
 
 ```bash
 pod=$(kubectl -n steam-ft get pod -l "job-name=$name" -o jsonpath='{.items[0].metadata.name}')
 output=/opt/spark/work-dir/tests/results
-kubectl -n steam-ft exec "$pod" -- python3 tests/scalability/sc3_streaming_load_test.py \
+kubectl -n steam-ft exec "$pod" -c producer -- python3 tests/scalability/sc3_streaming_load_test.py \
   --no-start-job --job s1 --scale 100 --env k3s --executors 1 \
   --dataset steam_1000g_20261118 --raw /bench/raw --brokers kafka:9092 --es \
   --rates 200 --step-seconds 90 --producers 1 \
   --metrics-file "$output/progress.jsonl" --latency-file "$output/latency.jsonl"
 ```
 
-Lưu log driver, pod đang chạy, manifest, metrics và CSV từ thư mục kết quả của VM trước khi dừng Job stream. Xác nhận từng lượt có micro-batch, latency và consumer lag. Với ma trận, ghi lại tốc độ gửi thực tế, số producer và tài nguyên của pod. Dùng checkpoint mới cho từng lượt. Chạy `python3 tests/results_log.py check <CSV common>` và kiểm tra thêm các dòng có `status=ok`, đủ job, executor và repeat.
+Container producer có ngân sách CPU/RAM riêng và chia sẻ thư mục kết quả với driver. Lưu log driver, pod đang chạy, manifest, metrics và CSV từ thư mục kết quả của VM trước khi dừng Job stream. Xác nhận từng lượt có micro-batch, latency và consumer lag. Với ma trận, chạy hai bậc 1.000 và 5.000 bản ghi/giây, mỗi bậc 60 giây, như [báo cáo đo local](../../docs/reports/streaming_es_benchmark_scale_20261123.md). Dùng hai tiến trình producer và ghi lại tốc độ gửi thực tế cùng tài nguyên của pod. Dùng checkpoint mới cho từng lượt. Chạy `python3 tests/results_log.py check <CSV common>` và kiểm tra thêm các dòng có `status=ok`, đủ job, executor và repeat.
 
-Chạy FT1, FT2, FT3 và FT5 theo [FAULT_TEST.md](../../infra/k3s/FAULT_TEST.md). FT4 dành cho cấu hình ES riêng sau cùng, khi Spark đã dừng.
+Chạy FT1, FT2, FT3 và FT5 theo [FAULT_TEST.md](../../infra/k3s/FAULT_TEST.md). Dùng `jobs/ft-watch.yaml` cho FT1, FT2 và FT5. Observer ở worker 3 và cài gói WebHDFS cùng phiên bản trong `requirements.txt` trước khi báo `READY`. FT4 dùng `ft4-es.yaml` trong namespace `steam-ft-es` sau cùng, khi Spark đã dừng. Ba pod ES nằm trên ba worker riêng. Hai node `master,data,ingest` chứa shard và một node `master,voting_only` giữ quorum. Dùng dữ liệu thử và index có một replica. Lưu shard placement và số document trước khi xóa một data pod, lúc pod vắng và khi cluster về green.

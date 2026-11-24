@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: phase3-es-init
+  namespace: steam-ft
+spec:
+  backoffLimit: 1
+  activeDeadlineSeconds: 180
+  template:
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      nodeSelector:
+        steam.insights/compute: 'true'
+      containers:
+        - name: setup
+          image: localhost/steam-spark:k3s-20261124-1d45953
+          imagePullPolicy: Never
+          command: [python3, -m, storage.elasticsearch.setup_indices]
+          env:
+            - name: ELASTICSEARCH_HOSTS
+              value: http://elasticsearch:9200
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi

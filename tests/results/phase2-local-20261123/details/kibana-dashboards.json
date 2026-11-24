@@ -1,0 +1,18 @@
+﻿[
+    {
+        "id":  "steam-d1-overview",
+        "title":  "D1. Tổng quan"
+    },
+    {
+        "id":  "steam-d2-game",
+        "title":  "D2. Chi tiết game (lọc: appid:\u003cid\u003e)"
+    },
+    {
+        "id":  "steam-d3-realtime",
+        "title":  "D3. Giám sát thời gian thực"
+    },
+    {
+        "id":  "steam-d4-alerts",
+        "title":  "D4. Cảnh báo \u0026 xu hướng"
+    }
+]

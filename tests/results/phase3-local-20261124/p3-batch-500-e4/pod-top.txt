@@ -1,0 +1,1297 @@
+
+2026-11-24T11:25:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      793m         561Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   658m         395Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   708m         522Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   703m         529Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   696m         527Mi           
+
+2026-11-24T11:25:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      793m         561Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   658m         395Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   708m         522Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   703m         529Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   696m         527Mi           
+
+2026-11-24T11:26:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      44m          564Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   598m         565Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   992m         556Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   989m         567Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   977m         545Mi           
+
+2026-11-24T11:26:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      44m          564Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   598m         565Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   992m         556Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   989m         567Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   977m         545Mi           
+
+2026-11-24T11:26:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      98m          579Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   9m           562Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   994m         779Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   62m          594Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   980m         922Mi           
+
+2026-11-24T11:26:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      56m          586Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   993m         850Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   952m         844Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   943m         872Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   952m         1020Mi          
+
+2026-11-24T11:26:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      56m          586Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   993m         850Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   952m         844Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   943m         872Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   952m         1020Mi          
+
+2026-11-24T11:26:46Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      101m         589Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   963m         995Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   674m         895Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   499m         865Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   996m         1010Mi          
+
+2026-11-24T11:26:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      101m         589Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   963m         995Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   674m         895Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   499m         865Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   996m         1010Mi          
+
+2026-11-24T11:27:03Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      68m          598Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   529m         1123Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   481m         1023Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   499m         865Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   842m         1162Mi          
+
+2026-11-24T11:27:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      68m          598Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   529m         1123Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   481m         1023Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   499m         865Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   842m         1162Mi          
+
+2026-11-24T11:27:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      1014m        652Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   529m         1123Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   475m         1041Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   558m         896Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   389m         1186Mi          
+
+2026-11-24T11:27:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      137m         655Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   707m         1206Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   958m         1062Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   998m         917Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   389m         1186Mi          
+
+2026-11-24T11:27:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      137m         655Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   707m         1206Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   958m         1062Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   998m         917Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   389m         1186Mi          
+
+2026-11-24T11:27:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      7m           655Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1000m        1200Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   997m         1049Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        932Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   999m         1198Mi          
+
+2026-11-24T11:27:53Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      7m           655Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1000m        1200Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   997m         1049Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        932Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   999m         1198Mi          
+
+2026-11-24T11:28:01Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      22m          660Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1000m        1200Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   998m         1055Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        948Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   999m         1191Mi          
+
+2026-11-24T11:28:10Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      22m          660Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1000m        1200Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   998m         1055Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        948Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   999m         1191Mi          
+
+2026-11-24T11:28:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      9m           642Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1000m        1198Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   999m         1049Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        940Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1182Mi          
+
+2026-11-24T11:28:26Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      9m           642Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1000m        1198Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   999m         1049Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        940Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1182Mi          
+
+2026-11-24T11:28:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      8m           626Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1000m        1202Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   1000m        1045Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        970Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1179Mi          
+
+2026-11-24T11:28:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      8m           626Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1000m        1202Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   1000m        1045Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        970Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1179Mi          
+
+2026-11-24T11:28:51Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      11m          626Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1000m        1202Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   998m         1043Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        970Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   336m         1178Mi          
+
+2026-11-24T11:29:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      7m           627Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   141m         1211Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   962m         1039Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        981Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1m           1178Mi          
+
+2026-11-24T11:29:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      7m           627Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   141m         1211Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   962m         1039Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        981Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1m           1178Mi          
+
+2026-11-24T11:29:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      9m           626Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1m           1211Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   2m           1039Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        987Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   2m           1178Mi          
+
+2026-11-24T11:29:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      9m           626Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1m           1211Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   2m           1039Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        987Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   2m           1178Mi          
+
+2026-11-24T11:29:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      258m         679Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   420m         1246Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   418m         1061Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   739m         1003Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   2m           1178Mi          
+
+2026-11-24T11:29:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      258m         679Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   420m         1246Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   418m         1061Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   739m         1003Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   2m           1178Mi          
+
+2026-11-24T11:29:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      136m         668Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   510m         1255Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   616m         1233Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   888m         1229Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   512m         1207Mi          
+
+2026-11-24T11:29:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      527m         856Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   318m         1239Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   769m         1407Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   781m         1307Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   674m         1380Mi          
+
+2026-11-24T11:30:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      527m         856Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   318m         1239Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   674m         1380Mi          
+
+2026-11-24T11:30:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      124m         872Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   777m         1285Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   408m         308Mi           
+
+2026-11-24T11:30:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      124m         872Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   777m         1285Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   408m         308Mi           
+
+2026-11-24T11:30:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      124m         872Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   87m          1286Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   10m          312Mi           
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   999m         745Mi           
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   514m         403Mi           
+
+2026-11-24T11:30:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      124m         872Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   87m          1286Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   10m          312Mi           
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   999m         745Mi           
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   514m         403Mi           
+
+2026-11-24T11:30:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      33m          870Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   209m         1353Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   754m         875Mi           
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   442m         990Mi           
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   514m         403Mi           
+
+2026-11-24T11:30:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      33m          870Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   209m         1353Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   754m         875Mi           
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   442m         990Mi           
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   514m         403Mi           
+
+2026-11-24T11:31:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      144m         875Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   395m         1372Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   745m         915Mi           
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   793m         1032Mi          
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   503m         659Mi           
+
+2026-11-24T11:31:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      521m         960Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   527m         1383Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   527m         923Mi           
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   447m         1039Mi          
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   539m         698Mi           
+
+2026-11-24T11:31:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      521m         960Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   527m         1383Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   527m         923Mi           
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   447m         1039Mi          
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   539m         698Mi           
+
+2026-11-24T11:31:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      521m         960Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   454m         1391Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   703m         950Mi           
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   447m         1039Mi          
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   711m         757Mi           
+
+2026-11-24T11:31:39Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      521m         960Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   454m         1391Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   703m         950Mi           
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   447m         1039Mi          
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   711m         757Mi           
+
+2026-11-24T11:31:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      831m         1011Mi          
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   432m         1404Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   754m         969Mi           
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   686m         1082Mi          
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   640m         771Mi           
+
+2026-11-24T11:31:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      831m         1011Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   754m         969Mi           
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   686m         1082Mi          
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   640m         771Mi           
+
+2026-11-24T11:32:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      515m         1041Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   870m         1021Mi          
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   755m         1086Mi          
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   616m         924Mi           
+
+2026-11-24T11:32:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      515m         1041Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   870m         1021Mi          
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   755m         1086Mi          
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   616m         924Mi           
+
+2026-11-24T11:32:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      89m          1041Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   641m         1178Mi          
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   589m         1241Mi          
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   616m         924Mi           
+p3-batch-500-e4-fllqf-exec-8   spark-kubernetes-executor   22m          308Mi           
+
+2026-11-24T11:32:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      363m         1146Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   915m         1184Mi          
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   717m         1247Mi          
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   380m         936Mi           
+p3-batch-500-e4-fllqf-exec-8   spark-kubernetes-executor   88m          340Mi           
+
+2026-11-24T11:32:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      363m         1146Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   915m         1184Mi          
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   717m         1247Mi          
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   380m         936Mi           
+p3-batch-500-e4-fllqf-exec-8   spark-kubernetes-executor   88m          340Mi           
+
+2026-11-24T11:32:46Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      84m          1150Mi          
+p3-batch-500-e4-fllqf-exec-5   spark-kubernetes-executor   309m         1181Mi          
+p3-batch-500-e4-fllqf-exec-6   spark-kubernetes-executor   178m         1252Mi          
+p3-batch-500-e4-fllqf-exec-7   spark-kubernetes-executor   119m         937Mi           
+p3-batch-500-e4-fllqf-exec-8   spark-kubernetes-executor   801m         626Mi           
+
+2026-11-24T11:32:54Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf   driver   84m          1150Mi          
+
+2026-11-24T11:33:02Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf   driver   828m         279Mi           
+
+2026-11-24T11:33:11Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf   driver   828m         279Mi           
+
+2026-11-24T11:33:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      720m         554Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   689m         514Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   642m         362Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   882m         565Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   879m         563Mi           
+
+2026-11-24T11:33:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      720m         554Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   689m         514Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   642m         362Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   882m         565Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   879m         563Mi           
+
+2026-11-24T11:33:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      34m          558Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   393m         566Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   435m         583Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   963m         928Mi           
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   950m         819Mi           
+
+2026-11-24T11:33:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      143m         571Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   343m         737Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   527m         741Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1015Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        859Mi           
+
+2026-11-24T11:33:53Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      143m         571Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   343m         737Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   527m         741Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1015Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        859Mi           
+
+2026-11-24T11:34:01Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      23m          571Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1000m        798Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   949m         794Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1018Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   998m         893Mi           
+
+2026-11-24T11:34:10Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      23m          571Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1000m        798Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   949m         794Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1018Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   998m         893Mi           
+
+2026-11-24T11:34:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      102m         585Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   554m         967Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   265m         925Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   788m         1162Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   405m         1028Mi          
+
+2026-11-24T11:34:26Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      102m         585Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   554m         967Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   265m         925Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   788m         1162Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   405m         1028Mi          
+
+2026-11-24T11:34:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      76m          588Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   554m         967Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   522m         925Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   788m         1162Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   449m         1041Mi          
+
+2026-11-24T11:34:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      76m          588Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   554m         967Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   522m         925Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   788m         1162Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   449m         1041Mi          
+
+2026-11-24T11:34:51Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      774m         657Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   569m         995Mi           
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   577m         964Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   486m         1190Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   573m         1074Mi          
+
+2026-11-24T11:35:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      7m           657Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   905m         1021Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   999m         972Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   999m         1190Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1072Mi          
+
+2026-11-24T11:35:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      7m           657Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   905m         1021Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   999m         972Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   999m         1190Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1072Mi          
+
+2026-11-24T11:35:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      8m           656Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1000m        1022Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   999m         961Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1209Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1057Mi          
+
+2026-11-24T11:35:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      8m           656Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1000m        1022Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   999m         961Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1209Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1057Mi          
+
+2026-11-24T11:35:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      13m          656Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1000m        1021Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   997m         979Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1218Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1063Mi          
+
+2026-11-24T11:35:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      13m          656Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1000m        1021Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   997m         979Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1218Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1063Mi          
+
+2026-11-24T11:35:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      9m           632Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   999m         1006Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   998m         988Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1209Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1001m        1056Mi          
+
+2026-11-24T11:35:58Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      9m           632Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   999m         1006Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   998m         988Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1209Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1001m        1056Mi          
+
+2026-11-24T11:36:06Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      6m           632Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   784m         1011Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   998m         988Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1238Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1054Mi          
+
+2026-11-24T11:36:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      8m           633Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1m           1011Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   998m         994Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1261Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   384m         1054Mi          
+
+2026-11-24T11:36:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      8m           633Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1m           1011Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   998m         994Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1261Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   384m         1054Mi          
+
+2026-11-24T11:36:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      6m           633Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1m           1011Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   998m         994Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1269Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   2m           1053Mi          
+
+2026-11-24T11:36:39Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      6m           633Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1m           1011Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   998m         994Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1269Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   2m           1053Mi          
+
+2026-11-24T11:36:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      43m          640Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1m           1011Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   186m         1003Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1269Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1m           1053Mi          
+
+2026-11-24T11:36:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      43m          640Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1m           1011Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   186m         1003Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   1000m        1269Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1m           1053Mi          
+
+2026-11-24T11:37:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      294m         666Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   125m         1016Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   552m         1049Mi          
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   637m         1286Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   487m         1082Mi          
+
+2026-11-24T11:37:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      294m         666Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   125m         1016Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   552m         1049Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   487m         1082Mi          
+
+2026-11-24T11:37:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      223m         844Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   569m         1031Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   633m         1208Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   707m         1278Mi          
+
+2026-11-24T11:37:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      223m         844Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   239m         1187Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   2m           1208Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   707m         1278Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   276m         301Mi           
+
+2026-11-24T11:37:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      223m         844Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   239m         1187Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   2m           1208Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   707m         1278Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   276m         301Mi           
+
+2026-11-24T11:37:46Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      14m          844Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1m           1187Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   2m           1208Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1297Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   1m           301Mi           
+
+2026-11-24T11:37:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      14m          844Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1m           1187Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   2m           1208Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1297Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   1m           301Mi           
+
+2026-11-24T11:38:03Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      6m           837Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   2m           1184Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   2m           1205Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1001m        1317Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   9m           307Mi           
+
+2026-11-24T11:38:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      6m           837Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   2m           1184Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   2m           1205Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1001m        1317Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   9m           307Mi           
+
+2026-11-24T11:38:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      8m           829Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   2m           1184Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   2m           1173Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1342Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   2m           307Mi           
+
+2026-11-24T11:38:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      8m           829Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   2m           1184Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   2m           1173Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1342Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   2m           307Mi           
+
+2026-11-24T11:38:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      6m           825Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   2m           1180Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   1m           1173Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1354Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   1m           307Mi           
+
+2026-11-24T11:38:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      6m           825Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1m           1180Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   1m           1173Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1349Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   2m           307Mi           
+
+2026-11-24T11:38:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      6m           825Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   1m           1180Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   1m           1173Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1349Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   2m           307Mi           
+
+2026-11-24T11:39:01Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      6m           825Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   3m           1180Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   1m           1173Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1386Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   1m           307Mi           
+
+2026-11-24T11:39:10Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      6m           825Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   3m           1180Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   1m           1173Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1386Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   1m           307Mi           
+
+2026-11-24T11:39:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      614m         909Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   2m           1180Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   75m          1175Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1386Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   116m         341Mi           
+
+2026-11-24T11:39:26Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      614m         909Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   2m           1180Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   75m          1175Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   1000m        1386Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   116m         341Mi           
+
+2026-11-24T11:39:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      273m         944Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   666m         1495Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   748m         1400Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   665m         1492Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   880m         792Mi           
+
+2026-11-24T11:39:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      273m         944Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   666m         1495Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   748m         1400Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   665m         1492Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   880m         792Mi           
+
+2026-11-24T11:39:51Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      700m         1006Mi          
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   730m         1500Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   598m         1404Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   513m         1476Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   768m         832Mi           
+
+2026-11-24T11:40:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      580m         1049Mi          
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   565m         1504Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   426m         1407Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   450m         1481Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   645m         844Mi           
+
+2026-11-24T11:40:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      580m         1049Mi          
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   565m         1504Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   426m         1407Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   450m         1481Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   645m         844Mi           
+
+2026-11-24T11:40:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      890m         1116Mi          
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   468m         1509Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   430m         1417Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   525m         1465Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   621m         868Mi           
+
+2026-11-24T11:40:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      890m         1116Mi          
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   468m         1509Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   430m         1417Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   525m         1465Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   621m         868Mi           
+
+2026-11-24T11:40:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      171m         1142Mi          
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   619m         1520Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   676m         1424Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   525m         1465Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   826m         892Mi           
+
+2026-11-24T11:40:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      171m         1142Mi          
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   619m         1520Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   676m         1424Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   525m         1465Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   826m         892Mi           
+
+2026-11-24T11:40:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      171m         1142Mi          
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   686m         1524Mi          
+p3-batch-500-e4-fllqf-exec-2   spark-kubernetes-executor   595m         1429Mi          
+p3-batch-500-e4-fllqf-exec-4   spark-kubernetes-executor   784m         1467Mi          
+p3-batch-500-e4-fllqf-exec-9   spark-kubernetes-executor   971m         1067Mi          
+
+2026-11-24T11:40:58Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf   driver   426m         1251Mi          
+
+2026-11-24T11:41:06Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf   driver   426m         1251Mi          
+
+2026-11-24T11:41:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      634m         464Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   331m         311Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   431m         301Mi           
+
+2026-11-24T11:41:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf          driver                      634m         464Mi           
+p3-batch-500-e4-fllqf-exec-1   spark-kubernetes-executor   331m         311Mi           
+p3-batch-500-e4-fllqf-exec-3   spark-kubernetes-executor   431m         301Mi           
+
+2026-11-24T11:41:31Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      480m         528Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   587m         386Mi           
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   766m         559Mi           
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   769m         529Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   558m         526Mi           
+
+2026-11-24T11:41:40Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      480m         528Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   587m         386Mi           
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   766m         559Mi           
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   769m         529Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   558m         526Mi           
+
+2026-11-24T11:41:48Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      480m         528Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   527m         576Mi           
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   882m         800Mi           
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   246m         567Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   996m         734Mi           
+
+2026-11-24T11:41:57Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      480m         528Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   527m         576Mi           
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   882m         800Mi           
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   246m         567Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   996m         734Mi           
+
+2026-11-24T11:42:05Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      88m          546Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   536m         757Mi           
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   882m         800Mi           
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   72m          601Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   940m         979Mi           
+
+2026-11-24T11:42:13Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      39m          554Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   536m         757Mi           
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   999m         879Mi           
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   997m         802Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   940m         979Mi           
+
+2026-11-24T11:42:22Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      39m          554Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   536m         757Mi           
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   999m         879Mi           
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   997m         802Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   940m         979Mi           
+
+2026-11-24T11:42:30Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      60m          554Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   800m         802Mi           
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   651m         1030Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   541m         823Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   992m         1023Mi          
+
+2026-11-24T11:42:38Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      60m          554Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   800m         802Mi           
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   651m         1030Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   541m         823Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   992m         1023Mi          
+
+2026-11-24T11:42:47Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      297m         607Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   471m         970Mi           
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   691m         1037Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   575m         998Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   649m         1171Mi          
+
+2026-11-24T11:42:55Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      297m         607Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   471m         970Mi           
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   691m         1037Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   575m         998Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   649m         1171Mi          
+
+2026-11-24T11:43:03Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      297m         607Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   643m         1003Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   455m         1061Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   521m         1048Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   600m         1208Mi          
+
+2026-11-24T11:43:12Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      297m         607Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   643m         1003Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   455m         1061Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   521m         1048Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   600m         1208Mi          
+
+2026-11-24T11:43:20Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      571m         624Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   998m         1023Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   999m         1074Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   997m         1049Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   600m         1208Mi          
+
+2026-11-24T11:43:28Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      7m           624Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   998m         1034Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   1000m        1064Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   999m         1034Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   1000m        1214Mi          
+
+2026-11-24T11:43:37Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      7m           624Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   998m         1034Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   1000m        1064Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   999m         1034Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   1000m        1214Mi          
+
+2026-11-24T11:43:45Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      8m           618Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   995m         1067Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   1000m        1066Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   1000m        1041Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   1000m        1200Mi          
+
+2026-11-24T11:43:53Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      8m           618Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   995m         1067Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   1000m        1066Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   1000m        1041Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   1000m        1200Mi          
+
+2026-11-24T11:44:02Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      9m           600Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   997m         1086Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   1000m        1058Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   1000m        1041Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   1000m        1189Mi          
+
+2026-11-24T11:44:10Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      9m           600Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   997m         1086Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   1000m        1058Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   1000m        1041Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   1000m        1189Mi          
+
+2026-11-24T11:44:18Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      13m          600Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   997m         1086Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   1000m        1058Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   829m         1038Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   828m         1216Mi          
+
+2026-11-24T11:44:27Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      13m          600Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   997m         1086Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   1000m        1058Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   829m         1038Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   828m         1216Mi          
+
+2026-11-24T11:44:35Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      6m           600Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   998m         1117Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   1000m        1056Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   829m         1038Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   2m           1216Mi          
+
+2026-11-24T11:44:43Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      8m           600Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   997m         1128Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   966m         1053Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   2m           1038Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   1m           1216Mi          
+
+2026-11-24T11:44:52Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      8m           600Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   997m         1128Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   966m         1053Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   2m           1038Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   1m           1216Mi          
+
+2026-11-24T11:45:00Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      8m           600Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   838m         1128Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   1m           1053Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   2m           1038Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   2m           1216Mi          
+
+2026-11-24T11:45:08Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      8m           600Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   838m         1128Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   1m           1053Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   2m           1038Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   2m           1216Mi          
+
+2026-11-24T11:45:17Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      213m         652Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   865m         1224Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   568m         1086Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   329m         1069Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   606m         1240Mi          
+
+2026-11-24T11:45:25Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      213m         652Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   865m         1224Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   568m         1086Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   329m         1069Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   606m         1240Mi          
+
+2026-11-24T11:45:34Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      528m         841Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   818m         1394Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   750m         1248Mi          
+p3-batch-500-e4-fllqf-exec-12   spark-kubernetes-executor   637m         1228Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   208m         1222Mi          
+
+2026-11-24T11:45:42Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      528m         841Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   818m         1394Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   750m         1248Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   208m         1222Mi          
+
+2026-11-24T11:45:50Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      528m         841Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   907m         1492Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   787m         1447Mi          
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   731m         1325Mi          
+
+2026-11-24T11:45:58Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      148m         883Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   18m          1492Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   117m         1459Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   51m          300Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   354m         1349Mi          
+
+2026-11-24T11:46:07Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      148m         883Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   18m          1492Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   117m         1459Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   51m          300Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   354m         1349Mi          
+
+2026-11-24T11:46:15Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      8m           880Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   1m           1491Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   2m           1458Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   1m           300Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   2m           1347Mi          
+
+2026-11-24T11:46:24Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      8m           880Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   1m           1491Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   2m           1458Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   1m           300Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   2m           1347Mi          
+
+2026-11-24T11:46:32Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      8m           880Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   2m           1488Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   2m           1455Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   5m           305Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   2m           1345Mi          
+
+2026-11-24T11:46:40Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      8m           880Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   2m           1488Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   2m           1455Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   5m           305Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   2m           1345Mi          
+
+2026-11-24T11:46:49Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      7m           860Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   2m           1454Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   2m           1423Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   2m           305Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   2m           1313Mi          
+
+2026-11-24T11:46:57Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      7m           860Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   2m           1454Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   2m           1423Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   2m           305Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   2m           1313Mi          
+
+2026-11-24T11:47:05Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      24m          861Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   16m          1454Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   2m           1422Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   1m           305Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   1m           1312Mi          
+
+2026-11-24T11:47:14Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      468m         919Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   454m         1467Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   253m         1428Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   27m          318Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   628m         1492Mi          
+
+2026-11-24T11:47:22Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      468m         919Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   454m         1467Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   253m         1428Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   27m          318Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   628m         1492Mi          
+
+2026-11-24T11:47:31Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      468m         919Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   454m         1467Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   498m         1443Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   776m         607Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   412m         1504Mi          
+
+2026-11-24T11:47:39Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      468m         919Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   454m         1467Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   498m         1443Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   776m         607Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   412m         1504Mi          
+
+2026-11-24T11:47:47Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      628m         970Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   426m         1477Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   470m         1460Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   593m         708Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   603m         1484Mi          
+
+2026-11-24T11:47:56Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      628m         970Mi           
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   426m         1477Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   470m         1460Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   593m         708Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   603m         1484Mi          
+
+2026-11-24T11:48:04Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      922m         1070Mi          
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   596m         1485Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   407m         1468Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   728m         753Mi           
+p3-batch-500-e4-fllqf-exec-3    spark-kubernetes-executor   458m         1496Mi          
+
+2026-11-24T11:48:12Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      922m         1070Mi          
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   596m         1485Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   407m         1468Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   728m         753Mi           
+
+2026-11-24T11:48:21Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      228m         1078Mi          
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   596m         1485Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   689m         1473Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   897m         808Mi           
+
+2026-11-24T11:48:29Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      228m         1078Mi          
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   365m         1488Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   213m         1477Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   509m         976Mi           
+p3-batch-500-e4-fllqf-exec-14   spark-kubernetes-executor   1002m        762Mi           
+
+2026-11-24T11:48:37Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      228m         1078Mi          
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   365m         1488Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   213m         1477Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   509m         976Mi           
+p3-batch-500-e4-fllqf-exec-14   spark-kubernetes-executor   1002m        762Mi           
+
+2026-11-24T11:48:46Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      57m          1078Mi          
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   606m         1490Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   276m         1479Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   492m         1011Mi          
+p3-batch-500-e4-fllqf-exec-14   spark-kubernetes-executor   936m         805Mi           
+
+2026-11-24T11:48:54Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e4-fllqf           driver                      57m          1078Mi          
+p3-batch-500-e4-fllqf-exec-1    spark-kubernetes-executor   606m         1490Mi          
+p3-batch-500-e4-fllqf-exec-11   spark-kubernetes-executor   276m         1479Mi          
+p3-batch-500-e4-fllqf-exec-13   spark-kubernetes-executor   492m         1011Mi          
+p3-batch-500-e4-fllqf-exec-14   spark-kubernetes-executor   936m         805Mi           

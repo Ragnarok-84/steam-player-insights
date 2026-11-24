@@ -1,0 +1,25 @@
+[bench] scale=100 executors=2 run=1/3 raw=hdfs://namenode:8020/steam/bench/raw_100 lake=hdfs://namenode:8020/steam/bench/runs/p3-batch-100-e2/r1
+[bench]   spark_startup=8.4s b2=53.6s b5=81.8s b3=17.2s b4=4.0s b6=10.1s b7=5.6s b8=6.6s b9=30.8s total_pipeline=187.3s  (wall 229.6s)
+[bench] scale=100 executors=2 run=2/3 raw=hdfs://namenode:8020/steam/bench/raw_100 lake=hdfs://namenode:8020/steam/bench/runs/p3-batch-100-e2/r2
+[bench]   spark_startup=9.4s b2=52.7s b5=82.2s b3=17.4s b4=3.9s b6=9.1s b7=4.7s b8=5.3s b9=31.1s total_pipeline=184.6s  (wall 226.5s)
+[bench] scale=100 executors=2 run=3/3 raw=hdfs://namenode:8020/steam/bench/raw_100 lake=hdfs://namenode:8020/steam/bench/runs/p3-batch-100-e2/r3
+[bench]   spark_startup=11.7s b2=53.6s b5=81.8s b3=16.8s b4=4.1s b6=8.7s b7=4.5s b8=6.2s b9=30.3s total_pipeline=187.4s  (wall 228.8s)
+
+=== Batch scale=100: median seconds / speedup (baseline e=2) ===
+job                     e=2 (s / x)     records       MiB  files   peakMB
+-------------------------------------------------------------------------
+spark_startup         9.40 /  1.00x                                 396.6
+b2                   53.58 /  1.00x      187079    79.358    163    663.0
+b5                   81.81 /  1.00x       84882     1.334    161    870.4
+b3                   17.17 /  1.00x       75657      0.71      8    900.0
+b4                    3.97 /  1.00x         539      0.02      2    912.4
+b6                    9.06 /  1.00x       34835     0.883      4    976.9
+b7                    4.74 /  1.00x         500     0.008      2    987.9
+b8                    6.15 /  1.00x         106     0.019      2   1049.7
+b9                   30.76 /  1.00x          62     0.006      2   1197.5
+total_pipeline      187.26 /  1.00x      383598     82.33    342   1049.7
+
+Results: tests/results/batch_raw_scale100_20261124.csv
+Results: tests/results/batch_raw_scale100_details_20261124.csv
+Results: tests/results/batch_raw_scale100_summary_20261124.csv
+Results: tests/results/batch_ml_scale100_20261124.csv

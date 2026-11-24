@@ -1,0 +1,1335 @@
+
+2026-11-24T12:45:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      712m         509Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   579m         356Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   698m         540Mi           
+
+2026-11-24T12:45:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      712m         509Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   579m         356Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   698m         540Mi           
+
+2026-11-24T12:45:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      712m         509Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   994m         730Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   981m         604Mi           
+
+2026-11-24T12:45:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      712m         509Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   994m         730Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   981m         604Mi           
+
+2026-11-24T12:46:06Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      26m          512Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   962m         1008Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         806Mi           
+
+2026-11-24T12:46:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      153m         525Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1001m        1029Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   868m         901Mi           
+
+2026-11-24T12:46:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      153m         525Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1001m        1029Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   868m         901Mi           
+
+2026-11-24T12:46:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      21m          528Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1001m        1029Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   1000m        902Mi           
+
+2026-11-24T12:46:39Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      21m          528Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1001m        1029Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   1000m        902Mi           
+
+2026-11-24T12:46:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      37m          544Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   988m         1049Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   848m         1072Mi          
+
+2026-11-24T12:46:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      37m          544Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   988m         1049Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   848m         1072Mi          
+
+2026-11-24T12:47:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      162m         546Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   857m         1191Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   848m         1072Mi          
+
+2026-11-24T12:47:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      162m         546Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   857m         1191Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   848m         1072Mi          
+
+2026-11-24T12:47:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      340m         592Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   597m         1205Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   631m         1101Mi          
+
+2026-11-24T12:47:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      682m         626Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   907m         1231Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   878m         1144Mi          
+
+2026-11-24T12:47:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      682m         626Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   907m         1231Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   878m         1144Mi          
+
+2026-11-24T12:47:46Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           625Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1232Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1144Mi          
+
+2026-11-24T12:47:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           625Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1232Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1144Mi          
+
+2026-11-24T12:48:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           625Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1218Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1133Mi          
+
+2026-11-24T12:48:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           625Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1218Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1133Mi          
+
+2026-11-24T12:48:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      9m           622Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1254Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1129Mi          
+
+2026-11-24T12:48:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      9m           622Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1254Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1129Mi          
+
+2026-11-24T12:48:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      8m           603Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1274Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1122Mi          
+
+2026-11-24T12:48:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           602Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1273Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1118Mi          
+
+2026-11-24T12:48:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           602Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1273Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1118Mi          
+
+2026-11-24T12:49:01Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           603Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1273Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1135Mi          
+
+2026-11-24T12:49:09Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           603Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1273Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1135Mi          
+
+2026-11-24T12:49:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           603Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1318Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1135Mi          
+
+2026-11-24T12:49:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           603Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1318Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1135Mi          
+
+2026-11-24T12:49:34Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           603Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1316Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1134Mi          
+
+2026-11-24T12:49:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           603Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1316Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1134Mi          
+
+2026-11-24T12:49:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           603Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1004m        1314Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   1001m        1141Mi          
+
+2026-11-24T12:49:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      12m          603Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   997m         1326Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1140Mi          
+
+2026-11-24T12:50:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      12m          603Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   997m         1326Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1140Mi          
+
+2026-11-24T12:50:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      24m          604Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   599m         1372Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   837m         1160Mi          
+
+2026-11-24T12:50:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      24m          604Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   599m         1372Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   837m         1160Mi          
+
+2026-11-24T12:50:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      372m         628Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   823m         1185Mi          
+
+2026-11-24T12:50:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      372m         628Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   823m         1185Mi          
+
+2026-11-24T12:50:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      168m         747Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   837m         1380Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        633Mi           
+
+2026-11-24T12:50:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      168m         747Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   837m         1380Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        633Mi           
+
+2026-11-24T12:51:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      85m          816Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   996m         1387Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   999m         645Mi           
+
+2026-11-24T12:51:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           811Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1419Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        678Mi           
+
+2026-11-24T12:51:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           811Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1419Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        678Mi           
+
+2026-11-24T12:51:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           803Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1419Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1003m        756Mi           
+
+2026-11-24T12:51:39Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           803Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1419Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1003m        756Mi           
+
+2026-11-24T12:51:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           798Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1458Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   995m         754Mi           
+
+2026-11-24T12:51:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           798Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1458Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   995m         754Mi           
+
+2026-11-24T12:52:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           798Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1485Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   742m         758Mi           
+
+2026-11-24T12:52:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           798Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1485Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   742m         758Mi           
+
+2026-11-24T12:52:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           798Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1493Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1m           758Mi           
+
+2026-11-24T12:52:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           798Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   2m           758Mi           
+
+2026-11-24T12:52:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           798Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   2m           758Mi           
+
+2026-11-24T12:52:46Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      15m          799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   692m         799Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   2m           298Mi           
+
+2026-11-24T12:52:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      15m          799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   692m         799Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   2m           298Mi           
+
+2026-11-24T12:53:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        829Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   7m           304Mi           
+
+2026-11-24T12:53:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        829Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   7m           304Mi           
+
+2026-11-24T12:53:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      4m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        872Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   1m           304Mi           
+
+2026-11-24T12:53:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      4m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        872Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   1m           304Mi           
+
+2026-11-24T12:53:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      4m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        910Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   1m           304Mi           
+
+2026-11-24T12:53:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        932Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   2m           304Mi           
+
+2026-11-24T12:53:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        932Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   2m           304Mi           
+
+2026-11-24T12:54:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        948Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   1m           304Mi           
+
+2026-11-24T12:54:09Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        948Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   1m           304Mi           
+
+2026-11-24T12:54:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        944Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   2m           304Mi           
+
+2026-11-24T12:54:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        944Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   2m           304Mi           
+
+2026-11-24T12:54:34Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      16m          799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        1064Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   674m         625Mi           
+
+2026-11-24T12:54:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      16m          799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        1064Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   674m         625Mi           
+
+2026-11-24T12:54:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        1064Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   674m         625Mi           
+
+2026-11-24T12:54:58Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        1062Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   1000m        745Mi           
+
+2026-11-24T12:55:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        1062Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   1000m        745Mi           
+
+2026-11-24T12:55:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      17m          799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        1059Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   1000m        745Mi           
+
+2026-11-24T12:55:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      17m          799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        1059Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   1000m        745Mi           
+
+2026-11-24T12:55:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        1096Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   1000m        767Mi           
+
+2026-11-24T12:55:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        1096Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   1000m        767Mi           
+
+2026-11-24T12:55:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   379m         1095Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   1000m        794Mi           
+
+2026-11-24T12:55:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   379m         1095Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   1000m        794Mi           
+
+2026-11-24T12:56:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           799Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   2m           1095Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   1001m        817Mi           
+
+2026-11-24T12:56:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      72m          805Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   928m         1308Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   729m         1058Mi          
+
+2026-11-24T12:56:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      72m          805Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   928m         1308Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   729m         1058Mi          
+
+2026-11-24T12:56:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      395m         848Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   827m         1505Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   919m         1422Mi          
+
+2026-11-24T12:56:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      395m         848Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   827m         1505Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   919m         1422Mi          
+
+2026-11-24T12:56:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      397m         879Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   959m         1528Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   817m         1456Mi          
+
+2026-11-24T12:56:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      397m         879Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   817m         1456Mi          
+
+2026-11-24T12:57:03Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      528m         914Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   578m         1455Mi          
+
+2026-11-24T12:57:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      528m         914Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   578m         1455Mi          
+
+2026-11-24T12:57:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      171m         926Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   628m         1432Mi          
+p3-batch-500-e2-tg6mq-exec-5   spark-kubernetes-executor   539m         625Mi           
+
+2026-11-24T12:57:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      668m         945Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   628m         1432Mi          
+p3-batch-500-e2-tg6mq-exec-5   spark-kubernetes-executor   837m         704Mi           
+
+2026-11-24T12:57:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      668m         945Mi           
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   628m         1432Mi          
+p3-batch-500-e2-tg6mq-exec-5   spark-kubernetes-executor   837m         704Mi           
+
+2026-11-24T12:57:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      593m         1025Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   640m         1447Mi          
+p3-batch-500-e2-tg6mq-exec-5   spark-kubernetes-executor   845m         761Mi           
+
+2026-11-24T12:57:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      593m         1025Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   640m         1447Mi          
+p3-batch-500-e2-tg6mq-exec-5   spark-kubernetes-executor   845m         761Mi           
+
+2026-11-24T12:58:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      593m         1025Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   640m         1447Mi          
+p3-batch-500-e2-tg6mq-exec-5   spark-kubernetes-executor   826m         816Mi           
+
+2026-11-24T12:58:10Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      593m         1025Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   640m         1447Mi          
+p3-batch-500-e2-tg6mq-exec-5   spark-kubernetes-executor   826m         816Mi           
+
+2026-11-24T12:58:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      92m          1042Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   957m         1449Mi          
+p3-batch-500-e2-tg6mq-exec-5   spark-kubernetes-executor   930m         973Mi           
+
+2026-11-24T12:58:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      92m          1042Mi          
+p3-batch-500-e2-tg6mq-exec-4   spark-kubernetes-executor   957m         1449Mi          
+p3-batch-500-e2-tg6mq-exec-5   spark-kubernetes-executor   930m         973Mi           
+
+2026-11-24T12:58:35Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq   driver   533m         1141Mi          
+
+2026-11-24T12:58:44Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq   driver   775m         302Mi           
+
+2026-11-24T12:58:52Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq   driver   775m         302Mi           
+
+2026-11-24T12:59:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      530m         528Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   585m         342Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   689m         510Mi           
+
+2026-11-24T12:59:09Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      530m         528Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   585m         342Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   689m         510Mi           
+
+2026-11-24T12:59:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      530m         528Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   999m         680Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   984m         737Mi           
+
+2026-11-24T12:59:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      530m         528Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   999m         680Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   984m         737Mi           
+
+2026-11-24T12:59:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      109m         542Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   929m         855Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   961m         970Mi           
+
+2026-11-24T12:59:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      109m         542Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   929m         855Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   961m         970Mi           
+
+2026-11-24T12:59:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      17m          542Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        896Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         985Mi           
+
+2026-11-24T12:59:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      16m          544Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        896Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         996Mi           
+
+2026-11-24T13:00:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      16m          544Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        896Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         996Mi           
+
+2026-11-24T13:00:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      82m          555Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   547m         1023Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   924m         1129Mi          
+
+2026-11-24T13:00:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      82m          555Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   547m         1023Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   924m         1129Mi          
+
+2026-11-24T13:00:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      50m          551Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   753m         1113Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   924m         1129Mi          
+
+2026-11-24T13:00:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      50m          551Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   753m         1113Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   924m         1129Mi          
+
+2026-11-24T13:00:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      789m         618Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   664m         1123Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   750m         1130Mi          
+
+2026-11-24T13:00:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      789m         618Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   664m         1123Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   750m         1130Mi          
+
+2026-11-24T13:01:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      789m         618Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   664m         1123Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   933m         1172Mi          
+
+2026-11-24T13:01:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           618Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   979m         1201Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1160Mi          
+
+2026-11-24T13:01:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           618Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   979m         1201Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1160Mi          
+
+2026-11-24T13:01:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           618Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1243Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1160Mi          
+
+2026-11-24T13:01:39Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           618Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1243Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1160Mi          
+
+2026-11-24T13:01:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           608Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1263Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1150Mi          
+
+2026-11-24T13:01:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           608Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1263Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1150Mi          
+
+2026-11-24T13:02:03Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           595Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1263Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   1000m        1148Mi          
+
+2026-11-24T13:02:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           595Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1263Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   1000m        1148Mi          
+
+2026-11-24T13:02:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           595Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1275Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   1000m        1148Mi          
+
+2026-11-24T13:02:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      8m           595Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1271Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1152Mi          
+
+2026-11-24T13:02:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      8m           595Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1271Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1152Mi          
+
+2026-11-24T13:02:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           595Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1308Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1159Mi          
+
+2026-11-24T13:02:53Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           595Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1308Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1159Mi          
+
+2026-11-24T13:03:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           596Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1304Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1156Mi          
+
+2026-11-24T13:03:10Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           596Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1304Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1156Mi          
+
+2026-11-24T13:03:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      11m          596Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1333Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1157Mi          
+
+2026-11-24T13:03:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      11m          596Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1333Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1157Mi          
+
+2026-11-24T13:03:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           596Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1333Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1157Mi          
+
+2026-11-24T13:03:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      223m         632Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   792m         1336Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   868m         1177Mi          
+
+2026-11-24T13:03:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      223m         632Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   792m         1336Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   868m         1177Mi          
+
+2026-11-24T13:04:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      145m         641Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   847m         1416Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   809m         1184Mi          
+
+2026-11-24T13:04:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      145m         641Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   809m         1184Mi          
+
+2026-11-24T13:04:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      191m         822Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   808m         1356Mi          
+
+2026-11-24T13:04:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      191m         822Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   808m         1356Mi          
+
+2026-11-24T13:04:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           822Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   993m         1361Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   998m         645Mi           
+
+2026-11-24T13:04:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           822Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   993m         1361Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   998m         645Mi           
+
+2026-11-24T13:04:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           822Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1384Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        667Mi           
+
+2026-11-24T13:04:58Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           804Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1413Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        753Mi           
+
+2026-11-24T13:05:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           804Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1413Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        753Mi           
+
+2026-11-24T13:05:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           804Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1431Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        753Mi           
+
+2026-11-24T13:05:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           804Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1431Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1000m        753Mi           
+
+2026-11-24T13:05:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           802Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1430Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1002m        750Mi           
+
+2026-11-24T13:05:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           802Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1430Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1002m        750Mi           
+
+2026-11-24T13:05:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           802Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1438Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   166m         760Mi           
+
+2026-11-24T13:05:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           802Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1438Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   166m         760Mi           
+
+2026-11-24T13:06:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           802Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1434Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   1m           760Mi           
+
+2026-11-24T13:06:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      354m         841Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   547m         1150Mi          
+
+2026-11-24T13:06:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      354m         841Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   547m         1150Mi          
+
+2026-11-24T13:06:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      117m         864Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   780m         1394Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   781m         703Mi           
+
+2026-11-24T13:06:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      117m         864Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   780m         1394Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   781m         703Mi           
+
+2026-11-24T13:06:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      110m         869Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   848m         1443Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   420m         788Mi           
+
+2026-11-24T13:06:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      110m         869Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   848m         1443Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   420m         788Mi           
+
+2026-11-24T13:07:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      421m         905Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   820m         1449Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   420m         788Mi           
+
+2026-11-24T13:07:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      421m         905Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   820m         1449Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   420m         788Mi           
+
+2026-11-24T13:07:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      625m         958Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   749m         1437Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   645m         815Mi           
+
+2026-11-24T13:07:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      625m         958Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   601m         1454Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   708m         871Mi           
+
+2026-11-24T13:07:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      625m         958Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   601m         1454Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   708m         871Mi           
+
+2026-11-24T13:07:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      808m         1083Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   601m         1454Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   875m         952Mi           
+
+2026-11-24T13:07:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      808m         1083Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   875m         952Mi           
+
+2026-11-24T13:08:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      138m         1085Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   989m         1102Mi          
+p3-batch-500-e2-tg6mq-exec-7   spark-kubernetes-executor   514m         359Mi           
+
+2026-11-24T13:08:10Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      138m         1085Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   989m         1102Mi          
+p3-batch-500-e2-tg6mq-exec-7   spark-kubernetes-executor   514m         359Mi           
+
+2026-11-24T13:08:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      50m          1092Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   416m         1112Mi          
+p3-batch-500-e2-tg6mq-exec-7   spark-kubernetes-executor   1004m        526Mi           
+
+2026-11-24T13:08:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      50m          1092Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   416m         1112Mi          
+p3-batch-500-e2-tg6mq-exec-7   spark-kubernetes-executor   1004m        526Mi           
+
+2026-11-24T13:08:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      46m          1086Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   685m         1111Mi          
+p3-batch-500-e2-tg6mq-exec-7   spark-kubernetes-executor   598m         738Mi           
+
+2026-11-24T13:08:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      46m          1086Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   896m         1109Mi          
+p3-batch-500-e2-tg6mq-exec-7   spark-kubernetes-executor   523m         793Mi           
+
+2026-11-24T13:08:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      46m          1086Mi          
+p3-batch-500-e2-tg6mq-exec-6   spark-kubernetes-executor   896m         1109Mi          
+p3-batch-500-e2-tg6mq-exec-7   spark-kubernetes-executor   523m         793Mi           
+
+2026-11-24T13:09:00Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq   driver   497m         219Mi           
+
+2026-11-24T13:09:09Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq   driver   497m         219Mi           
+
+2026-11-24T13:09:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      781m         521Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   721m         541Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   716m         547Mi           
+
+2026-11-24T13:09:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      781m         521Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   721m         541Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   716m         547Mi           
+
+2026-11-24T13:09:34Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      781m         521Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        561Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         829Mi           
+
+2026-11-24T13:09:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      781m         521Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        561Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         829Mi           
+
+2026-11-24T13:09:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      90m          536Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        793Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   931m         930Mi           
+
+2026-11-24T13:09:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      20m          535Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   908m         891Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   1000m        976Mi           
+
+2026-11-24T13:10:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      20m          535Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   908m         891Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   1000m        976Mi           
+
+2026-11-24T13:10:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      16m          538Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   997m         900Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   974m         984Mi           
+
+2026-11-24T13:10:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      16m          538Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   997m         900Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   974m         984Mi           
+
+2026-11-24T13:10:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      16m          538Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   997m         900Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   1001m        983Mi           
+
+2026-11-24T13:10:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      16m          538Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   997m         900Mi           
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   1001m        983Mi           
+
+2026-11-24T13:10:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      86m          558Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   571m         1058Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   819m         1128Mi          
+
+2026-11-24T13:10:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      86m          558Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   571m         1058Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   819m         1128Mi          
+
+2026-11-24T13:11:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      418m         602Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   549m         1129Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   626m         1138Mi          
+
+2026-11-24T13:11:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      527m         623Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   814m         1172Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   723m         1180Mi          
+
+2026-11-24T13:11:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      527m         623Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   814m         1172Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   723m         1180Mi          
+
+2026-11-24T13:11:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           623Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1166Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1180Mi          
+
+2026-11-24T13:11:39Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           623Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1166Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1180Mi          
+
+2026-11-24T13:11:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           622Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1168Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1167Mi          
+
+2026-11-24T13:11:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           622Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1168Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1167Mi          
+
+2026-11-24T13:12:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           617Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1179Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1167Mi          
+
+2026-11-24T13:12:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           617Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1179Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1167Mi          
+
+2026-11-24T13:12:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      11m          594Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1179Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1159Mi          
+
+2026-11-24T13:12:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           594Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1175Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1158Mi          
+
+2026-11-24T13:12:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           594Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1175Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1158Mi          
+
+2026-11-24T13:12:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           594Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1206Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1163Mi          
+
+2026-11-24T13:12:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      6m           594Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1206Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1163Mi          
+
+2026-11-24T13:13:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           594Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1216Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1160Mi          
+
+2026-11-24T13:13:10Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           594Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1216Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   999m         1160Mi          
+
+2026-11-24T13:13:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           595Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1220Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   1000m        1199Mi          
+
+2026-11-24T13:13:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      7m           595Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1220Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   1000m        1199Mi          
+
+2026-11-24T13:13:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           595Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1000m        1218Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   997m         1197Mi          
+
+2026-11-24T13:13:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           595Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1004m        1217Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1204Mi          
+
+2026-11-24T13:13:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      5m           595Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   1004m        1217Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   998m         1204Mi          
+
+2026-11-24T13:14:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      29m          596Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   997m         1238Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   739m         1218Mi          
+
+2026-11-24T13:14:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      29m          596Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   997m         1238Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   739m         1218Mi          
+
+2026-11-24T13:14:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      29m          596Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   691m         1265Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   739m         1218Mi          
+
+2026-11-24T13:14:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      29m          596Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   691m         1265Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   739m         1218Mi          
+
+2026-11-24T13:14:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      285m         641Mi           
+p3-batch-500-e2-tg6mq-exec-1   spark-kubernetes-executor   814m         1449Mi          
+p3-batch-500-e2-tg6mq-exec-2   spark-kubernetes-executor   878m         1295Mi          
+
+2026-11-24T13:14:42Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq   driver   285m         641Mi           
+
+2026-11-24T13:14:50Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq   driver   443m         839Mi           
+
+2026-11-24T13:14:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      116m         846Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   999m         1066Mi          
+p3-batch-500-e2-tg6mq-exec-8   spark-kubernetes-executor   997m         794Mi           
+
+2026-11-24T13:15:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      116m         846Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   999m         1066Mi          
+p3-batch-500-e2-tg6mq-exec-8   spark-kubernetes-executor   997m         794Mi           
+
+2026-11-24T13:15:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      56m          848Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   957m         1172Mi          
+p3-batch-500-e2-tg6mq-exec-8   spark-kubernetes-executor   986m         834Mi           
+
+2026-11-24T13:15:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      56m          848Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   957m         1172Mi          
+p3-batch-500-e2-tg6mq-exec-8   spark-kubernetes-executor   986m         834Mi           
+
+2026-11-24T13:15:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      315m         862Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   971m         1190Mi          
+p3-batch-500-e2-tg6mq-exec-8   spark-kubernetes-executor   795m         928Mi           
+
+2026-11-24T13:15:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      315m         862Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   971m         1190Mi          
+p3-batch-500-e2-tg6mq-exec-8   spark-kubernetes-executor   795m         928Mi           
+
+2026-11-24T13:15:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      506m         877Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   603m         1214Mi          
+p3-batch-500-e2-tg6mq-exec-8   spark-kubernetes-executor   864m         957Mi           
+
+2026-11-24T13:15:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      506m         877Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   603m         1214Mi          
+p3-batch-500-e2-tg6mq-exec-8   spark-kubernetes-executor   864m         957Mi           
+
+2026-11-24T13:16:06Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      600m         942Mi           
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   673m         1225Mi          
+p3-batch-500-e2-tg6mq-exec-8   spark-kubernetes-executor   636m         966Mi           
+
+2026-11-24T13:16:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      719m         1030Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   775m         1258Mi          
+p3-batch-500-e2-tg6mq-exec-8   spark-kubernetes-executor   753m         1049Mi          
+
+2026-11-24T13:16:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      719m         1030Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   775m         1258Mi          
+p3-batch-500-e2-tg6mq-exec-8   spark-kubernetes-executor   753m         1049Mi          
+
+2026-11-24T13:16:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      93m          1031Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   896m         1397Mi          
+p3-batch-500-e2-tg6mq-exec-8   spark-kubernetes-executor   923m         1240Mi          
+
+2026-11-24T13:16:39Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      93m          1031Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   896m         1397Mi          
+p3-batch-500-e2-tg6mq-exec-8   spark-kubernetes-executor   923m         1240Mi          
+
+2026-11-24T13:16:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      81m          1036Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   783m         1399Mi          
+p3-batch-500-e2-tg6mq-exec-8   spark-kubernetes-executor   989m         1242Mi          
+
+2026-11-24T13:16:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e2-tg6mq          driver                      81m          1036Mi          
+p3-batch-500-e2-tg6mq-exec-3   spark-kubernetes-executor   783m         1399Mi          
+p3-batch-500-e2-tg6mq-exec-8   spark-kubernetes-executor   989m         1242Mi          

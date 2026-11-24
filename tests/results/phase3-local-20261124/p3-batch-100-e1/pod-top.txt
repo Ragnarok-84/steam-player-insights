@@ -1,0 +1,480 @@
+
+2026-11-24T10:58:49Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww   driver   1075m        411Mi           
+
+2026-11-24T10:58:58Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww   driver   1075m        411Mi           
+
+2026-11-24T10:59:06Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      779m         502Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   790m         610Mi           
+
+2026-11-24T10:59:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      116m         513Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   1000m        680Mi           
+
+2026-11-24T10:59:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      116m         513Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   1000m        680Mi           
+
+2026-11-24T10:59:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      77m          520Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   999m         822Mi           
+
+2026-11-24T10:59:39Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      77m          520Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   999m         822Mi           
+
+2026-11-24T10:59:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      78m          527Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   977m         958Mi           
+
+2026-11-24T10:59:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      78m          527Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   977m         958Mi           
+
+2026-11-24T11:00:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      91m          540Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   809m         975Mi           
+
+2026-11-24T11:00:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      91m          540Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   809m         975Mi           
+
+2026-11-24T11:00:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      583m         597Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   691m         1025Mi          
+
+2026-11-24T11:00:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      187m         607Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   1000m        1026Mi          
+
+2026-11-24T11:00:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      187m         607Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   1000m        1026Mi          
+
+2026-11-24T11:00:46Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      9m           607Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   1000m        1013Mi          
+
+2026-11-24T11:00:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      9m           607Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   1000m        1013Mi          
+
+2026-11-24T11:01:03Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      6m           606Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   1000m        1013Mi          
+
+2026-11-24T11:01:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      6m           606Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   1000m        1013Mi          
+
+2026-11-24T11:01:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      7m           588Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   1000m        998Mi           
+
+2026-11-24T11:01:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      7m           588Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   1000m        998Mi           
+
+2026-11-24T11:01:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      8m           583Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   1000m        1005Mi          
+
+2026-11-24T11:01:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      6m           583Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   1000m        1005Mi          
+
+2026-11-24T11:01:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      6m           583Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   1000m        1005Mi          
+
+2026-11-24T11:02:01Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      63m          585Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   778m         1008Mi          
+
+2026-11-24T11:02:09Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      63m          585Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   778m         1008Mi          
+
+2026-11-24T11:02:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      442m         620Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   833m         1211Mi          
+
+2026-11-24T11:02:26Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      442m         620Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   833m         1211Mi          
+
+2026-11-24T11:02:34Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      522m         802Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   827m         1330Mi          
+
+2026-11-24T11:02:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      522m         802Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   827m         1330Mi          
+
+2026-11-24T11:02:51Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      285m         820Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   878m         1390Mi          
+
+2026-11-24T11:02:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      822m         935Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   743m         1399Mi          
+
+2026-11-24T11:03:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      822m         935Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   743m         1399Mi          
+
+2026-11-24T11:03:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      822m         935Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   743m         1399Mi          
+
+2026-11-24T11:03:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      822m         935Mi           
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   743m         1399Mi          
+
+2026-11-24T11:03:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      410m         1027Mi          
+p3-batch-100-e1-hf8ww-exec-1   spark-kubernetes-executor   769m         1380Mi          
+
+2026-11-24T11:03:41Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww   driver   410m         1027Mi          
+
+2026-11-24T11:03:50Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww   driver   729m         42Mi            
+
+2026-11-24T11:03:58Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww   driver   729m         42Mi            
+
+2026-11-24T11:04:06Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      930m         499Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   682m         527Mi           
+
+2026-11-24T11:04:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      117m         534Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   1000m        672Mi           
+
+2026-11-24T11:04:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      117m         534Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   1000m        672Mi           
+
+2026-11-24T11:04:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      64m          537Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   982m         804Mi           
+
+2026-11-24T11:04:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      64m          537Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   982m         804Mi           
+
+2026-11-24T11:04:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      66m          542Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   984m         968Mi           
+
+2026-11-24T11:04:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      66m          542Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   984m         968Mi           
+
+2026-11-24T11:05:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      184m         572Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   984m         968Mi           
+
+2026-11-24T11:05:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      184m         572Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   984m         968Mi           
+
+2026-11-24T11:05:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      897m         625Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   744m         974Mi           
+
+2026-11-24T11:05:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      51m          626Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   955m         1013Mi          
+
+2026-11-24T11:05:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      51m          626Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   955m         1013Mi          
+
+2026-11-24T11:05:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      12m          626Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   955m         1013Mi          
+
+2026-11-24T11:05:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      12m          626Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   955m         1013Mi          
+
+2026-11-24T11:06:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      7m           605Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   1000m        993Mi           
+
+2026-11-24T11:06:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      7m           605Mi           
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   1000m        993Mi           
+
+2026-11-24T11:07:46Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   796m         1365Mi          
+
+2026-11-24T11:07:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   796m         1365Mi          
+
+2026-11-24T11:08:03Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      647m         1001Mi          
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   802m         1378Mi          
+
+2026-11-24T11:08:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      647m         1001Mi          
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   802m         1378Mi          
+
+2026-11-24T11:08:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      1145m        1125Mi          
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   802m         1378Mi          
+
+2026-11-24T11:08:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      1145m        1125Mi          
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   802m         1378Mi          
+
+2026-11-24T11:08:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      1145m        1125Mi          
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   652m         1368Mi          
+
+2026-11-24T11:08:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      372m         1202Mi          
+p3-batch-100-e1-hf8ww-exec-2   spark-kubernetes-executor   913m         1375Mi          
+
+2026-11-24T11:08:53Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww   driver   372m         1202Mi          
+
+2026-11-24T11:09:01Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww   driver   372m         1202Mi          
+
+2026-11-24T11:09:09Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww   driver   372m         1202Mi          
+
+2026-11-24T11:09:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      751m         520Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   595m         377Mi           
+
+2026-11-24T11:09:26Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      751m         520Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   595m         377Mi           
+
+2026-11-24T11:09:34Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      93m          541Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   985m         623Mi           
+
+2026-11-24T11:09:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      93m          541Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   985m         623Mi           
+
+2026-11-24T11:09:51Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      20m          542Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   1001m        796Mi           
+
+2026-11-24T11:09:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      113m         574Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   998m         796Mi           
+
+2026-11-24T11:10:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      113m         574Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   998m         796Mi           
+
+2026-11-24T11:10:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      275m         590Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   851m         961Mi           
+
+2026-11-24T11:10:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      275m         590Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   851m         961Mi           
+
+2026-11-24T11:10:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      924m         635Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   769m         977Mi           
+
+2026-11-24T11:10:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      924m         635Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   769m         977Mi           
+
+2026-11-24T11:10:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      10m          634Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   955m         1005Mi          
+
+2026-11-24T11:10:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      10m          634Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   955m         1005Mi          
+
+2026-11-24T11:11:06Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      5m           633Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   1000m        1009Mi          
+
+2026-11-24T11:11:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      9m           630Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   1000m        987Mi           
+
+2026-11-24T11:11:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      9m           630Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   1000m        987Mi           
+
+2026-11-24T11:11:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      12m          608Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   1000m        987Mi           
+
+2026-11-24T11:11:39Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      12m          608Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   1000m        987Mi           
+
+2026-11-24T11:11:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      5m           608Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   1000m        991Mi           
+
+2026-11-24T11:11:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      5m           608Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   1000m        991Mi           
+
+2026-11-24T11:12:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      135m         633Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   622m         1006Mi          
+
+2026-11-24T11:12:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      135m         633Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   622m         1006Mi          
+
+2026-11-24T11:12:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      385m         840Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   920m         1207Mi          
+
+2026-11-24T11:12:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      428m         861Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   920m         1207Mi          
+
+2026-11-24T11:12:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      428m         861Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   920m         1207Mi          
+
+2026-11-24T11:12:46Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      389m         898Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   869m         1364Mi          
+
+2026-11-24T11:12:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      389m         898Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   869m         1364Mi          
+
+2026-11-24T11:13:03Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      723m         957Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   813m         1371Mi          
+
+2026-11-24T11:13:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      723m         957Mi           
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   813m         1371Mi          
+
+2026-11-24T11:13:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      744m         1066Mi          
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   699m         1375Mi          
+
+2026-11-24T11:13:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      744m         1066Mi          
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   699m         1375Mi          
+
+2026-11-24T11:13:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      744m         1066Mi          
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   762m         1360Mi          
+
+2026-11-24T11:13:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e1-hf8ww          driver                      352m         1148Mi          
+p3-batch-100-e1-hf8ww-exec-3   spark-kubernetes-executor   925m         1370Mi          

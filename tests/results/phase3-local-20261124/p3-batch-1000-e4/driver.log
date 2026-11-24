@@ -1,0 +1,25 @@
+[bench] scale=1000 executors=4 run=1/3 raw=hdfs://namenode:8020/steam/bench/raw_1000 lake=hdfs://namenode:8020/steam/bench/runs/p3-batch-1000-e4/r1
+[bench]   spark_startup=8.8s b2=117.8s b5=267.8s b3=56.6s b4=7.7s b6=16.1s b7=5.6s b8=12.6s b9=105.0s total_pipeline=493.0s  (wall 611.3s)
+[bench] scale=1000 executors=4 run=2/3 raw=hdfs://namenode:8020/steam/bench/raw_1000 lake=hdfs://namenode:8020/steam/bench/runs/p3-batch-1000-e4/r2
+[bench]   spark_startup=10.3s b2=118.5s b5=305.1s b3=60.0s b4=8.2s b6=16.6s b7=4.8s b8=14.0s b9=83.6s total_pipeline=537.5s  (wall 636.2s)
+[bench] scale=1000 executors=4 run=3/3 raw=hdfs://namenode:8020/steam/bench/raw_1000 lake=hdfs://namenode:8020/steam/bench/runs/p3-batch-1000-e4/r3
+[bench]   spark_startup=9.2s b2=117.1s b5=293.5s b3=65.9s b4=7.6s b6=16.1s b7=5.5s b8=13.1s b9=73.7s total_pipeline=527.9s  (wall 616.4s)
+
+=== Batch scale=1000: median seconds / speedup (baseline e=4) ===
+job                     e=4 (s / x)     records       MiB  files   peakMB
+-------------------------------------------------------------------------
+spark_startup         9.23 /  1.00x                                 416.0
+b2                  117.80 /  1.00x      928860   439.632    198    672.2
+b5                  293.47 /  1.00x      486335     5.886    197    877.3
+b3                   59.98 /  1.00x      498397     4.762     15   1000.5
+b4                    7.65 /  1.00x        5310     0.131      5   1018.6
+b6                   16.14 /  1.00x      297193     6.237      7   1060.9
+b7                    5.47 /  1.00x        2700     0.026      2   1065.5
+b8                   13.05 /  1.00x        1005     0.121      5   1129.5
+b9                   83.61 /  1.00x          62     0.006      2   1277.2
+total_pipeline      527.92 /  1.00x     2219800   456.791    429   1129.5
+
+Results: tests/results/batch_raw_scale1000_20261124.csv
+Results: tests/results/batch_raw_scale1000_details_20261124.csv
+Results: tests/results/batch_raw_scale1000_summary_20261124.csv
+Results: tests/results/batch_ml_scale1000_20261124.csv

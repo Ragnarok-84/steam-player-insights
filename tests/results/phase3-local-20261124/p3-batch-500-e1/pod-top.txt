@@ -1,0 +1,1980 @@
+
+2026-11-24T11:49:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      1038m        485Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   752m         690Mi           
+
+2026-11-24T11:49:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      1038m        485Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   752m         690Mi           
+
+2026-11-24T11:49:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      188m         538Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   951m         937Mi           
+
+2026-11-24T11:49:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      188m         538Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   951m         937Mi           
+
+2026-11-24T11:50:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      188m         538Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   951m         937Mi           
+
+2026-11-24T11:50:10Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      188m         538Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   951m         937Mi           
+
+2026-11-24T11:50:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      57m          541Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   966m         945Mi           
+
+2026-11-24T11:50:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      57m          541Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   966m         945Mi           
+
+2026-11-24T11:50:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      56m          557Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   998m         1025Mi          
+
+2026-11-24T11:50:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      12m          553Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1033Mi          
+
+2026-11-24T11:50:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      12m          553Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1033Mi          
+
+2026-11-24T11:51:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      13m          554Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1036Mi          
+
+2026-11-24T11:51:09Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      13m          554Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1036Mi          
+
+2026-11-24T11:51:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      16m          553Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1037Mi          
+
+2026-11-24T11:51:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      16m          553Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1037Mi          
+
+2026-11-24T11:51:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      55m          557Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   997m         1040Mi          
+
+2026-11-24T11:51:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      55m          557Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   997m         1040Mi          
+
+2026-11-24T11:51:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      95m          563Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   946m         1161Mi          
+
+2026-11-24T11:51:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      192m         584Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   754m         1176Mi          
+
+2026-11-24T11:52:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      192m         584Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   754m         1176Mi          
+
+2026-11-24T11:52:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      569m         642Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   851m         1212Mi          
+
+2026-11-24T11:52:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      569m         642Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   851m         1212Mi          
+
+2026-11-24T11:52:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           642Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   999m         1213Mi          
+
+2026-11-24T11:52:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           642Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   999m         1213Mi          
+
+2026-11-24T11:52:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           641Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1202Mi          
+
+2026-11-24T11:52:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           641Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1202Mi          
+
+2026-11-24T11:53:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           631Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1214Mi          
+
+2026-11-24T11:53:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           617Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1207Mi          
+
+2026-11-24T11:53:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           617Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1207Mi          
+
+2026-11-24T11:53:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           617Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1220Mi          
+
+2026-11-24T11:53:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           617Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1220Mi          
+
+2026-11-24T11:53:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           618Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1241Mi          
+
+2026-11-24T11:53:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           618Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1241Mi          
+
+2026-11-24T11:54:03Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           618Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1278Mi          
+
+2026-11-24T11:54:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           618Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1278Mi          
+
+2026-11-24T11:54:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           618Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1278Mi          
+
+2026-11-24T11:54:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           618Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1280Mi          
+
+2026-11-24T11:54:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           618Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1280Mi          
+
+2026-11-24T11:54:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           618Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1291Mi          
+
+2026-11-24T11:54:53Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           618Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1291Mi          
+
+2026-11-24T11:55:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           618Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1298Mi          
+
+2026-11-24T11:55:10Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           618Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1298Mi          
+
+2026-11-24T11:55:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           618Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1294Mi          
+
+2026-11-24T11:55:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           618Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1294Mi          
+
+2026-11-24T11:55:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           619Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1327Mi          
+
+2026-11-24T11:55:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           619Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1335Mi          
+
+2026-11-24T11:55:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           619Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1335Mi          
+
+2026-11-24T11:56:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           619Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1331Mi          
+
+2026-11-24T11:56:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           619Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1331Mi          
+
+2026-11-24T11:56:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           619Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1354Mi          
+
+2026-11-24T11:56:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           619Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1354Mi          
+
+2026-11-24T11:56:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           619Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1350Mi          
+
+2026-11-24T11:56:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           619Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1350Mi          
+
+2026-11-24T11:56:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           619Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1381Mi          
+
+2026-11-24T11:56:58Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           619Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1385Mi          
+
+2026-11-24T11:57:06Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           619Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1385Mi          
+
+2026-11-24T11:57:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           619Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1385Mi          
+
+2026-11-24T11:57:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           619Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1385Mi          
+
+2026-11-24T11:57:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      37m          623Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   712m         1436Mi          
+
+2026-11-24T11:57:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      37m          623Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   712m         1436Mi          
+
+2026-11-24T11:57:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      241m         648Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   996m         1483Mi          
+
+2026-11-24T11:57:56Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   241m         648Mi           
+
+2026-11-24T11:58:05Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   100m         663Mi           
+
+2026-11-24T11:58:13Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   100m         663Mi           
+
+2026-11-24T11:58:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      27m          665Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   986m         692Mi           
+
+2026-11-24T11:58:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           660Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   997m         738Mi           
+
+2026-11-24T11:58:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           660Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   997m         738Mi           
+
+2026-11-24T11:58:46Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           657Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         816Mi           
+
+2026-11-24T11:58:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           657Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         816Mi           
+
+2026-11-24T11:59:03Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           649Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         847Mi           
+
+2026-11-24T11:59:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           649Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         847Mi           
+
+2026-11-24T11:59:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         879Mi           
+
+2026-11-24T11:59:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         879Mi           
+
+2026-11-24T11:59:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1001m        901Mi           
+
+2026-11-24T11:59:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   996m         928Mi           
+
+2026-11-24T11:59:53Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   996m         928Mi           
+
+2026-11-24T12:00:01Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1002m        928Mi           
+
+2026-11-24T12:00:09Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1002m        928Mi           
+
+2026-11-24T12:00:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      10m          650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   997m         1079Mi          
+
+2026-11-24T12:00:26Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      10m          650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   997m         1079Mi          
+
+2026-11-24T12:00:34Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      10m          650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1080Mi          
+
+2026-11-24T12:00:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      10m          650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1080Mi          
+
+2026-11-24T12:00:51Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1079Mi          
+
+2026-11-24T12:00:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1094Mi          
+
+2026-11-24T12:01:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1094Mi          
+
+2026-11-24T12:01:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1104Mi          
+
+2026-11-24T12:01:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1104Mi          
+
+2026-11-24T12:01:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1001m        1134Mi          
+
+2026-11-24T12:01:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1001m        1134Mi          
+
+2026-11-24T12:01:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   996m         1142Mi          
+
+2026-11-24T12:01:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   996m         1142Mi          
+
+2026-11-24T12:02:06Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   996m         1143Mi          
+
+2026-11-24T12:02:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1138Mi          
+
+2026-11-24T12:02:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1138Mi          
+
+2026-11-24T12:02:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1138Mi          
+
+2026-11-24T12:02:39Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1138Mi          
+
+2026-11-24T12:02:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      9m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1170Mi          
+
+2026-11-24T12:02:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      9m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1170Mi          
+
+2026-11-24T12:03:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1185Mi          
+
+2026-11-24T12:03:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1185Mi          
+
+2026-11-24T12:03:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1187Mi          
+
+2026-11-24T12:03:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      11m          650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1218Mi          
+
+2026-11-24T12:03:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      11m          650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1218Mi          
+
+2026-11-24T12:03:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      149m         815Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   942m         1388Mi          
+
+2026-11-24T12:03:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      149m         815Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   942m         1388Mi          
+
+2026-11-24T12:04:02Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   417m         845Mi           
+
+2026-11-24T12:04:10Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   417m         845Mi           
+
+2026-11-24T12:04:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      170m         872Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   999m         1070Mi          
+
+2026-11-24T12:04:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      170m         872Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   999m         1070Mi          
+
+2026-11-24T12:04:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      35m          873Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   991m         1244Mi          
+
+2026-11-24T12:04:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      122m         878Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   932m         1290Mi          
+
+2026-11-24T12:04:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      122m         878Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   932m         1290Mi          
+
+2026-11-24T12:05:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      264m         879Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   976m         1333Mi          
+
+2026-11-24T12:05:09Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      264m         879Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   976m         1333Mi          
+
+2026-11-24T12:05:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      566m         921Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   976m         1333Mi          
+
+2026-11-24T12:05:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      566m         921Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   976m         1333Mi          
+
+2026-11-24T12:05:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      688m         1013Mi          
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   800m         1341Mi          
+
+2026-11-24T12:05:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      688m         1013Mi          
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   800m         1341Mi          
+
+2026-11-24T12:05:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      799m         1062Mi          
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   782m         1380Mi          
+
+2026-11-24T12:05:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      72m          1062Mi          
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   789m         1388Mi          
+
+2026-11-24T12:06:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      72m          1062Mi          
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   789m         1388Mi          
+
+2026-11-24T12:06:15Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   87m          1065Mi          
+
+2026-11-24T12:06:24Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   87m          1065Mi          
+
+2026-11-24T12:06:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           1063Mi          
+p3-batch-500-e1-72w4d-exec-4   spark-kubernetes-executor   983m         779Mi           
+
+2026-11-24T12:06:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           1063Mi          
+p3-batch-500-e1-72w4d-exec-4   spark-kubernetes-executor   983m         779Mi           
+
+2026-11-24T12:06:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      72m          1053Mi          
+p3-batch-500-e1-72w4d-exec-4   spark-kubernetes-executor   989m         838Mi           
+
+2026-11-24T12:06:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      72m          1053Mi          
+p3-batch-500-e1-72w4d-exec-4   spark-kubernetes-executor   989m         838Mi           
+
+2026-11-24T12:07:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      48m          1055Mi          
+p3-batch-500-e1-72w4d-exec-4   spark-kubernetes-executor   985m         889Mi           
+
+2026-11-24T12:07:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      469m         1071Mi          
+p3-batch-500-e1-72w4d-exec-4   spark-kubernetes-executor   927m         1003Mi          
+
+2026-11-24T12:07:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      469m         1071Mi          
+p3-batch-500-e1-72w4d-exec-4   spark-kubernetes-executor   927m         1003Mi          
+
+2026-11-24T12:07:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      257m         1081Mi          
+p3-batch-500-e1-72w4d-exec-4   spark-kubernetes-executor   927m         1003Mi          
+
+2026-11-24T12:07:38Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   257m         1081Mi          
+
+2026-11-24T12:07:47Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   888m         337Mi           
+
+2026-11-24T12:07:55Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   888m         337Mi           
+
+2026-11-24T12:08:03Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      456m         543Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   640m         396Mi           
+
+2026-11-24T12:08:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      456m         543Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   640m         396Mi           
+
+2026-11-24T12:08:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      85m          551Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   993m         747Mi           
+
+2026-11-24T12:08:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           552Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   979m         924Mi           
+
+2026-11-24T12:08:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           552Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   979m         924Mi           
+
+2026-11-24T12:08:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      45m          557Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   977m         1008Mi          
+
+2026-11-24T12:08:53Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      45m          557Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   977m         1008Mi          
+
+2026-11-24T12:09:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      13m          557Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   997m         1018Mi          
+
+2026-11-24T12:09:10Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      13m          557Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   997m         1018Mi          
+
+2026-11-24T12:09:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      19m          558Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   993m         1029Mi          
+
+2026-11-24T12:09:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      19m          558Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   993m         1029Mi          
+
+2026-11-24T12:09:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      19m          558Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   998m         1022Mi          
+
+2026-11-24T12:09:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      8m           558Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   998m         1029Mi          
+
+2026-11-24T12:09:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      8m           558Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   998m         1029Mi          
+
+2026-11-24T12:10:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      25m          555Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   975m         1157Mi          
+
+2026-11-24T12:10:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      25m          555Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   975m         1157Mi          
+
+2026-11-24T12:10:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      91m          571Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   858m         1182Mi          
+
+2026-11-24T12:10:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      91m          571Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   858m         1182Mi          
+
+2026-11-24T12:10:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      90m          573Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   634m         1193Mi          
+
+2026-11-24T12:10:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      90m          573Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   634m         1193Mi          
+
+2026-11-24T12:10:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      721m         629Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   880m         1227Mi          
+
+2026-11-24T12:10:58Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           628Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1239Mi          
+
+2026-11-24T12:11:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           628Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1239Mi          
+
+2026-11-24T12:11:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           629Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1264Mi          
+
+2026-11-24T12:11:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           629Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1264Mi          
+
+2026-11-24T12:11:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           629Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1272Mi          
+
+2026-11-24T12:11:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           629Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1272Mi          
+
+2026-11-24T12:11:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           605Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1292Mi          
+
+2026-11-24T12:11:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           605Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1292Mi          
+
+2026-11-24T12:12:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           605Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1319Mi          
+
+2026-11-24T12:12:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           605Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1316Mi          
+
+2026-11-24T12:12:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           605Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1316Mi          
+
+2026-11-24T12:12:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1351Mi          
+
+2026-11-24T12:12:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1351Mi          
+
+2026-11-24T12:12:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1364Mi          
+
+2026-11-24T12:12:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1364Mi          
+
+2026-11-24T12:13:03Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1376Mi          
+
+2026-11-24T12:13:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1376Mi          
+
+2026-11-24T12:13:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1376Mi          
+
+2026-11-24T12:13:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1391Mi          
+
+2026-11-24T12:13:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1391Mi          
+
+2026-11-24T12:13:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1420Mi          
+
+2026-11-24T12:13:53Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1420Mi          
+
+2026-11-24T12:14:01Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1420Mi          
+
+2026-11-24T12:14:10Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1420Mi          
+
+2026-11-24T12:14:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1419Mi          
+
+2026-11-24T12:14:26Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1419Mi          
+
+2026-11-24T12:14:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1435Mi          
+
+2026-11-24T12:14:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           606Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1435Mi          
+
+2026-11-24T12:14:51Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           607Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1465Mi          
+
+2026-11-24T12:15:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           607Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1461Mi          
+
+2026-11-24T12:15:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           607Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1461Mi          
+
+2026-11-24T12:15:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           607Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1473Mi          
+
+2026-11-24T12:15:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           607Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1473Mi          
+
+2026-11-24T12:15:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           608Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1480Mi          
+
+2026-11-24T12:15:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           608Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1480Mi          
+
+2026-11-24T12:15:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           607Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1479Mi          
+
+2026-11-24T12:15:58Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           607Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1479Mi          
+
+2026-11-24T12:16:06Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      251m         648Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   730m         1484Mi          
+
+2026-11-24T12:16:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      62m          639Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   978m         1507Mi          
+
+2026-11-24T12:16:23Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   62m          639Mi           
+
+2026-11-24T12:16:31Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   116m         658Mi           
+
+2026-11-24T12:16:39Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   116m         658Mi           
+
+2026-11-24T12:16:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      26m          659Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         681Mi           
+
+2026-11-24T12:16:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      26m          659Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         681Mi           
+
+2026-11-24T12:17:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           659Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1001m        730Mi           
+
+2026-11-24T12:17:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           659Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1001m        730Mi           
+
+2026-11-24T12:17:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           651Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         806Mi           
+
+2026-11-24T12:17:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        838Mi           
+
+2026-11-24T12:17:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           650Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        838Mi           
+
+2026-11-24T12:17:46Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        872Mi           
+
+2026-11-24T12:17:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        872Mi           
+
+2026-11-24T12:18:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        892Mi           
+
+2026-11-24T12:18:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        892Mi           
+
+2026-11-24T12:18:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        890Mi           
+
+2026-11-24T12:18:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        890Mi           
+
+2026-11-24T12:18:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        994Mi           
+
+2026-11-24T12:18:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      8m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1004Mi          
+
+2026-11-24T12:18:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      8m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1004Mi          
+
+2026-11-24T12:19:01Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1006Mi          
+
+2026-11-24T12:19:09Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1006Mi          
+
+2026-11-24T12:19:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1001m        1017Mi          
+
+2026-11-24T12:19:26Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1001m        1017Mi          
+
+2026-11-24T12:19:34Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1030Mi          
+
+2026-11-24T12:19:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1030Mi          
+
+2026-11-24T12:19:51Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1029Mi          
+
+2026-11-24T12:19:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1025Mi          
+
+2026-11-24T12:20:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1025Mi          
+
+2026-11-24T12:20:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1067Mi          
+
+2026-11-24T12:20:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1067Mi          
+
+2026-11-24T12:20:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1074Mi          
+
+2026-11-24T12:20:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1074Mi          
+
+2026-11-24T12:20:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1074Mi          
+
+2026-11-24T12:20:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1074Mi          
+
+2026-11-24T12:21:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1099Mi          
+
+2026-11-24T12:21:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1096Mi          
+
+2026-11-24T12:21:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1096Mi          
+
+2026-11-24T12:21:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1123Mi          
+
+2026-11-24T12:21:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1123Mi          
+
+2026-11-24T12:21:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1144Mi          
+
+2026-11-24T12:21:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1144Mi          
+
+2026-11-24T12:22:03Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1135Mi          
+
+2026-11-24T12:22:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           646Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        1135Mi          
+
+2026-11-24T12:22:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      171m         798Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   925m         1291Mi          
+
+2026-11-24T12:22:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      461m         854Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   950m         1343Mi          
+
+2026-11-24T12:22:37Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   461m         854Mi           
+
+2026-11-24T12:22:45Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   48m          856Mi           
+
+2026-11-24T12:22:53Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   48m          856Mi           
+
+2026-11-24T12:23:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      40m          862Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   1001m        884Mi           
+
+2026-11-24T12:23:10Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      40m          862Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   1001m        884Mi           
+
+2026-11-24T12:23:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           862Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   995m         1280Mi          
+
+2026-11-24T12:23:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           862Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   995m         1280Mi          
+
+2026-11-24T12:23:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      91m          854Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   963m         1300Mi          
+
+2026-11-24T12:23:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      282m         887Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   917m         1312Mi          
+
+2026-11-24T12:23:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      282m         887Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   917m         1312Mi          
+
+2026-11-24T12:24:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      513m         915Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   822m         1323Mi          
+
+2026-11-24T12:24:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      513m         915Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   822m         1323Mi          
+
+2026-11-24T12:24:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      553m         952Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   729m         1332Mi          
+
+2026-11-24T12:24:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      553m         952Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   729m         1332Mi          
+
+2026-11-24T12:24:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      635m         1011Mi          
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   870m         1362Mi          
+
+2026-11-24T12:24:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      635m         1011Mi          
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   870m         1362Mi          
+
+2026-11-24T12:24:50Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   108m         1009Mi          
+
+2026-11-24T12:24:58Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   41m          1008Mi          
+
+2026-11-24T12:25:07Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   41m          1008Mi          
+
+2026-11-24T12:25:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      8m           1004Mi          
+p3-batch-500-e1-72w4d-exec-5   spark-kubernetes-executor   1000m        770Mi           
+
+2026-11-24T12:25:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      8m           1004Mi          
+p3-batch-500-e1-72w4d-exec-5   spark-kubernetes-executor   1000m        770Mi           
+
+2026-11-24T12:25:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      35m          991Mi           
+p3-batch-500-e1-72w4d-exec-5   spark-kubernetes-executor   991m         841Mi           
+
+2026-11-24T12:25:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      35m          991Mi           
+p3-batch-500-e1-72w4d-exec-5   spark-kubernetes-executor   991m         841Mi           
+
+2026-11-24T12:25:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      76m          998Mi           
+p3-batch-500-e1-72w4d-exec-5   spark-kubernetes-executor   999m         879Mi           
+
+2026-11-24T12:25:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      76m          998Mi           
+p3-batch-500-e1-72w4d-exec-5   spark-kubernetes-executor   999m         879Mi           
+
+2026-11-24T12:26:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      476m         1062Mi          
+p3-batch-500-e1-72w4d-exec-5   spark-kubernetes-executor   940m         972Mi           
+
+2026-11-24T12:26:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      212m         1070Mi          
+p3-batch-500-e1-72w4d-exec-5   spark-kubernetes-executor   943m         996Mi           
+
+2026-11-24T12:26:22Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   212m         1070Mi          
+
+2026-11-24T12:26:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      1008m        622Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   583m         370Mi           
+
+2026-11-24T12:26:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      1008m        622Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   583m         370Mi           
+
+2026-11-24T12:26:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      13m          620Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   997m         622Mi           
+
+2026-11-24T12:26:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      13m          620Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   997m         622Mi           
+
+2026-11-24T12:27:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      101m         625Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   994m         890Mi           
+
+2026-11-24T12:27:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      101m         625Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   994m         890Mi           
+
+2026-11-24T12:27:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      101m         625Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   942m         945Mi           
+
+2026-11-24T12:27:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      33m          631Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1016Mi          
+
+2026-11-24T12:27:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      33m          631Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1016Mi          
+
+2026-11-24T12:27:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      33m          631Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1016Mi          
+
+2026-11-24T12:27:53Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      33m          631Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1016Mi          
+
+2026-11-24T12:28:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      9m           631Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   991m         1034Mi          
+
+2026-11-24T12:28:10Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      9m           631Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   991m         1034Mi          
+
+2026-11-24T12:28:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      18m          632Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   991m         1034Mi          
+
+2026-11-24T12:28:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      18m          632Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   991m         1034Mi          
+
+2026-11-24T12:28:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      26m          631Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1001m        1037Mi          
+
+2026-11-24T12:28:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      63m          636Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   999m         1039Mi          
+
+2026-11-24T12:28:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      63m          636Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   999m         1039Mi          
+
+2026-11-24T12:29:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      76m          639Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   934m         1174Mi          
+
+2026-11-24T12:29:09Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      76m          639Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   934m         1174Mi          
+
+2026-11-24T12:29:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      378m         695Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   801m         1197Mi          
+
+2026-11-24T12:29:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      378m         695Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   801m         1197Mi          
+
+2026-11-24T12:29:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      326m         702Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   920m         1227Mi          
+
+2026-11-24T12:29:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      326m         702Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   920m         1227Mi          
+
+2026-11-24T12:29:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           702Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1228Mi          
+
+2026-11-24T12:29:58Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           702Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1215Mi          
+
+2026-11-24T12:30:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           702Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1215Mi          
+
+2026-11-24T12:30:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           698Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1213Mi          
+
+2026-11-24T12:30:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           698Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1213Mi          
+
+2026-11-24T12:30:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           677Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1205Mi          
+
+2026-11-24T12:30:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           677Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1205Mi          
+
+2026-11-24T12:30:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           677Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1216Mi          
+
+2026-11-24T12:30:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           677Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1216Mi          
+
+2026-11-24T12:31:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      8m           678Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1212Mi          
+
+2026-11-24T12:31:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      9m           679Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1244Mi          
+
+2026-11-24T12:31:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      9m           679Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1244Mi          
+
+2026-11-24T12:31:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      9m           679Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1243Mi          
+
+2026-11-24T12:31:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      9m           679Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1243Mi          
+
+2026-11-24T12:31:46Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           679Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1264Mi          
+
+2026-11-24T12:31:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           679Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1264Mi          
+
+2026-11-24T12:32:03Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           679Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1283Mi          
+
+2026-11-24T12:32:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           679Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1283Mi          
+
+2026-11-24T12:32:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           679Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1294Mi          
+
+2026-11-24T12:32:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           679Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1294Mi          
+
+2026-11-24T12:32:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           679Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1307Mi          
+
+2026-11-24T12:32:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           680Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1001m        1329Mi          
+
+2026-11-24T12:32:53Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           680Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1001m        1329Mi          
+
+2026-11-24T12:33:01Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           680Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   999m         1335Mi          
+
+2026-11-24T12:33:09Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           680Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   999m         1335Mi          
+
+2026-11-24T12:33:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           680Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1332Mi          
+
+2026-11-24T12:33:26Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           680Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1332Mi          
+
+2026-11-24T12:33:34Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           680Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1361Mi          
+
+2026-11-24T12:33:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           680Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1361Mi          
+
+2026-11-24T12:33:51Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           683Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1358Mi          
+
+2026-11-24T12:33:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           684Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1366Mi          
+
+2026-11-24T12:34:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           684Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1366Mi          
+
+2026-11-24T12:34:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           684Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1378Mi          
+
+2026-11-24T12:34:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           684Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   1000m        1378Mi          
+
+2026-11-24T12:34:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           683Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   937m         1402Mi          
+
+2026-11-24T12:34:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           683Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   937m         1402Mi          
+
+2026-11-24T12:34:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      277m         706Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   866m         1438Mi          
+
+2026-11-24T12:34:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      277m         706Mi           
+p3-batch-500-e1-72w4d-exec-1   spark-kubernetes-executor   866m         1438Mi          
+
+2026-11-24T12:35:06Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   86m          736Mi           
+
+2026-11-24T12:35:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      49m          738Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   995m         679Mi           
+
+2026-11-24T12:35:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      49m          738Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   995m         679Mi           
+
+2026-11-24T12:35:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           738Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        722Mi           
+
+2026-11-24T12:35:39Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           738Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        722Mi           
+
+2026-11-24T12:35:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           735Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         796Mi           
+
+2026-11-24T12:35:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           735Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         796Mi           
+
+2026-11-24T12:36:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         827Mi           
+
+2026-11-24T12:36:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         827Mi           
+
+2026-11-24T12:36:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           726Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   997m         828Mi           
+
+2026-11-24T12:36:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           726Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         892Mi           
+
+2026-11-24T12:36:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           726Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         892Mi           
+
+2026-11-24T12:36:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           726Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         892Mi           
+
+2026-11-24T12:36:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           726Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         892Mi           
+
+2026-11-24T12:37:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        900Mi           
+
+2026-11-24T12:37:10Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   1000m        900Mi           
+
+2026-11-24T12:37:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1011Mi          
+
+2026-11-24T12:37:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1011Mi          
+
+2026-11-24T12:37:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1011Mi          
+
+2026-11-24T12:37:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1014Mi          
+
+2026-11-24T12:37:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1014Mi          
+
+2026-11-24T12:38:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1027Mi          
+
+2026-11-24T12:38:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1027Mi          
+
+2026-11-24T12:38:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1039Mi          
+
+2026-11-24T12:38:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1039Mi          
+
+2026-11-24T12:38:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1063Mi          
+
+2026-11-24T12:38:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1063Mi          
+
+2026-11-24T12:38:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      5m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   997m         1067Mi          
+
+2026-11-24T12:38:58Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   997m         1075Mi          
+
+2026-11-24T12:39:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   997m         1075Mi          
+
+2026-11-24T12:39:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1071Mi          
+
+2026-11-24T12:39:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1071Mi          
+
+2026-11-24T12:39:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1102Mi          
+
+2026-11-24T12:39:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1102Mi          
+
+2026-11-24T12:39:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1099Mi          
+
+2026-11-24T12:39:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      4m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1099Mi          
+
+2026-11-24T12:40:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      8m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1121Mi          
+
+2026-11-24T12:40:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      9m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1121Mi          
+
+2026-11-24T12:40:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      9m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   999m         1121Mi          
+
+2026-11-24T12:40:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1123Mi          
+
+2026-11-24T12:40:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      6m           727Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1123Mi          
+
+2026-11-24T12:40:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      181m         892Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1155Mi          
+
+2026-11-24T12:40:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      181m         892Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   998m         1155Mi          
+
+2026-11-24T12:41:03Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      225m         915Mi           
+p3-batch-500-e1-72w4d-exec-2   spark-kubernetes-executor   957m         1291Mi          
+
+2026-11-24T12:41:11Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   225m         915Mi           
+
+2026-11-24T12:41:20Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   210m         928Mi           
+
+2026-11-24T12:41:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      42m          937Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   999m         613Mi           
+
+2026-11-24T12:41:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      42m          937Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   999m         613Mi           
+
+2026-11-24T12:41:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      18m          937Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   690m         755Mi           
+
+2026-11-24T12:41:53Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      18m          937Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   690m         755Mi           
+
+2026-11-24T12:42:01Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      87m          928Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   988m         1248Mi          
+
+2026-11-24T12:42:10Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      87m          928Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   988m         1248Mi          
+
+2026-11-24T12:42:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      294m         931Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   970m         1299Mi          
+
+2026-11-24T12:42:26Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      294m         931Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   970m         1299Mi          
+
+2026-11-24T12:42:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      398m         960Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   800m         1310Mi          
+
+2026-11-24T12:42:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      511m         991Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   841m         1322Mi          
+
+2026-11-24T12:42:51Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      511m         991Mi           
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   841m         1322Mi          
+
+2026-11-24T12:43:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      760m         1058Mi          
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   775m         1356Mi          
+
+2026-11-24T12:43:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      760m         1058Mi          
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   775m         1356Mi          
+
+2026-11-24T12:43:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      332m         1065Mi          
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   794m         1369Mi          
+
+2026-11-24T12:43:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      332m         1065Mi          
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   794m         1369Mi          
+
+2026-11-24T12:43:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      74m          1065Mi          
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   998m         1388Mi          
+
+2026-11-24T12:43:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      74m          1065Mi          
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   998m         1388Mi          
+
+2026-11-24T12:43:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      58m          1065Mi          
+p3-batch-500-e1-72w4d-exec-3   spark-kubernetes-executor   993m         1507Mi          
+
+2026-11-24T12:43:58Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   19m          1062Mi          
+
+2026-11-24T12:44:06Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d   driver   19m          1062Mi          
+
+2026-11-24T12:44:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      133m         1072Mi          
+p3-batch-500-e1-72w4d-exec-6   spark-kubernetes-executor   989m         626Mi           
+
+2026-11-24T12:44:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      133m         1072Mi          
+p3-batch-500-e1-72w4d-exec-6   spark-kubernetes-executor   989m         626Mi           
+
+2026-11-24T12:44:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           1069Mi          
+p3-batch-500-e1-72w4d-exec-6   spark-kubernetes-executor   1001m        666Mi           
+
+2026-11-24T12:44:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      7m           1069Mi          
+p3-batch-500-e1-72w4d-exec-6   spark-kubernetes-executor   1001m        666Mi           
+
+2026-11-24T12:44:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      178m         1147Mi          
+p3-batch-500-e1-72w4d-exec-6   spark-kubernetes-executor   968m         811Mi           
+
+2026-11-24T12:44:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-500-e1-72w4d          driver                      178m         1147Mi          
+p3-batch-500-e1-72w4d-exec-6   spark-kubernetes-executor   968m         811Mi           

@@ -1,0 +1,468 @@
+
+2026-11-24T11:14:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      999m         422Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   647m         385Mi           
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   618m         367Mi           
+
+2026-11-24T11:14:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      999m         422Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   647m         385Mi           
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   618m         367Mi           
+
+2026-11-24T11:14:34Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      457m         518Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   1000m        779Mi           
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   997m         716Mi           
+
+2026-11-24T11:14:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      457m         518Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   1000m        779Mi           
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   997m         716Mi           
+
+2026-11-24T11:14:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      73m          531Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   1000m        779Mi           
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   1002m        757Mi           
+
+2026-11-24T11:14:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      342m         584Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   887m         985Mi           
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   722m         967Mi           
+
+2026-11-24T11:15:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      342m         584Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   887m         985Mi           
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   722m         967Mi           
+
+2026-11-24T11:15:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      945m         621Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   919m         1010Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   700m         1019Mi          
+
+2026-11-24T11:15:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      945m         621Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   919m         1010Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   700m         1019Mi          
+
+2026-11-24T11:15:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      7m           624Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   1000m        1020Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   995m         1021Mi          
+
+2026-11-24T11:15:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      7m           624Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   1000m        1020Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   995m         1021Mi          
+
+2026-11-24T11:15:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      9m           621Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   721m         1024Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   996m         1022Mi          
+
+2026-11-24T11:15:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      9m           621Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   721m         1024Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   996m         1022Mi          
+
+2026-11-24T11:16:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      8m           611Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   2m           1019Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   999m         997Mi           
+
+2026-11-24T11:16:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      310m         628Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   68m          1017Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   999m         997Mi           
+
+2026-11-24T11:16:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      310m         628Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   68m          1017Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   999m         997Mi           
+
+2026-11-24T11:16:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      366m         802Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   690m         1212Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   800m         1031Mi          
+
+2026-11-24T11:16:39Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      366m         802Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   690m         1212Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   800m         1031Mi          
+
+2026-11-24T11:16:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      644m         853Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   784m         1229Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   832m         1260Mi          
+
+2026-11-24T11:16:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      644m         853Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   784m         1229Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   832m         1260Mi          
+
+2026-11-24T11:17:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      1132m        956Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   628m         1234Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   682m         1266Mi          
+
+2026-11-24T11:17:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      1132m        956Mi           
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   628m         1234Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   682m         1266Mi          
+
+2026-11-24T11:17:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      1257m        1032Mi          
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   664m         1236Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   552m         1273Mi          
+
+2026-11-24T11:17:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      236m         1041Mi          
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   491m         1242Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   687m         1278Mi          
+
+2026-11-24T11:17:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      236m         1041Mi          
+p3-batch-100-e2-cm794-exec-1   spark-kubernetes-executor   491m         1242Mi          
+p3-batch-100-e2-cm794-exec-2   spark-kubernetes-executor   687m         1278Mi          
+
+2026-11-24T11:17:46Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794   driver   236m         1041Mi          
+
+2026-11-24T11:17:54Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794   driver   236m         1041Mi          
+
+2026-11-24T11:18:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      844m         251Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   605m         345Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   631m         375Mi           
+
+2026-11-24T11:18:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      844m         251Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   605m         345Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   631m         375Mi           
+
+2026-11-24T11:18:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      607m         547Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   997m         614Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   996m         555Mi           
+
+2026-11-24T11:18:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      607m         547Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   997m         614Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   996m         555Mi           
+
+2026-11-24T11:18:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      128m         562Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   1001m        795Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   1003m        690Mi           
+
+2026-11-24T11:18:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      237m         611Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   894m         954Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   977m         922Mi           
+
+2026-11-24T11:18:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      237m         611Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   894m         954Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   977m         922Mi           
+
+2026-11-24T11:19:01Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      787m         652Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   538m         960Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   769m         970Mi           
+
+2026-11-24T11:19:09Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      787m         652Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   538m         960Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   769m         970Mi           
+
+2026-11-24T11:19:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      10m          653Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   1000m        988Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   998m         968Mi           
+
+2026-11-24T11:19:26Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      10m          653Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   1000m        988Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   998m         968Mi           
+
+2026-11-24T11:19:34Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      11m          653Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   1000m        985Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   1001m        979Mi           
+
+2026-11-24T11:19:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      11m          653Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   1000m        985Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   1001m        979Mi           
+
+2026-11-24T11:19:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      11m          653Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   1000m        969Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   183m         981Mi           
+
+2026-11-24T11:19:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      33m          640Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   919m         961Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   3m           974Mi           
+
+2026-11-24T11:20:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      33m          640Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   919m         961Mi           
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   3m           974Mi           
+
+2026-11-24T11:20:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      428m         837Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   866m         1135Mi          
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   454m         1010Mi          
+
+2026-11-24T11:20:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      428m         837Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   866m         1135Mi          
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   454m         1010Mi          
+
+2026-11-24T11:20:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      687m         862Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   828m         1253Mi          
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   678m         1166Mi          
+
+2026-11-24T11:20:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      687m         862Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   828m         1253Mi          
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   678m         1166Mi          
+
+2026-11-24T11:20:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      468m         889Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   740m         1260Mi          
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   779m         1207Mi          
+
+2026-11-24T11:20:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      468m         889Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   740m         1260Mi          
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   779m         1207Mi          
+
+2026-11-24T11:21:06Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      975m         988Mi           
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   537m         1264Mi          
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   553m         1218Mi          
+
+2026-11-24T11:21:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      632m         1056Mi          
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   765m         1269Mi          
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   571m         1236Mi          
+
+2026-11-24T11:21:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      632m         1056Mi          
+p3-batch-100-e2-cm794-exec-3   spark-kubernetes-executor   765m         1269Mi          
+p3-batch-100-e2-cm794-exec-4   spark-kubernetes-executor   571m         1236Mi          
+
+2026-11-24T11:21:31Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794   driver   442m         1124Mi          
+
+2026-11-24T11:21:39Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794   driver   442m         1124Mi          
+
+2026-11-24T11:21:48Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794   driver   846m         555Mi           
+
+2026-11-24T11:21:56Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794   driver   846m         555Mi           
+
+2026-11-24T11:22:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      430m         614Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   894m         586Mi           
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   850m         539Mi           
+
+2026-11-24T11:22:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      430m         614Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   894m         586Mi           
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   850m         539Mi           
+
+2026-11-24T11:22:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      430m         614Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   894m         586Mi           
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   1001m        793Mi           
+
+2026-11-24T11:22:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      59m          615Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   976m         944Mi           
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   1001m        793Mi           
+
+2026-11-24T11:22:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      59m          615Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   976m         944Mi           
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   1001m        793Mi           
+
+2026-11-24T11:22:46Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      387m         663Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   738m         976Mi           
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   801m         952Mi           
+
+2026-11-24T11:22:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      387m         663Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   738m         976Mi           
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   801m         952Mi           
+
+2026-11-24T11:23:03Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      459m         691Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   999m         991Mi           
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   756m         993Mi           
+
+2026-11-24T11:23:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      459m         691Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   999m         991Mi           
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   756m         993Mi           
+
+2026-11-24T11:23:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      20m          692Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   1000m        1006Mi          
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   996m         997Mi           
+
+2026-11-24T11:23:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      20m          692Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   1000m        1006Mi          
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   996m         997Mi           
+
+2026-11-24T11:23:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      9m           692Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   352m         1009Mi          
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   996m         997Mi           
+
+2026-11-24T11:23:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      10m          689Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   2m           1004Mi          
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   998m         981Mi           
+
+2026-11-24T11:23:53Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      10m          689Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   2m           1004Mi          
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   998m         981Mi           
+
+2026-11-24T11:24:01Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      202m         695Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   281m         1028Mi          
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   816m         992Mi           
+
+2026-11-24T11:24:09Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      202m         695Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   281m         1028Mi          
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   816m         992Mi           
+
+2026-11-24T11:24:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      496m         876Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   692m         1207Mi          
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   834m         1172Mi          
+
+2026-11-24T11:24:26Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      496m         876Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   692m         1207Mi          
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   834m         1172Mi          
+
+2026-11-24T11:24:34Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      368m         882Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   851m         1319Mi          
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   827m         1207Mi          
+
+2026-11-24T11:24:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      368m         882Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   851m         1319Mi          
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   827m         1207Mi          
+
+2026-11-24T11:24:51Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      805m         926Mi           
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   851m         1319Mi          
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   736m         1221Mi          
+
+2026-11-24T11:24:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      1166m        1004Mi          
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   554m         1330Mi          
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   618m         1243Mi          
+
+2026-11-24T11:25:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      1166m        1004Mi          
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   554m         1330Mi          
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   618m         1243Mi          
+
+2026-11-24T11:25:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e2-cm794          driver                      326m         1048Mi          
+p3-batch-100-e2-cm794-exec-5   spark-kubernetes-executor   950m         1336Mi          
+p3-batch-100-e2-cm794-exec-6   spark-kubernetes-executor   714m         1259Mi          

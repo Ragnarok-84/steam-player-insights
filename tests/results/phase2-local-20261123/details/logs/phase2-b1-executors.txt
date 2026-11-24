@@ -1,0 +1,40 @@
+Mon Nov 23 14:15:14 UTC 2026
+No resources found in steam-demo namespace.
+Mon Nov 23 14:15:20 UTC 2026
+NAME                                    READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b1-ingest-raw-65a287a208c2dc43-exec-1   1/1     Running   0          3s    10.42.2.4   steam-worker-3   <none>           <none>
+Mon Nov 23 14:15:27 UTC 2026
+NAME                                    READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b1-ingest-raw-65a287a208c2dc43-exec-1   1/1     Running   0          9s    10.42.2.4   steam-worker-3   <none>           <none>
+Mon Nov 23 14:15:33 UTC 2026
+NAME                                    READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b1-ingest-raw-65a287a208c2dc43-exec-1   1/1     Running   0          15s   10.42.2.4   steam-worker-3   <none>           <none>
+Mon Nov 23 14:15:39 UTC 2026
+NAME                                    READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b1-ingest-raw-65a287a208c2dc43-exec-1   1/1     Running   0          21s   10.42.2.4   steam-worker-3   <none>           <none>
+Mon Nov 23 14:15:45 UTC 2026
+NAME                                    READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b1-ingest-raw-65a287a208c2dc43-exec-1   1/1     Running   0          27s   10.42.2.4   steam-worker-3   <none>           <none>
+Mon Nov 23 14:15:51 UTC 2026
+NAME                                    READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b1-ingest-raw-65a287a208c2dc43-exec-1   1/1     Running   0          33s   10.42.2.4   steam-worker-3   <none>           <none>
+Mon Nov 23 14:15:57 UTC 2026
+NAME                                    READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b1-ingest-raw-65a287a208c2dc43-exec-1   1/1     Running   0          39s   10.42.2.4   steam-worker-3   <none>           <none>
+Mon Nov 23 14:16:03 UTC 2026
+NAME                                    READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b1-ingest-raw-65a287a208c2dc43-exec-1   1/1     Running   0          45s   10.42.2.4   steam-worker-3   <none>           <none>
+Mon Nov 23 14:16:09 UTC 2026
+NAME                                    READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b1-ingest-raw-65a287a208c2dc43-exec-1   1/1     Running   0          51s   10.42.2.4   steam-worker-3   <none>           <none>
+Mon Nov 23 14:16:15 UTC 2026
+NAME                                    READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b1-ingest-raw-65a287a208c2dc43-exec-1   1/1     Running   0          57s   10.42.2.4   steam-worker-3   <none>           <none>
+Mon Nov 23 14:16:21 UTC 2026
+NAME                                    READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b1-ingest-raw-65a287a208c2dc43-exec-1   1/1     Running   0          64s   10.42.2.4   steam-worker-3   <none>           <none>
+Mon Nov 23 14:16:28 UTC 2026
+NAME                                    READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b1-ingest-raw-65a287a208c2dc43-exec-1   1/1     Running   0          70s   10.42.2.4   steam-worker-3   <none>           <none>
+Mon Nov 23 14:16:34 UTC 2026
+No resources found in steam-demo namespace.

@@ -1,0 +1,110 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "creationTimestamp": "2026-11-23T14:12:08Z",
+    "generateName": "demo-smoke-extra-",
+    "generation": 1,
+    "labels": {
+      "app": "demo-smoke"
+    },
+    "name": "demo-smoke-extra-cv9r8",
+    "namespace": "steam-demo",
+    "resourceVersion": "2912",
+    "uid": "ea7846ec-405a-4794-8a69-963ff944f326"
+  },
+  "spec": {
+    "activeDeadlineSeconds": 1800,
+    "backoffLimit": 0,
+    "completionMode": "NonIndexed",
+    "completions": 1,
+    "manualSelector": false,
+    "parallelism": 1,
+    "podReplacementPolicy": "TerminatingOrFailed",
+    "selector": {
+      "matchLabels": {
+        "batch.kubernetes.io/controller-uid": "ea7846ec-405a-4794-8a69-963ff944f326"
+      }
+    },
+    "suspend": false,
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "demo-smoke",
+          "batch.kubernetes.io/controller-uid": "ea7846ec-405a-4794-8a69-963ff944f326",
+          "batch.kubernetes.io/job-name": "demo-smoke-extra-cv9r8",
+          "controller-uid": "ea7846ec-405a-4794-8a69-963ff944f326",
+          "job-name": "demo-smoke-extra-cv9r8"
+        }
+      },
+      "spec": {
+        "automountServiceAccountToken": false,
+        "containers": [
+          {
+            "command": [
+              "python",
+              "-m",
+              "infra.k3s.smoke"
+            ],
+            "env": [
+              {
+                "name": "PYSPARK_SUBMIT_ARGS",
+                "value": "--master local[2] --driver-memory 2g --conf spark.sql.shuffle.partitions=4 --conf spark.hadoop.dfs.client.use.datanode.hostname=true pyspark-shell"
+              }
+            ],
+            "image": "localhost/steam-spark-demo:k3s-20261120-af8377d",
+            "imagePullPolicy": "Never",
+            "name": "spark",
+            "resources": {
+              "limits": {
+                "cpu": "2",
+                "memory": "4Gi"
+              },
+              "requests": {
+                "cpu": "1",
+                "memory": "3Gi"
+              }
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File"
+          }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "nodeSelector": {
+          "kubernetes.io/hostname": "steam-worker-3"
+        },
+        "restartPolicy": "Never",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "terminationGracePeriodSeconds": 30
+      }
+    },
+    "ttlSecondsAfterFinished": 86400
+  },
+  "status": {
+    "completionTime": "2026-11-23T14:12:34Z",
+    "conditions": [
+      {
+        "lastProbeTime": "2026-11-23T14:12:34Z",
+        "lastTransitionTime": "2026-11-23T14:12:34Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "SuccessCriteriaMet"
+      },
+      {
+        "lastProbeTime": "2026-11-23T14:12:34Z",
+        "lastTransitionTime": "2026-11-23T14:12:34Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "Complete"
+      }
+    ],
+    "ready": 0,
+    "startTime": "2026-11-23T14:12:08Z",
+    "succeeded": 1,
+    "terminating": 0,
+    "uncountedTerminatedPods": {}
+  }
+}

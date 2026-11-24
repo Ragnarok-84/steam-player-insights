@@ -1,0 +1,19 @@
+Found 18 items
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:30 /steam/curated/aspect_stats
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:36 /steam/curated/ccu_baseline
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:37 /steam/curated/cluster_profiles
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:35 /steam/curated/event_impact
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:37 /steam/curated/game_clusters
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:33 /steam/curated/game_daily_stats
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:33 /steam/curated/game_period_stats
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:34 /steam/curated/game_retention
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:31 /steam/curated/keywords
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:33 /steam/curated/language_stats
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:34 /steam/curated/playtime_buckets
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:36 /steam/curated/review_baseline
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:30 /steam/curated/review_sentiment
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:33 /steam/curated/segment_stats
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:39 /steam/curated/sentiment_model_metrics
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:39 /steam/curated/sentiment_model_terms
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:35 /steam/curated/trending
+drwxr-xr-x   - hdfs supergroup          0 2026-11-23 14:35 /steam/curated/trending_top

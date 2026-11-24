@@ -1,0 +1,111 @@
+{
+  "source_git_sha": "af8377d963553131d7ade426f646417e2d64ba3a",
+  "spark_image_tag": "localhost/steam-spark:k3s-20261120-af8377d",
+  "spark_image_id": "a67245da4bcedf4496b2796e804f47c441eccdf7ba5dd78de4e47d15c32185d7",
+  "spark_image_label_revision": "af8377d",
+  "namespace": "steam-demo",
+  "topology": "Four Ubuntu VMs on one Windows Hyper-V host",
+  "physical_hosts": 1,
+  "guest_total_vcpus": 8,
+  "guest_total_ram_gib": 16,
+  "batch_executor": {
+    "instances": 1,
+    "cores": 1,
+    "heap": "2g",
+    "overhead": "1024m",
+    "node": "steam-worker-3"
+  },
+  "peak_cpu_memory_timeseries_available": false,
+  "jobs": {
+    "demo-smoke-5zr5t": {
+      "node": "steam-worker-2",
+      "container_images": {
+        "spark": {
+          "image": "localhost/steam-spark-demo:k3s-20261120-af8377d",
+          "image_id": "sha256:a67245da4bcedf4496b2796e804f47c441eccdf7ba5dd78de4e47d15c32185d7"
+        }
+      }
+    },
+    "demo-smoke-extra-cv9r8": {
+      "node": "steam-worker-3",
+      "container_images": {
+        "spark": {
+          "image": "localhost/steam-spark-demo:k3s-20261120-af8377d",
+          "image_id": "sha256:a67245da4bcedf4496b2796e804f47c441eccdf7ba5dd78de4e47d15c32185d7"
+        }
+      }
+    },
+    "phase2-b1": {
+      "node": "steam-worker-2",
+      "container_images": {
+        "b1": {
+          "image": "localhost/steam-spark-demo:k3s-20261120-af8377d",
+          "image_id": "sha256:a67245da4bcedf4496b2796e804f47c441eccdf7ba5dd78de4e47d15c32185d7"
+        }
+      }
+    },
+    "phase2-batch": {
+      "node": "steam-worker-2",
+      "container_images": {
+        "batch": {
+          "image": "localhost/steam-spark-demo:k3s-20261120-af8377d",
+          "image_id": "sha256:a67245da4bcedf4496b2796e804f47c441eccdf7ba5dd78de4e47d15c32185d7"
+        }
+      }
+    },
+    "phase2-inject": {
+      "node": "steam-worker-2",
+      "container_images": {
+        "inject": {
+          "image": "localhost/steam-spark-demo:k3s-20261120-af8377d",
+          "image_id": "sha256:a67245da4bcedf4496b2796e804f47c441eccdf7ba5dd78de4e47d15c32185d7"
+        }
+      }
+    },
+    "phase2-kibana-setup": {
+      "node": "steam-worker-2",
+      "container_images": {
+        "kibana-setup": {
+          "image": "localhost/steam-spark-demo:k3s-20261120-af8377d",
+          "image_id": "sha256:a67245da4bcedf4496b2796e804f47c441eccdf7ba5dd78de4e47d15c32185d7"
+        }
+      }
+    },
+    "phase2-replay-1000": {
+      "node": "steam-server",
+      "container_images": {
+        "replay": {
+          "image": "docker.io/library/python:3.11-slim-bookworm",
+          "image_id": "docker.io/library/python@sha256:a83ba18aef0f865b1a4a611c2cf460fe446f2795673bbb9fe43be570439e3b39"
+        }
+      }
+    },
+    "phase2-s1": {
+      "node": "steam-worker-2",
+      "container_images": {
+        "s1": {
+          "image": "localhost/steam-spark-demo:k3s-20261120-af8377d",
+          "image_id": "sha256:a67245da4bcedf4496b2796e804f47c441eccdf7ba5dd78de4e47d15c32185d7"
+        }
+      }
+    },
+    "phase2-s2": {
+      "node": "steam-worker-2",
+      "container_images": {
+        "s2": {
+          "image": "localhost/steam-spark-demo:k3s-20261120-af8377d",
+          "image_id": "sha256:a67245da4bcedf4496b2796e804f47c441eccdf7ba5dd78de4e47d15c32185d7"
+        }
+      }
+    },
+    "phase2-s3": {
+      "node": "steam-worker-2",
+      "container_images": {
+        "s3": {
+          "image": "localhost/steam-spark-demo:k3s-20261120-af8377d",
+          "image_id": "sha256:a67245da4bcedf4496b2796e804f47c441eccdf7ba5dd78de4e47d15c32185d7"
+        }
+      }
+    }
+  }
+}

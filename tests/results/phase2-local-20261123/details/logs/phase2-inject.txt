@@ -1,0 +1,8 @@
+2026-11-23T14:40:11.934627843Z Setting default log level to "WARN".
+2026-11-23T14:40:11.934712046Z To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-11-23T14:40:12.152204150Z 26/11/23 14:40:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2026-11-23T14:40:17.494080808Z /opt/phase2/phase2-stream.py:44: DeprecationWarning: key_serializer does not implement kafka.serializer.Serializer
+2026-11-23T14:40:17.494102420Z   producer = SteamKafkaProducer()
+2026-11-23T14:40:17.494103923Z /opt/phase2/phase2-stream.py:44: DeprecationWarning: value_serializer does not implement kafka.serializer.Serializer
+2026-11-23T14:40:17.494104781Z   producer = SteamKafkaProducer()
+2026-11-23T14:40:17.710188085Z {"source": "demo_injection", "review_appid": 1930, "negative_reviews": 80, "ccu_appid": 570, "ccu_hour_utc": 5, "ccu_samples": 3, "ccu_baseline": 350851.0, "injected_players": 1052553}

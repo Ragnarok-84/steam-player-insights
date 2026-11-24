@@ -1,0 +1,6 @@
+2026-11-23T14:41:11.147358111Z Setting default log level to "WARN".
+2026-11-23T14:41:11.147405124Z To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-11-23T14:41:11.288868133Z 26/11/23 14:41:11 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2026-11-23T14:41:14.047201038Z 26/11/23 14:41:14 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+2026-11-23T14:41:14.587632181Z 26/11/23 14:41:14 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+2026-11-23T14:41:23.249173514Z S3 processed Kafka input and completed: {"s3_ccu": 3}

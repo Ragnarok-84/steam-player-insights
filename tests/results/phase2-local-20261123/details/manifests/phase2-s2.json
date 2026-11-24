@@ -1,0 +1,182 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "creationTimestamp": "2026-11-23T14:40:48Z",
+    "generation": 1,
+    "labels": {
+      "batch.kubernetes.io/controller-uid": "8a58ea02-7c0d-492a-8f1a-3b3464352573",
+      "batch.kubernetes.io/job-name": "phase2-s2",
+      "controller-uid": "8a58ea02-7c0d-492a-8f1a-3b3464352573",
+      "job-name": "phase2-s2"
+    },
+    "name": "phase2-s2",
+    "namespace": "steam-demo",
+    "resourceVersion": "4276",
+    "uid": "8a58ea02-7c0d-492a-8f1a-3b3464352573"
+  },
+  "spec": {
+    "activeDeadlineSeconds": 3600,
+    "backoffLimit": 0,
+    "completionMode": "NonIndexed",
+    "completions": 1,
+    "manualSelector": false,
+    "parallelism": 1,
+    "podReplacementPolicy": "TerminatingOrFailed",
+    "selector": {
+      "matchLabels": {
+        "batch.kubernetes.io/controller-uid": "8a58ea02-7c0d-492a-8f1a-3b3464352573"
+      }
+    },
+    "suspend": false,
+    "template": {
+      "metadata": {
+        "labels": {
+          "batch.kubernetes.io/controller-uid": "8a58ea02-7c0d-492a-8f1a-3b3464352573",
+          "batch.kubernetes.io/job-name": "phase2-s2",
+          "controller-uid": "8a58ea02-7c0d-492a-8f1a-3b3464352573",
+          "job-name": "phase2-s2"
+        }
+      },
+      "spec": {
+        "automountServiceAccountToken": false,
+        "containers": [
+          {
+            "command": [
+              "python3",
+              "/opt/phase2/phase2-stream.py",
+              "s2",
+              "--starting-offsets",
+              "{\"steam.reviews.raw\":{\"0\":932293}}",
+              "--checkpoint",
+              "hdfs://namenode:8020/steam/checkpoints/phase2-s2"
+            ],
+            "env": [
+              {
+                "name": "PIPELINE_PROFILE",
+                "value": "cluster"
+              },
+              {
+                "name": "HDFS_NAMENODE_URL",
+                "value": "hdfs://namenode:8020"
+              },
+              {
+                "name": "HDFS_RAW_PATH",
+                "value": "hdfs://namenode:8020/steam/raw"
+              },
+              {
+                "name": "HDFS_CLEAN_PATH",
+                "value": "hdfs://namenode:8020/steam/clean"
+              },
+              {
+                "name": "HDFS_CURATED_PATH",
+                "value": "hdfs://namenode:8020/steam/curated"
+              },
+              {
+                "name": "HDFS_CHECKPOINT_PATH",
+                "value": "hdfs://namenode:8020/steam/checkpoints"
+              },
+              {
+                "name": "HADOOP_USER_NAME",
+                "value": "hdfs"
+              },
+              {
+                "name": "KAFKA_BOOTSTRAP_SERVERS",
+                "value": "kafka:9092"
+              },
+              {
+                "name": "ELASTICSEARCH_HOSTS",
+                "value": "http://elasticsearch:9200"
+              },
+              {
+                "name": "PYTHONUNBUFFERED",
+                "value": "1"
+              },
+              {
+                "name": "SPARK_SHUFFLE_PARTITIONS",
+                "value": "6"
+              },
+              {
+                "name": "SPARK_DRIVER_MEMORY",
+                "value": "2g"
+              },
+              {
+                "name": "SPARK_MASTER",
+                "value": "local[2]"
+              },
+              {
+                "name": "SPARK_EXTRA_CONF",
+                "value": "spark.hadoop.dfs.client.use.datanode.hostname=true;spark.hadoop.dfs.replication=1"
+              }
+            ],
+            "image": "localhost/steam-spark:k3s-20261120-af8377d",
+            "imagePullPolicy": "Never",
+            "name": "s2",
+            "resources": {
+              "limits": {
+                "cpu": "2",
+                "memory": "4300Mi"
+              },
+              "requests": {
+                "cpu": "1",
+                "memory": "3Gi"
+              }
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "volumeMounts": [
+              {
+                "mountPath": "/opt/phase2",
+                "name": "phase2-scripts",
+                "readOnly": true
+              }
+            ]
+          }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "nodeSelector": {
+          "kubernetes.io/hostname": "steam-worker-2"
+        },
+        "restartPolicy": "Never",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "terminationGracePeriodSeconds": 30,
+        "volumes": [
+          {
+            "configMap": {
+              "defaultMode": 420,
+              "name": "phase2-scripts"
+            },
+            "name": "phase2-scripts"
+          }
+        ]
+      }
+    }
+  },
+  "status": {
+    "completionTime": "2026-11-23T14:41:06Z",
+    "conditions": [
+      {
+        "lastProbeTime": "2026-11-23T14:41:06Z",
+        "lastTransitionTime": "2026-11-23T14:41:06Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "SuccessCriteriaMet"
+      },
+      {
+        "lastProbeTime": "2026-11-23T14:41:06Z",
+        "lastTransitionTime": "2026-11-23T14:41:06Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "Complete"
+      }
+    ],
+    "ready": 0,
+    "startTime": "2026-11-23T14:40:48Z",
+    "succeeded": 1,
+    "terminating": 0,
+    "uncountedTerminatedPods": {}
+  }
+}

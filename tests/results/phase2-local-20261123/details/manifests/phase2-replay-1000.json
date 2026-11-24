@@ -1,0 +1,152 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{},\"name\":\"phase2-replay-1000\",\"namespace\":\"steam-demo\"},\"spec\":{\"activeDeadlineSeconds\":1800,\"backoffLimit\":0,\"template\":{\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"args\":[\"pip install --no-cache-dir 'kafka-python==3.0.11' 'python-dotenv==1.2.3'\\npython -B -m crawlers.replay_jsonl_to_kafka --raw /input/raw --rate 10000\\n\"],\"command\":[\"bash\",\"-ec\"],\"env\":[{\"name\":\"KAFKA_BOOTSTRAP_SERVERS\",\"value\":\"kafka:9092\"},{\"name\":\"PYTHONUNBUFFERED\",\"value\":\"1\"},{\"name\":\"PYTHONDONTWRITEBYTECODE\",\"value\":\"1\"}],\"image\":\"python:3.11-slim-bookworm\",\"name\":\"replay\",\"resources\":{\"limits\":{\"cpu\":\"1\",\"memory\":\"512Mi\"},\"requests\":{\"cpu\":\"400m\",\"memory\":\"192Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/input/code\",\"name\":\"code\",\"readOnly\":true},{\"mountPath\":\"/input/raw\",\"name\":\"raw\",\"readOnly\":true}],\"workingDir\":\"/input/code\"}],\"nodeSelector\":{\"kubernetes.io/hostname\":\"steam-server\"},\"restartPolicy\":\"Never\",\"volumes\":[{\"hostPath\":{\"path\":\"/home/steam/phase2-repo\",\"type\":\"Directory\"},\"name\":\"code\"},{\"hostPath\":{\"path\":\"/home/steam/phase2-data/raw\",\"type\":\"Directory\"},\"name\":\"raw\"}]}}}}\n"
+    },
+    "creationTimestamp": "2026-11-23T14:10:45Z",
+    "generation": 1,
+    "labels": {
+      "batch.kubernetes.io/controller-uid": "22f5b1fa-f54f-4fbd-96a7-1e6e6459a33a",
+      "batch.kubernetes.io/job-name": "phase2-replay-1000",
+      "controller-uid": "22f5b1fa-f54f-4fbd-96a7-1e6e6459a33a",
+      "job-name": "phase2-replay-1000"
+    },
+    "name": "phase2-replay-1000",
+    "namespace": "steam-demo",
+    "resourceVersion": "3057",
+    "uid": "22f5b1fa-f54f-4fbd-96a7-1e6e6459a33a"
+  },
+  "spec": {
+    "activeDeadlineSeconds": 1800,
+    "backoffLimit": 0,
+    "completionMode": "NonIndexed",
+    "completions": 1,
+    "manualSelector": false,
+    "parallelism": 1,
+    "podReplacementPolicy": "TerminatingOrFailed",
+    "selector": {
+      "matchLabels": {
+        "batch.kubernetes.io/controller-uid": "22f5b1fa-f54f-4fbd-96a7-1e6e6459a33a"
+      }
+    },
+    "suspend": false,
+    "template": {
+      "metadata": {
+        "labels": {
+          "batch.kubernetes.io/controller-uid": "22f5b1fa-f54f-4fbd-96a7-1e6e6459a33a",
+          "batch.kubernetes.io/job-name": "phase2-replay-1000",
+          "controller-uid": "22f5b1fa-f54f-4fbd-96a7-1e6e6459a33a",
+          "job-name": "phase2-replay-1000"
+        }
+      },
+      "spec": {
+        "automountServiceAccountToken": false,
+        "containers": [
+          {
+            "args": [
+              "pip install --no-cache-dir 'kafka-python==3.0.11' 'python-dotenv==1.2.3'\npython -B -m crawlers.replay_jsonl_to_kafka --raw /input/raw --rate 10000\n"
+            ],
+            "command": [
+              "bash",
+              "-ec"
+            ],
+            "env": [
+              {
+                "name": "KAFKA_BOOTSTRAP_SERVERS",
+                "value": "kafka:9092"
+              },
+              {
+                "name": "PYTHONUNBUFFERED",
+                "value": "1"
+              },
+              {
+                "name": "PYTHONDONTWRITEBYTECODE",
+                "value": "1"
+              }
+            ],
+            "image": "python:3.11-slim-bookworm",
+            "imagePullPolicy": "IfNotPresent",
+            "name": "replay",
+            "resources": {
+              "limits": {
+                "cpu": "1",
+                "memory": "512Mi"
+              },
+              "requests": {
+                "cpu": "400m",
+                "memory": "192Mi"
+              }
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "volumeMounts": [
+              {
+                "mountPath": "/input/code",
+                "name": "code",
+                "readOnly": true
+              },
+              {
+                "mountPath": "/input/raw",
+                "name": "raw",
+                "readOnly": true
+              }
+            ],
+            "workingDir": "/input/code"
+          }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "nodeSelector": {
+          "kubernetes.io/hostname": "steam-server"
+        },
+        "restartPolicy": "Never",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "terminationGracePeriodSeconds": 30,
+        "volumes": [
+          {
+            "hostPath": {
+              "path": "/home/steam/phase2-repo",
+              "type": "Directory"
+            },
+            "name": "code"
+          },
+          {
+            "hostPath": {
+              "path": "/home/steam/phase2-data/raw",
+              "type": "Directory"
+            },
+            "name": "raw"
+          }
+        ]
+      }
+    }
+  },
+  "status": {
+    "completionTime": "2026-11-23T14:15:09Z",
+    "conditions": [
+      {
+        "lastProbeTime": "2026-11-23T14:15:09Z",
+        "lastTransitionTime": "2026-11-23T14:15:09Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "SuccessCriteriaMet"
+      },
+      {
+        "lastProbeTime": "2026-11-23T14:15:09Z",
+        "lastTransitionTime": "2026-11-23T14:15:09Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "Complete"
+      }
+    ],
+    "ready": 0,
+    "startTime": "2026-11-23T14:10:45Z",
+    "succeeded": 1,
+    "terminating": 0,
+    "uncountedTerminatedPods": {}
+  }
+}

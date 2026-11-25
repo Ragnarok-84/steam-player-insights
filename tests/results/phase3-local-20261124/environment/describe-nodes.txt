@@ -1,0 +1,457 @@
+Name:               steam-server
+Roles:              control-plane
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/instance-type=k3s
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=steam-server
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/control-plane=true
+                    node.kubernetes.io/instance-type=k3s
+                    steam.insights/role=storage
+Annotations:        alpha.kubernetes.io/provided-node-ip: 172.31.133.211
+                    flannel.alpha.coreos.com/backend-data: {"VNI":1,"VtepMAC":"1a:b5:f4:ad:86:f1"}
+                    flannel.alpha.coreos.com/backend-type: vxlan
+                    flannel.alpha.coreos.com/kube-subnet-manager: true
+                    flannel.alpha.coreos.com/public-ip: 172.31.133.211
+                    k3s.io/hostname: steam-server
+                    k3s.io/internal-ip: 172.31.133.211
+                    k3s.io/node-args:
+                      ["server","--node-name","steam-server","--flannel-backend","vxlan","--disable","traefik","--disable","servicelb","--write-kubeconfig-mode"...
+                    k3s.io/node-config-hash: MYEQXCIZSCVHCS7V6363S7HWXPLJO5M2OMKLNNO42TXBIGU5CAYQ====
+                    k3s.io/node-env: {}
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Mon, 23 Nov 2026 13:31:32 +0000
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  steam-server
+  AcquireTime:     <unset>
+  RenewTime:       Tue, 24 Nov 2026 10:21:31 +0000
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Tue, 24 Nov 2026 10:21:10 +0000   Mon, 23 Nov 2026 13:31:32 +0000   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Tue, 24 Nov 2026 10:21:10 +0000   Mon, 23 Nov 2026 13:31:32 +0000   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Tue, 24 Nov 2026 10:21:10 +0000   Mon, 23 Nov 2026 13:31:32 +0000   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Tue, 24 Nov 2026 10:21:10 +0000   Mon, 23 Nov 2026 13:31:32 +0000   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  172.31.133.211
+  Hostname:    steam-server
+Capacity:
+  cpu:                2
+  ephemeral-storage:  59848952Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             4009268Ki
+  pods:               110
+Allocatable:
+  cpu:                2
+  ephemeral-storage:  58221060460
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             4009268Ki
+  pods:               110
+System Info:
+  Machine ID:                 4273cd7e604f47979a0bd2773374a529
+  System UUID:                57d46979-f1d6-43e6-ba59-28b9fb192c29
+  Boot ID:                    0971c9d9-25c6-45f7-b62b-04c60a395d1a
+  Kernel Version:             6.8.0-147-generic
+  OS Image:                   Ubuntu 24.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://2.2.7-k3s1
+  Kubelet Version:            v1.34.12+k3s1
+  Kube-Proxy Version:         
+PodCIDR:                      10.42.0.0/24
+PodCIDRs:                     10.42.0.0/24
+ProviderID:                   k3s://steam-server
+Non-terminated Pods:          (5 in total)
+  Namespace                   Name                                       CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                       ------------  ----------  ---------------  -------------  ---
+  kube-system                 coredns-5688c889c9-nm8x6                   100m (5%)     0 (0%)      70Mi (1%)        170Mi (4%)     20h
+  kube-system                 local-path-provisioner-67d6887d65-lgnkk    0 (0%)        0 (0%)      0 (0%)           0 (0%)         20h
+  kube-system                 metrics-server-74c8c4d68b-k4xsn            100m (5%)     0 (0%)      70Mi (1%)        0 (0%)         20h
+  steam-demo                  elasticsearch-0                            250m (12%)    1 (50%)     1Gi (26%)        1536Mi (39%)   20h
+  steam-demo                  namenode-0                                 250m (12%)    1 (50%)     512Mi (13%)      1Gi (26%)      20h
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests      Limits
+  --------           --------      ------
+  cpu                700m (35%)    2 (100%)
+  memory             1676Mi (42%)  2730Mi (69%)
+  ephemeral-storage  0 (0%)        0 (0%)
+  hugepages-1Gi      0 (0%)        0 (0%)
+  hugepages-2Mi      0 (0%)        0 (0%)
+Events:
+  Type     Reason                          Age    From              Message
+  ----     ------                          ----   ----              -------
+  Normal   Starting                        5m33s  kube-proxy        
+  Normal   CertificateExpirationOK         5m34s  k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   Starting                        5m34s  kubelet           Starting kubelet.
+  Normal   NodeAllocatableEnforced         5m33s  kubelet           Updated Node Allocatable limit across pods
+  Normal   NodeHasSufficientMemory         5m33s  kubelet           Node steam-server status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure           5m33s  kubelet           Node steam-server status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID            5m33s  kubelet           Node steam-server status is now: NodeHasSufficientPID
+  Warning  Rebooted                        5m33s  kubelet           Node steam-server has been rebooted, boot id: 0971c9d9-25c6-45f7-b62b-04c60a395d1a
+  Normal   NodePasswordValidationComplete  5m33s  k3s-supervisor    Deferred node password secret validation complete
+  Normal   RegisteredNode                  4m26s  node-controller   Node steam-server event: Registered Node steam-server in Controller
+
+
+Name:               steam-worker-1
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/instance-type=k3s
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=steam-worker-1
+                    kubernetes.io/os=linux
+                    node.kubernetes.io/instance-type=k3s
+                    steam.insights/role=ingest
+Annotations:        alpha.kubernetes.io/provided-node-ip: 172.31.131.54
+                    flannel.alpha.coreos.com/backend-data: {"VNI":1,"VtepMAC":"06:1d:a1:ed:bf:18"}
+                    flannel.alpha.coreos.com/backend-type: vxlan
+                    flannel.alpha.coreos.com/kube-subnet-manager: true
+                    flannel.alpha.coreos.com/public-ip: 172.31.131.54
+                    k3s.io/hostname: steam-worker-1
+                    k3s.io/internal-ip: 172.31.131.54
+                    k3s.io/node-args:
+                      ["agent","--node-name","steam-worker-1","--server","https://172.31.133.211:6443","--token-file","/etc/rancher/k3s/join-token","--node-ip",...
+                    k3s.io/node-config-hash: B3DN7S2VX46H4JSVFWPGCINVKBNG65RI6WIHYIL4K7L6MAALNWCQ====
+                    k3s.io/node-env: {}
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Mon, 23 Nov 2026 13:32:41 +0000
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  steam-worker-1
+  AcquireTime:     <unset>
+  RenewTime:       Tue, 24 Nov 2026 10:21:26 +0000
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Tue, 24 Nov 2026 10:20:36 +0000   Tue, 24 Nov 2026 10:19:54 +0000   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Tue, 24 Nov 2026 10:20:36 +0000   Tue, 24 Nov 2026 10:19:54 +0000   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Tue, 24 Nov 2026 10:20:36 +0000   Tue, 24 Nov 2026 10:19:54 +0000   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Tue, 24 Nov 2026 10:20:36 +0000   Tue, 24 Nov 2026 10:19:54 +0000   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  172.31.131.54
+  Hostname:    steam-worker-1
+Capacity:
+  cpu:                2
+  ephemeral-storage:  59848952Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             2977072Ki
+  pods:               110
+Allocatable:
+  cpu:                2
+  ephemeral-storage:  58221060460
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             2977072Ki
+  pods:               110
+System Info:
+  Machine ID:                 ef74138ef1004331a0f862f8b2b85cf2
+  System UUID:                8d7d6ab7-ab70-466f-88e8-e6a2ceeb83d1
+  Boot ID:                    dad973fa-e443-4f12-8d1d-ae16d9616030
+  Kernel Version:             6.8.0-147-generic
+  OS Image:                   Ubuntu 24.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://2.2.7-k3s1
+  Kubelet Version:            v1.34.12+k3s1
+  Kube-Proxy Version:         
+PodCIDR:                      10.42.1.0/24
+PodCIDRs:                     10.42.1.0/24
+ProviderID:                   k3s://steam-worker-1
+Non-terminated Pods:          (2 in total)
+  Namespace                   Name          CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----          ------------  ----------  ---------------  -------------  ---
+  steam-demo                  datanode-0    250m (12%)    1 (50%)     512Mi (17%)      1Gi (35%)      20h
+  steam-demo                  kafka-0       250m (12%)    1 (50%)     512Mi (17%)      1Gi (35%)      20h
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests    Limits
+  --------           --------    ------
+  cpu                500m (25%)  2 (100%)
+  memory             1Gi (35%)   2Gi (70%)
+  ephemeral-storage  0 (0%)      0 (0%)
+  hugepages-1Gi      0 (0%)      0 (0%)
+  hugepages-2Mi      0 (0%)      0 (0%)
+Events:
+  Type     Reason                   Age                From              Message
+  ----     ------                   ----               ----              -------
+  Normal   Starting                 56s                kube-proxy        
+  Normal   Starting                 98s                kube-proxy        
+  Normal   Starting                 86s                kube-proxy        
+  Normal   RegisteredNode           4m26s              node-controller   Node steam-worker-1 event: Registered Node steam-worker-1 in Controller
+  Normal   NodeNotReady             3m36s              node-controller   Node steam-worker-1 status is now: NodeNotReady
+  Normal   CertificateExpirationOK  99s                k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   NodeAllocatableEnforced  98s                kubelet           Updated Node Allocatable limit across pods
+  Warning  Rebooted                 98s                kubelet           Node steam-worker-1 has been rebooted, boot id: dad973fa-e443-4f12-8d1d-ae16d9616030
+  Normal   NodeReady                98s                kubelet           Node steam-worker-1 status is now: NodeReady
+  Warning  InvalidDiskCapacity      98s                kubelet           invalid capacity 0 on image filesystem
+  Normal   Starting                 98s                kubelet           Starting kubelet.
+  Normal   NodeHasSufficientMemory  97s (x2 over 98s)  kubelet           Node steam-worker-1 status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure    97s (x2 over 98s)  kubelet           Node steam-worker-1 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID     97s (x2 over 98s)  kubelet           Node steam-worker-1 status is now: NodeHasSufficientPID
+  Normal   CertificateExpirationOK  87s                k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   Starting                 86s                kubelet           Starting kubelet.
+  Normal   NodeAllocatableEnforced  86s                kubelet           Updated Node Allocatable limit across pods
+  Normal   NodeHasSufficientMemory  86s                kubelet           Node steam-worker-1 status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure    86s                kubelet           Node steam-worker-1 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID     86s                kubelet           Node steam-worker-1 status is now: NodeHasSufficientPID
+  Warning  InvalidDiskCapacity      86s                kubelet           invalid capacity 0 on image filesystem
+  Normal   CertificateExpirationOK  59s                k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   Starting                 58s                kubelet           Starting kubelet.
+  Warning  InvalidDiskCapacity      58s                kubelet           invalid capacity 0 on image filesystem
+  Normal   NodeAllocatableEnforced  58s                kubelet           Updated Node Allocatable limit across pods
+  Normal   NodeHasSufficientMemory  57s                kubelet           Node steam-worker-1 status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure    57s                kubelet           Node steam-worker-1 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID     57s                kubelet           Node steam-worker-1 status is now: NodeHasSufficientPID
+
+
+Name:               steam-worker-2
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/instance-type=k3s
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=steam-worker-2
+                    kubernetes.io/os=linux
+                    node.kubernetes.io/instance-type=k3s
+                    steam.insights/role=compute
+Annotations:        alpha.kubernetes.io/provided-node-ip: 172.31.141.15
+                    flannel.alpha.coreos.com/backend-data: {"VNI":1,"VtepMAC":"f6:b1:79:f3:8a:3d"}
+                    flannel.alpha.coreos.com/backend-type: vxlan
+                    flannel.alpha.coreos.com/kube-subnet-manager: true
+                    flannel.alpha.coreos.com/public-ip: 172.31.141.15
+                    k3s.io/hostname: steam-worker-2
+                    k3s.io/internal-ip: 172.31.141.15
+                    k3s.io/node-args:
+                      ["agent","--node-name","steam-worker-2","--server","https://172.31.133.211:6443","--token-file","/etc/rancher/k3s/join-token","--node-ip",...
+                    k3s.io/node-config-hash: ELZWWROECMHBXVLG5V65JQKMTHCJV7WFQKT4C7WBQ7ZSTXQZIYYQ====
+                    k3s.io/node-env: {}
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Mon, 23 Nov 2026 13:32:51 +0000
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  steam-worker-2
+  AcquireTime:     <unset>
+  RenewTime:       Tue, 24 Nov 2026 10:21:26 +0000
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Tue, 24 Nov 2026 10:20:35 +0000   Tue, 24 Nov 2026 10:20:02 +0000   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Tue, 24 Nov 2026 10:20:35 +0000   Tue, 24 Nov 2026 10:20:02 +0000   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Tue, 24 Nov 2026 10:20:35 +0000   Tue, 24 Nov 2026 10:20:02 +0000   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Tue, 24 Nov 2026 10:20:35 +0000   Tue, 24 Nov 2026 10:20:02 +0000   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  172.31.141.15
+  Hostname:    steam-worker-2
+Capacity:
+  cpu:                4
+  ephemeral-storage:  59848952Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             5034588Ki
+  pods:               110
+Allocatable:
+  cpu:                4
+  ephemeral-storage:  58221060460
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             5034588Ki
+  pods:               110
+System Info:
+  Machine ID:                 cff8b6155537443da66ea12183d06154
+  System UUID:                9e2b563e-9736-413e-8604-c1c32d0f7641
+  Boot ID:                    cf439e67-e77d-45ec-94cf-1d2acac0710d
+  Kernel Version:             6.8.0-147-generic
+  OS Image:                   Ubuntu 24.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://2.2.7-k3s1
+  Kubelet Version:            v1.34.12+k3s1
+  Kube-Proxy Version:         
+PodCIDR:                      10.42.3.0/24
+PodCIDRs:                     10.42.3.0/24
+ProviderID:                   k3s://steam-worker-2
+Non-terminated Pods:          (1 in total)
+  Namespace                   Name                       CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                       ------------  ----------  ---------------  -------------  ---
+  steam-demo                  kibana-75c7f6b7c9-wzwq6    250m (6%)     1 (25%)     512Mi (10%)      1Gi (20%)      20h
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests     Limits
+  --------           --------     ------
+  cpu                250m (6%)    1 (25%)
+  memory             512Mi (10%)  1Gi (20%)
+  ephemeral-storage  0 (0%)       0 (0%)
+  hugepages-1Gi      0 (0%)       0 (0%)
+  hugepages-2Mi      0 (0%)       0 (0%)
+Events:
+  Type     Reason                   Age                From              Message
+  ----     ------                   ----               ----              -------
+  Normal   Starting                 90s                kube-proxy        
+  Normal   Starting                 57s                kube-proxy        
+  Normal   Starting                 75s                kube-proxy        
+  Normal   RegisteredNode           4m26s              node-controller   Node steam-worker-2 event: Registered Node steam-worker-2 in Controller
+  Normal   NodeNotReady             3m36s              node-controller   Node steam-worker-2 status is now: NodeNotReady
+  Normal   CertificateExpirationOK  92s                k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   Starting                 90s                kubelet           Starting kubelet.
+  Normal   NodeHasSufficientPID     90s (x5 over 90s)  kubelet           Node steam-worker-2 status is now: NodeHasSufficientPID
+  Normal   NodeAllocatableEnforced  90s                kubelet           Updated Node Allocatable limit across pods
+  Normal   NodeHasNoDiskPressure    90s (x5 over 90s)  kubelet           Node steam-worker-2 status is now: NodeHasNoDiskPressure
+  Warning  Rebooted                 90s                kubelet           Node steam-worker-2 has been rebooted, boot id: cf439e67-e77d-45ec-94cf-1d2acac0710d
+  Normal   NodeReady                90s (x2 over 90s)  kubelet           Node steam-worker-2 status is now: NodeReady
+  Normal   NodeHasSufficientMemory  90s (x5 over 90s)  kubelet           Node steam-worker-2 status is now: NodeHasSufficientMemory
+  Warning  InvalidDiskCapacity      90s                kubelet           invalid capacity 0 on image filesystem
+  Normal   CertificateExpirationOK  77s                k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   Starting                 75s                kubelet           Starting kubelet.
+  Normal   NodeAllocatableEnforced  75s                kubelet           Updated Node Allocatable limit across pods
+  Normal   NodeHasSufficientMemory  75s                kubelet           Node steam-worker-2 status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure    75s                kubelet           Node steam-worker-2 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID     75s                kubelet           Node steam-worker-2 status is now: NodeHasSufficientPID
+  Warning  InvalidDiskCapacity      75s                kubelet           invalid capacity 0 on image filesystem
+  Normal   CertificateExpirationOK  59s                k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   Starting                 58s                kubelet           Starting kubelet.
+  Warning  InvalidDiskCapacity      58s                kubelet           invalid capacity 0 on image filesystem
+  Normal   NodeHasSufficientMemory  58s (x3 over 58s)  kubelet           Node steam-worker-2 status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure    58s (x3 over 58s)  kubelet           Node steam-worker-2 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID     58s (x3 over 58s)  kubelet           Node steam-worker-2 status is now: NodeHasSufficientPID
+  Normal   NodeAllocatableEnforced  58s                kubelet           Updated Node Allocatable limit across pods
+
+
+Name:               steam-worker-3
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/instance-type=k3s
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=steam-worker-3
+                    kubernetes.io/os=linux
+                    node.kubernetes.io/instance-type=k3s
+                    steam.insights/compute=true
+Annotations:        alpha.kubernetes.io/provided-node-ip: 172.31.138.209
+                    flannel.alpha.coreos.com/backend-data: {"VNI":1,"VtepMAC":"8a:04:2f:a1:bd:f2"}
+                    flannel.alpha.coreos.com/backend-type: vxlan
+                    flannel.alpha.coreos.com/kube-subnet-manager: true
+                    flannel.alpha.coreos.com/public-ip: 172.31.138.209
+                    k3s.io/hostname: steam-worker-3
+                    k3s.io/internal-ip: 172.31.138.209
+                    k3s.io/node-args:
+                      ["agent","--node-name","steam-worker-3","--server","https://172.31.133.211:6443","--token-file","/etc/rancher/k3s/join-token","--node-ip",...
+                    k3s.io/node-config-hash: PZAKJGRW5IYZPYUB5ZM2L7PT4XVY6T2FCX2OJYCP5MGRJ6Q5RLCA====
+                    k3s.io/node-env: {}
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Mon, 23 Nov 2026 13:32:44 +0000
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  steam-worker-3
+  AcquireTime:     <unset>
+  RenewTime:       Tue, 24 Nov 2026 10:21:26 +0000
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Tue, 24 Nov 2026 10:20:35 +0000   Tue, 24 Nov 2026 10:19:38 +0000   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Tue, 24 Nov 2026 10:20:35 +0000   Tue, 24 Nov 2026 10:19:38 +0000   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Tue, 24 Nov 2026 10:20:35 +0000   Tue, 24 Nov 2026 10:19:38 +0000   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Tue, 24 Nov 2026 10:20:35 +0000   Tue, 24 Nov 2026 10:19:38 +0000   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  172.31.138.209
+  Hostname:    steam-worker-3
+Capacity:
+  cpu:                4
+  ephemeral-storage:  59848952Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             4008560Ki
+  pods:               110
+Allocatable:
+  cpu:                4
+  ephemeral-storage:  58221060460
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             4008560Ki
+  pods:               110
+System Info:
+  Machine ID:                 7bb5fb2f726f4a70b8b1dd27ebc1fa93
+  System UUID:                2bef4557-2338-4507-bf07-1596b6716910
+  Boot ID:                    3849cc53-9165-4e88-97a2-1c524e972563
+  Kernel Version:             6.8.0-147-generic
+  OS Image:                   Ubuntu 24.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://2.2.7-k3s1
+  Kubelet Version:            v1.34.12+k3s1
+  Kube-Proxy Version:         
+PodCIDR:                      10.42.2.0/24
+PodCIDRs:                     10.42.2.0/24
+ProviderID:                   k3s://steam-worker-3
+Non-terminated Pods:          (0 in total)
+  Namespace                   Name    CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----    ------------  ----------  ---------------  -------------  ---
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests  Limits
+  --------           --------  ------
+  cpu                0 (0%)    0 (0%)
+  memory             0 (0%)    0 (0%)
+  ephemeral-storage  0 (0%)    0 (0%)
+  hugepages-1Gi      0 (0%)    0 (0%)
+  hugepages-2Mi      0 (0%)    0 (0%)
+Events:
+  Type     Reason                   Age                  From              Message
+  ----     ------                   ----                 ----              -------
+  Normal   Starting                 81s                  kube-proxy        
+  Normal   Starting                 114s                 kube-proxy        
+  Normal   Starting                 95s                  kube-proxy        
+  Normal   Starting                 57s                  kube-proxy        
+  Normal   Starting                 106s                 kube-proxy        
+  Normal   RegisteredNode           4m26s                node-controller   Node steam-worker-3 event: Registered Node steam-worker-3 in Controller
+  Normal   NodeNotReady             3m36s                node-controller   Node steam-worker-3 status is now: NodeNotReady
+  Normal   CertificateExpirationOK  116s                 k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   Starting                 114s                 kubelet           Starting kubelet.
+  Normal   NodeHasNoDiskPressure    114s (x2 over 114s)  kubelet           Node steam-worker-3 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID     114s (x2 over 114s)  kubelet           Node steam-worker-3 status is now: NodeHasSufficientPID
+  Normal   NodeReady                114s                 kubelet           Node steam-worker-3 status is now: NodeReady
+  Normal   NodeHasSufficientMemory  114s (x2 over 114s)  kubelet           Node steam-worker-3 status is now: NodeHasSufficientMemory
+  Warning  Rebooted                 114s                 kubelet           Node steam-worker-3 has been rebooted, boot id: 3849cc53-9165-4e88-97a2-1c524e972563
+  Normal   NodeAllocatableEnforced  114s                 kubelet           Updated Node Allocatable limit across pods
+  Warning  InvalidDiskCapacity      114s                 kubelet           invalid capacity 0 on image filesystem
+  Normal   CertificateExpirationOK  107s                 k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   NodeHasSufficientMemory  106s                 kubelet           Node steam-worker-3 status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure    106s                 kubelet           Node steam-worker-3 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID     106s                 kubelet           Node steam-worker-3 status is now: NodeHasSufficientPID
+  Normal   NodeAllocatableEnforced  106s                 kubelet           Updated Node Allocatable limit across pods
+  Warning  InvalidDiskCapacity      106s                 kubelet           invalid capacity 0 on image filesystem
+  Normal   Starting                 106s                 kubelet           Starting kubelet.
+  Normal   CertificateExpirationOK  97s                  k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   Starting                 96s                  kubelet           Starting kubelet.
+  Normal   NodeHasNoDiskPressure    96s (x3 over 96s)    kubelet           Node steam-worker-3 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID     96s (x3 over 96s)    kubelet           Node steam-worker-3 status is now: NodeHasSufficientPID
+  Normal   NodeAllocatableEnforced  96s                  kubelet           Updated Node Allocatable limit across pods
+  Warning  InvalidDiskCapacity      96s                  kubelet           invalid capacity 0 on image filesystem
+  Normal   NodeHasSufficientMemory  96s (x3 over 96s)    kubelet           Node steam-worker-3 status is now: NodeHasSufficientMemory
+  Normal   CertificateExpirationOK  84s                  k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   NodeHasSufficientPID     83s (x3 over 83s)    kubelet           Node steam-worker-3 status is now: NodeHasSufficientPID
+  Normal   NodeHasNoDiskPressure    83s (x3 over 83s)    kubelet           Node steam-worker-3 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientMemory  83s (x3 over 83s)    kubelet           Node steam-worker-3 status is now: NodeHasSufficientMemory
+  Normal   NodeAllocatableEnforced  83s                  kubelet           Updated Node Allocatable limit across pods
+  Warning  InvalidDiskCapacity      83s                  kubelet           invalid capacity 0 on image filesystem
+  Normal   Starting                 83s                  kubelet           Starting kubelet.
+  Normal   CertificateExpirationOK  59s                  k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   Starting                 58s                  kubelet           Starting kubelet.
+  Warning  InvalidDiskCapacity      58s                  kubelet           invalid capacity 0 on image filesystem
+  Normal   NodeHasSufficientMemory  58s (x3 over 58s)    kubelet           Node steam-worker-3 status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure    58s (x3 over 58s)    kubelet           Node steam-worker-3 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID     58s (x3 over 58s)    kubelet           Node steam-worker-3 status is now: NodeHasSufficientPID
+  Normal   NodeAllocatableEnforced  58s                  kubelet           Updated Node Allocatable limit across pods

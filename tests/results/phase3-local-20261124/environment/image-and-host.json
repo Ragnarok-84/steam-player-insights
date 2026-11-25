@@ -1,0 +1,15 @@
+{
+    "sourceGitSha":  "1d459539f58f058a2698f02a6d8bcee5e1565c31",
+    "tag":  "localhost/steam-spark:k3s-20261124-1d45953",
+    "archiveSha256":  "d848b6035d15d179cad28dbec94d01d55a52d6e66ffa974ceec901cff7eca013",
+    "imageConfigSha256":  "0c2c32a0502212c21096a37a668beab54bd5a2c310074e381b9312f3251961a4",
+    "archiveChecksumVerifiedOn":  [
+                                      "steam-server",
+                                      "steam-worker-1",
+                                      "steam-worker-2",
+                                      "steam-worker-3"
+                                  ],
+    "namespace":  "steam-ft",
+    "host":  "Hyper-V on Windows, Intel i5-12400F, 6 cores/12 threads",
+    "kibanaReplicas":  0
+}

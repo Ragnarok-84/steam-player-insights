@@ -1,0 +1,716 @@
+
+2026-11-24T10:45:32Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      1123m        531Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   602m         409Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   656m         399Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   619m         368Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   567m         345Mi           
+
+2026-11-24T10:45:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      1123m        531Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   602m         409Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   656m         399Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   619m         368Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   567m         345Mi           
+
+2026-11-24T10:45:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      395m         582Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   990m         706Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   958m         725Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   993m         716Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   916m         609Mi           
+
+2026-11-24T10:45:58Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      395m         582Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   990m         706Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   958m         725Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   993m         716Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   916m         609Mi           
+
+2026-11-24T10:46:06Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      168m         597Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   990m         706Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   958m         725Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   509m         711Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   857m         862Mi           
+
+2026-11-24T10:46:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      491m         648Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   598m         885Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   586m         901Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   513m         774Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   292m         874Mi           
+
+2026-11-24T10:46:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      491m         648Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   598m         885Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   586m         901Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   513m         774Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   292m         874Mi           
+
+2026-11-24T10:46:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      620m         662Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   598m         885Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   586m         901Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   875m         802Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   772m         920Mi           
+
+2026-11-24T10:46:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      620m         662Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   598m         885Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   586m         901Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   875m         802Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   772m         920Mi           
+
+2026-11-24T10:46:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      13m          655Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   929m         930Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   815m         936Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   875m         802Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   772m         920Mi           
+
+2026-11-24T10:46:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      13m          655Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   929m         930Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   815m         936Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   875m         802Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   772m         920Mi           
+
+2026-11-24T10:47:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      9m           656Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   1000m        931Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   2m           935Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   433m         801Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   88m          919Mi           
+
+2026-11-24T10:47:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      10m          655Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   1000m        911Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   3m           932Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   3m           798Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   3m           912Mi           
+
+2026-11-24T10:47:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      10m          655Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   1000m        911Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   3m           932Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   3m           798Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   3m           912Mi           
+
+2026-11-24T10:47:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      14m          632Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   996m         905Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   3m           932Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   3m           791Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   3m           912Mi           
+
+2026-11-24T10:47:39Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      14m          632Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   996m         905Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   3m           932Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   3m           791Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   3m           912Mi           
+
+2026-11-24T10:47:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      7m           631Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   998m         907Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   3m           926Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   3m           791Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   3m           908Mi           
+
+2026-11-24T10:47:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      7m           631Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   998m         907Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   3m           926Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   3m           791Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   3m           908Mi           
+
+2026-11-24T10:48:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      259m         661Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   488m         940Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   124m         902Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   51m          795Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   113m         878Mi           
+
+2026-11-24T10:48:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      259m         661Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   488m         940Mi           
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   124m         902Mi           
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   51m          795Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   113m         878Mi           
+
+2026-11-24T10:48:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      499m         845Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   924m         1109Mi          
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   567m         1067Mi          
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   605m         960Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   584m         1066Mi          
+
+2026-11-24T10:48:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      568m         890Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   677m         1134Mi          
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   721m         1087Mi          
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   681m         998Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   661m         1081Mi          
+
+2026-11-24T10:48:39Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      568m         890Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   677m         1134Mi          
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   721m         1087Mi          
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   681m         998Mi           
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   661m         1081Mi          
+
+2026-11-24T10:48:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      760m         932Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   611m         1172Mi          
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   485m         1097Mi          
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   869m         1146Mi          
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   423m         1090Mi          
+
+2026-11-24T10:48:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      760m         932Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   611m         1172Mi          
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   485m         1097Mi          
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   869m         1146Mi          
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   423m         1090Mi          
+
+2026-11-24T10:49:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      836m         958Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   405m         1174Mi          
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   486m         1100Mi          
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   435m         1150Mi          
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   464m         1094Mi          
+
+2026-11-24T10:49:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      836m         958Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   405m         1174Mi          
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   486m         1100Mi          
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   435m         1150Mi          
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   464m         1094Mi          
+
+2026-11-24T10:49:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      873m         998Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   336m         1176Mi          
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   503m         1087Mi          
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   169m         1150Mi          
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   431m         1078Mi          
+
+2026-11-24T10:49:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      873m         998Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   685m         1162Mi          
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   539m         1090Mi          
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   563m         1131Mi          
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   483m         1082Mi          
+
+2026-11-24T10:49:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      873m         998Mi           
+p3-batch-100-e4-p6hdk-exec-1   spark-kubernetes-executor   685m         1162Mi          
+p3-batch-100-e4-p6hdk-exec-2   spark-kubernetes-executor   539m         1090Mi          
+p3-batch-100-e4-p6hdk-exec-3   spark-kubernetes-executor   563m         1131Mi          
+p3-batch-100-e4-p6hdk-exec-4   spark-kubernetes-executor   483m         1082Mi          
+
+2026-11-24T10:49:46Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk   driver   520m         1039Mi          
+
+2026-11-24T10:49:54Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk   driver   520m         1039Mi          
+
+2026-11-24T10:50:03Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk   driver   928m         279Mi           
+
+2026-11-24T10:50:11Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk   driver   928m         279Mi           
+
+2026-11-24T10:50:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      759m         511Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   704m         524Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   654m         404Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   679m         392Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   609m         359Mi           
+
+2026-11-24T10:50:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      759m         511Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   704m         524Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   654m         404Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   679m         392Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   609m         359Mi           
+
+2026-11-24T10:50:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      126m         523Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   977m         661Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   861m         675Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   963m         701Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   921m         635Mi           
+
+2026-11-24T10:50:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      239m         554Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   739m         855Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   668m         738Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   898m         852Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   894m         841Mi           
+
+2026-11-24T10:50:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      239m         554Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   739m         855Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   668m         738Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   898m         852Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   894m         841Mi           
+
+2026-11-24T10:51:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      322m         574Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   498m         868Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   531m         769Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   898m         852Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   552m         877Mi           
+
+2026-11-24T10:51:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      322m         574Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   498m         868Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   531m         769Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   898m         852Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   552m         877Mi           
+
+2026-11-24T10:51:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      634m         610Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   859m         904Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   531m         769Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   712m         831Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   812m         909Mi           
+
+2026-11-24T10:51:28Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      634m         610Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   859m         904Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   531m         769Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   712m         831Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   812m         909Mi           
+
+2026-11-24T10:51:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      11m          611Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   1000m        909Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   724m         803Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   6m           830Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   1000m        907Mi           
+
+2026-11-24T10:51:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      7m           610Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   1000m        897Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   2m           803Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   2m           829Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   152m         906Mi           
+
+2026-11-24T10:51:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      7m           610Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   1000m        897Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   2m           803Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   2m           829Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   152m         906Mi           
+
+2026-11-24T10:52:01Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      9m           605Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   1000m        897Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   2m           799Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   3m           828Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   2m           903Mi           
+
+2026-11-24T10:52:09Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      9m           605Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   1000m        897Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   2m           799Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   3m           828Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   2m           903Mi           
+
+2026-11-24T10:52:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      41m          594Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   1000m        885Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   32m          796Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   3m           820Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   3m           897Mi           
+
+2026-11-24T10:52:26Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      41m          594Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   1000m        885Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   32m          796Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   3m           820Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   3m           897Mi           
+
+2026-11-24T10:52:34Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      283m         623Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   608m         935Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   88m          757Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   74m          780Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   400m         905Mi           
+
+2026-11-24T10:52:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      283m         623Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   608m         935Mi           
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   88m          757Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   74m          780Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   400m         905Mi           
+
+2026-11-24T10:52:51Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      283m         623Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   750m         1116Mi          
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   608m         925Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   589m         942Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   584m         1067Mi          
+
+2026-11-24T10:52:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      563m         874Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   838m         1271Mi          
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   514m         971Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   541m         986Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   645m         1148Mi          
+
+2026-11-24T10:53:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      563m         874Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   838m         1271Mi          
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   514m         971Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   541m         986Mi           
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   645m         1148Mi          
+
+2026-11-24T10:53:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      563m         874Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   709m         1294Mi          
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   417m         974Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   434m         1009Mi          
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   570m         1152Mi          
+
+2026-11-24T10:53:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      563m         874Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   709m         1294Mi          
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   417m         974Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   434m         1009Mi          
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   570m         1152Mi          
+
+2026-11-24T10:53:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      793m         934Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   459m         1295Mi          
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   353m         976Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   469m         1012Mi          
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   315m         1156Mi          
+
+2026-11-24T10:53:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      793m         934Mi           
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   459m         1295Mi          
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   353m         976Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   469m         1012Mi          
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   315m         1156Mi          
+
+2026-11-24T10:53:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      916m         1069Mi          
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   373m         1300Mi          
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   517m         980Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   470m         1021Mi          
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   315m         1156Mi          
+
+2026-11-24T10:53:58Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk          driver                      916m         1069Mi          
+p3-batch-100-e4-p6hdk-exec-5   spark-kubernetes-executor   373m         1300Mi          
+p3-batch-100-e4-p6hdk-exec-6   spark-kubernetes-executor   517m         980Mi           
+p3-batch-100-e4-p6hdk-exec-7   spark-kubernetes-executor   470m         1021Mi          
+p3-batch-100-e4-p6hdk-exec-8   spark-kubernetes-executor   315m         1156Mi          
+
+2026-11-24T10:54:06Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk   driver   480m         1131Mi          
+
+2026-11-24T10:54:15Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk   driver   707m         341Mi           
+
+2026-11-24T10:54:23Z
+POD                     NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk   driver   707m         341Mi           
+
+2026-11-24T10:54:31Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      844m         594Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   611m         352Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   607m         364Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   570m         360Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   547m         344Mi           
+
+2026-11-24T10:54:40Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      844m         594Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   611m         352Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   607m         364Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   570m         360Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   547m         344Mi           
+
+2026-11-24T10:54:48Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      196m         611Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   775m         595Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   954m         667Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   1001m        513Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   993m         378Mi           
+
+2026-11-24T10:54:57Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      196m         611Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   775m         595Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   954m         667Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   1001m        513Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   993m         378Mi           
+
+2026-11-24T10:55:05Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      124m         628Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   775m         595Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   918m         715Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   820m         697Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   903m         703Mi           
+
+2026-11-24T10:55:13Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      104m         628Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   546m         696Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   717m         857Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   616m         865Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   437m         704Mi           
+
+2026-11-24T10:55:22Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      104m         628Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   546m         696Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   717m         857Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   616m         865Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   437m         704Mi           
+
+2026-11-24T10:55:30Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      752m         698Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   537m         781Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   493m         889Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   182m         881Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   562m         759Mi           
+
+2026-11-24T10:55:39Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      752m         698Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   537m         781Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   493m         889Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   182m         881Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   562m         759Mi           
+
+2026-11-24T10:55:47Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      752m         698Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   852m         780Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   493m         889Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   804m         920Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   819m         794Mi           
+
+2026-11-24T10:55:55Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      752m         698Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   852m         780Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   493m         889Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   804m         920Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   819m         794Mi           
+
+2026-11-24T10:56:04Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      96m          701Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   852m         780Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   327m         902Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   1001m        931Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   368m         803Mi           
+
+2026-11-24T10:56:12Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      96m          701Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   852m         780Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   327m         902Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   1001m        931Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   368m         803Mi           
+
+2026-11-24T10:56:20Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      7m           700Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   397m         781Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   2m           901Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   1000m        919Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   3m           803Mi           
+
+2026-11-24T10:56:29Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      9m           696Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   3m           776Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   2m           901Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   999m         927Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   2m           793Mi           
+
+2026-11-24T10:56:37Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      9m           696Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   3m           776Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   2m           901Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   999m         927Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   2m           793Mi           
+
+2026-11-24T10:56:45Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      8m           682Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   28m          774Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   3m           895Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   667m         923Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   230m         751Mi           
+
+2026-11-24T10:56:54Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      8m           682Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   28m          774Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   3m           895Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   667m         923Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   230m         751Mi           
+
+2026-11-24T10:57:02Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      94m          677Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   421m         770Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   65m          852Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   785m         976Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   497m         915Mi           
+
+2026-11-24T10:57:11Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      94m          677Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   421m         770Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   65m          852Mi           
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   785m         976Mi           
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   497m         915Mi           
+
+2026-11-24T10:57:19Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      624m         908Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   645m         963Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   575m         1075Mi          
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   708m         1143Mi          
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   692m         1016Mi          
+
+2026-11-24T10:57:27Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      624m         908Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   645m         963Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   575m         1075Mi          
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   708m         1143Mi          
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   692m         1016Mi          
+
+2026-11-24T10:57:36Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      491m         930Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   651m         992Mi           
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   307m         1093Mi          
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   414m         1155Mi          
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   692m         1016Mi          
+
+2026-11-24T10:57:44Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      905m         972Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   480m         1004Mi          
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   700m         1096Mi          
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   368m         1159Mi          
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   787m         1116Mi          
+
+2026-11-24T10:57:52Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      905m         972Mi           
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   480m         1004Mi          
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   700m         1096Mi          
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   368m         1159Mi          
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   787m         1116Mi          
+
+2026-11-24T10:58:01Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      1166m        1047Mi          
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   444m         1011Mi          
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   342m         1100Mi          
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   369m         1161Mi          
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   376m         1127Mi          
+
+2026-11-24T10:58:09Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      1166m        1047Mi          
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   444m         1011Mi          
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   342m         1100Mi          
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   369m         1161Mi          
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   376m         1127Mi          
+
+2026-11-24T10:58:18Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      294m         1059Mi          
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   604m         1019Mi          
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   479m         1082Mi          
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   710m         1166Mi          
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   663m         1143Mi          
+
+2026-11-24T10:58:26Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-100-e4-p6hdk           driver                      294m         1059Mi          
+p3-batch-100-e4-p6hdk-exec-11   spark-kubernetes-executor   604m         1019Mi          
+p3-batch-100-e4-p6hdk-exec-12   spark-kubernetes-executor   479m         1082Mi          
+p3-batch-100-e4-p6hdk-exec-13   spark-kubernetes-executor   710m         1166Mi          
+p3-batch-100-e4-p6hdk-exec-9    spark-kubernetes-executor   663m         1143Mi          

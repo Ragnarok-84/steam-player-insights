@@ -1,0 +1,8 @@
+ClusterId:              OaH2TaG6QfKheP6oJ1DvMg
+LeaderId:               2
+LeaderEpoch:            9
+HighWatermark:          175001
+MaxFollowerLag:         0
+MaxFollowerLagTimeMs:   395
+CurrentVoters:          [{"id": 1, "directoryId": null, "endpoints": ["CONTROLLER://kafka-0.kafka.steam-ft.svc.cluster.local:9093"]}, {"id": 2, "directoryId": null, "endpoints": ["CONTROLLER://kafka-1.kafka.steam-ft.svc.cluster.local:9093"]}, {"id": 3, "directoryId": null, "endpoints": ["CONTROLLER://kafka-2.kafka.steam-ft.svc.cluster.local:9093"]}]
+CurrentObservers:       []

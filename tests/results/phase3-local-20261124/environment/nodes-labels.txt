@@ -1,0 +1,5 @@
+NAME             STATUS   ROLES           AGE   VERSION         INTERNAL-IP      EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME         COMPUTE   FT-STORAGE   FT-HDFS
+steam-server     Ready    control-plane   20h   v1.34.12+k3s1   172.31.133.211   <none>        Ubuntu 24.04.5 LTS   6.8.0-147-generic   containerd://2.2.7-k3s1             true         true
+steam-worker-1   Ready    <none>          20h   v1.34.12+k3s1   172.31.131.54    <none>        Ubuntu 24.04.5 LTS   6.8.0-147-generic   containerd://2.2.7-k3s1   true      true         true
+steam-worker-2   Ready    <none>          20h   v1.34.12+k3s1   172.31.141.15    <none>        Ubuntu 24.04.5 LTS   6.8.0-147-generic   containerd://2.2.7-k3s1   true      true         
+steam-worker-3   Ready    <none>          20h   v1.34.12+k3s1   172.31.138.209   <none>        Ubuntu 24.04.5 LTS   6.8.0-147-generic   containerd://2.2.7-k3s1   true                   

@@ -1,0 +1,136 @@
+2026-11-23T14:10:56.333422878Z Collecting kafka-python==3.0.11
+2026-11-23T14:10:56.598073501Z   Downloading kafka_python-3.0.11-py3-none-any.whl.metadata (11 kB)
+2026-11-23T14:10:56.656154732Z Collecting python-dotenv==1.2.3
+2026-11-23T14:10:56.706598350Z   Downloading python_dotenv-1.2.3-py3-none-any.whl.metadata (29 kB)
+2026-11-23T14:10:56.786865772Z Downloading kafka_python-3.0.11-py3-none-any.whl (614 kB)
+2026-11-23T14:10:56.949401226Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 614.2/614.2 kB 3.9 MB/s eta 0:00:00
+2026-11-23T14:10:57.002491807Z Downloading python_dotenv-1.2.3-py3-none-any.whl (22 kB)
+2026-11-23T14:10:57.050525354Z Installing collected packages: python-dotenv, kafka-python
+2026-11-23T14:10:57.758459335Z Successfully installed kafka-python-3.0.11 python-dotenv-1.2.3
+2026-11-23T14:10:57.758910998Z WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+2026-11-23T14:10:58.063087435Z 
+2026-11-23T14:10:58.063111882Z [notice] A new release of pip is available: 24.0 -> 26.3
+2026-11-23T14:10:58.063113102Z [notice] To update, run: pip install --upgrade pip
+2026-11-23T14:10:59.005629256Z /input/code/crawlers/replay_jsonl_to_kafka.py:90: DeprecationWarning: key_serializer does not implement kafka.serializer.Serializer
+2026-11-23T14:10:59.005657176Z   producer = SteamKafkaProducer()
+2026-11-23T14:10:59.005659447Z /input/code/crawlers/replay_jsonl_to_kafka.py:90: DeprecationWarning: value_serializer does not implement kafka.serializer.Serializer
+2026-11-23T14:10:59.005660739Z   producer = SteamKafkaProducer()
+2026-11-23T14:10:59.006432664Z 2026-11-23 14:10:59,006 [INFO] kafka.net.manager: Attempting bootstrap to bootstrap-0 at kafka:9092 (rack None)
+2026-11-23T14:10:59.006511204Z 2026-11-23 14:10:59,006 [INFO] kafka.net.manager: Initializing connection for node_id bootstrap-0 at kafka:9092 (rack=None)
+2026-11-23T14:10:59.018965733Z 2026-11-23 14:10:59,018 [INFO] kafka.net.transport: <KafkaTCPTransport [10.42.1.6:9092<-39390]>: connected to <socket.socket fd=6, family=2, type=1, proto=6, laddr=('10.42.0.8', 39390), raddr=('10.42.1.6', 9092)>
+2026-11-23T14:10:59.030987573Z 2026-11-23 14:10:59,030 [INFO] kafka.net.connection: <KafkaConnection node_id=bootstrap-0 host=[10.42.1.6:9092<-39390] broker_version=unknown (initializing)>: Broker version identified as 3.9
+2026-11-23T14:10:59.033064651Z 2026-11-23 14:10:59,031 [INFO] kafka.net.connection: <KafkaConnection node_id=bootstrap-0 host=[10.42.1.6:9092<-39390] broker_version=(3, 9) (connected)>: Connected
+2026-11-23T14:10:59.045615928Z 2026-11-23 14:10:59,045 [INFO] kafka.cluster: Updated metadata: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-11-23T14:10:59.046114682Z 2026-11-23 14:10:59,045 [INFO] kafka.net.manager: Bootstrap complete: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-11-23T14:10:59.046421066Z 2026-11-23 14:10:59,046 [INFO] kafka.net.manager: Closing bootstrap connection bootstrap-0
+2026-11-23T14:10:59.046658392Z 2026-11-23 14:10:59,046 [INFO] kafka.net.transport: <KafkaTCPTransport [10.42.1.6:9092<-39390]>: Closing transport
+2026-11-23T14:10:59.047024456Z 2026-11-23 14:10:59,046 [INFO] kafka.net.connection: <KafkaConnection node_id=bootstrap-0 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-11-23T14:10:59.047246927Z 2026-11-23 14:10:59,047 [INFO] kafka.cluster: Starting metadata refresh loop
+2026-11-23T14:10:59.047512716Z 2026-11-23 14:10:59,047 [INFO] kafka.producer.kafka: <KafkaProducer client_id=kafka-python-producer-1 transactional_id=None>: Instantiated an idempotent producer.
+2026-11-23T14:10:59.050875648Z 2026-11-23 14:10:59,050 [INFO] kafka.producer.transaction_manager: ProducerId set to -1 with epoch -1
+2026-11-23T14:10:59.051970347Z 2026-11-23 14:10:59,051 [INFO] crawlers.common.kafka_producer: Connected to Kafka brokers at: ['kafka:9092']
+2026-11-23T14:10:59.051989862Z 2026-11-23 14:10:59,051 [INFO] kafka.net.manager: Initializing connection for node_id 1 at kafka.steam-demo.svc.cluster.local:9092 (rack=None)
+2026-11-23T14:10:59.100443198Z 2026-11-23 14:10:59,097 [INFO] kafka.net.transport: <KafkaTCPTransport [10.42.1.6:9092<-39406]>: connected to <socket.socket fd=6, family=2, type=1, proto=6, laddr=('10.42.0.8', 39406), raddr=('10.42.1.6', 9092)>
+2026-11-23T14:10:59.101259132Z 2026-11-23 14:10:59,101 [INFO] kafka.net.connection: <KafkaConnection node_id=1 host=[10.42.1.6:9092<-39406] broker_version=(3, 9) (connected)>: Connected
+2026-11-23T14:10:59.224824293Z 2026-11-23 14:10:59,224 [INFO] kafka.producer.transaction_manager: ProducerId set to 0 with epoch 0
+2026-11-23T14:10:59.673192937Z 2026-11-23 14:10:59,672 [INFO] kafka.cluster: Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 0)
+2026-11-23T14:11:06.960271387Z 2026-11-23 14:11:06,959 [INFO] ReplayJsonl: Sent 10000 records (1265 rec/s)
+2026-11-23T14:11:13.164995810Z 2026-11-23 14:11:13,164 [INFO] ReplayJsonl: Sent 20000 records (1417 rec/s)
+2026-11-23T14:11:16.162762462Z 2026-11-23 14:11:16,162 [INFO] ReplayJsonl: Sent 30000 records (1753 rec/s)
+2026-11-23T14:11:20.144260535Z 2026-11-23 14:11:20,143 [INFO] ReplayJsonl: Sent 40000 records (1896 rec/s)
+2026-11-23T14:11:24.358335720Z 2026-11-23 14:11:24,358 [INFO] ReplayJsonl: Sent 50000 records (1976 rec/s)
+2026-11-23T14:11:26.874675185Z 2026-11-23 14:11:26,874 [INFO] ReplayJsonl: Sent 60000 records (2156 rec/s)
+2026-11-23T14:11:29.466633183Z 2026-11-23 14:11:29,466 [INFO] ReplayJsonl: Sent 70000 records (2302 rec/s)
+2026-11-23T14:11:33.148159842Z 2026-11-23 14:11:33,147 [INFO] ReplayJsonl: Sent 80000 records (2346 rec/s)
+2026-11-23T14:11:35.394132608Z 2026-11-23 14:11:35,393 [INFO] ReplayJsonl: Sent 90000 records (2476 rec/s)
+2026-11-23T14:11:37.918200886Z 2026-11-23 14:11:37,918 [INFO] ReplayJsonl: Sent 100000 records (2573 rec/s)
+2026-11-23T14:11:40.963404273Z 2026-11-23 14:11:40,963 [INFO] ReplayJsonl: Sent 110000 records (2625 rec/s)
+2026-11-23T14:11:43.851564621Z 2026-11-23 14:11:43,851 [INFO] ReplayJsonl: Sent 120000 records (2679 rec/s)
+2026-11-23T14:11:46.263994209Z 2026-11-23 14:11:46,263 [INFO] ReplayJsonl: Sent 130000 records (2754 rec/s)
+2026-11-23T14:11:49.037298472Z 2026-11-23 14:11:49,037 [INFO] ReplayJsonl: Sent 140000 records (2801 rec/s)
+2026-11-23T14:11:52.963366353Z 2026-11-23 14:11:52,963 [INFO] ReplayJsonl: Sent 150000 records (2782 rec/s)
+2026-11-23T14:11:55.400101376Z 2026-11-23 14:11:55,399 [INFO] ReplayJsonl: Sent 160000 records (2839 rec/s)
+2026-11-23T14:11:58.088372791Z 2026-11-23 14:11:58,088 [INFO] ReplayJsonl: Sent 170000 records (2880 rec/s)
+2026-11-23T14:12:01.359301136Z 2026-11-23 14:12:01,359 [INFO] ReplayJsonl: Sent 180000 records (2889 rec/s)
+2026-11-23T14:12:03.981354618Z 2026-11-23 14:12:03,980 [INFO] ReplayJsonl: Sent 190000 records (2926 rec/s)
+2026-11-23T14:12:06.272465664Z 2026-11-23 14:12:06,272 [INFO] ReplayJsonl: Sent 200000 records (2975 rec/s)
+2026-11-23T14:12:09.046919829Z 2026-11-23 14:12:09,046 [INFO] ReplayJsonl: Sent 210000 records (3000 rec/s)
+2026-11-23T14:12:12.202108906Z 2026-11-23 14:12:12,201 [INFO] ReplayJsonl: Sent 220000 records (3008 rec/s)
+2026-11-23T14:12:14.227867632Z 2026-11-23 14:12:14,227 [INFO] ReplayJsonl: Sent 230000 records (3059 rec/s)
+2026-11-23T14:12:16.494269010Z 2026-11-23 14:12:16,494 [INFO] ReplayJsonl: Sent 240000 records (3099 rec/s)
+2026-11-23T14:12:18.967679269Z 2026-11-23 14:12:18,967 [INFO] ReplayJsonl: Sent 250000 records (3128 rec/s)
+2026-11-23T14:12:22.111186121Z 2026-11-23 14:12:22,111 [INFO] ReplayJsonl: Sent 260000 records (3130 rec/s)
+2026-11-23T14:12:24.578245519Z 2026-11-23 14:12:24,578 [INFO] ReplayJsonl: Sent 270000 records (3157 rec/s)
+2026-11-23T14:12:27.297341098Z 2026-11-23 14:12:27,297 [INFO] ReplayJsonl: Sent 280000 records (3173 rec/s)
+2026-11-23T14:12:29.864056142Z 2026-11-23 14:12:29,863 [INFO] ReplayJsonl: Sent 290000 records (3193 rec/s)
+2026-11-23T14:12:32.795653335Z 2026-11-23 14:12:32,795 [INFO] ReplayJsonl: Sent 300000 records (3200 rec/s)
+2026-11-23T14:12:34.887293061Z 2026-11-23 14:12:34,886 [INFO] ReplayJsonl: Sent 310000 records (3235 rec/s)
+2026-11-23T14:12:37.093051699Z 2026-11-23 14:12:37,092 [INFO] ReplayJsonl: Sent 320000 records (3264 rec/s)
+2026-11-23T14:12:39.437345630Z 2026-11-23 14:12:39,436 [INFO] ReplayJsonl: Sent 330000 records (3287 rec/s)
+2026-11-23T14:12:42.467486632Z 2026-11-23 14:12:42,467 [INFO] ReplayJsonl: Sent 340000 records (3288 rec/s)
+2026-11-23T14:12:44.474547264Z 2026-11-23 14:12:44,474 [INFO] ReplayJsonl: Sent 350000 records (3320 rec/s)
+2026-11-23T14:12:46.470851350Z 2026-11-23 14:12:46,470 [INFO] ReplayJsonl: Sent 360000 records (3351 rec/s)
+2026-11-23T14:12:48.627828306Z 2026-11-23 14:12:48,627 [INFO] ReplayJsonl: Sent 370000 records (3377 rec/s)
+2026-11-23T14:12:50.709019121Z 2026-11-23 14:12:50,708 [INFO] ReplayJsonl: Sent 380000 records (3403 rec/s)
+2026-11-23T14:12:53.289739357Z 2026-11-23 14:12:53,289 [INFO] ReplayJsonl: Sent 390000 records (3414 rec/s)
+2026-11-23T14:12:55.363068969Z 2026-11-23 14:12:55,362 [INFO] ReplayJsonl: Sent 400000 records (3439 rec/s)
+2026-11-23T14:12:57.985915186Z 2026-11-23 14:12:57,984 [INFO] ReplayJsonl: Sent 410000 records (3447 rec/s)
+2026-11-23T14:13:00.650768265Z 2026-11-23 14:13:00,650 [INFO] ReplayJsonl: Sent 420000 records (3454 rec/s)
+2026-11-23T14:13:03.640765709Z 2026-11-23 14:13:03,640 [INFO] ReplayJsonl: Sent 430000 records (3451 rec/s)
+2026-11-23T14:13:05.923093907Z 2026-11-23 14:13:05,922 [INFO] ReplayJsonl: Sent 440000 records (3468 rec/s)
+2026-11-23T14:13:08.536078414Z 2026-11-23 14:13:08,535 [INFO] ReplayJsonl: Sent 450000 records (3475 rec/s)
+2026-11-23T14:13:11.546396939Z 2026-11-23 14:13:11,545 [INFO] ReplayJsonl: Sent 460000 records (3472 rec/s)
+2026-11-23T14:13:13.956626211Z 2026-11-23 14:13:13,956 [INFO] ReplayJsonl: Sent 470000 records (3484 rec/s)
+2026-11-23T14:13:16.052826159Z 2026-11-23 14:13:16,052 [INFO] ReplayJsonl: Sent 480000 records (3504 rec/s)
+2026-11-23T14:13:18.282691001Z 2026-11-23 14:13:18,282 [INFO] ReplayJsonl: Sent 490000 records (3519 rec/s)
+2026-11-23T14:13:20.644026808Z 2026-11-23 14:13:20,643 [INFO] ReplayJsonl: Sent 500000 records (3531 rec/s)
+2026-11-23T14:13:23.108073010Z 2026-11-23 14:13:23,107 [INFO] ReplayJsonl: Sent 510000 records (3540 rec/s)
+2026-11-23T14:13:25.208394133Z 2026-11-23 14:13:25,208 [INFO] ReplayJsonl: Sent 520000 records (3558 rec/s)
+2026-11-23T14:13:27.567872190Z 2026-11-23 14:13:27,567 [INFO] ReplayJsonl: Sent 530000 records (3569 rec/s)
+2026-11-23T14:13:29.707628443Z 2026-11-23 14:13:29,707 [INFO] ReplayJsonl: Sent 540000 records (3584 rec/s)
+2026-11-23T14:13:32.671713513Z 2026-11-23 14:13:32,671 [INFO] ReplayJsonl: Sent 550000 records (3580 rec/s)
+2026-11-23T14:13:34.767471635Z 2026-11-23 14:13:34,767 [INFO] ReplayJsonl: Sent 560000 records (3596 rec/s)
+2026-11-23T14:13:36.949819842Z 2026-11-23 14:13:36,949 [INFO] ReplayJsonl: Sent 570000 records (3610 rec/s)
+2026-11-23T14:13:39.020668268Z 2026-11-23 14:13:39,020 [INFO] ReplayJsonl: Sent 580000 records (3626 rec/s)
+2026-11-23T14:13:42.035709806Z 2026-11-23 14:13:42,035 [INFO] ReplayJsonl: Sent 590000 records (3620 rec/s)
+2026-11-23T14:13:44.108006089Z 2026-11-23 14:13:44,107 [INFO] ReplayJsonl: Sent 600000 records (3635 rec/s)
+2026-11-23T14:13:46.205000725Z 2026-11-23 14:13:46,204 [INFO] ReplayJsonl: Sent 610000 records (3649 rec/s)
+2026-11-23T14:13:48.353092697Z 2026-11-23 14:13:48,352 [INFO] ReplayJsonl: Sent 620000 records (3662 rec/s)
+2026-11-23T14:13:50.534945658Z 2026-11-23 14:13:50,534 [INFO] ReplayJsonl: Sent 630000 records (3674 rec/s)
+2026-11-23T14:13:53.183326208Z 2026-11-23 14:13:53,183 [INFO] ReplayJsonl: Sent 640000 records (3675 rec/s)
+2026-11-23T14:13:55.296316802Z 2026-11-23 14:13:55,296 [INFO] ReplayJsonl: Sent 650000 records (3688 rec/s)
+2026-11-23T14:13:57.473191838Z 2026-11-23 14:13:57,473 [INFO] ReplayJsonl: Sent 660000 records (3699 rec/s)
+2026-11-23T14:13:59.767087864Z 2026-11-23 14:13:59,766 [INFO] ReplayJsonl: Sent 670000 records (3707 rec/s)
+2026-11-23T14:14:02.629125901Z 2026-11-23 14:14:02,628 [INFO] ReplayJsonl: Sent 680000 records (3704 rec/s)
+2026-11-23T14:14:04.838818153Z 2026-11-23 14:14:04,838 [INFO] ReplayJsonl: Sent 690000 records (3714 rec/s)
+2026-11-23T14:14:07.100140148Z 2026-11-23 14:14:07,098 [INFO] ReplayJsonl: Sent 700000 records (3722 rec/s)
+2026-11-23T14:14:09.337270253Z 2026-11-23 14:14:09,336 [INFO] ReplayJsonl: Sent 710000 records (3731 rec/s)
+2026-11-23T14:14:12.414781497Z 2026-11-23 14:14:12,414 [INFO] ReplayJsonl: Sent 720000 records (3724 rec/s)
+2026-11-23T14:14:14.629987684Z 2026-11-23 14:14:14,629 [INFO] ReplayJsonl: Sent 730000 records (3733 rec/s)
+2026-11-23T14:14:16.822650370Z 2026-11-23 14:14:16,822 [INFO] ReplayJsonl: Sent 740000 records (3742 rec/s)
+2026-11-23T14:14:18.819043766Z 2026-11-23 14:14:18,818 [INFO] ReplayJsonl: Sent 750000 records (3754 rec/s)
+2026-11-23T14:14:21.435454539Z 2026-11-23 14:14:21,435 [INFO] ReplayJsonl: Sent 760000 records (3755 rec/s)
+2026-11-23T14:14:23.550652879Z 2026-11-23 14:14:23,550 [INFO] ReplayJsonl: Sent 770000 records (3765 rec/s)
+2026-11-23T14:14:25.662879081Z 2026-11-23 14:14:25,662 [INFO] ReplayJsonl: Sent 780000 records (3775 rec/s)
+2026-11-23T14:14:27.930907155Z 2026-11-23 14:14:27,930 [INFO] ReplayJsonl: Sent 790000 records (3782 rec/s)
+2026-11-23T14:14:29.928714623Z 2026-11-23 14:14:29,928 [INFO] ReplayJsonl: Sent 800000 records (3794 rec/s)
+2026-11-23T14:14:32.804803267Z 2026-11-23 14:14:32,804 [INFO] ReplayJsonl: Sent 810000 records (3789 rec/s)
+2026-11-23T14:14:34.863457284Z 2026-11-23 14:14:34,863 [INFO] ReplayJsonl: Sent 820000 records (3800 rec/s)
+2026-11-23T14:14:36.904400858Z 2026-11-23 14:14:36,903 [INFO] ReplayJsonl: Sent 830000 records (3810 rec/s)
+2026-11-23T14:14:39.527691481Z 2026-11-23 14:14:39,527 [INFO] ReplayJsonl: Sent 840000 records (3810 rec/s)
+2026-11-23T14:14:42.429567836Z 2026-11-23 14:14:42,428 [INFO] ReplayJsonl: Sent 850000 records (3805 rec/s)
+2026-11-23T14:14:44.677125416Z 2026-11-23 14:14:44,676 [INFO] ReplayJsonl: Sent 860000 records (3812 rec/s)
+2026-11-23T14:14:46.733311344Z 2026-11-23 14:14:46,733 [INFO] ReplayJsonl: Sent 870000 records (3821 rec/s)
+2026-11-23T14:14:49.194074558Z 2026-11-23 14:14:49,193 [INFO] ReplayJsonl: Sent 880000 records (3824 rec/s)
+2026-11-23T14:14:52.365605570Z 2026-11-23 14:14:52,365 [INFO] ReplayJsonl: Sent 890000 records (3815 rec/s)
+2026-11-23T14:14:54.356799632Z 2026-11-23 14:14:54,356 [INFO] ReplayJsonl: Sent 900000 records (3825 rec/s)
+2026-11-23T14:14:56.470811820Z 2026-11-23 14:14:56,470 [INFO] ReplayJsonl: Sent 910000 records (3833 rec/s)
+2026-11-23T14:14:58.888667127Z 2026-11-23 14:14:58,888 [INFO] ReplayJsonl: Sent 920000 records (3836 rec/s)
+2026-11-23T14:15:01.935610029Z 2026-11-23 14:15:01,935 [INFO] ReplayJsonl: Sent 930000 records (3829 rec/s)
+2026-11-23T14:15:02.189953476Z 2026-11-23 14:15:02,189 [INFO] kafka.cluster: Updated metadata: ClusterMetadata(brokers: 1, topics: 2, coordinators: 0)
+2026-11-23T14:15:03.152837728Z 2026-11-23 14:15:03,152 [INFO] kafka.cluster: Updated metadata: ClusterMetadata(brokers: 1, topics: 3, coordinators: 0)
+2026-11-23T14:15:06.272702816Z 2026-11-23 14:15:06,272 [INFO] kafka.producer.kafka: <KafkaProducer client_id=kafka-python-producer-1 transactional_id=None>: Closing the Kafka producer with 9223372036.0 secs timeout.
+2026-11-23T14:15:06.272717381Z 2026-11-23 14:15:06,272 [INFO] kafka.net.transport: <KafkaTCPTransport [10.42.1.6:9092<-39406]>: Closing transport
+2026-11-23T14:15:06.272718699Z 2026-11-23 14:15:06,272 [INFO] kafka.net.connection: <KafkaConnection node_id=1 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-11-23T14:15:06.272722454Z 2026-11-23 14:15:06,272 [INFO] kafka.cluster: Stopping metadata refresh loop
+2026-11-23T14:15:06.272723385Z 2026-11-23 14:15:06,272 [INFO] ReplayJsonl: Done: 938793 records

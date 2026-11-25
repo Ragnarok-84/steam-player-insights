@@ -1,0 +1,11 @@
+2026-11-23T14:11:47.510178112Z PASS: Kafka produce/consume from compute node
+2026-11-23T14:11:49.099950120Z Setting default log level to "WARN".
+2026-11-23T14:11:49.100120586Z To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-11-23T14:11:49.241870334Z 26/11/23 14:11:49 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2026-11-23T14:11:56.397175128Z PASS: Spark writes and reads Parquet across HDFS nodes
+2026-11-23T14:12:04.019168101Z PASS: Elasticsearch write/read; demo mappings initialized
+2026-11-23T14:12:04.019185093Z PASS: integration run cab57434e14a41e39fb9ff76d475bbc2; HDFS output hdfs://namenode:8020/steam/demo/cab57434e14a41e39fb9ff76d475bbc2
+2026-11-23T14:12:04.351237245Z [Stage 0:>                                                          (0 + 2) / 2]                                                                                /opt/spark/work-dir/infra/k3s/smoke.py:78: DeprecationWarning: value_serializer does not implement kafka.serializer.Serializer
+2026-11-23T14:12:04.351271482Z   main()
+2026-11-23T14:12:04.351274877Z /opt/spark/work-dir/infra/k3s/smoke.py:31: DeprecationWarning: value_deserializer does not implement kafka.serializer.Deserializer
+2026-11-23T14:12:04.351276698Z   consumer = KafkaConsumer(topic, bootstrap_servers=broker, auto_offset_reset="earliest",

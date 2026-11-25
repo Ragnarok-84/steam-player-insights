@@ -1,0 +1,88 @@
+2026-11-23T14:16:41.980760788Z + /usr/bin/python3 -m processing.batch.b2_clean_raw
+2026-11-23T14:16:43.644041669Z 26/11/23 14:16:43 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2026-11-23T14:16:43.691188454Z Setting default log level to "WARN".
+2026-11-23T14:16:43.691311997Z To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-11-23T14:16:51.627094280Z 26/11/23 14:16:51 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+2026-11-23T14:16:52.367863349Z Writing clean reviews to hdfs://namenode:8020/steam/clean/reviews...
+2026-11-23T14:21:02.380689589Z Writing clean CCU to hdfs://namenode:8020/steam/clean/ccu...
+2026-11-23T14:21:05.863039376Z Writing clean games to hdfs://namenode:8020/steam/clean/games...
+2026-11-23T14:21:09.888439772Z 26/11/23 14:21:09 WARN ExecutorPodsWatchSnapshotSource: Kubernetes client has been closed.
+2026-11-23T14:21:10.429685087Z + /usr/bin/python3 -m processing.batch.b5_aspect_sentiment
+2026-11-23T14:21:12.241115794Z 26/11/23 14:21:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2026-11-23T14:21:12.296249254Z Setting default log level to "WARN".
+2026-11-23T14:21:12.296301150Z To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-11-23T14:21:27.350154439Z 26/11/23 14:21:27 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+2026-11-23T14:31:32.103104973Z 26/11/23 14:31:32 WARN DAGScheduler: Broadcasting large task binary with size 1041.0 KiB
+2026-11-23T14:32:22.490621165Z Job B5 completed successfully.
+2026-11-23T14:32:22.512085302Z 26/11/23 14:32:22 WARN ExecutorPodsWatchSnapshotSource: Kubernetes client has been closed.
+2026-11-23T14:32:23.497362580Z + /usr/bin/python3 -m processing.batch.b3_game_daily_stats
+2026-11-23T14:32:25.091906700Z 26/11/23 14:32:25 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2026-11-23T14:32:25.154388876Z Setting default log level to "WARN".
+2026-11-23T14:32:25.154563131Z To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-11-23T14:32:43.794438795Z 26/11/23 14:32:43 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+2026-11-23T14:34:17.849572033Z Job B3 finished successfully.
+2026-11-23T14:34:17.869133237Z 26/11/23 14:34:17 WARN ExecutorPodsWatchSnapshotSource: Kubernetes client has been closed.
+2026-11-23T14:34:18.813495304Z + /usr/bin/python3 -m processing.batch.b4_playtime_buckets
+2026-11-23T14:34:20.483648257Z 26/11/23 14:34:20 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2026-11-23T14:34:20.556855915Z Setting default log level to "WARN".
+2026-11-23T14:34:20.556872213Z To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-11-23T14:34:58.063990564Z Job B4 finished successfully.
+2026-11-23T14:34:58.087265489Z 26/11/23 14:34:58 WARN ExecutorPodsWatchSnapshotSource: Kubernetes client has been closed.
+2026-11-23T14:34:59.092933616Z + /usr/bin/python3 -m processing.batch.b6_trending_games
+2026-11-23T14:35:00.653831473Z 26/11/23 14:35:00 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2026-11-23T14:35:00.708025909Z Setting default log level to "WARN".
+2026-11-23T14:35:00.708164101Z To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-11-23T14:35:24.698839211Z 26/11/23 14:35:24 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+2026-11-23T14:36:17.269573576Z Job B6 completed. Latest dt=2026-11-16.
+2026-11-23T14:36:17.292100838Z 26/11/23 14:36:17 WARN ExecutorPodsWatchSnapshotSource: Kubernetes client has been closed.
+2026-11-23T14:36:18.317685113Z + /usr/bin/python3 -m processing.batch.b7_baselines
+2026-11-23T14:36:20.060738383Z 26/11/23 14:36:20 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2026-11-23T14:36:20.137493632Z Setting default log level to "WARN".
+2026-11-23T14:36:20.137516982Z To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-11-23T14:36:52.562587345Z Job B7 finished (reviews as_of=1794951293).
+2026-11-23T14:36:52.584351771Z 26/11/23 14:36:52 WARN ExecutorPodsWatchSnapshotSource: Kubernetes client has been closed.
+2026-11-23T14:36:53.221997745Z + /usr/bin/python3 -m processing.batch.b8_game_clusters
+2026-11-23T14:36:54.861009208Z 26/11/23 14:36:54 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2026-11-23T14:36:54.927135625Z Setting default log level to "WARN".
+2026-11-23T14:36:54.927157557Z To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-11-23T14:37:20.579923875Z 26/11/23 14:37:20 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+2026-11-23T14:37:27.782095595Z +-------+-----+----------------------+--------------------+---------------------+------------------+-------------------+--------------------+-------------------+--------------------+-------------------+-------------------+--------------------+---------------------+
+2026-11-23T14:37:27.782122149Z |cluster|games|positive_ratio_percent|early_negative_ratio|median_playtime_hours|price             |performance_share  |bug_share           |price_share        |server_share        |gameplay_share     |story_share        |graphics_share      |cheating_share       |
+2026-11-23T14:37:27.782124372Z +-------+-----+----------------------+--------------------+---------------------+------------------+-------------------+--------------------+-------------------+--------------------+-------------------+-------------------+--------------------+---------------------+
+2026-11-23T14:37:27.782126138Z |0      |270  |82.4115185185185      |5.686148148148151   |16.92692592592592    |19.839740740740652|0.0363953203826149 |0.04462149255883547 |0.07080686984543619|0.03327150964335073 |0.2262283546236044 |0.1256704075993168 |0.06806772780954022 |0.0027938255514994414|
+2026-11-23T14:37:27.782127724Z |1      |396  |86.33992424242425     |4.218282828282828   |25.096590909090917   |13.136944444444367|0.01144564318190154|0.014112689310648609|0.02621675143478643|0.010131231316389242|0.08423567094381416|0.04191961193153651|0.022424018098774375|0.001697990406118221 |
+2026-11-23T14:37:27.782129322Z |2      |15   |62.69133333333333     |11.809333333333333  |42.51200000000001    |22.712            |0.0635890072329856 |0.0710218798504436  |0.08233220911743043|0.05529862468316268 |0.22878887776612308|0.1108728040341196 |0.0615000000918818  |0.06663187373635607  |
+2026-11-23T14:37:27.782130906Z |3      |83   |85.1634939759036      |7.9975903614457815  |5.146867469879517    |9.149638554216871 |0.03093516299912692|0.051356375953450245|0.1269573947132026 |0.055271419054812976|0.2609555337174304 |0.4115813898094046 |0.20110862728458734 |0.004813588361954526 |
+2026-11-23T14:37:27.782145688Z |4      |82   |69.2978048780488      |15.049268292682923  |5.976097560975609    |15.89243902439025 |0.10597039297769294|0.14781393680111188 |0.1418747881840305 |0.06266305310177311 |0.3486538140515217 |0.15276563083790504|0.11557796618577358 |0.00457944299696298  |
+2026-11-23T14:37:27.782146799Z |5      |153  |62.34895424836602     |25.968235294117655  |4.213006535947711    |4.962679738562095 |0.02762839792623141|0.04299500113875556 |0.05552048541734276|0.02546335997023246 |0.13989391357405642|0.0671926072727471 |0.05447155656020883 |0.0013217056770014268|
+2026-11-23T14:37:27.782147870Z +-------+-----+----------------------+--------------------+---------------------+------------------+-------------------+--------------------+-------------------+--------------------+-------------------+-------------------+--------------------+---------------------+
+2026-11-23T14:37:27.782148930Z 
+2026-11-23T14:37:30.465795346Z 26/11/23 14:37:30 WARN ExecutorPodsWatchSnapshotSource: Kubernetes client has been closed.
+2026-11-23T14:37:31.334940252Z + /usr/bin/python3 -m processing.batch.b9_sentiment_classifier
+2026-11-23T14:37:32.986898372Z 26/11/23 14:37:32 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2026-11-23T14:37:33.041649778Z Setting default log level to "WARN".
+2026-11-23T14:37:33.043384308Z To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-11-23T14:38:05.514242458Z B9: split=time, mốc 2026-10-13 06:17 UTC
+2026-11-23T14:39:10.276079280Z 26/11/23 14:39:10 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+2026-11-23T14:39:45.383353783Z B9 logreg frac=1.0: train=237669 test=59513 accuracy=0.8597 f1=0.8597 f1_negative=0.7265 auc=0.9014 train_s=78.6 predict_s=4.2
+2026-11-23T14:39:54.393537402Z B9 vader (cùng tập test, 59513 review): accuracy=0.7000 f1=0.7152 f1_negative=0.5256 auc=0.7465
+2026-11-23T14:39:57.702344062Z +---------+----+-----------+--------------------+-------------------------+
+2026-11-23T14:39:57.702360938Z |direction|rank|term       |coefficient         |b5_negative_keyword_games|
+2026-11-23T14:39:57.702362155Z +---------+----+-----------+--------------------+-------------------------+
+2026-11-23T14:39:57.702363262Z |negative |1   |boring     |-0.18473063670131773|6                        |
+2026-11-23T14:39:57.702364262Z |negative |2   |abandoned  |-0.16881483787122115|21                       |
+2026-11-23T14:39:57.702365244Z |negative |3   |unplayable |-0.1544224911678723 |6                        |
+2026-11-23T14:39:57.702366457Z |negative |4   |abandonware|-0.1477526247490871 |5                        |
+2026-11-23T14:39:57.702367624Z |negative |5   |dookie     |-0.13205197800602392|0                        |
+2026-11-23T14:39:57.702368621Z |negative |6   |refunded   |-0.13175026622093383|1                        |
+2026-11-23T14:39:57.702369609Z |negative |7   |refund     |-0.1294896080827141 |1                        |
+2026-11-23T14:39:57.702370601Z |negative |8   |waste      |-0.12933236970623357|2                        |
+2026-11-23T14:39:57.702371571Z |negative |9   |massacred  |-0.12770197517340173|1                        |
+2026-11-23T14:39:57.702372537Z |negative |10  |worst      |-0.125180945708912  |3                        |
+2026-11-23T14:39:57.702373521Z +---------+----+-----------+--------------------+-------------------------+
+2026-11-23T14:39:57.702374745Z only showing top 10 rows
+2026-11-23T14:39:57.702375752Z 
+2026-11-23T14:39:57.702377149Z Job B9 completed successfully.
+2026-11-23T14:39:57.723406405Z 26/11/23 14:39:57 WARN ExecutorPodsWatchSnapshotSource: Kubernetes client has been closed.
+2026-11-23T14:39:58.743571245Z + /usr/bin/python3 -m processing.serving.merge_views
+2026-11-23T14:39:59.014137108Z cutoff=2026-11-19, deleted 0 realtime docs

@@ -1,0 +1,1493 @@
+Name:             p3-batch-100-e4-p6hdk
+Namespace:        steam-ft
+Priority:         0
+Service Account:  spark-driver
+Node:             steam-worker-3/172.31.138.209
+Start Time:       Tue, 24 Nov 2026 10:46:14 +0000
+Labels:           batch.kubernetes.io/controller-uid=8c83d089-331a-41b8-8490-3505f48e9ea8
+                  batch.kubernetes.io/job-name=p3-batch-100-e4
+                  controller-uid=8c83d089-331a-41b8-8490-3505f48e9ea8
+                  job-name=p3-batch-100-e4
+                  spark-role=driver
+                  steam-benchmark=p3-batch-100-e4
+Annotations:      kubectl.kubernetes.io/default-container: driver
+Status:           Succeeded
+IP:               10.42.2.20
+IPs:
+  IP:           10.42.2.20
+Controlled By:  Job/p3-batch-100-e4
+Containers:
+  driver:
+    Container ID:  containerd://24d241bb28d2e77dccf617e27e11f722aadefe691ef31bbb227a8d5e4756fa5b
+    Image:         localhost/steam-spark:k3s-20261124-1d45953
+    Image ID:      sha256:0c2c32a0502212c21096a37a668beab54bd5a2c310074e381b9312f3251961a4
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      python3
+      tests/scalability/sc1_sc2_batch_benchmark.py
+      --profile
+      k3s
+      --scales
+      100
+      --executors
+      4
+      --runs
+      3
+      --raw-template
+      hdfs://namenode:8020/steam/bench/raw_{scale}
+      --lake-template
+      hdfs://namenode:8020/steam/bench/runs/p3-batch-100-e4/r{run}
+      --image-tag
+      localhost/steam-spark:k3s-20261124-1d45953
+      --topology
+      Hyper-V 4 VMs 12 vCPU 16 GiB Windows host
+      --shuffle-partitions
+      16
+      --log-dir
+      /opt/spark/work-dir/tests/results/batch-logs
+      --log-common
+      --dataset
+      steam_1000g_20261118
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 24 Nov 2026 10:46:14 +0000
+      Finished:     Tue, 24 Nov 2026 10:59:32 +0000
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     2
+      memory:  2432Mi
+    Requests:
+      cpu:     1
+      memory:  2Gi
+    Environment:
+      POD_NAME:                  p3-batch-100-e4-p6hdk (v1:metadata.name)
+      SPARK_DRIVER_HOST:          (v1:status.podIP)
+      SPARK_MASTER:              k8s://https://kubernetes.default.svc:443
+      SPARK_EXTRA_CONF:          spark.kubernetes.namespace=steam-ft;spark.kubernetes.authenticate.oauthTokenFile=/var/run/secrets/kubernetes.io/serviceaccount/token;spark.kubernetes.authenticate.caCertFile=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt;spark.kubernetes.container.image=localhost/steam-spark:k3s-20261124-1d45953;spark.kubernetes.container.image.pullPolicy=Never;spark.kubernetes.driver.pod.name=$(POD_NAME);spark.driver.bindAddress=0.0.0.0;spark.driver.port=7078;spark.blockManager.port=7079;spark.kubernetes.executor.node.selector.steam.insights/compute=true;spark.kubernetes.executor.podTemplateFile=/opt/spark/work-dir/infra/k3s/executor-template.yaml;spark.kubernetes.executor.podNamePrefix=$(POD_NAME);spark.kubernetes.executor.label.steam-benchmark=p3-batch-100-e4;spark.kubernetes.executor.request.cores=750m;spark.kubernetes.executor.limit.cores=1;spark.executor.instances=4;spark.executor.cores=1;spark.executor.memory=1g;spark.executor.memoryOverhead=512m;spark.dynamicAllocation.enabled=false;spark.hadoop.dfs.client.use.datanode.hostname=true;spark.hadoop.dfs.replication=2;spark.executorEnv.ELASTICSEARCH_HOSTS=http://elasticsearch:9200;spark.executorEnv.HADOOP_USER_NAME=hdfs
+      SPARK_DRIVER_MEMORY:       1536m
+      SPARK_SHUFFLE_PARTITIONS:  16
+      PYTHONUNBUFFERED:          1
+      ELASTICSEARCH_HOSTS:       http://elasticsearch:9200
+      KAFKA_BOOTSTRAP_SERVERS:   kafka:9092
+      HDFS_NAMENODE_URL:         hdfs://namenode:8020
+      HADOOP_USER_NAME:          hdfs
+      HDFS_RAW_PATH:             hdfs://namenode:8020/steam/bench/raw_100
+      HDFS_CLEAN_PATH:           hdfs://namenode:8020/steam/bench/runs/p3-batch-100-e4/clean
+      HDFS_CURATED_PATH:         hdfs://namenode:8020/steam/bench/runs/p3-batch-100-e4/curated
+      HDFS_CHECKPOINT_PATH:      hdfs://namenode:8020/steam/bench/runs/p3-batch-100-e4/checkpoints
+      GIT_COMMIT:                1d459539f58f058a2698f02a6d8bcee5e1565c31
+    Mounts:
+      /opt/spark/work-dir/tests/results from results (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-mwmtj (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  results:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/lib/steam-phase3/runs/p3-batch-100-e4
+    HostPathType:  Directory
+  kube-api-access-mwmtj:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              kubernetes.io/hostname=steam-worker-3
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  13m   default-scheduler  Successfully assigned steam-ft/p3-batch-100-e4-p6hdk to steam-worker-3
+  Normal  Pulled     13m   kubelet            Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+  Normal  Created    13m   kubelet            Created container: driver
+  Normal  Started    13m   kubelet            Started container driver
+
+
+Name:             p3-batch-100-e4-p6hdk-exec-1
+Namespace:        steam-ft
+Priority:         0
+Service Account:  default
+Node:             steam-worker-2/172.31.141.15
+Start Time:       Tue, 24 Nov 2026 10:46:18 +0000
+Labels:           spark-app-name=bench-batch-s100-e4-r1
+                  spark-app-selector=spark-9d98a8fc13d642d2ba20a9dce612b60a
+                  spark-exec-id=1
+                  spark-exec-resourceprofile-id=0
+                  spark-role=executor
+                  spark-version=3.5.7
+                  steam-benchmark=p3-batch-100-e4
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.42.3.24
+IPs:
+  IP:           10.42.3.24
+Controlled By:  Pod/p3-batch-100-e4-p6hdk
+Containers:
+  spark-kubernetes-executor:
+    Container ID:  containerd://97d2cd4e75a0c64d2b76eb8f7ceb8c0bdfc9b91b784f9bb23cfb4331bc5a139e
+    Image:         localhost/steam-spark:k3s-20261124-1d45953
+    Image ID:      sha256:0c2c32a0502212c21096a37a668beab54bd5a2c310074e381b9312f3251961a4
+    Port:          7079/TCP (blockmanager)
+    Host Port:     0/TCP (blockmanager)
+    Args:
+      executor
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 24 Nov 2026 10:46:19 +0000
+      Finished:     Tue, 24 Nov 2026 10:50:48 +0000
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1536Mi
+    Requests:
+      cpu:     750m
+      memory:  1536Mi
+    Environment:
+      SPARK_USER:                 hdfs
+      SPARK_DRIVER_URL:           spark://CoarseGrainedScheduler@10.42.2.20:7078
+      SPARK_EXECUTOR_CORES:       1
+      SPARK_EXECUTOR_MEMORY:      1024m
+      SPARK_APPLICATION_ID:       spark-9d98a8fc13d642d2ba20a9dce612b60a
+      SPARK_CONF_DIR:             /opt/spark/conf
+      SPARK_EXECUTOR_ID:          1
+      SPARK_RESOURCE_PROFILE_ID:  0
+      ELASTICSEARCH_HOSTS:        http://elasticsearch:9200
+      HADOOP_USER_NAME:           hdfs
+      SPARK_JAVA_OPT_0:           -Djava.net.preferIPv6Addresses=false
+      SPARK_JAVA_OPT_6:           --add-opens=java.base/java.net=ALL-UNNAMED
+      SPARK_JAVA_OPT_13:          --add-opens=java.base/sun.nio.cs=ALL-UNNAMED
+      SPARK_JAVA_OPT_4:           --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+      SPARK_JAVA_OPT_18:          -Dspark.blockManager.port=7079
+      SPARK_JAVA_OPT_1:           -XX:+IgnoreUnrecognizedVMOptions
+      SPARK_JAVA_OPT_10:          --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+      SPARK_JAVA_OPT_9:           --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+      SPARK_JAVA_OPT_7:           --add-opens=java.base/java.nio=ALL-UNNAMED
+      SPARK_JAVA_OPT_17:          -Djdk.reflect.useDirectMethodHandle=false
+      SPARK_JAVA_OPT_11:          --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+      SPARK_JAVA_OPT_2:           --add-opens=java.base/java.lang=ALL-UNNAMED
+      SPARK_JAVA_OPT_16:          --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+      SPARK_JAVA_OPT_8:           --add-opens=java.base/java.util=ALL-UNNAMED
+      SPARK_JAVA_OPT_12:          --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+      SPARK_JAVA_OPT_15:          --add-opens=java.base/sun.util.calendar=ALL-UNNAMED
+      SPARK_JAVA_OPT_3:           --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+      SPARK_JAVA_OPT_19:          -Dspark.driver.port=7078
+      SPARK_JAVA_OPT_14:          --add-opens=java.base/sun.security.action=ALL-UNNAMED
+      SPARK_JAVA_OPT_5:           --add-opens=java.base/java.io=ALL-UNNAMED
+      SPARK_EXECUTOR_POD_IP:       (v1:status.podIP)
+      SPARK_EXECUTOR_POD_NAME:    p3-batch-100-e4-p6hdk-exec-1 (v1:metadata.name)
+      SPARK_LOCAL_DIRS:           /var/data/spark-3b6c8ee2-a1ef-42cb-8590-e05c6c3e13ea
+    Mounts:
+      /opt/spark/conf from spark-conf-volume-exec (rw)
+      /var/data/spark-3b6c8ee2-a1ef-42cb-8590-e05c6c3e13ea from spark-local-dir-1 (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-xr824 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  spark-conf-volume-exec:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      spark-exec-d777ffa20d29e269-conf-map
+    Optional:  false
+  spark-local-dir-1:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-xr824:
+    Type:                     Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:   3607
+    ConfigMapName:            kube-root-ca.crt
+    Optional:                 false
+    DownwardAPI:              true
+QoS Class:                    Burstable
+Node-Selectors:               steam.insights/compute=true
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Topology Spread Constraints:  kubernetes.io/hostname:DoNotSchedule when max skew 1 is exceeded for selector spark-role=executor
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  13m   default-scheduler  Successfully assigned steam-ft/p3-batch-100-e4-p6hdk-exec-1 to steam-worker-2
+  Normal  Pulled     13m   kubelet            Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+  Normal  Created    13m   kubelet            Created container: spark-kubernetes-executor
+  Normal  Started    13m   kubelet            Started container spark-kubernetes-executor
+
+
+Name:             p3-batch-100-e4-p6hdk-exec-11
+Namespace:        steam-ft
+Priority:         0
+Service Account:  default
+Node:             steam-worker-1/172.31.131.54
+Start Time:       Tue, 24 Nov 2026 10:55:20 +0000
+Labels:           spark-app-name=bench-batch-s100-e4-r3
+                  spark-app-selector=spark-7f2e930d1c99430fa92eb136fd3bb768
+                  spark-exec-id=11
+                  spark-exec-resourceprofile-id=0
+                  spark-role=executor
+                  spark-version=3.5.7
+                  steam-benchmark=p3-batch-100-e4
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.42.1.17
+IPs:
+  IP:           10.42.1.17
+Controlled By:  Pod/p3-batch-100-e4-p6hdk
+Containers:
+  spark-kubernetes-executor:
+    Container ID:  containerd://4dad6f886ef695eb1e3e60274911d6642bc7148138ec3dd60766477d4b02605a
+    Image:         localhost/steam-spark:k3s-20261124-1d45953
+    Image ID:      sha256:0c2c32a0502212c21096a37a668beab54bd5a2c310074e381b9312f3251961a4
+    Port:          7079/TCP (blockmanager)
+    Host Port:     0/TCP (blockmanager)
+    Args:
+      executor
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 24 Nov 2026 10:55:21 +0000
+      Finished:     Tue, 24 Nov 2026 10:59:32 +0000
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1536Mi
+    Requests:
+      cpu:     750m
+      memory:  1536Mi
+    Environment:
+      SPARK_USER:                 hdfs
+      SPARK_DRIVER_URL:           spark://CoarseGrainedScheduler@10.42.2.20:7078
+      SPARK_EXECUTOR_CORES:       1
+      SPARK_EXECUTOR_MEMORY:      1024m
+      SPARK_APPLICATION_ID:       spark-7f2e930d1c99430fa92eb136fd3bb768
+      SPARK_CONF_DIR:             /opt/spark/conf
+      SPARK_EXECUTOR_ID:          11
+      SPARK_RESOURCE_PROFILE_ID:  0
+      ELASTICSEARCH_HOSTS:        http://elasticsearch:9200
+      HADOOP_USER_NAME:           hdfs
+      SPARK_JAVA_OPT_0:           -Djava.net.preferIPv6Addresses=false
+      SPARK_JAVA_OPT_6:           --add-opens=java.base/java.net=ALL-UNNAMED
+      SPARK_JAVA_OPT_13:          --add-opens=java.base/sun.nio.cs=ALL-UNNAMED
+      SPARK_JAVA_OPT_4:           --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+      SPARK_JAVA_OPT_18:          -Dspark.blockManager.port=7079
+      SPARK_JAVA_OPT_1:           -XX:+IgnoreUnrecognizedVMOptions
+      SPARK_JAVA_OPT_10:          --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+      SPARK_JAVA_OPT_9:           --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+      SPARK_JAVA_OPT_7:           --add-opens=java.base/java.nio=ALL-UNNAMED
+      SPARK_JAVA_OPT_17:          -Djdk.reflect.useDirectMethodHandle=false
+      SPARK_JAVA_OPT_11:          --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+      SPARK_JAVA_OPT_2:           --add-opens=java.base/java.lang=ALL-UNNAMED
+      SPARK_JAVA_OPT_16:          --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+      SPARK_JAVA_OPT_8:           --add-opens=java.base/java.util=ALL-UNNAMED
+      SPARK_JAVA_OPT_12:          --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+      SPARK_JAVA_OPT_15:          --add-opens=java.base/sun.util.calendar=ALL-UNNAMED
+      SPARK_JAVA_OPT_3:           --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+      SPARK_JAVA_OPT_19:          -Dspark.driver.port=7078
+      SPARK_JAVA_OPT_14:          --add-opens=java.base/sun.security.action=ALL-UNNAMED
+      SPARK_JAVA_OPT_5:           --add-opens=java.base/java.io=ALL-UNNAMED
+      SPARK_EXECUTOR_POD_IP:       (v1:status.podIP)
+      SPARK_EXECUTOR_POD_NAME:    p3-batch-100-e4-p6hdk-exec-11 (v1:metadata.name)
+      SPARK_LOCAL_DIRS:           /var/data/spark-a683ce23-9d0a-46ec-a03c-b88fbae62daa
+    Mounts:
+      /opt/spark/conf from spark-conf-volume-exec (rw)
+      /var/data/spark-a683ce23-9d0a-46ec-a03c-b88fbae62daa from spark-local-dir-1 (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-fpt4r (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  spark-conf-volume-exec:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      spark-exec-4c09bfa20d320639-conf-map
+    Optional:  false
+  spark-local-dir-1:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-fpt4r:
+    Type:                     Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:   3607
+    ConfigMapName:            kube-root-ca.crt
+    Optional:                 false
+    DownwardAPI:              true
+QoS Class:                    Burstable
+Node-Selectors:               steam.insights/compute=true
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Topology Spread Constraints:  kubernetes.io/hostname:DoNotSchedule when max skew 1 is exceeded for selector spark-role=executor
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  4m17s  default-scheduler  Successfully assigned steam-ft/p3-batch-100-e4-p6hdk-exec-11 to steam-worker-1
+  Normal  Pulled     4m17s  kubelet            Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+  Normal  Created    4m17s  kubelet            Created container: spark-kubernetes-executor
+  Normal  Started    4m17s  kubelet            Started container spark-kubernetes-executor
+
+
+Name:             p3-batch-100-e4-p6hdk-exec-12
+Namespace:        steam-ft
+Priority:         0
+Service Account:  default
+Node:             steam-worker-3/172.31.138.209
+Start Time:       Tue, 24 Nov 2026 10:55:20 +0000
+Labels:           spark-app-name=bench-batch-s100-e4-r3
+                  spark-app-selector=spark-7f2e930d1c99430fa92eb136fd3bb768
+                  spark-exec-id=12
+                  spark-exec-resourceprofile-id=0
+                  spark-role=executor
+                  spark-version=3.5.7
+                  steam-benchmark=p3-batch-100-e4
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.42.2.23
+IPs:
+  IP:           10.42.2.23
+Controlled By:  Pod/p3-batch-100-e4-p6hdk
+Containers:
+  spark-kubernetes-executor:
+    Container ID:  containerd://9d0f12c6a8c086826b01e3b06f34a3df60d5f4f247074013629bb23f24d58171
+    Image:         localhost/steam-spark:k3s-20261124-1d45953
+    Image ID:      sha256:0c2c32a0502212c21096a37a668beab54bd5a2c310074e381b9312f3251961a4
+    Port:          7079/TCP (blockmanager)
+    Host Port:     0/TCP (blockmanager)
+    Args:
+      executor
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 24 Nov 2026 10:55:21 +0000
+      Finished:     Tue, 24 Nov 2026 10:59:32 +0000
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1536Mi
+    Requests:
+      cpu:     750m
+      memory:  1536Mi
+    Environment:
+      SPARK_USER:                 hdfs
+      SPARK_DRIVER_URL:           spark://CoarseGrainedScheduler@10.42.2.20:7078
+      SPARK_EXECUTOR_CORES:       1
+      SPARK_EXECUTOR_MEMORY:      1024m
+      SPARK_APPLICATION_ID:       spark-7f2e930d1c99430fa92eb136fd3bb768
+      SPARK_CONF_DIR:             /opt/spark/conf
+      SPARK_EXECUTOR_ID:          12
+      SPARK_RESOURCE_PROFILE_ID:  0
+      ELASTICSEARCH_HOSTS:        http://elasticsearch:9200
+      HADOOP_USER_NAME:           hdfs
+      SPARK_JAVA_OPT_0:           -Djava.net.preferIPv6Addresses=false
+      SPARK_JAVA_OPT_6:           --add-opens=java.base/java.net=ALL-UNNAMED
+      SPARK_JAVA_OPT_13:          --add-opens=java.base/sun.nio.cs=ALL-UNNAMED
+      SPARK_JAVA_OPT_4:           --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+      SPARK_JAVA_OPT_18:          -Dspark.blockManager.port=7079
+      SPARK_JAVA_OPT_1:           -XX:+IgnoreUnrecognizedVMOptions
+      SPARK_JAVA_OPT_10:          --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+      SPARK_JAVA_OPT_9:           --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+      SPARK_JAVA_OPT_7:           --add-opens=java.base/java.nio=ALL-UNNAMED
+      SPARK_JAVA_OPT_17:          -Djdk.reflect.useDirectMethodHandle=false
+      SPARK_JAVA_OPT_11:          --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+      SPARK_JAVA_OPT_2:           --add-opens=java.base/java.lang=ALL-UNNAMED
+      SPARK_JAVA_OPT_16:          --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+      SPARK_JAVA_OPT_8:           --add-opens=java.base/java.util=ALL-UNNAMED
+      SPARK_JAVA_OPT_12:          --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+      SPARK_JAVA_OPT_15:          --add-opens=java.base/sun.util.calendar=ALL-UNNAMED
+      SPARK_JAVA_OPT_3:           --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+      SPARK_JAVA_OPT_19:          -Dspark.driver.port=7078
+      SPARK_JAVA_OPT_14:          --add-opens=java.base/sun.security.action=ALL-UNNAMED
+      SPARK_JAVA_OPT_5:           --add-opens=java.base/java.io=ALL-UNNAMED
+      SPARK_EXECUTOR_POD_IP:       (v1:status.podIP)
+      SPARK_EXECUTOR_POD_NAME:    p3-batch-100-e4-p6hdk-exec-12 (v1:metadata.name)
+      SPARK_LOCAL_DIRS:           /var/data/spark-d4c45028-088e-4528-b469-da5116c042cf
+    Mounts:
+      /opt/spark/conf from spark-conf-volume-exec (rw)
+      /var/data/spark-d4c45028-088e-4528-b469-da5116c042cf from spark-local-dir-1 (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-zxgs8 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  spark-conf-volume-exec:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      spark-exec-4c09bfa20d320639-conf-map
+    Optional:  false
+  spark-local-dir-1:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-zxgs8:
+    Type:                     Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:   3607
+    ConfigMapName:            kube-root-ca.crt
+    Optional:                 false
+    DownwardAPI:              true
+QoS Class:                    Burstable
+Node-Selectors:               steam.insights/compute=true
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Topology Spread Constraints:  kubernetes.io/hostname:DoNotSchedule when max skew 1 is exceeded for selector spark-role=executor
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  4m17s  default-scheduler  Successfully assigned steam-ft/p3-batch-100-e4-p6hdk-exec-12 to steam-worker-3
+  Normal  Pulled     4m17s  kubelet            Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+  Normal  Created    4m17s  kubelet            Created container: spark-kubernetes-executor
+  Normal  Started    4m17s  kubelet            Started container spark-kubernetes-executor
+
+
+Name:             p3-batch-100-e4-p6hdk-exec-13
+Namespace:        steam-ft
+Priority:         0
+Service Account:  default
+Node:             steam-worker-2/172.31.141.15
+Start Time:       Tue, 24 Nov 2026 10:55:20 +0000
+Labels:           spark-app-name=bench-batch-s100-e4-r3
+                  spark-app-selector=spark-7f2e930d1c99430fa92eb136fd3bb768
+                  spark-exec-id=13
+                  spark-exec-resourceprofile-id=0
+                  spark-role=executor
+                  spark-version=3.5.7
+                  steam-benchmark=p3-batch-100-e4
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.42.3.29
+IPs:
+  IP:           10.42.3.29
+Controlled By:  Pod/p3-batch-100-e4-p6hdk
+Containers:
+  spark-kubernetes-executor:
+    Container ID:  containerd://f535c791ff78277c3d682a08eb4ea60c917985b63569158515bbe29b42fecf63
+    Image:         localhost/steam-spark:k3s-20261124-1d45953
+    Image ID:      sha256:0c2c32a0502212c21096a37a668beab54bd5a2c310074e381b9312f3251961a4
+    Port:          7079/TCP (blockmanager)
+    Host Port:     0/TCP (blockmanager)
+    Args:
+      executor
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 24 Nov 2026 10:55:21 +0000
+      Finished:     Tue, 24 Nov 2026 10:59:32 +0000
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1536Mi
+    Requests:
+      cpu:     750m
+      memory:  1536Mi
+    Environment:
+      SPARK_USER:                 hdfs
+      SPARK_DRIVER_URL:           spark://CoarseGrainedScheduler@10.42.2.20:7078
+      SPARK_EXECUTOR_CORES:       1
+      SPARK_EXECUTOR_MEMORY:      1024m
+      SPARK_APPLICATION_ID:       spark-7f2e930d1c99430fa92eb136fd3bb768
+      SPARK_CONF_DIR:             /opt/spark/conf
+      SPARK_EXECUTOR_ID:          13
+      SPARK_RESOURCE_PROFILE_ID:  0
+      ELASTICSEARCH_HOSTS:        http://elasticsearch:9200
+      HADOOP_USER_NAME:           hdfs
+      SPARK_JAVA_OPT_0:           -Djava.net.preferIPv6Addresses=false
+      SPARK_JAVA_OPT_6:           --add-opens=java.base/java.net=ALL-UNNAMED
+      SPARK_JAVA_OPT_13:          --add-opens=java.base/sun.nio.cs=ALL-UNNAMED
+      SPARK_JAVA_OPT_4:           --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+      SPARK_JAVA_OPT_18:          -Dspark.blockManager.port=7079
+      SPARK_JAVA_OPT_1:           -XX:+IgnoreUnrecognizedVMOptions
+      SPARK_JAVA_OPT_10:          --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+      SPARK_JAVA_OPT_9:           --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+      SPARK_JAVA_OPT_7:           --add-opens=java.base/java.nio=ALL-UNNAMED
+      SPARK_JAVA_OPT_17:          -Djdk.reflect.useDirectMethodHandle=false
+      SPARK_JAVA_OPT_11:          --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+      SPARK_JAVA_OPT_2:           --add-opens=java.base/java.lang=ALL-UNNAMED
+      SPARK_JAVA_OPT_16:          --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+      SPARK_JAVA_OPT_8:           --add-opens=java.base/java.util=ALL-UNNAMED
+      SPARK_JAVA_OPT_12:          --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+      SPARK_JAVA_OPT_15:          --add-opens=java.base/sun.util.calendar=ALL-UNNAMED
+      SPARK_JAVA_OPT_3:           --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+      SPARK_JAVA_OPT_19:          -Dspark.driver.port=7078
+      SPARK_JAVA_OPT_14:          --add-opens=java.base/sun.security.action=ALL-UNNAMED
+      SPARK_JAVA_OPT_5:           --add-opens=java.base/java.io=ALL-UNNAMED
+      SPARK_EXECUTOR_POD_IP:       (v1:status.podIP)
+      SPARK_EXECUTOR_POD_NAME:    p3-batch-100-e4-p6hdk-exec-13 (v1:metadata.name)
+      SPARK_LOCAL_DIRS:           /var/data/spark-dbc0939c-2081-4cad-9af7-2977b1d1731b
+    Mounts:
+      /opt/spark/conf from spark-conf-volume-exec (rw)
+      /var/data/spark-dbc0939c-2081-4cad-9af7-2977b1d1731b from spark-local-dir-1 (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-7t64j (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  spark-conf-volume-exec:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      spark-exec-4c09bfa20d320639-conf-map
+    Optional:  false
+  spark-local-dir-1:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-7t64j:
+    Type:                     Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:   3607
+    ConfigMapName:            kube-root-ca.crt
+    Optional:                 false
+    DownwardAPI:              true
+QoS Class:                    Burstable
+Node-Selectors:               steam.insights/compute=true
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Topology Spread Constraints:  kubernetes.io/hostname:DoNotSchedule when max skew 1 is exceeded for selector spark-role=executor
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  4m17s  default-scheduler  Successfully assigned steam-ft/p3-batch-100-e4-p6hdk-exec-13 to steam-worker-2
+  Normal  Pulled     4m17s  kubelet            Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+  Normal  Created    4m17s  kubelet            Created container: spark-kubernetes-executor
+  Normal  Started    4m17s  kubelet            Started container spark-kubernetes-executor
+
+
+Name:             p3-batch-100-e4-p6hdk-exec-2
+Namespace:        steam-ft
+Priority:         0
+Service Account:  default
+Node:             steam-worker-1/172.31.131.54
+Start Time:       Tue, 24 Nov 2026 10:46:18 +0000
+Labels:           spark-app-name=bench-batch-s100-e4-r1
+                  spark-app-selector=spark-9d98a8fc13d642d2ba20a9dce612b60a
+                  spark-exec-id=2
+                  spark-exec-resourceprofile-id=0
+                  spark-role=executor
+                  spark-version=3.5.7
+                  steam-benchmark=p3-batch-100-e4
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.42.1.15
+IPs:
+  IP:           10.42.1.15
+Controlled By:  Pod/p3-batch-100-e4-p6hdk
+Containers:
+  spark-kubernetes-executor:
+    Container ID:  containerd://3ff90537af961359e443f2d22a65cd861f4f8a86c36ddb3cfe1d87ed9c0b8a53
+    Image:         localhost/steam-spark:k3s-20261124-1d45953
+    Image ID:      sha256:0c2c32a0502212c21096a37a668beab54bd5a2c310074e381b9312f3251961a4
+    Port:          7079/TCP (blockmanager)
+    Host Port:     0/TCP (blockmanager)
+    Args:
+      executor
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 24 Nov 2026 10:46:19 +0000
+      Finished:     Tue, 24 Nov 2026 10:50:48 +0000
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1536Mi
+    Requests:
+      cpu:     750m
+      memory:  1536Mi
+    Environment:
+      SPARK_USER:                 hdfs
+      SPARK_DRIVER_URL:           spark://CoarseGrainedScheduler@10.42.2.20:7078
+      SPARK_EXECUTOR_CORES:       1
+      SPARK_EXECUTOR_MEMORY:      1024m
+      SPARK_APPLICATION_ID:       spark-9d98a8fc13d642d2ba20a9dce612b60a
+      SPARK_CONF_DIR:             /opt/spark/conf
+      SPARK_EXECUTOR_ID:          2
+      SPARK_RESOURCE_PROFILE_ID:  0
+      ELASTICSEARCH_HOSTS:        http://elasticsearch:9200
+      HADOOP_USER_NAME:           hdfs
+      SPARK_JAVA_OPT_0:           -Djava.net.preferIPv6Addresses=false
+      SPARK_JAVA_OPT_6:           --add-opens=java.base/java.net=ALL-UNNAMED
+      SPARK_JAVA_OPT_13:          --add-opens=java.base/sun.nio.cs=ALL-UNNAMED
+      SPARK_JAVA_OPT_4:           --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+      SPARK_JAVA_OPT_18:          -Dspark.blockManager.port=7079
+      SPARK_JAVA_OPT_1:           -XX:+IgnoreUnrecognizedVMOptions
+      SPARK_JAVA_OPT_10:          --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+      SPARK_JAVA_OPT_9:           --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+      SPARK_JAVA_OPT_7:           --add-opens=java.base/java.nio=ALL-UNNAMED
+      SPARK_JAVA_OPT_17:          -Djdk.reflect.useDirectMethodHandle=false
+      SPARK_JAVA_OPT_11:          --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+      SPARK_JAVA_OPT_2:           --add-opens=java.base/java.lang=ALL-UNNAMED
+      SPARK_JAVA_OPT_16:          --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+      SPARK_JAVA_OPT_8:           --add-opens=java.base/java.util=ALL-UNNAMED
+      SPARK_JAVA_OPT_12:          --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+      SPARK_JAVA_OPT_15:          --add-opens=java.base/sun.util.calendar=ALL-UNNAMED
+      SPARK_JAVA_OPT_3:           --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+      SPARK_JAVA_OPT_19:          -Dspark.driver.port=7078
+      SPARK_JAVA_OPT_14:          --add-opens=java.base/sun.security.action=ALL-UNNAMED
+      SPARK_JAVA_OPT_5:           --add-opens=java.base/java.io=ALL-UNNAMED
+      SPARK_EXECUTOR_POD_IP:       (v1:status.podIP)
+      SPARK_EXECUTOR_POD_NAME:    p3-batch-100-e4-p6hdk-exec-2 (v1:metadata.name)
+      SPARK_LOCAL_DIRS:           /var/data/spark-7d6f305c-9820-4637-a6d2-e5ff0b3b5993
+    Mounts:
+      /opt/spark/conf from spark-conf-volume-exec (rw)
+      /var/data/spark-7d6f305c-9820-4637-a6d2-e5ff0b3b5993 from spark-local-dir-1 (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-z6vdc (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  spark-conf-volume-exec:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      spark-exec-d777ffa20d29e269-conf-map
+    Optional:  false
+  spark-local-dir-1:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-z6vdc:
+    Type:                     Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:   3607
+    ConfigMapName:            kube-root-ca.crt
+    Optional:                 false
+    DownwardAPI:              true
+QoS Class:                    Burstable
+Node-Selectors:               steam.insights/compute=true
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Topology Spread Constraints:  kubernetes.io/hostname:DoNotSchedule when max skew 1 is exceeded for selector spark-role=executor
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  13m   default-scheduler  Successfully assigned steam-ft/p3-batch-100-e4-p6hdk-exec-2 to steam-worker-1
+  Normal  Pulled     13m   kubelet            Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+  Normal  Created    13m   kubelet            Created container: spark-kubernetes-executor
+  Normal  Started    13m   kubelet            Started container spark-kubernetes-executor
+
+
+Name:             p3-batch-100-e4-p6hdk-exec-3
+Namespace:        steam-ft
+Priority:         0
+Service Account:  default
+Node:             steam-worker-3/172.31.138.209
+Start Time:       Tue, 24 Nov 2026 10:46:18 +0000
+Labels:           spark-app-name=bench-batch-s100-e4-r1
+                  spark-app-selector=spark-9d98a8fc13d642d2ba20a9dce612b60a
+                  spark-exec-id=3
+                  spark-exec-resourceprofile-id=0
+                  spark-role=executor
+                  spark-version=3.5.7
+                  steam-benchmark=p3-batch-100-e4
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.42.2.21
+IPs:
+  IP:           10.42.2.21
+Controlled By:  Pod/p3-batch-100-e4-p6hdk
+Containers:
+  spark-kubernetes-executor:
+    Container ID:  containerd://2739c32258a16adac365f1bb1f8145043f2fbe80f50c4f334c8994684153f004
+    Image:         localhost/steam-spark:k3s-20261124-1d45953
+    Image ID:      sha256:0c2c32a0502212c21096a37a668beab54bd5a2c310074e381b9312f3251961a4
+    Port:          7079/TCP (blockmanager)
+    Host Port:     0/TCP (blockmanager)
+    Args:
+      executor
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 24 Nov 2026 10:46:19 +0000
+      Finished:     Tue, 24 Nov 2026 10:50:48 +0000
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1536Mi
+    Requests:
+      cpu:     750m
+      memory:  1536Mi
+    Environment:
+      SPARK_USER:                 hdfs
+      SPARK_DRIVER_URL:           spark://CoarseGrainedScheduler@10.42.2.20:7078
+      SPARK_EXECUTOR_CORES:       1
+      SPARK_EXECUTOR_MEMORY:      1024m
+      SPARK_APPLICATION_ID:       spark-9d98a8fc13d642d2ba20a9dce612b60a
+      SPARK_CONF_DIR:             /opt/spark/conf
+      SPARK_EXECUTOR_ID:          3
+      SPARK_RESOURCE_PROFILE_ID:  0
+      ELASTICSEARCH_HOSTS:        http://elasticsearch:9200
+      HADOOP_USER_NAME:           hdfs
+      SPARK_JAVA_OPT_0:           -Djava.net.preferIPv6Addresses=false
+      SPARK_JAVA_OPT_6:           --add-opens=java.base/java.net=ALL-UNNAMED
+      SPARK_JAVA_OPT_13:          --add-opens=java.base/sun.nio.cs=ALL-UNNAMED
+      SPARK_JAVA_OPT_4:           --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+      SPARK_JAVA_OPT_18:          -Dspark.blockManager.port=7079
+      SPARK_JAVA_OPT_1:           -XX:+IgnoreUnrecognizedVMOptions
+      SPARK_JAVA_OPT_10:          --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+      SPARK_JAVA_OPT_9:           --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+      SPARK_JAVA_OPT_7:           --add-opens=java.base/java.nio=ALL-UNNAMED
+      SPARK_JAVA_OPT_17:          -Djdk.reflect.useDirectMethodHandle=false
+      SPARK_JAVA_OPT_11:          --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+      SPARK_JAVA_OPT_2:           --add-opens=java.base/java.lang=ALL-UNNAMED
+      SPARK_JAVA_OPT_16:          --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+      SPARK_JAVA_OPT_8:           --add-opens=java.base/java.util=ALL-UNNAMED
+      SPARK_JAVA_OPT_12:          --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+      SPARK_JAVA_OPT_15:          --add-opens=java.base/sun.util.calendar=ALL-UNNAMED
+      SPARK_JAVA_OPT_3:           --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+      SPARK_JAVA_OPT_19:          -Dspark.driver.port=7078
+      SPARK_JAVA_OPT_14:          --add-opens=java.base/sun.security.action=ALL-UNNAMED
+      SPARK_JAVA_OPT_5:           --add-opens=java.base/java.io=ALL-UNNAMED
+      SPARK_EXECUTOR_POD_IP:       (v1:status.podIP)
+      SPARK_EXECUTOR_POD_NAME:    p3-batch-100-e4-p6hdk-exec-3 (v1:metadata.name)
+      SPARK_LOCAL_DIRS:           /var/data/spark-612dfac8-ffa9-41c1-91d8-d6a95bb4afbf
+    Mounts:
+      /opt/spark/conf from spark-conf-volume-exec (rw)
+      /var/data/spark-612dfac8-ffa9-41c1-91d8-d6a95bb4afbf from spark-local-dir-1 (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-hclfr (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  spark-conf-volume-exec:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      spark-exec-d777ffa20d29e269-conf-map
+    Optional:  false
+  spark-local-dir-1:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-hclfr:
+    Type:                     Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:   3607
+    ConfigMapName:            kube-root-ca.crt
+    Optional:                 false
+    DownwardAPI:              true
+QoS Class:                    Burstable
+Node-Selectors:               steam.insights/compute=true
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Topology Spread Constraints:  kubernetes.io/hostname:DoNotSchedule when max skew 1 is exceeded for selector spark-role=executor
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  13m   default-scheduler  Successfully assigned steam-ft/p3-batch-100-e4-p6hdk-exec-3 to steam-worker-3
+  Normal  Pulled     13m   kubelet            Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+  Normal  Created    13m   kubelet            Created container: spark-kubernetes-executor
+  Normal  Started    13m   kubelet            Started container spark-kubernetes-executor
+
+
+Name:             p3-batch-100-e4-p6hdk-exec-4
+Namespace:        steam-ft
+Priority:         0
+Service Account:  default
+Node:             steam-worker-2/172.31.141.15
+Start Time:       Tue, 24 Nov 2026 10:46:19 +0000
+Labels:           spark-app-name=bench-batch-s100-e4-r1
+                  spark-app-selector=spark-9d98a8fc13d642d2ba20a9dce612b60a
+                  spark-exec-id=4
+                  spark-exec-resourceprofile-id=0
+                  spark-role=executor
+                  spark-version=3.5.7
+                  steam-benchmark=p3-batch-100-e4
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.42.3.25
+IPs:
+  IP:           10.42.3.25
+Controlled By:  Pod/p3-batch-100-e4-p6hdk
+Containers:
+  spark-kubernetes-executor:
+    Container ID:  containerd://24be20efa6e397b2d42289c70d5d94335c4ef732797b20cc0a1906852ca8d254
+    Image:         localhost/steam-spark:k3s-20261124-1d45953
+    Image ID:      sha256:0c2c32a0502212c21096a37a668beab54bd5a2c310074e381b9312f3251961a4
+    Port:          7079/TCP (blockmanager)
+    Host Port:     0/TCP (blockmanager)
+    Args:
+      executor
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 24 Nov 2026 10:46:19 +0000
+      Finished:     Tue, 24 Nov 2026 10:50:48 +0000
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1536Mi
+    Requests:
+      cpu:     750m
+      memory:  1536Mi
+    Environment:
+      SPARK_USER:                 hdfs
+      SPARK_DRIVER_URL:           spark://CoarseGrainedScheduler@10.42.2.20:7078
+      SPARK_EXECUTOR_CORES:       1
+      SPARK_EXECUTOR_MEMORY:      1024m
+      SPARK_APPLICATION_ID:       spark-9d98a8fc13d642d2ba20a9dce612b60a
+      SPARK_CONF_DIR:             /opt/spark/conf
+      SPARK_EXECUTOR_ID:          4
+      SPARK_RESOURCE_PROFILE_ID:  0
+      ELASTICSEARCH_HOSTS:        http://elasticsearch:9200
+      HADOOP_USER_NAME:           hdfs
+      SPARK_JAVA_OPT_0:           -Djava.net.preferIPv6Addresses=false
+      SPARK_JAVA_OPT_6:           --add-opens=java.base/java.net=ALL-UNNAMED
+      SPARK_JAVA_OPT_13:          --add-opens=java.base/sun.nio.cs=ALL-UNNAMED
+      SPARK_JAVA_OPT_4:           --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+      SPARK_JAVA_OPT_18:          -Dspark.blockManager.port=7079
+      SPARK_JAVA_OPT_1:           -XX:+IgnoreUnrecognizedVMOptions
+      SPARK_JAVA_OPT_10:          --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+      SPARK_JAVA_OPT_9:           --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+      SPARK_JAVA_OPT_7:           --add-opens=java.base/java.nio=ALL-UNNAMED
+      SPARK_JAVA_OPT_17:          -Djdk.reflect.useDirectMethodHandle=false
+      SPARK_JAVA_OPT_11:          --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+      SPARK_JAVA_OPT_2:           --add-opens=java.base/java.lang=ALL-UNNAMED
+      SPARK_JAVA_OPT_16:          --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+      SPARK_JAVA_OPT_8:           --add-opens=java.base/java.util=ALL-UNNAMED
+      SPARK_JAVA_OPT_12:          --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+      SPARK_JAVA_OPT_15:          --add-opens=java.base/sun.util.calendar=ALL-UNNAMED
+      SPARK_JAVA_OPT_3:           --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+      SPARK_JAVA_OPT_19:          -Dspark.driver.port=7078
+      SPARK_JAVA_OPT_14:          --add-opens=java.base/sun.security.action=ALL-UNNAMED
+      SPARK_JAVA_OPT_5:           --add-opens=java.base/java.io=ALL-UNNAMED
+      SPARK_EXECUTOR_POD_IP:       (v1:status.podIP)
+      SPARK_EXECUTOR_POD_NAME:    p3-batch-100-e4-p6hdk-exec-4 (v1:metadata.name)
+      SPARK_LOCAL_DIRS:           /var/data/spark-b93ad981-941c-40f4-80b4-e56b7150fe86
+    Mounts:
+      /opt/spark/conf from spark-conf-volume-exec (rw)
+      /var/data/spark-b93ad981-941c-40f4-80b4-e56b7150fe86 from spark-local-dir-1 (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-c592s (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  spark-conf-volume-exec:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      spark-exec-d777ffa20d29e269-conf-map
+    Optional:  false
+  spark-local-dir-1:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-c592s:
+    Type:                     Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:   3607
+    ConfigMapName:            kube-root-ca.crt
+    Optional:                 false
+    DownwardAPI:              true
+QoS Class:                    Burstable
+Node-Selectors:               steam.insights/compute=true
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Topology Spread Constraints:  kubernetes.io/hostname:DoNotSchedule when max skew 1 is exceeded for selector spark-role=executor
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  13m   default-scheduler  Successfully assigned steam-ft/p3-batch-100-e4-p6hdk-exec-4 to steam-worker-2
+  Normal  Pulled     13m   kubelet            Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+  Normal  Created    13m   kubelet            Created container: spark-kubernetes-executor
+  Normal  Started    13m   kubelet            Started container spark-kubernetes-executor
+
+
+Name:             p3-batch-100-e4-p6hdk-exec-5
+Namespace:        steam-ft
+Priority:         0
+Service Account:  default
+Node:             steam-worker-2/172.31.141.15
+Start Time:       Tue, 24 Nov 2026 10:50:56 +0000
+Labels:           spark-app-name=bench-batch-s100-e4-r2
+                  spark-app-selector=spark-f52ecb87d937435e8a0480a7cdb7915b
+                  spark-exec-id=5
+                  spark-exec-resourceprofile-id=0
+                  spark-role=executor
+                  spark-version=3.5.7
+                  steam-benchmark=p3-batch-100-e4
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.42.3.26
+IPs:
+  IP:           10.42.3.26
+Controlled By:  Pod/p3-batch-100-e4-p6hdk
+Containers:
+  spark-kubernetes-executor:
+    Container ID:  containerd://eadc9c8123240622df2aacb736c74d4eb1cd5b21d0d32448d45c1e03a886d599
+    Image:         localhost/steam-spark:k3s-20261124-1d45953
+    Image ID:      sha256:0c2c32a0502212c21096a37a668beab54bd5a2c310074e381b9312f3251961a4
+    Port:          7079/TCP (blockmanager)
+    Host Port:     0/TCP (blockmanager)
+    Args:
+      executor
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 24 Nov 2026 10:50:56 +0000
+      Finished:     Tue, 24 Nov 2026 10:55:07 +0000
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1536Mi
+    Requests:
+      cpu:     750m
+      memory:  1536Mi
+    Environment:
+      SPARK_USER:                 hdfs
+      SPARK_DRIVER_URL:           spark://CoarseGrainedScheduler@10.42.2.20:7078
+      SPARK_EXECUTOR_CORES:       1
+      SPARK_EXECUTOR_MEMORY:      1024m
+      SPARK_APPLICATION_ID:       spark-f52ecb87d937435e8a0480a7cdb7915b
+      SPARK_CONF_DIR:             /opt/spark/conf
+      SPARK_EXECUTOR_ID:          5
+      SPARK_RESOURCE_PROFILE_ID:  0
+      ELASTICSEARCH_HOSTS:        http://elasticsearch:9200
+      HADOOP_USER_NAME:           hdfs
+      SPARK_JAVA_OPT_0:           -Djava.net.preferIPv6Addresses=false
+      SPARK_JAVA_OPT_6:           --add-opens=java.base/java.net=ALL-UNNAMED
+      SPARK_JAVA_OPT_13:          --add-opens=java.base/sun.nio.cs=ALL-UNNAMED
+      SPARK_JAVA_OPT_4:           --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+      SPARK_JAVA_OPT_18:          -Dspark.blockManager.port=7079
+      SPARK_JAVA_OPT_1:           -XX:+IgnoreUnrecognizedVMOptions
+      SPARK_JAVA_OPT_10:          --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+      SPARK_JAVA_OPT_9:           --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+      SPARK_JAVA_OPT_7:           --add-opens=java.base/java.nio=ALL-UNNAMED
+      SPARK_JAVA_OPT_17:          -Djdk.reflect.useDirectMethodHandle=false
+      SPARK_JAVA_OPT_11:          --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+      SPARK_JAVA_OPT_2:           --add-opens=java.base/java.lang=ALL-UNNAMED
+      SPARK_JAVA_OPT_16:          --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+      SPARK_JAVA_OPT_8:           --add-opens=java.base/java.util=ALL-UNNAMED
+      SPARK_JAVA_OPT_12:          --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+      SPARK_JAVA_OPT_15:          --add-opens=java.base/sun.util.calendar=ALL-UNNAMED
+      SPARK_JAVA_OPT_3:           --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+      SPARK_JAVA_OPT_19:          -Dspark.driver.port=7078
+      SPARK_JAVA_OPT_14:          --add-opens=java.base/sun.security.action=ALL-UNNAMED
+      SPARK_JAVA_OPT_5:           --add-opens=java.base/java.io=ALL-UNNAMED
+      SPARK_EXECUTOR_POD_IP:       (v1:status.podIP)
+      SPARK_EXECUTOR_POD_NAME:    p3-batch-100-e4-p6hdk-exec-5 (v1:metadata.name)
+      SPARK_LOCAL_DIRS:           /var/data/spark-3dee5255-c124-4c67-9f75-5347982fb79c
+    Mounts:
+      /opt/spark/conf from spark-conf-volume-exec (rw)
+      /var/data/spark-3dee5255-c124-4c67-9f75-5347982fb79c from spark-local-dir-1 (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-4hklw (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  spark-conf-volume-exec:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      spark-exec-445520a20d2e11a0-conf-map
+    Optional:  false
+  spark-local-dir-1:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-4hklw:
+    Type:                     Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:   3607
+    ConfigMapName:            kube-root-ca.crt
+    Optional:                 false
+    DownwardAPI:              true
+QoS Class:                    Burstable
+Node-Selectors:               steam.insights/compute=true
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Topology Spread Constraints:  kubernetes.io/hostname:DoNotSchedule when max skew 1 is exceeded for selector spark-role=executor
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  8m41s  default-scheduler  Successfully assigned steam-ft/p3-batch-100-e4-p6hdk-exec-5 to steam-worker-2
+  Normal  Pulled     8m42s  kubelet            Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+  Normal  Created    8m42s  kubelet            Created container: spark-kubernetes-executor
+  Normal  Started    8m42s  kubelet            Started container spark-kubernetes-executor
+
+
+Name:             p3-batch-100-e4-p6hdk-exec-6
+Namespace:        steam-ft
+Priority:         0
+Service Account:  default
+Node:             steam-worker-1/172.31.131.54
+Start Time:       Tue, 24 Nov 2026 10:50:56 +0000
+Labels:           spark-app-name=bench-batch-s100-e4-r2
+                  spark-app-selector=spark-f52ecb87d937435e8a0480a7cdb7915b
+                  spark-exec-id=6
+                  spark-exec-resourceprofile-id=0
+                  spark-role=executor
+                  spark-version=3.5.7
+                  steam-benchmark=p3-batch-100-e4
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.42.1.16
+IPs:
+  IP:           10.42.1.16
+Controlled By:  Pod/p3-batch-100-e4-p6hdk
+Containers:
+  spark-kubernetes-executor:
+    Container ID:  containerd://a48dac082016e7f34630222f11f7d25c5050826f305682f93a8a8561df2dfddf
+    Image:         localhost/steam-spark:k3s-20261124-1d45953
+    Image ID:      sha256:0c2c32a0502212c21096a37a668beab54bd5a2c310074e381b9312f3251961a4
+    Port:          7079/TCP (blockmanager)
+    Host Port:     0/TCP (blockmanager)
+    Args:
+      executor
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 24 Nov 2026 10:50:56 +0000
+      Finished:     Tue, 24 Nov 2026 10:55:07 +0000
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1536Mi
+    Requests:
+      cpu:     750m
+      memory:  1536Mi
+    Environment:
+      SPARK_USER:                 hdfs
+      SPARK_DRIVER_URL:           spark://CoarseGrainedScheduler@10.42.2.20:7078
+      SPARK_EXECUTOR_CORES:       1
+      SPARK_EXECUTOR_MEMORY:      1024m
+      SPARK_APPLICATION_ID:       spark-f52ecb87d937435e8a0480a7cdb7915b
+      SPARK_CONF_DIR:             /opt/spark/conf
+      SPARK_EXECUTOR_ID:          6
+      SPARK_RESOURCE_PROFILE_ID:  0
+      ELASTICSEARCH_HOSTS:        http://elasticsearch:9200
+      HADOOP_USER_NAME:           hdfs
+      SPARK_JAVA_OPT_0:           -Djava.net.preferIPv6Addresses=false
+      SPARK_JAVA_OPT_6:           --add-opens=java.base/java.net=ALL-UNNAMED
+      SPARK_JAVA_OPT_13:          --add-opens=java.base/sun.nio.cs=ALL-UNNAMED
+      SPARK_JAVA_OPT_4:           --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+      SPARK_JAVA_OPT_18:          -Dspark.blockManager.port=7079
+      SPARK_JAVA_OPT_1:           -XX:+IgnoreUnrecognizedVMOptions
+      SPARK_JAVA_OPT_10:          --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+      SPARK_JAVA_OPT_9:           --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+      SPARK_JAVA_OPT_7:           --add-opens=java.base/java.nio=ALL-UNNAMED
+      SPARK_JAVA_OPT_17:          -Djdk.reflect.useDirectMethodHandle=false
+      SPARK_JAVA_OPT_11:          --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+      SPARK_JAVA_OPT_2:           --add-opens=java.base/java.lang=ALL-UNNAMED
+      SPARK_JAVA_OPT_16:          --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+      SPARK_JAVA_OPT_8:           --add-opens=java.base/java.util=ALL-UNNAMED
+      SPARK_JAVA_OPT_12:          --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+      SPARK_JAVA_OPT_15:          --add-opens=java.base/sun.util.calendar=ALL-UNNAMED
+      SPARK_JAVA_OPT_3:           --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+      SPARK_JAVA_OPT_19:          -Dspark.driver.port=7078
+      SPARK_JAVA_OPT_14:          --add-opens=java.base/sun.security.action=ALL-UNNAMED
+      SPARK_JAVA_OPT_5:           --add-opens=java.base/java.io=ALL-UNNAMED
+      SPARK_EXECUTOR_POD_IP:       (v1:status.podIP)
+      SPARK_EXECUTOR_POD_NAME:    p3-batch-100-e4-p6hdk-exec-6 (v1:metadata.name)
+      SPARK_LOCAL_DIRS:           /var/data/spark-afe82bd1-16b1-4507-bcaa-95d6c69ae418
+    Mounts:
+      /opt/spark/conf from spark-conf-volume-exec (rw)
+      /var/data/spark-afe82bd1-16b1-4507-bcaa-95d6c69ae418 from spark-local-dir-1 (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-7h6b7 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  spark-conf-volume-exec:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      spark-exec-445520a20d2e11a0-conf-map
+    Optional:  false
+  spark-local-dir-1:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-7h6b7:
+    Type:                     Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:   3607
+    ConfigMapName:            kube-root-ca.crt
+    Optional:                 false
+    DownwardAPI:              true
+QoS Class:                    Burstable
+Node-Selectors:               steam.insights/compute=true
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Topology Spread Constraints:  kubernetes.io/hostname:DoNotSchedule when max skew 1 is exceeded for selector spark-role=executor
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  8m41s  default-scheduler  Successfully assigned steam-ft/p3-batch-100-e4-p6hdk-exec-6 to steam-worker-1
+  Normal  Pulled     8m42s  kubelet            Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+  Normal  Created    8m42s  kubelet            Created container: spark-kubernetes-executor
+  Normal  Started    8m42s  kubelet            Started container spark-kubernetes-executor
+
+
+Name:             p3-batch-100-e4-p6hdk-exec-7
+Namespace:        steam-ft
+Priority:         0
+Service Account:  default
+Node:             steam-worker-3/172.31.138.209
+Start Time:       Tue, 24 Nov 2026 10:50:56 +0000
+Labels:           spark-app-name=bench-batch-s100-e4-r2
+                  spark-app-selector=spark-f52ecb87d937435e8a0480a7cdb7915b
+                  spark-exec-id=7
+                  spark-exec-resourceprofile-id=0
+                  spark-role=executor
+                  spark-version=3.5.7
+                  steam-benchmark=p3-batch-100-e4
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.42.2.22
+IPs:
+  IP:           10.42.2.22
+Controlled By:  Pod/p3-batch-100-e4-p6hdk
+Containers:
+  spark-kubernetes-executor:
+    Container ID:  containerd://99de41c9479dc5236729163711da2bfdfa98dffa8289a30ba72ff0f122797d7a
+    Image:         localhost/steam-spark:k3s-20261124-1d45953
+    Image ID:      sha256:0c2c32a0502212c21096a37a668beab54bd5a2c310074e381b9312f3251961a4
+    Port:          7079/TCP (blockmanager)
+    Host Port:     0/TCP (blockmanager)
+    Args:
+      executor
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 24 Nov 2026 10:50:56 +0000
+      Finished:     Tue, 24 Nov 2026 10:55:07 +0000
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1536Mi
+    Requests:
+      cpu:     750m
+      memory:  1536Mi
+    Environment:
+      SPARK_USER:                 hdfs
+      SPARK_DRIVER_URL:           spark://CoarseGrainedScheduler@10.42.2.20:7078
+      SPARK_EXECUTOR_CORES:       1
+      SPARK_EXECUTOR_MEMORY:      1024m
+      SPARK_APPLICATION_ID:       spark-f52ecb87d937435e8a0480a7cdb7915b
+      SPARK_CONF_DIR:             /opt/spark/conf
+      SPARK_EXECUTOR_ID:          7
+      SPARK_RESOURCE_PROFILE_ID:  0
+      ELASTICSEARCH_HOSTS:        http://elasticsearch:9200
+      HADOOP_USER_NAME:           hdfs
+      SPARK_JAVA_OPT_0:           -Djava.net.preferIPv6Addresses=false
+      SPARK_JAVA_OPT_6:           --add-opens=java.base/java.net=ALL-UNNAMED
+      SPARK_JAVA_OPT_13:          --add-opens=java.base/sun.nio.cs=ALL-UNNAMED
+      SPARK_JAVA_OPT_4:           --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+      SPARK_JAVA_OPT_18:          -Dspark.blockManager.port=7079
+      SPARK_JAVA_OPT_1:           -XX:+IgnoreUnrecognizedVMOptions
+      SPARK_JAVA_OPT_10:          --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+      SPARK_JAVA_OPT_9:           --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+      SPARK_JAVA_OPT_7:           --add-opens=java.base/java.nio=ALL-UNNAMED
+      SPARK_JAVA_OPT_17:          -Djdk.reflect.useDirectMethodHandle=false
+      SPARK_JAVA_OPT_11:          --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+      SPARK_JAVA_OPT_2:           --add-opens=java.base/java.lang=ALL-UNNAMED
+      SPARK_JAVA_OPT_16:          --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+      SPARK_JAVA_OPT_8:           --add-opens=java.base/java.util=ALL-UNNAMED
+      SPARK_JAVA_OPT_12:          --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+      SPARK_JAVA_OPT_15:          --add-opens=java.base/sun.util.calendar=ALL-UNNAMED
+      SPARK_JAVA_OPT_3:           --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+      SPARK_JAVA_OPT_19:          -Dspark.driver.port=7078
+      SPARK_JAVA_OPT_14:          --add-opens=java.base/sun.security.action=ALL-UNNAMED
+      SPARK_JAVA_OPT_5:           --add-opens=java.base/java.io=ALL-UNNAMED
+      SPARK_EXECUTOR_POD_IP:       (v1:status.podIP)
+      SPARK_EXECUTOR_POD_NAME:    p3-batch-100-e4-p6hdk-exec-7 (v1:metadata.name)
+      SPARK_LOCAL_DIRS:           /var/data/spark-84fce4e6-c0ee-4f25-b3a9-810c14cdc0d7
+    Mounts:
+      /opt/spark/conf from spark-conf-volume-exec (rw)
+      /var/data/spark-84fce4e6-c0ee-4f25-b3a9-810c14cdc0d7 from spark-local-dir-1 (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-7xmkx (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  spark-conf-volume-exec:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      spark-exec-445520a20d2e11a0-conf-map
+    Optional:  false
+  spark-local-dir-1:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-7xmkx:
+    Type:                     Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:   3607
+    ConfigMapName:            kube-root-ca.crt
+    Optional:                 false
+    DownwardAPI:              true
+QoS Class:                    Burstable
+Node-Selectors:               steam.insights/compute=true
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Topology Spread Constraints:  kubernetes.io/hostname:DoNotSchedule when max skew 1 is exceeded for selector spark-role=executor
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  8m41s  default-scheduler  Successfully assigned steam-ft/p3-batch-100-e4-p6hdk-exec-7 to steam-worker-3
+  Normal  Pulled     8m42s  kubelet            Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+  Normal  Created    8m42s  kubelet            Created container: spark-kubernetes-executor
+  Normal  Started    8m42s  kubelet            Started container spark-kubernetes-executor
+
+
+Name:             p3-batch-100-e4-p6hdk-exec-8
+Namespace:        steam-ft
+Priority:         0
+Service Account:  default
+Node:             steam-worker-2/172.31.141.15
+Start Time:       Tue, 24 Nov 2026 10:50:56 +0000
+Labels:           spark-app-name=bench-batch-s100-e4-r2
+                  spark-app-selector=spark-f52ecb87d937435e8a0480a7cdb7915b
+                  spark-exec-id=8
+                  spark-exec-resourceprofile-id=0
+                  spark-role=executor
+                  spark-version=3.5.7
+                  steam-benchmark=p3-batch-100-e4
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.42.3.27
+IPs:
+  IP:           10.42.3.27
+Controlled By:  Pod/p3-batch-100-e4-p6hdk
+Containers:
+  spark-kubernetes-executor:
+    Container ID:  containerd://ce7fccfda3ad5c7287c8a0acfbbc8dc0da9ea235bbfd21afdfc4dc4a153c0d95
+    Image:         localhost/steam-spark:k3s-20261124-1d45953
+    Image ID:      sha256:0c2c32a0502212c21096a37a668beab54bd5a2c310074e381b9312f3251961a4
+    Port:          7079/TCP (blockmanager)
+    Host Port:     0/TCP (blockmanager)
+    Args:
+      executor
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 24 Nov 2026 10:50:57 +0000
+      Finished:     Tue, 24 Nov 2026 10:55:07 +0000
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1536Mi
+    Requests:
+      cpu:     750m
+      memory:  1536Mi
+    Environment:
+      SPARK_USER:                 hdfs
+      SPARK_DRIVER_URL:           spark://CoarseGrainedScheduler@10.42.2.20:7078
+      SPARK_EXECUTOR_CORES:       1
+      SPARK_EXECUTOR_MEMORY:      1024m
+      SPARK_APPLICATION_ID:       spark-f52ecb87d937435e8a0480a7cdb7915b
+      SPARK_CONF_DIR:             /opt/spark/conf
+      SPARK_EXECUTOR_ID:          8
+      SPARK_RESOURCE_PROFILE_ID:  0
+      ELASTICSEARCH_HOSTS:        http://elasticsearch:9200
+      HADOOP_USER_NAME:           hdfs
+      SPARK_JAVA_OPT_0:           -Djava.net.preferIPv6Addresses=false
+      SPARK_JAVA_OPT_6:           --add-opens=java.base/java.net=ALL-UNNAMED
+      SPARK_JAVA_OPT_13:          --add-opens=java.base/sun.nio.cs=ALL-UNNAMED
+      SPARK_JAVA_OPT_4:           --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+      SPARK_JAVA_OPT_18:          -Dspark.blockManager.port=7079
+      SPARK_JAVA_OPT_1:           -XX:+IgnoreUnrecognizedVMOptions
+      SPARK_JAVA_OPT_10:          --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+      SPARK_JAVA_OPT_9:           --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+      SPARK_JAVA_OPT_7:           --add-opens=java.base/java.nio=ALL-UNNAMED
+      SPARK_JAVA_OPT_17:          -Djdk.reflect.useDirectMethodHandle=false
+      SPARK_JAVA_OPT_11:          --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+      SPARK_JAVA_OPT_2:           --add-opens=java.base/java.lang=ALL-UNNAMED
+      SPARK_JAVA_OPT_16:          --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+      SPARK_JAVA_OPT_8:           --add-opens=java.base/java.util=ALL-UNNAMED
+      SPARK_JAVA_OPT_12:          --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+      SPARK_JAVA_OPT_15:          --add-opens=java.base/sun.util.calendar=ALL-UNNAMED
+      SPARK_JAVA_OPT_3:           --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+      SPARK_JAVA_OPT_19:          -Dspark.driver.port=7078
+      SPARK_JAVA_OPT_14:          --add-opens=java.base/sun.security.action=ALL-UNNAMED
+      SPARK_JAVA_OPT_5:           --add-opens=java.base/java.io=ALL-UNNAMED
+      SPARK_EXECUTOR_POD_IP:       (v1:status.podIP)
+      SPARK_EXECUTOR_POD_NAME:    p3-batch-100-e4-p6hdk-exec-8 (v1:metadata.name)
+      SPARK_LOCAL_DIRS:           /var/data/spark-00aa458c-038c-4468-895e-53f8e0099e0a
+    Mounts:
+      /opt/spark/conf from spark-conf-volume-exec (rw)
+      /var/data/spark-00aa458c-038c-4468-895e-53f8e0099e0a from spark-local-dir-1 (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-fn4gx (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  spark-conf-volume-exec:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      spark-exec-445520a20d2e11a0-conf-map
+    Optional:  false
+  spark-local-dir-1:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-fn4gx:
+    Type:                     Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:   3607
+    ConfigMapName:            kube-root-ca.crt
+    Optional:                 false
+    DownwardAPI:              true
+QoS Class:                    Burstable
+Node-Selectors:               steam.insights/compute=true
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Topology Spread Constraints:  kubernetes.io/hostname:DoNotSchedule when max skew 1 is exceeded for selector spark-role=executor
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  8m41s  default-scheduler  Successfully assigned steam-ft/p3-batch-100-e4-p6hdk-exec-8 to steam-worker-2
+  Normal  Pulled     8m42s  kubelet            Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+  Normal  Created    8m41s  kubelet            Created container: spark-kubernetes-executor
+  Normal  Started    8m41s  kubelet            Started container spark-kubernetes-executor
+
+
+Name:             p3-batch-100-e4-p6hdk-exec-9
+Namespace:        steam-ft
+Priority:         0
+Service Account:  default
+Node:             steam-worker-2/172.31.141.15
+Start Time:       Tue, 24 Nov 2026 10:55:19 +0000
+Labels:           spark-app-name=bench-batch-s100-e4-r3
+                  spark-app-selector=spark-7f2e930d1c99430fa92eb136fd3bb768
+                  spark-exec-id=9
+                  spark-exec-resourceprofile-id=0
+                  spark-role=executor
+                  spark-version=3.5.7
+                  steam-benchmark=p3-batch-100-e4
+Annotations:      <none>
+Status:           Succeeded
+IP:               10.42.3.28
+IPs:
+  IP:           10.42.3.28
+Controlled By:  Pod/p3-batch-100-e4-p6hdk
+Containers:
+  spark-kubernetes-executor:
+    Container ID:  containerd://5b2af6d15877bb265fd06c27759eff69be06635e8555c2b2ec1ab784e554070e
+    Image:         localhost/steam-spark:k3s-20261124-1d45953
+    Image ID:      sha256:0c2c32a0502212c21096a37a668beab54bd5a2c310074e381b9312f3251961a4
+    Port:          7079/TCP (blockmanager)
+    Host Port:     0/TCP (blockmanager)
+    Args:
+      executor
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 24 Nov 2026 10:55:20 +0000
+      Finished:     Tue, 24 Nov 2026 10:59:32 +0000
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1536Mi
+    Requests:
+      cpu:     750m
+      memory:  1536Mi
+    Environment:
+      SPARK_USER:                 hdfs
+      SPARK_DRIVER_URL:           spark://CoarseGrainedScheduler@10.42.2.20:7078
+      SPARK_EXECUTOR_CORES:       1
+      SPARK_EXECUTOR_MEMORY:      1024m
+      SPARK_APPLICATION_ID:       spark-7f2e930d1c99430fa92eb136fd3bb768
+      SPARK_CONF_DIR:             /opt/spark/conf
+      SPARK_EXECUTOR_ID:          9
+      SPARK_RESOURCE_PROFILE_ID:  0
+      ELASTICSEARCH_HOSTS:        http://elasticsearch:9200
+      HADOOP_USER_NAME:           hdfs
+      SPARK_JAVA_OPT_0:           -Djava.net.preferIPv6Addresses=false
+      SPARK_JAVA_OPT_6:           --add-opens=java.base/java.net=ALL-UNNAMED
+      SPARK_JAVA_OPT_13:          --add-opens=java.base/sun.nio.cs=ALL-UNNAMED
+      SPARK_JAVA_OPT_4:           --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+      SPARK_JAVA_OPT_18:          -Dspark.blockManager.port=7079
+      SPARK_JAVA_OPT_1:           -XX:+IgnoreUnrecognizedVMOptions
+      SPARK_JAVA_OPT_10:          --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+      SPARK_JAVA_OPT_9:           --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+      SPARK_JAVA_OPT_7:           --add-opens=java.base/java.nio=ALL-UNNAMED
+      SPARK_JAVA_OPT_17:          -Djdk.reflect.useDirectMethodHandle=false
+      SPARK_JAVA_OPT_11:          --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+      SPARK_JAVA_OPT_2:           --add-opens=java.base/java.lang=ALL-UNNAMED
+      SPARK_JAVA_OPT_16:          --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+      SPARK_JAVA_OPT_8:           --add-opens=java.base/java.util=ALL-UNNAMED
+      SPARK_JAVA_OPT_12:          --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+      SPARK_JAVA_OPT_15:          --add-opens=java.base/sun.util.calendar=ALL-UNNAMED
+      SPARK_JAVA_OPT_3:           --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+      SPARK_JAVA_OPT_19:          -Dspark.driver.port=7078
+      SPARK_JAVA_OPT_14:          --add-opens=java.base/sun.security.action=ALL-UNNAMED
+      SPARK_JAVA_OPT_5:           --add-opens=java.base/java.io=ALL-UNNAMED
+      SPARK_EXECUTOR_POD_IP:       (v1:status.podIP)
+      SPARK_EXECUTOR_POD_NAME:    p3-batch-100-e4-p6hdk-exec-9 (v1:metadata.name)
+      SPARK_LOCAL_DIRS:           /var/data/spark-9da6aeb4-f5ae-4baa-ac20-44acda3f749e
+    Mounts:
+      /opt/spark/conf from spark-conf-volume-exec (rw)
+      /var/data/spark-9da6aeb4-f5ae-4baa-ac20-44acda3f749e from spark-local-dir-1 (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-p2cfl (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  spark-conf-volume-exec:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      spark-exec-4c09bfa20d320639-conf-map
+    Optional:  false
+  spark-local-dir-1:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-p2cfl:
+    Type:                     Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:   3607
+    ConfigMapName:            kube-root-ca.crt
+    Optional:                 false
+    DownwardAPI:              true
+QoS Class:                    Burstable
+Node-Selectors:               steam.insights/compute=true
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Topology Spread Constraints:  kubernetes.io/hostname:DoNotSchedule when max skew 1 is exceeded for selector spark-role=executor
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  4m18s  default-scheduler  Successfully assigned steam-ft/p3-batch-100-e4-p6hdk-exec-9 to steam-worker-2
+  Normal  Pulled     4m19s  kubelet            Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+  Normal  Created    4m19s  kubelet            Created container: spark-kubernetes-executor
+  Normal  Started    4m18s  kubelet            Started container spark-kubernetes-executor

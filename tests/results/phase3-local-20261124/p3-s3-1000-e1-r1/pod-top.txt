@@ -1,0 +1,114 @@
+
+2026-11-25T09:37:53Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      1125m        546Mi           
+p3-s3-1000-e1-r1-stlff          producer                    0m           0Mi             
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   617m         472Mi           
+
+2026-11-25T09:38:01Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      1125m        546Mi           
+p3-s3-1000-e1-r1-stlff          producer                    0m           0Mi             
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   617m         472Mi           
+
+2026-11-25T09:38:09Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      508m         657Mi           
+p3-s3-1000-e1-r1-stlff          producer                    0m           0Mi             
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   361m         583Mi           
+
+2026-11-25T09:38:18Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      508m         657Mi           
+p3-s3-1000-e1-r1-stlff          producer                    0m           0Mi             
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   361m         583Mi           
+
+2026-11-25T09:38:26Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      295m         694Mi           
+p3-s3-1000-e1-r1-stlff          producer                    86m          65Mi            
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   472m         699Mi           
+
+2026-11-25T09:38:35Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      316m         709Mi           
+p3-s3-1000-e1-r1-stlff          producer                    53m          65Mi            
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   472m         699Mi           
+
+2026-11-25T09:38:43Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      316m         709Mi           
+p3-s3-1000-e1-r1-stlff          producer                    53m          65Mi            
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   472m         699Mi           
+
+2026-11-25T09:38:51Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      170m         715Mi           
+p3-s3-1000-e1-r1-stlff          producer                    55m          65Mi            
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   239m         732Mi           
+
+2026-11-25T09:39:00Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      170m         715Mi           
+p3-s3-1000-e1-r1-stlff          producer                    55m          65Mi            
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   239m         732Mi           
+
+2026-11-25T09:39:08Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      194m         730Mi           
+p3-s3-1000-e1-r1-stlff          producer                    27m          25Mi            
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   219m         740Mi           
+
+2026-11-25T09:39:16Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      194m         730Mi           
+p3-s3-1000-e1-r1-stlff          producer                    27m          25Mi            
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   219m         740Mi           
+
+2026-11-25T09:39:24Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      153m         735Mi           
+p3-s3-1000-e1-r1-stlff          producer                    84m          67Mi            
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   194m         749Mi           
+
+2026-11-25T09:39:33Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      153m         735Mi           
+p3-s3-1000-e1-r1-stlff          producer                    84m          67Mi            
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   194m         749Mi           
+
+2026-11-25T09:39:41Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      137m         732Mi           
+p3-s3-1000-e1-r1-stlff          producer                    299m         69Mi            
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   331m         751Mi           
+
+2026-11-25T09:39:50Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      147m         739Mi           
+p3-s3-1000-e1-r1-stlff          producer                    283m         69Mi            
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   318m         759Mi           
+
+2026-11-25T09:39:58Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      147m         739Mi           
+p3-s3-1000-e1-r1-stlff          producer                    283m         69Mi            
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   318m         759Mi           
+
+2026-11-25T09:40:06Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      189m         744Mi           
+p3-s3-1000-e1-r1-stlff          producer                    316m         70Mi            
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   126m         757Mi           
+
+2026-11-25T09:40:15Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      189m         744Mi           
+p3-s3-1000-e1-r1-stlff          producer                    316m         70Mi            
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   126m         757Mi           
+
+2026-11-25T09:40:23Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r1-stlff          driver                      182m         749Mi           
+p3-s3-1000-e1-r1-stlff          producer                    280m         70Mi            
+p3-s3-1000-e1-r1-stlff-exec-1   spark-kubernetes-executor   220m         767Mi           

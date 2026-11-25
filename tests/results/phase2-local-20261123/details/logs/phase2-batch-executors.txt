@@ -1,0 +1,683 @@
+Mon Nov 23 14:16:41 UTC 2026
+No resources found in steam-demo namespace.
+Mon Nov 23 14:16:47 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          2s    10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:16:53 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          8s    10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:16:59 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          14s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:17:05 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          21s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:17:12 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          27s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:17:18 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          33s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:17:24 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          39s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:17:30 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          45s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:17:36 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          51s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:17:42 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          57s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:17:48 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          63s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:17:54 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          69s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:18:00 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          75s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:18:06 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          82s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:18:13 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          88s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:18:19 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          94s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:18:25 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          100s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:18:31 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          106s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:18:37 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          112s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:18:43 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          118s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:18:49 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          2m4s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:18:55 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          2m10s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:19:01 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          2m16s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:19:07 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          2m23s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:19:14 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          2m29s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:19:20 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          2m35s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:19:26 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          2m41s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:19:32 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          2m47s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:19:38 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          2m53s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:19:44 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          2m59s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:19:50 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          3m5s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:19:56 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          3m11s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:20:02 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          3m17s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:20:08 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          3m23s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:20:14 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          3m30s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:20:21 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          3m36s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:20:27 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          3m42s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:20:33 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          3m48s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:20:39 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          3m54s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:20:45 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          4m    10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:20:51 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          4m6s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:20:57 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          4m12s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:21:03 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Running   0          4m18s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:21:09 UTC 2026
+NAME                                   READY   STATUS        RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b2-clean-raw-2a5b4ea208c42e61-exec-1   1/1     Terminating   0          4m24s   10.42.2.5   steam-worker-3   <none>           <none>
+Mon Nov 23 14:21:15 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          2s    10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:21:22 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          8s    10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:21:28 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          14s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:21:34 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          20s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:21:40 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          26s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:21:46 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          32s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:21:52 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          38s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:21:58 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          44s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:22:04 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          50s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:22:10 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          57s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:22:17 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          63s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:22:23 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          69s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:22:29 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          75s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:22:35 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          81s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:22:41 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          87s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:22:47 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          93s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:22:53 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          99s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:22:59 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          105s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:23:05 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          111s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:23:11 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          118s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:23:18 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          2m4s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:23:24 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          2m10s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:23:30 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          2m16s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:23:36 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          2m22s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:23:42 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          2m28s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:23:48 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          2m34s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:23:54 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          2m40s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:24:00 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          2m46s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:24:06 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          2m52s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:24:12 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          2m58s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:24:18 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          3m5s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:24:25 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          3m11s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:24:31 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          3m17s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:24:37 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          3m23s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:24:43 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          3m29s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:24:49 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          3m35s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:24:55 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          3m41s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:25:01 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          3m47s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:25:07 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          3m53s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:25:13 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          3m59s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:25:19 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          4m6s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:25:26 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          4m12s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:25:32 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          4m18s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:25:38 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          4m24s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:25:44 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          4m30s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:25:50 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          4m36s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:25:56 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          4m42s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:26:02 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          4m48s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:26:08 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          4m54s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:26:14 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          5m    10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:26:20 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          5m6s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:26:26 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          5m13s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:26:33 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          5m19s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:26:39 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          5m25s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:26:45 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          5m31s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:26:51 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          5m37s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:26:57 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          5m43s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:27:03 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          5m49s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:27:09 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          5m55s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:27:15 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          6m1s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:27:21 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          6m7s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:27:27 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          6m14s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:27:34 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          6m20s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:27:40 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          6m26s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:27:46 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          6m32s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:27:52 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          6m38s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:27:58 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          6m44s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:28:04 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          6m50s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:28:10 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          6m56s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:28:16 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          7m2s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:28:22 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          7m8s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:28:28 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          7m15s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:28:35 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          7m21s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:28:41 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          7m27s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:28:47 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          7m33s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:28:53 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          7m39s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:28:59 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          7m45s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:29:05 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          7m51s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:29:11 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          7m57s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:29:17 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          8m3s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:29:23 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          8m9s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:29:29 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          8m16s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:29:36 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          8m22s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:29:42 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          8m28s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:29:48 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          8m34s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:29:54 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          8m40s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:30:00 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          8m46s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:30:06 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          8m52s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:30:12 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          8m58s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:30:18 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          9m4s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:30:24 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          9m10s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:30:30 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          9m16s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:30:36 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          9m23s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:30:43 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          9m29s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:30:49 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          9m35s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:30:55 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          9m41s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:31:01 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          9m47s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:31:07 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          9m53s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:31:13 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          9m59s   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:31:19 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          10m   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:31:25 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          10m   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:31:31 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          10m   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:31:37 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          10m   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:31:44 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          10m   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:31:50 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          10m   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:31:56 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          10m   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:32:02 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          10m   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:32:08 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          10m   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:32:14 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          11m   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:32:20 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b5-aspect-sentiment-342f18a208c8477f-exec-1   1/1     Running   0          11m   10.42.2.6   steam-worker-3   <none>           <none>
+Mon Nov 23 14:32:26 UTC 2026
+No resources found in steam-demo namespace.
+Mon Nov 23 14:32:33 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          6s    10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:32:39 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          12s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:32:45 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          18s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:32:51 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          24s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:32:57 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          30s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:33:03 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          36s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:33:09 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          42s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:33:15 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          49s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:33:22 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          55s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:33:28 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          61s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:33:34 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          67s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:33:40 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          73s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:33:46 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          79s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:33:52 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          85s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:33:58 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          91s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:34:04 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          97s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:34:10 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          103s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:34:16 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE    IP          NODE             NOMINATED NODE   READINESS GATES
+b3-game-daily-stats-b06151a208d28c73-exec-1   1/1     Running   0          110s   10.42.2.7   steam-worker-3   <none>           <none>
+Mon Nov 23 14:34:23 UTC 2026
+NAME                                          READY   STATUS              RESTARTS   AGE   IP       NODE             NOMINATED NODE   READINESS GATES
+b4-playtime-buckets-3f9197a208d44f3f-exec-1   0/1     ContainerCreating   0          1s    <none>   steam-worker-3   <none>           <none>
+Mon Nov 23 14:34:29 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b4-playtime-buckets-3f9197a208d44f3f-exec-1   1/1     Running   0          7s    10.42.2.8   steam-worker-3   <none>           <none>
+Mon Nov 23 14:34:35 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b4-playtime-buckets-3f9197a208d44f3f-exec-1   1/1     Running   0          13s   10.42.2.8   steam-worker-3   <none>           <none>
+Mon Nov 23 14:34:41 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b4-playtime-buckets-3f9197a208d44f3f-exec-1   1/1     Running   0          19s   10.42.2.8   steam-worker-3   <none>           <none>
+Mon Nov 23 14:34:47 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b4-playtime-buckets-3f9197a208d44f3f-exec-1   1/1     Running   0          25s   10.42.2.8   steam-worker-3   <none>           <none>
+Mon Nov 23 14:34:53 UTC 2026
+NAME                                          READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b4-playtime-buckets-3f9197a208d44f3f-exec-1   1/1     Running   0          31s   10.42.2.8   steam-worker-3   <none>           <none>
+Mon Nov 23 14:34:59 UTC 2026
+No resources found in steam-demo namespace.
+Mon Nov 23 14:35:05 UTC 2026
+NAME                                        READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b6-trending-games-f43894a208d4ebf5-exec-1   1/1     Running   0          3s    10.42.2.9   steam-worker-3   <none>           <none>
+Mon Nov 23 14:35:11 UTC 2026
+NAME                                        READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b6-trending-games-f43894a208d4ebf5-exec-1   1/1     Running   0          10s   10.42.2.9   steam-worker-3   <none>           <none>
+Mon Nov 23 14:35:18 UTC 2026
+NAME                                        READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b6-trending-games-f43894a208d4ebf5-exec-1   1/1     Running   0          16s   10.42.2.9   steam-worker-3   <none>           <none>
+Mon Nov 23 14:35:24 UTC 2026
+NAME                                        READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b6-trending-games-f43894a208d4ebf5-exec-1   1/1     Running   0          22s   10.42.2.9   steam-worker-3   <none>           <none>
+Mon Nov 23 14:35:30 UTC 2026
+NAME                                        READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b6-trending-games-f43894a208d4ebf5-exec-1   1/1     Running   0          28s   10.42.2.9   steam-worker-3   <none>           <none>
+Mon Nov 23 14:35:36 UTC 2026
+NAME                                        READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b6-trending-games-f43894a208d4ebf5-exec-1   1/1     Running   0          34s   10.42.2.9   steam-worker-3   <none>           <none>
+Mon Nov 23 14:35:42 UTC 2026
+NAME                                        READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b6-trending-games-f43894a208d4ebf5-exec-1   1/1     Running   0          40s   10.42.2.9   steam-worker-3   <none>           <none>
+Mon Nov 23 14:35:48 UTC 2026
+NAME                                        READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b6-trending-games-f43894a208d4ebf5-exec-1   1/1     Running   0          46s   10.42.2.9   steam-worker-3   <none>           <none>
+Mon Nov 23 14:35:54 UTC 2026
+NAME                                        READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b6-trending-games-f43894a208d4ebf5-exec-1   1/1     Running   0          52s   10.42.2.9   steam-worker-3   <none>           <none>
+Mon Nov 23 14:36:00 UTC 2026
+NAME                                        READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b6-trending-games-f43894a208d4ebf5-exec-1   1/1     Running   0          58s   10.42.2.9   steam-worker-3   <none>           <none>
+Mon Nov 23 14:36:06 UTC 2026
+NAME                                        READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b6-trending-games-f43894a208d4ebf5-exec-1   1/1     Running   0          65s   10.42.2.9   steam-worker-3   <none>           <none>
+Mon Nov 23 14:36:13 UTC 2026
+NAME                                        READY   STATUS    RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
+b6-trending-games-f43894a208d4ebf5-exec-1   1/1     Running   0          71s   10.42.2.9   steam-worker-3   <none>           <none>
+Mon Nov 23 14:36:19 UTC 2026
+No resources found in steam-demo namespace.
+Mon Nov 23 14:36:25 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b7-baselines-978422a208d62232-exec-1   1/1     Running   0          3s    10.42.2.10   steam-worker-3   <none>           <none>
+Mon Nov 23 14:36:31 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b7-baselines-978422a208d62232-exec-1   1/1     Running   0          9s    10.42.2.10   steam-worker-3   <none>           <none>
+Mon Nov 23 14:36:37 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b7-baselines-978422a208d62232-exec-1   1/1     Running   0          15s   10.42.2.10   steam-worker-3   <none>           <none>
+Mon Nov 23 14:36:43 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b7-baselines-978422a208d62232-exec-1   1/1     Running   0          21s   10.42.2.10   steam-worker-3   <none>           <none>
+Mon Nov 23 14:36:49 UTC 2026
+NAME                                   READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b7-baselines-978422a208d62232-exec-1   1/1     Running   0          27s   10.42.2.10   steam-worker-3   <none>           <none>
+Mon Nov 23 14:36:55 UTC 2026
+No resources found in steam-demo namespace.
+Mon Nov 23 14:37:01 UTC 2026
+NAME                                       READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b8-game-clusters-32a0c6a208d6aa45-exec-1   1/1     Running   0          5s    10.42.2.11   steam-worker-3   <none>           <none>
+Mon Nov 23 14:37:07 UTC 2026
+NAME                                       READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b8-game-clusters-32a0c6a208d6aa45-exec-1   1/1     Running   0          12s   10.42.2.11   steam-worker-3   <none>           <none>
+Mon Nov 23 14:37:14 UTC 2026
+NAME                                       READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b8-game-clusters-32a0c6a208d6aa45-exec-1   1/1     Running   0          18s   10.42.2.11   steam-worker-3   <none>           <none>
+Mon Nov 23 14:37:20 UTC 2026
+NAME                                       READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b8-game-clusters-32a0c6a208d6aa45-exec-1   1/1     Running   0          24s   10.42.2.11   steam-worker-3   <none>           <none>
+Mon Nov 23 14:37:26 UTC 2026
+NAME                                       READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b8-game-clusters-32a0c6a208d6aa45-exec-1   1/1     Running   0          30s   10.42.2.11   steam-worker-3   <none>           <none>
+Mon Nov 23 14:37:32 UTC 2026
+No resources found in steam-demo namespace.
+Mon Nov 23 14:37:38 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          3s    10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:37:44 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          9s    10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:37:50 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          15s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:37:56 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          21s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:38:02 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          28s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:38:09 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          34s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:38:15 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          40s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:38:21 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          46s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:38:27 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          52s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:38:33 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          58s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:38:39 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          64s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:38:45 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          70s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:38:51 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          76s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:38:57 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          83s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:39:04 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          89s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:39:10 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          95s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:39:16 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          101s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:39:22 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          107s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:39:28 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          113s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:39:34 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          119s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:39:40 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          2m5s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:39:46 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          2m11s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:39:52 UTC 2026
+NAME                                              READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+b9-sentiment-classifier-4b9a43a208d73eef-exec-1   1/1     Running   0          2m17s   10.42.2.12   steam-worker-3   <none>           <none>
+Mon Nov 23 14:39:58 UTC 2026
+No resources found in steam-demo namespace.

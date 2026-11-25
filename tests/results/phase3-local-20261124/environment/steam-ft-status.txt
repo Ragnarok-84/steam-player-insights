@@ -1,0 +1,110 @@
+NAME                                 READY   STATUS      RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+pod/datanode-0                       1/1     Running     0          3m20s   10.42.1.10   steam-worker-1   <none>           <none>
+pod/datanode-1                       1/1     Running     0          3m20s   10.42.0.13   steam-server     <none>           <none>
+pod/elasticsearch-0                  1/1     Running     0          3m20s   10.42.0.9    steam-server     <none>           <none>
+pod/kafka-0                          1/1     Running     0          3m20s   10.42.3.16   steam-worker-2   <none>           <none>
+pod/kafka-1                          1/1     Running     0          3m19s   10.42.0.14   steam-server     <none>           <none>
+pod/kafka-2                          1/1     Running     0          3m19s   10.42.1.12   steam-worker-1   <none>           <none>
+pod/namenode-0                       1/1     Running     0          3m20s   10.42.0.11   steam-server     <none>           <none>
+pod/p3-pilot-batch-e1-dg9jd          1/1     Running     0          28s     10.42.2.15   steam-worker-3   <none>           <none>
+pod/p3-pilot-batch-e1-dg9jd-exec-1   1/1     Running     0          23s     10.42.3.19   steam-worker-2   <none>           <none>
+pod/p3-probe-e4-twgbw                0/1     Completed   0          67s     10.42.2.13   steam-worker-3   <none>           <none>
+pod/p3-probe-e4-twgbw-exec-1         0/1     Completed   0          61s     10.42.3.17   steam-worker-2   <none>           <none>
+pod/p3-probe-e4-twgbw-exec-2         0/1     Completed   0          61s     10.42.1.13   steam-worker-1   <none>           <none>
+pod/p3-probe-e4-twgbw-exec-3         0/1     Completed   0          61s     10.42.2.14   steam-worker-3   <none>           <none>
+pod/p3-probe-e4-twgbw-exec-4         0/1     Completed   0          61s     10.42.3.18   steam-worker-2   <none>           <none>
+
+NAME                                         STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE     VOLUMEMODE
+persistentvolumeclaim/data-datanode-0        Bound    pvc-fc535d29-1402-43b8-9cab-dbf1276cf605   10Gi       RWO            local-path     <unset>                 3m20s   Filesystem
+persistentvolumeclaim/data-datanode-1        Bound    pvc-652ef5b3-0d4b-417b-907a-5823d499256a   10Gi       RWO            local-path     <unset>                 3m20s   Filesystem
+persistentvolumeclaim/data-elasticsearch-0   Bound    pvc-28bc3ad8-3dc1-4d3d-a2ed-33ad990d66ec   10Gi       RWO            local-path     <unset>                 3m20s   Filesystem
+persistentvolumeclaim/data-kafka-0           Bound    pvc-1b8863af-6764-47e6-a037-26bc958d3386   10Gi       RWO            local-path     <unset>                 3m20s   Filesystem
+persistentvolumeclaim/data-kafka-1           Bound    pvc-13f4d9cb-283e-41ce-a945-415499c1a6bd   10Gi       RWO            local-path     <unset>                 3m20s   Filesystem
+persistentvolumeclaim/data-kafka-2           Bound    pvc-e02d3843-55c3-4dd8-9ce9-2c9101efdf30   10Gi       RWO            local-path     <unset>                 3m20s   Filesystem
+persistentvolumeclaim/data-namenode-0        Bound    pvc-8a2595a2-8d20-4253-8754-d5d22ef9acad   10Gi       RWO            local-path     <unset>                 3m20s   Filesystem
+Topic: steam.alerts	TopicId: 7tpsTPqwSmWyHmfSxO-kPA	PartitionCount: 3	ReplicationFactor: 3	Configs: min.insync.replicas=2,retention.ms=86400000
+	Topic: steam.alerts	Partition: 0	Leader: 1	Replicas: 1,2,3	Isr: 1,2,3	Elr: 	LastKnownElr: 
+	Topic: steam.alerts	Partition: 1	Leader: 2	Replicas: 2,3,1	Isr: 2,3,1	Elr: 	LastKnownElr: 
+	Topic: steam.alerts	Partition: 2	Leader: 3	Replicas: 3,1,2	Isr: 3,1,2	Elr: 	LastKnownElr: 
+Topic: steam.games.meta	TopicId: lYXrNHg3SqSV6nWz-r1Odg	PartitionCount: 3	ReplicationFactor: 3	Configs: min.insync.replicas=2,cleanup.policy=compact
+	Topic: steam.games.meta	Partition: 0	Leader: 1	Replicas: 1,2,3	Isr: 1,2,3	Elr: 	LastKnownElr: 
+	Topic: steam.games.meta	Partition: 1	Leader: 2	Replicas: 2,3,1	Isr: 2,3,1	Elr: 	LastKnownElr: 
+	Topic: steam.games.meta	Partition: 2	Leader: 3	Replicas: 3,1,2	Isr: 3,1,2	Elr: 	LastKnownElr: 
+Topic: steam.players.ccu	TopicId: RNLr9O0wQOyK9Ap9eEKjqA	PartitionCount: 3	ReplicationFactor: 3	Configs: min.insync.replicas=2,retention.ms=86400000
+	Topic: steam.players.ccu	Partition: 0	Leader: 1	Replicas: 1,2,3	Isr: 1,2,3	Elr: 	LastKnownElr: 
+	Topic: steam.players.ccu	Partition: 1	Leader: 2	Replicas: 2,3,1	Isr: 2,3,1	Elr: 	LastKnownElr: 
+	Topic: steam.players.ccu	Partition: 2	Leader: 3	Replicas: 3,1,2	Isr: 3,1,2	Elr: 	LastKnownElr: 
+Topic: steam.reviews.raw	TopicId: 5yGk-Zx8SE6IG6Xrn2QGcA	PartitionCount: 3	ReplicationFactor: 3	Configs: min.insync.replicas=2,retention.ms=86400000
+	Topic: steam.reviews.raw	Partition: 0	Leader: 2	Replicas: 2,3,1	Isr: 2,3,1	Elr: 	LastKnownElr: 
+	Topic: steam.reviews.raw	Partition: 1	Leader: 3	Replicas: 3,1,2	Isr: 3,1,2	Elr: 	LastKnownElr: 
+	Topic: steam.reviews.raw	Partition: 2	Leader: 1	Replicas: 1,2,3	Isr: 1,2,3	Elr: 	LastKnownElr: 
+ClusterId:              OaH2TaG6QfKheP6oJ1DvMg
+LeaderId:               2
+LeaderEpoch:            9
+HighWatermark:          374
+MaxFollowerLag:         0
+MaxFollowerLagTimeMs:   420
+CurrentVoters:          [{"id": 1, "directoryId": null, "endpoints": ["CONTROLLER://kafka-0.kafka.steam-ft.svc.cluster.local:9093"]}, {"id": 2, "directoryId": null, "endpoints": ["CONTROLLER://kafka-1.kafka.steam-ft.svc.cluster.local:9093"]}, {"id": 3, "directoryId": null, "endpoints": ["CONTROLLER://kafka-2.kafka.steam-ft.svc.cluster.local:9093"]}]
+CurrentObservers:       []
+Configured Capacity: 122570653696 (114.15 GB)
+Present Capacity: 94252989240 (87.78 GB)
+DFS Remaining: 93504356352 (87.08 GB)
+DFS Used: 748632888 (713.95 MB)
+DFS Used%: 0.79%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (2):
+
+Name: 10.42.0.13:9866 (datanode-1.datanode.steam-ft.svc.cluster.local)
+Hostname: datanode-1.datanode.steam-ft.svc.cluster.local
+Decommission Status : Normal
+Configured Capacity: 61285326848 (57.08 GB)
+DFS Used: 374316444 (356.98 MB)
+Non DFS Used: 16619450980 (15.48 GB)
+DFS Remaining: 44274782208 (41.23 GB)
+DFS Used%: 0.61%
+DFS Remaining%: 72.24%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 1
+Last contact: Tue Nov 24 10:25:29 UTC 2026
+Last Block Report: Tue Nov 24 10:22:23 UTC 2026
+Num of Blocks: 27
+
+
+Name: 10.42.1.10:9866 (datanode-0.datanode.steam-ft.svc.cluster.local)
+Hostname: datanode-0.datanode.steam-ft.svc.cluster.local
+Decommission Status : Normal
+Configured Capacity: 61285326848 (57.08 GB)
+DFS Used: 374316444 (356.98 MB)
+Non DFS Used: 11664659044 (10.86 GB)
+DFS Remaining: 49229574144 (45.85 GB)
+DFS Used%: 0.61%
+DFS Remaining%: 80.33%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 1
+Last contact: Tue Nov 24 10:25:32 UTC 2026
+Last Block Report: Tue Nov 24 10:22:23 UTC 2026
+Num of Blocks: 27
+
+

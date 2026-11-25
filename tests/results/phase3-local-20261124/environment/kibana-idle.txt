@@ -1,0 +1,2 @@
+NAME     READY   UP-TO-DATE   AVAILABLE   AGE
+kibana   0/0     0            0           3m28s

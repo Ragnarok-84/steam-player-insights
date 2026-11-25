@@ -1,0 +1,166 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  creationTimestamp: "2026-11-25T00:50:54Z"
+  generation: 1
+  labels:
+    batch.kubernetes.io/controller-uid: 95778905-0e88-4463-8132-dcfd39ca7d5c
+    batch.kubernetes.io/job-name: p3-b9-1000-e2-r2-retry
+    controller-uid: 95778905-0e88-4463-8132-dcfd39ca7d5c
+    job-name: p3-b9-1000-e2-r2-retry
+    spark-role: driver
+    steam-benchmark: p3-b9-1000-e2-r2-retry
+  name: p3-b9-1000-e2-r2-retry
+  namespace: steam-ft
+  resourceVersion: "53891"
+  uid: 95778905-0e88-4463-8132-dcfd39ca7d5c
+spec:
+  activeDeadlineSeconds: 900
+  backoffLimit: 0
+  completionMode: NonIndexed
+  completions: 1
+  manualSelector: false
+  parallelism: 1
+  podReplacementPolicy: TerminatingOrFailed
+  selector:
+    matchLabels:
+      batch.kubernetes.io/controller-uid: 95778905-0e88-4463-8132-dcfd39ca7d5c
+  suspend: false
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/default-container: driver
+      labels:
+        batch.kubernetes.io/controller-uid: 95778905-0e88-4463-8132-dcfd39ca7d5c
+        batch.kubernetes.io/job-name: p3-b9-1000-e2-r2-retry
+        controller-uid: 95778905-0e88-4463-8132-dcfd39ca7d5c
+        job-name: p3-b9-1000-e2-r2-retry
+        spark-role: driver
+        steam-benchmark: p3-b9-1000-e2-r2-retry
+    spec:
+      containers:
+      - command:
+        - python3
+        - -c
+        - |2
+
+          import sys
+          import time
+
+          from processing.batch.b9_sentiment_classifier import train_sentiment_classifier
+          from processing.common.spark_utils import get_spark_session
+          from tests.results_log import record
+          from tests.scalability.sc1_sc2_batch_benchmark import _wait_executors
+
+          clean, curated, repeat = sys.argv[1:]
+          spark = get_spark_session('Steam Phase 3 B9 recovery')
+          try:
+              _wait_executors(spark, 2, 180)
+              start = time.perf_counter()
+              models = train_sentiment_classifier(spark, clean, curated)
+              if {model['model'] for model in models} != {'logreg', 'vader'}:
+                  raise RuntimeError('B9 did not produce both model evaluations')
+              notes = 'B9-only retry; original B2-B8 input; overhead=768Mi (original 512Mi); one core/executor'
+              args = dict(member='B', scale=1000, env='k3s', repeat=int(repeat), executors=2,
+                          dataset='steam_1000g_20261118', notes=notes)
+              record(experiment='batch', job='b9', metrics={'duration_s': time.perf_counter() - start}, **args)
+              for model in models:
+                  metrics = ['accuracy', 'f1', 'auc']
+                  if model['model'] == 'logreg':
+                      metrics += ['train_s', 'predict_s']
+                  record(experiment='ml', job='b9' if model['model'] == 'logreg' else 'vader',
+                         metrics={metric: model[metric] for metric in metrics}, **args)
+          finally:
+              spark.stop()
+        - hdfs://namenode:8020/steam/bench/runs/p3-batch-1000-e2/r2/clean
+        - hdfs://namenode:8020/steam/bench/runs/p3-b9-1000-e2-r2-retry/curated
+        - "2"
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        - name: SPARK_DRIVER_HOST
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: status.podIP
+        - name: SPARK_MASTER
+          value: k8s://https://kubernetes.default.svc:443
+        - name: SPARK_EXTRA_CONF
+          value: spark.kubernetes.namespace=steam-ft;spark.kubernetes.authenticate.oauthTokenFile=/var/run/secrets/kubernetes.io/serviceaccount/token;spark.kubernetes.authenticate.caCertFile=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt;spark.kubernetes.container.image=localhost/steam-spark:k3s-20261124-1d45953;spark.kubernetes.container.image.pullPolicy=Never;spark.kubernetes.driver.pod.name=$(POD_NAME);spark.driver.bindAddress=0.0.0.0;spark.driver.port=7078;spark.blockManager.port=7079;spark.kubernetes.executor.node.selector.steam.insights/compute=true;spark.kubernetes.executor.podTemplateFile=/opt/spark/work-dir/infra/k3s/executor-template.yaml;spark.kubernetes.executor.podNamePrefix=$(POD_NAME);spark.kubernetes.executor.label.steam-benchmark=p3-b9-1000-e2-r2-retry;spark.kubernetes.executor.request.cores=750m;spark.kubernetes.executor.limit.cores=1;spark.executor.instances=2;spark.executor.cores=1;spark.executor.memory=1g;spark.executor.memoryOverhead=768m;spark.dynamicAllocation.enabled=false;spark.hadoop.dfs.client.use.datanode.hostname=true;spark.hadoop.dfs.replication=2;spark.executorEnv.ELASTICSEARCH_HOSTS=http://elasticsearch:9200;spark.executorEnv.HADOOP_USER_NAME=hdfs
+        - name: SPARK_DRIVER_MEMORY
+          value: 1536m
+        - name: SPARK_SHUFFLE_PARTITIONS
+          value: "16"
+        - name: PYTHONUNBUFFERED
+          value: "1"
+        - name: ELASTICSEARCH_HOSTS
+          value: http://elasticsearch:9200
+        - name: KAFKA_BOOTSTRAP_SERVERS
+          value: kafka:9092
+        - name: HDFS_NAMENODE_URL
+          value: hdfs://namenode:8020
+        - name: HADOOP_USER_NAME
+          value: hdfs
+        - name: HDFS_RAW_PATH
+          value: hdfs://namenode:8020/steam/bench/raw_1000
+        - name: HDFS_CLEAN_PATH
+          value: hdfs://namenode:8020/steam/bench/runs/p3-b9-1000-e2-r2-retry/clean
+        - name: HDFS_CURATED_PATH
+          value: hdfs://namenode:8020/steam/bench/runs/p3-b9-1000-e2-r2-retry/curated
+        - name: HDFS_CHECKPOINT_PATH
+          value: hdfs://namenode:8020/steam/bench/runs/p3-b9-1000-e2-r2-retry/checkpoints
+        - name: GIT_COMMIT
+          value: 1d459539f58f058a2698f02a6d8bcee5e1565c31
+        image: localhost/steam-spark:k3s-20261124-1d45953
+        imagePullPolicy: Never
+        name: driver
+        resources:
+          limits:
+            cpu: "2"
+            memory: 2432Mi
+          requests:
+            cpu: "1"
+            memory: 2Gi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /opt/spark/work-dir/tests/results
+          name: results
+        workingDir: /opt/spark/work-dir
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        kubernetes.io/hostname: steam-worker-3
+      restartPolicy: Never
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: spark-driver
+      serviceAccountName: spark-driver
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - hostPath:
+          path: /var/lib/steam-phase3/runs/p3-b9-1000-e2-r2-retry
+          type: Directory
+        name: results
+status:
+  completionTime: "2026-11-25T00:53:09Z"
+  conditions:
+  - lastProbeTime: "2026-11-25T00:53:09Z"
+    lastTransitionTime: "2026-11-25T00:53:09Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: SuccessCriteriaMet
+  - lastProbeTime: "2026-11-25T00:53:09Z"
+    lastTransitionTime: "2026-11-25T00:53:09Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: Complete
+  ready: 0
+  startTime: "2026-11-25T00:50:54Z"
+  succeeded: 1
+  terminating: 0
+  uncountedTerminatedPods: {}

@@ -1,0 +1,133 @@
+
+2026-11-25T07:41:20Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      1181m        512Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    1m           0Mi             
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   442m         385Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   476m         391Mi           
+
+2026-11-25T07:41:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      1181m        512Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    1m           0Mi             
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   442m         385Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   476m         391Mi           
+
+2026-11-25T07:41:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      466m         572Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    0m           0Mi             
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   5m           380Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   961m         448Mi           
+
+2026-11-25T07:41:45Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      466m         572Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    0m           0Mi             
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   5m           380Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   961m         448Mi           
+
+2026-11-25T07:41:53Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      456m         621Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    224m         99Mi            
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   441m         646Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   290m         556Mi           
+
+2026-11-25T07:42:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      456m         621Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    224m         99Mi            
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   441m         646Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   290m         556Mi           
+
+2026-11-25T07:42:11Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      363m         661Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    314m         177Mi           
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   375m         725Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   387m         715Mi           
+
+2026-11-25T07:42:19Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      363m         661Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    314m         177Mi           
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   375m         725Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   387m         715Mi           
+
+2026-11-25T07:42:27Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      191m         665Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    323m         246Mi           
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   151m         729Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   236m         719Mi           
+
+2026-11-25T07:42:35Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      191m         665Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    276m         25Mi            
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   118m         733Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   101m         724Mi           
+
+2026-11-25T07:42:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      191m         665Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    276m         25Mi            
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   118m         733Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   101m         724Mi           
+
+2026-11-25T07:42:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      272m         682Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    122m         80Mi            
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   88m          737Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   113m         721Mi           
+
+2026-11-25T07:43:00Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      272m         682Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    122m         80Mi            
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   88m          737Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   113m         721Mi           
+
+2026-11-25T07:43:09Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      267m         691Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    1574m        368Mi           
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   88m          737Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   140m         729Mi           
+
+2026-11-25T07:43:18Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      267m         691Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    1574m        368Mi           
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   88m          737Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   140m         729Mi           
+
+2026-11-25T07:43:26Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      267m         691Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    1533m        351Mi           
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   185m         711Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   233m         697Mi           
+
+2026-11-25T07:43:34Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      143m         700Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    1538m        351Mi           
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   292m         722Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   187m         704Mi           
+
+2026-11-25T07:43:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      143m         700Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    1538m        351Mi           
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   292m         722Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   187m         704Mi           
+
+2026-11-25T07:43:51Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e2-r1-hpw6c          driver                      184m         701Mi           
+p3-s2-500-e2-r1-hpw6c          producer                    1579m        351Mi           
+p3-s2-500-e2-r1-hpw6c-exec-1   spark-kubernetes-executor   292m         722Mi           
+p3-s2-500-e2-r1-hpw6c-exec-2   spark-kubernetes-executor   171m         740Mi           

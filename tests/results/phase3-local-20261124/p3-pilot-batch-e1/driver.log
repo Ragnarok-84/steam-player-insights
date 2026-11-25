@@ -1,0 +1,21 @@
+[bench] scale=100 executors=1 run=1/1 raw=hdfs://namenode:8020/steam/bench/raw_100 lake=hdfs://namenode:8020/steam/bench/runs/p3-pilot-batch-e1/r1
+[bench]   spark_startup=8.5s b2=80.6s b5=119.7s b3=22.7s b4=6.9s b6=10.3s b7=6.3s b8=5.5s b9=40.5s total_pipeline=260.5s  (wall 315.7s)
+
+=== Batch scale=100: median seconds / speedup (baseline e=1) ===
+job                     e=1 (s / x)     records       MiB  files   peakMB
+-------------------------------------------------------------------------
+spark_startup         8.46 /  1.00x                                 385.5
+b2                   80.59 /  1.00x      187079    79.349    163    633.7
+b5                  119.68 /  1.00x       84882     1.334    161    843.0
+b3                   22.72 /  1.00x       75657     0.708      8    889.9
+b4                    6.92 /  1.00x         539      0.02      2    898.7
+b6                   10.32 /  1.00x       34835     0.883      4    959.4
+b7                    6.34 /  1.00x         500     0.008      2    982.4
+b8                    5.48 /  1.00x         106     0.019      2   1017.1
+b9                   40.50 /  1.00x          62     0.006      2   1172.5
+total_pipeline      260.52 /  1.00x      383598    82.321    342   1017.1
+
+Results: tests/results/batch_raw_scale100_20261124.csv
+Results: tests/results/batch_raw_scale100_details_20261124.csv
+Results: tests/results/batch_raw_scale100_summary_20261124.csv
+Results: tests/results/batch_ml_scale100_20261124.csv

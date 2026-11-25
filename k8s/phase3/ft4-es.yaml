@@ -1,0 +1,107 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: steam-ft-es
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ft4-es
+  namespace: steam-ft-es
+spec:
+  clusterIP: None
+  publishNotReadyAddresses: true
+  selector:
+    app: ft4-es
+  ports:
+    - name: http
+      port: 9200
+    - name: transport
+      port: 9300
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: ft4-es
+  namespace: steam-ft-es
+spec:
+  serviceName: ft4-es
+  replicas: 3
+  podManagementPolicy: Parallel
+  selector:
+    matchLabels:
+      app: ft4-es
+  template:
+    metadata:
+      labels:
+        app: ft4-es
+    spec:
+      automountServiceAccountToken: false
+      nodeSelector:
+        steam.insights/compute: 'true'
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app: ft4-es
+              topologyKey: kubernetes.io/hostname
+      securityContext:
+        fsGroup: 1000
+      containers:
+        - name: elasticsearch
+          image: docker.elastic.co/elasticsearch/elasticsearch:8.19.3
+          command:
+            - /bin/tini
+            - --
+            - bash
+            - -ec
+            - |
+              case "$POD_NAME" in
+                ft4-es-0|ft4-es-1) roles=master,data,ingest ;;
+                ft4-es-2) roles=master,voting_only ;;
+                *) exit 2 ;;
+              esac
+              exec /usr/local/bin/docker-entrypoint.sh eswrapper "-Enode.roles=$roles"
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: node.name
+              value: $(POD_NAME)
+            - name: cluster.name
+              value: steam-ft4
+            - name: discovery.seed_hosts
+              value: ft4-es-0.ft4-es,ft4-es-1.ft4-es,ft4-es-2.ft4-es
+            - name: cluster.initial_master_nodes
+              value: ft4-es-0,ft4-es-1,ft4-es-2
+            - name: xpack.security.enabled
+              value: 'false'
+            - name: node.store.allow_mmap
+              value: 'false'
+            - name: ES_JAVA_OPTS
+              value: -Xms512m -Xmx512m
+          ports:
+            - name: http
+              containerPort: 9200
+            - name: transport
+              containerPort: 9300
+          resources:
+            requests:
+              cpu: 250m
+              memory: 1Gi
+            limits:
+              cpu: '1'
+              memory: 1536Mi
+          readinessProbe:
+            tcpSocket:
+              port: http
+            periodSeconds: 5
+          volumeMounts:
+            - name: data
+              mountPath: /usr/share/elasticsearch/data
+      volumes:
+        - name: data
+          emptyDir:
+            sizeLimit: 1Gi

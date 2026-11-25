@@ -1,0 +1,185 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "creationTimestamp": "2026-11-23T14:16:41Z",
+    "generation": 1,
+    "labels": {
+      "batch.kubernetes.io/controller-uid": "aad57d47-0f9b-404a-b650-5aa9bb36fa42",
+      "batch.kubernetes.io/job-name": "phase2-batch",
+      "controller-uid": "aad57d47-0f9b-404a-b650-5aa9bb36fa42",
+      "job-name": "phase2-batch"
+    },
+    "name": "phase2-batch",
+    "namespace": "steam-demo",
+    "resourceVersion": "4170",
+    "uid": "aad57d47-0f9b-404a-b650-5aa9bb36fa42"
+  },
+  "spec": {
+    "activeDeadlineSeconds": 3600,
+    "backoffLimit": 0,
+    "completionMode": "NonIndexed",
+    "completions": 1,
+    "manualSelector": false,
+    "parallelism": 1,
+    "podReplacementPolicy": "TerminatingOrFailed",
+    "selector": {
+      "matchLabels": {
+        "batch.kubernetes.io/controller-uid": "aad57d47-0f9b-404a-b650-5aa9bb36fa42"
+      }
+    },
+    "suspend": false,
+    "template": {
+      "metadata": {
+        "labels": {
+          "batch.kubernetes.io/controller-uid": "aad57d47-0f9b-404a-b650-5aa9bb36fa42",
+          "batch.kubernetes.io/job-name": "phase2-batch",
+          "controller-uid": "aad57d47-0f9b-404a-b650-5aa9bb36fa42",
+          "job-name": "phase2-batch"
+        }
+      },
+      "spec": {
+        "automountServiceAccountToken": true,
+        "containers": [
+          {
+            "command": [
+              "python3",
+              "pipeline.py",
+              "--profile",
+              "cluster",
+              "batch",
+              "--es"
+            ],
+            "env": [
+              {
+                "name": "PHASE2_POD_NAME",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.name"
+                  }
+                }
+              },
+              {
+                "name": "SPARK_DRIVER_HOST",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "status.podIP"
+                  }
+                }
+              },
+              {
+                "name": "PIPELINE_PROFILE",
+                "value": "cluster"
+              },
+              {
+                "name": "HDFS_NAMENODE_URL",
+                "value": "hdfs://namenode:8020"
+              },
+              {
+                "name": "HDFS_RAW_PATH",
+                "value": "hdfs://namenode:8020/steam/raw"
+              },
+              {
+                "name": "HDFS_CLEAN_PATH",
+                "value": "hdfs://namenode:8020/steam/clean"
+              },
+              {
+                "name": "HDFS_CURATED_PATH",
+                "value": "hdfs://namenode:8020/steam/curated"
+              },
+              {
+                "name": "HDFS_CHECKPOINT_PATH",
+                "value": "hdfs://namenode:8020/steam/checkpoints"
+              },
+              {
+                "name": "HADOOP_USER_NAME",
+                "value": "hdfs"
+              },
+              {
+                "name": "KAFKA_BOOTSTRAP_SERVERS",
+                "value": "kafka:9092"
+              },
+              {
+                "name": "ELASTICSEARCH_HOSTS",
+                "value": "http://elasticsearch:9200"
+              },
+              {
+                "name": "PYTHONUNBUFFERED",
+                "value": "1"
+              },
+              {
+                "name": "SPARK_SHUFFLE_PARTITIONS",
+                "value": "6"
+              },
+              {
+                "name": "SPARK_DRIVER_MEMORY",
+                "value": "2g"
+              },
+              {
+                "name": "SPARK_MASTER",
+                "value": "k8s://https://kubernetes.default.svc:443"
+              },
+              {
+                "name": "SPARK_EXTRA_CONF",
+                "value": "spark.kubernetes.driver.pod.name=$(PHASE2_POD_NAME);spark.kubernetes.namespace=steam-demo;spark.kubernetes.container.image=localhost/steam-spark:k3s-20261120-af8377d;spark.kubernetes.container.image.pullPolicy=Never;spark.kubernetes.node.selector.kubernetes.io/hostname=steam-worker-3;spark.executor.instances=1;spark.executor.cores=1;spark.executor.memory=2g;spark.executor.memoryOverhead=1024m;spark.kubernetes.executor.request.cores=1;spark.kubernetes.executor.limit.cores=1;spark.driver.bindAddress=0.0.0.0;spark.driver.port=7078;spark.blockManager.port=7079;spark.executorEnv.ELASTICSEARCH_HOSTS=http://elasticsearch:9200;spark.executorEnv.HADOOP_USER_NAME=hdfs;spark.dynamicAllocation.enabled=false;spark.hadoop.dfs.client.use.datanode.hostname=true;spark.hadoop.dfs.replication=1"
+              }
+            ],
+            "image": "localhost/steam-spark:k3s-20261120-af8377d",
+            "imagePullPolicy": "Never",
+            "name": "batch",
+            "resources": {
+              "limits": {
+                "cpu": "2",
+                "memory": "4300Mi"
+              },
+              "requests": {
+                "cpu": "1",
+                "memory": "3Gi"
+              }
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File"
+          }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "nodeSelector": {
+          "kubernetes.io/hostname": "steam-worker-2"
+        },
+        "restartPolicy": "Never",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "serviceAccount": "spark-operator-sa",
+        "serviceAccountName": "spark-operator-sa",
+        "terminationGracePeriodSeconds": 30
+      }
+    }
+  },
+  "status": {
+    "completionTime": "2026-11-23T14:40:01Z",
+    "conditions": [
+      {
+        "lastProbeTime": "2026-11-23T14:40:01Z",
+        "lastTransitionTime": "2026-11-23T14:40:01Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "SuccessCriteriaMet"
+      },
+      {
+        "lastProbeTime": "2026-11-23T14:40:01Z",
+        "lastTransitionTime": "2026-11-23T14:40:01Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "Complete"
+      }
+    ],
+    "ready": 0,
+    "startTime": "2026-11-23T14:16:41Z",
+    "succeeded": 1,
+    "terminating": 0,
+    "uncountedTerminatedPods": {}
+  }
+}

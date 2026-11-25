@@ -1,0 +1,2 @@
+2026-11-23T14:41:29.988324386Z Skip writing /opt/spark/work-dir/dashboards/kibana/steam_dashboards.ndjson: [Errno 13] Permission denied: '/opt/spark/work-dir/dashboards/kibana/steam_dashboards.ndjson'
+2026-11-23T14:41:30.386493577Z Imported 35 saved objects into http://kibana:5601; NDJSON at /opt/spark/work-dir/dashboards/kibana/steam_dashboards.ndjson

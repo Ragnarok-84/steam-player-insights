@@ -1,0 +1,25 @@
+[bench] scale=500 executors=1 run=1/3 raw=hdfs://namenode:8020/steam/bench/raw_500 lake=hdfs://namenode:8020/steam/bench/runs/p3-batch-500-e1/r1
+[bench]   spark_startup=7.9s b2=162.8s b5=699.9s b3=64.1s b4=10.4s b6=16.0s b7=7.5s b8=8.8s b9=114.5s total_pipeline=977.2s  (wall 1107.4s)
+[bench] scale=500 executors=1 run=2/3 raw=hdfs://namenode:8020/steam/bench/raw_500 lake=hdfs://namenode:8020/steam/bench/runs/p3-batch-500-e1/r2
+[bench]   spark_startup=7.8s b2=163.5s b5=701.0s b3=73.8s b4=10.2s b6=16.5s b7=7.3s b8=8.9s b9=117.9s total_pipeline=989.1s  (wall 1122.2s)
+[bench] scale=500 executors=1 run=3/3 raw=hdfs://namenode:8020/steam/bench/raw_500 lake=hdfs://namenode:8020/steam/bench/runs/p3-batch-500-e1/r3
+[bench]   spark_startup=7.5s b2=161.5s b5=696.9s b3=73.3s b4=9.4s b6=16.4s b7=6.1s b8=8.2s b9=129.9s total_pipeline=979.3s  (wall 1124.5s)
+
+=== Batch scale=500: median seconds / speedup (baseline e=1) ===
+job                     e=1 (s / x)     records       MiB  files   peakMB
+-------------------------------------------------------------------------
+spark_startup         7.85 /  1.00x                                 413.1
+b2                  162.77 /  1.00x      611437   285.862    194    644.3
+b5                  699.87 /  1.00x      309186     3.925    192    844.9
+b3                   73.26 /  1.00x      294421      2.54      8    904.7
+b4                   10.23 /  1.00x        2662     0.071      3    914.4
+b6                   16.43 /  1.00x      167876     3.572      5   1013.0
+b7                    7.28 /  1.00x        1700     0.017      2   1017.0
+b8                    8.78 /  1.00x         505     0.063      3   1086.5
+b9                  117.86 /  1.00x          62     0.006      2   1186.8
+total_pipeline      979.27 /  1.00x     1387787   296.049    407   1086.5
+
+Results: tests/results/batch_raw_scale500_20261124.csv
+Results: tests/results/batch_raw_scale500_details_20261124.csv
+Results: tests/results/batch_raw_scale500_summary_20261124.csv
+Results: tests/results/batch_ml_scale500_20261124.csv

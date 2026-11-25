@@ -1,0 +1,59 @@
+{
+ "dataset": "steam_1000g_20261118",
+ "scale": 1000,
+ "games": 1000,
+ "created_at": "2026-11-24T10:19:01+00:00",
+ "source_raw": "/home/steam/phase2-data/raw",
+ "raw_bytes": 202197475,
+ "raw_files": 7,
+ "sources": {
+  "steam_reviews_raw": {
+   "records": 932293,
+   "files": 2,
+   "dt": {
+    "dt=2026-11-12": 92019,
+    "dt=2026-11-17": 840274
+   }
+  },
+  "steam_players_ccu": {
+   "records": 1700,
+   "files": 3,
+   "dt": {
+    "dt=2026-11-12": 200,
+    "dt=2026-11-17": 1498,
+    "dt=2026-11-18": 2
+   }
+  },
+  "steam_games_meta": {
+   "records": 4800,
+   "files": 2,
+   "dt": {
+    "dt=2026-11-12": 300,
+    "dt=2026-11-17": 4500
+   }
+  }
+ },
+ "dropped_from_snapshot": {
+  "steam_reviews_raw": {
+   "no_appid": 0,
+   "not_in_targets": 0
+  },
+  "steam_players_ccu": {
+   "no_appid": 0,
+   "not_in_targets": 0
+  },
+  "steam_games_meta": {
+   "no_appid": 0,
+   "not_in_targets": 0
+  }
+ },
+ "snapshot_files": {
+  "steam_reviews_raw/dt=2026-11-12": 1020,
+  "steam_reviews_raw/dt=2026-11-17": 8793,
+  "steam_players_ccu/dt=2026-11-12": 200,
+  "steam_players_ccu/dt=2026-11-17": 1498,
+  "steam_players_ccu/dt=2026-11-18": 2,
+  "steam_games_meta/dt=2026-11-12": 201,
+  "steam_games_meta/dt=2026-11-17": 3002
+ }
+}

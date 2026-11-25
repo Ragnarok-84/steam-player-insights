@@ -1,0 +1,180 @@
+
+2026-11-25T07:20:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      988m         581Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    1m           0Mi             
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   421m         307Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   427m         305Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   416m         297Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   537m         367Mi           
+
+2026-11-25T07:20:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      988m         581Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    1m           0Mi             
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   421m         307Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   427m         305Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   416m         297Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   537m         367Mi           
+
+2026-11-25T07:20:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      1830m        586Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    0m           0Mi             
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   404m         413Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   166m         324Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   12m          299Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   902m         445Mi           
+
+2026-11-25T07:20:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      1830m        586Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    0m           0Mi             
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   404m         413Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   166m         324Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   12m          299Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   902m         445Mi           
+
+2026-11-25T07:20:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      345m         646Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    334m         131Mi           
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   221m         511Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   517m         537Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   612m         569Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   329m         552Mi           
+
+2026-11-25T07:20:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      415m         653Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    317m         193Mi           
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   215m         661Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   169m         577Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   320m         698Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   312m         703Mi           
+
+2026-11-25T07:20:58Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      415m         653Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    317m         193Mi           
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   215m         661Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   169m         577Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   320m         698Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   312m         703Mi           
+
+2026-11-25T07:21:06Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      390m         689Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    328m         251Mi           
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   156m         677Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   269m         675Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   168m         703Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   157m         726Mi           
+
+2026-11-25T07:21:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      390m         689Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    328m         251Mi           
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   156m         677Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   269m         675Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   168m         703Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   157m         726Mi           
+
+2026-11-25T07:21:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      263m         703Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    307m         303Mi           
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   156m         677Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   156m         715Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   119m         701Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   92m          732Mi           
+
+2026-11-25T07:21:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      263m         703Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    307m         303Mi           
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   156m         677Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   156m         715Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   119m         701Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   92m          732Mi           
+
+2026-11-25T07:21:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      263m         703Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    32m          25Mi            
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   99m          683Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   64m          717Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   134m         703Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   122m         735Mi           
+
+2026-11-25T07:21:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      263m         703Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    32m          25Mi            
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   99m          683Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   64m          717Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   134m         703Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   122m         735Mi           
+
+2026-11-25T07:21:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      241m         710Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    1113m        237Mi           
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   81m          685Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   178m         732Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   83m          708Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   149m         738Mi           
+
+2026-11-25T07:22:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      280m         716Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    1558m        359Mi           
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   75m          660Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   152m         699Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   169m         681Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   151m         709Mi           
+
+2026-11-25T07:22:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      280m         716Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    1558m        359Mi           
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   75m          660Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   152m         699Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   169m         681Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   151m         709Mi           
+
+2026-11-25T07:22:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      141m         728Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    1514m        349Mi           
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   58m          665Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   144m         703Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   145m         693Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   148m         711Mi           
+
+2026-11-25T07:22:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      141m         728Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    1514m        349Mi           
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   58m          665Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   144m         703Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   145m         693Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   148m         711Mi           
+
+2026-11-25T07:22:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      141m         728Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    1588m        315Mi           
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   133m         703Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   196m         739Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   235m         738Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   175m         749Mi           
+
+2026-11-25T07:22:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-500-e4-r1-kgsmk          driver                      141m         728Mi           
+p3-s2-500-e4-r1-kgsmk          producer                    1588m        315Mi           
+p3-s2-500-e4-r1-kgsmk-exec-1   spark-kubernetes-executor   133m         703Mi           
+p3-s2-500-e4-r1-kgsmk-exec-2   spark-kubernetes-executor   196m         739Mi           
+p3-s2-500-e4-r1-kgsmk-exec-3   spark-kubernetes-executor   235m         738Mi           
+p3-s2-500-e4-r1-kgsmk-exec-4   spark-kubernetes-executor   175m         749Mi           

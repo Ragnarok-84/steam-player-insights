@@ -1,0 +1,316 @@
+
+2026-11-24T10:29:12Z
+NAME                      READY   STATUS              RESTARTS   AGE   IP       NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg   0/1     ContainerCreating   0          0s    <none>   steam-worker-3   <none>           <none>
+
+2026-11-24T10:29:16Z
+NAME                             READY   STATUS              RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running             0          5s    10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   0/1     ContainerCreating   0          1s    <none>       steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   0/1     ContainerCreating   0          1s    <none>       steam-worker-1   <none>           <none>
+
+2026-11-24T10:29:21Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          10s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          6s    10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          6s    10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:29:26Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          15s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          11s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          11s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:29:30Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          19s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          15s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          15s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:29:35Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          24s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          20s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          20s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:29:40Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          29s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          25s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          25s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:29:45Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          33s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          29s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          29s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:29:49Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          38s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          34s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          34s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:29:54Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          43s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          39s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          39s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:29:59Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          48s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          44s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          44s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:30:03Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          52s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          48s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          48s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:30:08Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          57s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          53s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          53s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:30:13Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          61s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          57s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          57s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:30:17Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          66s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          62s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          62s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:30:22Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          71s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          67s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          67s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:30:27Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          76s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          72s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          72s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:30:31Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          80s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          76s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          76s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:30:36Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          85s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          81s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          81s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:30:41Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          90s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          86s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          86s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:30:45Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          94s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          90s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          90s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:30:50Z
+NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          99s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          95s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          95s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:30:55Z
+NAME                             READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          103s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          99s    10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          99s    10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:30:59Z
+NAME                             READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          108s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          104s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          104s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:31:04Z
+NAME                             READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          113s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          109s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          109s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:31:09Z
+NAME                             READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          117s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          113s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          113s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:31:13Z
+NAME                             READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          2m2s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          118s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          118s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:31:18Z
+NAME                             READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          2m7s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          2m3s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          2m3s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:31:22Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          2m11s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          2m7s    10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          2m7s    10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:31:27Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          2m16s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          2m12s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          2m12s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:31:32Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          2m20s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          2m16s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          2m16s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:31:36Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          2m25s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          2m21s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          2m21s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:31:41Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          2m30s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          2m26s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          2m26s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:31:45Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          2m34s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          2m30s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          2m30s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:31:50Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          2m39s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          2m35s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          2m35s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:31:55Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          2m44s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          2m40s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          2m40s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:32:00Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          2m49s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          2m45s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          2m45s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:32:05Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          2m53s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          2m49s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          2m49s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:32:09Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          2m58s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          2m54s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          2m54s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:32:14Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          3m3s    10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          2m59s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          2m59s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:32:19Z
+NAME                             READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          3m8s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          3m4s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          3m4s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:32:23Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          3m12s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          3m8s    10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          3m8s    10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:32:28Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          3m17s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          3m13s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          3m13s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:32:33Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          3m22s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          3m18s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          3m18s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:32:37Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          3m26s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          3m22s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          3m22s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:32:42Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          3m31s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          3m27s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          3m27s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:32:47Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          3m36s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          3m32s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          3m32s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:32:51Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          3m40s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          3m36s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          3m36s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:32:56Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          3m45s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          3m41s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          3m41s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:33:01Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          3m50s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          3m46s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          3m46s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:33:06Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          3m54s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          3m50s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          3m50s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:33:10Z
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          1/1     Running   0          3m59s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   1/1     Running   0          3m55s   10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   1/1     Running   0          3m55s   10.42.1.14   steam-worker-1   <none>           <none>
+
+2026-11-24T10:33:15Z
+NAME                             READY   STATUS      RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-pilot-batch-e2-zx6kg          0/1     Completed   0          4m4s   10.42.2.16   steam-worker-3   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-1   0/1     Completed   0          4m     10.42.3.20   steam-worker-2   <none>           <none>
+p3-pilot-batch-e2-zx6kg-exec-2   0/1     Completed   0          4m     10.42.1.14   steam-worker-1   <none>           <none>

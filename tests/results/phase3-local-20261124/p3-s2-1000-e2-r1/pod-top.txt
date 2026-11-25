@@ -1,0 +1,126 @@
+
+2026-11-25T09:16:40Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      1243m        510Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    1m           0Mi             
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   311m         304Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   516m         515Mi           
+
+2026-11-25T09:16:49Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      516m         575Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    0m           0Mi             
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   311m         304Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   48m          516Mi           
+
+2026-11-25T09:16:57Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      516m         575Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    0m           0Mi             
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   311m         304Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   48m          516Mi           
+
+2026-11-25T09:17:05Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      152m         583Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    0m           0Mi             
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   321m         504Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   305m         596Mi           
+
+2026-11-25T09:17:14Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      152m         583Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    0m           0Mi             
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   321m         504Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   305m         596Mi           
+
+2026-11-25T09:17:23Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      453m         622Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    369m         210Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   572m         689Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   410m         713Mi           
+
+2026-11-25T09:17:31Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      453m         622Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    369m         210Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   572m         689Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   410m         713Mi           
+
+2026-11-25T09:17:40Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      521m         633Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    560m         275Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   275m         723Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   258m         734Mi           
+
+2026-11-25T09:17:48Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      521m         633Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    560m         275Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   275m         723Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   258m         734Mi           
+
+2026-11-25T09:17:56Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      554m         689Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    560m         275Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   275m         723Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   421m         737Mi           
+
+2026-11-25T09:18:05Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      298m         691Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    390m         142Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   192m         732Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   129m         737Mi           
+
+2026-11-25T09:18:14Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      298m         691Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    390m         142Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   192m         732Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   129m         737Mi           
+
+2026-11-25T09:18:22Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      250m         696Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    390m         142Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   192m         732Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   146m         742Mi           
+
+2026-11-25T09:18:30Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      250m         696Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    390m         142Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   192m         732Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   146m         742Mi           
+
+2026-11-25T09:18:39Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      228m         709Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    1558m        359Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   193m         713Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   505m         729Mi           
+
+2026-11-25T09:18:47Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      228m         709Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    1558m        359Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   193m         713Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   505m         729Mi           
+
+2026-11-25T09:18:55Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      208m         718Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    1514m        351Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   159m         717Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   178m         734Mi           
+
+2026-11-25T09:19:04Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r1-jp8m8          driver                      225m         722Mi           
+p3-s2-1000-e2-r1-jp8m8          producer                    1599m        316Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-1   spark-kubernetes-executor   252m         756Mi           
+p3-s2-1000-e2-r1-jp8m8-exec-2   spark-kubernetes-executor   235m         772Mi           

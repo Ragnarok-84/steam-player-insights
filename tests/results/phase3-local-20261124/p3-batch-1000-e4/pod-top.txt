@@ -1,0 +1,1717 @@
+
+2026-11-24T13:17:34Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      1164m        606Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   680m         511Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   694m         440Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   654m         517Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   680m         512Mi           
+
+2026-11-24T13:17:42Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      1164m        606Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   680m         511Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   694m         440Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   654m         517Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   680m         512Mi           
+
+2026-11-24T13:17:51Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      147m         618Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   320m         570Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   992m         570Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   999m         562Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   992m         833Mi           
+
+2026-11-24T13:17:59Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      14m          619Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   2m           570Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   994m         891Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   4m           555Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   992m         833Mi           
+
+2026-11-24T13:18:07Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      14m          619Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   2m           570Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   994m         891Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   4m           555Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   992m         833Mi           
+
+2026-11-24T13:18:16Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      108m         638Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   2m           570Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   697m         1013Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   2m           555Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   962m         983Mi           
+
+2026-11-24T13:18:24Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      108m         638Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   2m           570Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   697m         1013Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   2m           555Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   962m         983Mi           
+
+2026-11-24T13:18:32Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      37m          653Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   535m         807Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   998m         1013Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   722m         803Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   916m         1099Mi          
+
+2026-11-24T13:18:41Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      37m          653Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   535m         807Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   998m         1013Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   722m         803Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   916m         1099Mi          
+
+2026-11-24T13:18:49Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      37m          653Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   999m         868Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1001m        1080Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        860Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1001m        1107Mi          
+
+2026-11-24T13:18:58Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      37m          653Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   999m         868Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1001m        1080Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        860Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1001m        1107Mi          
+
+2026-11-24T13:19:06Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      58m          641Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   550m         862Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   916m         1208Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   305m         856Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   714m         1236Mi          
+
+2026-11-24T13:19:14Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      70m          649Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   434m         1056Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   738m         1233Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   501m         1263Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   714m         1236Mi          
+
+2026-11-24T13:19:23Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      70m          649Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   434m         1056Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   738m         1233Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   501m         1263Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   714m         1236Mi          
+
+2026-11-24T13:19:31Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      510m         720Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   476m         1082Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   451m         1276Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   622m         1338Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   658m         1269Mi          
+
+2026-11-24T13:19:39Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      510m         720Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   476m         1082Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   451m         1276Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   622m         1338Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   658m         1269Mi          
+
+2026-11-24T13:19:48Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      331m         731Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   898m         1110Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   997m         1278Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1347Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1270Mi          
+
+2026-11-24T13:19:56Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      331m         731Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   898m         1110Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   997m         1278Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1347Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1270Mi          
+
+2026-11-24T13:20:04Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      9m           730Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1097Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   997m         1278Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1334Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   999m         1259Mi          
+
+2026-11-24T13:20:12Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      9m           730Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1097Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   997m         1278Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1334Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   999m         1259Mi          
+
+2026-11-24T13:20:21Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      5m           730Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1097Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   999m         1263Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1334Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1259Mi          
+
+2026-11-24T13:20:29Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           726Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1146Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   999m         1257Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1340Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1253Mi          
+
+2026-11-24T13:20:38Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           726Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1146Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   999m         1257Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1340Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1253Mi          
+
+2026-11-24T13:20:46Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           707Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1162Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   998m         1258Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1342Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1250Mi          
+
+2026-11-24T13:20:54Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           707Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1162Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   998m         1258Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1342Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1250Mi          
+
+2026-11-24T13:21:03Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      19m          711Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1173Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   998m         1257Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1002m        1339Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1251Mi          
+
+2026-11-24T13:21:11Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      19m          711Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1173Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   998m         1257Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1002m        1339Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1251Mi          
+
+2026-11-24T13:21:19Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      5m           711Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1002m        1169Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   999m         1257Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   999m         1370Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1248Mi          
+
+2026-11-24T13:21:28Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      5m           711Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1002m        1169Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   999m         1257Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   999m         1370Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1248Mi          
+
+2026-11-24T13:21:36Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      10m          712Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1002m        1169Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   998m         1254Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1372Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1248Mi          
+
+2026-11-24T13:21:44Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      10m          712Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   999m         1209Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   998m         1251Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1369Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   999m         1255Mi          
+
+2026-11-24T13:21:53Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      10m          712Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   999m         1209Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   998m         1251Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1369Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   999m         1255Mi          
+
+2026-11-24T13:22:01Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           712Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1206Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   997m         1255Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1002m        1386Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1253Mi          
+
+2026-11-24T13:22:10Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           712Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1206Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   997m         1255Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1002m        1386Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1253Mi          
+
+2026-11-24T13:22:18Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      150m         746Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1206Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   699m         1259Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   441m         1427Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   571m         1281Mi          
+
+2026-11-24T13:22:26Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      150m         746Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1206Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   699m         1259Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   571m         1281Mi          
+
+2026-11-24T13:22:35Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      171m         768Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   713m         1283Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   854m         1284Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   767m         1294Mi          
+
+2026-11-24T13:22:43Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      161m         935Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   916m         1421Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   861m         1435Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   825m         1442Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   984m         620Mi           
+
+2026-11-24T13:22:51Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      161m         935Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   916m         1421Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   861m         1435Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   825m         1442Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   984m         620Mi           
+
+2026-11-24T13:23:00Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           935Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   998m         1424Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   999m         1436Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   72m          1442Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   5m           614Mi           
+
+2026-11-24T13:23:08Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           935Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   998m         1424Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   999m         1436Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   72m          1442Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   5m           614Mi           
+
+2026-11-24T13:23:16Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           926Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1421Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   999m         1436Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   2m           1439Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   2m           614Mi           
+
+2026-11-24T13:23:25Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           926Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1421Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   999m         1436Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   2m           1439Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   2m           614Mi           
+
+2026-11-24T13:23:33Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      9m           917Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1416Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   996m         1434Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   2m           1435Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   2m           615Mi           
+
+2026-11-24T13:23:41Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      9m           917Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1416Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   996m         1434Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   2m           1435Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   2m           615Mi           
+
+2026-11-24T13:23:50Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      9m           917Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   99m          1445Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   996m         1424Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   2m           1435Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   2m           614Mi           
+
+2026-11-24T13:23:58Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      283m         954Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   334m         1447Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   863m         1471Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   46m          1412Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   35m          625Mi           
+
+2026-11-24T13:24:06Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      283m         954Mi           
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   35m          625Mi           
+
+2026-11-24T13:24:15Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      283m         954Mi           
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   729m         1239Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   979m         528Mi           
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   995m         514Mi           
+
+2026-11-24T13:24:23Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      283m         954Mi           
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   729m         1239Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   979m         528Mi           
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   995m         514Mi           
+
+2026-11-24T13:24:31Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      90m          968Mi           
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   533m         1300Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   997m         941Mi           
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   785m         707Mi           
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   988m         544Mi           
+
+2026-11-24T13:24:40Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      90m          968Mi           
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   533m         1300Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   997m         941Mi           
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   785m         707Mi           
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   988m         544Mi           
+
+2026-11-24T13:24:48Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      122m         971Mi           
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   404m         1337Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   761m         1262Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   116m         718Mi           
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   278m         661Mi           
+
+2026-11-24T13:24:57Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      122m         971Mi           
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   404m         1337Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   761m         1262Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   116m         718Mi           
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   278m         661Mi           
+
+2026-11-24T13:25:05Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      317m         992Mi           
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   859m         1368Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   855m         1311Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   505m         808Mi           
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   325m         701Mi           
+
+2026-11-24T13:25:14Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      550m         1035Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   703m         1386Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   855m         1311Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   593m         832Mi           
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   534m         772Mi           
+
+2026-11-24T13:25:22Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      550m         1035Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   703m         1386Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   855m         1311Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   593m         832Mi           
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   534m         772Mi           
+
+2026-11-24T13:25:31Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      638m         1043Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   470m         1385Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   756m         1330Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   764m         852Mi           
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   742m         829Mi           
+
+2026-11-24T13:25:39Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      638m         1043Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   470m         1385Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   756m         1330Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   764m         852Mi           
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   742m         829Mi           
+
+2026-11-24T13:25:47Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      888m         1126Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   768m         1405Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   634m         1354Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   653m         875Mi           
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   796m         862Mi           
+
+2026-11-24T13:25:56Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      888m         1126Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   768m         1405Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   634m         1354Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   653m         875Mi           
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   796m         862Mi           
+
+2026-11-24T13:26:04Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      140m         1128Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   796m         1366Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   775m         916Mi           
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   810m         885Mi           
+
+2026-11-24T13:26:12Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      140m         1128Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   796m         1366Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   775m         916Mi           
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   810m         885Mi           
+
+2026-11-24T13:26:21Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      64m          1128Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   786m         1496Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   529m         1072Mi          
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   547m         1034Mi          
+p3-batch-1000-e4-lplfp-exec-9   spark-kubernetes-executor   737m         583Mi           
+
+2026-11-24T13:26:29Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      30m          1128Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   171m         1496Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   107m         1072Mi          
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   2m           1034Mi          
+p3-batch-1000-e4-lplfp-exec-9   spark-kubernetes-executor   996m         782Mi           
+
+2026-11-24T13:26:38Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      30m          1128Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   171m         1496Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   107m         1072Mi          
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   2m           1034Mi          
+p3-batch-1000-e4-lplfp-exec-9   spark-kubernetes-executor   996m         782Mi           
+
+2026-11-24T13:26:46Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      294m         1217Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   885m         1500Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   617m         1072Mi          
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   700m         1034Mi          
+p3-batch-1000-e4-lplfp-exec-9   spark-kubernetes-executor   863m         831Mi           
+
+2026-11-24T13:26:54Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      294m         1217Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   885m         1500Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   617m         1072Mi          
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   700m         1034Mi          
+p3-batch-1000-e4-lplfp-exec-9   spark-kubernetes-executor   863m         831Mi           
+
+2026-11-24T13:27:03Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      298m         1250Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   618m         1501Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   570m         1077Mi          
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   338m         1034Mi          
+p3-batch-1000-e4-lplfp-exec-9   spark-kubernetes-executor   195m         835Mi           
+
+2026-11-24T13:27:11Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      298m         1250Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   618m         1501Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   570m         1077Mi          
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   338m         1034Mi          
+p3-batch-1000-e4-lplfp-exec-9   spark-kubernetes-executor   195m         835Mi           
+
+2026-11-24T13:27:19Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      396m         1298Mi          
+p3-batch-1000-e4-lplfp-exec-6   spark-kubernetes-executor   501m         1535Mi          
+p3-batch-1000-e4-lplfp-exec-7   spark-kubernetes-executor   216m         1125Mi          
+p3-batch-1000-e4-lplfp-exec-8   spark-kubernetes-executor   268m         1080Mi          
+p3-batch-1000-e4-lplfp-exec-9   spark-kubernetes-executor   225m         886Mi           
+
+2026-11-24T13:27:28Z
+POD                      NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp   driver   396m         1298Mi          
+
+2026-11-24T13:27:36Z
+POD                      NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp   driver   8m           1297Mi          
+
+2026-11-24T13:27:44Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      717m         539Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   665m         528Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   649m         523Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   643m         545Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   713m         500Mi           
+
+2026-11-24T13:27:53Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      717m         539Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   665m         528Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   649m         523Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   643m         545Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   713m         500Mi           
+
+2026-11-24T13:28:01Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      717m         539Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   988m         564Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   649m         523Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   991m         880Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   994m         703Mi           
+
+2026-11-24T13:28:10Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      717m         539Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   988m         564Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   649m         523Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   991m         880Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   994m         703Mi           
+
+2026-11-24T13:28:18Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      24m          542Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   117m         559Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   157m         588Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   949m         980Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   995m         882Mi           
+
+2026-11-24T13:28:26Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      24m          542Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   117m         559Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   157m         588Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   949m         980Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   995m         882Mi           
+
+2026-11-24T13:28:35Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      81m          552Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   429m         816Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   717m         835Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   949m         980Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   819m         1009Mi          
+
+2026-11-24T13:28:43Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      47m          571Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   429m         816Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   986m         866Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   904m         1055Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   998m         1060Mi          
+
+2026-11-24T13:28:51Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      47m          571Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   429m         816Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   986m         866Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   904m         1055Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   998m         1060Mi          
+
+2026-11-24T13:29:00Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      64m          570Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   835m         857Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   936m         867Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   991m         1069Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   998m         1060Mi          
+
+2026-11-24T13:29:08Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      64m          570Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   835m         857Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   936m         867Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   991m         1069Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   998m         1060Mi          
+
+2026-11-24T13:29:17Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      90m          575Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   835m         857Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   346m         1133Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   645m         1264Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   981m         1080Mi          
+
+2026-11-24T13:29:25Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      90m          575Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   835m         857Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   346m         1133Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   645m         1264Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   981m         1080Mi          
+
+2026-11-24T13:29:33Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      241m         605Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   465m         1074Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   483m         1210Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   500m         1258Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   662m         1179Mi          
+
+2026-11-24T13:29:42Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      241m         605Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   465m         1074Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   483m         1210Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   500m         1258Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   662m         1179Mi          
+
+2026-11-24T13:29:50Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      967m         647Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   525m         1090Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   490m         1293Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   500m         1258Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   391m         1190Mi          
+
+2026-11-24T13:29:58Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      8m           647Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   812m         1123Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   996m         1300Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   808m         1291Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   939m         1218Mi          
+
+2026-11-24T13:30:07Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      8m           647Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   812m         1123Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   996m         1300Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   808m         1291Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   939m         1218Mi          
+
+2026-11-24T13:30:15Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      9m           647Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   998m         1112Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1313Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   999m         1280Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   998m         1209Mi          
+
+2026-11-24T13:30:23Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      9m           647Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   998m         1112Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1313Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   999m         1280Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   998m         1209Mi          
+
+2026-11-24T13:30:32Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      8m           643Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1109Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1327Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1002m        1282Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   996m         1209Mi          
+
+2026-11-24T13:30:40Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      8m           643Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1109Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1327Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1002m        1282Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   996m         1209Mi          
+
+2026-11-24T13:30:48Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      10m          622Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1106Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1345Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   999m         1276Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   997m         1207Mi          
+
+2026-11-24T13:30:57Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      10m          622Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1106Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1345Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   999m         1276Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   997m         1207Mi          
+
+2026-11-24T13:31:05Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           623Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1102Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1345Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1273Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   998m         1204Mi          
+
+2026-11-24T13:31:13Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      8m           623Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1102Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1369Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1273Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   999m         1201Mi          
+
+2026-11-24T13:31:22Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      8m           623Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1102Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1369Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1273Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   999m         1201Mi          
+
+2026-11-24T13:31:30Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           624Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1108Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1383Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   999m         1271Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   997m         1197Mi          
+
+2026-11-24T13:31:38Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           624Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1108Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1383Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   999m         1271Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   997m         1197Mi          
+
+2026-11-24T13:31:47Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           623Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1108Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1383Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1267Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   998m         1203Mi          
+
+2026-11-24T13:31:55Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           623Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1108Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1383Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1267Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   998m         1203Mi          
+
+2026-11-24T13:32:03Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           623Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   999m         1105Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1378Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1274Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   998m         1203Mi          
+
+2026-11-24T13:32:12Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           623Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   999m         1105Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1378Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1274Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   998m         1203Mi          
+
+2026-11-24T13:32:20Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      11m          624Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   725m         1122Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1396Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   999m         1271Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   843m         1199Mi          
+
+2026-11-24T13:32:28Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      354m         655Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   417m         1143Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   911m         1424Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   649m         1289Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   843m         1199Mi          
+
+2026-11-24T13:32:37Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      354m         655Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   417m         1143Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   911m         1424Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   649m         1289Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   843m         1199Mi          
+
+2026-11-24T13:32:45Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      354m         655Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   933m         1164Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   956m         1484Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   698m         1222Mi          
+
+2026-11-24T13:32:53Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      354m         655Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   933m         1164Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   956m         1484Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   698m         1222Mi          
+
+2026-11-24T13:33:02Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      184m         817Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   270m         1319Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   932m         1487Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   750m         1403Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   271m         299Mi           
+
+2026-11-24T13:33:10Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      184m         817Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   270m         1319Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   932m         1487Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   750m         1403Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   271m         299Mi           
+
+2026-11-24T13:33:18Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      11m          817Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   2m           1319Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   99m          1487Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   997m         1404Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   5m           304Mi           
+
+2026-11-24T13:33:27Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      11m          817Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   2m           1319Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   99m          1487Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   997m         1404Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   5m           304Mi           
+
+2026-11-24T13:33:35Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           810Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   2m           1295Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   2m           1485Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   998m         1401Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   1m           304Mi           
+
+2026-11-24T13:33:43Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           808Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   2m           1291Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   2m           1481Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   999m         1400Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   2m           304Mi           
+
+2026-11-24T13:33:51Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           808Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   2m           1291Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   2m           1481Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   999m         1400Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   2m           304Mi           
+
+2026-11-24T13:34:00Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           799Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1m           1291Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   2m           1481Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   999m         1398Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   2m           304Mi           
+
+2026-11-24T13:34:08Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           799Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1m           1291Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   2m           1481Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   999m         1398Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   2m           304Mi           
+
+2026-11-24T13:34:16Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      5m           799Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1m           1291Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   2m           1458Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   996m         1394Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   1m           304Mi           
+
+2026-11-24T13:34:25Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      5m           799Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1m           1291Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   2m           1458Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   996m         1394Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   1m           304Mi           
+
+2026-11-24T13:34:33Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      4m           799Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1m           1291Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1m           1458Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1390Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   1m           304Mi           
+
+2026-11-24T13:34:41Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      4m           799Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1m           1291Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1m           1458Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1390Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   1m           304Mi           
+
+2026-11-24T13:34:50Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      86m          807Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   448m         1322Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   576m         1503Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   926m         1402Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   2m           304Mi           
+
+2026-11-24T13:34:58Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      616m         879Mi           
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   507m         1042Mi          
+
+2026-11-24T13:35:07Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      616m         879Mi           
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   507m         1042Mi          
+
+2026-11-24T13:35:15Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      81m          903Mi           
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   967m         553Mi           
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   979m         652Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   507m         1042Mi          
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   995m         846Mi           
+
+2026-11-24T13:35:23Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      81m          903Mi           
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   967m         553Mi           
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   979m         652Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   507m         1042Mi          
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   995m         846Mi           
+
+2026-11-24T13:35:32Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      32m          897Mi           
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   546m         762Mi           
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   321m         663Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   715m         1255Mi          
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   410m         1058Mi          
+
+2026-11-24T13:35:40Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      32m          897Mi           
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   546m         762Mi           
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   321m         663Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   715m         1255Mi          
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   410m         1058Mi          
+
+2026-11-24T13:35:48Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      242m         998Mi           
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   621m         849Mi           
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   75m          672Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   663m         1338Mi          
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   410m         1058Mi          
+
+2026-11-24T13:35:57Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      242m         998Mi           
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   621m         849Mi           
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   75m          672Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   663m         1338Mi          
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   410m         1058Mi          
+
+2026-11-24T13:36:05Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      408m         1024Mi          
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   471m         875Mi           
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   428m         720Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   744m         1347Mi          
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   556m         1080Mi          
+
+2026-11-24T13:36:14Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      608m         1051Mi          
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   746m         889Mi           
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   556m         778Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   553m         1353Mi          
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   765m         1113Mi          
+
+2026-11-24T13:36:22Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      608m         1051Mi          
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   746m         889Mi           
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   556m         778Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   553m         1353Mi          
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   765m         1113Mi          
+
+2026-11-24T13:36:30Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      885m         1062Mi          
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   663m         925Mi           
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   730m         821Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   633m         1386Mi          
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   616m         1140Mi          
+
+2026-11-24T13:36:39Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      885m         1062Mi          
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   663m         925Mi           
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   730m         821Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   633m         1386Mi          
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   616m         1140Mi          
+
+2026-11-24T13:36:47Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      802m         1119Mi          
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   745m         957Mi           
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   730m         821Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   748m         1390Mi          
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   761m         1152Mi          
+
+2026-11-24T13:36:55Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      802m         1119Mi          
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   745m         957Mi           
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   730m         821Mi           
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   761m         1152Mi          
+
+2026-11-24T13:37:04Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      234m         1131Mi          
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   918m         1002Mi          
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   752m         868Mi           
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   790m         1301Mi          
+
+2026-11-24T13:37:12Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      234m         1131Mi          
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   918m         1002Mi          
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   752m         868Mi           
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   790m         1301Mi          
+
+2026-11-24T13:37:20Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      62m          1130Mi          
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   613m         1155Mi          
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   906m         1032Mi          
+p3-batch-1000-e4-lplfp-exec-13   spark-kubernetes-executor   775m         539Mi           
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   790m         1301Mi          
+
+2026-11-24T13:37:29Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      31m          1130Mi          
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   664m         1156Mi          
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   213m         1035Mi          
+p3-batch-1000-e4-lplfp-exec-13   spark-kubernetes-executor   366m         726Mi           
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   346m         1302Mi          
+
+2026-11-24T13:37:37Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      31m          1130Mi          
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   664m         1156Mi          
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   213m         1035Mi          
+p3-batch-1000-e4-lplfp-exec-13   spark-kubernetes-executor   366m         726Mi           
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   346m         1302Mi          
+
+2026-11-24T13:37:45Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      464m         1145Mi          
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   829m         1160Mi          
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   652m         1043Mi          
+p3-batch-1000-e4-lplfp-exec-13   spark-kubernetes-executor   366m         751Mi           
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   491m         1307Mi          
+
+2026-11-24T13:37:54Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      464m         1145Mi          
+p3-batch-1000-e4-lplfp-exec-11   spark-kubernetes-executor   829m         1160Mi          
+p3-batch-1000-e4-lplfp-exec-12   spark-kubernetes-executor   652m         1043Mi          
+p3-batch-1000-e4-lplfp-exec-13   spark-kubernetes-executor   366m         751Mi           
+p3-batch-1000-e4-lplfp-exec-6    spark-kubernetes-executor   491m         1307Mi          
+
+2026-11-24T13:38:02Z
+POD                      NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp   driver   464m         1145Mi          
+
+2026-11-24T13:38:11Z
+POD                      NAME     CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp   driver   464m         1145Mi          
+
+2026-11-24T13:38:19Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      760m         512Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   605m         364Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   622m         359Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   610m         356Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   604m         343Mi           
+
+2026-11-24T13:38:27Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      760m         512Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   605m         364Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   622m         359Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   610m         356Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   604m         343Mi           
+
+2026-11-24T13:38:36Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      425m         555Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1004m        522Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        537Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   985m         573Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        559Mi           
+
+2026-11-24T13:38:44Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      16m          553Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   989m         809Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   991m         972Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   108m         596Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   41m          556Mi           
+
+2026-11-24T13:38:52Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      16m          553Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   989m         809Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   991m         972Mi           
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   108m         596Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   41m          556Mi           
+
+2026-11-24T13:39:01Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      150m         569Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   897m         1004Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   790m         1037Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   284m         778Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   2m           556Mi           
+
+2026-11-24T13:39:09Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      150m         569Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   897m         1004Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   790m         1037Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   284m         778Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   2m           556Mi           
+
+2026-11-24T13:39:18Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      150m         569Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   999m         1026Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1038Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   997m         813Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   679m         782Mi           
+
+2026-11-24T13:39:27Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      150m         569Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   999m         1026Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1000m        1038Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   997m         813Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   679m         782Mi           
+
+2026-11-24T13:39:35Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      40m          586Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   959m         1043Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   998m         1059Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   828m         858Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   871m         862Mi           
+
+2026-11-24T13:39:43Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      101m         591Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   959m         1043Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   455m         1242Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   735m         870Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   871m         862Mi           
+
+2026-11-24T13:39:52Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      101m         591Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   959m         1043Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   455m         1242Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   735m         870Mi           
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   871m         862Mi           
+
+2026-11-24T13:40:00Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      68m          591Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   874m         1183Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   757m         1259Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   380m         1004Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   313m         1019Mi          
+
+2026-11-24T13:40:08Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      68m          591Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   874m         1183Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   757m         1259Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   380m         1004Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   313m         1019Mi          
+
+2026-11-24T13:40:17Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      428m         642Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   428m         1225Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   576m         1290Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   540m         1031Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   609m         1189Mi          
+
+2026-11-24T13:40:25Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      428m         642Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   428m         1225Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   576m         1290Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   540m         1031Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   609m         1189Mi          
+
+2026-11-24T13:40:33Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      501m         664Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   800m         1263Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   976m         1312Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   796m         1059Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   745m         1226Mi          
+
+2026-11-24T13:40:42Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      501m         664Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   800m         1263Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   976m         1312Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   796m         1059Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   745m         1226Mi          
+
+2026-11-24T13:40:50Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      9m           664Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1264Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   997m         1303Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1047Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1213Mi          
+
+2026-11-24T13:40:58Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           663Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1251Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   999m         1303Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1051Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1234Mi          
+
+2026-11-24T13:41:07Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           663Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1251Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   999m         1303Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1051Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1234Mi          
+
+2026-11-24T13:41:15Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           663Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1245Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   997m         1298Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1045Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1239Mi          
+
+2026-11-24T13:41:23Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           663Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1245Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   997m         1298Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1045Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1239Mi          
+
+2026-11-24T13:41:32Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      8m           640Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1243Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   998m         1296Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1058Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1233Mi          
+
+2026-11-24T13:41:40Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      8m           640Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1243Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   998m         1296Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1058Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1233Mi          
+
+2026-11-24T13:41:48Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           640Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1243Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   997m         1293Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1075Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1001m        1252Mi          
+
+2026-11-24T13:41:57Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           640Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1243Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   997m         1293Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1075Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1001m        1252Mi          
+
+2026-11-24T13:42:05Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           640Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1241Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   999m         1306Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1075Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   999m         1265Mi          
+
+2026-11-24T13:42:13Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           640Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1237Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   998m         1305Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1073Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1262Mi          
+
+2026-11-24T13:42:22Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      6m           640Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1237Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   998m         1305Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1073Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   1000m        1262Mi          
+
+2026-11-24T13:42:30Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           640Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   999m         1250Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   997m         1302Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1079Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   999m         1300Mi          
+
+2026-11-24T13:42:39Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           640Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   999m         1250Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   997m         1302Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1079Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   999m         1300Mi          
+
+2026-11-24T13:42:47Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      9m           640Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1247Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   721m         1302Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1102Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   999m         1297Mi          
+
+2026-11-24T13:42:55Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      9m           640Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1000m        1247Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   721m         1302Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1102Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   999m         1297Mi          
+
+2026-11-24T13:43:04Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      230m         670Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   823m         1246Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   721m         1302Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1101Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   580m         1298Mi          
+
+2026-11-24T13:43:12Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      230m         670Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   823m         1246Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   721m         1302Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1101Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   580m         1298Mi          
+
+2026-11-24T13:43:20Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      230m         670Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   717m         1290Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   560m         1334Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   682m         1192Mi          
+p3-batch-1000-e4-lplfp-exec-4   spark-kubernetes-executor   588m         1341Mi          
+
+2026-11-24T13:43:29Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      157m         694Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   918m         1435Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   398m         1481Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   682m         1192Mi          
+
+2026-11-24T13:43:37Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      157m         694Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   918m         1435Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   398m         1481Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   682m         1192Mi          
+
+2026-11-24T13:43:45Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      107m         853Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   976m         1444Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   398m         1481Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   905m         1370Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   304m         300Mi           
+
+2026-11-24T13:43:54Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      107m         853Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   976m         1444Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   398m         1481Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   905m         1370Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   304m         300Mi           
+
+2026-11-24T13:44:02Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           846Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   431m         1442Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   7m           1458Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1370Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   5m           304Mi           
+
+2026-11-24T13:44:10Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           846Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   431m         1442Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   7m           1458Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1370Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   5m           304Mi           
+
+2026-11-24T13:44:19Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           846Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   431m         1442Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   7m           1458Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1379Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   3m           306Mi           
+
+2026-11-24T13:44:27Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      7m           846Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   431m         1442Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   7m           1458Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1379Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   3m           306Mi           
+
+2026-11-24T13:44:35Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      8m           840Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   2m           1438Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   6m           1454Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1378Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   2m           307Mi           
+
+2026-11-24T13:44:43Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      8m           837Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1m           1438Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1m           1454Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1385Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   2m           307Mi           
+
+2026-11-24T13:44:52Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      8m           837Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   1m           1438Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1m           1454Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1385Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   2m           307Mi           
+
+2026-11-24T13:45:00Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      5m           838Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   2m           1411Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1m           1454Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1382Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   1m           306Mi           
+
+2026-11-24T13:45:08Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      5m           838Mi           
+p3-batch-1000-e4-lplfp-exec-1   spark-kubernetes-executor   2m           1411Mi          
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1m           1454Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   1000m        1382Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   1m           306Mi           
+
+2026-11-24T13:45:17Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      158m         846Mi           
+p3-batch-1000-e4-lplfp-exec-2   spark-kubernetes-executor   1m           1454Mi          
+p3-batch-1000-e4-lplfp-exec-3   spark-kubernetes-executor   848m         1428Mi          
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   406m         415Mi           
+
+2026-11-24T13:45:25Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      158m         846Mi           
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   406m         415Mi           
+
+2026-11-24T13:45:34Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      398m         902Mi           
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   942m         1249Mi          
+
+2026-11-24T13:45:42Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp          driver                      398m         902Mi           
+p3-batch-1000-e4-lplfp-exec-5   spark-kubernetes-executor   942m         1249Mi          
+
+2026-11-24T13:45:50Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      80m          910Mi           
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   969m         652Mi           
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   857m         664Mi           
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   895m         726Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   645m         1264Mi          
+
+2026-11-24T13:45:59Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      58m          918Mi           
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   402m         756Mi           
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   416m         770Mi           
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   483m         821Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   645m         1264Mi          
+
+2026-11-24T13:46:07Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      58m          918Mi           
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   402m         756Mi           
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   416m         770Mi           
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   483m         821Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   645m         1264Mi          
+
+2026-11-24T13:46:15Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      173m         930Mi           
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   184m         770Mi           
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   416m         770Mi           
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   229m         835Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   805m         1290Mi          
+
+2026-11-24T13:46:24Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      173m         930Mi           
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   184m         770Mi           
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   416m         770Mi           
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   229m         835Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   805m         1290Mi          
+
+2026-11-24T13:46:32Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      601m         956Mi           
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   655m         794Mi           
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   316m         846Mi           
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   499m         858Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   872m         1296Mi          
+
+2026-11-24T13:46:40Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      601m         956Mi           
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   655m         794Mi           
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   316m         846Mi           
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   499m         858Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   872m         1296Mi          
+
+2026-11-24T13:46:49Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      601m         956Mi           
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   696m         802Mi           
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   633m         856Mi           
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   746m         867Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   456m         1305Mi          
+
+2026-11-24T13:46:57Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      601m         956Mi           
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   696m         802Mi           
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   633m         856Mi           
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   746m         867Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   456m         1305Mi          
+
+2026-11-24T13:47:06Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      766m         1040Mi          
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   674m         838Mi           
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   737m         886Mi           
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   746m         867Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   660m         1334Mi          
+
+2026-11-24T13:47:14Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      766m         1040Mi          
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   783m         867Mi           
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   768m         952Mi           
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   665m         895Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   732m         1360Mi          
+
+2026-11-24T13:47:22Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      766m         1040Mi          
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   783m         867Mi           
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   768m         952Mi           
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   665m         895Mi           
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   732m         1360Mi          
+
+2026-11-24T13:47:31Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      231m         1054Mi          
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   888m         1047Mi          
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   802m         1112Mi          
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   740m         1073Mi          
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   732m         1360Mi          
+
+2026-11-24T13:47:39Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      231m         1054Mi          
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   888m         1047Mi          
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   802m         1112Mi          
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   740m         1073Mi          
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   732m         1360Mi          
+
+2026-11-24T13:47:48Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      266m         1119Mi          
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   716m         1052Mi          
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   657m         1113Mi          
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   494m         1073Mi          
+p3-batch-1000-e4-lplfp-exec-5    spark-kubernetes-executor   947m         1532Mi          
+
+2026-11-24T13:47:56Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      266m         1119Mi          
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   716m         1052Mi          
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   657m         1113Mi          
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   494m         1073Mi          
+
+2026-11-24T13:48:04Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      266m         1119Mi          
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   482m         1064Mi          
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   424m         1117Mi          
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   389m         1076Mi          
+
+2026-11-24T13:48:13Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-batch-1000-e4-lplfp           driver                      266m         1119Mi          
+p3-batch-1000-e4-lplfp-exec-14   spark-kubernetes-executor   482m         1064Mi          
+p3-batch-1000-e4-lplfp-exec-15   spark-kubernetes-executor   424m         1117Mi          
+p3-batch-1000-e4-lplfp-exec-16   spark-kubernetes-executor   389m         1076Mi          

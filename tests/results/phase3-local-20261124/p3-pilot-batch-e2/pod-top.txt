@@ -1,0 +1,162 @@
+
+2026-11-24T10:29:29Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      1166m        528Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   619m         387Mi           
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   611m         386Mi           
+
+2026-11-24T10:29:37Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      1166m        528Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   619m         387Mi           
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   611m         386Mi           
+
+2026-11-24T10:29:45Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      1166m        528Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   682m         523Mi           
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   997m         564Mi           
+
+2026-11-24T10:29:54Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      1166m        528Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   682m         523Mi           
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   997m         564Mi           
+
+2026-11-24T10:30:02Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      134m         541Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   998m         806Mi           
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   991m         777Mi           
+
+2026-11-24T10:30:10Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      134m         541Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   998m         806Mi           
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   991m         777Mi           
+
+2026-11-24T10:30:19Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      185m         586Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   934m         957Mi           
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   623m         940Mi           
+
+2026-11-24T10:30:27Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      185m         586Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   934m         957Mi           
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   623m         940Mi           
+
+2026-11-24T10:30:35Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      799m         637Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   594m         1006Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   735m         962Mi           
+
+2026-11-24T10:30:44Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      799m         637Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   1000m        1007Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   917m         979Mi           
+
+2026-11-24T10:30:52Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      799m         637Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   1000m        1007Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   917m         979Mi           
+
+2026-11-24T10:31:00Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      9m           637Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   1000m        1007Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   999m         995Mi           
+
+2026-11-24T10:31:09Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      9m           637Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   1000m        1007Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   999m         995Mi           
+
+2026-11-24T10:31:17Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      9m           637Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   1000m        1007Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   219m         995Mi           
+
+2026-11-24T10:31:25Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      9m           637Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   1000m        1007Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   219m         995Mi           
+
+2026-11-24T10:31:34Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      7m           632Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   1000m        986Mi           
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   14m          988Mi           
+
+2026-11-24T10:31:42Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      7m           632Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   1000m        986Mi           
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   14m          988Mi           
+
+2026-11-24T10:31:50Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      25m          615Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   652m         979Mi           
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   328m         1008Mi          
+
+2026-11-24T10:31:59Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      474m         819Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   708m         1174Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   628m         1203Mi          
+
+2026-11-24T10:32:07Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      474m         819Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   708m         1174Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   628m         1203Mi          
+
+2026-11-24T10:32:15Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      628m         854Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   817m         1217Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   819m         1322Mi          
+
+2026-11-24T10:32:24Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      628m         854Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   817m         1217Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   819m         1322Mi          
+
+2026-11-24T10:32:32Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      812m         992Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   538m         1222Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   819m         1322Mi          
+
+2026-11-24T10:32:40Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      812m         992Mi           
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   538m         1222Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   819m         1322Mi          
+
+2026-11-24T10:32:49Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      1117m        1032Mi          
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   549m         1226Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   582m         1317Mi          
+
+2026-11-24T10:32:57Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      1117m        1032Mi          
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   549m         1226Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   582m         1317Mi          
+
+2026-11-24T10:33:06Z
+POD                              NAME                        CPU(cores)   MEMORY(bytes)   
+p3-pilot-batch-e2-zx6kg          driver                      308m         1029Mi          
+p3-pilot-batch-e2-zx6kg-exec-1   spark-kubernetes-executor   664m         1207Mi          
+p3-pilot-batch-e2-zx6kg-exec-2   spark-kubernetes-executor   582m         1317Mi          

@@ -1,0 +1,140 @@
+
+2026-11-25T07:09:36Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      1296m        643Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    0m           0Mi             
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   574m         398Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   585m         410Mi           
+
+2026-11-25T07:09:44Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      1296m        643Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    0m           0Mi             
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   574m         398Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   585m         410Mi           
+
+2026-11-25T07:09:52Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      368m         704Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    0m           0Mi             
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   401m         556Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   750m         532Mi           
+
+2026-11-25T07:10:01Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      368m         704Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    0m           0Mi             
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   401m         556Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   750m         532Mi           
+
+2026-11-25T07:10:09Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      423m         745Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    160m         95Mi            
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   401m         556Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   378m         660Mi           
+
+2026-11-25T07:10:17Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      423m         745Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    160m         95Mi            
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   401m         556Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   378m         660Mi           
+
+2026-11-25T07:10:26Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      284m         766Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    331m         144Mi           
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   466m         734Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   280m         700Mi           
+
+2026-11-25T07:10:34Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      284m         766Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    329m         221Mi           
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   398m         746Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   280m         700Mi           
+
+2026-11-25T07:10:43Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      284m         766Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    329m         221Mi           
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   398m         746Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   280m         700Mi           
+
+2026-11-25T07:10:51Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      194m         804Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    313m         290Mi           
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   488m         762Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   190m         725Mi           
+
+2026-11-25T07:10:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      194m         804Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    313m         290Mi           
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   488m         762Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   190m         725Mi           
+
+2026-11-25T07:11:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      202m         820Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    121m         25Mi            
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   112m         760Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   190m         725Mi           
+
+2026-11-25T07:11:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      202m         820Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    121m         25Mi            
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   112m         760Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   190m         725Mi           
+
+2026-11-25T07:11:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      259m         835Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    664m         188Mi           
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   348m         767Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   375m         737Mi           
+
+2026-11-25T07:11:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      259m         835Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    664m         188Mi           
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   348m         767Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   375m         737Mi           
+
+2026-11-25T07:11:42Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      191m         836Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    1636m        354Mi           
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   367m         770Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   314m         745Mi           
+
+2026-11-25T07:11:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      241m         854Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    1542m        345Mi           
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   407m         785Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   274m         751Mi           
+
+2026-11-25T07:11:58Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      241m         854Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    1542m        345Mi           
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   407m         785Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   274m         751Mi           
+
+2026-11-25T07:12:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      210m         854Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    1358m        25Mi            
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   438m         801Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   274m         751Mi           
+
+2026-11-25T07:12:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e2-r1-6nbnp          driver                      210m         854Mi           
+p3-s1-500-e2-r1-6nbnp          producer                    1358m        25Mi            
+p3-s1-500-e2-r1-6nbnp-exec-1   spark-kubernetes-executor   438m         801Mi           
+p3-s1-500-e2-r1-6nbnp-exec-2   spark-kubernetes-executor   274m         751Mi           

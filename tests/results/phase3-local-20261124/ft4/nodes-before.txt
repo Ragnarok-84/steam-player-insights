@@ -1,0 +1,5 @@
+NAME             CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+steam-server     506m         25%      2913Mi          74%         
+steam-worker-1   191m         9%       1256Mi          43%         
+steam-worker-2   385m         9%       1270Mi          25%         
+steam-worker-3   16m          0%       388Mi           9%          

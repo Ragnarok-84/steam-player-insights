@@ -1,0 +1,17 @@
+2026-11-23T14:15:15.380377928Z + /usr/bin/python3 -m processing.batch.b1_ingest_raw
+2026-11-23T14:15:17.019431789Z 26/11/23 14:15:17 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2026-11-23T14:15:17.083332209Z Setting default log level to "WARN".
+2026-11-23T14:15:17.083397403Z To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-11-23T14:15:23.558544058Z Reading steam.reviews.raw from kafka:9092, startingOffsets=earliest
+2026-11-23T14:15:25.116074515Z 26/11/23 14:15:25 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+2026-11-23T14:15:49.407731173Z Writing raw JSON gzip to: hdfs://namenode:8020/steam/raw/steam_reviews_raw
+2026-11-23T14:16:25.084862430Z Ingested 1 partitions; offsets saved to hdfs://namenode:8020/steam/checkpoints/b1_offsets/steam_reviews_raw.
+2026-11-23T14:16:25.088191766Z Reading steam.players.ccu from kafka:9092, startingOffsets=earliest
+2026-11-23T14:16:25.117550671Z 26/11/23 14:16:25 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+2026-11-23T14:16:25.926494736Z Writing raw JSON gzip to: hdfs://namenode:8020/steam/raw/steam_players_ccu
+2026-11-23T14:16:26.993174076Z Ingested 1 partitions; offsets saved to hdfs://namenode:8020/steam/checkpoints/b1_offsets/steam_players_ccu.
+2026-11-23T14:16:27.000683532Z Reading steam.games.meta from kafka:9092, startingOffsets=earliest
+2026-11-23T14:16:27.020983777Z 26/11/23 14:16:27 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+2026-11-23T14:16:28.022373572Z Writing raw JSON gzip to: hdfs://namenode:8020/steam/raw/steam_games_meta
+2026-11-23T14:16:29.833723696Z Ingested 1 partitions; offsets saved to hdfs://namenode:8020/steam/checkpoints/b1_offsets/steam_games_meta.
+2026-11-23T14:16:29.852329800Z 26/11/23 14:16:29 WARN ExecutorPodsWatchSnapshotSource: Kubernetes client has been closed.

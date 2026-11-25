@@ -1,0 +1,72 @@
+
+2026-11-25T00:52:43Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r3-retry-x2rns          driver                      1138m        506Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   spark-kubernetes-executor   799m         480Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   spark-kubernetes-executor   671m         503Mi           
+
+2026-11-25T00:52:52Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r3-retry-x2rns          driver                      1138m        506Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   spark-kubernetes-executor   799m         480Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   spark-kubernetes-executor   671m         503Mi           
+
+2026-11-25T00:53:00Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r3-retry-x2rns          driver                      192m         521Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   spark-kubernetes-executor   867m         587Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   spark-kubernetes-executor   904m         675Mi           
+
+2026-11-25T00:53:08Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r3-retry-x2rns          driver                      192m         521Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   spark-kubernetes-executor   867m         587Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   spark-kubernetes-executor   904m         675Mi           
+
+2026-11-25T00:53:17Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r3-retry-x2rns          driver                      609m         593Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   spark-kubernetes-executor   811m         699Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   spark-kubernetes-executor   814m         752Mi           
+
+2026-11-25T00:53:25Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r3-retry-x2rns          driver                      609m         593Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   spark-kubernetes-executor   811m         699Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   spark-kubernetes-executor   814m         752Mi           
+
+2026-11-25T00:53:34Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r3-retry-x2rns          driver                      13m          593Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   spark-kubernetes-executor   874m         870Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   spark-kubernetes-executor   957m         900Mi           
+
+2026-11-25T00:53:42Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r3-retry-x2rns          driver                      235m         756Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   spark-kubernetes-executor   720m         880Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   spark-kubernetes-executor   925m         904Mi           
+
+2026-11-25T00:53:50Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r3-retry-x2rns          driver                      235m         756Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   spark-kubernetes-executor   720m         880Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   spark-kubernetes-executor   925m         904Mi           
+
+2026-11-25T00:53:59Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r3-retry-x2rns          driver                      692m         840Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   spark-kubernetes-executor   800m         918Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   spark-kubernetes-executor   895m         949Mi           
+
+2026-11-25T00:54:07Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r3-retry-x2rns          driver                      692m         840Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   spark-kubernetes-executor   800m         918Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   spark-kubernetes-executor   895m         949Mi           
+
+2026-11-25T00:54:15Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r3-retry-x2rns          driver                      652m         908Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   spark-kubernetes-executor   800m         918Mi           
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   spark-kubernetes-executor   895m         949Mi           

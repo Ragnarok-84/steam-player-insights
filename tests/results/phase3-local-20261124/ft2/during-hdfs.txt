@@ -1,0 +1,62 @@
+Configured Capacity: 122570653696 (114.15 GB)
+Present Capacity: 45220954112 (42.12 GB)
+DFS Remaining: 27513409536 (25.62 GB)
+DFS Used: 17707544576 (16.49 GB)
+DFS Used%: 39.16%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (2):
+
+Name: 10.42.0.13:9866 (datanode-1.datanode.steam-ft.svc.cluster.local)
+Hostname: datanode-1.datanode.steam-ft.svc.cluster.local
+Decommission Status : Normal
+Configured Capacity: 61285326848 (57.08 GB)
+DFS Used: 8853753856 (8.25 GB)
+Non DFS Used: 41132720128 (38.31 GB)
+DFS Remaining: 11282075648 (10.51 GB)
+DFS Used%: 14.45%
+DFS Remaining%: 18.41%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Wed Nov 25 10:47:04 UTC 2026
+Last Block Report: Wed Nov 25 09:58:12 UTC 2026
+Num of Blocks: 46678
+
+
+Name: 10.42.1.10:9866 (datanode-0.datanode.steam-ft.svc.cluster.local)
+Hostname: datanode-0.datanode.steam-ft.svc.cluster.local
+Decommission Status : Normal
+Configured Capacity: 61285326848 (57.08 GB)
+DFS Used: 8853790720 (8.25 GB)
+Non DFS Used: 36183425024 (33.70 GB)
+DFS Remaining: 16231333888 (15.12 GB)
+DFS Used%: 14.45%
+DFS Remaining%: 26.48%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 1
+Last contact: Wed Nov 25 10:47:03 UTC 2026
+Last Block Report: Wed Nov 25 05:12:59 UTC 2026
+Num of Blocks: 46678
+
+

@@ -1,0 +1,3 @@
+index       shard prirep state   docs  store dataset ip          node
+ft4-reviews 0     p      STARTED 1200 36.3kb  36.3kb 10.42.1.115 ft4-es-1
+ft4-reviews 0     r      STARTED 1200 36.1kb  36.1kb 10.42.2.172 ft4-es-0

@@ -1,0 +1,118 @@
+
+2026-11-25T06:58:51Z
+POD                     NAME       CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z   driver     1161m        474Mi           
+p3-s1-500-e1-r1-trg2z   producer   1m           0Mi             
+
+2026-11-25T06:59:00Z
+POD                     NAME       CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z   driver     1161m        474Mi           
+p3-s1-500-e1-r1-trg2z   producer   1m           0Mi             
+
+2026-11-25T06:59:08Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      874m         554Mi           
+p3-s1-500-e1-r1-trg2z          producer                    0m           0Mi             
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   640m         475Mi           
+
+2026-11-25T06:59:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      874m         554Mi           
+p3-s1-500-e1-r1-trg2z          producer                    0m           0Mi             
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   640m         475Mi           
+
+2026-11-25T06:59:25Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      421m         658Mi           
+p3-s1-500-e1-r1-trg2z          producer                    81m          70Mi            
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   454m         592Mi           
+
+2026-11-25T06:59:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      421m         658Mi           
+p3-s1-500-e1-r1-trg2z          producer                    81m          70Mi            
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   454m         592Mi           
+
+2026-11-25T06:59:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      444m         670Mi           
+p3-s1-500-e1-r1-trg2z          producer                    331m         140Mi           
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   664m         717Mi           
+
+2026-11-25T06:59:50Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      255m         680Mi           
+p3-s1-500-e1-r1-trg2z          producer                    333m         218Mi           
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   659m         754Mi           
+
+2026-11-25T06:59:58Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      255m         680Mi           
+p3-s1-500-e1-r1-trg2z          producer                    333m         218Mi           
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   659m         754Mi           
+
+2026-11-25T07:00:06Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      257m         683Mi           
+p3-s1-500-e1-r1-trg2z          producer                    321m         273Mi           
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   308m         772Mi           
+
+2026-11-25T07:00:15Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      257m         683Mi           
+p3-s1-500-e1-r1-trg2z          producer                    321m         273Mi           
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   308m         772Mi           
+
+2026-11-25T07:00:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      247m         687Mi           
+p3-s1-500-e1-r1-trg2z          producer                    253m         25Mi            
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   290m         799Mi           
+
+2026-11-25T07:00:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      247m         687Mi           
+p3-s1-500-e1-r1-trg2z          producer                    253m         25Mi            
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   290m         799Mi           
+
+2026-11-25T07:00:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      229m         690Mi           
+p3-s1-500-e1-r1-trg2z          producer                    76m          72Mi            
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   260m         809Mi           
+
+2026-11-25T07:00:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      229m         690Mi           
+p3-s1-500-e1-r1-trg2z          producer                    76m          72Mi            
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   260m         809Mi           
+
+2026-11-25T07:00:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      203m         691Mi           
+p3-s1-500-e1-r1-trg2z          producer                    1606m        369Mi           
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   543m         816Mi           
+
+2026-11-25T07:01:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      226m         714Mi           
+p3-s1-500-e1-r1-trg2z          producer                    1542m        358Mi           
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   561m         879Mi           
+
+2026-11-25T07:01:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      226m         714Mi           
+p3-s1-500-e1-r1-trg2z          producer                    1542m        358Mi           
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   561m         879Mi           
+
+2026-11-25T07:01:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      159m         715Mi           
+p3-s1-500-e1-r1-trg2z          producer                    1556m        358Mi           
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   556m         877Mi           
+
+2026-11-25T07:01:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s1-500-e1-r1-trg2z          driver                      159m         715Mi           
+p3-s1-500-e1-r1-trg2z          producer                    1556m        358Mi           
+p3-s1-500-e1-r1-trg2z-exec-1   spark-kubernetes-executor   556m         877Mi           

@@ -1,0 +1,114 @@
+
+2026-11-25T09:41:25Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      1153m        648Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    1m           0Mi             
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   536m         371Mi           
+
+2026-11-25T09:41:33Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      1153m        648Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    1m           0Mi             
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   536m         371Mi           
+
+2026-11-25T09:41:42Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      409m         725Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    24m          47Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   628m         596Mi           
+
+2026-11-25T09:41:50Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      340m         763Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    67m          65Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   436m         727Mi           
+
+2026-11-25T09:41:58Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      340m         763Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    67m          65Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   436m         727Mi           
+
+2026-11-25T09:42:07Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      207m         785Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    67m          65Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   275m         740Mi           
+
+2026-11-25T09:42:15Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      207m         785Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    67m          65Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   275m         740Mi           
+
+2026-11-25T09:42:23Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      201m         802Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    55m          65Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   213m         743Mi           
+
+2026-11-25T09:42:32Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      201m         802Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    55m          65Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   213m         743Mi           
+
+2026-11-25T09:42:40Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      127m         817Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    50m          25Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   261m         750Mi           
+
+2026-11-25T09:42:48Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      127m         817Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    50m          25Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   261m         750Mi           
+
+2026-11-25T09:42:57Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      127m         817Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    86m          68Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   175m         748Mi           
+
+2026-11-25T09:43:05Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      144m         831Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    297m         69Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   274m         779Mi           
+
+2026-11-25T09:43:14Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      144m         831Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    297m         69Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   274m         779Mi           
+
+2026-11-25T09:43:22Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      179m         840Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    297m         69Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   209m         774Mi           
+
+2026-11-25T09:43:30Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      179m         840Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    297m         69Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   209m         774Mi           
+
+2026-11-25T09:43:39Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      130m         865Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    300m         69Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   264m         778Mi           
+
+2026-11-25T09:43:47Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      130m         865Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    300m         69Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   264m         778Mi           
+
+2026-11-25T09:43:55Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-1000-e1-r2-mmhk9          driver                      115m         879Mi           
+p3-s3-1000-e1-r2-mmhk9          producer                    197m         25Mi            
+p3-s3-1000-e1-r2-mmhk9-exec-1   spark-kubernetes-executor   155m         780Mi           

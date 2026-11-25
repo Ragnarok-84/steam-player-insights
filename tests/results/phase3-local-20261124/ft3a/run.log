@@ -1,0 +1,7 @@
+job.batch/p3-ft3a-batch-e2 created
+error: metrics not available yet
+error: metrics not available yet
+p3-ft3a-batch-e2: 2 executor pods Running and Ready
+error: metrics not available yet
+error: Metrics not available for pod steam-ft/p3-ft3a-batch-e2-ds6f7, age: 3m54.277131527s
+p3-ft3a-batch-e2: PASS

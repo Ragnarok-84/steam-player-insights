@@ -1,0 +1,11 @@
+job,container,cpu_request,cpu_limit,memory_request,memory_limit
+demo-smoke-5zr5t,spark,1,2,3Gi,4Gi
+demo-smoke-extra-cv9r8,spark,1,2,3Gi,4Gi
+phase2-b1,b1,1,2,3Gi,4300Mi
+phase2-batch,batch,1,2,3Gi,4300Mi
+phase2-inject,inject,1,2,3Gi,4300Mi
+phase2-kibana-setup,kibana-setup,1,2,3Gi,4300Mi
+phase2-replay-1000,replay,400m,1,192Mi,512Mi
+phase2-s1,s1,1,2,3Gi,4300Mi
+phase2-s2,s2,1,2,3Gi,4300Mi
+phase2-s3,s3,1,2,3Gi,4300Mi

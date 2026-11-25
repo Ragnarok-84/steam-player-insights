@@ -1,0 +1,4 @@
+NAME       READY   STATUS    RESTARTS   AGE   IP            NODE             NOMINATED NODE   READINESS GATES
+ft4-es-0   1/1     Running   0          96s   10.42.2.172   steam-worker-3   <none>           <none>
+ft4-es-1   1/1     Running   0          96s   10.42.1.115   steam-worker-1   <none>           <none>
+ft4-es-2   1/1     Running   0          96s   10.42.3.206   steam-worker-2   <none>           <none>

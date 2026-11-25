@@ -1,0 +1,652 @@
+26/11/24 15:35:22 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[bench] spark_startup 7.94s
+26/11/24 15:35:31 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+Writing clean reviews to hdfs://namenode:8020/steam/bench/runs/p3-batch-1000-e2/r2/clean/reviews...
+Writing clean CCU to hdfs://namenode:8020/steam/bench/runs/p3-batch-1000-e2/r2/clean/ccu...
+Writing clean games to hdfs://namenode:8020/steam/bench/runs/p3-batch-1000-e2/r2/clean/games...
+[bench] b2 141.52s records=928860 bytes=460999069 files=198
+26/11/24 15:42:49 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_186_4 !
+26/11/24 15:42:49 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_186_3 !
+26/11/24 15:42:49 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_186_8 !
+26/11/24 15:42:49 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_186_1 !
+26/11/24 15:42:49 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_186_7 !
+26/11/24 15:42:50 WARN ExecutorPodsAllocator: 1 new failed executors.
+26/11/24 15:42:50 ERROR TaskSchedulerImpl: Lost executor 2 on 10.42.1.46: 
+The executor with id 2 exited with exit code 137(SIGKILL, possible container OOM).
+
+
+
+The API gave the following container statuses:
+
+
+	 container name: spark-kubernetes-executor
+	 container image: localhost/steam-spark:k3s-20261124-1d45953
+	 container state: terminated
+	 container started at: 2026-11-24T15:35:25Z
+	 container finished at: 2026-11-24T15:42:49Z
+	 exit code: 137
+	 termination reason: OOMKilled
+      
+26/11/24 15:42:50 WARN TaskSetManager: Lost task 0.0 in stage 82.0 (TID 532) (10.42.1.46 executor 2): ExecutorLostFailure (executor 2 exited caused by one of the running tasks) Reason: 
+The executor with id 2 exited with exit code 137(SIGKILL, possible container OOM).
+
+
+
+The API gave the following container statuses:
+
+
+	 container name: spark-kubernetes-executor
+	 container image: localhost/steam-spark:k3s-20261124-1d45953
+	 container state: terminated
+	 container started at: 2026-11-24T15:35:25Z
+	 container finished at: 2026-11-24T15:42:49Z
+	 exit code: 137
+	 termination reason: OOMKilled
+      
+26/11/24 15:42:57 WARN TaskSetManager: Lost task 2.0 in stage 82.0 (TID 535) (10.42.2.50 executor 3): FetchFailed(null, shuffleId=23, mapIndex=-1, mapId=-1, reduceId=15, message=
+org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 23 partition 15
+	at org.apache.spark.MapOutputTracker$.validateStatus(MapOutputTracker.scala:1747)
+	at org.apache.spark.MapOutputTracker$.$anonfun$convertMapStatuses$11(MapOutputTracker.scala:1694)
+	at org.apache.spark.MapOutputTracker$.$anonfun$convertMapStatuses$11$adapted(MapOutputTracker.scala:1693)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.MapOutputTracker$.convertMapStatuses(MapOutputTracker.scala:1693)
+	at org.apache.spark.MapOutputTrackerWorker.getMapSizesByExecutorIdImpl(MapOutputTracker.scala:1335)
+	at org.apache.spark.MapOutputTrackerWorker.getMapSizesByExecutorId(MapOutputTracker.scala:1297)
+	at org.apache.spark.shuffle.sort.SortShuffleManager.getReader(SortShuffleManager.scala:141)
+	at org.apache.spark.shuffle.ShuffleManager.getReader(ShuffleManager.scala:63)
+	at org.apache.spark.shuffle.ShuffleManager.getReader$(ShuffleManager.scala:57)
+	at org.apache.spark.shuffle.sort.SortShuffleManager.getReader(SortShuffleManager.scala:73)
+	at org.apache.spark.sql.execution.ShuffledRowRDD.compute(ShuffledRowRDD.scala:200)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.sql.execution.SQLExecutionRDD.$anonfun$compute$1(SQLExecutionRDD.scala:52)
+	at org.apache.spark.sql.internal.SQLConf$.withExistingConf(SQLConf.scala:158)
+	at org.apache.spark.sql.execution.SQLExecutionRDD.compute(SQLExecutionRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:621)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:624)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+)
+26/11/24 15:44:02 WARN TaskSetManager: Lost task 0.1 in stage 82.0 (TID 534) (10.42.3.85 executor 1): FetchFailed(BlockManagerId(2, 10.42.1.46, 7079, None), shuffleId=23, mapIndex=1, mapId=522, reduceId=0, message=
+org.apache.spark.shuffle.FetchFailedException
+	at org.apache.spark.errors.SparkCoreErrors$.fetchFailedError(SparkCoreErrors.scala:437)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:1242)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:971)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:86)
+	at org.apache.spark.util.CompletionIterator.next(CompletionIterator.scala:29)
+	at scala.collection.Iterator$$anon$11.nextCur(Iterator.scala:486)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:492)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:31)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.execution.aggregate.ObjectHashAggregateExec.$anonfun$doExecute$1(ObjectHashAggregateExec.scala:92)
+	at org.apache.spark.sql.execution.aggregate.ObjectHashAggregateExec.$anonfun$doExecute$1$adapted(ObjectHashAggregateExec.scala:90)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsWithIndexInternal$2(RDD.scala:880)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsWithIndexInternal$2$adapted(RDD.scala:880)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.sql.execution.SQLExecutionRDD.$anonfun$compute$1(SQLExecutionRDD.scala:52)
+	at org.apache.spark.sql.internal.SQLConf$.withExistingConf(SQLConf.scala:158)
+	at org.apache.spark.sql.execution.SQLExecutionRDD.compute(SQLExecutionRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:621)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:624)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.apache.spark.ExecutorDeadException: [INTERNAL_ERROR_NETWORK] The relative remote executor(Id: 2), which maintains the block data to fetch is dead.
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:141)
+	at org.apache.spark.network.shuffle.RetryingBlockTransferor.transferAllOutstanding(RetryingBlockTransferor.java:173)
+	at org.apache.spark.network.shuffle.RetryingBlockTransferor.start(RetryingBlockTransferor.java:152)
+	at org.apache.spark.network.netty.NettyBlockTransferService.fetchBlocks(NettyBlockTransferService.scala:151)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.sendRequest(ShuffleBlockFetcherIterator.scala:374)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.send$1(ShuffleBlockFetcherIterator.scala:1209)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.fetchUpToMaxBytes(ShuffleBlockFetcherIterator.scala:1201)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.initialize(ShuffleBlockFetcherIterator.scala:715)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.<init>(ShuffleBlockFetcherIterator.scala:194)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:73)
+	at org.apache.spark.sql.execution.ShuffledRowRDD.compute(ShuffledRowRDD.scala:232)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+	... 31 more
+
+)
+26/11/24 15:44:12 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_186_2 !
+26/11/24 15:44:12 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_186_0 !
+26/11/24 15:44:12 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_186_9 !
+26/11/24 15:44:12 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_186_5 !
+26/11/24 15:44:12 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_186_6 !
+26/11/24 15:44:13 WARN ExecutorPodsAllocator: 1 new failed executors.
+26/11/24 15:44:13 ERROR TaskSchedulerImpl: Lost executor 1 on 10.42.3.85: 
+The executor with id 1 exited with exit code 137(SIGKILL, possible container OOM).
+
+
+
+The API gave the following container statuses:
+
+
+	 container name: spark-kubernetes-executor
+	 container image: localhost/steam-spark:k3s-20261124-1d45953
+	 container state: terminated
+	 container started at: 2026-11-24T15:35:25Z
+	 container finished at: 2026-11-24T15:44:12Z
+	 exit code: 137
+	 termination reason: OOMKilled
+      
+26/11/24 15:44:13 WARN TaskSetManager: Lost task 1.0 in stage 81.1 (TID 537) (10.42.3.85 executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: 
+The executor with id 1 exited with exit code 137(SIGKILL, possible container OOM).
+
+
+
+The API gave the following container statuses:
+
+
+	 container name: spark-kubernetes-executor
+	 container image: localhost/steam-spark:k3s-20261124-1d45953
+	 container state: terminated
+	 container started at: 2026-11-24T15:35:25Z
+	 container finished at: 2026-11-24T15:44:12Z
+	 exit code: 137
+	 termination reason: OOMKilled
+      
+26/11/24 15:48:24 WARN DAGScheduler: Broadcasting large task binary with size 1041.3 KiB
+Job B5 completed successfully.
+[bench] b5 631.57s records=486335 bytes=6133291 files=195
+26/11/24 15:48:40 WARN ExecutorPodsAllocator: 1 new failed executors.
+26/11/24 15:48:40 WARN ExecutorPodsSnapshotsStoreImpl: Exception when notifying snapshot subscriber.
+io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: POST at: https://kubernetes.default.svc:443/api/v1/namespaces/steam-ft/pods. Message: pods "p3-batch-1000-e2-bc2xw-exec-5" already exists. Received status: Status(apiVersion=v1, code=409, details=StatusDetails(causes=[], group=null, kind=pods, name=p3-batch-1000-e2-bc2xw-exec-5, retryAfterSeconds=null, uid=null, additionalProperties={}), kind=Status, message=pods "p3-batch-1000-e2-bc2xw-exec-5" already exists, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=AlreadyExists, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:238)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:518)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:535)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleCreate(OperationSupport.java:340)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handleCreate(BaseOperation.java:703)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handleCreate(BaseOperation.java:92)
+	at io.fabric8.kubernetes.client.dsl.internal.CreateOnlyResourceOperation.create(CreateOnlyResourceOperation.java:42)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.create(BaseOperation.java:1108)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.create(BaseOperation.java:92)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.$anonfun$requestNewExecutors$1(ExecutorPodsAllocator.scala:470)
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:158)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.requestNewExecutors(ExecutorPodsAllocator.scala:447)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.$anonfun$onNewSnapshots$39(ExecutorPodsAllocator.scala:400)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.$anonfun$onNewSnapshots$39$adapted(ExecutorPodsAllocator.scala:393)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.onNewSnapshots(ExecutorPodsAllocator.scala:393)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.$anonfun$start$3(ExecutorPodsAllocator.scala:144)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.$anonfun$start$3$adapted(ExecutorPodsAllocator.scala:143)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsSnapshotsStoreImpl$SnapshotsSubscriber.org$apache$spark$scheduler$cluster$k8s$ExecutorPodsSnapshotsStoreImpl$SnapshotsSubscriber$$processSnapshotsInternal(ExecutorPodsSnapshotsStoreImpl.scala:143)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsSnapshotsStoreImpl$SnapshotsSubscriber.processSnapshots(ExecutorPodsSnapshotsStoreImpl.scala:131)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsSnapshotsStoreImpl.$anonfun$addSubscriber$1(ExecutorPodsSnapshotsStoreImpl.scala:85)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: POST at: https://kubernetes.default.svc:443/api/v1/namespaces/steam-ft/pods. Message: pods "p3-batch-1000-e2-bc2xw-exec-5" already exists. Received status: Status(apiVersion=v1, code=409, details=StatusDetails(causes=[], group=null, kind=pods, name=p3-batch-1000-e2-bc2xw-exec-5, retryAfterSeconds=null, uid=null, additionalProperties={}), kind=Status, message=pods "p3-batch-1000-e2-bc2xw-exec-5" already exists, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=AlreadyExists, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:671)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:651)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:600)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:560)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:140)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:52)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.okhttp.OkHttpClientImpl$OkHttpAsyncBody.doConsume(OkHttpClientImpl.java:137)
+	... 3 more
+26/11/24 15:48:40 ERROR TaskSchedulerImpl: Lost executor 3 on 10.42.2.50: 
+The executor with id 3 exited with exit code 137(SIGKILL, possible container OOM).
+
+
+
+The API gave the following container statuses:
+
+
+	 container name: spark-kubernetes-executor
+	 container image: localhost/steam-spark:k3s-20261124-1d45953
+	 container state: terminated
+	 container started at: 2026-11-24T15:42:50Z
+	 container finished at: 2026-11-24T15:48:39Z
+	 exit code: 137
+	 termination reason: OOMKilled
+      
+26/11/24 15:48:40 WARN TaskSetManager: Lost task 1.0 in stage 107.0 (TID 1162) (10.42.2.50 executor 3): ExecutorLostFailure (executor 3 exited caused by one of the running tasks) Reason: 
+The executor with id 3 exited with exit code 137(SIGKILL, possible container OOM).
+
+
+
+The API gave the following container statuses:
+
+
+	 container name: spark-kubernetes-executor
+	 container image: localhost/steam-spark:k3s-20261124-1d45953
+	 container state: terminated
+	 container started at: 2026-11-24T15:42:50Z
+	 container finished at: 2026-11-24T15:48:39Z
+	 exit code: 137
+	 termination reason: OOMKilled
+      
+26/11/24 15:48:41 WARN ExecutorPodsSnapshotsStoreImpl: Exception when notifying snapshot subscriber.
+io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: POST at: https://kubernetes.default.svc:443/api/v1/namespaces/steam-ft/pods. Message: pods "p3-batch-1000-e2-bc2xw-exec-6" already exists. Received status: Status(apiVersion=v1, code=409, details=StatusDetails(causes=[], group=null, kind=pods, name=p3-batch-1000-e2-bc2xw-exec-6, retryAfterSeconds=null, uid=null, additionalProperties={}), kind=Status, message=pods "p3-batch-1000-e2-bc2xw-exec-6" already exists, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=AlreadyExists, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:238)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:518)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:535)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleCreate(OperationSupport.java:340)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handleCreate(BaseOperation.java:703)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handleCreate(BaseOperation.java:92)
+	at io.fabric8.kubernetes.client.dsl.internal.CreateOnlyResourceOperation.create(CreateOnlyResourceOperation.java:42)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.create(BaseOperation.java:1108)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.create(BaseOperation.java:92)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.$anonfun$requestNewExecutors$1(ExecutorPodsAllocator.scala:470)
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:158)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.requestNewExecutors(ExecutorPodsAllocator.scala:447)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.$anonfun$onNewSnapshots$39(ExecutorPodsAllocator.scala:400)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.$anonfun$onNewSnapshots$39$adapted(ExecutorPodsAllocator.scala:393)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.onNewSnapshots(ExecutorPodsAllocator.scala:393)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.$anonfun$start$3(ExecutorPodsAllocator.scala:144)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.$anonfun$start$3$adapted(ExecutorPodsAllocator.scala:143)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsSnapshotsStoreImpl$SnapshotsSubscriber.org$apache$spark$scheduler$cluster$k8s$ExecutorPodsSnapshotsStoreImpl$SnapshotsSubscriber$$processSnapshotsInternal(ExecutorPodsSnapshotsStoreImpl.scala:143)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsSnapshotsStoreImpl$SnapshotsSubscriber.processSnapshots(ExecutorPodsSnapshotsStoreImpl.scala:131)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsSnapshotsStoreImpl.$anonfun$addSubscriber$1(ExecutorPodsSnapshotsStoreImpl.scala:85)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: POST at: https://kubernetes.default.svc:443/api/v1/namespaces/steam-ft/pods. Message: pods "p3-batch-1000-e2-bc2xw-exec-6" already exists. Received status: Status(apiVersion=v1, code=409, details=StatusDetails(causes=[], group=null, kind=pods, name=p3-batch-1000-e2-bc2xw-exec-6, retryAfterSeconds=null, uid=null, additionalProperties={}), kind=Status, message=pods "p3-batch-1000-e2-bc2xw-exec-6" already exists, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=AlreadyExists, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:671)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:651)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:600)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:560)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:140)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:52)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.okhttp.OkHttpClientImpl$OkHttpAsyncBody.doConsume(OkHttpClientImpl.java:137)
+	... 3 more
+26/11/24 15:48:41 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_305_0 !
+26/11/24 15:48:42 ERROR TaskSchedulerImpl: Lost executor 4 on 10.42.1.47: 
+The executor with id 4 exited with exit code 137(SIGKILL, possible container OOM).
+
+
+
+The API gave the following container statuses:
+
+
+	 container name: spark-kubernetes-executor
+	 container image: localhost/steam-spark:k3s-20261124-1d45953
+	 container state: terminated
+	 container started at: 2026-11-24T15:44:13Z
+	 container finished at: 2026-11-24T15:48:41Z
+	 exit code: 137
+	 termination reason: OOMKilled
+      
+26/11/24 15:48:42 WARN TaskSetManager: Lost task 1.1 in stage 107.0 (TID 1163) (10.42.1.47 executor 4): ExecutorLostFailure (executor 4 exited caused by one of the running tasks) Reason: 
+The executor with id 4 exited with exit code 137(SIGKILL, possible container OOM).
+
+
+
+The API gave the following container statuses:
+
+
+	 container name: spark-kubernetes-executor
+	 container image: localhost/steam-spark:k3s-20261124-1d45953
+	 container state: terminated
+	 container started at: 2026-11-24T15:44:13Z
+	 container finished at: 2026-11-24T15:48:41Z
+	 exit code: 137
+	 termination reason: OOMKilled
+      
+26/11/24 15:48:43 WARN ExecutorPodsAllocator: 1 new failed executors.
+Job B3 finished successfully.
+[bench] b3 66.41s records=498397 bytes=4537719 files=9
+Job B4 finished successfully.
+[bench] b4 8.87s records=5310 bytes=128632 files=3
+Job B6 completed. Latest dt=2026-11-16.
+[bench] b6 15.45s records=297193 bytes=6358515 files=5
+Job B7 finished (reviews as_of=1794951293).
+[bench] b7 5.79s records=2700 bytes=27018 files=2
+26/11/24 15:50:15 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
++-------+-----+----------------------+--------------------+---------------------+------------------+--------------------+--------------------+--------------------+--------------------+-------------------+--------------------+--------------------+---------------------+
+|cluster|games|positive_ratio_percent|early_negative_ratio|median_playtime_hours|price             |performance_share   |bug_share           |price_share         |server_share        |gameplay_share     |story_share         |graphics_share      |cheating_share       |
++-------+-----+----------------------+--------------------+---------------------+------------------+--------------------+--------------------+--------------------+--------------------+-------------------+--------------------+--------------------+---------------------+
+|0      |87   |69.7312643678161      |14.8316091954023    |5.910000000000001    |15.564712643678165|0.10478176179929298 |0.1455013032534546  |0.14040308612532426 |0.061781333698825595|0.3447229759305334 |0.15945655879158965 |0.11700688382346561 |0.004494164989625877 |
+|1      |391  |86.41391304347825     |4.212762148337597   |25.170946291560103   |13.22828644501276 |0.011294444913023482|0.014046953468594546|0.025963599763302574|0.010010374653860721|0.08283866602440078|0.041668029856644966|0.022167299101497187|0.001659024657230021 |
+|2      |268  |82.93190298507464     |5.450410447761196   |17.08067164179105    |19.70063432835817 |0.03540275639642073 |0.043630741892537905|0.06980261278579361 |0.033335210049108235|0.22496523349874095|0.1264626908361296  |0.06857133786984737 |0.002746729772448269 |
+|3      |14   |60.171428571428564    |12.507857142857143  |45.33285714285715    |23.90642857142857 |0.06620057724769694 |0.07416436933783051 |0.07373431671848242 |0.055870148067867345|0.20507302540578823|0.0965915178357845  |0.05382722017566487 |0.06753028942794906  |
+|4      |80   |85.2345               |8.021               |5.260000000000001    |9.392875000000004 |0.030393535910827697|0.04903860929994511 |0.12862700360701407 |0.05545671918249303 |0.26933276398477946|0.4147360987578098  |0.20203836041518092 |0.00558219205205697  |
+|5      |159  |62.45974842767297     |25.401132075471697  |4.521572327044024    |5.2154088050314495|0.027792522273837574|0.043131524657357284|0.05662971870929143 |0.025188417386256275|0.14109661674587742|0.06650744559503066 |0.053732539726510035|0.0014822914710757498|
++-------+-----+----------------------+--------------------+---------------------+------------------+--------------------+--------------------+--------------------+--------------------+-------------------+--------------------+--------------------+---------------------+
+
+[bench] b8 9.92s records=1005 bytes=115311 files=3
+B9: split=time, mốc 2026-10-13 05:42 UTC
+26/11/24 15:50:46 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_1024_8 !
+26/11/24 15:50:46 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_1052_3 !
+26/11/24 15:50:46 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_1052_7 !
+26/11/24 15:50:46 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_1024_1 !
+26/11/24 15:50:46 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_1024_2 !
+26/11/24 15:50:46 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_1052_9 !
+26/11/24 15:50:46 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_1024_4 !
+26/11/24 15:50:46 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_1052_5 !
+26/11/24 15:50:46 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_1052_1 !
+26/11/24 15:50:46 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_1024_6 !
+26/11/24 15:50:46 WARN ExecutorPodsAllocator: 1 new failed executors.
+26/11/24 15:50:46 ERROR ExecutorPodsAllocator: Max number of executor failures (4) reached
+[bench] b9 FAIL sau 26.39s: Py4JJavaError: An error occurred while calling o3859.fit.
+: org.apache.spark.SparkException: Job 281 cancelled because SparkContext was shut down
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1(DAGScheduler.scala:1259)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1$adapted(DAGScheduler.scala:1257)
+	at scala.collection.mutable.HashSet.foreach(HashSet.scala:79)
+	at org.apache.spark.scheduler.DAGScheduler.cleanUpAfterSchedulerStop(D
+26/11/24 15:50:46 ERROR TransportResponseHandler: Still have 1 requests outstanding when connection from /10.42.3.86:55278 is closed
+26/11/24 15:51:06 WARN ExecutorPodsWatchSnapshotSource: Kubernetes client has been closed.
+26/11/24 15:51:06 ERROR Utils: Uncaught exception in thread shutdown-hook-0
+io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: DELETE at: https://kubernetes.default.svc:443/api/v1/namespaces/steam-ft/services?labelSelector=spark-app-selector%3Dspark-ad9fd141389c451e8df6331b4b32426c. Message: Forbidden!Configured service account doesn't have access. Service account may have been revoked. services is forbidden: User "system:serviceaccount:steam-ft:spark-driver" cannot deletecollection resource "services" in API group "" in the namespace "steam-ft".
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:238)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:518)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:535)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleDelete(OperationSupport.java:320)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.deleteAll(BaseOperation.java:504)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.delete(BaseOperation.java:469)
+	at org.apache.spark.scheduler.cluster.k8s.KubernetesClusterSchedulerBackend.$anonfun$stop$5(KubernetesClusterSchedulerBackend.scala:142)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.scheduler.cluster.k8s.KubernetesClusterSchedulerBackend.stop(KubernetesClusterSchedulerBackend.scala:143)
+	at org.apache.spark.scheduler.SchedulerBackend.stop(SchedulerBackend.scala:33)
+	at org.apache.spark.scheduler.SchedulerBackend.stop$(SchedulerBackend.scala:33)
+	at org.apache.spark.scheduler.cluster.CoarseGrainedSchedulerBackend.stop(CoarseGrainedSchedulerBackend.scala:54)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.$anonfun$stop$2(TaskSchedulerImpl.scala:992)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.stop(TaskSchedulerImpl.scala:992)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$stop$4(DAGScheduler.scala:3018)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:3018)
+	at org.apache.spark.SparkContext.$anonfun$stop$12(SparkContext.scala:2258)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2258)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2211)
+	at org.apache.spark.SparkContext.$anonfun$new$34(SparkContext.scala:681)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: DELETE at: https://kubernetes.default.svc:443/api/v1/namespaces/steam-ft/services?labelSelector=spark-app-selector%3Dspark-ad9fd141389c451e8df6331b4b32426c. Message: Forbidden!Configured service account doesn't have access. Service account may have been revoked. services is forbidden: User "system:serviceaccount:steam-ft:spark-driver" cannot deletecollection resource "services" in API group "" in the namespace "steam-ft".
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:671)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:651)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:597)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:560)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:140)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:52)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.okhttp.OkHttpClientImpl$OkHttpAsyncBody.doConsume(OkHttpClientImpl.java:137)
+	... 3 more
+26/11/24 15:51:06 ERROR Utils: Uncaught exception in thread shutdown-hook-0
+io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: DELETE at: https://kubernetes.default.svc:443/api/v1/namespaces/steam-ft/persistentvolumeclaims?labelSelector=spark-app-selector%3Dspark-ad9fd141389c451e8df6331b4b32426c. Message: Forbidden!Configured service account doesn't have access. Service account may have been revoked. persistentvolumeclaims is forbidden: User "system:serviceaccount:steam-ft:spark-driver" cannot deletecollection resource "persistentvolumeclaims" in API group "" in the namespace "steam-ft".
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:238)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:518)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:535)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleDelete(OperationSupport.java:320)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.deleteAll(BaseOperation.java:504)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.delete(BaseOperation.java:469)
+	at org.apache.spark.scheduler.cluster.k8s.KubernetesClusterSchedulerBackend.$anonfun$stop$6(KubernetesClusterSchedulerBackend.scala:152)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.scheduler.cluster.k8s.KubernetesClusterSchedulerBackend.stop(KubernetesClusterSchedulerBackend.scala:153)
+	at org.apache.spark.scheduler.SchedulerBackend.stop(SchedulerBackend.scala:33)
+	at org.apache.spark.scheduler.SchedulerBackend.stop$(SchedulerBackend.scala:33)
+	at org.apache.spark.scheduler.cluster.CoarseGrainedSchedulerBackend.stop(CoarseGrainedSchedulerBackend.scala:54)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.$anonfun$stop$2(TaskSchedulerImpl.scala:992)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.stop(TaskSchedulerImpl.scala:992)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$stop$4(DAGScheduler.scala:3018)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:3018)
+	at org.apache.spark.SparkContext.$anonfun$stop$12(SparkContext.scala:2258)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2258)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2211)
+	at org.apache.spark.SparkContext.$anonfun$new$34(SparkContext.scala:681)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: DELETE at: https://kubernetes.default.svc:443/api/v1/namespaces/steam-ft/persistentvolumeclaims?labelSelector=spark-app-selector%3Dspark-ad9fd141389c451e8df6331b4b32426c. Message: Forbidden!Configured service account doesn't have access. Service account may have been revoked. persistentvolumeclaims is forbidden: User "system:serviceaccount:steam-ft:spark-driver" cannot deletecollection resource "persistentvolumeclaims" in API group "" in the namespace "steam-ft".
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:671)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:651)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:597)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:560)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:140)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:52)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.okhttp.OkHttpClientImpl$OkHttpAsyncBody.doConsume(OkHttpClientImpl.java:137)
+	... 3 more
+26/11/24 15:51:06 ERROR Utils: Uncaught exception in thread shutdown-hook-0
+io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: DELETE at: https://kubernetes.default.svc:443/api/v1/namespaces/steam-ft/pods?labelSelector=spark-app-selector%3Dspark-ad9fd141389c451e8df6331b4b32426c%2Cspark-role%3Dexecutor. Message: Forbidden!Configured service account doesn't have access. Service account may have been revoked. pods is forbidden: User "system:serviceaccount:steam-ft:spark-driver" cannot deletecollection resource "pods" in API group "" in the namespace "steam-ft".
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:238)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:518)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:535)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleDelete(OperationSupport.java:320)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.deleteAll(BaseOperation.java:504)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.delete(BaseOperation.java:469)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.$anonfun$stop$1(ExecutorPodsAllocator.scala:545)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.scheduler.cluster.k8s.ExecutorPodsAllocator.stop(ExecutorPodsAllocator.scala:546)
+	at org.apache.spark.scheduler.cluster.k8s.KubernetesClusterSchedulerBackend.stop(KubernetesClusterSchedulerBackend.scala:159)
+	at org.apache.spark.scheduler.SchedulerBackend.stop(SchedulerBackend.scala:33)
+	at org.apache.spark.scheduler.SchedulerBackend.stop$(SchedulerBackend.scala:33)
+	at org.apache.spark.scheduler.cluster.CoarseGrainedSchedulerBackend.stop(CoarseGrainedSchedulerBackend.scala:54)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.$anonfun$stop$2(TaskSchedulerImpl.scala:992)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.stop(TaskSchedulerImpl.scala:992)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$stop$4(DAGScheduler.scala:3018)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:3018)
+	at org.apache.spark.SparkContext.$anonfun$stop$12(SparkContext.scala:2258)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2258)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2211)
+	at org.apache.spark.SparkContext.$anonfun$new$34(SparkContext.scala:681)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: DELETE at: https://kubernetes.default.svc:443/api/v1/namespaces/steam-ft/pods?labelSelector=spark-app-selector%3Dspark-ad9fd141389c451e8df6331b4b32426c%2Cspark-role%3Dexecutor. Message: Forbidden!Configured service account doesn't have access. Service account may have been revoked. pods is forbidden: User "system:serviceaccount:steam-ft:spark-driver" cannot deletecollection resource "pods" in API group "" in the namespace "steam-ft".
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:671)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:651)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:597)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:560)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:140)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:52)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.okhttp.OkHttpClientImpl$OkHttpAsyncBody.doConsume(OkHttpClientImpl.java:137)
+	... 3 more
+26/11/24 15:51:06 ERROR Utils: Uncaught exception in thread shutdown-hook-0
+io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: DELETE at: https://kubernetes.default.svc:443/api/v1/namespaces/steam-ft/configmaps?labelSelector=spark-app-selector%3Dspark-ad9fd141389c451e8df6331b4b32426c%2Cspark-role%3Dexecutor. Message: Forbidden!Configured service account doesn't have access. Service account may have been revoked. configmaps is forbidden: User "system:serviceaccount:steam-ft:spark-driver" cannot deletecollection resource "configmaps" in API group "" in the namespace "steam-ft".
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:238)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:518)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:535)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleDelete(OperationSupport.java:320)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.deleteAll(BaseOperation.java:504)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.delete(BaseOperation.java:469)
+	at org.apache.spark.scheduler.cluster.k8s.KubernetesClusterSchedulerBackend.$anonfun$stop$7(KubernetesClusterSchedulerBackend.scala:167)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.scheduler.cluster.k8s.KubernetesClusterSchedulerBackend.stop(KubernetesClusterSchedulerBackend.scala:168)
+	at org.apache.spark.scheduler.SchedulerBackend.stop(SchedulerBackend.scala:33)
+	at org.apache.spark.scheduler.SchedulerBackend.stop$(SchedulerBackend.scala:33)
+	at org.apache.spark.scheduler.cluster.CoarseGrainedSchedulerBackend.stop(CoarseGrainedSchedulerBackend.scala:54)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.$anonfun$stop$2(TaskSchedulerImpl.scala:992)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.stop(TaskSchedulerImpl.scala:992)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$stop$4(DAGScheduler.scala:3018)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:3018)
+	at org.apache.spark.SparkContext.$anonfun$stop$12(SparkContext.scala:2258)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2258)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2211)
+	at org.apache.spark.SparkContext.$anonfun$new$34(SparkContext.scala:681)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: DELETE at: https://kubernetes.default.svc:443/api/v1/namespaces/steam-ft/configmaps?labelSelector=spark-app-selector%3Dspark-ad9fd141389c451e8df6331b4b32426c%2Cspark-role%3Dexecutor. Message: Forbidden!Configured service account doesn't have access. Service account may have been revoked. configmaps is forbidden: User "system:serviceaccount:steam-ft:spark-driver" cannot deletecollection resource "configmaps" in API group "" in the namespace "steam-ft".
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:671)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:651)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:597)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:560)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:140)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:52)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at io.fabric8.kubernetes.client.okhttp.OkHttpClientImpl$OkHttpAsyncBody.doConsume(OkHttpClientImpl.java:137)
+	... 3 more

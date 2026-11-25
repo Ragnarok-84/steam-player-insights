@@ -1,0 +1,7 @@
++ /usr/bin/python3 -m processing.streaming.s3_ccu_spike_detector --source kafka --starting-offsets latest --trigger 10 seconds --checkpoint hdfs://namenode:8020/steam/bench/runs/p3-s3-500-e1-r3/checkpoints --metrics-file /opt/spark/work-dir/tests/results/progress.jsonl --latency-file /opt/spark/work-dir/tests/results/latency.jsonl
+26/11/25 08:09:18 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/11/25 08:09:26 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+26/11/25 08:09:27 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+26/11/25 08:09:40 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 10000 milliseconds, but spent 13712 milliseconds

@@ -1,0 +1,11 @@
+scale,stage,job,executors,runs_ok,runs_total,median_seconds,speedup,baseline_executors,records,bytes,output_mib,parquet_files,peak_mem,peak_cpu,pod_peak_cpu_m,pod_peak_mem_mib,profile,topology,image_tag
+1000,batch,spark_startup,2,3,3,8.246,1.0,2,,,,,386.7,199.6,,,k3s,Hyper-V 4 VMs 12 vCPU 16 GiB Windows host,localhost/steam-spark:k3s-20261124-1d45953
+1000,batch,b2,2,3,3,153.135,1.0,2,928860,461012410,439.656,198,639.7,199.7,,,k3s,Hyper-V 4 VMs 12 vCPU 16 GiB Windows host,localhost/steam-spark:k3s-20261124-1d45953
+1000,batch,b5,2,3,3,640.173,1.0,2,486335,6132450,5.848,195,836.1,193.7,,,k3s,Hyper-V 4 VMs 12 vCPU 16 GiB Windows host,localhost/steam-spark:k3s-20261124-1d45953
+1000,batch,b3,2,3,3,66.412,1.0,2,498397,4537719,4.328,9,919.2,197.4,,,k3s,Hyper-V 4 VMs 12 vCPU 16 GiB Windows host,localhost/steam-spark:k3s-20261124-1d45953
+1000,batch,b4,2,3,3,8.15,1.0,2,5310,128632,0.123,3,930.5,105.8,,,k3s,Hyper-V 4 VMs 12 vCPU 16 GiB Windows host,localhost/steam-spark:k3s-20261124-1d45953
+1000,batch,b6,2,3,3,15.45,1.0,2,297193,6357707,6.063,5,987.2,179.7,,,k3s,Hyper-V 4 VMs 12 vCPU 16 GiB Windows host,localhost/steam-spark:k3s-20261124-1d45953
+1000,batch,b7,2,3,3,5.698,1.0,2,2700,27018,0.026,2,1002.5,198.6,,,k3s,Hyper-V 4 VMs 12 vCPU 16 GiB Windows host,localhost/steam-spark:k3s-20261124-1d45953
+1000,batch,b8,2,3,3,10.129,1.0,2,1005,115311,0.11,3,1052.7,185.7,,,k3s,Hyper-V 4 VMs 12 vCPU 16 GiB Windows host,localhost/steam-spark:k3s-20261124-1d45953
+1000,batch,b9,2,1,3,104.126,1.0,2,62,6692,0.006,2,1221.2,145.7,,,k3s,Hyper-V 4 VMs 12 vCPU 16 GiB Windows host,localhost/steam-spark:k3s-20261124-1d45953
+1000,batch,total_pipeline,2,3,3,911.622,1.0,2,2219800,478311830,456.154,415,1052.7,203.7,,,k3s,Hyper-V 4 VMs 12 vCPU 16 GiB Windows host,localhost/steam-spark:k3s-20261124-1d45953

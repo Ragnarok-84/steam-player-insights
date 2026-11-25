@@ -1,0 +1,148 @@
+
+2026-11-25T10:52:22Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      766m         610Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   704m         529Mi           
+
+2026-11-25T10:52:30Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      766m         610Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   704m         529Mi           
+
+2026-11-25T10:52:39Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      138m         621Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   992m         618Mi           
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   988m         695Mi           
+
+2026-11-25T10:52:47Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      138m         621Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   992m         618Mi           
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   988m         695Mi           
+
+2026-11-25T10:52:55Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      77m          625Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   991m         782Mi           
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   996m         740Mi           
+
+2026-11-25T10:53:04Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      77m          625Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   717m         947Mi           
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   883m         951Mi           
+
+2026-11-25T10:53:12Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      77m          625Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   717m         947Mi           
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   883m         951Mi           
+
+2026-11-25T10:53:20Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      382m         692Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   854m         988Mi           
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   511m         976Mi           
+
+2026-11-25T10:53:29Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      382m         692Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   854m         988Mi           
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   511m         976Mi           
+
+2026-11-25T10:53:37Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      325m         699Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   1002m        986Mi           
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   985m         999Mi           
+
+2026-11-25T10:53:45Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      325m         699Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   1002m        986Mi           
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   985m         999Mi           
+
+2026-11-25T10:53:54Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      12m          699Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   928m         1002Mi          
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   1000m        1001Mi          
+
+2026-11-25T10:54:02Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      12m          699Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   928m         1002Mi          
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   1000m        1001Mi          
+
+2026-11-25T10:54:10Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      8m           699Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   1m           1002Mi          
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   1000m        984Mi           
+
+2026-11-25T10:54:19Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      7m           690Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   127m         996Mi           
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   680m         992Mi           
+
+2026-11-25T10:54:27Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      7m           690Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   127m         996Mi           
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   680m         992Mi           
+
+2026-11-25T10:54:35Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      256m         718Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   627m         1194Mi          
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   834m         1141Mi          
+
+2026-11-25T10:54:44Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      256m         718Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   627m         1194Mi          
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   834m         1141Mi          
+
+2026-11-25T10:54:52Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      516m         919Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   800m         1235Mi          
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   825m         1309Mi          
+
+2026-11-25T10:55:00Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      516m         919Mi           
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   800m         1235Mi          
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   825m         1309Mi          
+
+2026-11-25T10:55:09Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      773m         1005Mi          
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   619m         1239Mi          
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   713m         1311Mi          
+
+2026-11-25T10:55:17Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      773m         1005Mi          
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   619m         1239Mi          
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   713m         1311Mi          
+
+2026-11-25T10:55:25Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      1031m        1087Mi          
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   654m         1250Mi          
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   440m         1318Mi          
+
+2026-11-25T10:55:34Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      398m         1102Mi          
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   686m         1273Mi          
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   905m         1325Mi          
+
+2026-11-25T10:55:42Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-ft3a-batch-e2-ds6f7          driver                      398m         1102Mi          
+p3-ft3a-batch-e2-ds6f7-exec-2   spark-kubernetes-executor   686m         1273Mi          
+p3-ft3a-batch-e2-ds6f7-exec-3   spark-kubernetes-executor   905m         1325Mi          

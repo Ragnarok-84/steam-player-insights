@@ -1,0 +1,45 @@
+Connecting to namenode via http://namenode:9870/fsck?ugi=root&files=1&blocks=1&locations=1&path=%2Fsteam%2Fft-probe%2Fmarker.txt
+FSCK started by root (auth:SIMPLE) from /10.42.0.11 for path /steam/ft-probe/marker.txt at Wed Nov 25 10:42:12 UTC 2026
+
+/steam/ft-probe/marker.txt 15 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1340960822-10.42.0.11-1795515735549:blk_1073788502_47678 len=15 Live_repl=2  [DatanodeInfoWithStorage[10.42.1.10:9866,DS-3c4a3fcb-f700-4afd-87f0-70b6644670aa,DISK], DatanodeInfoWithStorage[10.42.0.13:9866,DS-8374e1d7-44ce-4cae-94b3-21b6991c177f,DISK]]
+
+
+Status: HEALTHY
+ Number of data-nodes:	2
+ Number of racks:		1
+ Total dirs:			0
+ Total symlinks:		0
+
+Replicated Blocks:
+ Total size:	15 B
+ Total files:	1
+ Total blocks (validated):	1 (avg. block size 15 B)
+ Minimally replicated blocks:	1 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	2
+ Average block replication:	2.0
+ Missing blocks:		0
+ Corrupt blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Blocks queued for replication:	0
+
+Erasure Coded Block Groups:
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+ Minimally erasure-coded block groups:	0
+ Over-erasure-coded block groups:	0
+ Under-erasure-coded block groups:	0
+ Unsatisfactory placement block groups:	0
+ Average block group size:	0.0
+ Missing block groups:		0
+ Corrupt block groups:		0
+ Missing internal blocks:	0
+ Blocks queued for replication:	0
+FSCK ended at Wed Nov 25 10:42:12 UTC 2026 in 3 milliseconds
+
+
+The filesystem under path '/steam/ft-probe/marker.txt' is HEALTHY

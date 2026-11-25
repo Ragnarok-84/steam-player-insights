@@ -1,0 +1,202 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "name": "p3-s3-100-e1-r2",
+    "namespace": "steam-ft"
+  },
+  "spec": {
+    "backoffLimit": 0,
+    "activeDeadlineSeconds": 720,
+    "template": {
+      "metadata": {
+        "labels": {
+          "spark-role": "driver",
+          "steam-benchmark": "p3-s3-100-e1-r2"
+        },
+        "annotations": {
+          "kubectl.kubernetes.io/default-container": "driver"
+        }
+      },
+      "spec": {
+        "serviceAccountName": "spark-driver",
+        "restartPolicy": "Never",
+        "nodeSelector": {
+          "kubernetes.io/hostname": "steam-worker-3"
+        },
+        "containers": [
+          {
+            "name": "driver",
+            "image": "localhost/steam-spark:k3s-20261124-1d45953",
+            "imagePullPolicy": "Never",
+            "workingDir": "/opt/spark/work-dir",
+            "command": [
+              "python3",
+              "pipeline.py",
+              "s3",
+              "--profile",
+              "cluster",
+              "--es",
+              "--",
+              "--source",
+              "kafka",
+              "--starting-offsets",
+              "latest",
+              "--trigger",
+              "10 seconds",
+              "--checkpoint",
+              "hdfs://namenode:8020/steam/bench/runs/p3-s3-100-e1-r2/checkpoints",
+              "--metrics-file",
+              "/opt/spark/work-dir/tests/results/progress.jsonl",
+              "--latency-file",
+              "/opt/spark/work-dir/tests/results/latency.jsonl"
+            ],
+            "volumeMounts": [
+              {
+                "name": "results",
+                "mountPath": "/opt/spark/work-dir/tests/results"
+              }
+            ],
+            "env": [
+              {
+                "name": "POD_NAME",
+                "valueFrom": {
+                  "fieldRef": {
+                    "fieldPath": "metadata.name"
+                  }
+                }
+              },
+              {
+                "name": "SPARK_DRIVER_HOST",
+                "valueFrom": {
+                  "fieldRef": {
+                    "fieldPath": "status.podIP"
+                  }
+                }
+              },
+              {
+                "name": "SPARK_MASTER",
+                "value": "k8s://https://kubernetes.default.svc:443"
+              },
+              {
+                "name": "SPARK_EXTRA_CONF",
+                "value": "spark.kubernetes.namespace=steam-ft;spark.kubernetes.authenticate.oauthTokenFile=/var/run/secrets/kubernetes.io/serviceaccount/token;spark.kubernetes.authenticate.caCertFile=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt;spark.kubernetes.container.image=localhost/steam-spark:k3s-20261124-1d45953;spark.kubernetes.container.image.pullPolicy=Never;spark.kubernetes.driver.pod.name=$(POD_NAME);spark.driver.bindAddress=0.0.0.0;spark.driver.port=7078;spark.blockManager.port=7079;spark.kubernetes.executor.node.selector.steam.insights/compute=true;spark.kubernetes.executor.podTemplateFile=/opt/spark/work-dir/infra/k3s/executor-template.yaml;spark.kubernetes.executor.podNamePrefix=$(POD_NAME);spark.kubernetes.executor.label.steam-benchmark=p3-s3-100-e1-r2;spark.kubernetes.executor.request.cores=750m;spark.kubernetes.executor.limit.cores=1;spark.executor.instances=1;spark.executor.cores=1;spark.executor.memory=1g;spark.executor.memoryOverhead=512m;spark.dynamicAllocation.enabled=false;spark.hadoop.dfs.client.use.datanode.hostname=true;spark.hadoop.dfs.replication=2;spark.executorEnv.ELASTICSEARCH_HOSTS=http://elasticsearch:9200;spark.executorEnv.HADOOP_USER_NAME=hdfs"
+              },
+              {
+                "name": "SPARK_DRIVER_MEMORY",
+                "value": "1536m"
+              },
+              {
+                "name": "SPARK_SHUFFLE_PARTITIONS",
+                "value": "16"
+              },
+              {
+                "name": "PYTHONUNBUFFERED",
+                "value": "1"
+              },
+              {
+                "name": "ELASTICSEARCH_HOSTS",
+                "value": "http://elasticsearch:9200"
+              },
+              {
+                "name": "KAFKA_BOOTSTRAP_SERVERS",
+                "value": "kafka:9092"
+              },
+              {
+                "name": "HDFS_NAMENODE_URL",
+                "value": "hdfs://namenode:8020"
+              },
+              {
+                "name": "HADOOP_USER_NAME",
+                "value": "hdfs"
+              },
+              {
+                "name": "HDFS_RAW_PATH",
+                "value": "hdfs://namenode:8020/steam/bench/raw_100"
+              },
+              {
+                "name": "HDFS_CLEAN_PATH",
+                "value": "hdfs://namenode:8020/steam/bench/runs/p3-s3-100-e1-r2/clean"
+              },
+              {
+                "name": "HDFS_CURATED_PATH",
+                "value": "hdfs://namenode:8020/steam/bench/runs/p3-batch-100-e1/r1/curated"
+              },
+              {
+                "name": "HDFS_CHECKPOINT_PATH",
+                "value": "hdfs://namenode:8020/steam/bench/runs/p3-s3-100-e1-r2/checkpoints"
+              },
+              {
+                "name": "GIT_COMMIT",
+                "value": "1d459539f58f058a2698f02a6d8bcee5e1565c31"
+              }
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "1",
+                "memory": "2Gi"
+              },
+              "limits": {
+                "cpu": "2",
+                "memory": "2432Mi"
+              }
+            }
+          },
+          {
+            "name": "producer",
+            "image": "localhost/steam-spark:k3s-20261124-1d45953",
+            "imagePullPolicy": "Never",
+            "workingDir": "/opt/spark/work-dir",
+            "command": [
+              "sleep",
+              "infinity"
+            ],
+            "env": [
+              {
+                "name": "GIT_COMMIT",
+                "value": "1d459539f58f058a2698f02a6d8bcee5e1565c31"
+              }
+            ],
+            "volumeMounts": [
+              {
+                "name": "results",
+                "mountPath": "/opt/spark/work-dir/tests/results"
+              },
+              {
+                "name": "raw",
+                "mountPath": "/bench/raw",
+                "readOnly": true
+              }
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "500m",
+                "memory": "128Mi"
+              },
+              "limits": {
+                "cpu": "2",
+                "memory": "768Mi"
+              }
+            }
+          }
+        ],
+        "volumes": [
+          {
+            "name": "results",
+            "hostPath": {
+              "path": "/var/lib/steam-phase3/runs/p3-s3-100-e1-r2",
+              "type": "Directory"
+            }
+          },
+          {
+            "name": "raw",
+            "hostPath": {
+              "path": "/var/lib/steam-phase3/subsets/raw_100",
+              "type": "Directory"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

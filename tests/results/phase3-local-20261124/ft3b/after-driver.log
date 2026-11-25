@@ -1,0 +1,4 @@
++ /usr/bin/python3 -m processing.streaming.s1_review_metrics --source kafka --starting-offsets latest --trigger 10 seconds --checkpoint hdfs://namenode:8020/steam/bench/runs/p3-ft3b-s1-e1/checkpoints --metrics-file /opt/spark/work-dir/tests/results/progress.jsonl --latency-file /opt/spark/work-dir/tests/results/latency.jsonl
+26/11/25 10:57:41 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).

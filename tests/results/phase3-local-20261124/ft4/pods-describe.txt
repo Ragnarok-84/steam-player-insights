@@ -1,0 +1,249 @@
+Name:             ft4-es-0
+Namespace:        steam-ft-es
+Priority:         0
+Service Account:  default
+Node:             steam-worker-3/172.31.138.209
+Start Time:       Wed, 25 Nov 2026 11:15:32 +0000
+Labels:           app=ft4-es
+                  apps.kubernetes.io/pod-index=0
+                  controller-revision-hash=ft4-es-78974779b
+                  statefulset.kubernetes.io/pod-name=ft4-es-0
+Annotations:      <none>
+Status:           Running
+IP:               10.42.2.173
+IPs:
+  IP:           10.42.2.173
+Controlled By:  StatefulSet/ft4-es
+Containers:
+  elasticsearch:
+    Container ID:  containerd://cbe8e8d2ddf97d210b71d7ac7b8c1259d0dd0634348ad2abdcc11a29dc3a713a
+    Image:         docker.elastic.co/elasticsearch/elasticsearch:8.19.3
+    Image ID:      docker.elastic.co/elasticsearch/elasticsearch@sha256:bbac63ecd50e9263565fbb616172a5287d5f99e486d76453e81e32cafcba3838
+    Ports:         9200/TCP (http), 9300/TCP (transport)
+    Host Ports:    0/TCP (http), 0/TCP (transport)
+    Command:
+      /bin/tini
+      --
+      bash
+      -ec
+      case "$POD_NAME" in
+        ft4-es-0|ft4-es-1) roles=master,data,ingest ;;
+        ft4-es-2) roles=master,voting_only ;;
+        *) exit 2 ;;
+      esac
+      exec /usr/local/bin/docker-entrypoint.sh eswrapper "-Enode.roles=$roles"
+      
+    State:          Running
+      Started:      Wed, 25 Nov 2026 11:15:32 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1536Mi
+    Requests:
+      cpu:      250m
+      memory:   1Gi
+    Readiness:  tcp-socket :http delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment:
+      POD_NAME:                      ft4-es-0 (v1:metadata.name)
+      node.name:                     $(POD_NAME)
+      cluster.name:                  steam-ft4
+      discovery.seed_hosts:          ft4-es-0.ft4-es,ft4-es-1.ft4-es,ft4-es-2.ft4-es
+      cluster.initial_master_nodes:  ft4-es-0,ft4-es-1,ft4-es-2
+      xpack.security.enabled:        false
+      node.store.allow_mmap:         false
+      ES_JAVA_OPTS:                  -Xms512m -Xmx512m
+    Mounts:
+      /usr/share/elasticsearch/data from data (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  data:
+    Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:      
+    SizeLimit:   1Gi
+QoS Class:       Burstable
+Node-Selectors:  steam.insights/compute=true
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                From               Message
+  ----     ------     ----               ----               -------
+  Normal   Scheduled  59s                default-scheduler  Successfully assigned steam-ft-es/ft4-es-0 to steam-worker-3
+  Normal   Pulled     59s                kubelet            Container image "docker.elastic.co/elasticsearch/elasticsearch:8.19.3" already present on machine
+  Normal   Created    59s                kubelet            Created container: elasticsearch
+  Normal   Started    59s                kubelet            Started container elasticsearch
+  Warning  Unhealthy  27s (x8 over 58s)  kubelet            Readiness probe failed: dial tcp 10.42.2.173:9200: connect: connection refused
+
+
+Name:             ft4-es-1
+Namespace:        steam-ft-es
+Priority:         0
+Service Account:  default
+Node:             steam-worker-1/172.31.131.42
+Start Time:       Wed, 25 Nov 2026 11:13:51 +0000
+Labels:           app=ft4-es
+                  apps.kubernetes.io/pod-index=1
+                  controller-revision-hash=ft4-es-78974779b
+                  statefulset.kubernetes.io/pod-name=ft4-es-1
+Annotations:      <none>
+Status:           Running
+IP:               10.42.1.115
+IPs:
+  IP:           10.42.1.115
+Controlled By:  StatefulSet/ft4-es
+Containers:
+  elasticsearch:
+    Container ID:  containerd://6bc514a5136a34de578d3edc96dfd8986b53bd4ecfca38130509c29f0bff4133
+    Image:         docker.elastic.co/elasticsearch/elasticsearch:8.19.3
+    Image ID:      docker.elastic.co/elasticsearch/elasticsearch@sha256:bbac63ecd50e9263565fbb616172a5287d5f99e486d76453e81e32cafcba3838
+    Ports:         9200/TCP (http), 9300/TCP (transport)
+    Host Ports:    0/TCP (http), 0/TCP (transport)
+    Command:
+      /bin/tini
+      --
+      bash
+      -ec
+      case "$POD_NAME" in
+        ft4-es-0|ft4-es-1) roles=master,data,ingest ;;
+        ft4-es-2) roles=master,voting_only ;;
+        *) exit 2 ;;
+      esac
+      exec /usr/local/bin/docker-entrypoint.sh eswrapper "-Enode.roles=$roles"
+      
+    State:          Running
+      Started:      Wed, 25 Nov 2026 11:14:31 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1536Mi
+    Requests:
+      cpu:      250m
+      memory:   1Gi
+    Readiness:  tcp-socket :http delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment:
+      POD_NAME:                      ft4-es-1 (v1:metadata.name)
+      node.name:                     $(POD_NAME)
+      cluster.name:                  steam-ft4
+      discovery.seed_hosts:          ft4-es-0.ft4-es,ft4-es-1.ft4-es,ft4-es-2.ft4-es
+      cluster.initial_master_nodes:  ft4-es-0,ft4-es-1,ft4-es-2
+      xpack.security.enabled:        false
+      node.store.allow_mmap:         false
+      ES_JAVA_OPTS:                  -Xms512m -Xmx512m
+    Mounts:
+      /usr/share/elasticsearch/data from data (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  data:
+    Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:      
+    SizeLimit:   1Gi
+QoS Class:       Burstable
+Node-Selectors:  steam.insights/compute=true
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                  From               Message
+  ----     ------     ----                 ----               -------
+  Normal   Scheduled  2m40s                default-scheduler  Successfully assigned steam-ft-es/ft4-es-1 to steam-worker-1
+  Normal   Pulling    2m40s                kubelet            Pulling image "docker.elastic.co/elasticsearch/elasticsearch:8.19.3"
+  Normal   Pulled     2m                   kubelet            Successfully pulled image "docker.elastic.co/elasticsearch/elasticsearch:8.19.3" in 39.954s (39.954s including waiting). Image size: 720604344 bytes.
+  Normal   Created    2m                   kubelet            Created container: elasticsearch
+  Normal   Started    2m                   kubelet            Started container elasticsearch
+  Warning  Unhealthy  72s (x12 over 119s)  kubelet            Readiness probe failed: dial tcp 10.42.1.115:9200: connect: connection refused
+
+
+Name:             ft4-es-2
+Namespace:        steam-ft-es
+Priority:         0
+Service Account:  default
+Node:             steam-worker-2/172.31.141.15
+Start Time:       Wed, 25 Nov 2026 11:13:51 +0000
+Labels:           app=ft4-es
+                  apps.kubernetes.io/pod-index=2
+                  controller-revision-hash=ft4-es-78974779b
+                  statefulset.kubernetes.io/pod-name=ft4-es-2
+Annotations:      <none>
+Status:           Running
+IP:               10.42.3.206
+IPs:
+  IP:           10.42.3.206
+Controlled By:  StatefulSet/ft4-es
+Containers:
+  elasticsearch:
+    Container ID:  containerd://3375d3d75b94ae0ae0714470607fbd1728e551ca66fd4e4f2813bc07bd74f798
+    Image:         docker.elastic.co/elasticsearch/elasticsearch:8.19.3
+    Image ID:      docker.elastic.co/elasticsearch/elasticsearch@sha256:bbac63ecd50e9263565fbb616172a5287d5f99e486d76453e81e32cafcba3838
+    Ports:         9200/TCP (http), 9300/TCP (transport)
+    Host Ports:    0/TCP (http), 0/TCP (transport)
+    Command:
+      /bin/tini
+      --
+      bash
+      -ec
+      case "$POD_NAME" in
+        ft4-es-0|ft4-es-1) roles=master,data,ingest ;;
+        ft4-es-2) roles=master,voting_only ;;
+        *) exit 2 ;;
+      esac
+      exec /usr/local/bin/docker-entrypoint.sh eswrapper "-Enode.roles=$roles"
+      
+    State:          Running
+      Started:      Wed, 25 Nov 2026 11:14:47 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1536Mi
+    Requests:
+      cpu:      250m
+      memory:   1Gi
+    Readiness:  tcp-socket :http delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment:
+      POD_NAME:                      ft4-es-2 (v1:metadata.name)
+      node.name:                     $(POD_NAME)
+      cluster.name:                  steam-ft4
+      discovery.seed_hosts:          ft4-es-0.ft4-es,ft4-es-1.ft4-es,ft4-es-2.ft4-es
+      cluster.initial_master_nodes:  ft4-es-0,ft4-es-1,ft4-es-2
+      xpack.security.enabled:        false
+      node.store.allow_mmap:         false
+      ES_JAVA_OPTS:                  -Xms512m -Xmx512m
+    Mounts:
+      /usr/share/elasticsearch/data from data (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  data:
+    Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:      
+    SizeLimit:   1Gi
+QoS Class:       Burstable
+Node-Selectors:  steam.insights/compute=true
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                 From               Message
+  ----     ------     ----                ----               -------
+  Normal   Scheduled  2m40s               default-scheduler  Successfully assigned steam-ft-es/ft4-es-2 to steam-worker-2
+  Normal   Pulling    2m40s               kubelet            Pulling image "docker.elastic.co/elasticsearch/elasticsearch:8.19.3"
+  Normal   Pulled     104s                kubelet            Successfully pulled image "docker.elastic.co/elasticsearch/elasticsearch:8.19.3" in 55.64s (55.64s including waiting). Image size: 720604344 bytes.
+  Normal   Created    104s                kubelet            Created container: elasticsearch
+  Normal   Started    104s                kubelet            Started container elasticsearch
+  Warning  Unhealthy  73s (x8 over 104s)  kubelet            Readiness probe failed: dial tcp 10.42.3.206:9200: connect: connection refused

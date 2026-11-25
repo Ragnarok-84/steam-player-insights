@@ -1,0 +1,1 @@
+python3 tests/scalability/sc3_streaming_load_test.py --no-start-job --es --brokers kafka:9092 --job s1 --scale 100 --raw /bench/raw --dataset steam_1000g_20261118 --env k3s --executors 1 --repeat 2 --step-seconds 60 --rates 1000 5000 --producers 2 --metrics-file /opt/spark/work-dir/tests/results/progress.jsonl --latency-file /opt/spark/work-dir/tests/results/latency.jsonl

@@ -1,0 +1,80 @@
+
+2026-11-25T00:50:02Z
+POD                            NAME     CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r2-retry-stpcc   driver   1114m        403Mi           
+
+2026-11-25T00:50:11Z
+POD                            NAME     CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r2-retry-stpcc   driver   1114m        403Mi           
+
+2026-11-25T00:50:19Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r2-retry-stpcc          driver                      994m         419Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   spark-kubernetes-executor   789m         533Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   spark-kubernetes-executor   813m         557Mi           
+
+2026-11-25T00:50:28Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r2-retry-stpcc          driver                      536m         479Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   spark-kubernetes-executor   757m         559Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   spark-kubernetes-executor   842m         633Mi           
+
+2026-11-25T00:50:37Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r2-retry-stpcc          driver                      536m         479Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   spark-kubernetes-executor   757m         559Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   spark-kubernetes-executor   842m         633Mi           
+
+2026-11-25T00:50:45Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r2-retry-stpcc          driver                      274m         507Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   spark-kubernetes-executor   757m         559Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   spark-kubernetes-executor   842m         633Mi           
+
+2026-11-25T00:50:53Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r2-retry-stpcc          driver                      274m         507Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   spark-kubernetes-executor   757m         559Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   spark-kubernetes-executor   842m         633Mi           
+
+2026-11-25T00:51:02Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r2-retry-stpcc          driver                      429m         554Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   spark-kubernetes-executor   708m         707Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   spark-kubernetes-executor   728m         726Mi           
+
+2026-11-25T00:51:10Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r2-retry-stpcc          driver                      429m         554Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   spark-kubernetes-executor   708m         707Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   spark-kubernetes-executor   728m         726Mi           
+
+2026-11-25T00:51:18Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r2-retry-stpcc          driver                      342m         705Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   spark-kubernetes-executor   922m         864Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   spark-kubernetes-executor   938m         882Mi           
+
+2026-11-25T00:51:27Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r2-retry-stpcc          driver                      217m         721Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   spark-kubernetes-executor   922m         864Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   spark-kubernetes-executor   879m         900Mi           
+
+2026-11-25T00:51:36Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r2-retry-stpcc          driver                      217m         721Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   spark-kubernetes-executor   922m         864Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   spark-kubernetes-executor   879m         900Mi           
+
+2026-11-25T00:51:44Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r2-retry-stpcc          driver                      847m         870Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   spark-kubernetes-executor   948m         904Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   spark-kubernetes-executor   856m         931Mi           
+
+2026-11-25T00:51:52Z
+POD                                   NAME                        CPU(cores)   MEMORY(bytes)   
+p3-b9-1000-e2-r2-retry-stpcc          driver                      847m         870Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   spark-kubernetes-executor   948m         904Mi           
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   spark-kubernetes-executor   856m         931Mi           

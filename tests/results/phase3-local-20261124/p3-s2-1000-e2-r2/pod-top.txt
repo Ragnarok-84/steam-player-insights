@@ -1,0 +1,140 @@
+
+2026-11-25T09:20:04Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      891m         554Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    0m           0Mi             
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   262m         304Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   551m         381Mi           
+
+2026-11-25T09:20:13Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      891m         554Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    0m           0Mi             
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   262m         304Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   551m         381Mi           
+
+2026-11-25T09:20:21Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      387m         586Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    90m          70Mi            
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   990m         407Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   432m         527Mi           
+
+2026-11-25T09:20:29Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      387m         586Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    90m          70Mi            
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   990m         407Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   432m         527Mi           
+
+2026-11-25T09:20:38Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      366m         632Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    331m         119Mi           
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   256m         499Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   338m         619Mi           
+
+2026-11-25T09:20:46Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      366m         632Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    331m         119Mi           
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   256m         499Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   338m         619Mi           
+
+2026-11-25T09:20:54Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      366m         632Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    329m         180Mi           
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   551m         724Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   222m         699Mi           
+
+2026-11-25T09:21:03Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      366m         632Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    329m         180Mi           
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   551m         724Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   222m         699Mi           
+
+2026-11-25T09:21:11Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      355m         663Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    309m         221Mi           
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   190m         734Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   237m         701Mi           
+
+2026-11-25T09:21:19Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      210m         669Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    322m         303Mi           
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   124m         737Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   90m          704Mi           
+
+2026-11-25T09:21:28Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      210m         669Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    322m         303Mi           
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   124m         737Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   90m          704Mi           
+
+2026-11-25T09:21:36Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      242m         671Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    30m          25Mi            
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   198m         746Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   184m         737Mi           
+
+2026-11-25T09:21:44Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      242m         671Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    30m          25Mi            
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   198m         746Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   184m         737Mi           
+
+2026-11-25T09:21:53Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      284m         681Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    1077m        239Mi           
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   182m         755Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   139m         724Mi           
+
+2026-11-25T09:22:01Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      284m         681Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    1077m        239Mi           
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   182m         755Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   139m         724Mi           
+
+2026-11-25T09:22:09Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      219m         696Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    1557m        355Mi           
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   180m         730Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   189m         725Mi           
+
+2026-11-25T09:22:18Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      219m         696Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    1557m        355Mi           
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   180m         730Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   189m         725Mi           
+
+2026-11-25T09:22:26Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      140m         700Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    1554m        348Mi           
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   260m         765Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   572m         741Mi           
+
+2026-11-25T09:22:35Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      216m         716Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    1245m        25Mi            
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   167m         767Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   346m         775Mi           
+
+2026-11-25T09:22:43Z
+POD                             NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-1000-e2-r2-fmcks          driver                      216m         716Mi           
+p3-s2-1000-e2-r2-fmcks          producer                    1245m        25Mi            
+p3-s2-1000-e2-r2-fmcks-exec-1   spark-kubernetes-executor   167m         767Mi           
+p3-s2-1000-e2-r2-fmcks-exec-2   spark-kubernetes-executor   346m         775Mi           

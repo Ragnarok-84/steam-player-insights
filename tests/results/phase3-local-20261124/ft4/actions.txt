@@ -1,0 +1,17 @@
+2026-11-25T11:15:28+00:00 DELETE ft4-es-0
+2026-11-25T11:15:30+00:00 READ_DURING_LOSS {"count":1200,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0}}
+2026-11-25T11:15:33+00:00 READ_DURING_LOSS {"count":1200,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0}}
+2026-11-25T11:15:35+00:00 READ_DURING_LOSS {"count":1200,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0}}
+2026-11-25T11:15:38+00:00 READ_DURING_LOSS {"count":1200,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0}}
+2026-11-25T11:15:40+00:00 READ_DURING_LOSS {"count":1200,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0}}
+2026-11-25T11:15:42+00:00 READ_DURING_LOSS {"count":1200,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0}}
+2026-11-25T11:15:45+00:00 READ_DURING_LOSS {"count":1200,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0}}
+2026-11-25T11:15:47+00:00 READ_DURING_LOSS {"count":1200,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0}}
+2026-11-25T11:15:50+00:00 READ_DURING_LOSS {"count":1200,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0}}
+2026-11-25T11:15:52+00:00 READ_DURING_LOSS {"count":1200,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0}}
+2026-11-25T11:15:54+00:00 READ_DURING_LOSS {"count":1200,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0}}
+2026-11-25T11:15:57+00:00 READ_DURING_LOSS {"count":1200,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0}}
+2026-11-25T11:15:59+00:00 READ_DURING_LOSS {"count":1200,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0}}
+2026-11-25T11:16:01+00:00 READ_DURING_LOSS {"count":1200,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0}}
+2026-11-25T11:16:04+00:00 READ_DURING_LOSS {"count":1200,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0}}
+2026-11-25T11:16:31+00:00 GREEN COUNT=1200

@@ -1,0 +1,172 @@
+
+2026-11-25T00:49:46Z
+NAME                           READY   STATUS              RESTARTS   AGE   IP       NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc   0/1     ContainerCreating   0          1s    <none>   steam-worker-3   <none>           <none>
+
+2026-11-25T00:49:50Z
+NAME                                  READY   STATUS              RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running             0          6s    10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   0/1     ContainerCreating   0          1s    <none>       steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   0/1     ContainerCreating   0          1s    <none>       steam-worker-1   <none>           <none>
+
+2026-11-25T00:49:55Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          10s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          5s    10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          5s    10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:50:00Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          15s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          10s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          10s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:50:05Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          20s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          15s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          15s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:50:10Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          25s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          20s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          20s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:50:14Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          30s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          25s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          25s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:50:20Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          35s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          30s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          30s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:50:25Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          40s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          35s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          35s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:50:30Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          45s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          40s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          40s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:50:35Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          50s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          45s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          45s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:50:40Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          55s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          50s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          50s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:50:44Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          60s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          55s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          55s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:50:49Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          64s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          59s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          59s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:50:54Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          69s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          64s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          64s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:50:58Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          74s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          69s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          69s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:51:03Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          78s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          73s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          73s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:51:08Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          83s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          78s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          78s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:51:13Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          88s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          83s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          83s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:51:17Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          92s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          87s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          87s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:51:22Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          97s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          92s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          92s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:51:27Z
+NAME                                  READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          103s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          98s    10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          98s    10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:51:32Z
+NAME                                  READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          107s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          102s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          102s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:51:37Z
+NAME                                  READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          112s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          107s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          107s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:51:42Z
+NAME                                  READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          117s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          112s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          112s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:51:47Z
+NAME                                  READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          2m2s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          117s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          117s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:51:51Z
+NAME                                  READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          2m6s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          2m1s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          2m1s   10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:51:56Z
+NAME                                  READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          1/1     Running   0          2m11s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   1/1     Running   0          2m6s    10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   1/1     Running   0          2m6s    10.42.1.51   steam-worker-1   <none>           <none>
+
+2026-11-25T00:52:01Z
+NAME                                  READY   STATUS      RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r2-retry-stpcc          0/1     Completed   0          2m16s   10.42.2.54   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-1   0/1     Completed   0          2m11s   10.42.3.90   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r2-retry-stpcc-exec-2   0/1     Completed   0          2m11s   10.42.1.51   steam-worker-1   <none>           <none>

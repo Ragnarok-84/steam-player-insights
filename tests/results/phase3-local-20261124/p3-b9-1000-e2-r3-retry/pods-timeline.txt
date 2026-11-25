@@ -1,0 +1,160 @@
+
+2026-11-25T00:52:18Z
+NAME                           READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns   1/1     Running   0          1s    10.42.2.55   steam-worker-3   <none>           <none>
+
+2026-11-25T00:52:23Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          6s    10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          1s    10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          1s    10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:52:27Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          11s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          6s    10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          6s    10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:52:33Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          16s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          11s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          11s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:52:38Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          21s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          16s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          16s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:52:43Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          26s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          21s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          21s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:52:48Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          31s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          26s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          26s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:52:52Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          35s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          30s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          30s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:52:57Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          40s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          35s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          35s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:53:02Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          45s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          40s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          40s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:53:07Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          50s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          45s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          45s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:53:11Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          54s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          49s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          49s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:53:16Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          59s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          54s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          54s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:53:21Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          64s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          59s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          59s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:53:25Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          68s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          63s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          63s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:53:30Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          73s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          68s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          68s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:53:34Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          77s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          72s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          72s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:53:39Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          82s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          77s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          77s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:53:44Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          87s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          82s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          82s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:53:48Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          92s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          87s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          87s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:53:53Z
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          96s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          91s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          91s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:53:58Z
+NAME                                  READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          101s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          96s    10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          96s    10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:54:03Z
+NAME                                  READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          106s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          101s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          101s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:54:07Z
+NAME                                  READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          110s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          105s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          105s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:54:12Z
+NAME                                  READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          115s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          110s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          110s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:54:17Z
+NAME                                  READY   STATUS    RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          1/1     Running   0          2m     10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   1/1     Running   0          115s   10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   1/1     Running   0          115s   10.42.1.52   steam-worker-1   <none>           <none>
+
+2026-11-25T00:54:21Z
+NAME                                  READY   STATUS      RESTARTS   AGE    IP           NODE             NOMINATED NODE   READINESS GATES
+p3-b9-1000-e2-r3-retry-x2rns          0/1     Completed   0          2m5s   10.42.2.55   steam-worker-3   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-1   0/1     Completed   0          2m     10.42.3.91   steam-worker-2   <none>           <none>
+p3-b9-1000-e2-r3-retry-x2rns-exec-2   0/1     Completed   0          2m     10.42.1.52   steam-worker-1   <none>           <none>

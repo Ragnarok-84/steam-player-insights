@@ -1,0 +1,108 @@
+
+2026-11-25T05:55:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      1220m        605Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    1m           0Mi             
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   595m         508Mi           
+
+2026-11-25T05:55:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      1220m        605Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    1m           0Mi             
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   595m         508Mi           
+
+2026-11-25T05:55:57Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      300m         625Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    188m         119Mi           
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   453m         595Mi           
+
+2026-11-25T05:56:05Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      468m         676Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    188m         119Mi           
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   365m         702Mi           
+
+2026-11-25T05:56:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      468m         676Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    188m         119Mi           
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   365m         702Mi           
+
+2026-11-25T05:56:22Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      230m         703Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    347m         189Mi           
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   278m         743Mi           
+
+2026-11-25T05:56:30Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      230m         703Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    347m         189Mi           
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   278m         743Mi           
+
+2026-11-25T05:56:38Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      231m         711Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    310m         286Mi           
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   128m         749Mi           
+
+2026-11-25T05:56:47Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      231m         711Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    310m         286Mi           
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   128m         749Mi           
+
+2026-11-25T05:56:55Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      160m         728Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    146m         25Mi            
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   210m         763Mi           
+
+2026-11-25T05:57:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      160m         728Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    146m         25Mi            
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   210m         763Mi           
+
+2026-11-25T05:57:12Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      160m         728Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    691m         209Mi           
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   87m          762Mi           
+
+2026-11-25T05:57:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      198m         732Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    1558m        352Mi           
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   87m          762Mi           
+
+2026-11-25T05:57:29Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      198m         732Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    1558m        352Mi           
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   87m          762Mi           
+
+2026-11-25T05:57:37Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      199m         736Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    1483m        350Mi           
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   358m         748Mi           
+
+2026-11-25T05:57:46Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      199m         736Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    1483m        350Mi           
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   358m         748Mi           
+
+2026-11-25T05:57:54Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      191m         736Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    1465m        350Mi           
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   331m         761Mi           
+
+2026-11-25T05:58:02Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s2-100-e1-r1-kmxt6          driver                      191m         736Mi           
+p3-s2-100-e1-r1-kmxt6          producer                    1465m        350Mi           
+p3-s2-100-e1-r1-kmxt6-exec-1   spark-kubernetes-executor   331m         761Mi           

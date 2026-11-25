@@ -1,0 +1,28 @@
+LAST SEEN   TYPE      REASON             OBJECT               MESSAGE
+2m40s       Normal    Scheduled          pod/ft4-es-2         Successfully assigned steam-ft-es/ft4-es-2 to steam-worker-2
+2m40s       Normal    Pulling            pod/ft4-es-2         Pulling image "docker.elastic.co/elasticsearch/elasticsearch:8.19.3"
+2m40s       Normal    SuccessfulCreate   statefulset/ft4-es   create Pod ft4-es-1 in StatefulSet ft4-es successful
+2m40s       Normal    SuccessfulCreate   statefulset/ft4-es   create Pod ft4-es-2 in StatefulSet ft4-es successful
+2m40s       Normal    Pulling            pod/ft4-es-1         Pulling image "docker.elastic.co/elasticsearch/elasticsearch:8.19.3"
+2m40s       Normal    Scheduled          pod/ft4-es-1         Successfully assigned steam-ft-es/ft4-es-1 to steam-worker-1
+2m40s       Normal    Scheduled          pod/ft4-es-0         Successfully assigned steam-ft-es/ft4-es-0 to steam-worker-3
+59s         Normal    SuccessfulCreate   statefulset/ft4-es   create Pod ft4-es-0 in StatefulSet ft4-es successful
+2m40s       Normal    Pulling            pod/ft4-es-0         Pulling image "docker.elastic.co/elasticsearch/elasticsearch:8.19.3"
+2m          Normal    Created            pod/ft4-es-1         Created container: elasticsearch
+2m          Normal    Started            pod/ft4-es-1         Started container elasticsearch
+2m          Normal    Pulled             pod/ft4-es-1         Successfully pulled image "docker.elastic.co/elasticsearch/elasticsearch:8.19.3" in 39.954s (39.954s including waiting). Image size: 720604344 bytes.
+72s         Warning   Unhealthy          pod/ft4-es-1         Readiness probe failed: dial tcp 10.42.1.115:9200: connect: connection refused
+104s        Normal    Created            pod/ft4-es-2         Created container: elasticsearch
+73s         Warning   Unhealthy          pod/ft4-es-2         Readiness probe failed: dial tcp 10.42.3.206:9200: connect: connection refused
+104s        Normal    Started            pod/ft4-es-2         Started container elasticsearch
+104s        Normal    Pulled             pod/ft4-es-2         Successfully pulled image "docker.elastic.co/elasticsearch/elasticsearch:8.19.3" in 55.64s (55.64s including waiting). Image size: 720604344 bytes.
+99s         Normal    Pulled             pod/ft4-es-0         Successfully pulled image "docker.elastic.co/elasticsearch/elasticsearch:8.19.3" in 1m0.525s (1m0.526s including waiting). Image size: 720604344 bytes.
+99s         Normal    Created            pod/ft4-es-0         Created container: elasticsearch
+99s         Normal    Started            pod/ft4-es-0         Started container elasticsearch
+62s         Warning   Unhealthy          pod/ft4-es-0         Readiness probe failed: dial tcp 10.42.2.172:9200: connect: connection refused
+63s         Normal    Killing            pod/ft4-es-0         Stopping container elasticsearch
+59s         Normal    Created            pod/ft4-es-0         Created container: elasticsearch
+59s         Normal    Scheduled          pod/ft4-es-0         Successfully assigned steam-ft-es/ft4-es-0 to steam-worker-3
+59s         Normal    Pulled             pod/ft4-es-0         Container image "docker.elastic.co/elasticsearch/elasticsearch:8.19.3" already present on machine
+59s         Normal    Started            pod/ft4-es-0         Started container elasticsearch
+27s         Warning   Unhealthy          pod/ft4-es-0         Readiness probe failed: dial tcp 10.42.2.173:9200: connect: connection refused

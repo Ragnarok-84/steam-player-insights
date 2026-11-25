@@ -1,0 +1,38 @@
+Collecting hdfs==2.7.3
+  Downloading hdfs-2.7.3.tar.gz (43 kB)
+Collecting docopt
+  Downloading docopt-0.6.2.tar.gz (25 kB)
+Collecting requests>=2.7.0
+  Downloading requests-2.32.4-py3-none-any.whl (64 kB)
+Collecting six>=1.9.0
+  Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Collecting urllib3<3,>=1.21.1
+  Downloading urllib3-2.2.3-py3-none-any.whl (126 kB)
+Collecting charset_normalizer<4,>=2
+  Downloading charset_normalizer-3.5.3-cp37-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (234 kB)
+Collecting certifi>=2017.4.17
+  Downloading certifi-2026.11.20-py3-none-any.whl (127 kB)
+Collecting idna<4,>=2.5
+  Downloading idna-3.15-py3-none-any.whl (72 kB)
+Building wheels for collected packages: hdfs, docopt
+  Building wheel for hdfs (setup.py): started
+  Building wheel for hdfs (setup.py): finished with status 'done'
+  Created wheel for hdfs: filename=hdfs-2.7.3-py3-none-any.whl size=34321 sha256=b9f259afcad1724afa87691f6cf1bb59b5449274432ab07ef8861b7e3348cd35
+  Stored in directory: /tmp/pip-ephem-wheel-cache-rkxp0n2s/wheels/68/dd/29/c1a590238f9ebbe4f7ee9b3583f5185d0b9577e23f05c990eb
+  Building wheel for docopt (setup.py): started
+  Building wheel for docopt (setup.py): finished with status 'done'
+  Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13704 sha256=a77733627dfa3ca378beefa4537bc46be3e6bfe681083ae6d5fd8c849f0939ef
+  Stored in directory: /tmp/pip-ephem-wheel-cache-rkxp0n2s/wheels/56/ea/58/ead137b087d9e326852a851351d1debf4ada529b6ac0ec4e8c
+Successfully built hdfs docopt
+Installing collected packages: docopt, urllib3, charset-normalizer, certifi, idna, requests, six, hdfs
+Successfully installed certifi-2026.11.20 charset-normalizer-3.5.3 docopt-0.6.2 hdfs-2.7.3 idna-3.15 requests-2.32.4 six-1.17.0 urllib3-2.2.3
+{"event": "READY", "topic": "ft-watch-eb30c81fda4f41a286dbeeff7f3ed57a", "seconds": 300, "hdfs_probe": "/steam/ft-probe/marker.txt"}
+{"event": "hdfs_error", "error": "HTTPConnectionPool(host='datanode-0.datanode.steam-ft.svc.cluster.local', port=9864): Max retries exceeded with url: /webhdfs/v1/steam/ft-probe/marker.txt?op=OPEN&user.name=root&namenoderpcaddress=namenode:8020&offset=0 (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x7217d85f70d0>: Failed to resolve 'datanode-0.datanode.steam-ft.svc.cluster.local' ([Errno -2] Name or service not known)\"))"}
+{"event": "hdfs_error", "error": "HTTPConnectionPool(host='datanode-0.datanode.steam-ft.svc.cluster.local', port=9864): Max retries exceeded with url: /webhdfs/v1/steam/ft-probe/marker.txt?op=OPEN&user.name=root&namenoderpcaddress=namenode:8020&offset=0 (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x7217d8766f40>: Failed to resolve 'datanode-0.datanode.steam-ft.svc.cluster.local' ([Errno -2] Name or service not known)\"))"}
+{"event": "hdfs_error", "error": "HTTPConnectionPool(host='datanode-0.datanode.steam-ft.svc.cluster.local', port=9864): Max retries exceeded with url: /webhdfs/v1/steam/ft-probe/marker.txt?op=OPEN&user.name=root&namenoderpcaddress=namenode:8020&offset=0 (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x7217d876e1f0>: Failed to resolve 'datanode-0.datanode.steam-ft.svc.cluster.local' ([Errno -2] Name or service not known)\"))"}
+{"event": "RESULT", "run_id": "eb30c81fda4f41a286dbeeff7f3ed57a", "topic": "ft-watch-eb30c81fda4f41a286dbeeff7f3ed57a", "attempts": 293, "acknowledged": 293, "received_unique": 293, "missing_acked": [], "kafka_errors": 0, "hdfs_reads": 290, "hdfs_errors": 3, "longest_kafka_success_gap_seconds": 1.604, "longest_hdfs_success_gap_seconds": 3.072}
+INTEGRITY_OK: all acknowledged records were read; inspect gaps/errors and failure timestamps separately
+/opt/spark/work-dir/infra/k3s/fault_watch.py:94: DeprecationWarning: value_serializer does not implement kafka.serializer.Serializer
+  main()
+/opt/spark/work-dir/infra/k3s/fault_watch.py:29: DeprecationWarning: value_deserializer does not implement kafka.serializer.Deserializer
+  consumer = KafkaConsumer(topic, bootstrap_servers="kafka:9092", auto_offset_reset="earliest",

@@ -1,0 +1,2 @@
+{"time": "2026-11-25T10:52:10.533208+00:00", "event": "delete-executor", "pod": "p3-ft3a-batch-e2-ds6f7-exec-1", "uid": "c0626cd6-6b2e-43d2-a3d5-10eeae4a47fc"}
+{"time": "2026-11-25T10:52:15.517873+00:00", "event": "executor-replacement-ready", "executors": ["p3-ft3a-batch-e2-ds6f7-exec-2", "p3-ft3a-batch-e2-ds6f7-exec-3"]}

@@ -1,0 +1,2 @@
+{"time": "2026-11-25T10:57:06.973325+00:00", "event": "delete-driver", "pod": "p3-ft3b-s1-e1-67689c5644-4rtlh", "appid": 1995604216, "elastic_results": [{"_id": "reviews_1995604216_5m_2026-11-25T10:55:00+00:00", "count": 10}]}
+{"time": "2026-11-25T10:57:40.661220+00:00", "event": "checkpoint-recovery", "pod": "p3-ft3b-s1-e1-67689c5644-sk8xj", "elastic_results": [{"_id": "reviews_1995604216_5m_2026-11-25T10:55:00+00:00", "count": 25}]}

@@ -1,0 +1,32 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: phase3-ft5-watch
+  namespace: steam-ft
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 600
+  template:
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      nodeSelector:
+        kubernetes.io/hostname: steam-worker-3
+      containers:
+        - name: observer
+          image: localhost/steam-spark:k3s-20261124-1d45953
+          imagePullPolicy: Never
+          command:
+            - bash
+            - -ec
+            - |
+              python3 -m pip install --disable-pip-version-check --no-cache-dir --target /tmp/observer hdfs==2.7.3
+              export PYTHONPATH="/tmp/observer:$PYTHONPATH"
+              exec python3 -m infra.k3s.fault_watch --seconds 300
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi

@@ -1,0 +1,201 @@
+NAME                                      READY   STATUS      RESTARTS   AGE   IP            NODE             NOMINATED NODE   READINESS GATES
+pod/datanode-0                            1/1     Running     0          24h   10.42.1.10    steam-worker-1   <none>           <none>
+pod/datanode-1                            1/1     Running     0          24h   10.42.0.13    steam-server     <none>           <none>
+pod/elasticsearch-0                       1/1     Running     0          23h   10.42.0.16    steam-server     <none>           <none>
+pod/kafka-0                               1/1     Running     0          24h   10.42.3.16    steam-worker-2   <none>           <none>
+pod/kafka-1                               1/1     Running     0          34s   10.42.0.17    steam-server     <none>           <none>
+pod/kafka-2                               1/1     Running     0          24h   10.42.1.12    steam-worker-1   <none>           <none>
+pod/namenode-0                            1/1     Running     0          24h   10.42.0.11    steam-server     <none>           <none>
+pod/p3-b9-1000-e2-r2-retry-stpcc          0/1     Completed   0          9h    10.42.2.54    steam-worker-3   <none>           <none>
+pod/p3-b9-1000-e2-r2-retry-stpcc-exec-1   0/1     Completed   0          9h    10.42.3.90    steam-worker-2   <none>           <none>
+pod/p3-b9-1000-e2-r2-retry-stpcc-exec-2   0/1     Completed   0          9h    10.42.1.51    steam-worker-1   <none>           <none>
+pod/p3-b9-1000-e2-r3-retry-x2rns          0/1     Completed   0          9h    10.42.2.55    steam-worker-3   <none>           <none>
+pod/p3-b9-1000-e2-r3-retry-x2rns-exec-1   0/1     Completed   0          9h    10.42.3.91    steam-worker-2   <none>           <none>
+pod/p3-b9-1000-e2-r3-retry-x2rns-exec-2   0/1     Completed   0          9h    10.42.1.52    steam-worker-1   <none>           <none>
+pod/p3-batch-100-e1-hf8ww                 0/1     Completed   0          23h   10.42.2.24    steam-worker-3   <none>           <none>
+pod/p3-batch-100-e1-hf8ww-exec-1          0/1     Completed   0          23h   10.42.3.30    steam-worker-2   <none>           <none>
+pod/p3-batch-100-e1-hf8ww-exec-2          0/1     Completed   0          23h   10.42.3.31    steam-worker-2   <none>           <none>
+pod/p3-batch-100-e1-hf8ww-exec-3          0/1     Completed   0          23h   10.42.3.32    steam-worker-2   <none>           <none>
+pod/p3-batch-100-e2-cm794                 0/1     Completed   0          23h   10.42.2.25    steam-worker-3   <none>           <none>
+pod/p3-batch-100-e2-cm794-exec-1          0/1     Completed   0          23h   10.42.3.33    steam-worker-2   <none>           <none>
+pod/p3-batch-100-e2-cm794-exec-2          0/1     Completed   0          23h   10.42.1.18    steam-worker-1   <none>           <none>
+pod/p3-batch-100-e2-cm794-exec-3          0/1     Completed   0          23h   10.42.3.34    steam-worker-2   <none>           <none>
+pod/p3-batch-100-e2-cm794-exec-4          0/1     Completed   0          23h   10.42.1.19    steam-worker-1   <none>           <none>
+pod/p3-batch-100-e2-cm794-exec-5          0/1     Completed   0          23h   10.42.3.35    steam-worker-2   <none>           <none>
+pod/p3-batch-100-e2-cm794-exec-6          0/1     Completed   0          23h   10.42.1.20    steam-worker-1   <none>           <none>
+pod/p3-batch-100-e4-p6hdk                 0/1     Completed   0          23h   10.42.2.20    steam-worker-3   <none>           <none>
+pod/p3-batch-100-e4-p6hdk-exec-1          0/1     Completed   0          23h   10.42.3.24    steam-worker-2   <none>           <none>
+pod/p3-batch-100-e4-p6hdk-exec-11         0/1     Completed   0          23h   10.42.1.17    steam-worker-1   <none>           <none>
+pod/p3-batch-100-e4-p6hdk-exec-12         0/1     Completed   0          23h   10.42.2.23    steam-worker-3   <none>           <none>
+pod/p3-batch-100-e4-p6hdk-exec-13         0/1     Completed   0          23h   10.42.3.29    steam-worker-2   <none>           <none>
+pod/p3-batch-100-e4-p6hdk-exec-2          0/1     Completed   0          23h   10.42.1.15    steam-worker-1   <none>           <none>
+pod/p3-batch-100-e4-p6hdk-exec-3          0/1     Completed   0          23h   10.42.2.21    steam-worker-3   <none>           <none>
+pod/p3-batch-100-e4-p6hdk-exec-4          0/1     Completed   0          23h   10.42.3.25    steam-worker-2   <none>           <none>
+pod/p3-batch-100-e4-p6hdk-exec-5          0/1     Completed   0          23h   10.42.3.26    steam-worker-2   <none>           <none>
+pod/p3-batch-100-e4-p6hdk-exec-6          0/1     Completed   0          23h   10.42.1.16    steam-worker-1   <none>           <none>
+pod/p3-batch-100-e4-p6hdk-exec-7          0/1     Completed   0          23h   10.42.2.22    steam-worker-3   <none>           <none>
+pod/p3-batch-100-e4-p6hdk-exec-8          0/1     Completed   0          23h   10.42.3.27    steam-worker-2   <none>           <none>
+pod/p3-batch-100-e4-p6hdk-exec-9          0/1     Completed   0          23h   10.42.3.28    steam-worker-2   <none>           <none>
+pod/p3-batch-1000-e1-8wgkb                0/1     Completed   0          20h   10.42.2.47    steam-worker-3   <none>           <none>
+pod/p3-batch-1000-e1-8wgkb-exec-4         0/1     Completed   0          20h   10.42.1.41    steam-worker-1   <none>           <none>
+pod/p3-batch-1000-e1-8wgkb-exec-5         0/1     Completed   0          20h   10.42.3.78    steam-worker-2   <none>           <none>
+pod/p3-batch-1000-e1-8wgkb-exec-6         0/1     Completed   0          19h   10.42.3.81    steam-worker-2   <none>           <none>
+pod/p3-batch-1000-e2-bc2xw                0/1     Completed   0          19h   10.42.2.48    steam-worker-3   <none>           <none>
+pod/p3-batch-1000-e2-bc2xw-exec-10        0/1     OOMKilled   0          18h   10.42.3.89    steam-worker-2   <none>           <none>
+pod/p3-batch-1000-e2-bc2xw-exec-11        0/1     Completed   0          18h   10.42.2.53    steam-worker-3   <none>           <none>
+pod/p3-batch-1000-e2-bc2xw-exec-12        0/1     Error       0          18h   10.42.1.50    steam-worker-1   <none>           <none>
+pod/p3-batch-1000-e2-bc2xw-exec-5         0/1     Completed   0          19h   10.42.3.84    steam-worker-2   <none>           <none>
+pod/p3-batch-1000-e2-bc2xw-exec-6         0/1     Completed   0          19h   10.42.1.45    steam-worker-1   <none>           <none>
+pod/p3-batch-1000-e2-bc2xw-exec-7         0/1     Completed   0          18h   10.42.3.86    steam-worker-2   <none>           <none>
+pod/p3-batch-1000-e2-bc2xw-exec-8         0/1     OOMKilled   0          18h   10.42.2.51    steam-worker-3   <none>           <none>
+pod/p3-batch-1000-e2-bc2xw-exec-9         0/1     Error       0          18h   10.42.1.48    steam-worker-1   <none>           <none>
+pod/p3-batch-1000-e4-lplfp                0/1     Completed   0          21h   10.42.2.38    steam-worker-3   <none>           <none>
+pod/p3-batch-1000-e4-lplfp-exec-10        0/1     Error       0          21h   10.42.1.35    steam-worker-1   <none>           <none>
+pod/p3-batch-1000-e4-lplfp-exec-11        0/1     Completed   0          21h   10.42.1.37    steam-worker-1   <none>           <none>
+pod/p3-batch-1000-e4-lplfp-exec-12        0/1     Completed   0          21h   10.42.3.68    steam-worker-2   <none>           <none>
+pod/p3-batch-1000-e4-lplfp-exec-13        0/1     Completed   0          21h   10.42.2.44    steam-worker-3   <none>           <none>
+pod/p3-batch-1000-e4-lplfp-exec-14        0/1     Completed   0          20h   10.42.1.39    steam-worker-1   <none>           <none>
+pod/p3-batch-1000-e4-lplfp-exec-15        0/1     Completed   0          20h   10.42.2.46    steam-worker-3   <none>           <none>
+pod/p3-batch-1000-e4-lplfp-exec-16        0/1     Completed   0          20h   10.42.3.72    steam-worker-2   <none>           <none>
+pod/p3-batch-1000-e4-lplfp-exec-17        0/1     Completed   0          20h   10.42.3.73    steam-worker-2   <none>           <none>
+pod/p3-batch-1000-e4-lplfp-exec-6         0/1     Completed   0          21h   10.42.3.67    steam-worker-2   <none>           <none>
+pod/p3-batch-1000-e4-lplfp-exec-7         0/1     Completed   0          21h   10.42.3.63    steam-worker-2   <none>           <none>
+pod/p3-batch-1000-e4-lplfp-exec-8         0/1     Completed   0          21h   10.42.3.64    steam-worker-2   <none>           <none>
+pod/p3-batch-1000-e4-lplfp-exec-9         0/1     Completed   0          21h   10.42.2.41    steam-worker-3   <none>           <none>
+pod/p3-batch-500-e1-72w4d                 0/1     Completed   0          22h   10.42.2.33    steam-worker-3   <none>           <none>
+pod/p3-batch-500-e1-72w4d-exec-4          0/1     Completed   0          22h   10.42.1.26    steam-worker-1   <none>           <none>
+pod/p3-batch-500-e1-72w4d-exec-5          0/1     Completed   0          22h   10.42.3.51    steam-worker-2   <none>           <none>
+pod/p3-batch-500-e1-72w4d-exec-6          0/1     Completed   0          21h   10.42.3.54    steam-worker-2   <none>           <none>
+pod/p3-batch-500-e2-tg6mq                 0/1     Completed   0          21h   10.42.2.34    steam-worker-3   <none>           <none>
+pod/p3-batch-500-e2-tg6mq-exec-3          0/1     Completed   0          21h   10.42.2.37    steam-worker-3   <none>           <none>
+pod/p3-batch-500-e2-tg6mq-exec-4          0/1     Completed   0          21h   10.42.3.56    steam-worker-2   <none>           <none>
+pod/p3-batch-500-e2-tg6mq-exec-5          0/1     Completed   0          21h   10.42.1.29    steam-worker-1   <none>           <none>
+pod/p3-batch-500-e2-tg6mq-exec-6          0/1     Completed   0          21h   10.42.1.31    steam-worker-1   <none>           <none>
+pod/p3-batch-500-e2-tg6mq-exec-7          0/1     Completed   0          21h   10.42.2.36    steam-worker-3   <none>           <none>
+pod/p3-batch-500-e2-tg6mq-exec-8          0/1     Completed   0          21h   10.42.3.60    steam-worker-2   <none>           <none>
+pod/p3-batch-500-e4-fllqf                 0/1     Completed   0          23h   10.42.2.26    steam-worker-3   <none>           <none>
+pod/p3-batch-500-e4-fllqf-exec-1          0/1     Completed   0          22h   10.42.1.24    steam-worker-1   <none>           <none>
+pod/p3-batch-500-e4-fllqf-exec-10         0/1     Error       0          23h   10.42.3.42    steam-worker-2   <none>           <none>
+pod/p3-batch-500-e4-fllqf-exec-11         0/1     Completed   0          22h   10.42.3.43    steam-worker-2   <none>           <none>
+pod/p3-batch-500-e4-fllqf-exec-13         0/1     Completed   0          22h   10.42.3.45    steam-worker-2   <none>           <none>
+pod/p3-batch-500-e4-fllqf-exec-14         0/1     Completed   0          22h   10.42.2.32    steam-worker-3   <none>           <none>
+pod/p3-batch-500-e4-fllqf-exec-2          0/1     Completed   0          23h   10.42.1.23    steam-worker-1   <none>           <none>
+pod/p3-batch-500-e4-fllqf-exec-4          0/1     Completed   0          23h   10.42.3.41    steam-worker-2   <none>           <none>
+pod/p3-batch-500-e4-fllqf-exec-5          0/1     Completed   0          23h   10.42.1.22    steam-worker-1   <none>           <none>
+pod/p3-batch-500-e4-fllqf-exec-6          0/1     Completed   0          23h   10.42.2.28    steam-worker-3   <none>           <none>
+pod/p3-batch-500-e4-fllqf-exec-7          0/1     Completed   0          23h   10.42.3.38    steam-worker-2   <none>           <none>
+pod/p3-batch-500-e4-fllqf-exec-8          0/1     Completed   0          23h   10.42.3.39    steam-worker-2   <none>           <none>
+pod/p3-batch-500-e4-fllqf-exec-9          0/1     Completed   0          23h   10.42.2.30    steam-worker-3   <none>           <none>
+pod/p3-pilot-batch-e1-dg9jd               0/1     Completed   0          24h   10.42.2.15    steam-worker-3   <none>           <none>
+pod/p3-pilot-batch-e1-dg9jd-exec-1        0/1     Completed   0          24h   10.42.3.19    steam-worker-2   <none>           <none>
+pod/p3-pilot-batch-e2-zx6kg               0/1     Completed   0          24h   10.42.2.16    steam-worker-3   <none>           <none>
+pod/p3-pilot-batch-e2-zx6kg-exec-1        0/1     Completed   0          24h   10.42.3.20    steam-worker-2   <none>           <none>
+pod/p3-pilot-batch-e2-zx6kg-exec-2        0/1     Completed   0          24h   10.42.1.14    steam-worker-1   <none>           <none>
+pod/p3-probe-e4-twgbw                     0/1     Completed   0          24h   10.42.2.13    steam-worker-3   <none>           <none>
+pod/p3-probe-e4-twgbw-exec-1              0/1     Completed   0          24h   10.42.3.17    steam-worker-2   <none>           <none>
+pod/p3-probe-e4-twgbw-exec-2              0/1     Completed   0          24h   10.42.1.13    steam-worker-1   <none>           <none>
+pod/p3-probe-e4-twgbw-exec-3              0/1     Completed   0          24h   10.42.2.14    steam-worker-3   <none>           <none>
+pod/p3-probe-e4-twgbw-exec-4              0/1     Completed   0          24h   10.42.3.18    steam-worker-2   <none>           <none>
+pod/phase3-es-init-782c5                  0/1     Completed   0          24h   10.42.2.18    steam-worker-3   <none>           <none>
+pod/phase3-ft1-watch-mpdzv                1/1     Running     0          60s   10.42.2.165   steam-worker-3   <none>           <none>
+
+NAME                                         STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE   VOLUMEMODE
+persistentvolumeclaim/data-datanode-0        Bound    pvc-fc535d29-1402-43b8-9cab-dbf1276cf605   10Gi       RWO            local-path     <unset>                 24h   Filesystem
+persistentvolumeclaim/data-datanode-1        Bound    pvc-652ef5b3-0d4b-417b-907a-5823d499256a   10Gi       RWO            local-path     <unset>                 24h   Filesystem
+persistentvolumeclaim/data-elasticsearch-0   Bound    pvc-28bc3ad8-3dc1-4d3d-a2ed-33ad990d66ec   10Gi       RWO            local-path     <unset>                 24h   Filesystem
+persistentvolumeclaim/data-kafka-0           Bound    pvc-1b8863af-6764-47e6-a037-26bc958d3386   10Gi       RWO            local-path     <unset>                 24h   Filesystem
+persistentvolumeclaim/data-kafka-1           Bound    pvc-13f4d9cb-283e-41ce-a945-415499c1a6bd   10Gi       RWO            local-path     <unset>                 24h   Filesystem
+persistentvolumeclaim/data-kafka-2           Bound    pvc-e02d3843-55c3-4dd8-9ce9-2c9101efdf30   10Gi       RWO            local-path     <unset>                 24h   Filesystem
+persistentvolumeclaim/data-namenode-0        Bound    pvc-8a2595a2-8d20-4253-8754-d5d22ef9acad   10Gi       RWO            local-path     <unset>                 24h   Filesystem
+Defaulted container "kafka" out of: kafka, volume-permissions (init)
+Topic: steam.alerts	TopicId: 7tpsTPqwSmWyHmfSxO-kPA	PartitionCount: 3	ReplicationFactor: 3	Configs: min.insync.replicas=2,retention.ms=86400000
+	Topic: steam.alerts	Partition: 0	Leader: 1	Replicas: 1,2,3	Isr: 1,3,2	Elr: 	LastKnownElr: 
+	Topic: steam.alerts	Partition: 1	Leader: 3	Replicas: 2,3,1	Isr: 3,1,2	Elr: 	LastKnownElr: 
+	Topic: steam.alerts	Partition: 2	Leader: 3	Replicas: 3,1,2	Isr: 3,1,2	Elr: 	LastKnownElr: 
+Topic: ft-watch-b1008ae242514608ad4e85bd24a94e6d	TopicId: 1YQBOvI0TnyC4Mge6nMxIQ	PartitionCount: 3	ReplicationFactor: 3	Configs: min.insync.replicas=2,retention.ms=86400000
+	Topic: ft-watch-b1008ae242514608ad4e85bd24a94e6d	Partition: 0	Leader: 3	Replicas: 2,3,1	Isr: 3,1,2	Elr: 	LastKnownElr: 
+	Topic: ft-watch-b1008ae242514608ad4e85bd24a94e6d	Partition: 1	Leader: 3	Replicas: 3,1,2	Isr: 3,1,2	Elr: 	LastKnownElr: 
+	Topic: ft-watch-b1008ae242514608ad4e85bd24a94e6d	Partition: 2	Leader: 1	Replicas: 1,2,3	Isr: 1,3,2	Elr: 	LastKnownElr: 
+Topic: steam.games.meta	TopicId: lYXrNHg3SqSV6nWz-r1Odg	PartitionCount: 3	ReplicationFactor: 3	Configs: min.insync.replicas=2,cleanup.policy=compact
+	Topic: steam.games.meta	Partition: 0	Leader: 1	Replicas: 1,2,3	Isr: 1,3,2	Elr: 	LastKnownElr: 
+	Topic: steam.games.meta	Partition: 1	Leader: 3	Replicas: 2,3,1	Isr: 3,1,2	Elr: 	LastKnownElr: 
+	Topic: steam.games.meta	Partition: 2	Leader: 3	Replicas: 3,1,2	Isr: 3,1,2	Elr: 	LastKnownElr: 
+Topic: steam.players.ccu	TopicId: RNLr9O0wQOyK9Ap9eEKjqA	PartitionCount: 3	ReplicationFactor: 3	Configs: min.insync.replicas=2,retention.ms=86400000
+	Topic: steam.players.ccu	Partition: 0	Leader: 1	Replicas: 1,2,3	Isr: 1,3,2	Elr: 	LastKnownElr: 
+	Topic: steam.players.ccu	Partition: 1	Leader: 3	Replicas: 2,3,1	Isr: 3,1,2	Elr: 	LastKnownElr: 
+	Topic: steam.players.ccu	Partition: 2	Leader: 3	Replicas: 3,1,2	Isr: 3,1,2	Elr: 	LastKnownElr: 
+Topic: steam.reviews.raw	TopicId: 5yGk-Zx8SE6IG6Xrn2QGcA	PartitionCount: 3	ReplicationFactor: 3	Configs: min.insync.replicas=2,retention.ms=86400000
+	Topic: steam.reviews.raw	Partition: 0	Leader: 3	Replicas: 2,3,1	Isr: 3,1,2	Elr: 	LastKnownElr: 
+	Topic: steam.reviews.raw	Partition: 1	Leader: 3	Replicas: 3,1,2	Isr: 3,1,2	Elr: 	LastKnownElr: 
+	Topic: steam.reviews.raw	Partition: 2	Leader: 1	Replicas: 1,2,3	Isr: 1,3,2	Elr: 	LastKnownElr: 
+Defaulted container "kafka" out of: kafka, volume-permissions (init)
+ClusterId:              OaH2TaG6QfKheP6oJ1DvMg
+LeaderId:               1
+LeaderEpoch:            10
+HighWatermark:          175107
+MaxFollowerLag:         0
+MaxFollowerLagTimeMs:   0
+CurrentVoters:          [{"id": 1, "directoryId": null, "endpoints": ["CONTROLLER://kafka-0.kafka.steam-ft.svc.cluster.local:9093"]}, {"id": 2, "directoryId": null, "endpoints": ["CONTROLLER://kafka-1.kafka.steam-ft.svc.cluster.local:9093"]}, {"id": 3, "directoryId": null, "endpoints": ["CONTROLLER://kafka-2.kafka.steam-ft.svc.cluster.local:9093"]}]
+CurrentObservers:       []
+Configured Capacity: 122570653696 (114.15 GB)
+Present Capacity: 45223112756 (42.12 GB)
+DFS Remaining: 27515584512 (25.63 GB)
+DFS Used: 17707528244 (16.49 GB)
+DFS Used%: 39.16%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (2):
+
+Name: 10.42.0.13:9866 (datanode-1.datanode.steam-ft.svc.cluster.local)
+Hostname: datanode-1.datanode.steam-ft.svc.cluster.local
+Decommission Status : Normal
+Configured Capacity: 61285326848 (57.08 GB)
+DFS Used: 8853745690 (8.25 GB)
+Non DFS Used: 41131511782 (38.31 GB)
+DFS Remaining: 11283292160 (10.51 GB)
+DFS Used%: 14.45%
+DFS Remaining%: 18.41%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 1
+Last contact: Wed Nov 25 10:42:10 UTC 2026
+Last Block Report: Wed Nov 25 09:58:12 UTC 2026
+Num of Blocks: 46678
+
+
+Name: 10.42.1.10:9866 (datanode-0.datanode.steam-ft.svc.cluster.local)
+Hostname: datanode-0.datanode.steam-ft.svc.cluster.local
+Decommission Status : Normal
+Configured Capacity: 61285326848 (57.08 GB)
+DFS Used: 8853782554 (8.25 GB)
+Non DFS Used: 36182474726 (33.70 GB)
+DFS Remaining: 16232292352 (15.12 GB)
+DFS Used%: 14.45%
+DFS Remaining%: 26.49%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 1
+Last contact: Wed Nov 25 10:42:09 UTC 2026
+Last Block Report: Wed Nov 25 05:12:59 UTC 2026
+Num of Blocks: 46678
+
+

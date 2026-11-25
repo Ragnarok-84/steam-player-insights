@@ -1,0 +1,69 @@
+LAST SEEN   TYPE      REASON             OBJECT                              MESSAGE
+60m         Normal    SuccessfulCreate   job/p3-s3-1000-e2-r2                Created pod: p3-s3-1000-e2-r2-72rz8
+60m         Warning   FailedScheduling   pod/p3-s3-1000-e2-r2-72rz8          0/4 nodes are available: 1 Insufficient memory, 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/4 nodes are available: 1 No preemption victims found for incoming pod, 3 Preemption is not helpful for scheduling.
+60m         Normal    Scheduled          pod/p3-s3-1000-e2-r2-72rz8          Successfully assigned steam-ft/p3-s3-1000-e2-r2-72rz8 to steam-worker-3
+60m         Normal    Pulled             pod/p3-s3-1000-e2-r2-72rz8          Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+60m         Normal    Started            pod/p3-s3-1000-e2-r2-72rz8          Started container producer
+60m         Normal    Started            pod/p3-s3-1000-e2-r2-72rz8          Started container driver
+60m         Normal    Created            pod/p3-s3-1000-e2-r2-72rz8          Created container: driver
+60m         Normal    Pulled             pod/p3-s3-1000-e2-r2-72rz8          Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+60m         Normal    Created            pod/p3-s3-1000-e2-r2-72rz8          Created container: producer
+60m         Normal    Started            pod/p3-s3-1000-e2-r2-72rz8-exec-2   Started container spark-kubernetes-executor
+60m         Normal    Created            pod/p3-s3-1000-e2-r2-72rz8-exec-1   Created container: spark-kubernetes-executor
+60m         Normal    Created            pod/p3-s3-1000-e2-r2-72rz8-exec-2   Created container: spark-kubernetes-executor
+60m         Normal    Pulled             pod/p3-s3-1000-e2-r2-72rz8-exec-2   Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+60m         Normal    Scheduled          pod/p3-s3-1000-e2-r2-72rz8-exec-2   Successfully assigned steam-ft/p3-s3-1000-e2-r2-72rz8-exec-2 to steam-worker-1
+60m         Normal    Started            pod/p3-s3-1000-e2-r2-72rz8-exec-1   Started container spark-kubernetes-executor
+60m         Normal    Scheduled          pod/p3-s3-1000-e2-r2-72rz8-exec-1   Successfully assigned steam-ft/p3-s3-1000-e2-r2-72rz8-exec-1 to steam-worker-2
+60m         Normal    Pulled             pod/p3-s3-1000-e2-r2-72rz8-exec-1   Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+57m         Normal    Killing            pod/p3-s3-1000-e2-r2-72rz8          Stopping container driver
+57m         Normal    Killing            pod/p3-s3-1000-e2-r2-72rz8          Stopping container producer
+57m         Warning   FailedScheduling   pod/p3-s3-1000-e2-r3-scm59          0/4 nodes are available: 1 Insufficient memory, 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/4 nodes are available: 1 No preemption victims found for incoming pod, 3 Preemption is not helpful for scheduling.
+57m         Normal    SuccessfulCreate   job/p3-s3-1000-e2-r3                Created pod: p3-s3-1000-e2-r3-scm59
+56m         Normal    Scheduled          pod/p3-s3-1000-e2-r3-scm59          Successfully assigned steam-ft/p3-s3-1000-e2-r3-scm59 to steam-worker-3
+56m         Normal    Killing            pod/p3-s3-1000-e2-r2-72rz8-exec-1   Stopping container spark-kubernetes-executor
+56m         Normal    Pulled             pod/p3-s3-1000-e2-r3-scm59          Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+56m         Normal    Killing            pod/p3-s3-1000-e2-r2-72rz8-exec-2   Stopping container spark-kubernetes-executor
+56m         Normal    Started            pod/p3-s3-1000-e2-r3-scm59          Started container driver
+56m         Normal    Created            pod/p3-s3-1000-e2-r3-scm59          Created container: driver
+56m         Normal    Pulled             pod/p3-s3-1000-e2-r3-scm59          Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+56m         Normal    Created            pod/p3-s3-1000-e2-r3-scm59          Created container: producer
+56m         Normal    Started            pod/p3-s3-1000-e2-r3-scm59          Started container producer
+56m         Normal    Scheduled          pod/p3-s3-1000-e2-r3-scm59-exec-1   Successfully assigned steam-ft/p3-s3-1000-e2-r3-scm59-exec-1 to steam-worker-2
+56m         Normal    Started            pod/p3-s3-1000-e2-r3-scm59-exec-2   Started container spark-kubernetes-executor
+56m         Normal    Created            pod/p3-s3-1000-e2-r3-scm59-exec-2   Created container: spark-kubernetes-executor
+56m         Normal    Pulled             pod/p3-s3-1000-e2-r3-scm59-exec-2   Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+56m         Normal    Scheduled          pod/p3-s3-1000-e2-r3-scm59-exec-2   Successfully assigned steam-ft/p3-s3-1000-e2-r3-scm59-exec-2 to steam-worker-1
+56m         Normal    Created            pod/p3-s3-1000-e2-r3-scm59-exec-1   Created container: spark-kubernetes-executor
+56m         Normal    Started            pod/p3-s3-1000-e2-r3-scm59-exec-1   Started container spark-kubernetes-executor
+56m         Normal    Pulled             pod/p3-s3-1000-e2-r3-scm59-exec-1   Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+53m         Normal    Killing            pod/p3-s3-1000-e2-r3-scm59          Stopping container driver
+53m         Normal    Killing            pod/p3-s3-1000-e2-r3-scm59          Stopping container producer
+53m         Normal    Killing            pod/p3-s3-1000-e2-r3-scm59-exec-1   Stopping container spark-kubernetes-executor
+10m         Normal    SuccessfulCreate   job/phase3-ft1-watch                Created pod: phase3-ft1-watch-mpdzv
+10m         Normal    Started            pod/phase3-ft1-watch-mpdzv          Started container observer
+10m         Normal    Created            pod/phase3-ft1-watch-mpdzv          Created container: observer
+10m         Normal    Pulled             pod/phase3-ft1-watch-mpdzv          Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+10m         Normal    Scheduled          pod/phase3-ft1-watch-mpdzv          Successfully assigned steam-ft/phase3-ft1-watch-mpdzv to steam-worker-3
+10m         Normal    Killing            pod/kafka-1                         Stopping container kafka
+10m         Normal    Pulled             pod/kafka-1                         Container image "busybox:1.37.0" already present on machine
+10m         Normal    Created            pod/kafka-1                         Created container: volume-permissions
+10m         Normal    Started            pod/kafka-1                         Started container volume-permissions
+10m         Normal    SuccessfulCreate   statefulset/kafka                   create Pod kafka-1 in StatefulSet kafka successful
+10m         Normal    Scheduled          pod/kafka-1                         Successfully assigned steam-ft/kafka-1 to steam-server
+10m         Normal    Pulled             pod/kafka-1                         Container image "apache/kafka:3.9.1" already present on machine
+10m         Normal    Created            pod/kafka-1                         Created container: kafka
+10m         Normal    Started            pod/kafka-1                         Started container kafka
+5m37s       Normal    Completed          job/phase3-ft1-watch                Job completed
+5m14s       Normal    Scheduled          pod/phase3-ft2-watch-lrzkv          Successfully assigned steam-ft/phase3-ft2-watch-lrzkv to steam-worker-3
+5m14s       Normal    Pulled             pod/phase3-ft2-watch-lrzkv          Container image "localhost/steam-spark:k3s-20261124-1d45953" already present on machine
+5m14s       Normal    Created            pod/phase3-ft2-watch-lrzkv          Created container: observer
+5m14s       Normal    Started            pod/phase3-ft2-watch-lrzkv          Started container observer
+5m14s       Normal    SuccessfulCreate   job/phase3-ft2-watch                Created pod: phase3-ft2-watch-lrzkv
+4m54s       Normal    Killing            pod/datanode-0                      Stopping container datanode
+4m23s       Normal    Started            pod/datanode-0                      Started container datanode
+4m23s       Normal    Created            pod/datanode-0                      Created container: datanode
+4m23s       Normal    Pulled             pod/datanode-0                      Container image "apache/hadoop:3.4.1" already present on machine
+4m23s       Normal    SuccessfulCreate   statefulset/datanode                create Pod datanode-0 in StatefulSet datanode successful
+4m23s       Normal    Scheduled          pod/datanode-0                      Successfully assigned steam-ft/datanode-0 to steam-worker-1
+0s          Normal    Completed          job/phase3-ft2-watch                Job completed

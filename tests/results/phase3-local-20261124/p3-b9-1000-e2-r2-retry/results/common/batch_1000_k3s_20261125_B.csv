@@ -1,0 +1,2 @@
+run_id,measured_at,member,experiment,scale,env,dataset,job,executors,repeat,metric,value,unit,status,git_commit,notes
+20261125-005305-B-batch-b9,2026-11-25T00:53:05+00:00,B,batch,1000,k3s,steam_1000g_20261118,b9,2,2,duration_s,121.41687589299545,s,ok,1d459539f58f058a2698f02a6d8bcee5e1565c31,B9-only retry; original B2-B8 input; overhead=768Mi (original 512Mi); one core/executor

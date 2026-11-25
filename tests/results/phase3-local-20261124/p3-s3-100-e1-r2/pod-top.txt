@@ -1,0 +1,124 @@
+
+2026-11-25T06:30:34Z
+POD                     NAME       CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87   driver     1278m        494Mi           
+p3-s3-100-e1-r2-sdp87   producer   1m           0Mi             
+
+2026-11-25T06:30:43Z
+POD                     NAME       CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87   driver     1278m        494Mi           
+p3-s3-100-e1-r2-sdp87   producer   1m           0Mi             
+
+2026-11-25T06:30:51Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      508m         524Mi           
+p3-s3-100-e1-r2-sdp87          producer                    0m           0Mi             
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   862m         566Mi           
+
+2026-11-25T06:30:59Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      508m         524Mi           
+p3-s3-100-e1-r2-sdp87          producer                    0m           0Mi             
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   862m         566Mi           
+
+2026-11-25T06:31:07Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      344m         575Mi           
+p3-s3-100-e1-r2-sdp87          producer                    49m          63Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   91m          593Mi           
+
+2026-11-25T06:31:16Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      344m         575Mi           
+p3-s3-100-e1-r2-sdp87          producer                    49m          63Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   91m          593Mi           
+
+2026-11-25T06:31:24Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      475m         619Mi           
+p3-s3-100-e1-r2-sdp87          producer                    59m          64Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   489m         692Mi           
+
+2026-11-25T06:31:33Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      475m         619Mi           
+p3-s3-100-e1-r2-sdp87          producer                    59m          64Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   489m         692Mi           
+
+2026-11-25T06:31:41Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      475m         619Mi           
+p3-s3-100-e1-r2-sdp87          producer                    55m          64Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   262m         728Mi           
+
+2026-11-25T06:31:49Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      306m         628Mi           
+p3-s3-100-e1-r2-sdp87          producer                    56m          64Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   251m         724Mi           
+
+2026-11-25T06:31:58Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      306m         628Mi           
+p3-s3-100-e1-r2-sdp87          producer                    56m          64Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   251m         724Mi           
+
+2026-11-25T06:32:06Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      284m         634Mi           
+p3-s3-100-e1-r2-sdp87          producer                    29m          25Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   154m         730Mi           
+
+2026-11-25T06:32:14Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      284m         634Mi           
+p3-s3-100-e1-r2-sdp87          producer                    29m          25Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   154m         730Mi           
+
+2026-11-25T06:32:23Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      182m         642Mi           
+p3-s3-100-e1-r2-sdp87          producer                    172m         67Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   246m         750Mi           
+
+2026-11-25T06:32:31Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      182m         642Mi           
+p3-s3-100-e1-r2-sdp87          producer                    172m         67Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   246m         750Mi           
+
+2026-11-25T06:32:40Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      205m         650Mi           
+p3-s3-100-e1-r2-sdp87          producer                    293m         67Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   371m         752Mi           
+
+2026-11-25T06:32:48Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      205m         650Mi           
+p3-s3-100-e1-r2-sdp87          producer                    293m         67Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   371m         752Mi           
+
+2026-11-25T06:32:56Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      160m         659Mi           
+p3-s3-100-e1-r2-sdp87          producer                    295m         67Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   163m         756Mi           
+
+2026-11-25T06:33:04Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      130m         678Mi           
+p3-s3-100-e1-r2-sdp87          producer                    299m         67Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   247m         781Mi           
+
+2026-11-25T06:33:13Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      130m         678Mi           
+p3-s3-100-e1-r2-sdp87          producer                    299m         67Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   247m         781Mi           
+
+2026-11-25T06:33:21Z
+POD                            NAME                        CPU(cores)   MEMORY(bytes)   
+p3-s3-100-e1-r2-sdp87          driver                      158m         680Mi           
+p3-s3-100-e1-r2-sdp87          producer                    249m         25Mi            
+p3-s3-100-e1-r2-sdp87-exec-1   spark-kubernetes-executor   171m         784Mi           
